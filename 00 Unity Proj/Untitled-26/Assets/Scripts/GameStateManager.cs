@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class GameStateManager : MonoBehaviour
 {
+
+    [Header("GameUIs")]
+    public GameObject explorationUI;
+    public GameObject puzzleUI;
+    public GameObject pausedUI;
+    private GameObject currentUI;
+
+    [Header("Cameras")]
+    public Camera playerCamera;
+    public Camera puzzleCamera;
+
     /// <summary>
     /// A singleton instance of the GameStateManager. 
     /// This allows other scripts to easily access the game state manager without needing to find it in the scene or pass references around.
@@ -78,20 +89,42 @@ public class GameStateManager : MonoBehaviour
         HandleStateChange();
     }
 
-
+    /// <summary>
+    /// Handles logic for switching between game states.
+    /// </summary>
+    /// <remarks> 
+    /// Switches between UI canvases and sets time scale to 0.0f when in a paused state.
+    /// </remarks>
     private void HandleStateChange()
     {
+        // deactivate old UI
+        if (currentUI)
+        {
+            currentUI.SetActive(false);
+        }
+
+        // TO DO: handle change in camera views
         switch (currentState) {
             case GameState.Exploration:
-                // Handle logic for entering Exploration state
+                currentUI = explorationUI;
+                Time.timeScale = 1.0f;
                 break;
             case GameState.Puzzle:
-                // Handle logic for entering Puzzle state
+                currentUI = puzzleUI;
+                Time.timeScale = 1.0f;
                 break;
             case GameState.Paused:
-                // Handle logic for entering Paused state
+                currentUI = pausedUI;
+                Time.timeScale = 0.0f;
                 break;
         }
 
+        // activate UI of new state
+        currentUI.SetActive(true);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
