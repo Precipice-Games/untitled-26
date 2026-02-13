@@ -31,7 +31,7 @@ jobs:
       # Cache - Updated path
       - uses: actions/cache@v3
         with:
-          path: 00 Unity Proj/untitled-26/Library
+          path: "00 Unity Proj/untitled-26/Library"
           key: Library-${{ hashFiles('00 Unity Proj/untitled-26/Assets/**', '00 Unity Proj/untitled-26/Packages/**', '00 Unity Proj/untitled-26/ProjectSettings/**') }}
           restore-keys: |
             Library-
@@ -44,7 +44,7 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          projectPath: 00 Unity Proj/untitled-26
+          projectPath: "00 Unity Proj/untitled-26"
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
       # Build - Added projectPath
@@ -55,7 +55,7 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          projectPath: 00 Unity Proj/untitled-26
+          projectPath: "00 Unity Proj/untitled-26"
           targetPlatform: WebGL
 
       # Output
