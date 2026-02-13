@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 442dbe2f6b0d1c141bb272b0dda2ae75
+  - enabled: 1
     path: Assets/Scenes/PlayerExperiments/MovementInteraction_1.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/TileExperiments/TileMoveExperiment.unity
+    guid: c004e102fdfa16540a002d03af5b9a6b
+  - enabled: 1
+    path: Assets/Scenes/AudioExperiments/ButtonSFX.unity
+    guid: 2e4a69eecf19144269aaa3085194f35b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
