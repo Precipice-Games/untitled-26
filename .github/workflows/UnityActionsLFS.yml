@@ -28,6 +28,12 @@ jobs:
           git add .
           git reset --hard
 
+      # Ignore Unity package manifest changes
+      - name: Ignore package manifest changes
+        run: |
+          git update-index --assume-unchanged "00 Unity Proj/Untitled-26/Packages/manifest.json"
+          git update-index --assume-unchanged "00 Unity Proj/Untitled-26/Packages/packages-lock.json"
+
       # Cache - Updated path
       - uses: actions/cache@v3
         with:
