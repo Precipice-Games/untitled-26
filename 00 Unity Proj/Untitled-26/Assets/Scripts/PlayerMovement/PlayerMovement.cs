@@ -1,4 +1,7 @@
+#if UNITY_EDITOR
 using UnityEditor.Build;
+#endif
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
