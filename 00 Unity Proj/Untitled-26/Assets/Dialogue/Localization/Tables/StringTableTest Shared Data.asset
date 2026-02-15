@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringTableTest Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: StringTableTest
+  m_TableCollectionNameGuidString: a22425478590f684dad499eba0d4033c
+  m_Entries:
+  - m_Id: 65913876480
+    m_Key: line:04df4da
+    m_Metadata:
+      m_Items:
+      - rid: 6404808418785755377
+  - m_Id: 65947430912
+    m_Key: line:00ef629
+    m_Metadata:
+      m_Items:
+      - rid: 6404808418785755378
+  - m_Id: 65947430913
+    m_Key: line:0132556
+    m_Metadata:
+      m_Items:
+      - rid: 6404808418785755379
+  - m_Id: 65947430914
+    m_Key: line:034dd0d
+    m_Metadata:
+      m_Items:
+      - rid: 6404808418785755380
+  - m_Id: 65947430915
+    m_Key: line:003851f
+    m_Metadata:
+      m_Items:
+      - rid: 6404808418785755381
+  - m_Id: 65947430916
+    m_Key: line:0a96a9d
+    m_Metadata:
+      m_Items:
+      - rid: 6404808418785755382
+  - m_Id: 65947430917
+    m_Key: line:0f8ef9c
+    m_Metadata:
+      m_Items:
+      - rid: 6404808418785755383
+  - m_Id: 65947430918
+    m_Key: line:070aab9
+    m_Metadata:
+      m_Items:
+      - rid: 6404808418785755384
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6404808418785755376
+  references:
+    version: 2
+    RefIds:
+    - rid: 6404808418785755376
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1771176906655
+    - rid: 6404808418785755377
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
+    - rid: 6404808418785755378
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags:
+        - lastline
+    - rid: 6404808418785755379
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
+    - rid: 6404808418785755380
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
+    - rid: 6404808418785755381
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
+    - rid: 6404808418785755382
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
+    - rid: 6404808418785755383
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
+    - rid: 6404808418785755384
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
