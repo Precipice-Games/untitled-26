@@ -15,12 +15,6 @@ MonoBehaviour:
   m_GroupName: Localization-Asset-Tables-English
   m_GUID: 9be2399ce3fb15d4dbcc242d64c57fa6
   m_SerializeEntries:
-  - m_GUID: ccc27af2dd6f74c42a0cb817228f7e97
-    m_Address: VoiceoverSampleAssets_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ea397899a15430e44a41c180e2c3f85b
     m_Address: VoiceoverTest_en
     m_ReadOnly: 1

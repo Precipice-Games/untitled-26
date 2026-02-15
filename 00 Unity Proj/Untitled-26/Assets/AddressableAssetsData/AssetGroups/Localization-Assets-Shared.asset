@@ -15,18 +15,6 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 34b906c2ca2888341b8362e4973e5e43
   m_SerializeEntries:
-  - m_GUID: 64bbf71c048364f9e8706925bb5ae463
-    m_Address: Assets/Samples/Yarn Spinner Samples/3.1.0/Voiceover and Localisation/Localization
-      Tables/VoiceoverSampleAssets Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8e286ec56529f405ebb1933199177e8e
-    m_Address: Assets/Samples/Yarn Spinner Samples/3.1.0/Voiceover and Localisation/Localization
-      Tables/VoiceoverSample Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9abc03c63231e4443a1ebe5bbc515c1f
     m_Address: Assets/Dialogue/Localization/Tables/VoiceoverTest Shared Data.asset
     m_ReadOnly: 1
