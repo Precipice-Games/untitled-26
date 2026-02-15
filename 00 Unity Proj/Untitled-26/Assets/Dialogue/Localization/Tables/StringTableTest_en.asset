@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTableTest_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: a22425478590f684dad499eba0d4033c, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 65913876480
+    m_Localized: 'Capsley: Hello, I am Mr Capsley.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65947430912
+    m_Localized: 'Capsley: Who are you then?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65947430913
+    m_Localized: I'm Capsule, but my friends call me "Tic Tac". No idea why...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65947430914
+    m_Localized: The name's Triquandle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65947430915
+    m_Localized: Pyramid. Why - who wants to know?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65947430916
+    m_Localized: 'Capsley: Nice to meet you {0}!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65947430917
+    m_Localized: 'Capsley: No need to be so rude...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65947430918
+    m_Localized: 'Capsley: Maybe you should be called Grumpy {0}.'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
