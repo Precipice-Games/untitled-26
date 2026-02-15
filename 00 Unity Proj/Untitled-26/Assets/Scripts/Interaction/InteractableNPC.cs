@@ -32,6 +32,8 @@ public class InteractableNPC : MonoBehaviour, IInteractable
             
             runner = GameObject.Find("Dialogue System").GetComponent<DialogueRunner>();
             runner.StartDialogue(gameObject.name);
+            //change to dialogue state
+                //disables e in this state
             interactedWith = false;
 
         }

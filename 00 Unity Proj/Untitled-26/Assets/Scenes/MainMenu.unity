@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60642b4dc867a2441a709bf5d508be9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerButton
-  scene: MovementInteraction_1
+  scene: DialogueTest_1
 --- !u!1 &508029681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60642b4dc867a2441a709bf5d508be9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerButton
-  scene: TileMoveExperiment
+  scene: DialgoueTest
 --- !u!1 &1663970394
 GameObject:
   m_ObjectHideFlags: 0
