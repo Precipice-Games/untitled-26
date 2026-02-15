@@ -2,7 +2,10 @@ using System;
 using UnityEngine;
 using Yarn;
 using Yarn.Unity;
+
+#if UNITY_EDITOR
 using Yarn.Unity.Editor;
+#endif
 
 public class InteractableNPC : MonoBehaviour, IInteractable
 {
