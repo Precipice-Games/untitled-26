@@ -34,7 +34,7 @@ jobs:
       - name: Ignore package manifest changes
         run: |
           git update-index --assume-unchanged "00 Unity Proj/Untitled-26/Packages/manifest.json"
-          git update-index --assume-unchanged "00 Unity Proj/Untitled-26/Packages/packages-lock.json
+          git update-index --assume-unchanged "00 Unity Proj/Untitled-26/Packages/packages-lock.json"
         
       # Try to ignore any changes to the *.assets files in AddressableAssetsData
       - name: Ignore *.assets
