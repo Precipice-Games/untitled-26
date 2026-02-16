@@ -71,9 +71,10 @@ jobs:
       # a dirty branch error. Commit author must also be the bot running this job.
       - name: Ensure *.assets are committed
         run: |
+          echo "Reached the Ensure *.assets stage."
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "00 Unity Proj/Untitled-26/Assets/AddressableAssetsData/AssetGroups/*.asset"
+          git add "00 Unity Proj/Untitled-26/Assets/AddressableAssetsData/AssetGroups/Localization-Asset-Tables-English.asset"
           git commit -m 'chore: Committed any modified *.asset files for AddressableAssetsData.'
           git push
 
