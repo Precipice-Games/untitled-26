@@ -101,3 +101,6 @@ InitTestScene*.unity*
 # Ignore temporaries from GameCI
 /[Aa]rtifacts/
 /[Cc]odeCoverage/
+
+# Ignore the *.asset files from AddressableAssetsData
+/Assets/AddressableAssetsData/AssetGroups/*.asset
