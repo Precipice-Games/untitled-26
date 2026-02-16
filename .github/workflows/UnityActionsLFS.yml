@@ -55,17 +55,6 @@ jobs:
           projectPath: "00 Unity Proj/Untitled-26"
           githubToken: ${{ secrets.GITHUB_TOKEN }}
 
-      # Build - Added projectPath
-      - name: Build project
-        uses: game-ci/unity-builder@v4
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-        with:
-          projectPath: "00 Unity Proj/Untitled-26"
-          targetPlatform: WebGL
-
       # *.asset files related to Addressable Assets appear to be modified by Unitys
       # during building. We should ensure these are committed beforehand to avoid
       # a dirty branch error. Commit author must also be the bot running this job.
@@ -77,6 +66,17 @@ jobs:
           git add "00 Unity Proj/Untitled-26/Assets/AddressableAssetsData/AssetGroups/Localization-Asset-Tables-English.asset"
           git commit -m 'chore: Committed any modified *.asset files for AddressableAssetsData.'
           git push
+
+      # Build - Added projectPath
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: "00 Unity Proj/Untitled-26"
+          targetPlatform: WebGL
 
       # Output
       - uses: actions/upload-artifact@v4
