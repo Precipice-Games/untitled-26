@@ -36,6 +36,17 @@ jobs:
           git update-index --assume-unchanged "00 Unity Proj/Untitled-26/Packages/manifest.json"
           git update-index --assume-unchanged "00 Unity Proj/Untitled-26/Packages/packages-lock.json"
 
+      # *.asset files related to Addressable Assets appear to be modified by Unitys
+      # during building. We should ensure these are committed beforehand to avoid
+      # a dirty branch error. Commit author must also be the bot running this job.
+      - name: Ensure *.assets are committed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "00 Unity Proj/Untitled-26/Assets/AddressableAssetsData/AssetGroups/"*.asset
+          git commit -m 'chore: Committed any modified *.asset files for AddressableAssetsData.'
+          git push
+
       # Cache - Updated path
       - uses: actions/cache@v3
         with:
