@@ -7,6 +7,6 @@ public class TileMovementSFX : MonoBehaviour
 
     public void PlaySound()
     {
-        audioSource.PlayOneShot(clickSound)
+        audioSource.PlayOneShot(clickSound);
     }  
 }
