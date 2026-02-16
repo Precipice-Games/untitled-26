@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Locales
   m_GUID: faaae1d3d8010ea4dbf25c2e63b3aeb5
   m_SerializeEntries:
+  - m_GUID: 013fa235ea1d6af4ca53cd2f6bd69a92
+    m_Address: Locale en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2ea3809b57b3b7945820663ca342ddc1
     m_Address: Portuguese (Brazil)
     m_ReadOnly: 1
