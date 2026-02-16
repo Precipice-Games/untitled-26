@@ -102,5 +102,5 @@ InitTestScene*.unity*
 /[Aa]rtifacts/
 /[Cc]odeCoverage/
 
-# Ignore the *.asset files from AddressableAssetsData
-/[Aa]ssets/AddressableAssetsData/AssetGroups/*.asset
+# # Ignore the *.asset files from AddressableAssetsData
+# /[Aa]ssets/AddressableAssetsData/AssetGroups/*.asset
