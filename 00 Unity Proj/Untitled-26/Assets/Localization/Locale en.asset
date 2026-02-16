@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Locale en
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Locale
   m_Identifier:
-    m_Code: en
+    m_Code: 
   m_Metadata:
     m_Items: []
-  m_LocaleName: English
+  m_LocaleName: Locale en
   m_CustomFormatCultureCode: 
   m_UseCustomFormatter: 0
   m_SortOrder: 10000
