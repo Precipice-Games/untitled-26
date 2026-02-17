@@ -37,9 +37,9 @@ jobs:
           git update-index --assume-unchanged "00 Unity Proj/Untitled-26/Packages/packages-lock.json"
         
       # Try to ignore any changes to the *.assets files in AddressableAssetsData
-      - name: Ignore *.assets
-        run: |
-          git update-index --assume-unchanged "00 Unity Proj/Untitled-26/Assets/AddressableAssetsData/AssetGroups/Localization-Asset-Tables-English.asset"
+      #- name: Ignore *.assets
+        #run: |
+          #git update-index --assume-unchanged "00 Unity Proj/Untitled-26/Assets/AddressableAssetsData/AssetGroups/Localization-Asset-Tables-English.asset"
 
       # Cache - Updated path
       - uses: actions/cache@v3
