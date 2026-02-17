@@ -12,6 +12,8 @@ jobs:
       # Checkout (without LFS)
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # Git LFS
       - name: Create LFS file list
@@ -29,6 +31,11 @@ jobs:
           git lfs pull
           git add .
           git reset --hard
+
+      - name: Status after checkout
+        run: |
+          git status --porcelain
+          git diff --name-only
 
       # Ignore Unity package manifest changes
       - name: Ignore package manifest changes
@@ -54,6 +61,12 @@ jobs:
         with:
           projectPath: "00 Unity Proj/Untitled-26"
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Status after tests
+        run: |
+          git status --porcelain
+          git diff --name-only
+          git diff --stat
 
       # Build - Added projectPath
       - name: Build project
