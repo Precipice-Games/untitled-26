@@ -65,6 +65,7 @@ jobs:
         with:
           projectPath: "00 Unity Proj/Untitled-26"
           targetPlatform: WebGL
+          versioning: None
 
       # Output
       - uses: actions/upload-artifact@v4
