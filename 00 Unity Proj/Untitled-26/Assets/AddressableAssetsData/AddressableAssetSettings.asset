@@ -59,31 +59,7 @@ MonoBehaviour:
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
-  m_GroupAssets:
-  - {fileID: 11400000, guid: f46d4364650c5c24aabd20a4a56001b2, type: 2}
-  - {fileID: 11400000, guid: fd0cde481e9f8b04581f920e20f5b39d, type: 2}
-  - {fileID: 11400000, guid: a215260eebc4a8a4aba4082d934d7ede, type: 2}
-  - {fileID: 11400000, guid: d97ae2b20845eed4dae2453fae2b80fd, type: 2}
-  - {fileID: 11400000, guid: 0e3ddad7ac1391a4096d6860427428a4, type: 2}
-  - {fileID: 11400000, guid: d19f8a8ac7222134882b7a27b6e0a7f7, type: 2}
-  - {fileID: 11400000, guid: 61b8d649247d95749a4dbe695f283675, type: 2}
-  - {fileID: 11400000, guid: e321e027a7aa84947965dfee82052cb8, type: 2}
-  - {fileID: 11400000, guid: 122e2463f7afb3040afbe3b0471b9a17, type: 2}
-  - {fileID: 11400000, guid: ec5331ad28705e24394c8d51bb07022f, type: 2}
-  - {fileID: 11400000, guid: 7999c2d9c7043dc4bb8b42574f8ab1fa, type: 2}
-  - {fileID: 11400000, guid: c5e873f9c0d0a0c4ead503f62267648b, type: 2}
-  - {fileID: 11400000, guid: 4290152424ebed543a123c02a56473e6, type: 2}
-  - {fileID: 11400000, guid: 8148bcfdf7aeaa547a6ea23bb87edd8f, type: 2}
-  - {fileID: 11400000, guid: 2fa3548a6249e724492dae6773e92397, type: 2}
-  - {fileID: 11400000, guid: 979899f578b37a748b9414abcffe46eb, type: 2}
-  - {fileID: 11400000, guid: 34d93047ef85af04f8d265e2ad2e4ffe, type: 2}
-  - {fileID: 11400000, guid: 808ae9efc2f0956459736f887d4704ff, type: 2}
-  - {fileID: 11400000, guid: ee9c3e9f07a8d30468d5e8a1eba8fd56, type: 2}
-  - {fileID: 11400000, guid: cda5379e92cd3754a8047fbb1e81fd4d, type: 2}
-  - {fileID: 11400000, guid: 9096173514c0c0441b1360061964b6ac, type: 2}
-  - {fileID: 11400000, guid: 8e74709e47398a341a209043f3da3a80, type: 2}
-  - {fileID: 11400000, guid: 8d44178626d5190439430ab9597930ac, type: 2}
-  - {fileID: 11400000, guid: 3f05c36523c2a6548afe69e62ccd2be8, type: 2}
+  m_GroupAssets: []
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
     m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
