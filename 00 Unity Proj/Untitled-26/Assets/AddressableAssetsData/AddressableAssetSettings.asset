@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetSettings
-  m_DefaultGroup: 22b56736ab95cbf43a5a7ced40440f01
+  m_DefaultGroup: bd32be7bbd025074d91a686d565485af
   m_currentHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -62,6 +62,8 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: c8bddeec56f87fa42a7e9cf09c6fa7ed, type: 2}
   - {fileID: 11400000, guid: 274e17437472c32418e223c58aa27676, type: 2}
+  - {fileID: 11400000, guid: d6c4cc3f71aba044eacbdb200075889d, type: 2}
+  - {fileID: 11400000, guid: 77792b0ed52f7904a959b406d16a6106, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
     m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles

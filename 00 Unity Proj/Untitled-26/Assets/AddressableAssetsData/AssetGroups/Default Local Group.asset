@@ -10,20 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Locales
+  m_Name: Default Local Group
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: Localization-Locales
-  m_GUID: dfc529723eaae054f9df4d9de020cf40
-  m_SerializeEntries:
-  - m_GUID: 013fa235ea1d6af4ca53cd2f6bd69a92
-    m_Address: English
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    FlaggedDuringContentUpdateRestriction: 0
-  m_ReadOnly: 1
+  m_GroupName: Default Local Group
+  m_GUID: bd32be7bbd025074d91a686d565485af
+  m_SerializeEntries: []
+  m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 6d2a71ca693bea74da6def2274e659a9, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: a5f7c6c495dc8e6478a518deccab5bee, type: 2}
-    - {fileID: 11400000, guid: 4f3ff9a365a489b41bf51bca6c0a06ea, type: 2}
+    - {fileID: 11400000, guid: 98ea011410adfcb4aadcde7551b1fbb3, type: 2}
+    - {fileID: 11400000, guid: 952d917e153b8f94590953b352dd594f, type: 2}
