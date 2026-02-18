@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c7d9cf5b-7ed9-4264-b47f-cf003ab39e11" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementScripts/CubeSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovementScripts/CubeSelector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementScripts/TileMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MovementScripts/TileMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +36,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "issue/43-integrate-puzzle-mechanic-into-proof-of-concept-bridge",
+    "git-widget-placeholder": "bug/49-tile-only-moving-in-one-direction",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -98,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1771196769193</updated>
       <workItem from="1771196785462" duration="295000" />
-      <workItem from="1771441777439" duration="349000" />
+      <workItem from="1771441777439" duration="3307000" />
     </task>
     <servers />
   </component>

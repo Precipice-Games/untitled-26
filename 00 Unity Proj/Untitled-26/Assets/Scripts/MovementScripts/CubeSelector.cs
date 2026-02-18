@@ -16,7 +16,9 @@ public class CubeSelector : MonoBehaviour
                 if (cube != null)
                 {
                     if (selectedCube != null)
+                    {
                         selectedCube.Deselect();
+                    }
 
                     selectedCube = cube;
                     selectedCube.Select();
@@ -24,6 +26,9 @@ public class CubeSelector : MonoBehaviour
             }
         }
     }
+    
+    // TODO: maybe convert these methods to a switch-case
+    //       to avoid the extra checks and if-statements?
 
     public void MoveSelectedRight(float speed)
     {

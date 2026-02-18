@@ -65,5 +65,4 @@ public class MoveCube : MonoBehaviour
             Debug.Log("Moved platform backwards.");
         }
     }
-    
 }
