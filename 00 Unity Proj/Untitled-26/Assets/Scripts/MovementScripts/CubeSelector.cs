@@ -28,24 +28,32 @@ public class CubeSelector : MonoBehaviour
     public void MoveSelectedRight(float speed)
     {
         if (selectedCube != null)
+        {
             selectedCube.transform.position += Vector3.right * speed;
+        }
     }
 
     public void MoveSelectedLeft(float speed)
     {
         if (selectedCube != null)
+        {
             selectedCube.transform.position += Vector3.left * speed;
+        }
     }
 
     public void MoveSelectedForward(float speed)
     {
         if (selectedCube != null)
+        {
             selectedCube.transform.position += Vector3.forward * speed;
+        }
     }
 
     public void MoveSelectedBack(float speed)
     {
         if (selectedCube != null)
+        {
             selectedCube.transform.position += Vector3.back * speed;
+        }
     }
 }

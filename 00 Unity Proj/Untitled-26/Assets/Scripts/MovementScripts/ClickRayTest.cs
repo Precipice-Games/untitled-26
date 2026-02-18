@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class ClickRayTest : MonoBehaviour
 {
+    // TODO: optimize this script so it's not constantly running the logic in update()
+    
     void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame) 
