@@ -8,6 +8,13 @@ public class CameraRotation : MonoBehaviour
     public float mouseSensitivity = 4f;
     private float cameraVerticalRotation = 0f;
 
+    private void Start()
+    {
+        
+        Cursor.lockState = CursorLockMode.Locked;
+
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
