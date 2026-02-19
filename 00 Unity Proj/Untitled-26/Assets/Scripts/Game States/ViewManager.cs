@@ -3,7 +3,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameStateManager : MonoBehaviour
+/// <summary>
+/// Inherits from GameStateManager. 
+/// ViewManager is responsible for managing the game's UI and camera views based on game state. 
+/// This script includes the methods for changing the UI for each game state.
+/// TO DO: add logic for changing camera views between exploration and puzzle states.
+/// </summary>
+public class ViewManager : MonoBehaviour
 {
 
     [Header("GameUIs")]
@@ -16,12 +22,6 @@ public class GameStateManager : MonoBehaviour
     [Header("Cameras")]
     public Camera playerCamera;
     public Camera puzzleCamera;
-
-    /// <summary>
-    /// A singleton instance of the GameStateManager. 
-    /// This allows other scripts to easily access the game state manager without needing to find it in the scene or pass references around.
-    /// </summary>
-    public static GameStateManager Instance;
 
     /// <summary>
     /// The set of possible game states.
@@ -42,20 +42,15 @@ public class GameStateManager : MonoBehaviour
     /// </summary>
     public GameState currentState { get; private set; }
 
-    private void Awake()
-    {
-        // Check for an existing instance of the GameStateManager object in the scene.
-        // If one already exists, destroy this new instance to enforce the singleton pattern.
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // GameState Manager will persist across scenes
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    /// <summary>
+    /// The most recent previous state the game was in before the current state.
+    /// </summary>
+    private GameState prevState;
+
+    /// <summary>
+    /// Tracks if the player is able to pause from the current state
+    /// </summary>
+    bool pausable = false;
 
     private void Start()
     {
@@ -95,7 +90,8 @@ public class GameStateManager : MonoBehaviour
         {
             yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
         }
-            currentState = newState;
+        prevState = currentState;
+        currentState = newState;
         HandleStateChange();
     }
 
@@ -117,18 +113,22 @@ public class GameStateManager : MonoBehaviour
         switch (currentState) {
             case GameState.MainMenu:
                 currentUI = mainMenuUI;
+                pausable = false;
                 Time.timeScale = 0.0f;
                 break;
             case GameState.Exploration:
                 currentUI = explorationUI;
+                pausable = true;
                 Time.timeScale = 1.0f;
                 break;
             case GameState.Puzzle:
                 currentUI = puzzleUI;
+                pausable = true;
                 Time.timeScale = 1.0f;
                 break;
             case GameState.Paused:
                 currentUI = pausedUI;
+                pausable = true;    // pasuable also accounts for if the game can be unpaused, which is only true for the 'Paused' state
                 Time.timeScale = 0.0f;
                 break;
         }
@@ -137,9 +137,31 @@ public class GameStateManager : MonoBehaviour
         currentUI.SetActive(true);
     }
 
-    public void ExitGame()
+    /// <summary>
+    /// This function listens for the Pause event (e.g., player pressing 'ESC') and checks current state of the game to pause/resume.
+    /// When switching from paused to gameplay, change currentState to the previous state (before the game was paused).
+    /// </summary>
+    public void onPause()
     {
-        Debug.Log("Quit Game");
-        Application.Quit();
+        if (currentState == GameState.Paused)
+        {
+            switch (prevState) {
+                case GameState.Exploration:
+                    ChangeToExploration();
+                    break;
+                case GameState.Puzzle:
+                    ChangeToPuzzle();
+                    break;
+            }
+        }
+        else if (pausable)
+        {
+            ChangeToPaused();
+        }
+        else
+        {
+            Debug.Log("Cannot pause from current state");
+            return;
+        }
     }
 }
