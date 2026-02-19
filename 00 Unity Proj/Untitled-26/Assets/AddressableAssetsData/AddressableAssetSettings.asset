@@ -15,7 +15,11 @@ MonoBehaviour:
   m_DefaultGroup: bd32be7bbd025074d91a686d565485af
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+<<<<<<< Updated upstream
+    Hash: 0aed3e8249c3bb4c3ffa40067960ec40
+=======
+    Hash: c3fe4e8c24691e67e45ebffe1e12e9ff
+>>>>>>> Stashed changes
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -62,6 +66,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: c8bddeec56f87fa42a7e9cf09c6fa7ed, type: 2}
   - {fileID: 11400000, guid: 274e17437472c32418e223c58aa27676, type: 2}
+  - {fileID: 11400000, guid: bb0ec5d6e777e41019998683b3967091, type: 2}
   - {fileID: 11400000, guid: d6c4cc3f71aba044eacbdb200075889d, type: 2}
   - {fileID: 11400000, guid: 77792b0ed52f7904a959b406d16a6106, type: 2}
   m_BuildSettings:

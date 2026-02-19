@@ -1,11 +1,13 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
 
     [Header("GameUIs")]
+    public GameObject mainMenuUI;
     public GameObject explorationUI;
     public GameObject puzzleUI;
     public GameObject pausedUI;
@@ -29,6 +31,7 @@ public class GameStateManager : MonoBehaviour
     /// </remarks>
     public enum GameState
     {
+        MainMenu,
         Exploration,
         Puzzle,
         Paused
@@ -46,6 +49,7 @@ public class GameStateManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject); // GameState Manager will persist across scenes
         }
         else
         {
@@ -56,12 +60,15 @@ public class GameStateManager : MonoBehaviour
     private void Start()
     {
         // Set the initial game state when the game starts.
-        // For now, we'll start in the Exploration state, but this could be changed in the future.
-        ChangeToExploration();
+        ChangeToMainMenu();
     }
 
     // Public methods to change the game state.
     // These can be called by other scripts or events to trigger a state change.
+    public void ChangeToMainMenu()
+    {
+        StartCoroutine(TransitionToState(GameState.MainMenu));
+    }
     public void ChangeToExploration()
     {
         StartCoroutine(TransitionToState(GameState.Exploration));
@@ -105,6 +112,10 @@ public class GameStateManager : MonoBehaviour
 
         // TO DO: handle change in camera views
         switch (currentState) {
+            case GameState.MainMenu:
+                currentUI = mainMenuUI;
+                Time.timeScale = 0.0f;
+                break;
             case GameState.Exploration:
                 currentUI = explorationUI;
                 Time.timeScale = 1.0f;
@@ -125,6 +136,7 @@ public class GameStateManager : MonoBehaviour
 
     public void ExitGame()
     {
+        Debug.Log("Quit Game");
         Application.Quit();
     }
 }
