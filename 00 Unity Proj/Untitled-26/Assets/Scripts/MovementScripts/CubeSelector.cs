@@ -10,15 +10,15 @@ public class CubeSelector : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
                 SelectableCube cube = hit.collider.GetComponent<SelectableCube>();
+
                 if (cube != null)
                 {
                     if (selectedCube != null)
-                    {
                         selectedCube.Deselect();
-                    }
 
                     selectedCube = cube;
                     selectedCube.Select();
@@ -26,39 +26,28 @@ public class CubeSelector : MonoBehaviour
             }
         }
     }
-    
-    // TODO: maybe convert these methods to a switch-case
-    //       to avoid the extra checks and if-statements?
 
-    public void MoveSelectedRight(float speed)
+    public void MoveSelectedRight()
     {
         if (selectedCube != null)
-        {
-            selectedCube.transform.position += Vector3.right * speed;
-        }
+            selectedCube.TryMove(1, 0);
     }
 
-    public void MoveSelectedLeft(float speed)
+    public void MoveSelectedLeft()
     {
         if (selectedCube != null)
-        {
-            selectedCube.transform.position += Vector3.left * speed;
-        }
+            selectedCube.TryMove(-1, 0);
     }
 
-    public void MoveSelectedForward(float speed)
+    public void MoveSelectedForward()
     {
         if (selectedCube != null)
-        {
-            selectedCube.transform.position += Vector3.forward * speed;
-        }
+            selectedCube.TryMove(0, 1);
     }
 
-    public void MoveSelectedBack(float speed)
+    public void MoveSelectedBack()
     {
         if (selectedCube != null)
-        {
-            selectedCube.transform.position += Vector3.back * speed;
-        }
+            selectedCube.TryMove(0, -1);
     }
 }

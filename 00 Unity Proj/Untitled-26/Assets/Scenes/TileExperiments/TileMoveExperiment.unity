@@ -119,6 +119,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &27222564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27222566}
+  - component: {fileID: 27222565}
+  m_Layer: 0
+  m_Name: GridManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &27222565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27222564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14eb0a16258e2034d9bb137e1435805f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridManager
+  width: 4
+  height: 3
+  tileSize: 0.25
+--- !u!4 &27222566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27222564}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.86651, y: 1.31913, z: 1.50533}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &96847281
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +478,7 @@ Transform:
   m_GameObject: {fileID: 276797934}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.07, y: 0.064, z: -0.24}
+  m_LocalPosition: {x: 2.07, y: 0, z: -2.362}
   m_LocalScale: {x: 0.25, y: 0.028083699, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -476,8 +523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  gridX: 3
+  gridZ: 2
   highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  isSelected: 0
 --- !u!114 &276797938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,8 +648,8 @@ Transform:
   m_GameObject: {fileID: 285387276}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.09, y: 0.064, z: -1.06}
-  m_LocalScale: {x: 0.25, y: 0.028083699, z: 0.25}
+  m_LocalPosition: {x: 2.0874572, y: 0, z: -3.1956015}
+  m_LocalScale: {x: 0.24863882, y: 0.027930792, z: 0.24863882}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1086997521}
@@ -645,8 +693,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  isSelected: 0
+  gridX: 3
+  gridZ: 0
+  highlightColor: {r: 1, g: 0.495283, b: 0.9244597, a: 1}
 --- !u!114 &285387280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,7 +816,7 @@ Transform:
   m_GameObject: {fileID: 295680335}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.62005, y: -0.40055, z: -1.79981}
+  m_LocalPosition: {x: 2.281, y: -0.67, z: -4.192}
   m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1015,7 +1064,7 @@ Transform:
   m_GameObject: {fileID: 354407620}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.74, y: 0.064, z: -0.753}
+  m_LocalPosition: {x: 1.74, y: 0, z: -2.812}
   m_LocalScale: {x: 0.25, y: 0.028083699, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1151,8 +1200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  isSelected: 0
+  gridX: 2
+  gridZ: 1
+  highlightColor: {r: 1, g: 0.46980044, b: 0.015686274, a: 1}
 --- !u!1 &411171360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,27 +1423,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1833730115}
-        m_TargetAssemblyTypeName: MoveCube, Assembly-CSharp
-        m_MethodName: MoveBack
+      - m_Target: {fileID: 1035875983}
+        m_TargetAssemblyTypeName: CubeSelector, Assembly-CSharp
+        m_MethodName: MoveSelectedBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1035875983}
-        m_TargetAssemblyTypeName: CubeSelector, Assembly-CSharp
-        m_MethodName: MoveSelectedBack
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1466,7 +1504,7 @@ Transform:
   m_GameObject: {fileID: 455620747}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.43, y: 0.064, z: -0.26}
+  m_LocalPosition: {x: 1.43, y: 0, z: -2.346}
   m_LocalScale: {x: 0.25, y: 0.028083699, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1602,8 +1640,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  isSelected: 0
+  gridX: 1
+  gridZ: 2
+  highlightColor: {r: 0.08114074, g: 1, b: 0.015686274, a: 1}
 --- !u!1 &793120180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,7 +1764,7 @@ Transform:
   m_GameObject: {fileID: 793120180}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 1.5399997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1814,27 +1853,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1833730115}
-        m_TargetAssemblyTypeName: MoveCube, Assembly-CSharp
-        m_MethodName: MoveLeft
+      - m_Target: {fileID: 1035875983}
+        m_TargetAssemblyTypeName: CubeSelector, Assembly-CSharp
+        m_MethodName: MoveSelectedLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1035875983}
-        m_TargetAssemblyTypeName: CubeSelector, Assembly-CSharp
-        m_MethodName: MoveSelectedLeft
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2009,13 +2036,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035875976}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.30129406, y: -0, z: -0, w: 0.95353127}
-  m_LocalPosition: {x: -0.01, y: 1.105, z: 0.010000178}
+  m_LocalRotation: {x: 0.3498096, y: -0, z: -0, w: 0.93682086}
+  m_LocalPosition: {x: 0.82, y: 1.65, z: -0.748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 35.071, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40.951, y: 0, z: 0}
 --- !u!114 &1035875981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2139,27 +2166,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1833730115}
-        m_TargetAssemblyTypeName: MoveCube, Assembly-CSharp
-        m_MethodName: MoveForward
+      - m_Target: {fileID: 1035875983}
+        m_TargetAssemblyTypeName: CubeSelector, Assembly-CSharp
+        m_MethodName: MoveSelectedForward
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1035875983}
-        m_TargetAssemblyTypeName: CubeSelector, Assembly-CSharp
-        m_MethodName: MoveSelectedForward
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2226,7 +2241,7 @@ Transform:
   m_GameObject: {fileID: 1086997520}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.62005, y: 0.40055, z: 1.79981}
+  m_LocalPosition: {x: -1.62005, y: 0.40055, z: 3.33981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2323,27 +2338,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1833730115}
-        m_TargetAssemblyTypeName: MoveCube, Assembly-CSharp
-        m_MethodName: MoveRight
+      - m_Target: {fileID: 1035875983}
+        m_TargetAssemblyTypeName: CubeSelector, Assembly-CSharp
+        m_MethodName: MoveSelectedLeft
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1035875983}
-        m_TargetAssemblyTypeName: CubeSelector, Assembly-CSharp
-        m_MethodName: MoveSelectedRight
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.5
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2595,7 +2598,7 @@ Transform:
   m_GameObject: {fileID: 1330621552}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.02}
+  m_LocalPosition: {x: 0, y: 0, z: 1.5599997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2632,7 +2635,7 @@ Transform:
   m_GameObject: {fileID: 1545429520}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.08, y: 0.064, z: -0.69}
+  m_LocalPosition: {x: 1.08, y: 0, z: -2.812}
   m_LocalScale: {x: 0.25, y: 0.028083699, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2677,8 +2680,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  isSelected: 0
+  gridX: 0
+  gridZ: 1
+  highlightColor: {r: 1, g: 0.019995866, b: 0, a: 1}
 --- !u!114 &1545429524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2799,7 +2803,7 @@ Transform:
   m_GameObject: {fileID: 1643203955}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.62005, y: -0.40055, z: 0.53}
+  m_LocalPosition: {x: 2.238, y: -0.615, z: -1.592}
   m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2941,7 +2945,7 @@ Transform:
   m_GameObject: {fileID: 1833730110}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.43, y: 0.064, z: -1.096}
+  m_LocalPosition: {x: 1.43, y: 0, z: -3.218}
   m_LocalScale: {x: 0.25, y: 0.028083699, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3077,8 +3081,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  isSelected: 0
+  gridX: 1
+  gridZ: 0
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
 --- !u!1001 &1928185287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3340,3 +3345,4 @@ SceneRoots:
   - {fileID: 1330621555}
   - {fileID: 345065592}
   - {fileID: 96847284}
+  - {fileID: 27222566}
