@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.WSA;
 using static UnityEngine.UI.Image;
 
 public class PlayerRaycastInteraction : MonoBehaviour
@@ -12,7 +13,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
     public float rayLength = 2.5f;
 
     //    ==== Interactable Object ====
-    GameObject activeInteractable; //Stores overlapping interactable object
+    public GameObject activeInteractable; //Stores overlapping interactable object
 
     /*
      * 
