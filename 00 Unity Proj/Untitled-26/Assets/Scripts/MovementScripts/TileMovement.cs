@@ -2,27 +2,67 @@ using UnityEngine;
 
 public class MoveCube : MonoBehaviour
 {
-    public float speed = 0.5f; // speed of tile moving
+    public float moveAmount = 1f;
 
+    private static MoveCube selectedTile;
+    private Renderer rend;
+    private Color originalColor;
 
-//direction of the tile
-    public void MoveRight()
+    void Start()
     {
-        transform.position += Vector3.right * speed;
+        rend = GetComponent<Renderer>();
+        originalColor = rend.material.color;
     }
 
-    public void MoveLeft()
+    void OnMouseDown()
     {
-        transform.position += Vector3.left * speed;
+        if (selectedTile != null)
+        {
+            selectedTile.ResetColor();
+        }
+
+        selectedTile = this;
+        rend.material.color = Color.yellow;
     }
 
-    public void MoveForward()
+    void ResetColor()
     {
-        transform.position += Vector3.forward * speed;
+        rend.material.color = originalColor;
     }
 
-    public void MoveBack()
+    public static void MoveRight()
     {
-        transform.position += Vector3.back * speed;
+        if (selectedTile != null)
+        {
+            selectedTile.transform.position += Vector3.right * selectedTile.moveAmount;
+            Debug.Log("Moved to the right.");
+        }
+    }
+
+    public static void MoveLeft()
+    {
+        if (selectedTile != null)
+        {
+            selectedTile.transform.position += Vector3.left * selectedTile.moveAmount;
+            Debug.Log("Moved platform left.");
+        }
+    }
+
+    public static void MoveForward()
+    {
+        if (selectedTile != null)
+        {
+            selectedTile.transform.position += Vector3.forward * selectedTile.moveAmount;
+            Debug.Log("Moved platform forwards.");
+        }
+    }
+
+    public static void MoveBack()
+    {
+        if (selectedTile != null)
+        {
+            selectedTile.transform.position += Vector3.back * selectedTile.moveAmount;
+            Debug.Log("Moved platform backwards.");
+        }
     }
 }
