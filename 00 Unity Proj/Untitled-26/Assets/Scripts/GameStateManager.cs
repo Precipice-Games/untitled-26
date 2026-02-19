@@ -91,8 +91,11 @@ public class GameStateManager : MonoBehaviour
     /// <param name="newState"> The <see cref="GameState"/> the game will transition to. </param>
     private IEnumerator TransitionToState(GameState newState)
     {
-        yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
-        currentState = newState;
+        if (newState != GameState.MainMenu)
+        {
+            yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
+        }
+            currentState = newState;
         HandleStateChange();
     }
 
