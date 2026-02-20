@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: unifiedraytracing
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: unifiedraytracing
-  m_GUID: 21e2584af1f498f42b35a8e3f4c38530
+  m_GUID: 13960c8e095202c4b833a58b53a2fb44
   m_SerializeEntries:
   - m_GUID: 1ad53a96b58d3c3488dde4f14db1aaeb
     m_Address: Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/CopyPositions.compute
