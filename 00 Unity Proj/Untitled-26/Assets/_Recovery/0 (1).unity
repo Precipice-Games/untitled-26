@@ -370,7 +370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6230604859074895634, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -6230604859074895634, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -385,10 +385,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1740867339}
     - target: {fileID: -6230604859074895634, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1968256865}
-    - target: {fileID: -6230604859074895634, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -401,23 +397,15 @@ PrefabInstance:
       value: ChangeToExploration
       objectReference: {fileID: 0}
     - target: {fileID: -6230604859074895634, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: -6230604859074895634, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ViewManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: -6230604859074895634, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SceneChangerButton, Assembly-CSharp
+      value: GameStateManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: -6230604859074895634, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: -6230604859074895634, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: -6164693902441966201, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
@@ -432,17 +420,9 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 35.76
       objectReference: {fileID: 0}
-    - target: {fileID: -6022168677219764263, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -5778203467388844503, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
-      objectReference: {fileID: 0}
-    - target: {fileID: -5528613021398476738, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5307898085556316762, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -703,10 +683,6 @@ PrefabInstance:
     - target: {fileID: 302453638826975059, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
-      objectReference: {fileID: 0}
-    - target: {fileID: 487908345379287601, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
-      propertyPath: m_Color.a
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 487908345379287601, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_Enabled
@@ -1184,10 +1160,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 71.51
       objectReference: {fileID: 0}
-    - target: {fileID: 8566992759393614276, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8839106882643300012, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1196,9 +1168,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4719430106221968774, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1968256865}
     - targetCorrespondingSourceObject: {fileID: -544191721942471486, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1004473332}
@@ -2206,24 +2175,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Interact:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1740867339}
-        m_TargetAssemblyTypeName: ViewManager, Assembly-CSharp
-        m_MethodName: onInteract
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Map:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1740867338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2254,25 +2205,6 @@ MonoBehaviour:
   pausedUI: {fileID: 280598722}
   playerCamera: {fileID: 0}
   puzzleCamera: {fileID: 0}
-  puzzleScene: TileMoveExperiment
---- !u!1 &1968256855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4719430106221968774, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
-  m_PrefabInstance: {fileID: 487309795}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1968256865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968256855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60642b4dc867a2441a709bf5d508be9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneChangerButton
-  scene: MovementInteraction_1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
