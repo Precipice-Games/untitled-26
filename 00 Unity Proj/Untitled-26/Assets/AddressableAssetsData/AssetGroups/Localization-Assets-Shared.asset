@@ -13,13 +13,8 @@ MonoBehaviour:
   m_Name: Localization-Assets-Shared
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Localization-Assets-Shared
-  m_GUID: 6defe0a4fa97db64fb244fbfe417739a
+  m_GUID: 20dd05649fecdb443ba178c07aceb719
   m_SerializeEntries:
-  - m_GUID: 9abc03c63231e4443a1ebe5bbc515c1f
-    m_Address: Assets/Dialogue/Localization/Tables/VoiceoverTest Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a22425478590f684dad499eba0d4033c
     m_Address: Assets/Dialogue/Localization/Tables/StringTableTest Shared Data.asset
     m_ReadOnly: 1
