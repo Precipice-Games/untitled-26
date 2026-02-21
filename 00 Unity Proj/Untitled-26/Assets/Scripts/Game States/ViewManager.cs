@@ -56,6 +56,11 @@ public class ViewManager : MonoBehaviour
     {
         // Set the initial game state when the game starts.
         ChangeToMainMenu();
+        
+        // TODO: There should probably be some logic here regarding what the default state should be when we
+        //       load up the game. Right now, it's set to MainMenu. But perhaps we can have a variable in each
+        //       scene that corresponds to the GameState enum above to check what the default state SHOULD be
+        //       for that given scene. If the default is EMPTY, then we can default to MainMenu.
     }
 
     // Public methods to change the game state.
