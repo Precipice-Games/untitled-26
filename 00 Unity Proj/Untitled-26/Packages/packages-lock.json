@@ -287,6 +287,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unitycommunity.unitysingleton": {
+      "version": "https://github.com/UnityCommunity/UnitySingleton.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "18a0a76b7ba6e026e94f2caae5c636c7a3a7b2da"
+    },
     "dev.yarnspinner.unity": {
       "version": "https://github.com/YarnSpinnerTool/YarnSpinner-Unity.git#current",
       "depth": 0,
