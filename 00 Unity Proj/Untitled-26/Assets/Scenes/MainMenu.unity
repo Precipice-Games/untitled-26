@@ -1585,7 +1585,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
 --- !u!114 &1110844431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2108,6 +2108,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -75.67169
       objectReference: {fileID: 0}
+    - target: {fileID: 7688672782111972531, guid: a882787d60ae5624d8a337cd3bd3cf98, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2205,6 +2209,7 @@ MonoBehaviour:
   pausedUI: {fileID: 280598722}
   playerCamera: {fileID: 0}
   puzzleCamera: {fileID: 0}
+  gameState: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
