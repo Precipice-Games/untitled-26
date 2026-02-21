@@ -15,6 +15,8 @@ public class InputManager : MonoBehaviour
         Input.Menu.Enable();
     }
 
+    // TODO: maybe use the input actions callback like we do with the Player movement
+    //       & interaction system so that we're not constantly calling it in update().
     private void Update()
     {
         // Check for menu input actions
