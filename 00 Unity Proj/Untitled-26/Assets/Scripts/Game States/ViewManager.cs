@@ -56,26 +56,35 @@ public class ViewManager : MonoBehaviour
     {
         // Set the initial game state when the game starts.
         ChangeToMainMenu();
+        
+        // TODO: There should probably be some logic here regarding what the default state should be when we
+        //       load up the game. Right now, it's set to MainMenu. But perhaps we can have a variable in each
+        //       scene that corresponds to the GameState enum above to check what the default state SHOULD be
+        //       for that given scene. If the default is EMPTY, then we can default to MainMenu.
     }
 
     // Public methods to change the game state.
     // These can be called by other scripts or events to trigger a state change.
     public void ChangeToMainMenu()
     {
+        Debug.Log("ViewManager.cs >> Changing to " + currentState + " state...");
         StartCoroutine(TransitionToState(GameState.MainMenu));
     }
     public void ChangeToExploration()
     {
+        Debug.Log("ViewManager.cs >> Changing to " + currentState + " state...");
         StartCoroutine(TransitionToState(GameState.Exploration));
     }
 
     public void ChangeToPuzzle()
     {
+        Debug.Log("ViewManager.cs >> Changing to " + currentState + " state...");
         StartCoroutine(TransitionToState(GameState.Puzzle));
     }
 
     public void ChangeToPaused()
     {
+        Debug.Log("ViewManager.cs >> Changing to " + currentState + " state...");
         StartCoroutine(TransitionToState(GameState.Paused));
     }
 
@@ -92,6 +101,7 @@ public class ViewManager : MonoBehaviour
         }
         prevState = currentState;
         currentState = newState;
+        Debug.Log("ViewManager.cs >> State transitioned to: " + currentState); // Confirm the state change
         HandleStateChange();
     }
 
@@ -99,17 +109,18 @@ public class ViewManager : MonoBehaviour
     /// Handles logic for switching between game states.
     /// </summary>
     /// <remarks> 
-    /// Switches between UI canvases and sets time scale to 0.0f when in a paused state.
+    /// Switches between UI canvases and sets timescale to 0.0f when in a paused state.
     /// </remarks>
     private void HandleStateChange()
     {
-        // deactivate old UI
+        // Deactivate old UI
         if (currentUI)
         {
             currentUI.SetActive(false);
+            Debug.Log("ViewManager.cs >> Disabled the following UI: " + currentUI); // Confirm disabling of UI
         }
 
-        // TO DO: handle change in camera views
+        // TODO: handle change in camera views
         switch (currentState) {
             case GameState.MainMenu:
                 currentUI = mainMenuUI;
@@ -128,13 +139,14 @@ public class ViewManager : MonoBehaviour
                 break;
             case GameState.Paused:
                 currentUI = pausedUI;
-                pausable = true;    // pasuable also accounts for if the game can be unpaused, which is only true for the 'Paused' state
+                pausable = true;    // pausable also accounts for if the game can be unpaused, which is only true for the 'Paused' state
                 Time.timeScale = 0.0f;
                 break;
         }
 
         // activate UI of new state
         currentUI.SetActive(true);
+        Debug.Log("ViewManager.cs >> Activated UI for: " + currentState);
     }
 
     /// <summary>
