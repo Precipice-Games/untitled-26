@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MoveCube : MonoBehaviour
 {
-    public float moveAmount = 1f;
+    public float moveAmount = 0.1f;
 
     private static MoveCube selectedTile;
     private Renderer rend;
