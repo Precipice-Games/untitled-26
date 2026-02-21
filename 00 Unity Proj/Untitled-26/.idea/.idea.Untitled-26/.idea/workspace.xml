@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7d9cf5b-7ed9-4264-b47f-cf003ab39e11" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game States/ViewManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game States/ViewManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,17 +17,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDORG6L-c7E9aqB",
-        "number": 59
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDORG6L-c7E9aqB&quot;,
+        &quot;number&quot;: 59
       },
-      "lastSeen": 1771695676437
+      &quot;lastSeen&quot;: 1771695676437
     }
   ]
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <McpServerCommand sourceId="UserConfigurationSource">
       <option name="allowedToolsNames" />
@@ -62,7 +64,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "refactor/16-gamestate-manager-cleanup",
+    "git-widget-placeholder": "issue/70-action-map-switching-gamestate",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
