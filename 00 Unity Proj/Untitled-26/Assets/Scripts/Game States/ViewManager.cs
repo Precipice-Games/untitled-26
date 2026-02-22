@@ -68,15 +68,7 @@ public class ViewManager : MonoBehaviour
 
     private void Start()
     {
-        // Set the initial game state when the game starts.
-        // ChangeToMainMenu();
-        
         Debug.Log("ViewManager.cs >> CurrentGameState: " + CurrentGameState);
-        
-        // TODO: There should probably be some logic here regarding what the default state should be when we
-        //       load up the game. Right now, it's set to MainMenu. But perhaps we can have a variable in each
-        //       scene that corresponds to the GameState enum above to check what the default state SHOULD be
-        //       for that given scene. If the default is EMPTY, then we can default to MainMenu.
     }
 
     // Public methods to change the game state.
@@ -140,25 +132,6 @@ public class ViewManager : MonoBehaviour
         // SetGameState(gameState);
         Debug.Log($"ViewManager.cs >> Starting Coroutine TransitionToState({gameState})...");
         StartCoroutine(TransitionToState(gameState));
-    }
-    
-    /// <summary>
-    /// Automatically changes the game state.
-    /// </summary>
-    /// <remarks> 
-    /// Temporary method meant to automatically set the game state, even without a transition.
-    /// It also notifies all other subscribers when the state has been changed.
-    /// This method can be removed later on if needed.
-    /// </remarks>
-    public static void SetGameState(GameState newState)
-    {
-        Debug.unityLogger.Log("GameStateManager > SetGameState " + newState.ToString());
-        
-        // Update the static current state
-        CurrentGameState = newState;
-
-        // Notify all subscribers (including component instances)
-        gameStateChanged?.Invoke(newState);
     }
     
     // When the state has been changed, update the local variable
