@@ -123,13 +123,13 @@ public class ViewManager : MonoBehaviour
     
     private void OnEnable()
     {
-        // gameStateChanged += OnGameStateChanged;
+        gameStateChanged += OnGameStateChanged;
         SceneManager.sceneLoaded += SceneDefaults;
     }
     
     private void OnDisable()
     {
-        // gameStateChanged -= OnGameStateChanged;
+        gameStateChanged -= OnGameStateChanged;
         SceneManager.sceneLoaded -= SceneDefaults;
     }
     
@@ -137,7 +137,9 @@ public class ViewManager : MonoBehaviour
     public void SceneDefaults(Scene scene, LoadSceneMode mode)
     {
         // Initialize the static CurrentGameState from the inspector value
-        SetGameState(gameState);
+        // SetGameState(gameState);
+        Debug.Log($"ViewManager.cs >> Starting Coroutine TransitionToState({gameState})...");
+        StartCoroutine(TransitionToState(gameState));
     }
     
     /// <summary>
@@ -157,6 +159,23 @@ public class ViewManager : MonoBehaviour
 
         // Notify all subscribers (including component instances)
         gameStateChanged?.Invoke(newState);
+    }
+    
+    // When the state has been changed, update the local variable
+    // and print out a debug message
+    private void OnGameStateChanged(GameState newState)
+    {
+        gameState = newState;
+        
+        // Set time scale based on game state
+        if (newState == GameState.Paused)
+        {
+            Time.timeScale = 0f; // Pause the game
+        }
+        else
+        {
+            Time.timeScale = 1f; // Resume the game
+        }
     }
 
     /// <summary>
