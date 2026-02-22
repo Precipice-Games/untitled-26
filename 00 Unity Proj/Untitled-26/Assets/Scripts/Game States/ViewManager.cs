@@ -193,7 +193,9 @@ public class ViewManager : MonoBehaviour
                 break;
             case GameState.Paused:
                 currentUI = pausedUI;
-                pausable = true;    // pausable also accounts for if the game can be unpaused, which is only true for the 'Paused' state
+                pausable = true;
+                // pausable also accounts for if the game can be unpaused,
+                // which is only true for the 'Paused' state
                 Time.timeScale = 0.0f;
                 break;
         }
@@ -214,10 +216,10 @@ public class ViewManager : MonoBehaviour
             switch (prevState) {
                 case GameState.Exploration:
                     ChangeToExploration();
-                    break;
+                    break; 
                 case GameState.Puzzle:
                     ChangeToPuzzle();
-                    break;
+                    break; 
             }
         }
         else if (pausable)
