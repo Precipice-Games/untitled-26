@@ -84,21 +84,33 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     
     private void OnEnable()
     {
-        SceneManager.sceneLoaded += SceneDefaults;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.activeSceneChanged += OnActiveSceneChanged;
         transitionedToNewState += HandlePauseValues;
     }
     
     private void OnDisable()
     {
-        SceneManager.sceneLoaded -= SceneDefaults;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.activeSceneChanged -= OnActiveSceneChanged;
         transitionedToNewState -= HandlePauseValues;
     }
     
-    // By default, the scene will load in the selected game state
-    public void SceneDefaults(Scene scene, LoadSceneMode mode)
+    // Runs when the scene is loaded
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Initialize the static CurrentGameState from the inspector value
+        Debug.Log("GameStateManager.cs >> OnSceneLoaded() >> New scene has been loaded: " + scene.name);
         Debug.Log($"GameStateManager.cs >> Setting the Scene Defaults for defaultState {gameState}...");
+        // Initialize the static CurrentGameState from the inspector value
+        SetSceneDefaults(gameState);
+    }
+    
+    // Runs when the active scene is changed
+    public void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
+    {
+        Debug.Log($"GameStateManager.cs >> OnActiveSceneChanged() >> Switched from {prevScene.name} to {nextScene.name}");
+        Debug.Log($"GameStateManager.cs >> Setting the Scene Defaults for defaultState {gameState}...");
+        // Initialize the static CurrentGameState from the inspector value
         SetSceneDefaults(gameState);
     }
 
@@ -129,8 +141,13 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         // the CurrentGameState is assigned.
         CurrentGameState = defaultState;
         Debug.Log("GameStateManager.cs >> Set the CurrentGameState to the defaultState " + CurrentGameState);
+        transitionedToNewState?.Invoke(CurrentGameState);
     }
 
+    /// <summary>
+    /// Method used to assign game states and update the previous state.
+    /// </summary>
+    /// <param name="newState"></param>
     private void TransitionToState(GameState newState)
     {
         prevState = CurrentGameState;
