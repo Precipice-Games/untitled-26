@@ -34,7 +34,7 @@ public class GameStateManager : MonoBehaviour
     /// <summary>
     /// The state the game is currently in.
     /// </summary>
-    public static GameState CurrentGameState { get; private set; }
+    public static GameState CurrentGameState { get; set; }
 
     /// <summary>
     /// The most recent previous state the game was in before the current state.
@@ -103,10 +103,11 @@ public class GameStateManager : MonoBehaviour
     /// <param name="newState"> The <see cref="GameState"/> the game will transition to. </param>
     private IEnumerator TransitionToState(GameState newState)
     {
-        if (newState != GameState.MainMenu)
-        {
-            yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
-        }
+        yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
+        // if (newState != GameState.MainMenu)
+        // {
+        //     yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
+        // }
         prevState = CurrentGameState;
         CurrentGameState = newState;
         Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
@@ -165,11 +166,11 @@ public class GameStateManager : MonoBehaviour
         else if (pausable)
         {
             StartCoroutine(TransitionToState(gameState));
+            StartCoroutine(TransitionToState(GameState.Paused));
         }
         else
         {
             Debug.Log("Cannot pause from current state");
-            return;
         }
     }
 
