@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     float moveSpeed = 5.0f; //speed coefficient
     float xMovement; //left to right movement data
     float yMovement; //forward to back movement data
-    float jumpPower = 10.0f; //how strong the jump force is
+    public float jumpPower = 4.0f; //how strong the jump force is
 
    
     Rigidbody rb; //contains the rigidbody of the player

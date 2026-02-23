@@ -1,4 +1,7 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,8 +14,8 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class ViewManager : MonoBehaviour
 {
-
     [Header("GameUIs")]
+    private List<GameObject> uiCanvases;
     public GameObject mainMenuUI;
     public GameObject explorationUI;
     public GameObject puzzleUI;
@@ -20,98 +23,65 @@ public class ViewManager : MonoBehaviour
     private GameObject currentUI;
 
     [Header("Cameras")]
+    private List<Camera> cameras;
     public Camera playerCamera;
     public Camera puzzleCamera;
+    public Camera menuCamera;
+    private Camera _targetCamera;
 
-    /// <summary>
-    /// The set of possible game states.
-    /// </summary>
-    /// <remarks>
-    /// As of right now, the game can be in one of three states: Exploration, Puzzle, or Paused.
-    /// </remarks>
-    public enum GameState
+    private void Awake()
     {
-        MainMenu,
-        Exploration,
-        Puzzle,
-        Paused
-    }
-
-    /// <summary>
-    /// The state the game is currently in.
-    /// </summary>
-    public GameState currentState { get; private set; }
-
-    /// <summary>
-    /// The most recent previous state the game was in before the current state.
-    /// </summary>
-    private GameState prevState;
-
-    /// <summary>
-    /// Tracks if the player is able to pause from the current state
-    /// </summary>
-    bool pausable = false;
-
-    private void Start()
-    {
-        // Set the initial game state when the game starts.
-        ChangeToMainMenu();
-        
-        // TODO: There should probably be some logic here regarding what the default state should be when we
-        //       load up the game. Right now, it's set to MainMenu. But perhaps we can have a variable in each
-        //       scene that corresponds to the GameState enum above to check what the default state SHOULD be
-        //       for that given scene. If the default is EMPTY, then we can default to MainMenu.
-    }
-
-    // Public methods to change the game state.
-    // These can be called by other scripts or events to trigger a state change.
-    public void ChangeToMainMenu()
-    {
-        Debug.Log("ViewManager.cs >> Changing to " + currentState + " state...");
-        StartCoroutine(TransitionToState(GameState.MainMenu));
-    }
-    public void ChangeToExploration()
-    {
-        Debug.Log("ViewManager.cs >> Changing to " + currentState + " state...");
-        StartCoroutine(TransitionToState(GameState.Exploration));
-    }
-
-    public void ChangeToPuzzle()
-    {
-        Debug.Log("ViewManager.cs >> Changing to " + currentState + " state...");
-        StartCoroutine(TransitionToState(GameState.Puzzle));
-    }
-
-    public void ChangeToPaused()
-    {
-        Debug.Log("ViewManager.cs >> Changing to " + currentState + " state...");
-        StartCoroutine(TransitionToState(GameState.Paused));
-    }
-
-    /// <summary>
-    /// A helper method to transition the game to a new state. 
-    /// It includes a small delay to simulate the time it may take to transition between states.
-    /// </summary>
-    /// <param name="newState"> The <see cref="GameState"/> the game will transition to. </param>
-    private IEnumerator TransitionToState(GameState newState)
-    {
-        if (newState != GameState.MainMenu)
+        // Initialize cameras list if null
+        if (cameras == null)
         {
-            yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
+            cameras = new List<Camera>();
         }
-        prevState = currentState;
-        currentState = newState;
-        Debug.Log("ViewManager.cs >> State transitioned to: " + currentState); // Confirm the state change
-        HandleStateChange();
+        
+        // Clear and rebuild the list to ensure it's up to date
+        cameras.Clear();
+        
+        // Add present cameras to cameras list
+        if (playerCamera != null) cameras.Add(playerCamera);
+        if (puzzleCamera != null) cameras.Add(puzzleCamera);
+        if (menuCamera != null) cameras.Add(menuCamera);
+        
+        Debug.Log($"ViewManager.cs >> Initialized with {cameras.Count} cameras.");
+        
+        // Initialize UI canvases list if null
+        if (uiCanvases == null)
+        {
+            uiCanvases = new List<GameObject>();
+        }
+        
+        // Clear and rebuild the list to ensure it's up to date
+        uiCanvases.Clear();
+        
+        // Add present UI Canvases to uiCanvases list
+        if (mainMenuUI != null) uiCanvases.Add(mainMenuUI);
+        if (explorationUI != null) uiCanvases.Add(explorationUI);
+        if (puzzleUI != null) uiCanvases.Add(puzzleUI);
+        if (pausedUI != null) uiCanvases.Add(pausedUI);
+        
+        Debug.Log($"ViewManager.cs >> Initialized with {uiCanvases.Count} UI Canvases.");
+    }
+
+    private void OnEnable()
+    {
+        GameStateManager.transitionedToNewState += HandleUIChange;
+    }
+    
+    private void OnDisable()
+    {
+        GameStateManager.transitionedToNewState -= HandleUIChange;
     }
 
     /// <summary>
-    /// Handles logic for switching between game states.
+    /// Handles logic UI toggling.
     /// </summary>
     /// <remarks> 
-    /// Switches between UI canvases and sets timescale to 0.0f when in a paused state.
+    /// Once we've transitioned to the new game state, this method will disable the current UI canvas and enable the new one.
     /// </remarks>
-    private void HandleStateChange()
+    private void HandleUIChange(GameStateManager.GameState newState)
     {
         // Deactivate old UI
         if (currentUI)
@@ -120,60 +90,59 @@ public class ViewManager : MonoBehaviour
             Debug.Log("ViewManager.cs >> Disabled the following UI: " + currentUI); // Confirm disabling of UI
         }
 
-        // TODO: handle change in camera views
-        switch (currentState) {
-            case GameState.MainMenu:
+        // Set the current UI based on the new game state
+        switch (GameStateManager.CurrentGameState)
+        {
+            case GameStateManager.GameState.MainMenu:
                 currentUI = mainMenuUI;
-                pausable = false;
-                Time.timeScale = 0.0f;
+                _targetCamera = menuCamera;
                 break;
-            case GameState.Exploration:
+            case GameStateManager.GameState.Exploration:
                 currentUI = explorationUI;
-                pausable = true;
-                Time.timeScale = 1.0f;
+                _targetCamera = playerCamera;
                 break;
-            case GameState.Puzzle:
+            case GameStateManager.GameState.Puzzle:
                 currentUI = puzzleUI;
-                pausable = true;
-                Time.timeScale = 1.0f;
+                _targetCamera = puzzleCamera;
                 break;
-            case GameState.Paused:
+            case GameStateManager.GameState.Paused:
                 currentUI = pausedUI;
-                pausable = true;    // pausable also accounts for if the game can be unpaused, which is only true for the 'Paused' state
-                Time.timeScale = 0.0f;
+                _targetCamera = menuCamera;
                 break;
         }
-
+        
         // activate UI of new state
         currentUI.SetActive(true);
-        Debug.Log("ViewManager.cs >> Activated UI for: " + currentState);
+        Debug.Log("ViewManager.cs >> Activated UI for: " + GameStateManager.CurrentGameState);
+        
+        // Handle camera change
+        HandleCameraChange(_targetCamera);
     }
-
+    
     /// <summary>
-    /// This function listens for the Pause event (e.g., player pressing 'ESC') and checks current state of the game to pause/resume.
-    /// When switching from paused to gameplay, change currentState to the previous state (before the game was paused).
+    /// Handles camera switching.
     /// </summary>
-    public void onPause()
+    /// <remarks> 
+    /// Once we've transitioned to the new game state, this method will enable the correct camera and disable all others.
+    /// </remarks>
+    private void HandleCameraChange(Camera targetCamera)
     {
-        if (currentState == GameState.Paused)
+        // TODO: Refactor this if-else tree later on for better readability and maintainability.
+
+        foreach (Camera cam in cameras)
         {
-            switch (prevState) {
-                case GameState.Exploration:
-                    ChangeToExploration();
-                    break;
-                case GameState.Puzzle:
-                    ChangeToPuzzle();
-                    break;
+            if (cam != null)
+            {
+                if (cam == targetCamera)
+                {
+                    cam.enabled = true;
+                    Debug.Log($"ViewManager.cs >> Enabled camera: {cam.name}");
+                }
+                else
+                {
+                    cam.enabled = false;
+                }
             }
-        }
-        else if (pausable)
-        {
-            ChangeToPaused();
-        }
-        else
-        {
-            Debug.Log("Cannot pause from current state");
-            return;
         }
     }
 }
