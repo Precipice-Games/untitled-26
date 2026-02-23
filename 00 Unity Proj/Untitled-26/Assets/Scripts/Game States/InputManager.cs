@@ -79,10 +79,6 @@ public class InputManager : MonoBehaviour
             }
         }
     }
-    private void OnMap(InputAction.CallbackContext context)
-    {
-        Map.Invoke();
-    }
     
     // Switches the current action map to the specified action map name
     private void FindCorrectActionMap(GameStateManager.GameState newState)
@@ -117,5 +113,9 @@ public class InputManager : MonoBehaviour
     {
         Pause.Invoke();
     }
+    
+    private void OnMap(InputAction.CallbackContext context)
+    {
+        Map.Invoke();
     }
 }
