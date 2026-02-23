@@ -49,15 +49,15 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     
     // Static event to notify subscribers of game state changes
     public static event Action<GameState> transitionedToNewState;
-    
-    /// <summary>
-    /// A singleton instance of the GameStateManager.
-    /// This allows other scripts to easily access the game state manager without needing to find it in the scene or pass references around.
-    /// </summary>
-    public static GameStateManager Instance { get; private set; }
 
-    private void Awake()
+    private new void Awake()
     {
+        // Commented this out because I think that the GameStateManager
+        // might cause issues if it persists across scenes. Instead, I have
+        // wrapped this class in a MonoSingleton<>, which is a singleton that
+        // is destroyed between scenes. However, if you decide you want it
+        // to NOT be destroyed, wrap the class in a PersistentMonoSingleton<>.
+        //
         // // Check for an existing instance of the GameStateManager object in the scene.
         // // If one already exists, destroy this new instance to enforce the singleton pattern.
         // if (Instance == null)
@@ -78,38 +78,34 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     
     private void OnEnable()
     {
-        SceneManager.sceneLoaded += SceneDefaults;
-        transitionedToNewState += HandlePauseValues;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.activeSceneChanged += OnActiveSceneChanged;
     }
     
     private void OnDisable()
     {
-        SceneManager.sceneLoaded -= SceneDefaults;
-        transitionedToNewState -= HandlePauseValues;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.activeSceneChanged -= OnActiveSceneChanged;
     }
     
-    // By default, the scene will load in the selected game state
-    public void SceneDefaults(Scene scene, LoadSceneMode mode)
+    // Runs when the scene is loaded
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log("GameStateManager.cs >> OnSceneLoaded() >> New scene has been loaded: " + scene.name);
+        Debug.Log($"GameStateManager.cs >> Setting the Scene Defaults for defaultState {gameState}...");
         // Initialize the static CurrentGameState from the inspector value
-        // SetGameState(gameState);
-        
-        // Set time scale immediately based on the starting game state to prevent frozen scenes
-        // if (gameState == GameState.Exploration || gameState == GameState.Puzzle)
-        // {
-        //     Time.timeScale = 1.0f;
-        //     Debug.Log($"GameStateManager.cs >> Immediately set time scale to 1.0 for {gameState} state.");
-        // }
-        // else if (gameState == GameState.MainMenu || gameState == GameState.Paused)
-        // {
-        //     Time.timeScale = 0.0f;
-        //     Debug.Log($"GameStateManager.cs >> Immediately set time scale to 0.0 for {gameState} state.");
-        // }
-        
-        Debug.Log($"GameStateManager.cs >> Starting Coroutine TransitionToState({gameState})...");
-        TransitionToState(gameState);
+        SetSceneDefaults(gameState);
     }
     
+    // Runs when the active scene is changed
+    public void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
+    {
+        Debug.Log($"GameStateManager.cs >> OnActiveSceneChanged() >> Switched from {prevScene.name} to {nextScene.name}");
+        Debug.Log($"GameStateManager.cs >> Setting the Scene Defaults for defaultState {gameState}...");
+        // Initialize the static CurrentGameState from the inspector value
+        SetSceneDefaults(gameState);
+    }
+
     /// <summary>
     /// A helper method to transition the game to a new state. 
     /// It includes a small delay to simulate the time it may take to transition between states.
@@ -129,12 +125,29 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     //     transitionedToNewState?.Invoke(CurrentGameState);
     // }
 
+    // Method just used to set the scene defaults.
+    // All other state changes occur in TransitionToState().
+    private void SetSceneDefaults(GameState defaultState)
+    {
+        // There is no previous state, so just ensure
+        // the CurrentGameState is assigned.
+        CurrentGameState = defaultState;
+        Debug.Log("GameStateManager.cs >> Set the CurrentGameState to the defaultState " + CurrentGameState);
+        Debug.Log("GameStateManger.cs >> Calling on HandlePauseValues()...");
+        HandlePauseValues(CurrentGameState);
+        //transitionedToNewState?.Invoke(CurrentGameState);
+    }
+
+    /// <summary>
+    /// Method used to assign game states and update the previous state.
+    /// </summary>
+    /// <param name="newState"></param>
     private void TransitionToState(GameState newState)
     {
         prevState = CurrentGameState;
         CurrentGameState = newState;
         Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
-        transitionedToNewState?.Invoke(CurrentGameState);
+        //transitionedToNewState?.Invoke(CurrentGameState);
     }
 
     /// <summary>
