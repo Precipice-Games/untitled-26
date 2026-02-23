@@ -1,11 +1,56 @@
+using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
+    
+    [Title("Game State")]
+    [EnumToggleButtons, HideLabel]
+    [InfoBox("Choose the default game state that this scene will load in.")]
+    public GameState gameState;
+    // Note: This variable is not static because each instance of the component
+    // needs to maintain its own copy of the current game state for reference. Also,
+    // the Enum will clearly change when the static event is invoked, so watch out
+    // for the Inspector.
 
     /// <summary>
-    /// A singleton instance of the GameStateManager. 
+    /// The set of possible game states.
+    /// </summary>
+    /// <remarks>
+    /// As of right now, the game can be in one of three states: Exploration, Puzzle, or Paused.
+    /// </remarks>
+    public enum GameState
+    {
+        MainMenu,
+        Exploration,
+        Puzzle,
+        Paused
+    }
+
+    /// <summary>
+    /// The state the game is currently in.
+    /// </summary>
+    public static GameState CurrentGameState { get; private set; }
+
+    /// <summary>
+    /// The most recent previous state the game was in before the current state.
+    /// </summary>
+    private GameState prevState;
+
+    /// <summary>
+    /// Tracks if the player is able to pause from the current state
+    /// </summary>
+    bool pausable = false;
+    
+    // Static event to notify subscribers of game state changes
+    public static event Action<GameState> transitionedToNewState;
+    
+    /// <summary>
+    /// A singleton instance of the GameStateManager.
     /// This allows other scripts to easily access the game state manager without needing to find it in the scene or pass references around.
     /// </summary>
     public static GameStateManager Instance { get; private set; }
@@ -22,6 +67,109 @@ public class GameStateManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+    
+    private void Start()
+    {
+        Debug.Log("GameStateManager.cs >> CurrentGameState: " + CurrentGameState);
+    }
+    
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += SceneDefaults;
+        transitionedToNewState += HandlePauseValues;
+    }
+    
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= SceneDefaults;
+        transitionedToNewState -= HandlePauseValues;
+    }
+    
+    // By default, the scene will load in the selected game state
+    public void SceneDefaults(Scene scene, LoadSceneMode mode)
+    {
+        // Initialize the static CurrentGameState from the inspector value
+        // SetGameState(gameState);
+        Debug.Log($"ViewManager.cs >> Starting Coroutine TransitionToState({gameState})...");
+        StartCoroutine(TransitionToState(gameState));
+    }
+    
+    /// <summary>
+    /// A helper method to transition the game to a new state. 
+    /// It includes a small delay to simulate the time it may take to transition between states.
+    /// </summary>
+    /// <param name="newState"> The <see cref="GameState"/> the game will transition to. </param>
+    private IEnumerator TransitionToState(GameState newState)
+    {
+        if (newState != GameState.MainMenu)
+        {
+            yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
+        }
+        prevState = CurrentGameState;
+        CurrentGameState = newState;
+        Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
+        transitionedToNewState?.Invoke(CurrentGameState);
+    }
+
+    /// <summary>
+    /// Handles the logic for timescale & pausable bool.
+    /// </summary>
+    /// <remarks> 
+    /// Once we've transitioned to the new game state, this method will update the time scale and the pausable variable accordingly.
+    /// </remarks>
+    private void HandlePauseValues(GameState newState)
+    {
+        // Update the timescale and pausable variable based on the new game state
+        switch (newState)
+        {
+            case GameState.MainMenu:
+                pausable = false;
+                Time.timeScale = 0.0f;
+                break;
+            case GameState.Exploration:
+                pausable = true;
+                Time.timeScale = 1.0f;
+                break;
+            case GameState.Puzzle:
+                pausable = true;
+                Time.timeScale = 1.0f;
+                break;
+            case GameState.Paused:
+                pausable = true;
+                // pausable also accounts for if the game can be unpaused,
+                // which is only true for the 'Paused' state
+                Time.timeScale = 0.0f;
+                break;
+        }
+    }
+
+    /// <summary>
+    /// This function listens for the Pause event (e.g., player pressing 'ESC') and checks current state of the game to pause/resume.
+    /// When switching from paused to gameplay, change currentState to the previous state (before the game was paused).
+    /// </summary>
+    public void onPause()
+    {
+        if (CurrentGameState == GameState.Paused)
+        {
+            switch (prevState) {
+                case GameState.Exploration:
+                    StartCoroutine(TransitionToState(GameState.Exploration));
+                    break;
+                case GameState.Puzzle:
+                    StartCoroutine(TransitionToState(GameState.Puzzle));
+                    break;
+            }
+        }
+        else if (pausable)
+        {
+            StartCoroutine(TransitionToState(gameState));
+        }
+        else
+        {
+            Debug.Log("Cannot pause from current state");
+            return;
         }
     }
 

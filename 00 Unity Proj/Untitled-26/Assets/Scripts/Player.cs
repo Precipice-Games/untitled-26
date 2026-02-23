@@ -7,9 +7,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoSingleton<Player>
 {
-    [SerializeField] private Rigidbody rb; // Rigidbody
     [SerializeField] private PlayerInput _playerInput;
-    public static event Action inputMapSwitched;
 
     void Awake()
     {
@@ -18,68 +16,36 @@ public class Player : MonoSingleton<Player>
             _playerInput = GetComponent<PlayerInput>();
         }
     }
-    
-    // Returns the PlayerInput component attached to the player
-    public PlayerInput GetPlayerInput()
+
+    void OnEnable()
     {
-        return _playerInput;
+        InputManager.inputMapSwitched += SwitchActionMap;
+        GameStateManager.transitionedToNewState += SwitchCursorFunctionality;
     }
 
-    // Subscribe to events
-    private void OnEnable()
+    void OnDisable()
     {
-        if (_playerInput != null)
-        {
-            inputMapSwitched += CurrentActionMap;
-            ViewManager.gameStateChanged += SwitchActionMap;
-            ViewManager.gameStateChanged += SwitchCursorFunctionality;
-        }
-    }
-
-    // Unsubscribe from events
-    private void OnDisable()
-    {
-        if (_playerInput != null)
-        {
-            inputMapSwitched -= CurrentActionMap;
-            ViewManager.gameStateChanged -= SwitchActionMap;
-            ViewManager.gameStateChanged -= SwitchCursorFunctionality;
-        }
+        InputManager.inputMapSwitched -= SwitchActionMap;
+        GameStateManager.transitionedToNewState -= SwitchCursorFunctionality;
     }
     
     // Switches the current action map to the specified action map name
-    private void SwitchActionMap(ViewManager.GameState newState)
+    private void SwitchActionMap(string actionMapName)
     {
-        if (_playerInput != null)
-        {
-            string actionMapName = "UI"; // Default to UI, will be overridden in switch statement
-            
-            switch (newState) {
-                case ViewManager.GameState.MainMenu:
-                    actionMapName = "UI";
-                    break;
-                case ViewManager.GameState.Exploration:
-                    actionMapName = "Player";
-                    break;
-                case ViewManager.GameState.Puzzle:
-                    actionMapName = "Player"; // TODO: fix this accordingly
-                    break;
-                case ViewManager.GameState.Paused:
-                    actionMapName = "UI";
-                    // Set action map
-                    break;
-            }
-            
-            _playerInput.SwitchCurrentActionMap(actionMapName);
-            inputMapSwitched?.Invoke();
-        }
+        _playerInput.SwitchCurrentActionMap(actionMapName);
+        Debug.Log($"Player.cs >> Switched action map for {actionMapName} state.");
     }
     
+    // TODO: The cursor commands are static, so it's not as easy to assign
+    //       them as the action map, but this should do for now. Perhaps
+    //       we can set it up later on to respond to the current action
+    //       map rather than the current game state.
+    
     // Switches cursor functionality based on game state
-    private void SwitchCursorFunctionality(ViewManager.GameState newState)
+    private void SwitchCursorFunctionality(GameStateManager.GameState newState)
     {
-        // If we're not in Exploration mode, the cursor should be visible and unlocked
-        if (newState != ViewManager.GameState.Exploration)
+        // Cursor should only be locked and invisible during Exploration mode.
+        if (newState != GameStateManager.GameState.Exploration)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -91,11 +57,5 @@ public class Player : MonoSingleton<Player>
         }
         
         Debug.Log($"Player.cs >> Switched cursor functionality for {newState} state.");
-    }
-    
-    // Prints out the name of the current action map
-    private void CurrentActionMap()
-    {
-        Debug.Log("Player > CurrentActionMap > Current Action Map: " + _playerInput.currentActionMap.name);
     }
 }

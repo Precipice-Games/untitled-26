@@ -1299,6 +1299,7 @@ GameObject:
   - component: {fileID: 564596991}
   - component: {fileID: 564596990}
   - component: {fileID: 564596989}
+  - component: {fileID: 564596992}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1313,7 +1314,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564596988}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &564596990
 Camera:
   m_ObjectHideFlags: 0
@@ -1380,6 +1381,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &564596992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564596988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &584228946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8018635157453650121, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
@@ -1531,6 +1576,68 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4471230137169607760, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
   m_PrefabInstance: {fileID: 884546219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &939868168
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.15061
+      objectReference: {fileID: 0}
+    - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.9342
+      objectReference: {fileID: 0}
+    - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -30.61876
+      objectReference: {fileID: 0}
+    - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438321986708604092, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+--- !u!20 &939868169 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2384675142033647082, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+  m_PrefabInstance: {fileID: 939868168}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1004473322 stripped
 GameObject:
@@ -2167,8 +2274,8 @@ MonoBehaviour:
   Pause:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1740867339}
-        m_TargetAssemblyTypeName: ViewManager, Assembly-CSharp
+      - m_Target: {fileID: 1740867338}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
         m_MethodName: onPause
         m_Mode: 1
         m_Arguments:
@@ -2191,6 +2298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a924c33e78973c2418c9b442bde4844d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
+  gameState: 0
 --- !u!114 &1740867339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2207,9 +2315,10 @@ MonoBehaviour:
   explorationUI: {fileID: 487309800}
   puzzleUI: {fileID: 487309799}
   pausedUI: {fileID: 280598722}
-  playerCamera: {fileID: 0}
+  cameras: []
+  playerCamera: {fileID: 939868169}
   puzzleCamera: {fileID: 0}
-  gameState: 0
+  menuCamera: {fileID: 564596990}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2219,3 +2328,4 @@ SceneRoots:
   - {fileID: 544345670}
   - {fileID: 1710725778}
   - {fileID: 1740867336}
+  - {fileID: 939868168}

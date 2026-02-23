@@ -5,17 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7d9cf5b-7ed9-4264-b47f-cf003ab39e11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game States/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game States/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game States/ViewManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game States/ViewManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/nikki/untitled-26/00 Unity Proj/Untitled-26" value="39j5htuqkvkVUO72aW2BucGV5r7" />
+    </persistenceIdMap>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Nicole-Scalera"
+  }
+}]]></component>
   <component name="GitHubPullRequestState">{
   &quot;prStates&quot;: [
     {
@@ -27,6 +40,12 @@
     }
   ]
 }</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Precipice-Games/untitled-26.git",
+    "accountId": "ec7d3be2-c42a-472e-a6d7-9c09fcb35385"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -74,12 +93,13 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/v0.1.0-prototype.1-windows\Untitled-26.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/New folder\Untitled-26.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\nikki\Desktop\Build1" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -135,6 +155,7 @@
       <updated>1771196769193</updated>
       <workItem from="1771196785462" duration="295000" />
       <workItem from="1771441777439" duration="3307000" />
+      <workItem from="1771777729334" duration="9348000" />
     </task>
     <servers />
   </component>
@@ -149,6 +170,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
       <option value=".github/instructions" />

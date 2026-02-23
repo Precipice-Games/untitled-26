@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 468646906096890671}
   - component: {fileID: 54466896041126900}
   m_Layer: 2
-  m_Name: Main Camera
+  m_Name: PlayerCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 9071040957621364692}
   - component: {fileID: 8839583978902556456}
   - component: {fileID: 2003065819590668714}
+  - component: {fileID: 3103343398758482961}
   - component: {fileID: 1173698383739407512}
   - component: {fileID: 6739596773503058293}
   - component: {fileID: 6922169669516928053}
@@ -270,6 +271,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3103343398758482961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438321986708604092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea35802ce9ec4fb99611c4d0aa01bf7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  _playerInput: {fileID: 6922169669516928053}
 --- !u!114 &1173698383739407512
 MonoBehaviour:
   m_ObjectHideFlags: 0
