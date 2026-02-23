@@ -12,7 +12,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
     public float rayLength = 2.5f;
 
     //    ==== Interactable Object ====
-    GameObject activeInteractable; //Stores overlapping interactable object
+    public GameObject activeInteractable; //Stores overlapping interactable object
 
     /*
      * 
