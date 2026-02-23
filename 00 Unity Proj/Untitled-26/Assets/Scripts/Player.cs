@@ -32,6 +32,12 @@ public class Player : MonoSingleton<Player>
     // Switches the current action map to the specified action map name
     private void SwitchActionMap(string actionMapName)
     {
+        if (_playerInput == null)
+        {
+            Debug.LogError("Player.cs >> Cannot switch action map: PlayerInput is null!");
+            return;
+        }
+        
         _playerInput.SwitchCurrentActionMap(actionMapName);
         Debug.Log($"Player.cs >> Switched action map for {actionMapName} state.");
     }

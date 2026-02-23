@@ -3,9 +3,10 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using UnityCommunity.UnitySingleton;
 using UnityEngine.SceneManagement;
 
-public class GameStateManager : MonoBehaviour
+public class GameStateManager : MonoSingleton<GameStateManager>
 {
     
     [Title("Game State")]
@@ -44,7 +45,7 @@ public class GameStateManager : MonoBehaviour
     /// <summary>
     /// Tracks if the player is able to pause from the current state
     /// </summary>
-    bool pausable = false;
+    bool pausable;
     
     // Static event to notify subscribers of game state changes
     public static event Action<GameState> transitionedToNewState;
@@ -57,17 +58,17 @@ public class GameStateManager : MonoBehaviour
 
     private void Awake()
     {
-        // Check for an existing instance of the GameStateManager object in the scene.
-        // If one already exists, destroy this new instance to enforce the singleton pattern.
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // GameState Manager will persist across scenes
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        // // Check for an existing instance of the GameStateManager object in the scene.
+        // // If one already exists, destroy this new instance to enforce the singleton pattern.
+        // if (Instance == null)
+        // {
+        //     Instance = this;
+        //     DontDestroyOnLoad(gameObject); // GameState Manager will persist across scenes
+        // }
+        // else
+        // {
+        //     Destroy(gameObject);
+        // }
     }
     
     private void Start()
@@ -92,8 +93,21 @@ public class GameStateManager : MonoBehaviour
     {
         // Initialize the static CurrentGameState from the inspector value
         // SetGameState(gameState);
-        Debug.Log($"ViewManager.cs >> Starting Coroutine TransitionToState({gameState})...");
-        StartCoroutine(TransitionToState(gameState));
+        
+        // Set time scale immediately based on the starting game state to prevent frozen scenes
+        // if (gameState == GameState.Exploration || gameState == GameState.Puzzle)
+        // {
+        //     Time.timeScale = 1.0f;
+        //     Debug.Log($"GameStateManager.cs >> Immediately set time scale to 1.0 for {gameState} state.");
+        // }
+        // else if (gameState == GameState.MainMenu || gameState == GameState.Paused)
+        // {
+        //     Time.timeScale = 0.0f;
+        //     Debug.Log($"GameStateManager.cs >> Immediately set time scale to 0.0 for {gameState} state.");
+        // }
+        
+        Debug.Log($"GameStateManager.cs >> Starting Coroutine TransitionToState({gameState})...");
+        TransitionToState(gameState);
     }
     
     /// <summary>
@@ -101,13 +115,22 @@ public class GameStateManager : MonoBehaviour
     /// It includes a small delay to simulate the time it may take to transition between states.
     /// </summary>
     /// <param name="newState"> The <see cref="GameState"/> the game will transition to. </param>
-    private IEnumerator TransitionToState(GameState newState)
+    // private IEnumerator TransitionToState(GameState newState)
+    // {
+    //     //yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
+    //     // if (newState != GameState.MainMenu)
+    //     // {
+    //     //     yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
+    //     // }
+    //     
+    //     prevState = CurrentGameState;
+    //     CurrentGameState = newState;
+    //     Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
+    //     transitionedToNewState?.Invoke(CurrentGameState);
+    // }
+
+    private void TransitionToState(GameState newState)
     {
-        yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
-        // if (newState != GameState.MainMenu)
-        // {
-        //     yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
-        // }
         prevState = CurrentGameState;
         CurrentGameState = newState;
         Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
@@ -128,20 +151,24 @@ public class GameStateManager : MonoBehaviour
             case GameState.MainMenu:
                 pausable = false;
                 Time.timeScale = 0.0f;
+                Debug.Log("GameStateManager.cs >> Main Menu loaded, time scale set to 0 and pausable set to false.");
                 break;
             case GameState.Exploration:
                 pausable = true;
                 Time.timeScale = 1.0f;
+                Debug.Log("GameStateManager.cs >> Exploration loaded, time scale set to 1 and pausable set to true.");
                 break;
             case GameState.Puzzle:
                 pausable = true;
                 Time.timeScale = 1.0f;
+                Debug.Log("GameStateManager.cs >> Exploration loaded, time scale set to 1 and pausable set to true.");
                 break;
             case GameState.Paused:
                 pausable = true;
                 // pausable also accounts for if the game can be unpaused,
                 // which is only true for the 'Paused' state
                 Time.timeScale = 0.0f;
+                Debug.Log("GameStateManager.cs >> Paused loaded, time scale set to 1 and pausable set to true.");
                 break;
         }
     }
@@ -156,16 +183,16 @@ public class GameStateManager : MonoBehaviour
         {
             switch (prevState) {
                 case GameState.Exploration:
-                    StartCoroutine(TransitionToState(GameState.Exploration));
+                    TransitionToState(GameState.Exploration);
                     break;
                 case GameState.Puzzle:
-                    StartCoroutine(TransitionToState(GameState.Puzzle));
+                    TransitionToState(GameState.Puzzle);
                     break;
             }
         }
         else if (pausable)
         {
-            StartCoroutine(TransitionToState(GameState.Paused));
+            TransitionToState(GameState.Paused);
         }
         else
         {

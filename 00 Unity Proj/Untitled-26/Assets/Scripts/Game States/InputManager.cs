@@ -21,31 +21,46 @@ public class InputManager : MonoBehaviour
     {
         // Initialize the PlayerInput component and
         // assign it to the static property
-        if (Player.Instance == null)
-        {
-            Debug.Log("InputManager.cs >> Can't find the Player instance. Make sure it is in the scene with Player.cs attached.");
-        }
-        else
-        {
-            playerInput = Player.Instance.GetComponent<PlayerInput>();
-        }
+        AcquirePlayerInputReference();
     }
     
     // Subscribe to events
     private void OnEnable()
     {
-        if (playerInput != null)
-        {
-            GameStateManager.transitionedToNewState += FindCorrectActionMap;
-        }
+        // Re-acquire the PlayerInput reference in case scene changed
+        AcquirePlayerInputReference();
+        
+        // Always subscribe to the event, we'll check for null in FindCorrectActionMap
+        GameStateManager.transitionedToNewState += FindCorrectActionMap;
     }
 
     // Unsubscribe from events
     private void OnDisable()
     {
-        if (playerInput != null)
+        GameStateManager.transitionedToNewState -= FindCorrectActionMap;
+    }
+    
+    /// <summary>
+    /// Gets the PlayerInput reference from the Player singleton instance.
+    /// </summary>
+    private void AcquirePlayerInputReference()
+    {
+        if (Player.Instance == null)
         {
-            GameStateManager.transitionedToNewState -= FindCorrectActionMap;
+            Debug.LogWarning("InputManager.cs >> Can't find the Player instance. Make sure it is in the scene with Player.cs attached.");
+            playerInput = null;
+        }
+        else
+        {
+            playerInput = Player.Instance.GetComponent<PlayerInput>();
+            if (playerInput != null)
+            {
+                Debug.Log("InputManager.cs >> Successfully acquired PlayerInput reference.");
+            }
+            else
+            {
+                Debug.LogWarning("InputManager.cs >> Player instance found but PlayerInput component is missing!");
+            }
         }
     }
     

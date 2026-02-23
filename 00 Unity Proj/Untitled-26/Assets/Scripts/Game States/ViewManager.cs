@@ -15,6 +15,7 @@ using UnityEngine.SceneManagement;
 public class ViewManager : MonoBehaviour
 {
     [Header("GameUIs")]
+    private List<GameObject> uiCanvases;
     public GameObject mainMenuUI;
     public GameObject explorationUI;
     public GameObject puzzleUI;
@@ -22,7 +23,7 @@ public class ViewManager : MonoBehaviour
     private GameObject currentUI;
 
     [Header("Cameras")]
-    [SerializeField] private List<Camera> cameras;
+    private List<Camera> cameras;
     public Camera playerCamera;
     public Camera puzzleCamera;
     public Camera menuCamera;
@@ -30,10 +31,38 @@ public class ViewManager : MonoBehaviour
 
     private void Awake()
     {
-        // Add cameras to cameras array
-        cameras.Add(playerCamera);
-        cameras.Add(puzzleCamera);
-        cameras.Add(menuCamera);
+        // Initialize cameras list if null
+        if (cameras == null)
+        {
+            cameras = new List<Camera>();
+        }
+        
+        // Clear and rebuild the list to ensure it's up to date
+        cameras.Clear();
+        
+        // Add present cameras to cameras list
+        if (playerCamera != null) cameras.Add(playerCamera);
+        if (puzzleCamera != null) cameras.Add(puzzleCamera);
+        if (menuCamera != null) cameras.Add(menuCamera);
+        
+        Debug.Log($"ViewManager.cs >> Initialized with {cameras.Count} cameras.");
+        
+        // Initialize UI canvases list if null
+        if (uiCanvases == null)
+        {
+            uiCanvases = new List<GameObject>();
+        }
+        
+        // Clear and rebuild the list to ensure it's up to date
+        uiCanvases.Clear();
+        
+        // Add present UI Canvases to uiCanvases list
+        if (mainMenuUI != null) uiCanvases.Add(mainMenuUI);
+        if (explorationUI != null) uiCanvases.Add(explorationUI);
+        if (puzzleUI != null) uiCanvases.Add(puzzleUI);
+        if (pausedUI != null) uiCanvases.Add(pausedUI);
+        
+        Debug.Log($"ViewManager.cs >> Initialized with {uiCanvases.Count} UI Canvases.");
     }
 
     private void OnEnable()
@@ -107,6 +136,7 @@ public class ViewManager : MonoBehaviour
                 if (cam == targetCamera)
                 {
                     cam.enabled = true;
+                    Debug.Log($"ViewManager.cs >> Enabled camera: {cam.name}");
                 }
                 else
                 {
