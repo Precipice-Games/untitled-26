@@ -149,18 +149,17 @@ public class ViewManager : MonoBehaviour
     /// <summary>
     /// Listens for the Interact event (e.g., player pressing 'E') and checks current state of the game to switch to puzzle scene if in exploration state.
     /// </summary>
-    public void onInteract()
-    {
-        if(currentState == GameState.Exploration)
-        {
-            ChangeToPuzzle();
-            SceneManager.LoadScene(puzzleScene); // Temporary code to switch scenes until full integration
-        }
-        else
-        {
-            Debug.Log("Cannot switch to puzzle scene from current state.");
-        }
-    }
-
-
+    // public void onInteract()
+    // {
+    //     if(currentState == GameState.Exploration)
+    //     {
+    //         ChangeToPuzzle();
+    //         SceneManager.LoadScene(puzzleScene); // Temporary code to switch scenes until full integration
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("Cannot switch to puzzle scene from current state.");
+    //     }
+    // }
+    
 }
