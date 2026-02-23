@@ -117,21 +117,25 @@ public class ViewManager : MonoBehaviour
         switch (currentState) {
             case GameState.MainMenu:
                 currentUI = mainMenuUI;
+                Cursor.lockState = CursorLockMode.None;
                 pausable = false;
                 Time.timeScale = 0.0f;
                 break;
             case GameState.Exploration:
                 currentUI = explorationUI;
+                Cursor.lockState = CursorLockMode.Locked;
                 pausable = true;
                 Time.timeScale = 1.0f;
                 break;
             case GameState.Puzzle:
                 currentUI = puzzleUI;
+                Cursor.lockState = CursorLockMode.None;
                 pausable = true;
                 Time.timeScale = 1.0f;
                 break;
             case GameState.Paused:
                 currentUI = pausedUI;
+                Cursor.lockState = CursorLockMode.None;
                 pausable = true;    // pasuable also accounts for if the game can be unpaused, which is only true for the 'Paused' state
                 Time.timeScale = 0.0f;
                 break;
@@ -139,10 +143,13 @@ public class ViewManager : MonoBehaviour
 
         // activate UI of new state
         currentUI.SetActive(true);
+
+        // See if cursor is locked based on state
+        Debug.Log("Cursor State: " + Cursor.lockState);
     }
 
     /// <summary>
-    /// This function listens for the Pause event (e.g., player pressing 'ESC') and checks current state of the game to pause/resume.
+    /// Listens for the Pause event (e.g., player pressing 'ESC') and checks current state of the game to pause/resume.
     /// When switching from paused to gameplay, change currentState to the previous state (before the game was paused).
     /// </summary>
     public void onPause()
@@ -169,6 +176,9 @@ public class ViewManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Listens for the Interact event (e.g., player pressing 'E') and checks current state of the game to switch to puzzle scene if in exploration state.
+    /// </summary>
     public void onInteract()
     {
         if(currentState == GameState.Exploration)
@@ -181,4 +191,6 @@ public class ViewManager : MonoBehaviour
             Debug.Log("Cannot switch to puzzle scene from current state.");
         }
     }
+
+
 }

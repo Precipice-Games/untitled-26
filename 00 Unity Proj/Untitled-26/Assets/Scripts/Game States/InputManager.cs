@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
@@ -23,32 +24,45 @@ public class InputManager : MonoBehaviour
     /// </summary>
     public UnityEvent Map;
 
-    public static InputSystem_Actions Input { get; private set; }
+    public InputSystem_Actions Input { get; private set; }
 
     private void Awake()
     {
         Input = new InputSystem_Actions();
-        Input.Menu.Enable();    // TO DO: Figure out how/when to disable input.
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        // Check for menu input actions
-        // TO DO: Is there a more efficient way to check for input?
-        if (Input.Menu.enabled)
-        {
-            if (Input.Menu.Pause.triggered)
-            {
-                Pause.Invoke();
-            }
-            else if (Input.Menu.Interact.triggered)
-            {
-                Interact.Invoke();
-            }
-            else if (Input.Menu.Map.triggered)
-            {
-                Map.Invoke();
-            }
-        }
+        Input.Menu.Enable();
+        Input.Menu.Pause.performed += OnPause;
+        Input.Menu.Interact.performed += OnInteract;
+        Input.Menu.Map.performed += OnMap;
+    }
+
+    private void OnDisable()
+    {
+        Input.Menu.Pause.performed -= OnPause;
+        Input.Menu.Interact.performed -= OnInteract;
+        Input.Menu.Map.performed -= OnMap;
+        Input.Menu.Disable();
+    }
+
+    private void OnDestroy()
+    {
+        Input.Dispose();
+    }
+
+    private void OnPause(InputAction.CallbackContext context)
+    {
+        Pause.Invoke();
+    }
+
+    private void OnInteract(InputAction.CallbackContext context)
+    {
+        Interact.Invoke();
+    }
+    private void OnMap(InputAction.CallbackContext context)
+    {
+        Map.Invoke();
     }
 }
