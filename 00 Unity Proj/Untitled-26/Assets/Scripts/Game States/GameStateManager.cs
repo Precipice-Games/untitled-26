@@ -157,7 +157,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         prevState = CurrentGameState;
         CurrentGameState = newState;
         Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
-        //transitionedToNewState?.Invoke(CurrentGameState);
+        HandlePauseValues(CurrentGameState);
     }
 
     /// <summary>
@@ -192,6 +192,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
                 Debug.Log("GameStateManager.cs >> Paused loaded, time scale set to 1 and pausable set to true.");
                 break;
         }
+        
+        // Trigger this event after game state, timescale,
+        // and pausable bool have been updated. 
+        transitionedToNewState?.Invoke(CurrentGameState);
     }
 
     /// <summary>
