@@ -58,6 +58,12 @@ public class GameStateManager : MonoSingleton<GameStateManager>
 
     private void Awake()
     {
+        // Commented this out because I think that the GameStateManager
+        // might cause issues if it persists across scenes. Instead, I have
+        // wrapped this class in a MonoSingleton<>, which is a singleton that
+        // is destroyed between scenes. However, if you decide you want it
+        // to NOT be destroyed, wrap the class in a PersistentMonoSingleton<>.
+        //
         // // Check for an existing instance of the GameStateManager object in the scene.
         // // If one already exists, destroy this new instance to enforce the singleton pattern.
         // if (Instance == null)
