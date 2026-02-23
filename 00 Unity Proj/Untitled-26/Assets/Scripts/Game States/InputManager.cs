@@ -7,7 +7,23 @@ public class InputManager : MonoBehaviour
 {
 
     [Header("Unity Events")]
+    /// <summary>
+    /// Triggered by pressing 'ESC' to pause/unpause the game.
+    /// Listeners should check to make sure the game is in a pausable state.
+    /// </summary>
     public UnityEvent Pause;
+    /// <summary>
+    /// Triggered by pressing 'E' to interact with an in-game object.
+    /// Intended for the use of transititoning from exploration to puzzle mode via puzzle terminal.
+    /// </summary>
+    // 'Interact' event may be moved to a script attached to the player to better enable/disable input
+    // when player is able to interact with an object in the environemnt
+    public UnityEvent Interact;
+    /// <summary>
+    /// Triggered by pressing 'M' to open the map UI.
+    /// Listeners should check the game is in exploration state.
+    /// </summary>
+    public UnityEvent Map;
 
     // Get a reference to the PlayerInput component
     public static PlayerInput playerInput { get; private set; }
@@ -96,5 +112,10 @@ public class InputManager : MonoBehaviour
     public void PauseTriggered(InputAction.CallbackContext context)
     {
         Pause.Invoke();
+    }
+    
+    private void OnMap(InputAction.CallbackContext context)
+    {
+        Map.Invoke();
     }
 }
