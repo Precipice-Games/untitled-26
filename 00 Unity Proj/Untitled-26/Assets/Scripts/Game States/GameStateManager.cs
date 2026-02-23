@@ -49,14 +49,8 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     
     // Static event to notify subscribers of game state changes
     public static event Action<GameState> transitionedToNewState;
-    
-    /// <summary>
-    /// A singleton instance of the GameStateManager.
-    /// This allows other scripts to easily access the game state manager without needing to find it in the scene or pass references around.
-    /// </summary>
-    public static GameStateManager Instance { get; private set; }
 
-    private void Awake()
+    private new void Awake()
     {
         // Commented this out because I think that the GameStateManager
         // might cause issues if it persists across scenes. Instead, I have
@@ -86,14 +80,12 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
-        transitionedToNewState += HandlePauseValues;
     }
     
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneManager.activeSceneChanged -= OnActiveSceneChanged;
-        transitionedToNewState -= HandlePauseValues;
     }
     
     // Runs when the scene is loaded
@@ -141,7 +133,9 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         // the CurrentGameState is assigned.
         CurrentGameState = defaultState;
         Debug.Log("GameStateManager.cs >> Set the CurrentGameState to the defaultState " + CurrentGameState);
-        transitionedToNewState?.Invoke(CurrentGameState);
+        Debug.Log("GameStateManger.cs >> Calling on HandlePauseValues()...");
+        HandlePauseValues(CurrentGameState);
+        //transitionedToNewState?.Invoke(CurrentGameState);
     }
 
     /// <summary>
@@ -153,7 +147,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         prevState = CurrentGameState;
         CurrentGameState = newState;
         Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
-        transitionedToNewState?.Invoke(CurrentGameState);
+        //transitionedToNewState?.Invoke(CurrentGameState);
     }
 
     /// <summary>
