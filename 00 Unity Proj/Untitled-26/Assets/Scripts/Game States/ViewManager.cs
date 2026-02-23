@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 /// Inherits from GameStateManager. 
 /// ViewManager is responsible for managing the game's UI and camera views based on game state. 
 /// This script includes the methods for changing the UI for each game state.
+/// It also includes listeners for unity events that trigger state changes.
 /// TO DO: add logic for changing camera views between exploration and puzzle states.
 /// </summary>
 public class ViewManager : MonoBehaviour
@@ -115,7 +116,6 @@ public class ViewManager : MonoBehaviour
         currentUI.SetActive(true);
         Debug.Log("ViewManager.cs >> Activated UI for: " + GameStateManager.CurrentGameState);
         
-        // Handle camera change
         HandleCameraChange(_targetCamera);
     }
     
@@ -145,4 +145,22 @@ public class ViewManager : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Listens for the Interact event (e.g., player pressing 'E') and checks current state of the game to switch to puzzle scene if in exploration state.
+    /// </summary>
+    public void onInteract()
+    {
+        if(currentState == GameState.Exploration)
+        {
+            ChangeToPuzzle();
+            SceneManager.LoadScene(puzzleScene); // Temporary code to switch scenes until full integration
+        }
+        else
+        {
+            Debug.Log("Cannot switch to puzzle scene from current state.");
+        }
+    }
+
+
 }
