@@ -165,7 +165,6 @@ public class GameStateManager : MonoBehaviour
         }
         else if (pausable)
         {
-            StartCoroutine(TransitionToState(gameState));
             StartCoroutine(TransitionToState(GameState.Paused));
         }
         else
