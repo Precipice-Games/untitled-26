@@ -79,7 +79,7 @@ public class ViewManager : MonoBehaviour
     /// <summary>
     /// Handles logic UI toggling.
     /// </summary>
-    /// <remarks> 
+    /// <remarks>
     /// Once we've transitioned to the new game state, this method will disable the current UI canvas and enable the new one.
     /// </remarks>
     private void HandleUIChange(GameStateManager.GameState newState)
