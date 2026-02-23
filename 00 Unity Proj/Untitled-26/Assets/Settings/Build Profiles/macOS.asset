@@ -32,6 +32,8 @@ MonoBehaviour:
     m_path: Assets/Scenes/TileExperiments/TileMoveExperiment.unity
   - m_enabled: 1
     m_path: Assets/Scenes/AudioExperiments/ButtonSFX.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Islands/Ice_Island.unity
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
@@ -868,7 +870,8 @@ MonoBehaviour:
     - line: '|   webGLCloseOnQuit: 0'
     - line: '|   webWasm2023: 0'
     - line: '|   webEnableSubmoduleStrippingCompatibility: 0'
-    - line: '|   scriptingDefineSymbols: {}'
+    - line: '|   scriptingDefineSymbols:'
+    - line: '|     Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3'
     - line: '|   additionalCompilerArguments: {}'
     - line: '|   platformArchitecture: {}'
     - line: '|   scriptingBackend:'
