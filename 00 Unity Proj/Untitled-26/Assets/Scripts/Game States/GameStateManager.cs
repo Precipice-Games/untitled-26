@@ -98,24 +98,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     public void SceneDefaults(Scene scene, LoadSceneMode mode)
     {
         // Initialize the static CurrentGameState from the inspector value
-        // SetGameState(gameState);
-        
-        // Set time scale immediately based on the starting game state to prevent frozen scenes
-        // if (gameState == GameState.Exploration || gameState == GameState.Puzzle)
-        // {
-        //     Time.timeScale = 1.0f;
-        //     Debug.Log($"GameStateManager.cs >> Immediately set time scale to 1.0 for {gameState} state.");
-        // }
-        // else if (gameState == GameState.MainMenu || gameState == GameState.Paused)
-        // {
-        //     Time.timeScale = 0.0f;
-        //     Debug.Log($"GameStateManager.cs >> Immediately set time scale to 0.0 for {gameState} state.");
-        // }
-        
-        Debug.Log($"GameStateManager.cs >> Starting Coroutine TransitionToState({gameState})...");
-        TransitionToState(gameState);
+        Debug.Log($"GameStateManager.cs >> Setting the Scene Defaults for defaultState {gameState}...");
+        SetSceneDefaults(gameState);
     }
-    
+
     /// <summary>
     /// A helper method to transition the game to a new state. 
     /// It includes a small delay to simulate the time it may take to transition between states.
@@ -134,6 +120,16 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     //     Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
     //     transitionedToNewState?.Invoke(CurrentGameState);
     // }
+
+    // Method just used to set the scene defaults.
+    // All other state changes occur in TransitionToState().
+    private void SetSceneDefaults(GameState defaultState)
+    {
+        // There is no previous state, so just ensure
+        // the CurrentGameState is assigned.
+        CurrentGameState = defaultState;
+        Debug.Log("GameStateManager.cs >> Set the CurrentGameState to the defaultState " + CurrentGameState);
+    }
 
     private void TransitionToState(GameState newState)
     {
