@@ -23,9 +23,6 @@
     <li><a href="#what-is-01-assets">What is the 01 Assets Folder?</a></li>
     <li><a href="#github-vs-unity">GitHub vs. Unity</a></li>
     <li><a href="#merge-conflicts">Merge Conflicts</a></li>
-      <ol type="i">
-        <li><a href="#merge-conflict-example">Example</a></li>
-      </ol>
     <li><a href="#uploading-to-01-assets">Uploading to 01 Assets</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -33,6 +30,7 @@
 </div>
 
 <br></br>
+
 
 
 <!-- OVERVIEW -->
@@ -53,7 +51,7 @@ Please read carefully to ensure you commit to the repository correctly.
 
 <h2>What Is the 01 Assets Folder?</h2>
 
-The [01 Assets](../../01%20Assets/) folder is a directory located in the [root](https://github.com/Nicole-Scalera/project-raven) (the homepage) of the repository. It exists as a central point where team members can share files with each other.
+The [01 Assets](../../01%20Assets/) folder is a directory located in the root (the homepage) of the repository. It exists as a central point where team members can share files with each other.
 
 <img src="../00 Assets/uploading-to-assets/01-assets-folder-location.png" width="500"></img>
 
@@ -68,11 +66,11 @@ The [01 Assets](../../01%20Assets/) folder is a directory located in the [root](
 
 <h2>GitHub vs. Unity</h2>
 
-It's important to note that [01 Assets](https://github.com/Nicole-Scalera/project-raven/tree/main/01%20Assets) is different from the default Assets folder in Unity.
+It's important to note that [01 Assets](../../01%20Assets/) is different from the default Assets folder in Unity.
 
-The default folder is located in [00 Unity Proj](https://github.com/Nicole-Scalera/project-raven/tree/main/00%20Unity%20Proj). Its purpose is to act like a toolbox for the project itself.
+The default folder is located in [00 Unity Proj](../../00%20Unity%20Proj/). Its purpose is to act like a toolbox for the project itself.
 
-Similarly, 01 Assets operates as a toolbox folder, but it allows separate parties to upload assets without any <a href="#merge-conflicts">merge conflicts</a>.
+01 Assets is a separate toolbox folder located outside of the project that is intended to prevent <a href="#merge-conflicts">merge conflicts</a>.
 
 </div>
 
@@ -85,17 +83,13 @@ Similarly, 01 Assets operates as a toolbox folder, but it allows separate partie
 
 <h2>Merge Conflicts</h2>
 
-If you've never used GitHub, you may be wondering, what in the world are merge conflicts?!
+Merge conflicts are inconsistencies in files and data that keep you from syncing your repository together. This can become an issue when I pull data from the repository and it's injected into my project, causing errors in the game.
 
-Essentially, they're inconsistencies in files and data that keep you from syncing your repository together. This can become an issue when I pull data from the repository and it's injected into my project, causing errors in the game.
+<div style="font-size:16px;">
+<details>
+  <summary>Merge Conflict Example</summary>
 
-<p>&nbsp;</p>
-
-<div id="merge-conflict-example" style="font-size:16px;">
-
-<h3>Example</h3>
-
-For instance, on your computer, you can't have two images in the same location with identical names, right? Your computer will rename the files as follows:
+On your computer, you can't have two images in the same location with identical names, right? Your computer will rename the files as follows:
 
 <ol>
   <li>sunset.jpg</li>
@@ -109,11 +103,12 @@ Or even:
   <li>sunset (1).jpg</li>
 </ol>
 
+While your computer understands this, GitHub does not. It will get confused as to which should be named sunset.jpeg. The same thing happens on a large scale with files in our Unity project.
+
+It's important that we contribute to the repository in such a way as to avoid conflicts.
+</details>
 </div>
-
-However, while your computer understands how to deal with these issues, GitHub might not. It has tools to figure out conflicting data on a small scale, but changes that are made directly to the main branch of the repository are typically very hard to undo.
-
-Then again, the beauty of GitHub is that there's a <a href="#merge-conflicts">solution</a> to prevent this!
+</div>
 
 <p align="right">(<a href="#article-top">back to top</a>)</p>
 
@@ -126,47 +121,64 @@ Then again, the beauty of GitHub is that there's a <a href="#merge-conflicts">so
 
 Please follow the below steps to ensure the assets are shared correctly.
 
-<p>&nbsp;</p>
+<h3>1. Correct Branch</h3>
 
-<h3>1. Correct Folder</h3>
+The first step to uploading is making sure you are on the right branch. The default branch of the webpage is `main`.
 
-The first step to uploading is making sure you are on the right folder. As mentioned above, you MUST be on the <a href="https://github.com/Nicole-Scalera/project-raven/tree/main/01%20Assets">01 Assets</a> folder in the ROOT of the repository.
+<img src="../00 Assets/uploading-to-assets/branch-on-main.png" width="500"></img>
 
-That means you should be nowhere near [00 Unity Proj](https://github.com/Nicole-Scalera/project-raven/tree/main/00%20Unity%20Proj)!
+Navigate to the `assets/01-assets` branch by clicking on the dropdown menu and selecting it.
+
+<img src="../00 Assets/uploading-to-assets/switch-to-assets-branch.png" width="500"></img>
+
+If it is not available, select "view all branches" and click on the correct one.
+
+Your page should now look like this:
+
+<img src="../00 Assets/uploading-to-assets/correct-branch.png" width="500"></img>
+
+<h3>2. Navigate to 01 Assets</h3>
+
+Up next, navigate to the [01 Assets](../../01%20Assets/) folder.
+
+As mentioned earlier, you should be nowhere near [00 Unity Proj](../../00%20Unity%20Proj/)!
 
 <img src="../00 Assets/uploading-to-assets/01-assets-folder-location.png" width="500"></img>
 
-Now that you're in the correct folder, you can start uploading. Make sure to navigate to a folder that fits the relevant needs of your assets.
+Now that you're in the correct directory, you can start uploading. Make sure to navigate to a sub-folder that fits the relevant needs of your assets.
 
-<p>&nbsp;</p>
+<img src="../00 Assets/uploading-to-assets/01-assets-sub-folders.png" width="500"></img>
 
-<h3>2. Uploading</h3>
 
-To upload, click the "Add File" button at the top right of your page.
 
-<img src="../00 Assets/uploading-to-assets/add-file-button.png" width="500"></img>
+<h3>3. Uploading</h3>
 
-In the drop down, choose "Upload Files"
+To upload, click the "Add File" button at the top right of your page and choose "Upload Files."
 
 <img src="../00 Assets/uploading-to-assets/upload-files-button.png" width="500"></img>
 
-There will be a popup where you can upload your files.
-
-<img src="../00 Assets/uploading-to-assets/selecting-files-popup.png" width="500"></img>
-
 <p>&nbsp;</p>
 
-<h3>3. Commit Messages</h3>
+<h3>4. Commit Messages</h3>
 
-After you upload, you will also see a window down below titled "Commit changes."
+After you upload, you will see a window down below titled "Commit changes."
 
-<img src="../00 Assets/uploading-to-assets/commit-menu-empty.png" width="500"></img>
+<img src="../00 Assets/uploading-to-assets/empty-commit-box.png" width="600"></img>
 
-This is where you can make note of what you're uploading and why. It doesn't need to be too descriptive, just a word or two would help for future reference, like so.
+This is where you can make note of what you're uploading and why. You MUST give your work a title. DO NOT title it "Add files via upload."
 
-<img src="../00 Assets/uploading-to-assets/commit-menu-with-message.png" width="500"></img>
+Add any relevant bullets that would be helpful for developers.
 
-Because the 01 Assets folder is not directly connected to the 00 Unity Proj folder, you don't need to worry about creating a new branch. Just select the green "Commit changes" and you're good to go!
+<img src="../00 Assets/uploading-to-assets/commit-message-example.png" width="600"></img>
+
+Try to let the engineers know when you've uploaded an asset.
+
+<img src="../00 Assets/uploading-to-assets/discord-message.png" width="500"></img>
+
+And that's it, excellent work!
+
+<img src="../00 Assets/uploading-to-assets/thats-all-folks.gif" width="500"></img>
+
 </div>
 
 <p align="right">(<a href="#article-top">back to top</a>)</p>
@@ -176,8 +188,6 @@ Because the 01 Assets folder is not directly connected to the 00 Unity Proj fold
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgements
 
-* This README was authored by Nicole Scalera ([Nicole-Scalera](https://github.com/Nicole-Scalera)).
-* I started this README file thru a template from the popular repository, [Best-README-Template](https://github.com/othneildrew/Best-README-Template), by [othneildrew](https://github.com/othneildrew) on GitHub.
-* Many edits have been made to make it different and fit a sufficient guide on uploading.
+* This article was authored by [Nicole-Scalera](https://github.com/Nicole-Scalera).
 
 <p align="right">(<a href="#article-top">back to top</a>)</p>
