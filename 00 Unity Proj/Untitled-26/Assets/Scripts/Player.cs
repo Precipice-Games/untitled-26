@@ -1,12 +1,28 @@
 using System;
 using UnityCommunity.UnitySingleton;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 // This is the Player class that will allow us to get specific data about the Player.
 
 public class Player : MonoSingleton<Player>
 {
+    [Header("Unity Events")]
+    /// <summary>
+    /// Triggered by pressing 'ESC' to pause/unpause the game.
+    /// Listeners should check to make sure the game is in a pausable state.
+    /// </summary>
+    public UnityEvent Pause;
+    
+    /// <summary>
+    /// Triggered by pressing 'M' to open the map UI.
+    /// Listeners should check the game is in exploration state.
+    /// </summary>
+    public UnityEvent Map;
+    
+    public PlayerControls _playerControls { get; private set; }
+    
     [SerializeField] private PlayerInput _playerInput;
 
     void Awake()
@@ -15,18 +31,46 @@ public class Player : MonoSingleton<Player>
         {
             _playerInput = GetComponent<PlayerInput>();
         }
+        
+        _playerControls = new PlayerControls();
+        
     }
 
     void OnEnable()
     {
         InputManager.inputMapSwitched += SwitchActionMap;
-        GameStateManager.transitionedToNewState += SwitchCursorFunctionality;
+        InputManager.cursorChanged += SwitchCursorFunctionality;
+        
+        _playerControls.UI.Enable();
+        _playerControls.Player.Enable();
+        _playerControls.UI.Pause.performed += OnPause;
+        _playerControls.UI.Map.performed += OnMap;
     }
 
     void OnDisable()
     {
         InputManager.inputMapSwitched -= SwitchActionMap;
-        GameStateManager.transitionedToNewState -= SwitchCursorFunctionality;
+        InputManager.cursorChanged -= SwitchCursorFunctionality;
+        
+        _playerControls.UI.Disable();
+        _playerControls.Player.Disable();
+        _playerControls.UI.Pause.performed -= OnPause;
+        _playerControls.UI.Map.performed -= OnMap;
+    }
+    
+    private void OnDestroy()
+    {
+        _playerControls.Dispose();
+    }
+    
+    private void OnPause(InputAction.CallbackContext context)
+    {
+        Pause.Invoke();
+    }
+    
+    private void OnMap(InputAction.CallbackContext context)
+    {
+        Map.Invoke();
     }
     
     // Switches the current action map to the specified action map name
@@ -48,20 +92,11 @@ public class Player : MonoSingleton<Player>
     //       map rather than the current game state.
     
     // Switches cursor functionality based on game state
-    private void SwitchCursorFunctionality(GameStateManager.GameState newState)
+    private void SwitchCursorFunctionality(CursorLockMode lockMode, bool visible)
     {
-        // Cursor should only be locked and invisible during Exploration mode.
-        if (newState != GameStateManager.GameState.Exploration)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        Cursor.lockState = lockMode;
+        Cursor.visible = visible;
         
-        Debug.Log($"Player.cs >> Switched cursor functionality for {newState} state.");
+        Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
     }
 }

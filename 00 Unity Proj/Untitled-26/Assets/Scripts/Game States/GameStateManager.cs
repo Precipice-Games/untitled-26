@@ -43,32 +43,28 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     private GameState prevState;
 
     /// <summary>
-    /// Tracks if the player is able to pause from the current state
+    /// Tracks if the player is able to pause from the current state.
     /// </summary>
-    bool pausable;
+    /// <remarks> 
+    /// This variable also accounts for if the game can be unpaused, which is only true for the 'Paused' game state.
+    /// </remarks>
+    //[SerializeField] private bool pausable;
+    
+    public static bool pausable { get; set; }
+    
+    /// <summary>
+    /// Event Action used to notify subscribers of game state changes.
+    /// </summary>
+    /// <remarks> 
+    /// This should be triggered after the new state has been assigned. The event will pass the new game state as a parameter to any subscribed methods.
+    /// </remarks>
     
     // Static event to notify subscribers of game state changes
     public static event Action<GameState> transitionedToNewState;
 
     private new void Awake()
     {
-        // Commented this out because I think that the GameStateManager
-        // might cause issues if it persists across scenes. Instead, I have
-        // wrapped this class in a MonoSingleton<>, which is a singleton that
-        // is destroyed between scenes. However, if you decide you want it
-        // to NOT be destroyed, wrap the class in a PersistentMonoSingleton<>.
-        //
-        // // Check for an existing instance of the GameStateManager object in the scene.
-        // // If one already exists, destroy this new instance to enforce the singleton pattern.
-        // if (Instance == null)
-        // {
-        //     Instance = this;
-        //     DontDestroyOnLoad(gameObject); // GameState Manager will persist across scenes
-        // }
-        // else
-        // {
-        //     Destroy(gameObject);
-        // }
+        
     }
     
     private void Start()
@@ -88,7 +84,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SceneManager.activeSceneChanged -= OnActiveSceneChanged;
     }
     
-    // Runs when the scene is loaded
+    // Runs when a scene is loaded
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("GameStateManager.cs >> OnSceneLoaded() >> New scene has been loaded: " + scene.name);
@@ -147,14 +143,14 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         prevState = CurrentGameState;
         CurrentGameState = newState;
         Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
-        //transitionedToNewState?.Invoke(CurrentGameState);
+        HandlePauseValues(CurrentGameState);
     }
 
     /// <summary>
-    /// Handles the logic for timescale & pausable bool.
+    /// Handles the logic for timescale and pausable bool.
     /// </summary>
     /// <remarks> 
-    /// Once we've transitioned to the new game state, this method will update the time scale and the pausable variable accordingly.
+    /// Once we've transitioned to the new game state, this method will update the timescale and the pausable variable accordingly.
     /// </remarks>
     private void HandlePauseValues(GameState newState)
     {
@@ -164,26 +160,26 @@ public class GameStateManager : MonoSingleton<GameStateManager>
             case GameState.MainMenu:
                 pausable = false;
                 Time.timeScale = 0.0f;
-                Debug.Log("GameStateManager.cs >> Main Menu loaded, time scale set to 0 and pausable set to false.");
                 break;
             case GameState.Exploration:
                 pausable = true;
                 Time.timeScale = 1.0f;
-                Debug.Log("GameStateManager.cs >> Exploration loaded, time scale set to 1 and pausable set to true.");
                 break;
             case GameState.Puzzle:
                 pausable = true;
                 Time.timeScale = 1.0f;
-                Debug.Log("GameStateManager.cs >> Exploration loaded, time scale set to 1 and pausable set to true.");
                 break;
             case GameState.Paused:
                 pausable = true;
-                // pausable also accounts for if the game can be unpaused,
-                // which is only true for the 'Paused' state
                 Time.timeScale = 0.0f;
-                Debug.Log("GameStateManager.cs >> Paused loaded, time scale set to 1 and pausable set to true.");
                 break;
         }
+        
+        Debug.Log($"GameStateManager.cs >> {newState} loaded, time scale set to {Time.timeScale.ToString()} and pausable set to {pausable}.");
+        
+        // Trigger this event after game state, timescale,
+        // and pausable bool have been updated. 
+        transitionedToNewState?.Invoke(CurrentGameState);
     }
 
     /// <summary>
@@ -212,7 +208,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
             Debug.Log("Cannot pause from current state");
         }
     }
-
+    
     public void ExitGame()
     {
         Debug.Log("Quit Game");
