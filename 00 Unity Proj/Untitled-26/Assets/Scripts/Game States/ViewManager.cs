@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 /// Inherits from GameStateManager. 
 /// ViewManager is responsible for managing the game's UI and camera views based on game state. 
 /// This script includes the methods for changing the UI for each game state.
+/// It also includes listeners for unity events that trigger state changes.
 /// TO DO: add logic for changing camera views between exploration and puzzle states.
 /// </summary>
 public class ViewManager : MonoBehaviour
@@ -20,7 +21,7 @@ public class ViewManager : MonoBehaviour
     public GameObject explorationUI;
     public GameObject puzzleUI;
     public GameObject pausedUI;
-    private GameObject currentUI;
+    private GameObject _targetUI;
 
     [Header("Cameras")]
     private List<Camera> cameras;
@@ -67,63 +68,79 @@ public class ViewManager : MonoBehaviour
 
     private void OnEnable()
     {
-        GameStateManager.transitionedToNewState += HandleUIChange;
+        GameStateManager.transitionedToNewState += HandleViewChange;
     }
     
     private void OnDisable()
     {
-        GameStateManager.transitionedToNewState -= HandleUIChange;
+        GameStateManager.transitionedToNewState -= HandleViewChange;
     }
 
     /// <summary>
-    /// Handles logic UI toggling.
+    /// Handles logic regarding what UI and camera to toggle.
     /// </summary>
-    /// <remarks> 
-    /// Once we've transitioned to the new game state, this method will disable the current UI canvas and enable the new one.
+    /// <remarks>
+    /// Once we've transitioned to the new game state, this method will figure out what the new UI and camera should be based on the new game state, and then call the methods to enable the correct UI and camera while disabling all others.
     /// </remarks>
-    private void HandleUIChange(GameStateManager.GameState newState)
+    private void HandleViewChange(GameStateManager.GameState newState)
     {
-        // Deactivate old UI
-        if (currentUI)
-        {
-            currentUI.SetActive(false);
-            Debug.Log("ViewManager.cs >> Disabled the following UI: " + currentUI); // Confirm disabling of UI
-        }
-
         // Set the current UI based on the new game state
-        switch (GameStateManager.CurrentGameState)
+        switch (newState)
         {
             case GameStateManager.GameState.MainMenu:
-                currentUI = mainMenuUI;
+                _targetUI = mainMenuUI;
                 _targetCamera = menuCamera;
                 break;
             case GameStateManager.GameState.Exploration:
-                currentUI = explorationUI;
+                _targetUI = explorationUI;
                 _targetCamera = playerCamera;
                 break;
             case GameStateManager.GameState.Puzzle:
-                currentUI = puzzleUI;
+                _targetUI = puzzleUI;
                 _targetCamera = puzzleCamera;
                 break;
             case GameStateManager.GameState.Paused:
-                currentUI = pausedUI;
+                _targetUI = pausedUI;
                 _targetCamera = menuCamera;
                 break;
         }
         
-        // activate UI of new state
-        currentUI.SetActive(true);
-        Debug.Log("ViewManager.cs >> Activated UI for: " + GameStateManager.CurrentGameState);
-        
-        // Handle camera change
+        HandleCanvasChange(_targetUI);
         HandleCameraChange(_targetCamera);
+    }
+    
+    
+    /// <summary>
+    /// Handles UI Canvas switching.
+    /// </summary>
+    /// <remarks> 
+    /// This method enables the correct UI and disables all others.
+    /// </remarks>
+    private void HandleCanvasChange(GameObject targetCanvas)
+    {
+        foreach (GameObject canvas in uiCanvases)
+        {
+            if (canvas != null)
+            {
+                if (canvas == targetCanvas)
+                {
+                    canvas.SetActive(true);
+                    Debug.Log($"ViewManager.cs >> Enabled UI Canvas: {canvas.name}");
+                }
+                else
+                {
+                    canvas.SetActive(false);
+                    Debug.Log($"ViewManager.cs >> Disabled UI Canvas: {canvas.name}");
+                }
+            }
+        }
     }
     
     /// <summary>
     /// Handles camera switching.
     /// </summary>
     /// <remarks> 
-    /// Once we've transitioned to the new game state, this method will enable the correct camera and disable all others.
+    /// This method enables the correct camera and disables all others.
     /// </remarks>
     private void HandleCameraChange(Camera targetCamera)
     {
@@ -141,6 +158,7 @@ public class ViewManager : MonoBehaviour
                 else
                 {
                     cam.enabled = false;
+                    Debug.Log($"ViewManager.cs >> Disabled camera: {cam.name}");
                 }
             }
         }
