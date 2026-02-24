@@ -85,7 +85,7 @@ public class ViewManager : MonoBehaviour
     private void HandleViewChange(GameStateManager.GameState newState)
     {
         // Set the current UI based on the new game state
-        switch (GameStateManager.CurrentGameState)
+        switch (newState)
         {
             case GameStateManager.GameState.MainMenu:
                 _targetUI = mainMenuUI;
@@ -130,6 +130,7 @@ public class ViewManager : MonoBehaviour
                 else
                 {
                     canvas.SetActive(false);
+                    Debug.Log($"ViewManager.cs >> Disabled UI Canvas: {canvas.name}");
                 }
             }
         }
@@ -157,6 +158,7 @@ public class ViewManager : MonoBehaviour
                 else
                 {
                     cam.enabled = false;
+                    Debug.Log($"ViewManager.cs >> Disabled camera: {cam.name}");
                 }
             }
         }

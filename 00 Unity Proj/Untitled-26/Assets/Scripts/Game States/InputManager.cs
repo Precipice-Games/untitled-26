@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
     // scripts to subscribe to this event and update their references
     // to the current input map as needed.
     public static event Action<string> inputMapSwitched;
+    public static event Action<CursorLockMode, bool> cursorChanged;
     
     private void Awake()
     {
@@ -29,12 +30,14 @@ public class InputManager : MonoBehaviour
         
         // Always subscribe to the event, we'll check for null in FindCorrectActionMap
         GameStateManager.transitionedToNewState += FindCorrectActionMap;
+        GameStateManager.transitionedToNewState += ChangeCursorFunctionality;
     }
 
     // Unsubscribe from events
     private void OnDisable()
     {
         GameStateManager.transitionedToNewState -= FindCorrectActionMap;
+        GameStateManager.transitionedToNewState -= ChangeCursorFunctionality;
     }
     
     /// <summary>
@@ -87,6 +90,30 @@ public class InputManager : MonoBehaviour
             }
             
             inputMapSwitched?.Invoke(actionMapName);
+        }
+    }
+    
+    // Switches the current action map to the specified action map name
+    private void ChangeCursorFunctionality(GameStateManager.GameState newState)
+    {
+        if (playerInput != null)
+        {
+            CursorLockMode lockMode = CursorLockMode.None; // Default to unlocked
+            bool visible = true; // Default to visible
+
+            // Cursor should only be locked and invisible during Exploration mode.
+            if (newState != GameStateManager.GameState.Exploration)
+            {
+                lockMode = CursorLockMode.None;
+                visible = true;
+            }
+            else
+            {
+                lockMode = CursorLockMode.Locked;
+                visible = false;
+            }
+            
+            cursorChanged?.Invoke(lockMode, visible);
         }
     }
 }

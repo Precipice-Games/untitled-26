@@ -20,13 +20,13 @@ public class Player : MonoSingleton<Player>
     void OnEnable()
     {
         InputManager.inputMapSwitched += SwitchActionMap;
-        GameStateManager.transitionedToNewState += SwitchCursorFunctionality;
+        InputManager.cursorChanged += SwitchCursorFunctionality;
     }
 
     void OnDisable()
     {
         InputManager.inputMapSwitched -= SwitchActionMap;
-        GameStateManager.transitionedToNewState -= SwitchCursorFunctionality;
+        InputManager.cursorChanged -= SwitchCursorFunctionality;
     }
     
     // Switches the current action map to the specified action map name
@@ -48,20 +48,11 @@ public class Player : MonoSingleton<Player>
     //       map rather than the current game state.
     
     // Switches cursor functionality based on game state
-    private void SwitchCursorFunctionality(GameStateManager.GameState newState)
+    private void SwitchCursorFunctionality(CursorLockMode lockMode, bool visible)
     {
-        // Cursor should only be locked and invisible during Exploration mode.
-        if (newState != GameStateManager.GameState.Exploration)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        Cursor.lockState = lockMode;
+        Cursor.visible = visible;
         
-        Debug.Log($"Player.cs >> Switched cursor functionality for {newState} state.");
+        Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
     }
 }
