@@ -53,7 +53,7 @@ Please read carefully to ensure you commit to the repository correctly.
 
 The [01 Assets](../../01%20Assets/) folder is a directory located in the root (the homepage) of the repository. It exists as a central point where team members can share files with each other.
 
-<img src="../00 Assets/uploading-to-assets/01-assets-folder-location.png" width="500"></img>
+<img src="../00 Assets/uploading-to-assets/01-assets-folder-location.png" width="700"></img>
 
 </div>
 
@@ -163,13 +163,13 @@ To upload, click the "Add File" button at the top right of your page and choose 
 
 After you upload, you will see a window down below titled "Commit changes."
 
-<img src="../00 Assets/uploading-to-assets/empty-commit-box.png" width="600"></img>
+<img src="../00 Assets/uploading-to-assets/empty-commit-box.png" width="700"></img>
 
 This is where you can make note of what you're uploading and why. You MUST give your work a title. DO NOT title it "Add files via upload."
 
 Add any relevant bullets that would be helpful for developers.
 
-<img src="../00 Assets/uploading-to-assets/commit-message-example.png" width="600"></img>
+<img src="../00 Assets/uploading-to-assets/commit-message-example.png" width="700"></img>
 
 Try to let the engineers know when you've uploaded an asset.
 
