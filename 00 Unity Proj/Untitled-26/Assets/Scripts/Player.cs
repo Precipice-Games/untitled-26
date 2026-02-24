@@ -1,12 +1,34 @@
 using System;
 using UnityCommunity.UnitySingleton;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 // This is the Player class that will allow us to get specific data about the Player.
 
 public class Player : MonoSingleton<Player>
 {
+    [Header("Unity Events")]
+    /// <summary>
+    /// Triggered by pressing 'ESC' to pause/unpause the game.
+    /// Listeners should check to make sure the game is in a pausable state.
+    /// </summary>
+    public UnityEvent Pause;
+    /// <summary>
+    /// Triggered by pressing 'E' to interact with an in-game object.
+    /// Intended for the use of transititoning from exploration to puzzle mode via puzzle terminal.
+    /// </summary>
+    // 'Interact' event may be moved to a script attached to the player to better enable/disable input
+    // when player is able to interact with an object in the environemnt
+    public UnityEvent Interact;
+    /// <summary>
+    /// Triggered by pressing 'M' to open the map UI.
+    /// Listeners should check the game is in exploration state.
+    /// </summary>
+    public UnityEvent Map;
+    
+    public PlayerControls _playerControls { get; private set; }
+    
     [SerializeField] private PlayerInput _playerInput;
 
     void Awake()
@@ -15,18 +37,51 @@ public class Player : MonoSingleton<Player>
         {
             _playerInput = GetComponent<PlayerInput>();
         }
+        
+        _playerControls = new PlayerControls();
+        
     }
 
     void OnEnable()
     {
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
+        
+        _playerControls.Menu.Enable();
+        _playerControls.Menu.Pause.performed += OnPause;
+        _playerControls.Menu.Interact.performed += OnInteract;
+        _playerControls.Menu.Map.performed += OnMap;
     }
 
     void OnDisable()
     {
         InputManager.inputMapSwitched -= SwitchActionMap;
         InputManager.cursorChanged -= SwitchCursorFunctionality;
+        
+        _playerControls.Menu.Pause.performed -= OnPause;
+        _playerControls.Menu.Interact.performed -= OnInteract;
+        _playerControls.Menu.Map.performed -= OnMap;
+        _playerControls.Menu.Disable();
+    }
+    
+    private void OnDestroy()
+    {
+        _playerControls.Dispose();
+    }
+    
+    private void OnPause(InputAction.CallbackContext context)
+    {
+        Pause.Invoke();
+    }
+
+    private void OnInteract(InputAction.CallbackContext context)
+    {
+        Interact.Invoke();
+    }
+    
+    private void OnMap(InputAction.CallbackContext context)
+    {
+        Map.Invoke();
     }
     
     // Switches the current action map to the specified action map name
