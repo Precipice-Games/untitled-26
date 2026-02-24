@@ -33,7 +33,7 @@ public class InteractableNPC : MonoBehaviour, IInteractable
         {
             Debug.Log("Dialogue Starting");
             
-            runner = GameObject.Find("Dialogue System").GetComponent<DialogueRunner>();
+            runner = FindAnyObjectByType<Yarn.Unity.DialogueRunner>();
             runner.StartDialogue(gameObject.name);
             //change to dialogue state
                 //disables e in this state
