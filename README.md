@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Precipice-Games">
-    <img src="02 Docs/images/precipice-games-logo.png" alt="Logo" width="80" height="80">
+    <img src="02 Docs/00 Assets/precipice-games-logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Untitled-26</h3>
