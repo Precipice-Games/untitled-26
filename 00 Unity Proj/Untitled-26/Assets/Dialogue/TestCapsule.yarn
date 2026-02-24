@@ -24,7 +24,7 @@ Capsley: Who are you then? #line:00ef629
     Capsley: No need to be so rude... #line:0f8ef9c 
     Capsley: Maybe you should be called Grumpy {$player_name}. #line:070aab9 
 <<endif>>
-<<else>> I said I would only say it once
+<<else>> I said I would only say it once #line:06347bf 
 <<endonce>>
 ===
 title: IntroDialogue

@@ -140,6 +140,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 7713309928880078958
+  - m_Id: 3338347647377408
+    m_Key: line:06347bf
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078967
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -272,6 +277,11 @@ MonoBehaviour:
         nodeName: TestCapsule
         tags: []
     - rid: 7713309928880078958
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
+    - rid: 7713309928880078967
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
         nodeName: TestCapsule
