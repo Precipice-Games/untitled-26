@@ -14,13 +14,7 @@ public class Player : MonoSingleton<Player>
     /// Listeners should check to make sure the game is in a pausable state.
     /// </summary>
     public UnityEvent Pause;
-    /// <summary>
-    /// Triggered by pressing 'E' to interact with an in-game object.
-    /// Intended for the use of transititoning from exploration to puzzle mode via puzzle terminal.
-    /// </summary>
-    // 'Interact' event may be moved to a script attached to the player to better enable/disable input
-    // when player is able to interact with an object in the environemnt
-    public UnityEvent Interact;
+    
     /// <summary>
     /// Triggered by pressing 'M' to open the map UI.
     /// Listeners should check the game is in exploration state.
@@ -47,10 +41,10 @@ public class Player : MonoSingleton<Player>
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
         
-        _playerControls.Menu.Enable();
-        _playerControls.Menu.Pause.performed += OnPause;
-        _playerControls.Menu.Interact.performed += OnInteract;
-        _playerControls.Menu.Map.performed += OnMap;
+        _playerControls.UI.Enable();
+        _playerControls.Player.Enable();
+        _playerControls.UI.Pause.performed += OnPause;
+        _playerControls.UI.Map.performed += OnMap;
     }
 
     void OnDisable()
@@ -58,10 +52,10 @@ public class Player : MonoSingleton<Player>
         InputManager.inputMapSwitched -= SwitchActionMap;
         InputManager.cursorChanged -= SwitchCursorFunctionality;
         
-        _playerControls.Menu.Pause.performed -= OnPause;
-        _playerControls.Menu.Interact.performed -= OnInteract;
-        _playerControls.Menu.Map.performed -= OnMap;
-        _playerControls.Menu.Disable();
+        _playerControls.UI.Disable();
+        _playerControls.Player.Disable();
+        _playerControls.UI.Pause.performed -= OnPause;
+        _playerControls.UI.Map.performed -= OnMap;
     }
     
     private void OnDestroy()
@@ -72,11 +66,6 @@ public class Player : MonoSingleton<Player>
     private void OnPause(InputAction.CallbackContext context)
     {
         Pause.Invoke();
-    }
-
-    private void OnInteract(InputAction.CallbackContext context)
-    {
-        Interact.Invoke();
     }
     
     private void OnMap(InputAction.CallbackContext context)
