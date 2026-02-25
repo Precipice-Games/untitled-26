@@ -13,6 +13,11 @@ public class PlayerRaycastInteraction : MonoBehaviour
 
     //    ==== Interactable Object ====
     public GameObject activeInteractable; //Stores overlapping interactable object
+    public bool canInteract = true;
+
+    //    ==== Timer ====
+    public float activeTimer = 5.0f;
+    public float maxTime = 5.0f;
 
     /*
      * 
@@ -27,8 +32,24 @@ public class PlayerRaycastInteraction : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        interactionRay.origin = transform.position;
+
+
+        if (activeTimer < maxTime)
+        {
+            
+            activeTimer +=  Time.deltaTime;
+
+        }
+        else
+        {
+
+            canInteract = true;
+            activeTimer = 0.0f;
+
+        }
+
+
+            interactionRay.origin = transform.position;
         interactionRay.direction = transform.forward;
 
         Vector3 origin = interactionRay.origin;
@@ -70,10 +91,12 @@ public class PlayerRaycastInteraction : MonoBehaviour
     public void Interact()
     {
 
-        if (activeInteractable != null)
+        if (activeInteractable != null && canInteract)
         {
 
             activeInteractable.GetComponent<IInteractable>().Interaction();
+            canInteract = false;
+            activeInteractable = null;
 
         }
 
