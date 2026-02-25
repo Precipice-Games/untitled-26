@@ -29,6 +29,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         MainMenu,
         Exploration,
         Puzzle,
+        Dialogue,
         Paused
     }
 
@@ -76,6 +77,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
+        InteractableNPC.dialogueStarted += () => TransitionToState(GameState.Dialogue);
     }
     
     private void OnDisable()
@@ -169,6 +171,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
                 pausable = true;
                 Time.timeScale = 1.0f;
                 break;
+            case GameState.Dialogue:
+                pausable = true;
+                Time.timeScale = 1.0f;
+                break;
             case GameState.Paused:
                 pausable = true;
                 Time.timeScale = 0.0f;
@@ -197,6 +203,9 @@ public class GameStateManager : MonoSingleton<GameStateManager>
                 case GameState.Puzzle:
                     TransitionToState(GameState.Puzzle);
                     break;
+                case GameState.Dialogue:
+                    TransitionToState(GameState.Dialogue);
+                    break;
             }
         }
         else if (pausable)
@@ -208,6 +217,8 @@ public class GameStateManager : MonoSingleton<GameStateManager>
             Debug.Log("Cannot pause from current state");
         }
     }
+    
+    
     
     public void ExitGame()
     {
