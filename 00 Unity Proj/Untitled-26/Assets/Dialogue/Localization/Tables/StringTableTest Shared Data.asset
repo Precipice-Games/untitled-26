@@ -55,6 +55,96 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 6404808418785755384
+  - m_Id: 3334731171667968
+    m_Key: line:04de9d1
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078942
+  - m_Id: 3334731255554048
+    m_Key: line:05c319b
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078943
+  - m_Id: 3334731255554049
+    m_Key: line:0ad468d
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078944
+  - m_Id: 3334731255554050
+    m_Key: line:09cac79
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078945
+  - m_Id: 3334731255554051
+    m_Key: line:09cdf5d
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078946
+  - m_Id: 3334731255554052
+    m_Key: line:025f38e
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078947
+  - m_Id: 3334731255554053
+    m_Key: line:0613645
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078948
+  - m_Id: 3334731255554054
+    m_Key: line:0484508
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078949
+  - m_Id: 3334731255554055
+    m_Key: line:0cfa7ff
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078950
+  - m_Id: 3334731255554056
+    m_Key: line:01cb332
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078951
+  - m_Id: 3334731255554057
+    m_Key: line:022e255
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078952
+  - m_Id: 3334731255554058
+    m_Key: line:0f39b7f
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078953
+  - m_Id: 3334731255554059
+    m_Key: line:05ea307
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078954
+  - m_Id: 3334731255554060
+    m_Key: line:0e48416
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078955
+  - m_Id: 3334731255554061
+    m_Key: line:0da2cd8
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078956
+  - m_Id: 3335725846667264
+    m_Key: line:0ba50d9
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078957
+  - m_Id: 3335725846667265
+    m_Key: line:01fffab
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078958
+  - m_Id: 3338347647377408
+    m_Key: line:06347bf
+    m_Metadata:
+      m_Items:
+      - rid: 7713309928880078967
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -75,8 +165,7 @@ MonoBehaviour:
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
         nodeName: TestCapsule
-        tags:
-        - lastline
+        tags: []
     - rid: 6404808418785755379
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
@@ -103,6 +192,96 @@ MonoBehaviour:
         nodeName: TestCapsule
         tags: []
     - rid: 6404808418785755384
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
+    - rid: 7713309928880078942
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078943
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078944
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078945
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078946
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078947
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078948
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078949
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078950
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078951
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078952
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078953
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078954
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078955
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078956
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: IntroDialogue
+        tags: []
+    - rid: 7713309928880078957
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
+    - rid: 7713309928880078958
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: TestCapsule
+        tags: []
+    - rid: 7713309928880078967
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
         nodeName: TestCapsule
