@@ -577,7 +577,7 @@ PrefabInstance:
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: lineProvider
       value: 
-      objectReference: {fileID: 1010545286}
+      objectReference: {fileID: 1010545290}
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: dialoguePresenters.Array.size
       value: 4
@@ -585,14 +585,14 @@ PrefabInstance:
     - target: {fileID: 8309902628685535410, guid: 52571f68872914e24837210513edea1d, type: 3}
       propertyPath: 'dialoguePresenters.Array.data[3]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2609085423770415783}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7262066351540048079, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1010545286}
+      addedObject: {fileID: 1010545290}
     - targetCorrespondingSourceObject: {fileID: 9078442560890639579, guid: 52571f68872914e24837210513edea1d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1010545284}
@@ -638,7 +638,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7262066351540048079, guid: 52571f68872914e24837210513edea1d, type: 3}
   m_PrefabInstance: {fileID: 1010545282}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1010545286
+--- !u!114 &1010545290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -652,10 +652,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: YarnSpinner.Unity::Yarn.Unity.UnityLocalization.UnityLocalisedLineProvider
   stringsTable:
     m_TableReference:
-      m_TableCollectionName: GUID:a22425478590f684dad499eba0d4033c
+      m_TableCollectionName: GUID:c884be7acc7ff0f4db5cf6f4614ad1f2
   assetTable:
     m_TableReference:
-      m_TableCollectionName: GUID:9abc03c63231e4443a1ebe5bbc515c1f
+      m_TableCollectionName: GUID:0cab315d749f0c241b0537baec364c2b
 --- !u!1001 &1092568460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1368,6 +1368,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4027242432962083161, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2609085423770415782}
     - target: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1445,6 +1449,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+--- !u!82 &2609085423770415782 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -5156860291110842563, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+  m_PrefabInstance: {fileID: 2609085423770415781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2609085423770415783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4027242432962083161, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+  m_PrefabInstance: {fileID: 2609085423770415781}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb87ae987c60e9d4f8346202d271648d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: YarnSpinner.Unity::Yarn.Unity.VoiceOverPresenter
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

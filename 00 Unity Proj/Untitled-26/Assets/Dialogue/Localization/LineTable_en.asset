@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LineTable_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: c884be7acc7ff0f4db5cf6f4614ad1f2, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 157063204864
+    m_Localized: 'Capsley: Hello, I am Mr Capsley.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157184839680
+    m_Localized: 'Capsley: I''m only going to ask this once'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157184839681
+    m_Localized: 'Capsley: Who are you then?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157184839682
+    m_Localized: I'm Capsule, but my friends call me "Tic Tac". No idea why...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157189033984
+    m_Localized: The name's Triquandle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157189033985
+    m_Localized: Pyramid. Why - who wants to know?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157189033986
+    m_Localized: 'Capsley: Nice to meet you {0}!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228288
+    m_Localized: 'Capsley: No need to be so rude...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228289
+    m_Localized: 'Capsley: Maybe you should be called Grumpy {0}.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228290
+    m_Localized: I said I would only say it once
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228291
+    m_Localized: '*black screen, text fades in, mother crystal starts to fade in
+      very slowly during the exposition*'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228292
+    m_Localized: "Mother Crystal:\u201CChild of the sky\u2026\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228293
+    m_Localized: "Mother Crystal:\u201CDo you hear my voice?\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228294
+    m_Localized: "\u201CMother Crystal:I am the heart and soul of The Islands of
+      Ethor.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228295
+    m_Localized: "Mother Crystal:\u201CIt is through I that the islands stay bound
+      as one.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228296
+    m_Localized: "Mother Crystal:\u201CHowever, that couldn\u2019t be any further
+      from the truth as of late\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228297
+    m_Localized: "Mother Crystal:\u201CLong ago, my light shone freely throughout
+      all the land. The people of Ethor utilized my power, and the world flourished.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228298
+    m_Localized: "Mother Crystal:\u201CBut as people\u2019s appetite for more power
+      grew, so did the imbalance, and the threat of calamity arose. In order to prevent
+      such a catastrophe, I did what I must: I fractured the land and scattered my
+      power.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228299
+    m_Localized: "Mother Crystal:\u201CEach island carries a fraction of my essence,
+      but their crystals are frail, leaving their lands in distress.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228300
+    m_Localized: '*zoom in shot of mother crystal (should be fully faded in by now)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228301
+    m_Localized: (Mother crystal lets off a brief sparkle)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228302
+    m_Localized: "Mother Crystal:\u201CChild\u2026\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228303
+    m_Localized: "Mother Crystal:\u201CThe binding light of the Isles of Ethor is
+      fading\u2026\u201D (crystal cracks)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228304
+    m_Localized: "Mother Crystal:\u201CThe islands cry out for a hero, and the land
+      yearns to restore its unity\u201D (light shoots out, screen starts shaking)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 157193228305
+    m_Localized: '*screen flashes white, hard cut to Sky waking up*'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
