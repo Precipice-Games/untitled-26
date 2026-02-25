@@ -77,7 +77,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
-        InteractableNPC.dialogueStarted += () => TransitionToState(GameState.Dialogue);
     }
     
     private void OnDisable()
