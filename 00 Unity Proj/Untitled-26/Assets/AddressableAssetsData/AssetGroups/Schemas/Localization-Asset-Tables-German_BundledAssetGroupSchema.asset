@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d17a21594effb4e9591490b009e7aa, type: 3}
   m_Name: Localization-Asset-Tables-German_BundledAssetGroupSchema
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema
-  m_Group: {fileID: 11400000, guid: 4290152424ebed543a123c02a56473e6, type: 2}
+  m_Group: {fileID: 11400000, guid: 653648b2f02e27749a661e8e26d3de06, type: 2}
   m_InternalBundleIdMode: 1
   m_Compression: 1
   m_IncludeAddressInCatalog: 1

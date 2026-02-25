@@ -169,8 +169,8 @@ GameObject:
   - component: {fileID: 6739596773503058293}
   - component: {fileID: 6922169669516928053}
   - component: {fileID: 4698028750357769851}
-  - component: {fileID: 4229764644952802407}
-  - component: {fileID: -6846202092898101274}
+  - component: {fileID: -5156860291110842563}
+  - component: {fileID: -4027242432962083161}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -318,6 +318,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRaycastInteraction
   rayLength: 2.5
   activeInteractable: {fileID: 0}
+  canInteract: 1
+  activeTimer: 5
+  maxTime: 5
 --- !u!114 &6922169669516928053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,7 +522,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!82 &4229764644952802407
+--- !u!82 &-5156860291110842563
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -616,7 +619,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-6846202092898101274
+--- !u!114 &-4027242432962083161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -628,8 +631,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb87ae987c60e9d4f8346202d271648d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: YarnSpinner.Unity::Yarn.Unity.VoiceOverPresenter
-  endLineWhenVoiceoverComplete: 1
+  endLineWhenVoiceoverComplete: 0
   fadeOutTimeOnLineFinish: 0.05
   waitTimeBeforeLineStart: 0
   waitTimeAfterLineComplete: 0
-  audioSource: {fileID: 4229764644952802407}
+  audioSource: {fileID: 0}
