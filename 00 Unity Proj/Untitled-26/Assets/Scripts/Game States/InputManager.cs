@@ -87,6 +87,9 @@ public class InputManager : MonoBehaviour
                 case GameStateManager.GameState.Paused:
                     actionMapName = "UI";
                     break;
+                case GameStateManager.GameState.Settings:
+                    actionMapName = "UI";
+                    break;
             }
             
             inputMapSwitched?.Invoke(actionMapName);
