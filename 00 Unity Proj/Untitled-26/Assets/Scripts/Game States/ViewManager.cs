@@ -29,6 +29,7 @@ public class ViewManager : MonoBehaviour
     public Camera playerCamera;
     public Camera puzzleCamera;
     public Camera menuCamera;
+    public Camera dialogueCamera;
     private Camera _targetCamera;
 
     private void Awake()
@@ -46,6 +47,7 @@ public class ViewManager : MonoBehaviour
         if (playerCamera != null) cameras.Add(playerCamera);
         if (puzzleCamera != null) cameras.Add(puzzleCamera);
         if (menuCamera != null) cameras.Add(menuCamera);
+        if (dialogueCamera != null) cameras.Add(dialogueCamera);
         
         Debug.Log($"ViewManager.cs >> Initialized with {cameras.Count} cameras.");
         
@@ -63,8 +65,8 @@ public class ViewManager : MonoBehaviour
         if (explorationUI != null) uiCanvases.Add(explorationUI);
         if (puzzleUI != null) uiCanvases.Add(puzzleUI);
         if (pausedUI != null) uiCanvases.Add(pausedUI);
-        if (settingsUI != null) uiCanvases.Add(settingsUI);
-
+        if (dialogueUI != null) uiCanvases.Add(dialogueUI);
+        
         Debug.Log($"ViewManager.cs >> Initialized with {uiCanvases.Count} UI Canvases.");
     }
 
@@ -100,6 +102,10 @@ public class ViewManager : MonoBehaviour
             case GameStateManager.GameState.Puzzle:
                 _targetUI = puzzleUI;
                 _targetCamera = puzzleCamera;
+                break;
+            case GameStateManager.GameState.Dialogue:
+                _targetUI = dialogueUI;
+                _targetCamera = dialogueCamera;
                 break;
             case GameStateManager.GameState.Paused:
                 _targetUI = pausedUI;

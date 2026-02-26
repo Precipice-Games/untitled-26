@@ -10,11 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
-  m_Name: StringTableTest
+  m_Name: LineTable
   m_EditorClassIdentifier: Unity.Localization.Editor::UnityEditor.Localization.StringTableCollection
-  m_SharedTableData: {fileID: 11400000, guid: a22425478590f684dad499eba0d4033c, type: 2}
+  m_SharedTableData: {fileID: 11400000, guid: c884be7acc7ff0f4db5cf6f4614ad1f2, type: 2}
   m_Tables:
-  - {fileID: 11400000, guid: 176e24c2876a00940a5896ebe2e64aeb, type: 2}
+  - {fileID: 11400000, guid: 42d9dbf4e0a2be640a1002e91ca5801a, type: 2}
+  - {fileID: 11400000, guid: 535a3c9acb542414da679b0041597916, type: 2}
+  - {fileID: 11400000, guid: 522b5760be3b2a540b4b490a7ef1339b, type: 2}
+  - {fileID: 11400000, guid: 90adb55033e74d043a358b3626bd8b16, type: 2}
+  - {fileID: 11400000, guid: 8ffee8c9886b2c542999da20c39aa5d7, type: 2}
   m_Extensions: []
   m_Group: String Table
   references:
