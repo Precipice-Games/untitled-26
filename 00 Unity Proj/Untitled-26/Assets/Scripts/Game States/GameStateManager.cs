@@ -29,8 +29,8 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         MainMenu,
         Exploration,
         Puzzle,
-        Dialogue,
-        Paused
+        Paused,
+        Settings
     }
 
     /// <summary>
@@ -176,6 +176,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
                 break;
             case GameState.Paused:
                 pausable = true;
+                Time.timeScale = 0.0f;
+                break;
+            case GameState.Settings:
+                pausable = false;
                 Time.timeScale = 0.0f;
                 break;
         }

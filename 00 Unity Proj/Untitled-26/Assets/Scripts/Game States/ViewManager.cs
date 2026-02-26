@@ -21,7 +21,7 @@ public class ViewManager : MonoBehaviour
     public GameObject explorationUI;
     public GameObject puzzleUI;
     public GameObject pausedUI;
-    public GameObject dialogueUI;
+    public GameObject settingsUI;
     private GameObject _targetUI;
 
     [Header("Cameras")]
@@ -109,6 +109,10 @@ public class ViewManager : MonoBehaviour
                 break;
             case GameStateManager.GameState.Paused:
                 _targetUI = pausedUI;
+                _targetCamera = menuCamera;
+                break;
+            case GameStateManager.GameState.Settings:
+                _targetUI = settingsUI;
                 _targetCamera = menuCamera;
                 break;
         }
