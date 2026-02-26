@@ -303,6 +303,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228567483}
   m_CullTransparentMesh: 1
+--- !u!114 &258279223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5172177436165071364, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+  m_PrefabInstance: {fileID: 6083707658483977897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945da601b31994aeca6c1ccad6bf7095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileMovementSFX
 --- !u!1 &276797934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,6 +1302,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 258279223}
+        m_TargetAssemblyTypeName: TileMovementSFX, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &422798596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1798,6 +1821,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 258279223}
+        m_TargetAssemblyTypeName: TileMovementSFX, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &966384302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,6 +2146,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 258279223}
+        m_TargetAssemblyTypeName: TileMovementSFX, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1038320066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2274,6 +2321,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1035875983}
         m_TargetAssemblyTypeName: CubeSelector, Assembly-CSharp
         m_MethodName: MoveSelectedRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 258279223}
+        m_TargetAssemblyTypeName: TileMovementSFX, Assembly-CSharp
+        m_MethodName: PlaySound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3431,6 +3490,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d808d9d7849b0d4f8a3e497f02cb35a, type: 3}
+--- !u!1001 &6083707658483977897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3039724645273056021, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3444,3 +3560,4 @@ SceneRoots:
   - {fileID: 942352521}
   - {fileID: 1246989150}
   - {fileID: 309306724451685750}
+  - {fileID: 6083707658483977897}
