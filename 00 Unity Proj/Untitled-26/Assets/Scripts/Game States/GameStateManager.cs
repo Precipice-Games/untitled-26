@@ -170,10 +170,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
                 pausable = true;
                 Time.timeScale = 1.0f;
                 break;
-            case GameState.Dialogue:
-                pausable = true;
-                Time.timeScale = 1.0f;
-                break;
+            // case GameState.Dialogue:
+            //     pausable = true;
+            //     Time.timeScale = 1.0f;
+            //     break;
             case GameState.Paused:
                 pausable = true;
                 Time.timeScale = 0.0f;
@@ -206,9 +206,9 @@ public class GameStateManager : MonoSingleton<GameStateManager>
                 case GameState.Puzzle:
                     TransitionToState(GameState.Puzzle);
                     break;
-                case GameState.Dialogue:
-                    TransitionToState(GameState.Dialogue);
-                    break;
+                // case GameState.Dialogue:
+                //     TransitionToState(GameState.Dialogue);
+                //     break;
             }
         }
         else if (pausable)

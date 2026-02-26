@@ -65,7 +65,7 @@ public class ViewManager : MonoBehaviour
         if (explorationUI != null) uiCanvases.Add(explorationUI);
         if (puzzleUI != null) uiCanvases.Add(puzzleUI);
         if (pausedUI != null) uiCanvases.Add(pausedUI);
-        if (dialogueUI != null) uiCanvases.Add(dialogueUI);
+        // if (dialogueUI != null) uiCanvases.Add(dialogueUI);
         
         Debug.Log($"ViewManager.cs >> Initialized with {uiCanvases.Count} UI Canvases.");
     }
@@ -103,10 +103,10 @@ public class ViewManager : MonoBehaviour
                 _targetUI = puzzleUI;
                 _targetCamera = puzzleCamera;
                 break;
-            case GameStateManager.GameState.Dialogue:
-                _targetUI = dialogueUI;
-                _targetCamera = dialogueCamera;
-                break;
+            // case GameStateManager.GameState.Dialogue:
+            //     _targetUI = dialogueUI;
+            //     _targetCamera = dialogueCamera;
+            //     break;
             case GameStateManager.GameState.Paused:
                 _targetUI = pausedUI;
                 _targetCamera = menuCamera;
