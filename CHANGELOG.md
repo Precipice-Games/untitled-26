@@ -5,7 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- Proper use of the Game State Manager system.
+- Put any unreleased features under here.
+
+## [v0.2.0-prototype.2] - 2026-02-26
+
+### Added
+* Added a polished game loop between DialogueTest_1.unity and TileMoveExperiment.unity
+* Functional Game State Manager system with 4 states: Exploration, Paused, Puzzle, Menu.
+* Prefabs for Player, Game State Manager, Audio Manager, and Music Manager.
+* Added intro sequence dialogue (WIP).
+* Proper pause menu toggling.
+
+### Fixed
+* Fixed an issue where the movement interaction scene appeared to be frozen.
+* Fixed an issue plaguing addressable assets schemas used by YarnSpinner in local builds.
+* Fixed an issue where the action maps weren't switching properly.
+
+### Changed
+* Enhanced Figma UIs in the MainMenu.unity scene.
+
+### Removed
+* Removed the MovementInteraction_1.unity scene button from the splash page screen.
 
 ## [v0.2.0-prototype.1] - 2026-02-23
 
