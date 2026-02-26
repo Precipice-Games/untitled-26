@@ -10,32 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: VoiceoverTest Shared Data
+  m_Name: AssetTable Shared Data
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
-  m_TableCollectionName: VoiceoverTest
-  m_TableCollectionNameGuidString: 9abc03c63231e4443a1ebe5bbc515c1f
+  m_TableCollectionName: AssetTable
+  m_TableCollectionNameGuidString: 0cab315d749f0c241b0537baec364c2b
   m_Entries:
-  - m_Id: 201100488704
+  - m_Id: 2948439625728
     m_Key: line:04df4da
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items:
-    - rid: 6404808418785755386
+    - rid: 7713309944584863859
   m_KeyGenerator:
-    rid: 6404808418785755385
+    rid: 7713309944584863818
   references:
     version: 2
     RefIds:
-    - rid: 6404808418785755385
+    - rid: 7713309944584863818
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1771176964785
-    - rid: 6404808418785755386
+        m_CustomEpoch: 1772031676349
+    - rid: 7713309944584863859
       type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_Entries:
-        - m_KeyId: 201100488704
+        - m_KeyId: 2948439625728
           m_TableCodes:
           - en
         m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,

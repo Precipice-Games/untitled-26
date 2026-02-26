@@ -15,11 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Asset-Tables-English
   m_GUID: afcb29de502244f3498281ff0c437d7a
   m_SerializeEntries:
-  - m_GUID: ea397899a15430e44a41c180e2c3f85b
-    m_Address: VoiceoverTest_en
+  - m_GUID: 0f0dfb73da2d5b74b9b0ce5f1f6e5cf6
+    m_Address: AssetTable_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
+    - Preload
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 6d2a71ca693bea74da6def2274e659a9, type: 2}
