@@ -84,9 +84,9 @@ public class InputManager : MonoBehaviour
                     //       specifically for puzzle solving, even if it
                     //       shares similar inputs to the Player action map.
                     break;
-                // case GameStateManager.GameState.Dialogue:
-                //     actionMapName = "UI";
-                //     break;
+                case GameStateManager.GameState.Dialogue:
+                    actionMapName = "UI";
+                    break;
                 case GameStateManager.GameState.Paused:
                     actionMapName = "UI";
                     break;
