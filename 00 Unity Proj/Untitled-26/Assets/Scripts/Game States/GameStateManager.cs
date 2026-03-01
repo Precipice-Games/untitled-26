@@ -21,14 +21,12 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// <summary>
     /// The set of possible game states.
     /// </summary>
-    /// <remarks>
-    /// As of right now, the game can be in one of three states: Exploration, Puzzle, or Paused.
-    /// </remarks>
     public enum GameState
     {
         MainMenu,
         Exploration,
         Puzzle,
+        Dialogue,
         Paused,
         Settings
     }
@@ -170,10 +168,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
                 pausable = true;
                 Time.timeScale = 1.0f;
                 break;
-            // case GameState.Dialogue:
-            //     pausable = true;
-            //     Time.timeScale = 1.0f;
-            //     break;
+            case GameState.Dialogue:
+                pausable = true;
+                Time.timeScale = 1.0f;
+                break;
             case GameState.Paused:
                 pausable = true;
                 Time.timeScale = 0.0f;
@@ -199,17 +197,8 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     {
         if (CurrentGameState == GameState.Paused)
         {
-            switch (prevState) {
-                case GameState.Exploration:
-                    TransitionToState(GameState.Exploration);
-                    break;
-                case GameState.Puzzle:
-                    TransitionToState(GameState.Puzzle);
-                    break;
-                // case GameState.Dialogue:
-                //     TransitionToState(GameState.Dialogue);
-                //     break;
-            }
+            // Possible previous states should be Exploration, Puzzle, and Dialogue.
+            TransitionToState(prevState);
         }
         else if (pausable)
         {
@@ -221,7 +210,18 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         }
     }
     
-    
+    public void onDialogueTrigger()
+    {
+        if(CurrentGameState == GameState.Dialogue)
+        {
+            // As of now this should only return to Exploration state. However, this accounts for if future dialogue is triggered in a puzzle state.
+            TransitionToState(prevState);
+        }
+        else
+        {
+            TransitionToState(GameState.Dialogue);
+        }
+    }
     
     public void ExitGame()
     {
