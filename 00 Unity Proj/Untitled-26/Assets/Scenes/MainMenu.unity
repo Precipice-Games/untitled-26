@@ -463,6 +463,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1469944220}
     - target: {fileID: 1963081915272111325, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: menuCamera
+      value: 
+      objectReference: {fileID: 564596990}
+    - target: {fileID: 1963081915272111325, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: explorationUI
       value: 
       objectReference: {fileID: 1090668169}
@@ -918,7 +922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4542058482829035119, guid: a882787d60ae5624d8a337cd3bd3cf98, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5132064805907978128, guid: a882787d60ae5624d8a337cd3bd3cf98, type: 3}
       propertyPath: m_AnchorMax.x
