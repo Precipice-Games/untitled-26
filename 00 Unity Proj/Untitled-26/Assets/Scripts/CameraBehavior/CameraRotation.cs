@@ -10,7 +10,9 @@ public class CameraRotation : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        // TODO: Remove this part and replace with Game State Manager, which sets
+        // off a chain of events to handle cursor locking and visibility.
+        // Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
