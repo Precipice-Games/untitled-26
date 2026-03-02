@@ -7,6 +7,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 - Put any unreleased features under here.
 
+## [v0.3.0-prototype.1] - 2026-03-02
+### Added
+* Added the first half of the greyboxed ice island.
+* Added a functional game state manager to the ice island.
+
+### Fixed
+* Fixed an issue where the cursor was unavailable for use in the SplashPage.unity scene.
+
+### Removed
+* Removed an extra audio listener component that was causing warnings in the editor.
+
 ## [v0.2.1-prototype.1] - 2026-03-01
 
 ### Added
