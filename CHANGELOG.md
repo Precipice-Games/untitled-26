@@ -7,6 +7,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 - Put any unreleased features under here.
 
+## [v0.2.1-prototype.1] - 2026-03-01
+
+### Added
+* Added Dialogue state to Game State Manager.
+* Created a lock on the camera during dialogue sequences to allow for proper UI interaction.
+
+### Fixed
+* Fixed an issue where the Player was not able to progress through the intro dialogue sequence.
+
 ## [v0.2.0-prototype.2] - 2026-02-26
 
 ### Added
