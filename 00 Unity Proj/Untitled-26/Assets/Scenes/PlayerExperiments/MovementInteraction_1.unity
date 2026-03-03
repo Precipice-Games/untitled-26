@@ -741,6 +741,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReturnToSplashPage
       objectReference: {fileID: 0}
+    - target: {fileID: 4542058482829035119, guid: a882787d60ae5624d8a337cd3bd3cf98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688672782111972531, guid: a882787d60ae5624d8a337cd3bd3cf98, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -931,6 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffb8cce26a91974988192e7f4eb0d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  jumpPower: 4
 --- !u!65 &1403279307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1065,6 +1074,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRaycastInteraction
   rayLength: 2.5
+  activeInteractable: {fileID: 0}
+  canInteract: 1
+  activeTimer: 5
+  maxTime: 5
 --- !u!1 &2139554796
 GameObject:
   m_ObjectHideFlags: 0
