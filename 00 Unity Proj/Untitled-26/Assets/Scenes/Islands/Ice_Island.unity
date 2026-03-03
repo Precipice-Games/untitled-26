@@ -1582,6 +1582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6739596773503058293, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: rayLength
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2677026544754493357, guid: a6c784ad445d3794997d2c33105ef3df, type: 3}
       propertyPath: jumpPower
       value: 4
@@ -17346,7 +17350,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1402618921}
   - component: {fileID: 1402618920}
-  - component: {fileID: 1402618919}
   - component: {fileID: 1402618918}
   - component: {fileID: 1402618917}
   - component: {fileID: 1402618916}
@@ -17442,14 +17445,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!81 &1402618919
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402618914}
-  m_Enabled: 1
 --- !u!20 &1402618920
 Camera:
   m_ObjectHideFlags: 0
@@ -17509,13 +17504,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402618914}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3498096, y: -0, z: -0, w: 0.93682086}
-  m_LocalPosition: {x: 0.606, y: 5.8, z: -6.02}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 2.2, y: 21.97, z: 7.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 40.951, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1433805234
 GameObject:
   m_ObjectHideFlags: 0
@@ -19338,7 +19333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6680628483434389340, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19782,6 +19777,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5210052636578805895, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
+      propertyPath: GameStateManager
+      value: 
+      objectReference: {fileID: 1604888279}
     - target: {fileID: 5840726587507800180, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.16000009
