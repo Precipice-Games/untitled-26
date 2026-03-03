@@ -372,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
   musicSource: {fileID: 816375123}
   mainMenuTrack: {fileID: 8300000, guid: 269b283e344094ef2a6874d2bf883cee, type: 3}
-  tileMoveTrack: {fileID: 0}
+  tileMoveTrack: {fileID: 8300000, guid: 269b283e344094ef2a6874d2bf883cee, type: 3}
   movementInteractionTrack: {fileID: 8300000, guid: 8fd6ebb7e5a1e4ee490728e44e37330f, type: 3}
   dialogueTestTrack: {fileID: 8300000, guid: 8fd6ebb7e5a1e4ee490728e44e37330f, type: 3}
   iceIslandTrack: {fileID: 8300000, guid: 2e90ff6591a7e4a058d3cb654ad3a962, type: 3}
