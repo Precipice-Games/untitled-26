@@ -220,9 +220,20 @@ public class GameStateManager : MonoSingleton<GameStateManager>
             Debug.Log("Cannot pause from current state");
         }
     }
-    
-    
-    
+
+    public void onPuzzleTrigger()
+    {
+        if (CurrentGameState == GameState.Puzzle)
+        {
+            // As of now this should only return to Exploration state. However, this accounts for if future dialogue is triggered in a puzzle state.
+            TransitionToState(prevState);
+        }
+        else
+        {
+            TransitionToState(GameState.Puzzle);
+        }
+    }
+
     public void ExitGame()
     {
         Debug.Log("Quit Game");
