@@ -143,7 +143,7 @@ public class ViewManager : MonoBehaviour
                 else
                 {
                     canvas.SetActive(false);
-                    Debug.Log($"ViewManager.cs >> Disabled UI Canvas: {canvas.name}");
+                    //Debug.Log($"ViewManager.cs >> Disabled UI Canvas: {canvas.name}");
                 }
             }
         }
@@ -171,7 +171,7 @@ public class ViewManager : MonoBehaviour
                 else
                 {
                     cam.enabled = false;
-                    Debug.Log($"ViewManager.cs >> Disabled camera: {cam.name}");
+                    //Debug.Log($"ViewManager.cs >> Disabled camera: {cam.name}");
                 }
             }
         }
