@@ -19678,6 +19678,34 @@ PrefabInstance:
       propertyPath: GameStateManager
       value: 
       objectReference: {fileID: 1604888279}
+    - target: {fileID: 5210052636578805895, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
+      propertyPath: PuzzleTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210052636578805895, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
+      propertyPath: PuzzleTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210052636578805895, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
+      propertyPath: PuzzleTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1604888279}
+    - target: {fileID: 5210052636578805895, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
+      propertyPath: PuzzleTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210052636578805895, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
+      propertyPath: PuzzleTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onPuzzleTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210052636578805895, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
+      propertyPath: PuzzleTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameStateManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210052636578805895, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
+      propertyPath: PuzzleTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5840726587507800180, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.16000009
