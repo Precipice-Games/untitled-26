@@ -1,15 +1,18 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class InteractablePillar : MonoBehaviour, IInteractable
 {
-
-    public GameStateManager GameStateManager;
+    public UnityEvent PuzzleTriggered;
 
     public void Interaction()
     {
         Debug.Log("Interacting");
 
-        GameStateManager.onPuzzleTrigger();
+        // Invoke this event. The onPuzzleTrigger() event from
+        // GameStateManager.cs has been subscribed to this event
+        // in the Unity Editor.
+        PuzzleTriggered.Invoke();
     }
 }
