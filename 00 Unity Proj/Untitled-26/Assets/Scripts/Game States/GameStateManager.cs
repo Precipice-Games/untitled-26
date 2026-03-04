@@ -209,7 +209,11 @@ public class GameStateManager : MonoSingleton<GameStateManager>
             Debug.Log("Cannot pause from current state");
         }
     }
-    
+
+    /// <summary>
+    /// This is a listener for OnDialogueStart() and OnDialogueComplete() events invoked by YarnSpinner's DialogueRunner.
+    /// It triggers a state transition to the Dialogue state when dialogue starts, and returns to the previous state (exploration or puzzle) when dialogue ends.
+    /// </summary>
     public void onDialogueTrigger()
     {
         if(CurrentGameState == GameState.Dialogue)

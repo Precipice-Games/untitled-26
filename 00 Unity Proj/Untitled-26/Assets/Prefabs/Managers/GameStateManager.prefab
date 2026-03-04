@@ -684,6 +684,34 @@ PrefabInstance:
       propertyPath: m_TextStyleHashCode
       value: -1183493901
       objectReference: {fileID: 0}
+    - target: {fileID: -6292108615612392085, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6292108615612392085, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6292108615612392085, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6695810280336362603}
+    - target: {fileID: -6292108615612392085, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6292108615612392085, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: swapUI
+      objectReference: {fileID: 0}
+    - target: {fileID: -6292108615612392085, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIChangerButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -6292108615612392085, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: -6254908899450308322, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -787,6 +815,34 @@ PrefabInstance:
     - target: {fileID: -5307898085556316762, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: -5009031254838905224, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5009031254838905224, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5009031254838905224, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3287033184063508684}
+    - target: {fileID: -5009031254838905224, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5009031254838905224, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: swapUI
+      objectReference: {fileID: 0}
+    - target: {fileID: -5009031254838905224, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIChangerButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -5009031254838905224, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: -4899608726128757097, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_TextStyleHashCode
@@ -1011,10 +1067,22 @@ PrefabInstance:
     - target: {fileID: -3046019572867236631, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6680628483434389340}
+      objectReference: {fileID: 200245964896202659}
     - target: {fileID: -3046019572867236631, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3046019572867236631, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: swapUI
+      objectReference: {fileID: 0}
+    - target: {fileID: -3046019572867236631, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIChangerButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3046019572867236631, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: -2958626439831552142, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -1144,6 +1212,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1712133257546514670, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1712133257546514670, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1712133257546514670, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3009239404816470679}
+    - target: {fileID: -1712133257546514670, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1712133257546514670, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: swapUI
+      objectReference: {fileID: 0}
+    - target: {fileID: -1712133257546514670, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIChangerButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -1712133257546514670, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: -1421122153893847030, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
@@ -1167,6 +1263,34 @@ PrefabInstance:
     - target: {fileID: -1094555104667589527, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: -1025997185374253409, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1025997185374253409, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1025997185374253409, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8776912807458044258}
+    - target: {fileID: -1025997185374253409, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1025997185374253409, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: swapUI
+      objectReference: {fileID: 0}
+    - target: {fileID: -1025997185374253409, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIChangerButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -1025997185374253409, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: -986823504100260371, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_TextStyleHashCode
@@ -1796,6 +1920,34 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 35.76
       objectReference: {fileID: 0}
+    - target: {fileID: 4515708403295941643, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515708403295941643, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515708403295941643, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7281942416530627734}
+    - target: {fileID: 4515708403295941643, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515708403295941643, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: returnToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515708403295941643, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionsExitButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515708403295941643, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4582443674673999708, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_Value
       value: 100
@@ -2066,15 +2218,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7679656677912847970, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7679656677912847970, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7679656677912847970, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2918839220131312997}
+    - target: {fileID: 7679656677912847970, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679656677912847970, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: swapUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679656677912847970, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIChangerButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679656677912847970, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7764116481763290774, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_TextStyleHashCode
@@ -2179,15 +2347,39 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4719430106221968774, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8192688173337054746}
+    - targetCorrespondingSourceObject: {fileID: 1498511347049179379, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6695810280336362603}
+    - targetCorrespondingSourceObject: {fileID: 4899378052596745851, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8776912807458044258}
+    - targetCorrespondingSourceObject: {fileID: -2071689421119120505, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3287033184063508684}
+    - targetCorrespondingSourceObject: {fileID: -7822232226070673547, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3009239404816470679}
+    - targetCorrespondingSourceObject: {fileID: 6476879330269363639, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7295581563962580950}
+    - targetCorrespondingSourceObject: {fileID: 6476879330269363639, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7281942416530627734}
     - targetCorrespondingSourceObject: {fileID: -544191721942471486, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4543659021414802584}
+    - targetCorrespondingSourceObject: {fileID: 5300978726210045199, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2918839220131312997}
     - targetCorrespondingSourceObject: {fileID: 8018635157453650121, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2058018308299488618}
     - targetCorrespondingSourceObject: {fileID: -479779240224528538, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1314302785497786576}
+    - targetCorrespondingSourceObject: {fileID: -2459636178039226781, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 200245964896202659}
   m_SourcePrefab: {fileID: 7828656358047639922, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
 --- !u!114 &359081619838037627 stripped
 MonoBehaviour:
@@ -2200,6 +2392,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1519a8f5c995cf74dac1406533a20ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Cdm.Figma.UI::Cdm.Figma.UI.FigmaPage
+--- !u!1 &655934451006499205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7822232226070673547, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+  m_PrefabInstance: {fileID: 1903758013187960560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3009239404816470679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655934451006499205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a657f4b6f1e3b4984f2f3bd6a10657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIChangerButton
+  targetUI: {fileID: 8410000227044513620}
+--- !u!1 &1053923620404659715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1498511347049179379, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+  m_PrefabInstance: {fileID: 1903758013187960560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6695810280336362603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053923620404659715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a657f4b6f1e3b4984f2f3bd6a10657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIChangerButton
+  targetUI: {fileID: 2658832113114893768}
 --- !u!1 &1566124392538378761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8083824966840337159, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
@@ -2208,6 +2436,11 @@ GameObject:
 --- !u!1 &2658832113114893768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4715954442031963336, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+  m_PrefabInstance: {fileID: 1903758013187960560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3167723918570048412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5648211240212798100, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
   m_PrefabInstance: {fileID: 1903758013187960560}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3515479474133647767 stripped
@@ -2225,6 +2458,93 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: -6897462909613184620, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
   m_PrefabInstance: {fileID: 1903758013187960560}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4866700959106552647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6476879330269363639, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+  m_PrefabInstance: {fileID: 1903758013187960560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7295581563962580950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4866700959106552647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a657f4b6f1e3b4984f2f3bd6a10657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIChangerButton
+  targetUI: {fileID: 3515479474133647767}
+--- !u!114 &7281942416530627734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4866700959106552647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419e7490795fdd2478f56d3157e8f502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OptionsExitButton
+  exitButton: {fileID: 7295581563962580950}
+  mainMenuUI: {fileID: 3700156439328364526}
+  pausedUI: {fileID: 3515479474133647767}
+--- !u!1 &5167348675354726547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2459636178039226781, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+  m_PrefabInstance: {fileID: 1903758013187960560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &200245964896202659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5167348675354726547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a657f4b6f1e3b4984f2f3bd6a10657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIChangerButton
+  targetUI: {fileID: 2658832113114893768}
+--- !u!1 &6051533617542736895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5300978726210045199, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+  m_PrefabInstance: {fileID: 1903758013187960560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2918839220131312997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051533617542736895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a657f4b6f1e3b4984f2f3bd6a10657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIChangerButton
+  targetUI: {fileID: 2658832113114893768}
+--- !u!1 &6455232435675261067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4899378052596745851, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+  m_PrefabInstance: {fileID: 1903758013187960560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8776912807458044258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6455232435675261067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a657f4b6f1e3b4984f2f3bd6a10657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIChangerButton
+  targetUI: {fileID: 2658832113114893768}
 --- !u!1 &6563232841201341302 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4719430106221968774, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
@@ -2279,6 +2599,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerButton
   scene: DialogueTest_1
+--- !u!1 &8410000227044513620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1234598217196340828, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+  m_PrefabInstance: {fileID: 1903758013187960560}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8443242026214135353 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8018635157453650121, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
@@ -2297,6 +2622,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerButton
   scene: DialogueTest_1
+--- !u!1 &8742719022096561527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2071689421119120505, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+  m_PrefabInstance: {fileID: 1903758013187960560}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3287033184063508684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8742719022096561527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a657f4b6f1e3b4984f2f3bd6a10657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIChangerButton
+  targetUI: {fileID: 3167723918570048412}
 --- !u!1 &9131695762045235105 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1958558711790550703, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
