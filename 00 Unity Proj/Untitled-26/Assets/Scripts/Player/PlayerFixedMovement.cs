@@ -26,12 +26,12 @@ public class PlayerFixedMovement : MonoBehaviour
     }
 
     /*
-     * 
+     *
      * Takes the movement variables and adjusts the corresponding axes
      * in a Vector3 variable, then adjusts the player's position based
      * on moveSpeed, the localMoveDirection variable, and deltaTime
      * (deltaTiem to normalize the movement)
-     * 
+     *
      */
 
     private void FixedUpdate()
@@ -40,19 +40,49 @@ public class PlayerFixedMovement : MonoBehaviour
     }
 
     /*
-     * 
+     *
      * Takes the player's keyboard input in context as a Vector2
-     * the x value of the Vector2 (left and right movement) gets 
-     * assigned to xMovement, and the y value of the Vector2 
+     * the x value of the Vector2 (left and right movement) gets
+     * assigned to xMovement, and the y value of the Vector2
      * (forward and back movement) gets assigned to yMovement
-     * 
+     *
      */
 
-    public void PlayerMove(InputAction.CallbackContext context)
+    public void MoveUp(InputAction.CallbackContext context)
     {
-
-        // xMovement = context.ReadValue<Vector2>().x;
-        // yMovement = context.ReadValue<Vector2>().y;        
-
+        // Ensures that the action is only performed once per key press.
+        if (context.performed)
+        {
+            Debug.Log("PlayerFixedMovement.cs >> MoveUp performed.");
+        }
     }
+    
+    public void MoveDown(InputAction.CallbackContext context)
+    {
+        // Ensures that the action is only performed once per key press.
+        if (context.performed)
+        {
+            Debug.Log("PlayerFixedMovement.cs >> MoveDown called.");
+        }
+    }
+    
+    public void MoveLeft(InputAction.CallbackContext context)
+    {
+        // Ensures that the action is only performed once per key press.
+        if (context.performed)
+        {
+            Debug.Log("PlayerFixedMovement.cs >> MoveLeft called.");
+        }
+    }
+    
+    public void MoveRight(InputAction.CallbackContext context)
+    {
+        // Ensures that the action is only performed once per key press.
+        if (context.performed)
+        {
+            Debug.Log("PlayerFixedMovement.cs >> MoveRight called.");
+        }
+    }
+    
+    
 }

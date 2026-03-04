@@ -79,7 +79,7 @@ public class InputManager : MonoBehaviour
                     actionMapName = "Player";
                     break;
                 case GameStateManager.GameState.Puzzle:
-                    actionMapName = "Player";
+                    actionMapName = "Puzzle";
                     // TODO: We should probably create a new action map
                     //       specifically for puzzle solving, even if it
                     //       shares similar inputs to the Player action map.
