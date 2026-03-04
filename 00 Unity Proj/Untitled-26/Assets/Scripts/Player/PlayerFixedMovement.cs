@@ -16,7 +16,8 @@ public class PlayerFixedMovement : MonoBehaviour
     // ==== Variables =====
     private Vector3 playerCurrentPosition; // Current Vector3 position
     private Vector3 startPosition;
-    private PuzzleInformation puzzleInformation;
+    private GridManager gridManager;
+    private GameObject puzzleCam; // The camera object holds relevant scripts
     
     // Tile that the Player will start at
     // (Not necessarily within the grid)
@@ -48,6 +49,23 @@ public class PlayerFixedMovement : MonoBehaviour
         {
             Debug.LogError("PlayerFixedMovement.cs >> Starting tile is not assigned.");
         }
+    }
+    
+    private void OnEnable()
+    {
+        InteractablePillar.puzzleTriggered += UpdatePuzzleInformation;
+    }
+    
+    private void OnDisable()
+    {
+        InteractablePillar.puzzleTriggered -= UpdatePuzzleInformation;
+    }
+    
+    private void UpdatePuzzleInformation(PuzzleInformation puzzleInfo)
+    {
+        gridManager = puzzleInfo.gridManager.GetComponent<GridManager>();
+        startTile = puzzleInfo.startTile;
+        endTile = puzzleInfo.endTile;
     }
     
     // The following methods listen to callback events from the Puzzle map from the
@@ -104,7 +122,7 @@ public class PlayerFixedMovement : MonoBehaviour
         Debug.Log("PlayerFixedMovement.cs >> Attempting to move the Player to: " + xDir + "," + zDir);
 
         // Check if there's a tile to move to
-        if (!GridManager.Instance.IsCellEmpty(newX, newZ))
+        if (!gridManager.IsCellEmpty(newX, newZ))
         {
             Debug.Log($"PlayerFixedMovement.cs >> There is a tile at ({newX},{newZ})");
             return;

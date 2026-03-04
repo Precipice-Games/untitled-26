@@ -9,6 +9,7 @@ public class GridManager : MonoBehaviour
     public float tileSize = .25f;
 
     private SelectableCube[,] grid;
+    
 
     void Awake()
     {
