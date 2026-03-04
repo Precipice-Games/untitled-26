@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 295680337}
   - component: {fileID: 295680340}
   m_Layer: 0
-  m_Name: IslandCube
+  m_Name: StartTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2886,7 +2886,7 @@ GameObject:
   - component: {fileID: 1643203958}
   - component: {fileID: 1643203957}
   m_Layer: 0
-  m_Name: IslandCube (1)
+  m_Name: EndTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
