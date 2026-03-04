@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7d9cf5b-7ed9-4264-b47f-cf003ab39e11" name="Changes" comment="" />
+    <list default="true" id="c7d9cf5b-7ed9-4264-b47f-cf003ab39e11" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TileExperiments/TileMoveExperiment.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TileExperiments/TileMoveExperiment.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +48,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18b3b31e3d8341f487466ebb6800bc67212400/57/efb1b38e/SceneManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@57d0e36f6123/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -73,7 +75,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Unity Attach To.Attach to.executor": "Debug",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "issue/107-greybox-ice-island",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -115,7 +117,7 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
@@ -126,7 +128,6 @@
       <option name="selectedOptions">
         <list />
       </option>
-      <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
@@ -145,6 +146,7 @@
       <workItem from="1771777729334" duration="9348000" />
       <workItem from="1771873960866" duration="4508000" />
       <workItem from="1772032124886" duration="3193000" />
+      <workItem from="1772636262588" duration="7732000" />
     </task>
     <servers />
   </component>
