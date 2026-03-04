@@ -57,6 +57,7 @@ MonoBehaviour:
   puzzleCamera: {fileID: 0}
   dialogueCamera: {fileID: 0}
   menuCamera: {fileID: 0}
+  dialogueCamera: {fileID: 0}
 --- !u!114 &497008879434423276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,11 +1123,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2620704818730137641, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 25.59
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2620704818730137641, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 22.35
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2575286131036027177, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_TextStyleHashCode
@@ -1170,11 +1171,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2300862386966289293, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1.7400025
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2300862386966289293, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -1.6499999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2250819352619576199, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_Value
@@ -1190,7 +1191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1958558711790550703, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1920364326354594039, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_TextStyleHashCode
