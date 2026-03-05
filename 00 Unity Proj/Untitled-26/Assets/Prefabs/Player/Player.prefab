@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 2003065819590668714}
   - component: {fileID: 3103343398758482961}
   - component: {fileID: 1173698383739407512}
+  - component: {fileID: 6709136814799094051}
   - component: {fileID: 6739596773503058293}
   - component: {fileID: 6922169669516928053}
   - component: {fileID: 4698028750357769851}
@@ -186,7 +187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5438321986708604092}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 1.5122, y: 1.4211, z: 0.057936}
   m_ConstrainProportionsScale: 0
@@ -304,6 +305,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   jumpPower: 4
+--- !u!114 &6709136814799094051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438321986708604092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf41f4705f0140eb94391cf0bb44adfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFixedMovement
 --- !u!114 &6739596773503058293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,6 +503,82 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a9261acb-460a-473b-b5b7-b83f578b2326
     m_ActionName: 'UI/Map[/Keyboard/m]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2e9ff2ac-a7c8-464a-bccd-e49e4e132b12
+    m_ActionName: 'Puzzle/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95650de4-f74b-4401-a6d5-73846c9655d9
+    m_ActionName: 'Puzzle/Pause[/Keyboard/t]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 44958ec9-ff14-4b2a-800c-b429c1f4d6f5
+    m_ActionName: 'Puzzle/Map[/Keyboard/m]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6709136814799094051}
+        m_TargetAssemblyTypeName: PlayerFixedMovement, Assembly-CSharp
+        m_MethodName: MoveUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f292a0eb-19f8-4e56-8161-9f22683184bd
+    m_ActionName: 'Puzzle/MoveUp[/Keyboard/w]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6709136814799094051}
+        m_TargetAssemblyTypeName: PlayerFixedMovement, Assembly-CSharp
+        m_MethodName: MoveDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e8a30b47-ab05-43d2-bb19-ce8bb72b38de
+    m_ActionName: 'Puzzle/MoveDown[/Keyboard/s]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6709136814799094051}
+        m_TargetAssemblyTypeName: PlayerFixedMovement, Assembly-CSharp
+        m_MethodName: MoveLeft
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ffc436f0-3509-421d-b1c1-850737279dad
+    m_ActionName: 'Puzzle/MoveLeft[/Keyboard/a]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6709136814799094051}
+        m_TargetAssemblyTypeName: PlayerFixedMovement, Assembly-CSharp
+        m_MethodName: MoveRight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8dab30dc-efb8-4acc-8656-c5191801d844
+    m_ActionName: 'Puzzle/MoveRight[/Keyboard/d]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player

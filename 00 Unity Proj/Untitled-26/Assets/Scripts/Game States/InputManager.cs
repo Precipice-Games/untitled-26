@@ -14,7 +14,8 @@ public class InputManager : MonoBehaviour
     // to the current input map as needed.
     public static event Action<string> inputMapSwitched;
     public static event Action<CursorLockMode, bool> cursorChanged;
-    
+
+
     private void Awake()
     {
         // Initialize the PlayerInput component and
@@ -79,7 +80,7 @@ public class InputManager : MonoBehaviour
                     actionMapName = "Player";
                     break;
                 case GameStateManager.GameState.Puzzle:
-                    actionMapName = "Player";
+                    actionMapName = "Puzzle";
                     // TODO: We should probably create a new action map
                     //       specifically for puzzle solving, even if it
                     //       shares similar inputs to the Player action map.

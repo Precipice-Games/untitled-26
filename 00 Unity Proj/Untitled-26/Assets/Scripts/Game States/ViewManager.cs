@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 /// <summary>
@@ -32,6 +33,8 @@ public class ViewManager : MonoBehaviour
     public Camera dialogueCamera;
     public Camera menuCamera;
     private Camera _targetCamera;
+
+    public UnityEvent puzzleSwitchDetected;
 
     private void Awake()
     {
@@ -74,11 +77,31 @@ public class ViewManager : MonoBehaviour
     private void OnEnable()
     {
         GameStateManager.transitionedToNewState += HandleViewChange;
+        InteractablePillar.puzzleTriggered += UpdatePuzzleInformation;
     }
     
     private void OnDisable()
     {
         GameStateManager.transitionedToNewState -= HandleViewChange;
+        InteractablePillar.puzzleTriggered -= UpdatePuzzleInformation;
+    }
+
+    /// <summary>
+    /// This method takes in the PuzzleInformation data from the InteractablePillar.cs script.
+    /// The parameter is used to update the puzzleUI and puzzleCamera accordingly. Finally, the
+    /// game state will be transitioned to the Puzzle state, which will trigger the normal game
+    /// state change logic.
+    /// </summary>
+    /// <param name="puzzleInfo">Information about the puzzle being switched to.</param>
+    private void UpdatePuzzleInformation(PuzzleInformation puzzleInfo)
+    {
+        puzzleCamera = puzzleInfo.camera;
+        cameras.Add(puzzleCamera);
+        puzzleUI = puzzleInfo.canvas;
+        uiCanvases.Add(puzzleUI);
+        
+        // Notify GameStateManager that we've detected a puzzle switch.
+        puzzleSwitchDetected.Invoke();
     }
 
     /// <summary>
@@ -143,7 +166,7 @@ public class ViewManager : MonoBehaviour
                 else
                 {
                     canvas.SetActive(false);
-                    Debug.Log($"ViewManager.cs >> Disabled UI Canvas: {canvas.name}");
+                    //Debug.Log($"ViewManager.cs >> Disabled UI Canvas: {canvas.name}");
                 }
             }
         }
@@ -171,7 +194,7 @@ public class ViewManager : MonoBehaviour
                 else
                 {
                     cam.enabled = false;
-                    Debug.Log($"ViewManager.cs >> Disabled camera: {cam.name}");
+                    //Debug.Log($"ViewManager.cs >> Disabled camera: {cam.name}");
                 }
             }
         }

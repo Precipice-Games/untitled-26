@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityCommunity.UnitySingleton;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,11 +9,11 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoSingleton<Player>
 {
-    [Header("Unity Events")]
     /// <summary>
     /// Triggered by pressing 'ESC' to pause/unpause the game.
     /// Listeners should check to make sure the game is in a pausable state.
     /// </summary>
+    [Header("Unity Events")]
     public UnityEvent Pause;
     
     /// <summary>
@@ -20,6 +21,8 @@ public class Player : MonoSingleton<Player>
     /// Listeners should check the game is in exploration state.
     /// </summary>
     public UnityEvent Map;
+
+    public Rigidbody rb;
     
     public PlayerControls _playerControls { get; private set; }
     
@@ -32,25 +35,31 @@ public class Player : MonoSingleton<Player>
             _playerInput = GetComponent<PlayerInput>();
         }
         
+        rb = GetComponent<Rigidbody>();
         _playerControls = new PlayerControls();
         
     }
 
+    // Subscribe to events
     void OnEnable()
     {
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
-        
+        PhysicsManager.kinematicsUpdated += SwitchKinematics;
+
+
         _playerControls.UI.Enable();
         _playerControls.Player.Enable();
         _playerControls.UI.Pause.performed += OnPause;
         _playerControls.UI.Map.performed += OnMap;
     }
 
+    // Unsubscribe from events
     void OnDisable()
     {
         InputManager.inputMapSwitched -= SwitchActionMap;
         InputManager.cursorChanged -= SwitchCursorFunctionality;
+        PhysicsManager.kinematicsUpdated -= SwitchKinematics;
         
         _playerControls.UI.Disable();
         _playerControls.Player.Disable();
@@ -98,5 +107,15 @@ public class Player : MonoSingleton<Player>
         Cursor.visible = visible;
         
         Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
+    }
+    
+    /// <summary>
+    /// Sets the player's Rigidbody to kinematic or non-kinematic based on the current game state.
+    /// </summary>
+    /// <param name="isKinematic"></param>
+    private void SwitchKinematics(bool isKinematic)
+    {
+        rb.isKinematic = isKinematic;
+        Debug.Log("Player.cs >> Kinematics were set to " + isKinematic);
     }
 }

@@ -10,6 +10,7 @@ public class GridManager : MonoBehaviour
 
     private SelectableCube[,] grid;
 
+
     void Awake()
     {
         Instance = this;
