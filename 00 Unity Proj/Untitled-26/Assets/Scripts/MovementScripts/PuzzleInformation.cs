@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 // This script is used to grab information about the current puzzle.
@@ -7,15 +8,13 @@ using UnityEngine;
 
 public class PuzzleInformation : MonoBehaviour
 {
+    [Title("Puzzle Information")]
+    [InfoBox("Attach the data of the puzzle that this terminal corresponds to.")]
+    public Camera camera;
+    public GameObject canvas;
     public GameObject startTile;
     public GameObject endTile;
-    
+    public GameObject gridManager;
+
     // TODO: Perhaps put the Mana and movement information here as well?
-    
-    // Method just used to set the scene defaults.
-    // All other state changes occur in TransitionToState().
-    private void SetPuzzleDefaults(GameStateManager.GameState defaultState)
-    {
-        
-    }
 }

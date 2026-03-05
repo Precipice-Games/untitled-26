@@ -8,11 +8,11 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoSingleton<Player>
 {
-    [Header("Unity Events")]
     /// <summary>
     /// Triggered by pressing 'ESC' to pause/unpause the game.
     /// Listeners should check to make sure the game is in a pausable state.
     /// </summary>
+    [Header("Unity Events")]
     public UnityEvent Pause;
     
     /// <summary>
