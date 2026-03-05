@@ -5,9 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- Put any unreleased features under here.
+* Put any unreleased features under here.
+
+## [v0.4.0-prototype.1] - 2026-03-05
+
+### Added
+* Added fixed Player movement to navigate across tiles in puzzle mode.
+* Created the PhysicsManager that integrates with the current GameStateManager system.
+* Added kinematics handling for the Player character.
+* Created the first puzzle prefab on the Ice Island.
+* Created PuzzleInformation.cs script to harbor important information about each puzzle prefab.
+* Added settings menu section to the pause menu UI.
+* Added Figma UI volume sliders in the settings menu (WIP).
+
+### Changed
+* Finalized the Music Manager system.
+* Enhanced InteractablePillar.cs to package and send PuzzleInformation data during event firing.
+* Updated puzzle trigger event handling in the GameStateManager system.
+* Changed puzzle UI and camera handling to be dynamically assigned.
+* Changed the default scene to MainMenu.unity.
 
 ## [v0.3.0-prototype.1] - 2026-03-02
+
 ### Added
 * Added the first half of the greyboxed ice island.
 * Added a functional game state manager to the ice island.
@@ -61,7 +80,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 * Music Manager system with looping tracks.
 
 ### Changed
-
 * TileMoveExperiment.unity upgraded from one tile to a full layout with different tiles to select and move.
      * New grid system prevents tiles from colliding with one another.
 * SplashPage.unity has become the new landing page for early releases.
@@ -71,11 +89,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [v0.1.0-prototype.1] - 2026-02-15
 
 ### Added
-
-- Four prototype scenes to playtest.
-- Main Menu splash page to navigate between scenes in the current stage of the project.
-- 4-directional movement for puzzle prototype system.
-- Basic Player movement and interaction system with raycasting in a 3D environment.
-- YarnSpinner Dialogue system with successful voice over response.
-- Prototyped UI SFX system.
-- Created Game State Manager script (not yet implemented).
+* Four prototype scenes to playtest.
+* Main Menu splash page to navigate between scenes in the current stage of the project.
+* 4-directional movement for puzzle prototype system.
+* Basic Player movement and interaction system with raycasting in a 3D environment.
+* YarnSpinner Dialogue system with successful voice over response.
+* Prototyped UI SFX system.
+* Created Game State Manager script (not yet implemented).
