@@ -30,8 +30,8 @@ public class PlayerFixedMovement : MonoBehaviour
     public int gridZ;
 
     // The Player's X and Z coordinates on the grid.
-    private int playerGridX;
-    private int playerGridZ;
+    [SerializeField] private int playerGridX;
+    [SerializeField] private int playerGridZ;
     
     // The new coordinates as a Vector3
     Vector3 newCoords;
@@ -172,6 +172,10 @@ public class PlayerFixedMovement : MonoBehaviour
         newCoords = gridManager.GridToWorld(gridX, gridZ);
         newPosition = new Vector3(newCoords.x, transform.position.y, newCoords.z);
         transform.position = newPosition;
+
+        playerGridX = gridX;
+        playerGridZ = gridZ;
+
         Debug.Log($"Player moved to: {gridX},{gridZ}");
     }
 }
