@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityCommunity.UnitySingleton;
 using UnityEngine;
 using UnityEngine.Events;
@@ -40,7 +41,9 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
-        
+        GameStateManager.transitionedToNewState += InPuzzle;
+
+
         _playerControls.UI.Enable();
         _playerControls.Player.Enable();
         _playerControls.UI.Pause.performed += OnPause;
@@ -99,4 +102,25 @@ public class Player : MonoSingleton<Player>
         
         Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
     }
+
+    private void InPuzzle(GameStateManager.GameState gameState)
+    {
+        Debug.Log(gameState.ToString());
+        Debug.Log(gameState == GameStateManager.GameState.Puzzle);
+
+        if (gameState == GameStateManager.GameState.Puzzle)
+        {
+
+            GetComponent<Rigidbody>().isKinematic = true;
+
+        }
+        else
+        {
+
+            GetComponent<Rigidbody>().isKinematic = false;
+
+        }
+
+    }
+
 }

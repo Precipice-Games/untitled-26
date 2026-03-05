@@ -14,7 +14,8 @@ public class InputManager : MonoBehaviour
     // to the current input map as needed.
     public static event Action<string> inputMapSwitched;
     public static event Action<CursorLockMode, bool> cursorChanged;
-    
+
+
     private void Awake()
     {
         // Initialize the PlayerInput component and
