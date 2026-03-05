@@ -21,6 +21,8 @@ public class Player : MonoSingleton<Player>
     /// Listeners should check the game is in exploration state.
     /// </summary>
     public UnityEvent Map;
+
+    public Rigidbody rb;
     
     public PlayerControls _playerControls { get; private set; }
     
@@ -33,15 +35,17 @@ public class Player : MonoSingleton<Player>
             _playerInput = GetComponent<PlayerInput>();
         }
         
+        rb = GetComponent<Rigidbody>();
         _playerControls = new PlayerControls();
         
     }
 
+    // Subscribe to events
     void OnEnable()
     {
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
-        GameStateManager.transitionedToNewState += InPuzzle;
+        PhysicsManager.kinematicsUpdated += SwitchKinematics;
 
 
         _playerControls.UI.Enable();
@@ -50,10 +54,12 @@ public class Player : MonoSingleton<Player>
         _playerControls.UI.Map.performed += OnMap;
     }
 
+    // Unsubscribe from events
     void OnDisable()
     {
         InputManager.inputMapSwitched -= SwitchActionMap;
         InputManager.cursorChanged -= SwitchCursorFunctionality;
+        PhysicsManager.kinematicsUpdated -= SwitchKinematics;
         
         _playerControls.UI.Disable();
         _playerControls.Player.Disable();
@@ -102,25 +108,14 @@ public class Player : MonoSingleton<Player>
         
         Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
     }
-
-    private void InPuzzle(GameStateManager.GameState gameState)
+    
+    /// <summary>
+    /// Sets the player's Rigidbody to kinematic or non-kinematic based on the current game state.
+    /// </summary>
+    /// <param name="isKinematic"></param>
+    private void SwitchKinematics(bool isKinematic)
     {
-        Debug.Log(gameState.ToString());
-        Debug.Log(gameState == GameStateManager.GameState.Puzzle);
-
-        if (gameState == GameStateManager.GameState.Puzzle)
-        {
-
-            GetComponent<Rigidbody>().isKinematic = true;
-
-        }
-        else
-        {
-
-            GetComponent<Rigidbody>().isKinematic = false;
-
-        }
-
+        rb.isKinematic = isKinematic;
+        Debug.Log("Player.cs >> Kinematics were set to " + isKinematic);
     }
-
 }
