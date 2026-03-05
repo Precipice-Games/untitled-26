@@ -6,6 +6,12 @@ using System.Collections;
 using UnityCommunity.UnitySingleton;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This is the GameStateManager class, which acts as an overarching state handler
+/// for the game. It fires of several events to different listeners to ensure successful
+/// state changes. It is also subscribed to other events that may change the game state.
+/// </summary>
+
 public class GameStateManager : MonoSingleton<GameStateManager>
 {
     
@@ -14,9 +20,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     [InfoBox("Choose the default game state that this scene will load in.")]
     public GameState gameState;
     // Note: This variable is not static because each instance of the component
-    // needs to maintain its own copy of the current game state for reference. Also,
-    // the Enum will clearly change when the static event is invoked, so watch out
-    // for the Inspector.
+    // needs to maintain its own copy of the current game state for reference.
 
     /// <summary>
     /// The set of possible game states.
@@ -47,8 +51,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// <remarks> 
     /// This variable also accounts for if the game can be unpaused, which is only true for the 'Paused' game state.
     /// </remarks>
-    //[SerializeField] private bool pausable;
-    
     public static bool pausable { get; set; }
     
     /// <summary>
@@ -101,6 +103,8 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SetSceneDefaults(gameState);
     }
 
+    
+    // TODO: Clean up this old method from early development of the GameStateManager.
     /// <summary>
     /// A helper method to transition the game to a new state. 
     /// It includes a small delay to simulate the time it may take to transition between states.
@@ -190,8 +194,9 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     }
 
     /// <summary>
-    /// This function listens for the Pause event (e.g., player pressing 'ESC') and checks current state of the game to pause/resume.
-    /// When switching from paused to gameplay, change currentState to the previous state (before the game was paused).
+    /// This function listens for the Pause event (e.g., player pressing 'T' or 'ESC')
+    /// and checks current state of the game to pause/resume. When switching from paused
+    /// to gameplay, change CurrentGameState to the state we were in prior to pausing.
     /// </summary>
     public void onPause()
     {
@@ -227,20 +232,17 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         }
     }
     
-
+    /// <summary>
+    /// This switches the Player into Puzzle Mode upon the triggering of puzzleSwitchDetected, a UnityEvent defined in ViewManager.cs.
+    /// </summary>
     public void onPuzzleTrigger()
     {
-        if (CurrentGameState == GameState.Puzzle)
-        {
-            // As of now this should only return to Exploration state. However, this accounts for if future dialogue is triggered in a puzzle state.
-            TransitionToState(prevState);
-        }
-        else
-        {
-            TransitionToState(GameState.Puzzle);
-        }
+        TransitionToState(GameState.Puzzle);
     }
 
+    /// <summary>
+    /// Pretty self-explantory. Quits the application.
+    /// </summary>
     public void ExitGame()
     {
         Debug.Log("Quit Game");

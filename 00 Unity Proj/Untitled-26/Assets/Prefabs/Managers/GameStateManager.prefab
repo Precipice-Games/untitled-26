@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3119200679773075960}
-  - component: {fileID: 1963081915272111325}
   - component: {fileID: 497008879434423276}
+  - component: {fileID: 1963081915272111325}
+  - component: {fileID: 2745341397233381068}
   - component: {fileID: 2708005216323003206}
   m_Layer: 0
   m_Name: GameStateManager
@@ -35,6 +36,19 @@ Transform:
   - {fileID: 3705698002293044328}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &497008879434423276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680628483434389340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a924c33e78973c2418c9b442bde4844d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
+  gameState: 0
 --- !u!114 &1963081915272111325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,8 +71,22 @@ MonoBehaviour:
   puzzleCamera: {fileID: 0}
   dialogueCamera: {fileID: 0}
   menuCamera: {fileID: 0}
-  dialogueCamera: {fileID: 0}
---- !u!114 &497008879434423276
+  puzzleSwitchDetected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 497008879434423276}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
+        m_MethodName: onPuzzleTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2745341397233381068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,10 +95,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6680628483434389340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a924c33e78973c2418c9b442bde4844d, type: 3}
+  m_Script: {fileID: 11500000, guid: ab591ea95cb04d53a52159b24f45f5b1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
-  gameState: 0
+  m_EditorClassIdentifier: Assembly-CSharp::PhysicsManager
 --- !u!114 &2708005216323003206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,6 +1203,14 @@ PrefabInstance:
     - target: {fileID: -2300862386966289293, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2277077355439045416, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: -2277077355439045416, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
       objectReference: {fileID: 0}
     - target: {fileID: -2250819352619576199, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_Value
