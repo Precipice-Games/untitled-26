@@ -868,6 +868,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8794883448765901352, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794883448765901352, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825419243212114563, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825419243212114563, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1022,6 +1038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33dd1f1e75571524485c0245c2d4a323, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractablePillar
+  PuzzleTriggered:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1563338506
 BoxCollider:
   m_ObjectHideFlags: 0
