@@ -10826,6 +10826,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082933729}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1086186576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1712450131070757306, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 8739545680216347640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1105707967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11114,6 +11119,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8014860526984270938, guid: 52fcc2c214e11dd46bc310e39123907a, type: 3}
   m_PrefabInstance: {fileID: 1111788066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1123056923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6919531168105839388, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 8739545680216347640}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1127410678
 PrefabInstance:
@@ -16296,11 +16306,11 @@ PrefabInstance:
     - target: {fileID: 2372784822785866232, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
       propertyPath: endTile
       value: 
-      objectReference: {fileID: 8739545680216347641}
+      objectReference: {fileID: 1086186576}
     - target: {fileID: 2372784822785866232, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
       propertyPath: startTile
       value: 
-      objectReference: {fileID: 8739545680216347642}
+      objectReference: {fileID: 1123056923}
     - target: {fileID: 2372784822785866232, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
       propertyPath: gridManager
       value: 
@@ -20354,25 +20364,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6968957557391545249, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7199852587322879966, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_Name
       value: Puzzle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315429475126077736, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
---- !u!1 &8739545680216347641 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6968957557391545249, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
-  m_PrefabInstance: {fileID: 8739545680216347640}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8739545680216347642 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7315429475126077736, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
-  m_PrefabInstance: {fileID: 8739545680216347640}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
