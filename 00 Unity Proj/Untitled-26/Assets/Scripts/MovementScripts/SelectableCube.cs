@@ -32,36 +32,43 @@ public class SelectableCube : MonoBehaviour
         Debug.Log(name + " DESELECTED");
     }
 
-    public void TryMove(int xDir, int zDir)
+public void TryMove(int xDir, int zDir)
+{
+    int newX = gridX + xDir;
+    int newZ = gridZ + zDir;
+
+    Debug.Log(name + " trying move to: " + newX + "," + newZ);
+
+    if (!GridManager.Instance.IsInsideGrid(newX, newZ))
     {
-        int newX = gridX + xDir;
-        int newZ = gridZ + zDir;
-
-        Debug.Log(name + " trying move to: " + newX + "," + newZ);
-
-        if (!GridManager.Instance.IsInsideGrid(newX, newZ))
-        {
-            Debug.Log("BLOCKED: Outside grid");
-            return;
-        }
-
-        if (!GridManager.Instance.IsCellEmpty(newX, newZ))
-        {
-            Debug.Log("BLOCKED: Cell occupied");
-            return;
-        }
-
-        Debug.Log("Move allowed");
-
-        GridManager.Instance.ClearCell(gridX, gridZ);
-
-        gridX = newX;
-        gridZ = newZ;
-
-        GridManager.Instance.PlaceTile(this, gridX, gridZ);
-
-        transform.position = GridManager.Instance.GridToWorld(gridX, gridZ);
-
-        Debug.Log(name + " moved to: " + gridX + "," + gridZ);
+        Debug.Log("BLOCKED: Outside grid – no mana spent");
+        return;
     }
+
+    if (!GridManager.Instance.IsCellEmpty(newX, newZ))
+    {
+        Debug.Log("BLOCKED: Cell occupied – no mana spent");
+        return;
+    }
+
+    // Valid move: deduct mana
+    if (!ResourceManager.Instance.UseMana(1))
+    {
+        Debug.Log("Not enough mana to move");
+        return;
+    }
+
+    Debug.Log("Move allowed – mana deducted");
+
+    GridManager.Instance.ClearCell(gridX, gridZ);
+
+    gridX = newX;
+    gridZ = newZ;
+
+    GridManager.Instance.PlaceTile(this, gridX, gridZ);
+
+    transform.position = GridManager.Instance.GridToWorld(gridX, gridZ);
+
+    Debug.Log(name + " moved to: " + gridX + "," + gridZ);
+}
 }

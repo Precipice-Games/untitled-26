@@ -10,11 +10,9 @@ public class CubeSelector : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
                 SelectableCube cube = hit.collider.GetComponent<SelectableCube>();
-
                 if (cube != null)
                 {
                     if (selectedCube != null)
@@ -30,24 +28,24 @@ public class CubeSelector : MonoBehaviour
     public void MoveSelectedRight()
     {
         if (selectedCube != null)
-            selectedCube.TryMove(1, 0);
+            selectedCube.TryMove(1, 0); // moves right
     }
 
     public void MoveSelectedLeft()
     {
         if (selectedCube != null)
-            selectedCube.TryMove(-1, 0);
+            selectedCube.TryMove(-1, 0); // moves left
     }
 
     public void MoveSelectedForward()
     {
         if (selectedCube != null)
-            selectedCube.TryMove(0, 1);
+            selectedCube.TryMove(0, 1); // moves forward
     }
 
     public void MoveSelectedBack()
     {
         if (selectedCube != null)
-            selectedCube.TryMove(0, -1);
+            selectedCube.TryMove(0, -1); // moves back
     }
 }
