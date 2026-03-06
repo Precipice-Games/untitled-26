@@ -18,14 +18,6 @@ public class InteractablePillar : MonoBehaviour, IInteractable
     [InfoBox("Attach the data of the puzzle that this terminal corresponds to.")]
     public PuzzleInformation puzzleInfo;
 
-    // private void Awake()
-    // {
-    //     if (puzzleInfo != null)
-    //     {
-    //         puzzleInfo = GetComponent<PuzzleInformation>();
-    //     }
-    // }
-
     public void Interaction()
     {
         Debug.Log("Interacting");

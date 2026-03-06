@@ -291,6 +291,7 @@ MonoBehaviour:
   Map:
     m_PersistentCalls:
       m_Calls: []
+  rb: {fileID: 0}
   _playerInput: {fileID: 6922169669516928053}
 --- !u!114 &1173698383739407512
 MonoBehaviour:
@@ -317,6 +318,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf41f4705f0140eb94391cf0bb44adfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFixedMovement
+  gridX: 0
+  gridZ: 0
+  playerGridX: 0
+  playerGridZ: 0
+  puzzleCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6739596773503058293
 MonoBehaviour:
   m_ObjectHideFlags: 0

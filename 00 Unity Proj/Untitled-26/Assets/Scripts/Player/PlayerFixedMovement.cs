@@ -47,7 +47,7 @@ public class PlayerFixedMovement : MonoBehaviour
     public static event Action<int, int> playerMoved;
     
     // Event fired when Player reaches the end tile of the puzzle
-    public UnityEvent puzzleSwitchDetected;
+    public UnityEvent puzzleCompleted;
 
     private void Start()
     {
@@ -203,13 +203,13 @@ public class PlayerFixedMovement : MonoBehaviour
     /// has been completed and the appropriate events can be triggered.
     /// </summary>
     /// <returns></returns>
-    private void IsPlayerOnEndTile(int playerX, int playerZ)
-    {
-        // Check if the Player's coordinates match the end tile's coordinates
-        if (endTileX == playerGridX && endTileZ == playerGridZ)
-        {
-            Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
-            
-        }
-    }
+    // private bool IsPlayerOnEndTile(int playerX, int playerZ)
+    // {
+    //     // Check if the Player's coordinates match the end tile's coordinates
+    //     if (endTileX == playerGridX && endTileZ == playerGridZ)
+    //     {
+    //         Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end etile at [{endTileX}, {endTileZ}].");
+    //         puzzleCompleted.Invoke();
+    //     }
+    // }
 }

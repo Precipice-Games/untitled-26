@@ -134,7 +134,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         Debug.Log("GameStateManager.cs >> Set the CurrentGameState to the defaultState " + CurrentGameState);
         Debug.Log("GameStateManger.cs >> Calling on HandlePauseValues()...");
         HandlePauseValues(CurrentGameState);
-        //transitionedToNewState?.Invoke(CurrentGameState);
     }
 
     /// <summary>
@@ -221,7 +220,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// </summary>
     public void onDialogueTrigger()
     {
-        if(CurrentGameState == GameState.Dialogue)
+        if (CurrentGameState == GameState.Dialogue)
         {
             // As of now this should only return to Exploration state. However, this accounts for if future dialogue is triggered in a puzzle state.
             TransitionToState(prevState);
@@ -237,7 +236,15 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// </summary>
     public void onPuzzleTrigger()
     {
-        TransitionToState(GameState.Puzzle);
+        if (CurrentGameState == GameState.Puzzle)
+        {
+            TransitionToState(prevState);
+        }
+        else
+        {
+            TransitionToState(GameState.Puzzle);
+        }
+        
     }
 
     /// <summary>

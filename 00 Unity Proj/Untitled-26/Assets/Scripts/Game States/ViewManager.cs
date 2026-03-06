@@ -194,7 +194,6 @@ public class ViewManager : MonoBehaviour
                 else
                 {
                     cam.enabled = false;
-                    //Debug.Log($"ViewManager.cs >> Disabled camera: {cam.name}");
                 }
             }
         }
