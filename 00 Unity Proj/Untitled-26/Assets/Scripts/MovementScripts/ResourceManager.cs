@@ -11,7 +11,7 @@ using TMPro;
 public class ResourceManager : MonoBehaviour
 {
     public static ResourceManager Instance;
-
+    
     public int startingMana = 5;
     private int currentMana;
     
