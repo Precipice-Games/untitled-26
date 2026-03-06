@@ -2,6 +2,7 @@
 using UnityEditor.Build;
 #endif
 
+using System;
 using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -39,6 +40,9 @@ public class PlayerFixedMovement : MonoBehaviour
 
    // Player's Rigidbody
     Rigidbody rb;
+    
+    // Static event to notify subscribers of the Player's movement
+    public static event Action<int, int> playerMoved;
 
     private void Start()
     {
@@ -198,5 +202,6 @@ public class PlayerFixedMovement : MonoBehaviour
         playerGridZ = gridZ;
 
         Debug.Log($"Player moved to: {gridX},{gridZ}");
+        playerMoved.Invoke(playerGridX, playerGridZ);
     }
 }
