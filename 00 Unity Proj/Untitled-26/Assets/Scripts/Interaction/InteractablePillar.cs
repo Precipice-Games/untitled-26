@@ -14,17 +14,17 @@ public class InteractablePillar : MonoBehaviour, IInteractable
     // Static event to notify subscribers of game state changes
     public static event Action<PuzzleInformation> puzzleTriggered;
     
-    // This contains the information about the puzzle that
-    // this terminal is associated with.
+    [Title("Puzzle Information")]
+    [InfoBox("Attach the data of the puzzle that this terminal corresponds to.")]
     public PuzzleInformation puzzleInfo;
 
-    private void Awake()
-    {
-        if (puzzleInfo != null)
-        {
-            puzzleInfo = GetComponent<PuzzleInformation>();
-        }
-    }
+    // private void Awake()
+    // {
+    //     if (puzzleInfo != null)
+    //     {
+    //         puzzleInfo = GetComponent<PuzzleInformation>();
+    //     }
+    // }
 
     public void Interaction()
     {

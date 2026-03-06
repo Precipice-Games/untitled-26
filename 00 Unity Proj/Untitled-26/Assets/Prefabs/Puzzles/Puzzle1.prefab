@@ -3700,6 +3700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3397337548393501967}
+  - component: {fileID: 9191018659038673785}
   m_Layer: 0
   m_Name: Puzzle1
   m_TagString: Untagged
@@ -3727,6 +3728,23 @@ Transform:
   - {fileID: 3610915418619955191}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9191018659038673785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7199852587322879966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef105c14e09d4de8b6ca8006eee5c13c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleInformation
+  camera: {fileID: 1812968205726015013}
+  canvas: {fileID: 4526878413659049423}
+  startTile: {fileID: 6919531168105839388}
+  endTile: {fileID: 1712450131070757306}
+  gridManager: {fileID: 4785314922009797101}
 --- !u!1 &7264184287714543087
 GameObject:
   m_ObjectHideFlags: 0

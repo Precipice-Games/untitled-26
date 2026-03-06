@@ -16,7 +16,6 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlayerFixedMovement : MonoBehaviour
 {
-
     // ==== Variables =====
     private Vector3 playerCurrentPosition; // Current Vector3 position
     private Vector3 startPosition;
@@ -53,22 +52,6 @@ public class PlayerFixedMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
-        // Set the player's starting position to the position of the starting tile.
-        if (startTile != null)
-        {
-            startPosition = startTile.transform.position;
-            playerCurrentPosition = startPosition;
-            transform.position = playerCurrentPosition;
-            
-            // Get the grid coordinates of the end tile
-            endTileX = endTile.GetComponent<SelectableCube>().gridX;
-            endTileZ = endTile.GetComponent<SelectableCube>().gridZ;
-        }
-        else
-        {
-            Debug.LogError("PlayerFixedMovement.cs >> Starting tile is not assigned.");
-        }
     }
     
     // Subscribe to events
