@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/// <summary>
+/// This script stores data regarding the resources provided during each puzzle. Specifically,
+/// it keeps track of Mana points and available movement cards for the Player to use.
+/// </summary>
+
 public class ResourceManager : MonoBehaviour
 {
     public static ResourceManager Instance;
@@ -15,19 +20,19 @@ public class ResourceManager : MonoBehaviour
     void Start()
     {
         currentMana = startingMana;
-        Debug.Log("Starting Mana: " + currentMana);
+        Debug.Log("ResourceManager.cs >> Starting Mana: " + currentMana);
     }
 
     public bool UseMana(int amount)
     {
         if (currentMana < amount)
         {
-            Debug.Log("No mana to move");
+            Debug.Log("ResourceManager.cs >> No mana to move.");
             return false;
         }
 
         currentMana -= amount;
-        Debug.Log("Mana after move: " + currentMana);
+        Debug.Log("ResourceManager.cs >> Mana remaining after move: " + currentMana);
         return true;
     }
 
