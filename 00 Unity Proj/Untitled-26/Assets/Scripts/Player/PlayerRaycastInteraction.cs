@@ -15,6 +15,9 @@ public class PlayerRaycastInteraction : MonoBehaviour
     public GameObject activeInteractable; //Stores overlapping interactable object
     public bool canInteract = true;
 
+    //    === UI ===
+    public GameObject interactionUI;
+
     //    ==== Timer ====
     public float activeTimer = 5.0f;
     public float maxTime = 5.0f;
@@ -67,6 +70,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
             {
 
                 activeInteractable = raycastHit.collider.gameObject;
+                interactionUI.SetActive(true);
 
             }
 
@@ -76,6 +80,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
 
             Debug.DrawRay(origin, direction * rayLength, Color.red);
             activeInteractable = null;
+            interactionUI.SetActive(false);
 
         }
 
@@ -97,6 +102,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
             activeInteractable.GetComponent<IInteractable>().Interaction();
             canInteract = false;
             activeInteractable = null;
+            interactionUI.SetActive(false);
 
         }
 
