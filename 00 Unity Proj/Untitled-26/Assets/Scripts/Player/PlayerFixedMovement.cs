@@ -5,6 +5,7 @@ using UnityEditor.Build;
 using System;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Vector3 = UnityEngine.Vector3;
 
@@ -33,6 +34,8 @@ public class PlayerFixedMovement : MonoBehaviour
     // The Player's X and Z coordinates on the grid.
     [SerializeField] private int playerGridX;
     [SerializeField] private int playerGridZ;
+    private int endTileX;
+    private int endTileZ;
     
     // The new coordinates as a Vector3
     Vector3 newCoords;
@@ -43,6 +46,9 @@ public class PlayerFixedMovement : MonoBehaviour
     
     // Static event to notify subscribers of the Player's movement
     public static event Action<int, int> playerMoved;
+    
+    // Event fired when Player reaches the end tile of the puzzle
+    public UnityEvent puzzleSwitchDetected;
 
     private void Start()
     {
@@ -54,6 +60,10 @@ public class PlayerFixedMovement : MonoBehaviour
             startPosition = startTile.transform.position;
             playerCurrentPosition = startPosition;
             transform.position = playerCurrentPosition;
+            
+            // Get the grid coordinates of the end tile
+            endTileX = endTile.GetComponent<SelectableCube>().gridX;
+            endTileZ = endTile.GetComponent<SelectableCube>().gridZ;
         }
         else
         {
@@ -203,5 +213,20 @@ public class PlayerFixedMovement : MonoBehaviour
 
         Debug.Log($"Player moved to: {gridX},{gridZ}");
         playerMoved.Invoke(playerGridX, playerGridZ);
+    }
+    
+    /// <summary>
+    /// Used to check if the Player has reached the end tile. If so, the puzzle
+    /// has been completed and the appropriate events can be triggered.
+    /// </summary>
+    /// <returns></returns>
+    private void IsPlayerOnEndTile(int playerX, int playerZ)
+    {
+        // Check if the Player's coordinates match the end tile's coordinates
+        if (endTileX == playerGridX && endTileZ == playerGridZ)
+        {
+            Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
+            
+        }
     }
 }
