@@ -62,11 +62,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     
     // Static event to notify subscribers of game state changes
     public static event Action<GameState> transitionedToNewState;
-
-    private new void Awake()
-    {
-        
-    }
     
     private void Start()
     {
@@ -239,12 +234,23 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         if (CurrentGameState == GameState.Puzzle)
         {
             TransitionToState(prevState);
+            Debug.Log("CurrentGameState: " + CurrentGameState);
+            Debug.Log("prevState: " + prevState);
         }
         else
         {
             TransitionToState(GameState.Puzzle);
         }
-        
+    }
+
+    // FIXME: This is currently being triggered by the Player reaching
+    // the end tile of a puzzle, however, we should really be using the
+    // onPuzzleTrigger() method above. For whatever reason, the prevState
+    // variable isn't being updated correctly, causing us to not switch
+    // out of Puzzle Mode.
+    public void onPuzzleCompleted()
+    {
+        TransitionToState(GameState.Exploration);
     }
 
     /// <summary>

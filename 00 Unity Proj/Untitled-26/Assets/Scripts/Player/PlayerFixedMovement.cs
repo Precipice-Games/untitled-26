@@ -33,6 +33,10 @@ public class PlayerFixedMovement : MonoBehaviour
     // The Player's X and Z coordinates on the grid.
     [SerializeField] private int playerGridX;
     [SerializeField] private int playerGridZ;
+    
+    // The starting and ending tile's coordinates
+    private int startTileX;
+    private int startTileZ;
     private int endTileX;
     private int endTileZ;
     
@@ -78,8 +82,16 @@ public class PlayerFixedMovement : MonoBehaviour
         startTile = puzzleInfo.startTile;
         endTile = puzzleInfo.endTile;
         
+        // Get the grid coordinates of the starting tile
+        startTileX = startTile.GetComponent<SelectableCube>().gridX;
+        startTileZ = startTile.GetComponent<SelectableCube>().gridZ;
+        
+        // Get the grid coordinates of the end tile
+        endTileX = endTile.GetComponent<SelectableCube>().gridX;
+        endTileZ = endTile.GetComponent<SelectableCube>().gridZ;
+        
         // After gathering data, move Player to the startTile
-        MoveToStartTile();
+        TryToMovePlayer(startTileX, startTileZ);
     }
     
     // The following methods listen to callback events from the Puzzle map from the
@@ -125,24 +137,6 @@ public class PlayerFixedMovement : MonoBehaviour
     
     // TODO: Clean this method up and make it more efficient. Would like to
     //       set the Player's position using grid coordinates if possible.
-    
-    /// <summary>
-    /// Move the Player to the starting tile of the puzzle.
-    /// </summary>
-    public void MoveToStartTile()
-    {
-        if (startTile != null)
-        {
-            Vector3 startCoords = startTile.transform.position;
-            Vector3 newPosition = new Vector3(startCoords.x, transform.position.y, startCoords.z);
-            transform.position = newPosition;
-            Debug.Log("PlayerFixedMovement.cs >> Moved player to starting tile.");
-        }
-        else
-        {
-            Debug.LogError("PlayerFixedMovement.cs >> Starting tile is not assigned.");
-        }
-    }
 
     /// <summary>
     /// Attempts to move the Player in the specified direction on the puzzle grid.
@@ -187,15 +181,21 @@ public class PlayerFixedMovement : MonoBehaviour
     public void SnapPlayerToTile(int coordX, int cordZ)
     {
         // Grab the X and Z coordinates in Vector3 from the GridManager
-        newCoords = gridManager.GridToWorld(gridX, gridZ);
+        newCoords = gridManager.GridToWorld(coordX, cordZ);
         newPosition = new Vector3(newCoords.x, transform.position.y, newCoords.z);
         transform.position = newPosition;
 
-        playerGridX = gridX;
-        playerGridZ = gridZ;
+        playerGridX = coordX;
+        playerGridZ = cordZ;
 
-        Debug.Log($"Player moved to: {gridX},{gridZ}");
-        playerMoved.Invoke(playerGridX, playerGridZ);
+        //Debug.Log($"Player moved to: {playerGridX},{playerGridZ}");
+        
+        Debug.Log("endTileX: " + endTileX);
+        Debug.Log("playerGridX: " + playerGridX);
+        Debug.Log("endTileZ: " + endTileZ);
+        Debug.Log("playerGridZ: " + playerGridZ);
+
+        IsPlayerOnEndTile();
     }
     
     /// <summary>
@@ -203,13 +203,15 @@ public class PlayerFixedMovement : MonoBehaviour
     /// has been completed and the appropriate events can be triggered.
     /// </summary>
     /// <returns></returns>
-    // private bool IsPlayerOnEndTile(int playerX, int playerZ)
-    // {
-    //     // Check if the Player's coordinates match the end tile's coordinates
-    //     if (endTileX == playerGridX && endTileZ == playerGridZ)
-    //     {
-    //         Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end etile at [{endTileX}, {endTileZ}].");
-    //         puzzleCompleted.Invoke();
-    //     }
-    // }
+    private void IsPlayerOnEndTile()
+    {
+        // Check if the Player's coordinates match the end tile's coordinates
+        if (endTileX == playerGridX && endTileZ == playerGridZ)
+        {
+            Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
+            puzzleCompleted.Invoke();
+        }
+        
+        playerMoved.Invoke(playerGridX, playerGridZ);
+    }
 }

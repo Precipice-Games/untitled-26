@@ -1167,33 +1167,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3103343398758482961, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-      propertyPath: Pause.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3103343398758482961, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-      propertyPath: Pause.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3103343398758482961, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: Pause.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1604888279}
-    - target: {fileID: 3103343398758482961, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-      propertyPath: Pause.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3103343398758482961, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-      propertyPath: Pause.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: onPause
-      objectReference: {fileID: 0}
-    - target: {fileID: 3103343398758482961, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-      propertyPath: Pause.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameStateManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3103343398758482961, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-      propertyPath: Pause.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4698028750357769851, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: m_AngularDamping
       value: 10
@@ -1242,6 +1218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1604888279}
     - target: {fileID: 6739596773503058293, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: rayLength
       value: 5
