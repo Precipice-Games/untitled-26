@@ -62,11 +62,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     
     // Static event to notify subscribers of game state changes
     public static event Action<GameState> transitionedToNewState;
-
-    private new void Awake()
-    {
-        
-    }
     
     private void Start()
     {
@@ -134,7 +129,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         Debug.Log("GameStateManager.cs >> Set the CurrentGameState to the defaultState " + CurrentGameState);
         Debug.Log("GameStateManger.cs >> Calling on HandlePauseValues()...");
         HandlePauseValues(CurrentGameState);
-        //transitionedToNewState?.Invoke(CurrentGameState);
     }
 
     /// <summary>
@@ -221,7 +215,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// </summary>
     public void onDialogueTrigger()
     {
-        if(CurrentGameState == GameState.Dialogue)
+        if (CurrentGameState == GameState.Dialogue)
         {
             // As of now this should only return to Exploration state. However, this accounts for if future dialogue is triggered in a puzzle state.
             TransitionToState(prevState);
@@ -237,7 +231,26 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// </summary>
     public void onPuzzleTrigger()
     {
-        TransitionToState(GameState.Puzzle);
+        if (CurrentGameState == GameState.Puzzle)
+        {
+            TransitionToState(prevState);
+            Debug.Log("CurrentGameState: " + CurrentGameState);
+            Debug.Log("prevState: " + prevState);
+        }
+        else
+        {
+            TransitionToState(GameState.Puzzle);
+        }
+    }
+
+    // FIXME: This is currently being triggered by the Player reaching
+    // the end tile of a puzzle, however, we should really be using the
+    // onPuzzleTrigger() method above. For whatever reason, the prevState
+    // variable isn't being updated correctly, causing us to not switch
+    // out of Puzzle Mode.
+    public void onPuzzleCompleted()
+    {
+        TransitionToState(GameState.Exploration);
     }
 
     /// <summary>
