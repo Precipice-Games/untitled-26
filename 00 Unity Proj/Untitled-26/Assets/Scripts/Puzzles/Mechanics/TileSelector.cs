@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CubeSelector : MonoBehaviour
+public class TileSelector : MonoBehaviour
 {
     /// <summary>
     /// Reference to the currently selected tile.
