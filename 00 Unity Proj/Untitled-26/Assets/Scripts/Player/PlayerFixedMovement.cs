@@ -2,6 +2,7 @@
 using UnityEditor.Build;
 #endif
 
+using System;
 using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -39,6 +40,9 @@ public class PlayerFixedMovement : MonoBehaviour
 
    // Player's Rigidbody
     Rigidbody rb;
+    
+    // Static event to notify subscribers of the Player's movement
+    public static event Action<int, int> playerMoved;
 
     private void Start()
     {
@@ -57,21 +61,31 @@ public class PlayerFixedMovement : MonoBehaviour
         }
     }
     
+    // Subscribe to events
     private void OnEnable()
     {
         InteractablePillar.puzzleTriggered += UpdatePuzzleInformation;
     }
     
+    // Unsubscribe from events
     private void OnDisable()
     {
         InteractablePillar.puzzleTriggered -= UpdatePuzzleInformation;
     }
     
+    /// <summary>
+    /// This method is called on the puzzleTriggered event. It receives data
+    /// regarding the current puzzle, such as the starting and ending tiles.
+    /// This data is packaged and sent from the InteractablePillar.cs script.
+    /// </summary>
+    /// <param name="puzzleInfo"></param>
     private void UpdatePuzzleInformation(PuzzleInformation puzzleInfo)
     {
         gridManager = puzzleInfo.gridManager.GetComponent<GridManager>();
         startTile = puzzleInfo.startTile;
         endTile = puzzleInfo.endTile;
+        
+        // After gathering data, move Player to the startTile
         MoveToStartTile();
     }
     
@@ -119,6 +133,9 @@ public class PlayerFixedMovement : MonoBehaviour
     // TODO: Clean this method up and make it more efficient. Would like to
     //       set the Player's position using grid coordinates if possible.
     
+    /// <summary>
+    /// Move the Player to the starting tile of the puzzle.
+    /// </summary>
     public void MoveToStartTile()
     {
         if (startTile != null)
@@ -134,6 +151,14 @@ public class PlayerFixedMovement : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Attempts to move the Player in the specified direction on the puzzle grid.
+    /// </summary>
+    /// <param name="xDir"></param>
+    /// <param name="zDir"></param>
+    // TODO: Should refactor this to handle different tile types and mechanics. Right now,
+    //       it's only checking for normal moves, but we will need additional code to handle
+    //       special tiles, like the ice mechanic.
     public void TryToMovePlayer(int xDir, int zDir)
     {
         // Calculate the new position on the grid
@@ -177,5 +202,6 @@ public class PlayerFixedMovement : MonoBehaviour
         playerGridZ = gridZ;
 
         Debug.Log($"Player moved to: {gridX},{gridZ}");
+        playerMoved.Invoke(playerGridX, playerGridZ);
     }
 }
