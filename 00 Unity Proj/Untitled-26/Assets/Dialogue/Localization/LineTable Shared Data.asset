@@ -690,6 +690,146 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 1920193879345987697
+  - m_Id: 3717705833689088
+    m_Key: line:7ca033d8
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269888
+  - m_Id: 3717705930158080
+    m_Key: line:ea9034af
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269889
+  - m_Id: 3717705930158081
+    m_Key: line:49055031
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269890
+  - m_Id: 3717705930158082
+    m_Key: line:df355746
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269891
+  - m_Id: 3717705930158083
+    m_Key: line:65645edf
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269892
+  - m_Id: 3717705930158084
+    m_Key: line:f35459a8
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269893
+  - m_Id: 3717705930158085
+    m_Key: line:6249e638
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269894
+  - m_Id: 3717705930158086
+    m_Key: line:f479e14f
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269895
+  - m_Id: 3717705930158087
+    m_Key: line:9fdda5b1
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269896
+  - m_Id: 3717705930158088
+    m_Key: line:09eda2c6
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269897
+  - m_Id: 3717705930158089
+    m_Key: line:b3bcab5f
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269898
+  - m_Id: 3717705930158090
+    m_Key: line:258cac28
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269899
+  - m_Id: 3717705930158091
+    m_Key: line:8619c8b6
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269900
+  - m_Id: 3717705930158092
+    m_Key: line:1029cfc1
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269901
+  - m_Id: 3717705930158093
+    m_Key: line:aa78c658
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269902
+  - m_Id: 3717705930158094
+    m_Key: line:3c48c12f
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269903
+  - m_Id: 3717705930158095
+    m_Key: line:ad557ebf
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269904
+  - m_Id: 3717705930158096
+    m_Key: line:3b6579c8
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269905
+  - m_Id: 3717705930158097
+    m_Key: line:deecbea8
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269906
+  - m_Id: 3717705930158098
+    m_Key: line:48dcb9df
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269907
+  - m_Id: 3717705930158099
+    m_Key: line:f28db046
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269908
+  - m_Id: 3717705930158100
+    m_Key: line:64bdb731
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269909
+  - m_Id: 3717705930158101
+    m_Key: line:c728d3af
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269910
+  - m_Id: 3717705930158102
+    m_Key: line:5118d4d8
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269911
+  - m_Id: 3717705930158103
+    m_Key: line:eb49dd41
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269912
+  - m_Id: 3717705930158104
+    m_Key: line:7d79da36
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269913
+  - m_Id: 3717705930158105
+    m_Key: line:ec6465a6
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269914
+  - m_Id: 3717705930158106
+    m_Key: line:7a5462d1
+    m_Metadata:
+      m_Items:
+      - rid: 166915939343269915
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -697,6 +837,146 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: 166915939343269888
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269889
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269890
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269891
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269892
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269893
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269894
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269895
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269896
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269897
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269898
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269899
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269900
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269901
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269902
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269903
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269904
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269905
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269906
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269907
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269908
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269909
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269910
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269911
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269912
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269913
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269914
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
+    - rid: 166915939343269915
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Penguin
+        tags: []
     - rid: 1920193879345987670
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
