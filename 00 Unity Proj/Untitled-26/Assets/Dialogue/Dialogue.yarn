@@ -73,6 +73,7 @@ position: -92,80
 <<declare $iceFinished = false>>
 // Has the player completed the ice island?
 //(Sky arrives on the ice island, and can walk up to Judith and press E to interact with her, which will bring up the dialogue.)
+<<if $iceFinished == false>>
 <<once>>
 Judith: … #line:02e9f33 
 
@@ -151,7 +152,7 @@ Judith: Hmph. You too. I guess. #line:053da1c
 Judith: Back already? I knew you were full of it. #line:0b97180 
 <<endonce>>
 //(After reactivating the crystal, if the player returns to Judith and talks to her)
-<<if $iceFinished>>
+<<else>>
 <<once>>
 Sky: I told you I could do it! #line:04367d8 
 
