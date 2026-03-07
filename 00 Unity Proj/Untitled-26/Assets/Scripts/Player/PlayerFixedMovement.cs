@@ -83,12 +83,12 @@ public class PlayerFixedMovement : MonoBehaviour
         endTile = puzzleInfo.endTile;
         
         // Get the grid coordinates of the starting tile
-        startTileX = startTile.GetComponent<SelectableCube>().gridX;
-        startTileZ = startTile.GetComponent<SelectableCube>().gridZ;
+        startTileX = startTile.GetComponent<SelectableTile>().gridX;
+        startTileZ = startTile.GetComponent<SelectableTile>().gridZ;
         
         // Get the grid coordinates of the end tile
-        endTileX = endTile.GetComponent<SelectableCube>().gridX;
-        endTileZ = endTile.GetComponent<SelectableCube>().gridZ;
+        endTileX = endTile.GetComponent<SelectableTile>().gridX;
+        endTileZ = endTile.GetComponent<SelectableTile>().gridZ;
         
         // After gathering data, move Player to the startTile
         TryToMovePlayer(startTileX, startTileZ);
