@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SelectableCube : MonoBehaviour
+public class SelectableTile : MonoBehaviour
 {
     public int gridX;
     public int gridZ;
@@ -42,12 +42,14 @@ public class SelectableCube : MonoBehaviour
 
         Debug.Log(name + " trying move to: " + newX + "," + newZ);
 
+        // Check that it's inside the grid
         if (!GridManager.Instance.IsInsideGrid(newX, newZ))
         {
             Debug.Log("BLOCKED: Outside grid – no mana spent");
             return;
         }
 
+        // Check for cell vacancy
         if (!GridManager.Instance.IsCellEmpty(newX, newZ))
         {
             Debug.Log("BLOCKED: Cell occupied – no mana spent");
