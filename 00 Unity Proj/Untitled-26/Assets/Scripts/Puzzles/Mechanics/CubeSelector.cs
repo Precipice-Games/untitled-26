@@ -6,7 +6,7 @@ public class CubeSelector : MonoBehaviour
     /// <summary>
     /// Reference to the currently selected tile.
     /// </summary>
-    private SelectableCube selectedCube;
+    private SelectableTile selectedTile;
     
     /// <summary>
     /// Reference to the Player's coordinates on the grid.
@@ -33,14 +33,14 @@ public class CubeSelector : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                SelectableCube cube = hit.collider.GetComponent<SelectableCube>();
-                if (cube != null)
+                SelectableTile tile = hit.collider.GetComponent<SelectableTile>();
+                if (tile != null)
                 {
-                    if (selectedCube != null)
-                        selectedCube.Deselect();
+                    if (selectedTile != null)
+                        selectedTile.Deselect();
 
-                    selectedCube = cube;
-                    selectedCube.Select();
+                    selectedTile = tile;
+                    selectedTile.Select();
                 }
             }
         }
@@ -65,7 +65,7 @@ public class CubeSelector : MonoBehaviour
     /// <returns></returns>
     private bool PlayerOnSelectedCube()
     {
-        if (selectedCube.gridX == playerGridX && selectedCube.gridZ == playerGridZ)
+        if (selectedTile.gridX == playerGridX && selectedTile.gridZ == playerGridZ)
         {
             Debug.Log("Cannot move tile: Player is on it.");
             
@@ -78,39 +78,39 @@ public class CubeSelector : MonoBehaviour
     {
         // Ensure that a tile is selected and that the Player is
         // not on the selected tile before trying to move it.
-        if (selectedCube == null) return;
+        if (selectedTile == null) return;
         if (PlayerOnSelectedCube()) return;
         
-        selectedCube.TryMove(1, 0); // moves right
+        selectedTile.TryMove(1, 0); // moves right
     }
 
     public void MoveSelectedLeft()
     {
         // Ensure that a tile is selected and that the Player is
         // not on the selected tile before trying to move it.
-        if (selectedCube == null) return;
+        if (selectedTile == null) return;
         if (PlayerOnSelectedCube()) return;
         
-        selectedCube.TryMove(-1, 0); // moves left
+        selectedTile.TryMove(-1, 0); // moves left
     }
 
     public void MoveSelectedForward()
     {
         // Ensure that a tile is selected and that the Player is
         // not on the selected tile before trying to move it.
-        if (selectedCube == null) return;
+        if (selectedTile == null) return;
         if (PlayerOnSelectedCube()) return;
         
-        selectedCube.TryMove(0, 1); // moves forward
+        selectedTile.TryMove(0, 1); // moves forward
     }
 
     public void MoveSelectedBack()
     {
         // Ensure that a tile is selected and that the Player is
         // not on the selected tile before trying to move it.
-        if (selectedCube == null) return;
+        if (selectedTile == null) return;
         if (PlayerOnSelectedCube()) return;
         
-        selectedCube.TryMove(0, -1); // moves back
+        selectedTile.TryMove(0, -1); // moves back
     }
 }

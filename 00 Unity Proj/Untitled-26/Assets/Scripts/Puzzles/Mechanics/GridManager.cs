@@ -8,13 +8,13 @@ public class GridManager : MonoBehaviour
     public int height = 3;
     public float tileSize = .25f;
 
-    private SelectableCube[,] grid;
+    private SelectableTile[,] grid;
 
 
     void Awake()
     {
         Instance = this;
-        grid = new SelectableCube[width, height];
+        grid = new SelectableTile[width, height];
     }
 
     public bool IsInsideGrid(int x, int z)
@@ -27,7 +27,7 @@ public class GridManager : MonoBehaviour
         return grid[x, z] == null;
     }
 
-    public void PlaceTile(SelectableCube tile, int x, int z)
+    public void PlaceTile(SelectableTile tile, int x, int z)
     {
         grid[x, z] = tile;
     }

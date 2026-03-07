@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SelectableCube : MonoBehaviour
+public class SelectableTile : MonoBehaviour
 {
     public int gridX;
     public int gridZ;

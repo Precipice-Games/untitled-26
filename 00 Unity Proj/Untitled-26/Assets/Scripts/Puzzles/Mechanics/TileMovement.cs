@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // TODO: Should probably switch the actual movement process into here.
-//       Right now, SelectableCube.cs is handling both raycasting and
+//       Right now, SelectableTile.cs is handling both raycasting and
 //       movement, so it would be good if we could break that down.
 
 public class MoveCube : MonoBehaviour
