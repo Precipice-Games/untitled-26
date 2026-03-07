@@ -23,6 +23,9 @@ namespace Yarn.Unity.Variables {
         }
 
         // Accessor for Bool $iceFinished
+        /// <summary>
+        /// Holds the completion state of the Ice Island
+        /// </summary>
         public bool IceFinished {
             get => this.GetValueOrDefault<bool>("$iceFinished");
             set => this.SetValue<bool>("$iceFinished", value);
