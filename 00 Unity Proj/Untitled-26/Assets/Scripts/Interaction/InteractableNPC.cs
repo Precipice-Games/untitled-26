@@ -20,12 +20,6 @@ public class InteractableNPC : MonoBehaviour, IInteractable
 
     }
 
-    /*
-     * 
-     * 
-     * 
-     */
-
     private void FixedUpdate()
     {
         
