@@ -7,6 +7,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Put any unreleased features under here.
 
+## [v0.4.0-prototype.2] - 2026-03-07
+
+### Added
+* Added Mana Data to Puzzle System.
+* Connected the Mana data to a counter in the puzzle UI.
+* Added UI interaction prompt when the Player's raycast hits an interactable object.
+
+### Fixed
+* Fixed an error with a duplicated event system in Ice_Island.unity.
+* Fixed an issue where the Player was able to move a Player-occupied tile.
+
 ## [v0.4.0-prototype.1] - 2026-03-05
 
 ### Added
