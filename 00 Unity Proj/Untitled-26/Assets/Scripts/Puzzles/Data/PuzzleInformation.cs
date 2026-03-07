@@ -9,7 +9,7 @@ using UnityEngine;
 public class PuzzleInformation : MonoBehaviour
 {
     [Title("Puzzle Information")]
-    [InfoBox("Attach the data of the puzzle that this terminal corresponds to.")]
+    [InfoBox("Attach the relevant data of this puzzle.")]
     public Camera camera;
     public GameObject canvas;
     public GameObject startTile;

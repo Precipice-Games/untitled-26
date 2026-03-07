@@ -287,10 +287,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   Pause:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
+        m_MethodName: onPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Map:
     m_PersistentCalls:
       m_Calls: []
+  rb: {fileID: 0}
   _playerInput: {fileID: 6922169669516928053}
 --- !u!114 &1173698383739407512
 MonoBehaviour:
@@ -317,6 +330,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf41f4705f0140eb94391cf0bb44adfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFixedMovement
+  gridX: 0
+  gridZ: 0
+  playerGridX: 0
+  playerGridZ: 0
+  puzzleCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
+        m_MethodName: onPuzzleCompleted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6739596773503058293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,6 +611,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8dab30dc-efb8-4acc-8656-c5191801d844
     m_ActionName: 'Puzzle/MoveRight[/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7196a9a0-d927-4aaa-b00b-6c797501fe02
+    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player

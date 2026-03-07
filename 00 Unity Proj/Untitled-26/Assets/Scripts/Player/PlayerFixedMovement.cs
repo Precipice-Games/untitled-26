@@ -5,6 +5,7 @@ using UnityEditor.Build;
 using System;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Vector3 = UnityEngine.Vector3;
 
@@ -15,7 +16,6 @@ using Vector3 = UnityEngine.Vector3;
 
 public class PlayerFixedMovement : MonoBehaviour
 {
-
     // ==== Variables =====
     private Vector3 playerCurrentPosition; // Current Vector3 position
     private Vector3 startPosition;
@@ -34,6 +34,12 @@ public class PlayerFixedMovement : MonoBehaviour
     [SerializeField] private int playerGridX;
     [SerializeField] private int playerGridZ;
     
+    // The starting and ending tile's coordinates
+    private int startTileX;
+    private int startTileZ;
+    private int endTileX;
+    private int endTileZ;
+    
     // The new coordinates as a Vector3
     Vector3 newCoords;
     Vector3 newPosition;
@@ -43,22 +49,13 @@ public class PlayerFixedMovement : MonoBehaviour
     
     // Static event to notify subscribers of the Player's movement
     public static event Action<int, int> playerMoved;
+    
+    // Event fired when Player reaches the end tile of the puzzle
+    public UnityEvent puzzleCompleted;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
-        // Set the player's starting position to the position of the starting tile.
-        if (startTile != null)
-        {
-            startPosition = startTile.transform.position;
-            playerCurrentPosition = startPosition;
-            transform.position = playerCurrentPosition;
-        }
-        else
-        {
-            Debug.LogError("PlayerFixedMovement.cs >> Starting tile is not assigned.");
-        }
     }
     
     // Subscribe to events
@@ -85,8 +82,16 @@ public class PlayerFixedMovement : MonoBehaviour
         startTile = puzzleInfo.startTile;
         endTile = puzzleInfo.endTile;
         
+        // Get the grid coordinates of the starting tile
+        startTileX = startTile.GetComponent<SelectableTile>().gridX;
+        startTileZ = startTile.GetComponent<SelectableTile>().gridZ;
+        
+        // Get the grid coordinates of the end tile
+        endTileX = endTile.GetComponent<SelectableTile>().gridX;
+        endTileZ = endTile.GetComponent<SelectableTile>().gridZ;
+        
         // After gathering data, move Player to the startTile
-        MoveToStartTile();
+        TryToMovePlayer(startTileX, startTileZ);
     }
     
     // The following methods listen to callback events from the Puzzle map from the
@@ -132,24 +137,6 @@ public class PlayerFixedMovement : MonoBehaviour
     
     // TODO: Clean this method up and make it more efficient. Would like to
     //       set the Player's position using grid coordinates if possible.
-    
-    /// <summary>
-    /// Move the Player to the starting tile of the puzzle.
-    /// </summary>
-    public void MoveToStartTile()
-    {
-        if (startTile != null)
-        {
-            Vector3 startCoords = startTile.transform.position;
-            Vector3 newPosition = new Vector3(startCoords.x, transform.position.y, startCoords.z);
-            transform.position = newPosition;
-            Debug.Log("PlayerFixedMovement.cs >> Moved player to starting tile.");
-        }
-        else
-        {
-            Debug.LogError("PlayerFixedMovement.cs >> Starting tile is not assigned.");
-        }
-    }
 
     /// <summary>
     /// Attempts to move the Player in the specified direction on the puzzle grid.
@@ -194,14 +181,37 @@ public class PlayerFixedMovement : MonoBehaviour
     public void SnapPlayerToTile(int coordX, int cordZ)
     {
         // Grab the X and Z coordinates in Vector3 from the GridManager
-        newCoords = gridManager.GridToWorld(gridX, gridZ);
+        newCoords = gridManager.GridToWorld(coordX, cordZ);
         newPosition = new Vector3(newCoords.x, transform.position.y, newCoords.z);
         transform.position = newPosition;
 
-        playerGridX = gridX;
-        playerGridZ = gridZ;
+        playerGridX = coordX;
+        playerGridZ = cordZ;
 
-        Debug.Log($"Player moved to: {gridX},{gridZ}");
+        //Debug.Log($"Player moved to: {playerGridX},{playerGridZ}");
+        
+        Debug.Log("endTileX: " + endTileX);
+        Debug.Log("playerGridX: " + playerGridX);
+        Debug.Log("endTileZ: " + endTileZ);
+        Debug.Log("playerGridZ: " + playerGridZ);
+
+        IsPlayerOnEndTile();
+    }
+    
+    /// <summary>
+    /// Used to check if the Player has reached the end tile. If so, the puzzle
+    /// has been completed and the appropriate events can be triggered.
+    /// </summary>
+    /// <returns></returns>
+    private void IsPlayerOnEndTile()
+    {
+        // Check if the Player's coordinates match the end tile's coordinates
+        if (endTileX == playerGridX && endTileZ == playerGridZ)
+        {
+            Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
+            puzzleCompleted.Invoke();
+        }
+        
         playerMoved.Invoke(playerGridX, playerGridZ);
     }
 }
