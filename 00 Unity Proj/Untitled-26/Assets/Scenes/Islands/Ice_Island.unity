@@ -16132,6 +16132,10 @@ PrefabInstance:
       propertyPath: gameState
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 617803613672485369, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.9996338
+      objectReference: {fileID: 0}
     - target: {fileID: 1100297765787535934, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.00024414062
@@ -16158,7 +16162,7 @@ PrefabInstance:
       objectReference: {fileID: 1332926697}
     - target: {fileID: 2216021129077026559, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.49975586
+      value: 0.4996338
       objectReference: {fileID: 0}
     - target: {fileID: 3119200679773075960, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16206,7 +16210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4908240791910150784, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.49975586
+      value: 0.4996338
       objectReference: {fileID: 0}
     - target: {fileID: 4908240791910150784, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -16226,7 +16230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7831931681210109834, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.49975586
+      value: 0.4996338
       objectReference: {fileID: 0}
     - target: {fileID: 8794883448765901352, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -21258,10 +21262,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4173212478788377525, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.4983215
+      objectReference: {fileID: 0}
     - target: {fileID: 4526878413659049423, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5744226596463354833, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968957557391545249, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_IsActive
     - target: {fileID: 4759651532516943100, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: originalColor.b
       value: 1
@@ -21285,6 +21299,14 @@ PrefabInstance:
     - target: {fileID: 7199852587322879966, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_Name
       value: Puzzle1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315429475126077736, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8346347597813341337, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.99957275
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
