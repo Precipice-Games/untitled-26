@@ -5,7 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-* Put any unreleased features under here.
+* Working on connecting puzzle completion status to YarnSpinner's persistent variable storage.
+
+## [v0.4.0-prototype.3] - 2026-03-07
+
+### Added
+* Added dialogue for Judith NPC (WIP).
+* Added configuration for the end tile to trigger puzzle completion.
+* Added the 3D mountain asset into the Ice_Island.unity scene.
+* Added script for persistent variable storage for dialogue system.
+
+### Fixed
+* Fixed an error where the quit button in MainMenu.unity wasn't working.
+
+### Changed
+* Renamed & refactored tile-related scripts for puzzle system.
+* Changed the MainMenu.unity scene to load up Ice_Island.unity instead of DialogueTest_1.unity.
 
 ## [v0.4.0-prototype.2] - 2026-03-07
 
