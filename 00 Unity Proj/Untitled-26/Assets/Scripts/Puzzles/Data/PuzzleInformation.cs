@@ -15,6 +15,7 @@ public class PuzzleInformation : MonoBehaviour
     public GameObject startTile;
     public GameObject endTile;
     public GameObject gridManager;
+    public bool puzzleSolved; // Has the puzzle been solved?
 
     // TODO: Perhaps put the Mana and movement information here as well?
 }
