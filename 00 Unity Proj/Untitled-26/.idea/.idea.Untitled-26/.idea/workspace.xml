@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c6a87c20-86fe-4292-a35b-df0757131668" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Art/3D Models/SnowIsland_v1.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/3D Models/SnowIsland_v1.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../01 Assets/01 Art/SnowIsland_v1.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogue/Localization/LineTable Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogue/Localization/LineTable Shared Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogue/Localization/LineTable_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogue/Localization/LineTable_en.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Islands/Ice_Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Islands/Ice_Island.unity" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "#176 on Rebasing issue/173-import-ice-island-3d-model"
+  }
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/v0.4.1-prototype.1\Untitled-26.exe" />
@@ -49,4 +71,9 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
 </project>
