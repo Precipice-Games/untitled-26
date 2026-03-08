@@ -14,28 +14,36 @@ public class InteractablePillar : MonoBehaviour, IInteractable
     // Static event to notify subscribers of game state changes
     public static event Action<PuzzleInformation> puzzleTriggered;
     
-    // This contains the information about the puzzle that
-    // this terminal is associated with.
+    [Title("Puzzle Information")]
+    [InfoBox("Attach the data of the puzzle that this terminal corresponds to.")]
     public PuzzleInformation puzzleInfo;
-
-    private void Awake()
-    {
-        if (puzzleInfo != null)
-        {
-            puzzleInfo = GetComponent<PuzzleInformation>();
-        }
-    }
 
     public void Interaction()
     {
-        Debug.Log("Interacting");
+        // If there's no puzzle info, break out
+        if (!PuzzleInfoFound()) return;
 
-        if (puzzleTriggered != null)
+        // Ensure the puzzle has not already been completed.
+        if (puzzleInfo.puzzleSolved == true) return;
+
+        // If the puzzle has not been completed, trigger the
+        // event to notify subscribers.
+        puzzleTriggered.Invoke(puzzleInfo);
+    }
+
+    /// <summary>
+    /// Used to check if the puzzleInfo variable has been assigned in the
+    /// Inspector in the Unity Editor.
+    /// </summary>
+    /// <returns></returns>
+    private bool PuzzleInfoFound()
+    {
+        if (puzzleInfo != null)
         {
-            // Invoke this event. The onPuzzleTrigger() event from
-            // GameStateManager.cs has been subscribed to this event
-            // in the Unity Editor.
-            puzzleTriggered.Invoke(puzzleInfo);
+            return true;
         }
+        
+        Debug.LogError("No puzzle information attached to this pillar.");
+        return false;
     }
 }

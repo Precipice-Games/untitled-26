@@ -9,12 +9,13 @@ using UnityEngine;
 public class PuzzleInformation : MonoBehaviour
 {
     [Title("Puzzle Information")]
-    [InfoBox("Attach the data of the puzzle that this terminal corresponds to.")]
+    [InfoBox("Attach the relevant data of this puzzle.")]
     public Camera camera;
     public GameObject canvas;
     public GameObject startTile;
     public GameObject endTile;
     public GameObject gridManager;
+    public bool puzzleSolved; // Has the puzzle been solved?
 
     // TODO: Perhaps put the Mana and movement information here as well?
 }

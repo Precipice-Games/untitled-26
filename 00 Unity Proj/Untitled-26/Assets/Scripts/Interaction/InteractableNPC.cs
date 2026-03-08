@@ -20,12 +20,6 @@ public class InteractableNPC : MonoBehaviour, IInteractable
 
     }
 
-    /*
-     * 
-     * 
-     * 
-     */
-
     private void FixedUpdate()
     {
         
@@ -35,8 +29,6 @@ public class InteractableNPC : MonoBehaviour, IInteractable
             
             runner = FindAnyObjectByType<Yarn.Unity.DialogueRunner>();
             runner.StartDialogue(gameObject.name);
-            //change to dialogue state
-                //disables e in this state
             interactedWith = false;
 
         }
