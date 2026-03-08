@@ -212,6 +212,6 @@ public class PlayerFixedMovement : MonoBehaviour
             puzzleCompleted.Invoke();
         }
         
-        playerMoved.Invoke(playerGridX, playerGridZ);
+        playerMoved?.Invoke(playerGridX, playerGridZ);
     }
 }
