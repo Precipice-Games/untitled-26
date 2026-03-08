@@ -231,16 +231,18 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// </summary>
     public void onPuzzleTrigger()
     {
-        if (CurrentGameState == GameState.Puzzle)
-        {
-            TransitionToState(prevState);
-            Debug.Log("CurrentGameState: " + CurrentGameState);
-            Debug.Log("prevState: " + prevState);
-        }
-        else
-        {
-            TransitionToState(GameState.Puzzle);
-        }
+        TransitionToState(GameState.Puzzle);
+        
+        // if (CurrentGameState == GameState.Puzzle)
+        // {
+        //     TransitionToState(prevState);
+        //     Debug.Log("CurrentGameState: " + CurrentGameState);
+        //     Debug.Log("prevState: " + prevState);
+        // }
+        // else
+        // {
+        //     TransitionToState(GameState.Puzzle);
+        // }
     }
 
     // FIXME: This is currently being triggered by the Player reaching
