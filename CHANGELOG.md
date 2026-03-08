@@ -7,6 +7,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Working on connecting puzzle completion status to YarnSpinner's persistent variable storage.
 
+## [v0.4.1-prototype.1] - 2026-03-08
+
+### Added
+* Added IslandManager.prefab & Island Scripts (WIP).
+
+### Fixed
+* Temporarily patched a bug in which the onPuzzleTrigger() wasn't switching to Puzzle state.
+* Found and resolved syntactical bug regarding the playerMoved invocation in PlayerFixedMovement.cs.
+
+### Changed
+* Configured the puzzle camera & UI to be more aesthetically pleasing.
+     * Also made the UI not block the actual tiles in the scene.
+* Changed the puzzle camera to be disabled by default due to initialization sequencing with the GameStateManager.
+
 ## [v0.4.0-prototype.3] - 2026-03-07
 
 ### Added
