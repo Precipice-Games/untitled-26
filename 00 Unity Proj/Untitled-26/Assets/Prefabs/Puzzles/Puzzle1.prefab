@@ -4021,8 +4021,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleInformation
   camera: {fileID: 5399598612880335045}
   canvas: {fileID: 4526878413659049423}
-  startTile: {fileID: 6919531168105839388}
-  endTile: {fileID: 1712450131070757306}
+  startTile: {fileID: 3427067941324799217}
+  endTile: {fileID: 3796191418792194300}
   gridManager: {fileID: 4785314922009797101}
   puzzleSolved: 0
 --- !u!1 &7264184287714543087
