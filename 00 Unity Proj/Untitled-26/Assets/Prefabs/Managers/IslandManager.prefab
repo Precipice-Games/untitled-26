@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc162eaf61f74473aa20c3e0fa3098ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IslandManager
-  islandPuzzleManager: {fileID: 738195584239078228}
+  islandPuzzleManager: {fileID: 0}
 --- !u!114 &738195584239078228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,4 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb892171356f48559a85e777724ac3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IslandPuzzleManager
-  puzzlePrefabs: []
+  GameObjects: []
+  camera: {fileID: 0}
+  canvas: {fileID: 0}
+  startTile: {fileID: 0}
+  endTile: {fileID: 0}
+  gridManager: {fileID: 0}
+  puzzleSolved: 0

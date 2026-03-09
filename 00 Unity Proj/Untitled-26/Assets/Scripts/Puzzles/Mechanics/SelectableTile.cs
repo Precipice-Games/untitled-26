@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class SelectableTile : MonoBehaviour
 {
@@ -12,18 +10,17 @@ public class SelectableTile : MonoBehaviour
     // which are the start and end tiles.
     public Color originalColor;
     public Color highlightColor = Color.yellow;
-    public static event Action tilesDistributed;
 
-    void Awake()
+    void Start()
     {
         rend = GetComponent<Renderer>();
+        // originalColor = rend.material.color;
         rend.material.color = originalColor;
 
         Debug.Log(name + " starting at: " + gridX + "," + gridZ);
 
         GridManager.Instance.PlaceTile(this, gridX, gridZ);
         transform.position = GridManager.Instance.GridToWorld(gridX, gridZ);
-        tilesDistributed?.Invoke();
     }
 
     public void Select()

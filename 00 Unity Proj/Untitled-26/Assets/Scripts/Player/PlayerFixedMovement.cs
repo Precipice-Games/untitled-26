@@ -17,7 +17,6 @@ using Vector3 = UnityEngine.Vector3;
 public class PlayerFixedMovement : MonoBehaviour
 {
     // ==== Variables =====
-    private PuzzleInformation puzzleInfo;
     private Vector3 playerCurrentPosition; // Current Vector3 position
     private Vector3 startPosition;
     private GridManager gridManager;
@@ -53,7 +52,6 @@ public class PlayerFixedMovement : MonoBehaviour
     
     // Event fired when Player reaches the end tile of the puzzle
     public UnityEvent puzzleCompleted;
-    public static event Action<PuzzleInformation> updatePuzzleStatus;
 
     private void Start()
     {
@@ -78,9 +76,8 @@ public class PlayerFixedMovement : MonoBehaviour
     /// This data is packaged and sent from the InteractablePillar.cs script.
     /// </summary>
     /// <param name="puzzleInfo"></param>
-    private void UpdatePuzzleInformation(PuzzleInformation info)
+    private void UpdatePuzzleInformation(PuzzleInformation puzzleInfo)
     {
-        puzzleInfo = info;
         gridManager = puzzleInfo.gridManager.GetComponent<GridManager>();
         startTile = puzzleInfo.startTile;
         endTile = puzzleInfo.endTile;
@@ -212,8 +209,7 @@ public class PlayerFixedMovement : MonoBehaviour
         if (endTileX == playerGridX && endTileZ == playerGridZ)
         {
             Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
-            puzzleCompleted.Invoke(); // For the GameStateManager
-            updatePuzzleStatus?.Invoke(puzzleInfo); // For the IslandPuzzleManager
+            puzzleCompleted.Invoke();
         }
         
         playerMoved?.Invoke(playerGridX, playerGridZ);
