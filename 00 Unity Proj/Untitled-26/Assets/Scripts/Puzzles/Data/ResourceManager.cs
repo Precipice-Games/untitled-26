@@ -11,20 +11,14 @@ using TMPro;
 public class ResourceManager : MonoBehaviour
 {
     public static ResourceManager Instance;
-    
+
     public int startingMana = 5;
     private int currentMana;
-    
-    [Title("Resource Data")]
-    [EnumToggleButtons, HideLabel]
-    [InfoBox("Attach the resource data related to the given puzzle.")]
-    public TMP_Text manaLabel;
-    
-    // TODO: Add movement card data here as well? Right now I'm just
-    //       building out a functional version, but want to refactor
-    //       code later on for clarity and reusability. Perhaps there
-    //       should be a separate class for textual UI updates. Let
-    //       me know your thoughts -- Nikki
+
+    public int moveLeftUses = 3;
+    public int moveRightUses = 3;
+    public int moveForwardUses = 3;
+    public int moveBackUses = 3;
 
     void Awake()
     {
@@ -34,32 +28,66 @@ public class ResourceManager : MonoBehaviour
     void Start()
     {
         currentMana = startingMana;
-        Debug.Log("ResourceManager.cs >> Starting Mana: " + currentMana);
-        UpdateManaText(currentMana);
+        Debug.Log("Starting Mana: " + currentMana);
     }
 
-    public bool UseMana(int amount)
+    public bool UseMove(string moveType)
     {
-        
-        if (currentMana < amount)
+        if (currentMana <= 0)
         {
-            Debug.Log("ResourceManager.cs >> No mana to move.");
+            Debug.Log("No mana to move");
             return false;
         }
 
-        currentMana -= amount;
-        UpdateManaText(currentMana);
-        Debug.Log("ResourceManager.cs >> Mana remaining after move: " + currentMana);
+        switch (moveType)
+        {
+            case "Left":
+                if (moveLeftUses <= 0)
+                {
+                    Debug.Log("No Left card uses remaining");
+                    return false;
+                }
+                moveLeftUses--;
+                break;
+
+            case "Right":
+                if (moveRightUses <= 0)
+                {
+                    Debug.Log("No Right card uses remaining");
+                    return false;
+                }
+                moveRightUses--;
+                break;
+
+            case "Forward":
+                if (moveForwardUses <= 0)
+                {
+                    Debug.Log("No Forward card uses remaining");
+                    return false;
+                }
+                moveForwardUses--;
+                break;
+
+            case "Back":
+                if (moveBackUses <= 0)
+                {
+                    Debug.Log("No Back card uses remaining");
+                    return false;
+                }
+                moveBackUses--;
+                break;
+        }
+
+        currentMana--;
+
+        Debug.Log("Mana remaining: " + currentMana);
+        Debug.Log("Card used: " + moveType);
+
         return true;
     }
 
     public int GetMana()
     {
         return currentMana;
-    }
-    
-    private void UpdateManaText(int amount)
-    {
-        manaLabel.text = $"Mana\n{amount}";
     }
 }
