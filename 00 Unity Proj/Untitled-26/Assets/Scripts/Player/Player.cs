@@ -47,7 +47,6 @@ public class Player : MonoSingleton<Player>
         InputManager.cursorChanged += SwitchCursorFunctionality;
         PhysicsManager.kinematicsUpdated += SwitchKinematics;
 
-
         _playerControls.UI.Enable();
         _playerControls.Player.Enable();
         _playerControls.UI.Pause.performed += OnPause;
