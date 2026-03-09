@@ -15,13 +15,13 @@ public class IslandPuzzleManager : MonoBehaviour
     // Subscribe to events
     private void OnEnable()
     {
-        InteractablePillar.puzzleTriggered += UpdateCompletionStatus;
+        PlayerFixedMovement.updatePuzzleStatus += UpdateCompletionStatus;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
-        InteractablePillar.puzzleTriggered -= UpdateCompletionStatus;
+        PlayerFixedMovement.updatePuzzleStatus -= UpdateCompletionStatus;
     }
     
     public void UpdateCompletionStatus(PuzzleInformation completedPuzzle)
@@ -45,8 +45,8 @@ public class IslandPuzzleManager : MonoBehaviour
             {
                 return;
             }
+            
+            Debug.Log("All puzzles completed!");
         }
-    
-        Debug.Log("All puzzles completed!");
     }
 }
