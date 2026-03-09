@@ -14,4 +14,24 @@ public class IslandManager : MonoBehaviour
     [Title("Island Puzzle Information")]
     [InfoBox("Attach the relevant data for this island's puzzles.")]
     public IslandPuzzleManager islandPuzzleManager;
+    
+    // // Subscribe to events
+    // private void OnEnable()
+    // {
+    //     InteractablePillar.puzzleTriggered += PuzzleCompleted;
+    // }
+    //
+    // // Unsubscribe from events
+    // private void OnDisable()
+    // {
+    //     InteractablePillar.puzzleTriggered -= PuzzleCompleted;
+    // }
+    
+    private void PuzzleCompleted()
+    {
+        // This method will be used to track the completion of puzzles on the island.
+        // It will be subscribed to the InteractablePillar's puzzleTriggered event, which is fired when a puzzle is completed.
+        // For now, it will just print a message to the console, but it can be expanded to include more functionality as needed.
+        Debug.Log("Puzzle completed on island!");
+    }
 }
