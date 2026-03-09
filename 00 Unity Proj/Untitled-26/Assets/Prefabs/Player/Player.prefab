@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 3103343398758482961}
   - component: {fileID: 1173698383739407512}
   - component: {fileID: 6709136814799094051}
+  - component: {fileID: 6109077836722222614}
   - component: {fileID: 6739596773503058293}
   - component: {fileID: 6922169669516928053}
   - component: {fileID: 4698028750357769851}
@@ -228,7 +229,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f96821bbefeea864b9b418af4b8615ac, type: 2}
+  - {fileID: 8748892135801146194, guid: 073293fd8cc0ef0449c9d9d216631f12, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -349,6 +350,52 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6109077836722222614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438321986708604092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d2799d07156a4429e90b0ac67f5259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Skye_Idle_Animation
+  _idleAnimationMaterial: {fileID: 0}
+  _frameCounter: 0
+  _idleTextures:
+  - {fileID: 2800000, guid: 51263702b4e13bc4e9b28c07b9b08a4b, type: 3}
+  - {fileID: 2800000, guid: e7a6755aa0900d94c99f007673f6a14c, type: 3}
+  - {fileID: 2800000, guid: 898eb7c3ee1e1f045a5a6a26864d1844, type: 3}
+  - {fileID: 2800000, guid: 491ff42a235346d41b5d739562c211ec, type: 3}
+  - {fileID: 2800000, guid: 6b98279c85b55894e897b458b555987d, type: 3}
+  - {fileID: 2800000, guid: d2be11ca82045d44eaf6bff7dd41939e, type: 3}
+  - {fileID: 2800000, guid: d8b902e46588dcb4eb7b502835c018d5, type: 3}
+  - {fileID: 2800000, guid: 173b0e0c51ff657469071efe94267ce5, type: 3}
+  - {fileID: 2800000, guid: 2a354d8b151294b4aaea4fc59af4a22e, type: 3}
+  - {fileID: 2800000, guid: af9733e315c6ae3448ab386dd5128d2e, type: 3}
+  - {fileID: 2800000, guid: 866a4c1d00740a34585a4a1c89e30bd5, type: 3}
+  - {fileID: 2800000, guid: 252ce680f69186146a964940b9a34e1e, type: 3}
+  - {fileID: 2800000, guid: 1f2bed9769697054fa46dfda482f9163, type: 3}
+  - {fileID: 2800000, guid: b056cb7e95bced545a6aee21316ccd36, type: 3}
+  - {fileID: 2800000, guid: 4a2434cb725ed104d8154129171b2942, type: 3}
+  - {fileID: 2800000, guid: b9f17d1d60f138a48bc8fc047d1f1a12, type: 3}
+  - {fileID: 2800000, guid: 4e608a48c41e0e444ae300264d6f3ef7, type: 3}
+  - {fileID: 2800000, guid: b31622cd235f8f74c877f90369259f47, type: 3}
+  - {fileID: 2800000, guid: 57111ac9ab3409a4891672d8ae1fa881, type: 3}
+  - {fileID: 2800000, guid: a97fe3f611c2d274ab845196c4250708, type: 3}
+  - {fileID: 2800000, guid: ff0fd8530cfded44fa31d9cc6df35d6c, type: 3}
+  - {fileID: 2800000, guid: a966484bdddf6fd4aad55be15a7d23fd, type: 3}
+  - {fileID: 2800000, guid: 7a9490ff04a7197409d2ff9ea10ec85e, type: 3}
+  - {fileID: 2800000, guid: 1d1953e15b183724a8ea2d9bcc13b3d5, type: 3}
+  - {fileID: 2800000, guid: eb22050984d52f345b8a562755dd2f41, type: 3}
+  - {fileID: 2800000, guid: bdb12b8aaecd7404a8b6ed74c6dd1b12, type: 3}
+  - {fileID: 2800000, guid: ec879dfc43d2cba439aa52ea6c267194, type: 3}
+  - {fileID: 2800000, guid: b67a5312873505c4897b4cc25fc19570, type: 3}
+  - {fileID: 2800000, guid: 350fc9cf29cb455469c0bfd6f05caa1f, type: 3}
+  - {fileID: 2800000, guid: b5cdbb3e509855f4c99752c0b17094a3, type: 3}
+  - {fileID: 2800000, guid: fc47975b19d8140498b7edcd8ede2f2d, type: 3}
 --- !u!114 &6739596773503058293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +411,7 @@ MonoBehaviour:
   rayLength: 2.5
   activeInteractable: {fileID: 0}
   canInteract: 1
+  interactionUI: {fileID: 0}
   activeTimer: 5
   maxTime: 5
 --- !u!114 &6922169669516928053
