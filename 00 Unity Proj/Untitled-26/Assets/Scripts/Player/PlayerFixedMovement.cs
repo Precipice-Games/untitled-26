@@ -26,9 +26,6 @@ public class PlayerFixedMovement : MonoBehaviour
     // (Not necessarily within the grid)
     private GameObject startTile;
     private GameObject endTile;
-    
-    public int gridX;
-    public int gridZ;
 
     // The Player's X and Z coordinates on the grid.
     [SerializeField] private int playerGridX;
@@ -167,8 +164,8 @@ public class PlayerFixedMovement : MonoBehaviour
             return;
         }
         
-        gridX = newX;
-        gridZ = newZ;
+        int gridX = newX;
+        int gridZ = newZ;
 
         // TODO: Add tile type checking here to handle special mechanics.
         //       The same should be done with a normal tile.
