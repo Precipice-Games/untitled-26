@@ -56,15 +56,6 @@ public class SelectableTile : MonoBehaviour
             return;
         }
 
-        // Valid move: deduct mana
-        if (!ResourceManager.Instance.UseMana(1))
-        {
-            Debug.Log("Not enough mana to move");
-            return;
-        }
-
-        Debug.Log("Move allowed – mana deducted");
-
         GridManager.Instance.ClearCell(gridX, gridZ);
 
         gridX = newX;

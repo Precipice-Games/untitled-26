@@ -4273,8 +4273,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25cdba096906e54bb7d84f6b69f698b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startingMana: 5
-  manaLabel: {fileID: 4244620660118580199}
+  startingMana: 10
+  moveLeftUses: 2
+  moveRightUses: 2
+  moveForwardUses: 2
+  moveBackUses: 2
 --- !u!1 &8066876773405094797
 GameObject:
   m_ObjectHideFlags: 0

@@ -80,6 +80,8 @@ public class TileSelector : MonoBehaviour
         // not on the selected tile before trying to move it.
         if (selectedTile == null) return;
         if (PlayerOnSelectedCube()) return;
+
+        if (!ResourceManager.Instance.UseMove("Right")) return;
         
         selectedTile.TryMove(1, 0); // moves right
     }
@@ -90,6 +92,8 @@ public class TileSelector : MonoBehaviour
         // not on the selected tile before trying to move it.
         if (selectedTile == null) return;
         if (PlayerOnSelectedCube()) return;
+
+        if (!ResourceManager.Instance.UseMove("Left")) return;
         
         selectedTile.TryMove(-1, 0); // moves left
     }
@@ -100,6 +104,8 @@ public class TileSelector : MonoBehaviour
         // not on the selected tile before trying to move it.
         if (selectedTile == null) return;
         if (PlayerOnSelectedCube()) return;
+
+        if (!ResourceManager.Instance.UseMove("Forward")) return;
         
         selectedTile.TryMove(0, 1); // moves forward
     }
@@ -110,6 +116,8 @@ public class TileSelector : MonoBehaviour
         // not on the selected tile before trying to move it.
         if (selectedTile == null) return;
         if (PlayerOnSelectedCube()) return;
+
+        if (!ResourceManager.Instance.UseMove("Back")) return;
         
         selectedTile.TryMove(0, -1); // moves back
     }
