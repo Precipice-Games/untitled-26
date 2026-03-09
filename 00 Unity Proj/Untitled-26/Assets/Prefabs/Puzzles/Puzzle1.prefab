@@ -712,7 +712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   gridX: 4
   gridZ: 4
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 0.8352941, g: 0, b: 1, a: 0}
   highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
 --- !u!54 &7045734070655998070
 Rigidbody:
@@ -3941,7 +3941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   gridX: 0
   gridZ: 0
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 0.13494706, g: 1, b: 0, a: 0}
   highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
 --- !u!54 &1780069663387497229
 Rigidbody:
@@ -3980,7 +3980,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3397337548393501967}
   - component: {fileID: 9191018659038673785}
-  - component: {fileID: 2631868888834280293}
   m_Layer: 0
   m_Name: Puzzle1
   m_TagString: Untagged
@@ -4022,24 +4021,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleInformation
   camera: {fileID: 5399598612880335045}
   canvas: {fileID: 4526878413659049423}
-  startTile: {fileID: 6919531168105839388}
-  endTile: {fileID: 1712450131070757306}
+  startTile: {fileID: 3427067941324799217}
+  endTile: {fileID: 3796191418792194300}
   gridManager: {fileID: 4785314922009797101}
   puzzleSolved: 0
---- !u!114 &2631868888834280293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7199852587322879966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec9c9c73170a4b3585e12febd452d5b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileAppearance
-  startTile: {fileID: 6919531168105839388}
-  endTile: {fileID: 1712450131070757306}
 --- !u!1 &7264184287714543087
 GameObject:
   m_ObjectHideFlags: 0

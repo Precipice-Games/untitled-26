@@ -68,14 +68,12 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         Debug.Log("GameStateManager.cs >> CurrentGameState: " + CurrentGameState);
     }
     
-    // Subscribe to events
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
     }
     
-    // Unsubscribe from events
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
