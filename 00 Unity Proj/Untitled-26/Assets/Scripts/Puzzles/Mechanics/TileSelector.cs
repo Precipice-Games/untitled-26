@@ -3,6 +3,9 @@ using UnityEngine.InputSystem;
 
 public class TileSelector : MonoBehaviour
 {
+    // ===== Variables =====
+    private GridManager gridManager;
+
     /// <summary>
     /// Reference to the currently selected tile.
     /// </summary>
@@ -13,17 +16,25 @@ public class TileSelector : MonoBehaviour
     /// </summary>
     private int playerGridX;
     private int playerGridZ;
-    
+
+    // The starting and ending tile's coordinates
+    private int startTileX;
+    private int startTileZ;
+    private int endTileX;
+    private int endTileZ;
+
     // Subscribe to events
     private void OnEnable()
     {
         PlayerFixedMovement.playerMoved += UpdatePlayerCoordinates;
+        InteractablePillar.puzzleTriggered += AssignStartAndEndTiles;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         PlayerFixedMovement.playerMoved -= UpdatePlayerCoordinates;
+        InteractablePillar.puzzleTriggered += AssignStartAndEndTiles;
     }
 
     void Update()
@@ -57,29 +68,75 @@ public class TileSelector : MonoBehaviour
         playerGridX = playerX;
         playerGridZ = playerZ;
     }
+
+    /// <summary>
+    /// Assigns the coordinates of the start and end tiles for the current puzzle.
+    /// This is used to prevent the Player from moving these tiles.
+    /// </summary>
+    /// <param name="puzzleInformation"></param>
+    private void AssignStartAndEndTiles(PuzzleInformation puzzleInfo)
+    {
+        // Assign the GridManager and the Start & End tiles
+        gridManager = puzzleInfo.gridManager.GetComponent<GridManager>();
+        GameObject startTile = puzzleInfo.startTile;
+        GameObject endTile = puzzleInfo.endTile;
+        
+        // Get the grid coordinates of the starting tile
+        startTileX = startTile.GetComponent<SelectableTile>().gridX;
+        startTileZ = startTile.GetComponent<SelectableTile>().gridZ;
+        
+        // Get the grid coordinates of the end tile
+        endTileX = endTile.GetComponent<SelectableTile>().gridX;
+        endTileZ = endTile.GetComponent<SelectableTile>().gridZ;
+    }
     
     /// <summary>
     /// Checks if the Player is currently on the selected tile. If so, it prevents
     /// the system from continuing before even attempting to move the tile.
     /// </summary>
     /// <returns></returns>
-    private bool PlayerOnSelectedCube()
+    private bool PlayerOnSelectedTile()
     {
         if (selectedTile.gridX == playerGridX && selectedTile.gridZ == playerGridZ)
         {
-            Debug.Log("Cannot move tile: Player is on it.");
+            Debug.Log("TileSelector.cs >> Cannot the tile the Player is currently on.");
             
             return true;
         }
         return false;
     }
 
+    /// <summary>
+    /// Checks if the current tile is either the start or end tile.
+    /// </summary>
+    /// <returns></returns>
+    private bool SelectedTileIsStartOrEnd()
+    {
+        // Check for Start tile
+        if (selectedTile.gridX == startTileX && selectedTile.gridZ == startTileZ)
+        {
+            Debug.Log("TileSelector.cs >> Cannot move the Start tile.");
+
+            return true;
+        }
+
+        // Check for End tile
+        if (selectedTile.gridX == endTileX && selectedTile.gridZ == endTileZ)
+        {
+            Debug.Log("TileSelector.cs >> Cannot move the End tile.");
+            return true;
+        }
+
+        return false;
+    }
+
     public void MoveSelectedRight()
     {
-        // Ensure that a tile is selected and that the Player is
-        // not on the selected tile before trying to move it.
+        // Ensure that a tile is selected, and that we're not moving
+        // the start tile, the end tile, or the Player-occupied tile.
         if (selectedTile == null) return;
-        if (PlayerOnSelectedCube()) return;
+        if (PlayerOnSelectedTile()) return;
+        if (SelectedTileIsStartOrEnd()) return;
 
         if (!ResourceManager.Instance.UseMove("Right")) return;
         
@@ -88,10 +145,11 @@ public class TileSelector : MonoBehaviour
 
     public void MoveSelectedLeft()
     {
-        // Ensure that a tile is selected and that the Player is
-        // not on the selected tile before trying to move it.
+        // Ensure that a tile is selected, and that we're not moving
+        // the start tile, the end tile, or the Player-occupied tile.
         if (selectedTile == null) return;
-        if (PlayerOnSelectedCube()) return;
+        if (PlayerOnSelectedTile()) return;
+        if (SelectedTileIsStartOrEnd()) return;
 
         if (!ResourceManager.Instance.UseMove("Left")) return;
         
@@ -100,10 +158,11 @@ public class TileSelector : MonoBehaviour
 
     public void MoveSelectedForward()
     {
-        // Ensure that a tile is selected and that the Player is
-        // not on the selected tile before trying to move it.
+        // Ensure that a tile is selected, and that we're not moving
+        // the start tile, the end tile, or the Player-occupied tile.
         if (selectedTile == null) return;
-        if (PlayerOnSelectedCube()) return;
+        if (PlayerOnSelectedTile()) return;
+        if (SelectedTileIsStartOrEnd()) return;
 
         if (!ResourceManager.Instance.UseMove("Forward")) return;
         
@@ -112,10 +171,11 @@ public class TileSelector : MonoBehaviour
 
     public void MoveSelectedBack()
     {
-        // Ensure that a tile is selected and that the Player is
-        // not on the selected tile before trying to move it.
+        // Ensure that a tile is selected, and that we're not moving
+        // the start tile, the end tile, or the Player-occupied tile.
         if (selectedTile == null) return;
-        if (PlayerOnSelectedCube()) return;
+        if (PlayerOnSelectedTile()) return;
+        if (SelectedTileIsStartOrEnd()) return;
 
         if (!ResourceManager.Instance.UseMove("Back")) return;
         
