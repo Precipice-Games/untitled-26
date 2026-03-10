@@ -10,6 +10,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
     RaycastHit raycastHit; //information about what is being hit
     bool isHitting;
     public float rayLength = 2.5f;
+    public bool raycastEnabled = true;
 
     //    ==== Interactable Object ====
     public GameObject activeInteractable; //Stores overlapping interactable object
@@ -36,6 +37,12 @@ public class PlayerRaycastInteraction : MonoBehaviour
     void FixedUpdate()
     {
 
+        if (!raycastEnabled)
+        {
+            interactionUI.SetActive(false);
+            activeInteractable = null;
+            return; // exit early if raycast is disabled (used for dialogue and puzzle states)
+        }
 
         if (activeTimer < maxTime)
         {
@@ -52,7 +59,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
         }
 
 
-            interactionRay.origin = transform.position;
+        interactionRay.origin = transform.position;
         interactionRay.direction = transform.forward;
 
         Vector3 origin = interactionRay.origin;
@@ -106,5 +113,37 @@ public class PlayerRaycastInteraction : MonoBehaviour
 
         }
 
+    }
+
+
+
+
+    /*
+     * 
+     * Toggles the raycast on and off. Used for dialogue and puzzle states
+     * to prevent the player from interacting with objects while in those states
+     * 
+     */
+
+    private void OnEnable()
+    {
+        GameStateManager.transitionedToNewState += ToggleRaycast;
+    }
+
+    private void OnDisable()
+    {
+        GameStateManager.transitionedToNewState -= ToggleRaycast;
+    }
+
+    public void ToggleRaycast(GameStateManager.GameState state)
+    {
+        if (state == GameStateManager.GameState.Exploration)
+        {
+            raycastEnabled = true;
+        }
+        else
+        {
+            raycastEnabled = false;
+        }
     }
 }
