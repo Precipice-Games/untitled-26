@@ -7,6 +7,11 @@
     <list default="true" id="c6a87c20-86fe-4292-a35b-df0757131668" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game States/GameStateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game States/GameStateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/ResourceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/ResourceManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/ClickRayTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/ClickRayTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/GridManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/SelectableTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/SelectableTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/TileSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/TileSelector.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,19 +26,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Nicole-Scalera"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nicole-Scalera&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Precipice-Games/untitled-26.git",
-    "accountId": "ec7d3be2-c42a-472e-a6d7-9c09fcb35385"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Precipice-Games/untitled-26.git&quot;,
+    &quot;accountId&quot;: &quot;ec7d3be2-c42a-472e-a6d7-9c09fcb35385&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/4e3b370cb1a3412e898e5cbf39ff2af63de00/fa/9916362b/02000007pdb7.il" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5633fb5b8ea043caa8bcc5b423134f4c3de00/20/5f988111/0200001Bpdb27.il" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5633fb5b8ea043caa8bcc5b423134f4c3de00/a6/9597788b/02000007pdb7.il" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18b3b31e3d8341f487466ebb6800bc67212400/1a/0a0d0392/Debug.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18b3b31e3d8341f487466ebb6800bc67212400/7f/25df0b03/ILogger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DevTools/SelectiveDebugger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/dev.yarnspinner.unity@040b0f4542b5/Runtime/DialogueRunner/DialogueRunner.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -44,20 +55,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "issue/213-debug-test-the-gamestatemanager-assignments-of-the-current-state",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;issue/213-debug-test-the-gamestatemanager-assignments-of-the-current-state&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/v0.4.1-prototype.1\Untitled-26.exe" />
@@ -116,7 +127,7 @@
       <updated>1773070093734</updated>
       <workItem from="1773070101842" duration="3951000" />
       <workItem from="1773164067385" duration="401000" />
-      <workItem from="1773171978578" duration="364000" />
+      <workItem from="1773171978578" duration="3884000" />
     </task>
     <servers />
   </component>

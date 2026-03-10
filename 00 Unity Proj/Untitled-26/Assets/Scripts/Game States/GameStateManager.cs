@@ -22,7 +22,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     // Note: This variable is not static because each instance of the component
     // needs to maintain its own copy of the current game state for reference.
     
-    public bool debugMode = true; // Set this to true to enable debug logs for state transitions and event triggers.
+    [Title("Debug Mode")]
+    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
+    [PropertyTooltip("Enables or disables debug logs in a given script.")]
+    public bool debugMode = true;
 
     /// <summary>
     /// The set of possible game states.
