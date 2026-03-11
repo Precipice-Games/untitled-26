@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5523384014667715397}
   - component: {fileID: 5858514601374460139}
   - component: {fileID: 724371074316278936}
+  - component: {fileID: 5003682050977052313}
   m_Layer: 5
   m_Name: InteractPrompt
   m_TagString: Untagged
@@ -102,6 +103,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 119
+--- !u!114 &5003682050977052313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4961419121846845136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35f5d9f7c8141d29ba323a05427631d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionPrompt
 --- !u!1 &5133917020356748328
 GameObject:
   m_ObjectHideFlags: 0

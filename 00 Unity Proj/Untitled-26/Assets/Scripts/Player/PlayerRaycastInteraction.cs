@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.UI.Image;
@@ -22,6 +23,9 @@ public class PlayerRaycastInteraction : MonoBehaviour
     //    ==== Timer ====
     public float activeTimer = 5.0f;
     public float maxTime = 5.0f;
+    
+    // Static event to notify subscribers of raycast toggling
+    public static event Action<bool> raycastToggled;
 
     /*
      * 
@@ -135,15 +139,22 @@ public class PlayerRaycastInteraction : MonoBehaviour
         GameStateManager.transitionedToNewState -= ToggleRaycast;
     }
 
+    /// <summary>
+    /// This method ensures that the raycast is toggled properly,
+    /// depending on the current state of the game.
+    /// </summary>
+    /// <param name="state"></param>
     public void ToggleRaycast(GameStateManager.GameState state)
     {
         if (state == GameStateManager.GameState.Exploration)
         {
             raycastEnabled = true;
+            raycastToggled?.Invoke(true);
         }
         else
         {
             raycastEnabled = false;
+            raycastToggled?.Invoke(false);
         }
     }
 }
