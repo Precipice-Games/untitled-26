@@ -306,6 +306,7 @@ MonoBehaviour:
       m_Calls: []
   rb: {fileID: 0}
   _playerInput: {fileID: 6922169669516928053}
+  debugMode: 1
 --- !u!114 &1173698383739407512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,8 +332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf41f4705f0140eb94391cf0bb44adfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFixedMovement
-  gridX: 0
-  gridZ: 0
   playerGridX: 0
   playerGridZ: 0
   puzzleCompleted:
@@ -409,6 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRaycastInteraction
   rayLength: 2.5
+  raycastEnabled: 1
   activeInteractable: {fileID: 0}
   canInteract: 1
   interactionUI: {fileID: 0}
