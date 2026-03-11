@@ -38,8 +38,11 @@ public class PlayerFixedMovement : MonoBehaviour
     private int endTileZ;
 
     //Keeps track of the potential tile for the player to move to
-    private int desintationX;
-    private int desintationZ;
+    private int destinationX = 0;
+    private int destinationZ = 0;
+
+    private int deltaX;
+    private int deltaZ;
 
     // The new coordinates as a Vector3
     Vector3 newCoords;
@@ -152,8 +155,11 @@ public class PlayerFixedMovement : MonoBehaviour
         // Calculate the new position on the grid
         int newX = playerGridX + xDir;
         int newZ = playerGridZ + zDir;
-        
-        Debug.Log("newX,newY" + newX + ", " + newZ);
+
+        deltaX = xDir;
+        deltaZ = zDir;
+
+        Debug.Log("deltaX,deltaZ" + deltaX + ", " + deltaZ);
 
         Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {xDir},{zDir}");
 
@@ -170,20 +176,18 @@ public class PlayerFixedMovement : MonoBehaviour
             return;
         }
 
-        if (gridManager.IsIceTileType(newX, newZ))
+        destinationX += deltaX;
+        destinationZ += deltaZ;
+
+        Debug.Log("destinationX: " + destinationX);
+        Debug.Log("destinationZ: " + destinationZ);
+
+        Debug.Log("Dest + pt" + (destinationX + playerGridX) + "," + (destinationZ + playerGridZ));
+
+        if (gridManager.IsIceTileType(destinationX + playerGridX, destinationZ + playerGridZ))
         {
             Debug.Log("Is Ice");
-            Debug.Log("New+Dir" + (newX + xDir) + ", " + (newZ + zDir));
-            TryToMovePlayer(newX + xDir, newZ + xDir);
-
-        }
-        else
-        {
-
-            desintationX = newX;
-            Debug.Log("Destination X:" + desintationX);
-            desintationZ = newZ;
-            Debug.Log("Destination Z:" + desintationZ);
+            TryToMovePlayer(deltaX, deltaZ);
 
         }
 
@@ -195,7 +199,7 @@ public class PlayerFixedMovement : MonoBehaviour
         // HandleTileType();
 
         // For right now, we will just snap the player to the new tile.
-        SnapPlayerToTile(desintationX, desintationZ);
+        SnapPlayerToTile(destinationX, destinationZ);
     }
 
     public void SnapPlayerToTile(int coordX, int cordZ)
