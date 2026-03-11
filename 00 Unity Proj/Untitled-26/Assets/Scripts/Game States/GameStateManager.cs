@@ -68,11 +68,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     // Static event to notify subscribers of game state changes
     public static event Action<GameState> transitionedToNewState;
     
-    private void Start()
-    {
-        if (debugMode) Debug.Log("GameStateManager.cs >> CurrentGameState: " + CurrentGameState);
-    }
-    
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -132,7 +127,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         // the CurrentGameState is assigned.
         CurrentGameState = defaultState;
         if (debugMode) Debug.Log("GameStateManager.cs >> Set the CurrentGameState to the defaultState " + CurrentGameState);
-        if (debugMode) Debug.Log("GameStateManger.cs >> Calling on HandlePauseValues()...");
         HandlePauseValues(CurrentGameState);
     }
 
@@ -142,9 +136,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// <param name="newState"></param>
     private void TransitionToState(GameState newState)
     {
+        if (debugMode) Debug.Log($"onPuzzleTrigger() >> Current state is {CurrentGameState}. Attempting to transition to {newState}...");
         prevState = CurrentGameState;
         CurrentGameState = newState;
-        if (debugMode) Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
+        if (debugMode) Debug.Log("GameStateManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
         HandlePauseValues(CurrentGameState);
     }
 
@@ -203,7 +198,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         {
             // Possible previous states should be Exploration, Puzzle, and Dialogue.
             TransitionToState(prevState);
-            if (debugMode) Debug.Log("onPause() >> CurrentGameState: " + CurrentGameState);
         }
         else if (pausable)
         {
@@ -211,7 +205,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         }
         else
         {
-            if (debugMode) Debug.Log("Cannot pause from current state");
+            if (debugMode) Debug.Log("GameStateManager.cs >> Cannot pause from the current state.");
         }
     }
 
@@ -237,21 +231,16 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// </summary>
     public void onPuzzleTrigger()
     {
-        // TransitionToState(GameState.Puzzle);
-        if (debugMode) Debug.Log("onPuzzleTrigger() was requested. The CurrentGameState is " + CurrentGameState);
+        Debug.Log("onPuzzleTrigger() >> The current game state is: " + CurrentGameState);
         
-        if (CurrentGameState == GameState.Puzzle)
+        if (CurrentGameState != GameState.Puzzle)
         {
-            if (debugMode) Debug.Log("onPuzzleTrigger() >> You are already in Puzzle Mode.");
-            TransitionToState(prevState);
-            if (debugMode) Debug.Log("CurrentGameState: " + CurrentGameState);
-            if (debugMode) Debug.Log("prevState: " + prevState);
+            Debug.Log("onPuzzleTrigger() >> Entered the if statement to transition to Puzzle Mode.");
+            TransitionToState(GameState.Puzzle);
         }
         else
         {
-            if (debugMode) Debug.Log($"onPuzzleTrigger() >> The else clause was entered. The current game state is {CurrentGameState}. Attempting to transition to Puzzle Mode...");
-            TransitionToState(GameState.Puzzle);
-            if (debugMode) Debug.Log("onPuzzleTrigger() >> CurrentGameState: " + CurrentGameState);
+            TransitionToState(prevState);
         }
     }
 

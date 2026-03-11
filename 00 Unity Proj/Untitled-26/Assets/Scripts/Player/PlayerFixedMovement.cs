@@ -207,6 +207,7 @@ public class PlayerFixedMovement : MonoBehaviour
         {
             Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
             puzzleCompleted.Invoke();
+            // GameStateManager.puzzleSwitchDetected.Invoke();
         }
         
         playerMoved?.Invoke(playerGridX, playerGridZ);
