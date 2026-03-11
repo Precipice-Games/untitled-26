@@ -185,13 +185,6 @@ public class PlayerFixedMovement : MonoBehaviour
         playerGridX = coordX;
         playerGridZ = cordZ;
 
-        //Debug.Log($"Player moved to: {playerGridX},{playerGridZ}");
-        
-        Debug.Log("endTileX: " + endTileX);
-        Debug.Log("playerGridX: " + playerGridX);
-        Debug.Log("endTileZ: " + endTileZ);
-        Debug.Log("playerGridZ: " + playerGridZ);
-
         IsPlayerOnEndTile();
     }
     
