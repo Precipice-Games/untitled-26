@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class SelectableTile : MonoBehaviour
@@ -18,6 +19,11 @@ public class SelectableTile : MonoBehaviour
     // which are the start and end tiles.
     public Color originalColor;
     public Color highlightColor = Color.yellow;
+    
+    [Title("Debug Mode")]
+    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
+    [PropertyTooltip("Enables or disables debug logs in a given script.")]
+    public bool debugMode = true;
 
     void Start()
     {
@@ -25,7 +31,7 @@ public class SelectableTile : MonoBehaviour
         // originalColor = rend.material.color;
         rend.material.color = originalColor;
 
-        Debug.Log(name + " starting at: " + gridX + "," + gridZ);
+        if (debugMode) Debug.Log(name + " starting at: " + gridX + "," + gridZ);
 
         GridManager.Instance.PlaceTile(this, gridX, gridZ);
         transform.position = GridManager.Instance.GridToWorld(gridX, gridZ);
@@ -34,13 +40,13 @@ public class SelectableTile : MonoBehaviour
     public void Select()
     {
         rend.material.color = highlightColor;
-        Debug.Log(name + " SELECTED");
+        if (debugMode) Debug.Log(name + " SELECTED");
     }
 
     public void Deselect()
     {
         rend.material.color = originalColor;
-        Debug.Log(name + " DESELECTED");
+        if (debugMode) Debug.Log(name + " DESELECTED");
     }
 
     public void TryMove(int xDir, int zDir)
@@ -48,19 +54,19 @@ public class SelectableTile : MonoBehaviour
         int newX = gridX + xDir;
         int newZ = gridZ + zDir;
 
-        Debug.Log(name + " trying move to: " + newX + "," + newZ);
+        if (debugMode) Debug.Log(name + " trying move to: " + newX + "," + newZ);
 
         // Check that it's inside the grid
         if (!GridManager.Instance.IsInsideGrid(newX, newZ))
         {
-            Debug.Log("BLOCKED: Outside grid – no mana spent");
+            if (debugMode) Debug.Log("BLOCKED: Outside grid – no mana spent");
             return;
         }
 
         // Check for cell vacancy
         if (!GridManager.Instance.IsCellEmpty(newX, newZ))
         {
-            Debug.Log("BLOCKED: Cell occupied – no mana spent");
+            if (debugMode) Debug.Log("BLOCKED: Cell occupied – no mana spent");
             return;
         }
 

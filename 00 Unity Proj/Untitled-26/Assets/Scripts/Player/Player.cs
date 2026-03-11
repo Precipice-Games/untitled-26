@@ -1,4 +1,5 @@
 using System;
+using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityCommunity.UnitySingleton;
 using UnityEngine;
@@ -27,6 +28,11 @@ public class Player : MonoSingleton<Player>
     public PlayerControls _playerControls { get; private set; }
     
     [SerializeField] private PlayerInput _playerInput;
+    
+    [Title("Debug Mode")]
+    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
+    [PropertyTooltip("Enables or disables debug logs in a given script.")]
+    public bool debugMode = true;
 
     void Awake()
     {
@@ -87,12 +93,12 @@ public class Player : MonoSingleton<Player>
     {
         if (_playerInput == null)
         {
-            Debug.LogError("Player.cs >> Cannot switch action map: PlayerInput is null!");
+            if (debugMode) Debug.LogError("Player.cs >> Cannot switch action map: PlayerInput is null!");
             return;
         }
         
         _playerInput.SwitchCurrentActionMap(actionMapName);
-        Debug.Log($"Player.cs >> Switched action map for {actionMapName} state.");
+        if (debugMode) Debug.Log($"Player.cs >> Switched action map for {actionMapName} state.");
     }
     
     // TODO: The cursor commands are static, so it's not as easy to assign
@@ -106,7 +112,7 @@ public class Player : MonoSingleton<Player>
         Cursor.lockState = lockMode;
         Cursor.visible = visible;
         
-        Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
+        if (debugMode) Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
     }
     
     /// <summary>

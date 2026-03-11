@@ -21,6 +21,11 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     public GameState gameState;
     // Note: This variable is not static because each instance of the component
     // needs to maintain its own copy of the current game state for reference.
+    
+    [Title("Debug Mode")]
+    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
+    [PropertyTooltip("Enables or disables debug logs in a given script.")]
+    public bool debugMode = true;
 
     /// <summary>
     /// The set of possible game states.
@@ -63,11 +68,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     // Static event to notify subscribers of game state changes
     public static event Action<GameState> transitionedToNewState;
     
-    private void Start()
-    {
-        Debug.Log("GameStateManager.cs >> CurrentGameState: " + CurrentGameState);
-    }
-    
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -83,8 +83,8 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     // Runs when a scene is loaded
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("GameStateManager.cs >> OnSceneLoaded() >> New scene has been loaded: " + scene.name);
-        Debug.Log($"GameStateManager.cs >> Setting the Scene Defaults for defaultState {gameState}...");
+        if (debugMode) Debug.Log("GameStateManager.cs >> OnSceneLoaded() >> New scene has been loaded: " + scene.name);
+        if (debugMode) Debug.Log($"GameStateManager.cs >> Setting the Scene Defaults for defaultState {gameState}...");
         // Initialize the static CurrentGameState from the inspector value
         SetSceneDefaults(gameState);
     }
@@ -92,8 +92,8 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     // Runs when the active scene is changed
     public void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
     {
-        Debug.Log($"GameStateManager.cs >> OnActiveSceneChanged() >> Switched from {prevScene.name} to {nextScene.name}");
-        Debug.Log($"GameStateManager.cs >> Setting the Scene Defaults for defaultState {gameState}...");
+        if (debugMode) Debug.Log($"GameStateManager.cs >> OnActiveSceneChanged() >> Switched from {prevScene.name} to {nextScene.name}");
+        if (debugMode) Debug.Log($"GameStateManager.cs >> Setting the Scene Defaults for defaultState {gameState}...");
         // Initialize the static CurrentGameState from the inspector value
         SetSceneDefaults(gameState);
     }
@@ -126,8 +126,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         // There is no previous state, so just ensure
         // the CurrentGameState is assigned.
         CurrentGameState = defaultState;
-        Debug.Log("GameStateManager.cs >> Set the CurrentGameState to the defaultState " + CurrentGameState);
-        Debug.Log("GameStateManger.cs >> Calling on HandlePauseValues()...");
+        if (debugMode) Debug.Log("GameStateManager.cs >> Set the CurrentGameState to the defaultState " + CurrentGameState);
         HandlePauseValues(CurrentGameState);
     }
 
@@ -137,9 +136,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// <param name="newState"></param>
     private void TransitionToState(GameState newState)
     {
+        if (debugMode) Debug.Log($"onPuzzleTrigger() >> Current state is {CurrentGameState}. Attempting to transition to {newState}...");
         prevState = CurrentGameState;
         CurrentGameState = newState;
-        Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
+        if (debugMode) Debug.Log("GameStateManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
         HandlePauseValues(CurrentGameState);
     }
 
@@ -180,7 +180,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
                 break;
         }
         
-        Debug.Log($"GameStateManager.cs >> {newState} loaded, time scale set to {Time.timeScale.ToString()} and pausable set to {pausable}.");
+        if (debugMode) Debug.Log($"GameStateManager.cs >> {newState} loaded, time scale set to {Time.timeScale.ToString()} and pausable set to {pausable}.");
         
         // Trigger this event after game state, timescale,
         // and pausable bool have been updated. 
@@ -205,7 +205,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         }
         else
         {
-            Debug.Log("Cannot pause from current state");
+            if (debugMode) Debug.Log("GameStateManager.cs >> Cannot pause from the current state.");
         }
     }
 
@@ -231,18 +231,17 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// </summary>
     public void onPuzzleTrigger()
     {
-        TransitionToState(GameState.Puzzle);
+        Debug.Log("onPuzzleTrigger() >> The current game state is: " + CurrentGameState);
         
-        // if (CurrentGameState == GameState.Puzzle)
-        // {
-        //     TransitionToState(prevState);
-        //     Debug.Log("CurrentGameState: " + CurrentGameState);
-        //     Debug.Log("prevState: " + prevState);
-        // }
-        // else
-        // {
-        //     TransitionToState(GameState.Puzzle);
-        // }
+        if (CurrentGameState != GameState.Puzzle)
+        {
+            Debug.Log("onPuzzleTrigger() >> Entered the if statement to transition to Puzzle Mode.");
+            TransitionToState(GameState.Puzzle);
+        }
+        else
+        {
+            TransitionToState(prevState);
+        }
     }
 
     // FIXME: This is currently being triggered by the Player reaching
@@ -260,7 +259,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// </summary>
     public void ExitGame()
     {
-        Debug.Log("Quit Game");
+        if (debugMode) Debug.Log("Quit Game");
         Application.Quit();
     }
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using System;
+using Sirenix.OdinInspector;
 
 public class InputManager : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class InputManager : MonoBehaviour
     public static event Action<string> inputMapSwitched;
     public static event Action<CursorLockMode, bool> cursorChanged;
 
+    [Title("Debug Mode")]
+    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
+    [PropertyTooltip("Enables or disables debug logs in a given script.")]
+    public bool debugMode = true;
 
     private void Awake()
     {
@@ -48,7 +53,7 @@ public class InputManager : MonoBehaviour
     {
         if (Player.Instance == null)
         {
-            Debug.LogWarning("InputManager.cs >> Can't find the Player instance. Make sure it is in the scene with Player.cs attached.");
+            if (debugMode) Debug.LogWarning("InputManager.cs >> Can't find the Player instance. Make sure it is in the scene with Player.cs attached.");
             playerInput = null;
         }
         else
@@ -56,11 +61,11 @@ public class InputManager : MonoBehaviour
             playerInput = Player.Instance.GetComponent<PlayerInput>();
             if (playerInput != null)
             {
-                Debug.Log("InputManager.cs >> Successfully acquired PlayerInput reference.");
+                if (debugMode) Debug.Log("InputManager.cs >> Successfully acquired PlayerInput reference.");
             }
             else
             {
-                Debug.LogWarning("InputManager.cs >> Player instance found but PlayerInput component is missing!");
+                if (debugMode) Debug.LogWarning("InputManager.cs >> Player instance found but PlayerInput component is missing!");
             }
         }
     }
