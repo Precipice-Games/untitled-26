@@ -109,6 +109,10 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveUp performed.");
+
+        destinationX = 0;
+        destinationZ = 0;
+
         TryToMovePlayer(0, 1);
     }
     
@@ -118,6 +122,8 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveDown called.");
+        destinationX = 0;
+        destinationZ = 0;
         TryToMovePlayer(0, -1);
     }
     
@@ -127,6 +133,8 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveLeft called.");
+        destinationX = 0;
+        destinationZ = 0;
         TryToMovePlayer(-1, 0);
     }
     
@@ -136,6 +144,8 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveRight called.");
+        destinationX = 0;
+        destinationZ = 0;
         TryToMovePlayer(1, 0);
     }
     
