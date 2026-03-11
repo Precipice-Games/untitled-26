@@ -185,13 +185,6 @@ public class PlayerFixedMovement : MonoBehaviour
         playerGridX = coordX;
         playerGridZ = cordZ;
 
-        //Debug.Log($"Player moved to: {playerGridX},{playerGridZ}");
-        
-        Debug.Log("endTileX: " + endTileX);
-        Debug.Log("playerGridX: " + playerGridX);
-        Debug.Log("endTileZ: " + endTileZ);
-        Debug.Log("playerGridZ: " + playerGridZ);
-
         IsPlayerOnEndTile();
     }
     
@@ -207,6 +200,7 @@ public class PlayerFixedMovement : MonoBehaviour
         {
             Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
             puzzleCompleted.Invoke();
+            // GameStateManager.puzzleSwitchDetected.Invoke();
         }
         
         playerMoved?.Invoke(playerGridX, playerGridZ);

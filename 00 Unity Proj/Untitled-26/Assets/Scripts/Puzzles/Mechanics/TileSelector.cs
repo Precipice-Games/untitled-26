@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,6 +23,11 @@ public class TileSelector : MonoBehaviour
     private int startTileZ;
     private int endTileX;
     private int endTileZ;
+    
+    [Title("Debug Mode")]
+    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
+    [PropertyTooltip("Enables or disables debug logs in a given script.")]
+    public bool debugMode = true;
 
     // Subscribe to events
     private void OnEnable()
@@ -99,7 +105,7 @@ public class TileSelector : MonoBehaviour
     {
         if (selectedTile.gridX == playerGridX && selectedTile.gridZ == playerGridZ)
         {
-            Debug.Log("TileSelector.cs >> Cannot the tile the Player is currently on.");
+            if (debugMode) Debug.Log("TileSelector.cs >> Cannot the tile the Player is currently on.");
             
             return true;
         }
@@ -115,7 +121,7 @@ public class TileSelector : MonoBehaviour
         // Check for Start tile
         if (selectedTile.gridX == startTileX && selectedTile.gridZ == startTileZ)
         {
-            Debug.Log("TileSelector.cs >> Cannot move the Start tile.");
+            if (debugMode) Debug.Log("TileSelector.cs >> Cannot move the Start tile.");
 
             return true;
         }
@@ -123,7 +129,7 @@ public class TileSelector : MonoBehaviour
         // Check for End tile
         if (selectedTile.gridX == endTileX && selectedTile.gridZ == endTileZ)
         {
-            Debug.Log("TileSelector.cs >> Cannot move the End tile.");
+            if (debugMode) Debug.Log("TileSelector.cs >> Cannot move the End tile.");
             return true;
         }
 
