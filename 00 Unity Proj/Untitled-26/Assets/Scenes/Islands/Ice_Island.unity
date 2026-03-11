@@ -3597,6 +3597,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255403302}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &257565463 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5172177436165071364, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+  m_PrefabInstance: {fileID: 594807609}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945da601b31994aeca6c1ccad6bf7095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileMovementSFX
 --- !u!1001 &266050464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6708,6 +6719,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8014860526984270938, guid: 52fcc2c214e11dd46bc310e39123907a, type: 3}
   m_PrefabInstance: {fileID: 592276077}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &594807609
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 651812792193975369, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491602788924679253, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2769029692214463626, guid: 3bdf0d7a8ed5c49df80eae5daf33256f, type: 2}
+    - target: {fileID: 3039724645273056021, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 816a4d5500b8a7a498a43475a529cc6a, type: 3}
 --- !u!1001 &603740503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21931,9 +22003,65 @@ PrefabInstance:
       propertyPath: originalColor.r
       value: 0.8352941
       objectReference: {fileID: 0}
+    - target: {fileID: 4923367695126077979, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923367695126077979, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923367695126077979, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 257565463}
+    - target: {fileID: 4923367695126077979, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923367695126077979, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923367695126077979, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TileMovementSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923367695126077979, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5025002967551595757, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: debugMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632375832059512351, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632375832059512351, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632375832059512351, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 257565463}
+    - target: {fileID: 5632375832059512351, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632375832059512351, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632375832059512351, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TileMovementSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632375832059512351, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5689756566394007165, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: debugMode
@@ -21942,6 +22070,34 @@ PrefabInstance:
     - target: {fileID: 5744226596463354833, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106117261593328848, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106117261593328848, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106117261593328848, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 257565463}
+    - target: {fileID: 6106117261593328848, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106117261593328848, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106117261593328848, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TileMovementSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106117261593328848, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6321783586416998415, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: debugMode
@@ -21991,6 +22147,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.99957275
       objectReference: {fileID: 0}
+    - target: {fileID: 8379185926904379591, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379185926904379591, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379185926904379591, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 257565463}
+    - target: {fileID: 8379185926904379591, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379185926904379591, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379185926904379591, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TileMovementSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379185926904379591, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8509538877335474834, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: debugMode
       value: 0
@@ -22031,3 +22215,4 @@ SceneRoots:
   - {fileID: 7795512651711934439}
   - {fileID: 977928726}
   - {fileID: 1439376080}
+  - {fileID: 594807609}
