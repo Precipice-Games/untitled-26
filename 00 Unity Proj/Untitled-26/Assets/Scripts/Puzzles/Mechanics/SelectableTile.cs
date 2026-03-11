@@ -3,6 +3,14 @@ using UnityEngine;
 
 public class SelectableTile : MonoBehaviour
 {
+    public enum TileType
+    {
+        Normal,
+        Ice
+    }
+
+    public TileType tileType = TileType.Normal;
+
     public int gridX;
     public int gridZ;
 
@@ -62,15 +70,5 @@ public class SelectableTile : MonoBehaviour
             return;
         }
 
-        GridManager.Instance.ClearCell(gridX, gridZ);
-
-        gridX = newX;
-        gridZ = newZ;
-
-        GridManager.Instance.PlaceTile(this, gridX, gridZ);
-
-        transform.position = GridManager.Instance.GridToWorld(gridX, gridZ);
-
-        if (debugMode) Debug.Log(name + " moved to: " + gridX + "," + gridZ);
     }
 }
