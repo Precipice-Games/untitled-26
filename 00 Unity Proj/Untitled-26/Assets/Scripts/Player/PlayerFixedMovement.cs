@@ -4,6 +4,7 @@ using UnityEditor.Build;
 
 using System;
 using System.Numerics;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -27,7 +28,7 @@ public class PlayerFixedMovement : MonoBehaviour
     private GameObject startTile;
     private GameObject endTile;
 
-    // The Player's X and Z coordinates on the grid.
+    [Title("Player's Grid Coordinates")]
     [SerializeField] private int playerGridX;
     [SerializeField] private int playerGridZ;
     
@@ -42,12 +43,13 @@ public class PlayerFixedMovement : MonoBehaviour
     Vector3 newPosition;
 
    // Player's Rigidbody
-    Rigidbody rb;
+    private Rigidbody rb;
     
     // Static event to notify subscribers of the Player's movement
     public static event Action<int, int> playerMoved;
     
-    // Event fired when Player reaches the end tile of the puzzle
+    [Space]
+    [Title("Puzzle Completion Event", "Event fired when Player reaches the end tile of the puzzle.")]
     public UnityEvent puzzleCompleted;
 
     private void Start()
@@ -200,7 +202,6 @@ public class PlayerFixedMovement : MonoBehaviour
         {
             Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
             puzzleCompleted.Invoke();
-            // GameStateManager.puzzleSwitchDetected.Invoke();
         }
         
         playerMoved?.Invoke(playerGridX, playerGridZ);

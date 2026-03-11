@@ -34,6 +34,8 @@ public class ViewManager : MonoBehaviour
     public Camera menuCamera;
     private Camera _targetCamera;
 
+    [Space]
+    [Title("Puzzle Triggering Event", "Event fired when the Player interacts with an InteractablePillar.")]
     public UnityEvent puzzleSwitchDetected;
     
     [Title("Debug Mode")]
