@@ -6,6 +6,33 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 
 ## [Unreleased]
 * Working on connecting puzzle completion status to YarnSpinner's persistent variable storage.
+* Working on implementing logical handling for the tile types Enum.
+
+## [v0.4.3-prototype.1] - 2026-03-11
+
+### Added
+* Added animated idling sprite for Skye.
+* Added basic landscape collision for the Ice Island.
+* Added code for different tile types through an Enum (WIP).
+* Added more controls to the Options menu.
+* Added 'ESC' to the input action map for pausing.
+
+### Fixed
+* Fixed a bug where the Player was able to move the start and end tiles (this should be disabled).
+
+### Changed
+* Improved visual accessibility by adding a black outline to the interaction prompt UI pop-up.
+* Restricted the interaction prompt to Exploration mode (WIP).
+* Resized the Options menu to fit in the screen.
+
+## [v0.4.2-prototype.1] - 2026-03-09
+
+### Added
+* Added the ice island island model.
+* Added limited movement card usages into puzzle mode.
+
+### Changed
+* Updated the puzzle informational system to properly handle completion statuses.
 
 ## [v0.4.1-prototype.1] - 2026-03-08
 
