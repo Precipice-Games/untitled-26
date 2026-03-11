@@ -70,5 +70,16 @@ public class SelectableTile : MonoBehaviour
             return;
         }
 
+        GridManager.Instance.ClearCell(gridX, gridZ);
+
+        gridX = newX;
+        gridZ = newZ;
+
+        GridManager.Instance.PlaceTile(this, gridX, gridZ);
+
+        transform.position = GridManager.Instance.GridToWorld(gridX, gridZ);
+
+        Debug.Log(name + " moved to: " + gridX + "," + gridZ);
+
     }
 }
