@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6a87c20-86fe-4292-a35b-df0757131668" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InteractionPrompt.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InteractionPrompt.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" afterDir="false" />
@@ -50,6 +52,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+    "git-widget-placeholder": "issue/221-ensure-interaction-prompt-invisible-if-paused",
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -63,7 +66,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/v0.4.3-prototype.1\Untitled-26.exe" />
@@ -123,6 +126,7 @@
       <workItem from="1773164067385" duration="401000" />
       <workItem from="1773171978578" duration="4507000" />
       <workItem from="1773259899547" duration="1069000" />
+      <workItem from="1773268861783" duration="566000" />
     </task>
     <servers />
   </component>
