@@ -231,24 +231,13 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// </summary>
     public void onPuzzleTrigger()
     {
-        Debug.Log("onPuzzleTrigger() >> The current game state is: " + CurrentGameState);
-        
-        if (CurrentGameState != GameState.Puzzle)
-        {
-            Debug.Log("onPuzzleTrigger() >> Entered the if statement to transition to Puzzle Mode.");
-            TransitionToState(GameState.Puzzle);
-        }
-        else
-        {
-            TransitionToState(prevState);
-        }
+        TransitionToState(GameState.Puzzle);
     }
-
-    // FIXME: This is currently being triggered by the Player reaching
-    // the end tile of a puzzle, however, we should really be using the
-    // onPuzzleTrigger() method above. For whatever reason, the prevState
-    // variable isn't being updated correctly, causing us to not switch
-    // out of Puzzle Mode.
+    
+    /// <summary>
+    /// This switches the Player back to Exploration mode upon the triggering
+    /// of puzzleCompleted, a UnityEvent defined in PlayerFixedMovement.cs.
+    /// </summary>
     public void onPuzzleCompleted()
     {
         TransitionToState(GameState.Exploration);
