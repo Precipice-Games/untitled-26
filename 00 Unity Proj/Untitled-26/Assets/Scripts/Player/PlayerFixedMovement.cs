@@ -36,7 +36,11 @@ public class PlayerFixedMovement : MonoBehaviour
     private int startTileZ;
     private int endTileX;
     private int endTileZ;
-    
+
+    //Keeps track of the potential tile for the player to move to
+    private int desintationX;
+    private int desintationZ;
+
     // The new coordinates as a Vector3
     Vector3 newCoords;
     Vector3 newPosition;
@@ -149,6 +153,8 @@ public class PlayerFixedMovement : MonoBehaviour
         int newX = playerGridX + xDir;
         int newZ = playerGridZ + zDir;
         
+        Debug.Log("newX,newY" + newX + ", " + newZ);
+
         Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {xDir},{zDir}");
 
         // Check if there's a tile to move to
@@ -163,7 +169,24 @@ public class PlayerFixedMovement : MonoBehaviour
             Debug.Log("PlayerFixedMovement.cs >> Move blocked: Outside grid");
             return;
         }
-        
+
+        if (gridManager.IsIceTileType(newX, newZ))
+        {
+            Debug.Log("Is Ice");
+            Debug.Log("New+Dir" + (newX + xDir) + ", " + (newZ + zDir));
+            TryToMovePlayer(newX + xDir, newZ + xDir);
+
+        }
+        else
+        {
+
+            desintationX = newX;
+            Debug.Log("Destination X:" + desintationX);
+            desintationZ = newZ;
+            Debug.Log("Destination Z:" + desintationZ);
+
+        }
+
         int gridX = newX;
         int gridZ = newZ;
 
@@ -172,7 +195,7 @@ public class PlayerFixedMovement : MonoBehaviour
         // HandleTileType();
 
         // For right now, we will just snap the player to the new tile.
-        SnapPlayerToTile(gridX, gridZ);
+        SnapPlayerToTile(desintationX, desintationZ);
     }
 
     public void SnapPlayerToTile(int coordX, int cordZ)
