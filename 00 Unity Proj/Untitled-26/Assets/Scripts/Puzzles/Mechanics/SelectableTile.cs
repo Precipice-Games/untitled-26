@@ -28,9 +28,9 @@ public class SelectableTile : MonoBehaviour
 
     void Start()
     {
-        // rend = GetComponent<Renderer>();
-        // // originalColor = rend.material.color;
-        // rend.material.color = originalColor;
+        rend = GetComponent<Renderer>();
+        originalColor = rend.material.color;
+        rend.material.color = originalColor;
 
         if (debugMode) Debug.Log(name + " starting at: " + gridX + "," + gridZ);
 

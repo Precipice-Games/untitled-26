@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e5ce399-7c0f-4455-b410-4ddcc8af76a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Tiles.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Tiles/IceCubeTexture_v1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Tiles/IceCubeTexture_v1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Tiles/IceCubeTexture_v2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Tiles/IceCubeTexture_v2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Tiles/IceNormalTile1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Tiles/IceNormalTile1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Tiles/IceTile1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Tiles/IceTile1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/DynamicTileTexturing.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/DynamicTileTexturing.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01 Assets/01 Art/IceCubeTexture_v2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/Puzzle1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/Puzzle1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Islands/Ice_Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Islands/Ice_Island.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/SelectableTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/SelectableTile.cs" afterDir="false" />
-    </list>
+    <list default="true" id="5e5ce399-7c0f-4455-b410-4ddcc8af76a2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,11 +22,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/DynamicTileTexturing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nikki/untitled-26/00 Unity Proj/Untitled-26/Assets/Scripts/Puzzles/Mechanics/SelectableTile.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "hotfix/dynamic-tile-texturing"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <servers />
   </component>

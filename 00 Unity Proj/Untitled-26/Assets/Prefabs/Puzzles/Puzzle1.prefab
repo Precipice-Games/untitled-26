@@ -158,7 +158,7 @@ MonoBehaviour:
   gridX: 3
   gridZ: 3
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &2518381043934893438
 MonoBehaviour:
@@ -334,7 +334,7 @@ MonoBehaviour:
   gridX: 0
   gridZ: 3
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &3318057155961036070
 MonoBehaviour:
@@ -918,7 +918,7 @@ MonoBehaviour:
   gridX: 4
   gridZ: 4
   originalColor: {r: 0.8352941, g: 0, b: 1, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &1506219520340587611
 MonoBehaviour:
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   gridX: 4
   gridZ: 1
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &6505779349774599911
 MonoBehaviour:
@@ -1443,7 +1443,7 @@ MonoBehaviour:
   gridX: 1
   gridZ: 1
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &747859353823768086
 MonoBehaviour:
@@ -1756,7 +1756,7 @@ MonoBehaviour:
   gridX: 3
   gridZ: 0
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &864764580593589462
 MonoBehaviour:
@@ -2203,7 +2203,7 @@ MonoBehaviour:
   gridX: 2
   gridZ: 0
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &5952923576471507331
 MonoBehaviour:
@@ -2516,7 +2516,7 @@ MonoBehaviour:
   gridX: 0
   gridZ: 4
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &4226547229773223782
 MonoBehaviour:
@@ -2692,7 +2692,7 @@ MonoBehaviour:
   gridX: 1
   gridZ: 2
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &4038837667630203649
 MonoBehaviour:
@@ -3367,7 +3367,7 @@ MonoBehaviour:
   gridX: 4
   gridZ: 2
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &7615802789705735621
 MonoBehaviour:
@@ -3543,7 +3543,7 @@ MonoBehaviour:
   gridX: 2
   gridZ: 4
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &7523160706761227275
 MonoBehaviour:
@@ -4205,7 +4205,7 @@ MonoBehaviour:
   gridX: 2
   gridZ: 1
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &4017039502483098492
 MonoBehaviour:
@@ -4381,7 +4381,7 @@ MonoBehaviour:
   gridX: 3
   gridZ: 1
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &6211965852161980555
 MonoBehaviour:
@@ -4634,7 +4634,7 @@ MonoBehaviour:
   gridX: 0
   gridZ: 0
   originalColor: {r: 0.13494706, g: 1, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &6909150226320128903
 MonoBehaviour:
@@ -4912,7 +4912,7 @@ MonoBehaviour:
   gridX: 0
   gridZ: 2
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &4489662516922727035
 MonoBehaviour:
@@ -5280,7 +5280,7 @@ MonoBehaviour:
   gridX: 2
   gridZ: 2
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &2860040158086677344
 MonoBehaviour:
