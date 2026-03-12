@@ -44,25 +44,34 @@ public class MusicManager : MonoBehaviour
         musicSource.spatialBlend = 0f;
     }
 
+    // Subscribe to events
     private void OnEnable()
     {
         SceneManager.activeSceneChanged += OnSceneChanged;
     }
     
+    // Unsubscribe from events
     private void OnDisable()
     {
         SceneManager.activeSceneChanged -= OnSceneChanged;
     }
+    
     private void Start()
     {
+        // Apply the appropriate music for the initial scene
         ApplySceneMusic(SceneManager.GetActiveScene().name);
     }
 
     private void OnSceneChanged(Scene oldScene, Scene newScene)
     {
+        // Update the music based on the new active scene
         ApplySceneMusic(newScene.name);
     }
-
+    /// <summary>
+    /// Determines which music track to play based on the current
+    /// scene name and initiates playback with a fade transition.
+    /// </summary>
+    /// <param name="sceneName"></param>
     private void ApplySceneMusic(string sceneName)
     {
         AudioClip trackToPlay = null;
@@ -96,12 +105,18 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Called by ApplySceneMusic() to handle playback specifics, such
+    /// as fading between tracks.
+    /// </summary>
+    /// <param name="clip"></param>
+    /// <param name="volume"></param>
     public void Play(AudioClip clip, float volume)
     {
+        // Ensure the clip is not null and that the
+        // requested track isn't already playing
         if (clip == null) return;
-
-        if (musicSource.clip == clip && musicSource.isPlaying)
-            return;
+        if (musicSource.clip == clip && musicSource.isPlaying) return;
 
         if (fadeRoutine != null)
         {
@@ -113,7 +128,9 @@ public class MusicManager : MonoBehaviour
     public void PauseMusic() => musicSource.Pause();
     public void ResumeMusic() => musicSource.UnPause();
 
-
+    /// <summary>
+    /// Called by ApplySceneMusic() to stop the current track.
+    /// </summary>
     public void StopMusic()
     {
         if (fadeRoutine != null)

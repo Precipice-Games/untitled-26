@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Vector3 = UnityEngine.Vector3;
+using Unity.VisualScripting;
 
 // This script is used to snap the Player in a fixed movement style during puzzle mode.
 // It is similar to the PlayerMovement.cs script, but it is used to snap the player to
@@ -37,7 +38,17 @@ public class PlayerFixedMovement : MonoBehaviour
     private int startTileZ;
     private int endTileX;
     private int endTileZ;
-    
+
+    //Keeps track of the potential tile for the player to move to
+    private int destinationX = 0;
+    private int destinationZ = 0;
+
+    private int deltaX;
+    private int deltaZ;
+
+    private int landingX = 0;
+    private int landingZ = 0;
+
     // The new coordinates as a Vector3
     Vector3 newCoords;
     Vector3 newPosition;
@@ -104,6 +115,10 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveUp performed.");
+
+        destinationX = 0;
+        destinationZ = 0;
+
         TryToMovePlayer(0, 1);
     }
     
@@ -113,6 +128,8 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveDown called.");
+        destinationX = 0;
+        destinationZ = 0;
         TryToMovePlayer(0, -1);
     }
     
@@ -122,6 +139,8 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveLeft called.");
+        destinationX = 0;
+        destinationZ = 0;
         TryToMovePlayer(-1, 0);
     }
     
@@ -131,6 +150,8 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveRight called.");
+        destinationX = 0;
+        destinationZ = 0;
         TryToMovePlayer(1, 0);
     }
     
@@ -147,10 +168,19 @@ public class PlayerFixedMovement : MonoBehaviour
     //       special tiles, like the ice mechanic.
     public void TryToMovePlayer(int xDir, int zDir)
     {
+
         // Calculate the new position on the grid
         int newX = playerGridX + xDir;
         int newZ = playerGridZ + zDir;
-        
+
+        deltaX = xDir;
+        deltaZ = zDir;
+
+        destinationX += deltaX;
+        destinationZ += deltaZ;
+
+        Debug.Log("deltaX,deltaZ" + deltaX + ", " + deltaZ);
+
         Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {xDir},{zDir}");
 
         // Check if there's a tile to move to
@@ -165,7 +195,34 @@ public class PlayerFixedMovement : MonoBehaviour
             Debug.Log("PlayerFixedMovement.cs >> Move blocked: Outside grid");
             return;
         }
-        
+
+        Debug.Log("destinationX: " + destinationX);
+        Debug.Log("destinationZ: " + destinationZ);
+
+        Debug.Log("Dest + pt" + (destinationX + playerGridX) + "," + (destinationZ + playerGridZ));
+
+        if (gridManager.IsIceTileType(destinationX + playerGridX, destinationZ + playerGridZ))
+        {
+            Debug.Log("Is Ice");
+            TryToMovePlayer(deltaX, deltaZ);
+
+        }
+        else
+        {
+
+            landingX = destinationX + playerGridX;
+            landingZ = destinationZ + playerGridZ;
+
+            if (gridManager.IsCellEmpty(landingX,landingZ))
+            {
+
+                landingX = playerGridX;
+                landingZ = playerGridZ;
+
+            }
+
+        }
+
         int gridX = newX;
         int gridZ = newZ;
 
@@ -173,15 +230,21 @@ public class PlayerFixedMovement : MonoBehaviour
         //       The same should be done with a normal tile.
         // HandleTileType();
 
+        Debug.Log("dest + playerGrid: " + (destinationX + playerGridX) + "," + (destinationZ + playerGridZ));
+        Debug.Log("landings: " + landingX + "," + landingZ);
+
         // For right now, we will just snap the player to the new tile.
-        SnapPlayerToTile(gridX, gridZ);
+        SnapPlayerToTile(landingX, landingZ);
     }
 
     public void SnapPlayerToTile(int coordX, int cordZ)
     {
+
+        Debug.Log(coordX + ", " + cordZ);
         // Grab the X and Z coordinates in Vector3 from the GridManager
         newCoords = gridManager.GridToWorld(coordX, cordZ);
         newPosition = new Vector3(newCoords.x, transform.position.y, newCoords.z);
+        Debug.Log("New Position:" + newPosition);
         transform.position = newPosition;
 
         playerGridX = coordX;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TileMovementSFX : MonoBehaviour
+public class CardClickSFX : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip clickSound;

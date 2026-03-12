@@ -15,6 +15,7 @@ public class SelectableTile : MonoBehaviour
     public int gridZ;
 
     private Renderer rend;
+    
     // Making originalColor public for now to tell
     // which are the start and end tiles.
     public Color originalColor;
@@ -28,8 +29,9 @@ public class SelectableTile : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
-        // originalColor = rend.material.color;
+        originalColor = rend.material.color;
         rend.material.color = originalColor;
+        // rend.material.SetColor("_BaseColor", originalColor);
 
         if (debugMode) Debug.Log(name + " starting at: " + gridX + "," + gridZ);
 
