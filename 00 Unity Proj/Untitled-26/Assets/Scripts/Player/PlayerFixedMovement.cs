@@ -164,6 +164,7 @@ public class PlayerFixedMovement : MonoBehaviour
     //       special tiles, like the ice mechanic.
     public void TryToMovePlayer(int xDir, int zDir)
     {
+
         // Calculate the new position on the grid
         int newX = playerGridX + xDir;
         int newZ = playerGridZ + zDir;
@@ -210,15 +211,20 @@ public class PlayerFixedMovement : MonoBehaviour
         //       The same should be done with a normal tile.
         // HandleTileType();
 
+        Debug.Log("dest + playerGrid: " + (destinationX + playerGridX) + "," + (destinationZ + playerGridZ));
+
         // For right now, we will just snap the player to the new tile.
-        SnapPlayerToTile(destinationX, destinationZ);
+        SnapPlayerToTile(destinationX + playerGridX, destinationZ + playerGridZ);
     }
 
     public void SnapPlayerToTile(int coordX, int cordZ)
     {
+
+        Debug.Log(coordX + ", " + cordZ);
         // Grab the X and Z coordinates in Vector3 from the GridManager
         newCoords = gridManager.GridToWorld(coordX, cordZ);
         newPosition = new Vector3(newCoords.x, transform.position.y, newCoords.z);
+        Debug.Log("New Position:" + newPosition);
         transform.position = newPosition;
 
         playerGridX = coordX;
