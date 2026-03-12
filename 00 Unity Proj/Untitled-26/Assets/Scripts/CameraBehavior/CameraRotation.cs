@@ -1,6 +1,13 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// This script allows the camera to revolve around the Player. The Player
+/// will always face the camera itself. Additionally, DO NOT add any controls
+/// or cursor handling here; that is all handled in seperate files and events,
+/// such as game state switches.
+/// </summary>
+
 public class CameraRotation : MonoBehaviour
 {
     //Variables
@@ -8,18 +15,6 @@ public class CameraRotation : MonoBehaviour
     public float mouseSensitivity = 4f;
     private float cameraVerticalRotation = 0f;
     private bool isRotating = true;
-
-    private void Awake()
-    {
-
-    }
-
-    private void Start()
-    {
-        // TODO: Remove this part and replace with Game State Manager, which sets
-        // off a chain of events to handle cursor locking and visibility.
-        // Cursor.lockState = CursorLockMode.Locked;
-    }
 
     // Update is called once per frame
     void FixedUpdate()
