@@ -31,6 +31,7 @@ public class SelectableTile : MonoBehaviour
         rend = GetComponent<Renderer>();
         originalColor = rend.material.color;
         rend.material.color = originalColor;
+        // rend.material.SetColor("_BaseColor", originalColor);
 
         if (debugMode) Debug.Log(name + " starting at: " + gridX + "," + gridZ);
 

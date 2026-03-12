@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e5ce399-7c0f-4455-b410-4ddcc8af76a2" name="Changes" comment="" />
+    <list default="true" id="5e5ce399-7c0f-4455-b410-4ddcc8af76a2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/SelectableTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/SelectableTile.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +13,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18b3b31e3d8341f487466ebb6800bc67212400/e6/03aa9027/Material.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nikki/untitled-26/00 Unity Proj/Untitled-26/Assets/Scripts/Player/PlayerFixedMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nikki/untitled-26/00 Unity Proj/Untitled-26/Assets/Scripts/Player/PlayerFixedMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/nikki/untitled-26/00 Unity Proj/Untitled-26/Assets/Scripts/Player/PlayerFixedMovement.cs" root0="SKIP_HIGHLIGHTING" />
@@ -24,7 +27,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "git-widget-placeholder": "hotfix/dynamic-tile-texturing"
+    "git-widget-placeholder": "dev"
   }
 }]]></component>
   <component name="TaskManager">
