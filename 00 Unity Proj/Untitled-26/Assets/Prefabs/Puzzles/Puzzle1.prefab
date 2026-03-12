@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6269323563570964800}
   - component: {fileID: 4377554390259353776}
   - component: {fileID: 1109640015527013170}
-  - component: {fileID: 4272864839946960334}
   - component: {fileID: 5542912942022859257}
+  - component: {fileID: 4272864839946960334}
+  - component: {fileID: 2518381043934893438}
   m_Layer: 0
   m_Name: DriftIsland (10)
   m_TagString: Untagged
@@ -114,24 +115,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &4272864839946960334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115618297942063103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 3
-  gridZ: 3
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &5542912942022859257
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -159,6 +142,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &4272864839946960334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115618297942063103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 3
+  gridZ: 3
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &2518381043934893438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115618297942063103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &136645902339605885
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,8 +188,9 @@ GameObject:
   - component: {fileID: 9092758216486410553}
   - component: {fileID: 2894027827498185238}
   - component: {fileID: 6127969100832446183}
-  - component: {fileID: 5025002967551595757}
   - component: {fileID: 8931899725991205104}
+  - component: {fileID: 5025002967551595757}
+  - component: {fileID: 3318057155961036070}
   m_Layer: 0
   m_Name: DriftIsland (1)
   m_TagString: Untagged
@@ -273,24 +291,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &5025002967551595757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136645902339605885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 0
-  gridZ: 3
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &8931899725991205104
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -318,6 +318,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &5025002967551595757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136645902339605885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 0
+  gridZ: 3
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &3318057155961036070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136645902339605885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &694542827459916202
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,8 +772,9 @@ GameObject:
   - component: {fileID: 9175019258939545550}
   - component: {fileID: 8843377798655896561}
   - component: {fileID: 3586015905885924454}
-  - component: {fileID: 7012397342193439338}
   - component: {fileID: 7045734070655998070}
+  - component: {fileID: 7012397342193439338}
+  - component: {fileID: 1506219520340587611}
   m_Layer: 0
   m_Name: DriftIsland (13)
   m_TagString: Untagged
@@ -840,24 +875,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &7012397342193439338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712450131070757306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 4
-  gridZ: 4
-  originalColor: {r: 0.8352941, g: 0, b: 1, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &7045734070655998070
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -885,6 +902,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &7012397342193439338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712450131070757306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 4
+  gridZ: 4
+  originalColor: {r: 0.8352941, g: 0, b: 1, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &1506219520340587611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712450131070757306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &1872530666423440456
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,8 +948,9 @@ GameObject:
   - component: {fileID: 754437545608501856}
   - component: {fileID: 7250865128602065745}
   - component: {fileID: 4089284285884835398}
-  - component: {fileID: 5689756566394007165}
   - component: {fileID: 6530514183576964366}
+  - component: {fileID: 5689756566394007165}
+  - component: {fileID: 6505779349774599911}
   m_Layer: 0
   m_Name: DriftIsland (15)
   m_TagString: Untagged
@@ -999,24 +1051,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &5689756566394007165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872530666423440456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 4
-  gridZ: 1
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &6530514183576964366
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1044,6 +1078,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &5689756566394007165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872530666423440456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 4
+  gridZ: 1
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &6505779349774599911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872530666423440456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &2049235727765495089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,8 +1297,9 @@ GameObject:
   - component: {fileID: 5202170414552646887}
   - component: {fileID: 7080484599821343335}
   - component: {fileID: 512709505493236908}
-  - component: {fileID: 4064603128251208255}
   - component: {fileID: 4406865920393537666}
+  - component: {fileID: 4064603128251208255}
+  - component: {fileID: 747859353823768086}
   m_Layer: 0
   m_Name: DriftIsland (5)
   m_TagString: Untagged
@@ -1331,24 +1400,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &4064603128251208255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065247099526973384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
-  gridX: 1
-  gridZ: 1
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &4406865920393537666
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1376,6 +1427,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &4064603128251208255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065247099526973384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 1
+  gridX: 1
+  gridZ: 1
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &747859353823768086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065247099526973384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &2110740142259158584
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,8 +1610,9 @@ GameObject:
   - component: {fileID: 3142636346191595437}
   - component: {fileID: 5982847078855375376}
   - component: {fileID: 927967082417239355}
-  - component: {fileID: 8509538877335474834}
   - component: {fileID: 453642476825720023}
+  - component: {fileID: 8509538877335474834}
+  - component: {fileID: 864764580593589462}
   m_Layer: 0
   m_Name: DriftIsland (12)
   m_TagString: Untagged
@@ -1627,24 +1713,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &8509538877335474834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2595629101245525352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 3
-  gridZ: 0
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &453642476825720023
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1672,6 +1740,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &8509538877335474834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595629101245525352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 3
+  gridZ: 0
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &864764580593589462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595629101245525352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &3172109003050956977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,8 +2057,9 @@ GameObject:
   - component: {fileID: 284369476589764787}
   - component: {fileID: 2492369896358051882}
   - component: {fileID: 2372051766774954357}
-  - component: {fileID: 1788808401797866365}
   - component: {fileID: 5231381797051820232}
+  - component: {fileID: 1788808401797866365}
+  - component: {fileID: 5952923576471507331}
   m_Layer: 0
   m_Name: DriftIsland (9)
   m_TagString: Untagged
@@ -2057,24 +2160,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &1788808401797866365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3427067941324799217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 2
-  gridZ: 0
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &5231381797051820232
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2102,6 +2187,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &1788808401797866365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3427067941324799217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 2
+  gridZ: 0
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &5952923576471507331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3427067941324799217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &3665940871206659449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,8 +2370,9 @@ GameObject:
   - component: {fileID: 5670868054754871305}
   - component: {fileID: 8403321909210574967}
   - component: {fileID: 3092001643590282312}
-  - component: {fileID: 4759651532516943100}
   - component: {fileID: 309107811372590528}
+  - component: {fileID: 4759651532516943100}
+  - component: {fileID: 4226547229773223782}
   m_Layer: 0
   m_Name: DriftIsland
   m_TagString: Untagged
@@ -2353,24 +2473,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &4759651532516943100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3796191418792194300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 0
-  gridZ: 4
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &309107811372590528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2398,6 +2500,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &4759651532516943100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3796191418792194300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 0
+  gridZ: 4
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &4226547229773223782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3796191418792194300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &3816189780632181019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,8 +2546,9 @@ GameObject:
   - component: {fileID: 8957706647494242924}
   - component: {fileID: 6812597502080116913}
   - component: {fileID: 2326720953214985686}
-  - component: {fileID: 2275969997962342486}
   - component: {fileID: 3261880673261627557}
+  - component: {fileID: 2275969997962342486}
+  - component: {fileID: 4038837667630203649}
   m_Layer: 0
   m_Name: DriftIsland (4)
   m_TagString: Untagged
@@ -2512,24 +2649,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &2275969997962342486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3816189780632181019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 1
-  gridZ: 2
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &3261880673261627557
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2557,6 +2676,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &2275969997962342486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3816189780632181019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 1
+  gridZ: 2
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &4038837667630203649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3816189780632181019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &4047417194823955829
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,8 +3221,9 @@ GameObject:
   - component: {fileID: 3210181471337753243}
   - component: {fileID: 7983341034897042044}
   - component: {fileID: 7154144786005240391}
-  - component: {fileID: 6321783586416998415}
   - component: {fileID: 8734686047623891108}
+  - component: {fileID: 6321783586416998415}
+  - component: {fileID: 7615802789705735621}
   m_Layer: 0
   m_Name: DriftIsland (14)
   m_TagString: Untagged
@@ -3170,24 +3324,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &6321783586416998415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5059960743704218579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 4
-  gridZ: 2
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &8734686047623891108
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3215,6 +3351,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &6321783586416998415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059960743704218579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 4
+  gridZ: 2
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &7615802789705735621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059960743704218579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &5169605109640841623
 GameObject:
   m_ObjectHideFlags: 0
@@ -3227,8 +3397,9 @@ GameObject:
   - component: {fileID: 5643256785521404681}
   - component: {fileID: 4799146664536455604}
   - component: {fileID: 3290650077265658576}
-  - component: {fileID: 563326666085521974}
   - component: {fileID: 3685197665221182148}
+  - component: {fileID: 563326666085521974}
+  - component: {fileID: 7523160706761227275}
   m_Layer: 0
   m_Name: DriftIsland (6)
   m_TagString: Untagged
@@ -3329,24 +3500,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &563326666085521974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5169605109640841623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 2
-  gridZ: 4
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &3685197665221182148
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3374,6 +3527,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &563326666085521974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5169605109640841623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 2
+  gridZ: 4
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &7523160706761227275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5169605109640841623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &5494412920506379009
 GameObject:
   m_ObjectHideFlags: 0
@@ -3872,8 +4059,9 @@ GameObject:
   - component: {fileID: 9156007895742357079}
   - component: {fileID: 3552629102073594185}
   - component: {fileID: 378390256737939126}
-  - component: {fileID: 6625943618315678091}
   - component: {fileID: 7523907909368201943}
+  - component: {fileID: 6625943618315678091}
+  - component: {fileID: 4017039502483098492}
   m_Layer: 0
   m_Name: DriftIsland (8)
   m_TagString: Untagged
@@ -3974,24 +4162,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &6625943618315678091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6337408609227900163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
-  gridX: 2
-  gridZ: 1
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &7523907909368201943
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4019,6 +4189,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &6625943618315678091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337408609227900163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 1
+  gridX: 2
+  gridZ: 1
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &4017039502483098492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337408609227900163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &6609728866790066902
 GameObject:
   m_ObjectHideFlags: 0
@@ -4031,8 +4235,9 @@ GameObject:
   - component: {fileID: 5432118895964478618}
   - component: {fileID: 405139856658798943}
   - component: {fileID: 4982495243378534324}
-  - component: {fileID: 942123610933921151}
   - component: {fileID: 5886979120025315524}
+  - component: {fileID: 942123610933921151}
+  - component: {fileID: 6211965852161980555}
   m_Layer: 0
   m_Name: DriftIsland (11)
   m_TagString: Untagged
@@ -4133,24 +4338,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &942123610933921151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6609728866790066902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
-  gridX: 3
-  gridZ: 1
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &5886979120025315524
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4178,6 +4365,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &942123610933921151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6609728866790066902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 1
+  gridX: 3
+  gridZ: 1
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &6211965852161980555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6609728866790066902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &6614314996615953827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4267,8 +4488,9 @@ GameObject:
   - component: {fileID: 1308809656477348848}
   - component: {fileID: 6753946847105957717}
   - component: {fileID: 4751400787195352938}
-  - component: {fileID: 3034548341052867213}
   - component: {fileID: 1780069663387497229}
+  - component: {fileID: 3034548341052867213}
+  - component: {fileID: 6909150226320128903}
   m_Layer: 0
   m_Name: DriftIsland (3)
   m_TagString: Untagged
@@ -4369,24 +4591,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &3034548341052867213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6919531168105839388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 0
-  gridZ: 0
-  originalColor: {r: 0.13494706, g: 1, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &1780069663387497229
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4414,6 +4618,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &3034548341052867213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6919531168105839388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 0
+  gridZ: 0
+  originalColor: {r: 0.13494706, g: 1, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &6909150226320128903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6919531168105839388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &7199852587322879966
 GameObject:
   m_ObjectHideFlags: 0
@@ -4528,8 +4766,9 @@ GameObject:
   - component: {fileID: 8403311574802494720}
   - component: {fileID: 1194170782476251622}
   - component: {fileID: 7692455715899195418}
-  - component: {fileID: 4441267795168363193}
   - component: {fileID: 8379635494583041761}
+  - component: {fileID: 4441267795168363193}
+  - component: {fileID: 4489662516922727035}
   m_Layer: 0
   m_Name: DriftIsland (2)
   m_TagString: Untagged
@@ -4630,24 +4869,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &4441267795168363193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7470132292000716953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
-  gridX: 0
-  gridZ: 2
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &8379635494583041761
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4675,6 +4896,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &4441267795168363193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470132292000716953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 0
+  gridX: 0
+  gridZ: 2
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &4489662516922727035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470132292000716953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &7600570827429529725
 GameObject:
   m_ObjectHideFlags: 0
@@ -4879,8 +5134,9 @@ GameObject:
   - component: {fileID: 3916623906542456172}
   - component: {fileID: 8112916970843022624}
   - component: {fileID: 6398051392704555215}
-  - component: {fileID: 2543200966874335288}
   - component: {fileID: 2308668415581002923}
+  - component: {fileID: 2543200966874335288}
+  - component: {fileID: 2860040158086677344}
   m_Layer: 0
   m_Name: DriftIsland (7)
   m_TagString: Untagged
@@ -4981,24 +5237,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.0026207}
   m_Center: {x: 0, y: 0, z: -0.0013104619}
---- !u!114 &2543200966874335288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8066876773405094797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
-  gridX: 2
-  gridZ: 2
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
-  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
-  debugMode: 1
 --- !u!54 &2308668415581002923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5026,3 +5264,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &2543200966874335288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066876773405094797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
+  tileType: 1
+  gridX: 2
+  gridZ: 2
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightColor: {r: 0.015686274, g: 0.8790853, b: 1, a: 1}
+  debugMode: 1
+--- !u!114 &2860040158086677344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066876773405094797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
+  tileRenderer: {fileID: 0}
+  tile: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
