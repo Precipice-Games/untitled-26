@@ -6,7 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 
 ## [Unreleased]
 * Working on connecting puzzle completion status to YarnSpinner's persistent variable storage.
-* Working on implementing logical handling for the tile types Enum.
+
+## [v1.0.0] - 2026-03-12
+
+### Added
+* Added baseline ice tile "sliding" mechanic.
+* Added volume sliders that work with music & SFX to fade playback in and out.
+* Added neon start and end waypoints for Player in puzzle mode.
+* Added dynamic tile texturing for ice tiles and normal tiles.
+* Added height map to tiles for further depth.
+* Added Penguin character sprite into Ice_Island.unity scene.
+
+### Fixed
+* Fixed an issue to disable the interaction prompt even while paused.
+
+### Removed
+* Removed old prototype scenes from build settings, leaving only the main menu and the Ice Island.
+* Removed the splash page feature.
+* Disabled the casting of shadows from tiles.
 
 ## [v0.4.3-prototype.1] - 2026-03-11
 
