@@ -37,7 +37,14 @@ public class PlayerFixedMovement : MonoBehaviour
     private int startTileZ;
     private int endTileX;
     private int endTileZ;
-    
+
+    //Keeps track of the potential tile for the player to move to
+    private int destinationX = 0;
+    private int destinationZ = 0;
+
+    private int deltaX;
+    private int deltaZ;
+
     // The new coordinates as a Vector3
     Vector3 newCoords;
     Vector3 newPosition;
@@ -104,6 +111,10 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveUp performed.");
+
+        destinationX = 0;
+        destinationZ = 0;
+
         TryToMovePlayer(0, 1);
     }
     
@@ -113,6 +124,8 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveDown called.");
+        destinationX = 0;
+        destinationZ = 0;
         TryToMovePlayer(0, -1);
     }
     
@@ -122,6 +135,8 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveLeft called.");
+        destinationX = 0;
+        destinationZ = 0;
         TryToMovePlayer(-1, 0);
     }
     
@@ -131,6 +146,8 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         Debug.Log("PlayerFixedMovement.cs >> MoveRight called.");
+        destinationX = 0;
+        destinationZ = 0;
         TryToMovePlayer(1, 0);
     }
     
@@ -150,7 +167,12 @@ public class PlayerFixedMovement : MonoBehaviour
         // Calculate the new position on the grid
         int newX = playerGridX + xDir;
         int newZ = playerGridZ + zDir;
-        
+
+        deltaX = xDir;
+        deltaZ = zDir;
+
+        Debug.Log("deltaX,deltaZ" + deltaX + ", " + deltaZ);
+
         Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {xDir},{zDir}");
 
         // Check if there's a tile to move to
@@ -165,7 +187,22 @@ public class PlayerFixedMovement : MonoBehaviour
             Debug.Log("PlayerFixedMovement.cs >> Move blocked: Outside grid");
             return;
         }
-        
+
+        destinationX += deltaX;
+        destinationZ += deltaZ;
+
+        Debug.Log("destinationX: " + destinationX);
+        Debug.Log("destinationZ: " + destinationZ);
+
+        Debug.Log("Dest + pt" + (destinationX + playerGridX) + "," + (destinationZ + playerGridZ));
+
+        if (gridManager.IsIceTileType(destinationX + playerGridX, destinationZ + playerGridZ))
+        {
+            Debug.Log("Is Ice");
+            TryToMovePlayer(deltaX, deltaZ);
+
+        }
+
         int gridX = newX;
         int gridZ = newZ;
 
@@ -174,7 +211,7 @@ public class PlayerFixedMovement : MonoBehaviour
         // HandleTileType();
 
         // For right now, we will just snap the player to the new tile.
-        SnapPlayerToTile(gridX, gridZ);
+        SnapPlayerToTile(destinationX, destinationZ);
     }
 
     public void SnapPlayerToTile(int coordX, int cordZ)
