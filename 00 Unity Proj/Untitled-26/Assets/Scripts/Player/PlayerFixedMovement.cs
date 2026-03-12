@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Vector3 = UnityEngine.Vector3;
+using Unity.VisualScripting;
 
 // This script is used to snap the Player in a fixed movement style during puzzle mode.
 // It is similar to the PlayerMovement.cs script, but it is used to snap the player to
@@ -44,6 +45,9 @@ public class PlayerFixedMovement : MonoBehaviour
 
     private int deltaX;
     private int deltaZ;
+
+    private int landingX = 0;
+    private int landingZ = 0;
 
     // The new coordinates as a Vector3
     Vector3 newCoords;
@@ -172,6 +176,9 @@ public class PlayerFixedMovement : MonoBehaviour
         deltaX = xDir;
         deltaZ = zDir;
 
+        destinationX += deltaX;
+        destinationZ += deltaZ;
+
         Debug.Log("deltaX,deltaZ" + deltaX + ", " + deltaZ);
 
         Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {xDir},{zDir}");
@@ -189,9 +196,6 @@ public class PlayerFixedMovement : MonoBehaviour
             return;
         }
 
-        destinationX += deltaX;
-        destinationZ += deltaZ;
-
         Debug.Log("destinationX: " + destinationX);
         Debug.Log("destinationZ: " + destinationZ);
 
@@ -203,6 +207,21 @@ public class PlayerFixedMovement : MonoBehaviour
             TryToMovePlayer(deltaX, deltaZ);
 
         }
+        else
+        {
+
+            landingX = destinationX + playerGridX;
+            landingZ = destinationZ + playerGridZ;
+
+            if (gridManager.IsCellEmpty(landingX,landingZ))
+            {
+
+                landingX = playerGridX;
+                landingZ = playerGridZ;
+
+            }
+
+        }
 
         int gridX = newX;
         int gridZ = newZ;
@@ -212,9 +231,10 @@ public class PlayerFixedMovement : MonoBehaviour
         // HandleTileType();
 
         Debug.Log("dest + playerGrid: " + (destinationX + playerGridX) + "," + (destinationZ + playerGridZ));
+        Debug.Log("landings: " + landingX + "," + landingZ);
 
         // For right now, we will just snap the player to the new tile.
-        SnapPlayerToTile(destinationX + playerGridX, destinationZ + playerGridZ);
+        SnapPlayerToTile(landingX, landingZ);
     }
 
     public void SnapPlayerToTile(int coordX, int cordZ)
