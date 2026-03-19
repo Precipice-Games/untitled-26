@@ -27,7 +27,7 @@ public class Skye_Idle_Animation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
         if (_frameCounter < _idleTextures.Length)
@@ -38,7 +38,7 @@ public class Skye_Idle_Animation : MonoBehaviour
 
             _idleAnimationMaterial.mainTexture = _idleTextures[(int)_frameCounter];
 
-            _frameCounter += 0.25f;
+            _frameCounter += 15f * Time.deltaTime;
 
 
         }
