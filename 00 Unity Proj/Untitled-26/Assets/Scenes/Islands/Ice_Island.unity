@@ -21369,6 +21369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puzzle2
       objectReference: {fileID: 0}
+    - target: {fileID: 6875277700547341980, guid: 172b1c960f6826a40af1cf3c7adfa91a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7526788016096355761, guid: 172b1c960f6826a40af1cf3c7adfa91a, type: 3}
       propertyPath: gridManager
       value: 
