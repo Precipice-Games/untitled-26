@@ -204,6 +204,13 @@ public class PlayerFixedMovement : MonoBehaviour
         if (gridManager.IsIceTileType(destinationX + playerGridX, destinationZ + playerGridZ))
         {
             Debug.Log("Is Ice");
+            /*if (!gridManager.IsCellEmpty(destinationX + playerGridX, destinationZ + playerGridZ))
+            {
+
+                SnapPlayerToTile(destinationX + playerGridX, destinationZ + playerGridZ);
+
+            }*/
+;
             TryToMovePlayer(deltaX, deltaZ);
 
         }
@@ -264,6 +271,9 @@ public class PlayerFixedMovement : MonoBehaviour
         if (endTileX == playerGridX && endTileZ == playerGridZ)
         {
             Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
+
+            transform.position = new Vector3(3.59f, 0.83f, 21.43f);
+
             puzzleCompleted.Invoke();
         }
         
