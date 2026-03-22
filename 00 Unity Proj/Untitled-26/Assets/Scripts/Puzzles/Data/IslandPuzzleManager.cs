@@ -11,8 +11,6 @@ public class IslandPuzzleManager : MonoBehaviour
     [Title("Puzzle Information")]
     [InfoBox("Attach each of the Puzzle Prefabs for this island.")]
     public List<GameObject> puzzlePrefabs;
-    private Vector3 playerPosition;
-    private Vector3 landingPadPosition;
     
     // Subscribe to events
     private void OnEnable()
@@ -30,8 +28,6 @@ public class IslandPuzzleManager : MonoBehaviour
     {
         // Update the puzzle's completion status
         completedPuzzle.puzzleSolved = true;
-        landingPadPosition = completedPuzzle.landingPad.transform.position;
-        Player.Instance.transform.position = landingPadPosition;
         CheckAllPuzzlesCompleted();
     }
 
@@ -50,7 +46,7 @@ public class IslandPuzzleManager : MonoBehaviour
                 return;
             }
             
-            Debug.Log("All puzzles completed!");
+            Debug.Log("IslandPuzzleManager.cs >> All puzzles completed!");
         }
     }
 }
