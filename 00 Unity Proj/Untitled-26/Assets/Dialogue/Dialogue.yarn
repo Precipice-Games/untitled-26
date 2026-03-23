@@ -79,11 +79,11 @@ Judith: … #line:02e9f33
 
 Sky: Hello! #line:0c4b355 
 
-Judith: What do you want? #line:03bcf72 
+???: What do you want? #line:03bcf72 
 
 Sky: I’m Sky, it’s nice to meet you! What's your name? #line:027966d 
 
-Judith: Judith. What do you want? #line:02425f6 
+???: Judith. What do you want? #line:02425f6 
 
 Sky: Well, actually, I was hoping you might be able to help me! #line:06c7301 
 
@@ -189,32 +189,32 @@ Judith: Best of luck on your journey. I’m sure you’re gonna need it. #line:0
 title: Penguin
 position: -256,-126
 ---
-=>Penguin NPC: Brrrrr! (What are you doing here?!)
-    Sky: Uh, what?
-    Penguin: Brrrrrrrrrrrrrr! (You shall meet your End!)
-    Sky: Sorry, I don’t speak penguin.
-    Penguin: Br! (Fear me human)
-    Sky: It was probably just trying to say hello!
-=>Penguin NPC: Noot Noot! (Nothing on this island is as cold as my soul)
-    Sky: What a cute little guy.
-    Penguin NPC: Noot! Noot! (Get off the island while you still can!)
-    Sky: Well, bye!
-    Penguin NPC: Nooot! Nooot! (Noooo! The Beast will feast on your bones) //[The “Beast” is actually Judith when she scares the penguins away]
-=>Penguin NPC: Gak! (I’m training to be able to fly!)
-    Sky: Sorry little buddy, but penguins can’t fly.
-    Penguin NPC: Gaaak! (Coward! I’ll show you!)
-=>Penguin NPC: Quank! (Where is that Bastard!)
-    Sky: Aww! Look at this little cutie!
-    Penguin NPC: Quack!(I’m looking for that bastard, Marvin!)
-    Sky: Aw so cute wiggling their little flippers.
-    Penguin NPC: Quank! (That bastard tossed my child over the Island!)
-    Sky: Aww well bye little guy.
-    Penguin NPC: Quank! Quank! Quank!(Wait where are you going! Come Back! HELP MY CHILD!!!)
-=>Penguin NPC: Brrr (You are not a penguin, get out!)
-    Sky: Oh my gosh you’re such a cutie patootie!
-    Penguin NPC: Brr! (I’ll rip your face clean off if you take another step!)
-    Sky: Awww you’re just as sweet as you are adorable!
-=>Penguin NPC: Squawk! (Why do we live just to die?)
-    Sky: Awww look at this cute little fella! Not a single thought behind those eyes!
-    Penguin NPC: Squuuaaawwk! (Your story will turn its final page one day whether you like it or not!)
+=>Penguin NPC: Brrrrr! (What are you doing here?!) #line:00733af 
+    Sky: Uh, what? #line:0a69426 
+    Penguin: Brrrrrrrrrrrrrr! (You shall meet your End!) #line:03a19d6 
+    Sky: Sorry, I don’t speak penguin. #line:058eff8 
+    Penguin: Br! (Fear me human) #line:0e6ceb1 
+    Sky: It was probably just trying to say hello! #line:036e380 
+=>Penguin NPC: Noot Noot! (Nothing on this island is as cold as my soul) #line:0cefee7 
+    Sky: What a cute little guy. #line:0d826ae 
+    Penguin NPC: Noot! Noot! (Get off the island while you still can!) #line:003b978 
+    Sky: Well, bye! #line:0cca570 
+    Penguin NPC: Nooot! Nooot! (Noooo! The Beast will feast on your bones)  #line:086e19f //[The “Beast” is actually Judith when she scares the penguins away]
+=>Penguin NPC: Gak! (I’m training to be able to fly!) #line:06694de 
+    Sky: Sorry little buddy, but penguins can’t fly. #line:0d710f9 
+    Penguin NPC: Gaaak! (Coward! I’ll show you!) #line:028113e 
+=>Penguin NPC: Quank! (Where is that Bastard!) #line:00ad797 
+    Sky: Aww! Look at this little cutie! #line:0c5c627 
+    Penguin NPC: Quack!(I’m looking for that bastard, Marvin!) #line:0b6bac4 
+    Sky: Aw so cute wiggling their little flippers. #line:0a50a0f 
+    Penguin NPC: Quank! (That bastard tossed my child over the Island!) #line:04ccf11 
+    Sky: Aww well bye little guy. #line:0465a3c 
+    Penguin NPC: Quank! Quank! Quank!(Wait where are you going! Come Back! HELP MY CHILD!!!) #line:013e3c5 
+=>Penguin NPC: Brrr (You are not a penguin, get out!) #line:0bef339 
+    Sky: Oh my gosh you’re such a cutie patootie! #line:04cf655 
+    Penguin NPC: Brr! (I’ll rip your face clean off if you take another step!) #line:0afde0f 
+    Sky: Awww you’re just as sweet as you are adorable! #line:0b019f9 
+=>Penguin NPC: Squawk! (Why do we live just to die?) #line:007c292 
+    Sky: Awww look at this cute little fella! Not a single thought behind those eyes! #line:09af056 
+    Penguin NPC: Squuuaaawwk! (Your story will turn its final page one day whether you like it or not!) #line:0d2c4e4 
 ===

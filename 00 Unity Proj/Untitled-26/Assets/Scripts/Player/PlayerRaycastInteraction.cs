@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.UI.Image;
@@ -10,6 +11,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
     RaycastHit raycastHit; //information about what is being hit
     bool isHitting;
     public float rayLength = 2.5f;
+    public bool raycastEnabled = true;
 
     //    ==== Interactable Object ====
     public GameObject activeInteractable; //Stores overlapping interactable object
@@ -21,6 +23,9 @@ public class PlayerRaycastInteraction : MonoBehaviour
     //    ==== Timer ====
     public float activeTimer = 5.0f;
     public float maxTime = 5.0f;
+    
+    // Static event to notify subscribers of raycast toggling
+    public static event Action<bool> raycastToggled;
 
     /*
      * 
@@ -36,6 +41,12 @@ public class PlayerRaycastInteraction : MonoBehaviour
     void FixedUpdate()
     {
 
+        if (!raycastEnabled)
+        {
+            interactionUI.SetActive(false);
+            activeInteractable = null;
+            return; // exit early if raycast is disabled (used for dialogue and puzzle states)
+        }
 
         if (activeTimer < maxTime)
         {
@@ -52,7 +63,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
         }
 
 
-            interactionRay.origin = transform.position;
+        interactionRay.origin = transform.position;
         interactionRay.direction = transform.forward;
 
         Vector3 origin = interactionRay.origin;
@@ -106,5 +117,44 @@ public class PlayerRaycastInteraction : MonoBehaviour
 
         }
 
+    }
+
+
+
+
+    /*
+     * 
+     * Toggles the raycast on and off. Used for dialogue and puzzle states
+     * to prevent the player from interacting with objects while in those states
+     * 
+     */
+
+    private void OnEnable()
+    {
+        GameStateManager.transitionedToNewState += ToggleRaycast;
+    }
+
+    private void OnDisable()
+    {
+        GameStateManager.transitionedToNewState -= ToggleRaycast;
+    }
+
+    /// <summary>
+    /// This method ensures that the raycast is toggled properly,
+    /// depending on the current state of the game.
+    /// </summary>
+    /// <param name="state"></param>
+    public void ToggleRaycast(GameStateManager.GameState state)
+    {
+        if (state == GameStateManager.GameState.Exploration)
+        {
+            raycastEnabled = true;
+            raycastToggled?.Invoke(true);
+        }
+        else
+        {
+            raycastEnabled = false;
+            raycastToggled?.Invoke(false);
+        }
     }
 }

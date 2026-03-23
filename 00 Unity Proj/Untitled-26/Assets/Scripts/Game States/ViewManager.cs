@@ -34,7 +34,14 @@ public class ViewManager : MonoBehaviour
     public Camera menuCamera;
     private Camera _targetCamera;
 
+    [Space]
+    [Title("Puzzle Triggering Event", "Event fired when the Player interacts with an InteractablePillar.")]
     public UnityEvent puzzleSwitchDetected;
+    
+    [Title("Debug Mode")]
+    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
+    [PropertyTooltip("Enables or disables debug logs in a given script.")]
+    public bool debugMode = true;
 
     private void Awake()
     {
@@ -53,7 +60,7 @@ public class ViewManager : MonoBehaviour
         if (dialogueCamera != null) cameras.Add(dialogueCamera);
         if (menuCamera != null) cameras.Add(menuCamera);
         
-        Debug.Log($"ViewManager.cs >> Initialized with {cameras.Count} cameras.");
+        if (debugMode) Debug.Log($"ViewManager.cs >> Initialized with {cameras.Count} cameras.");
         
         // Initialize UI canvases list if null
         if (uiCanvases == null)
@@ -71,7 +78,7 @@ public class ViewManager : MonoBehaviour
         if (pausedUI != null) uiCanvases.Add(pausedUI);
         if (dialogueUI != null) uiCanvases.Add(dialogueUI);
         
-        Debug.Log($"ViewManager.cs >> Initialized with {uiCanvases.Count} UI Canvases.");
+        if (debugMode) Debug.Log($"ViewManager.cs >> Initialized with {uiCanvases.Count} UI Canvases.");
     }
 
     private void OnEnable()
@@ -161,7 +168,7 @@ public class ViewManager : MonoBehaviour
                 if (canvas == targetCanvas)
                 {
                     canvas.SetActive(true);
-                    Debug.Log($"ViewManager.cs >> Enabled UI Canvas: {canvas.name}");
+                    if (debugMode) Debug.Log($"ViewManager.cs >> Enabled UI Canvas: {canvas.name}");
                 }
                 else
                 {
@@ -189,7 +196,7 @@ public class ViewManager : MonoBehaviour
                 if (cam == targetCamera)
                 {
                     cam.enabled = true;
-                    Debug.Log($"ViewManager.cs >> Enabled camera: {cam.name}");
+                    if (debugMode) Debug.Log($"ViewManager.cs >> Enabled camera: {cam.name}");
                 }
                 else
                 {

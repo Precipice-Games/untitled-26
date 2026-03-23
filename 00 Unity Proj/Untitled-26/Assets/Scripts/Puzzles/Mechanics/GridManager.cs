@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
@@ -37,6 +38,28 @@ public class GridManager : MonoBehaviour
     public bool IsCellEmpty(int x, int z)
     {
         return grid[x, z] == null;
+    }
+
+    /// <summary>
+    /// Check if a tile is of type Ice.
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="z"></param>
+    /// <returns></returns>
+    public bool IsIceTileType(int x, int z)
+    {
+
+        if (!IsCellEmpty(x,z) && grid[x,z].tileType == SelectableTile.TileType.Ice)
+        {
+            Debug.Log("true");
+            return true;
+        }
+        else
+        {
+            Debug.Log("false");
+            return false;
+        }
+
     }
 
     /// <summary>
