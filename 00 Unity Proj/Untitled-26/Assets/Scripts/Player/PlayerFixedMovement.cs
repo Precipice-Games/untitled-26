@@ -93,10 +93,14 @@ public class PlayerFixedMovement : MonoBehaviour
         gridManager = puzzleInfo.gridManager.GetComponent<GridManager>();
         startTile = puzzleInfo.startTile;
         endTile = puzzleInfo.endTile;
-        
+
+        transform.parent = puzzleInfo.gameObject.transform.GetChild(0);
+
         // Get the grid coordinates of the starting tile
         startTileX = startTile.GetComponent<SelectableTile>().gridX;
         startTileZ = startTile.GetComponent<SelectableTile>().gridZ;
+
+        Debug.Log("Starting X,Z: " + startTileX + "," + startTileZ);
         
         // Get the grid coordinates of the end tile
         endTileX = endTile.GetComponent<SelectableTile>().gridX;
@@ -183,16 +187,16 @@ public class PlayerFixedMovement : MonoBehaviour
 
         Debug.Log("deltaX,deltaZ" + deltaX + ", " + deltaZ);
 
-        Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {xDir},{zDir}");
+        Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {destinationX + playerGridX},{destinationX + playerGridX}");
 
         // Check if there's a tile to move to
-        if (gridManager.IsCellEmpty(newX, newZ))
+        if (gridManager.IsCellEmpty(destinationX + playerGridX, destinationX + playerGridX))
         {
-            Debug.Log($"PlayerFixedMovement.cs >> There is no tile to jump to at: {newX},{newZ}");
+            Debug.Log($"PlayerFixedMovement.cs >> There is no tile to jump to at: {destinationX + playerGridX},{destinationX + playerGridX}");
             return;
         }
         
-        if (!gridManager.IsInsideGrid(newX, newZ))
+        if (!gridManager.IsInsideGrid(destinationX + playerGridX, destinationX + playerGridX))
         {
             Debug.Log("PlayerFixedMovement.cs >> Move blocked: Outside grid");
             return;
@@ -206,6 +210,13 @@ public class PlayerFixedMovement : MonoBehaviour
         if (gridManager.IsIceTileType(destinationX + playerGridX, destinationZ + playerGridZ))
         {
             Debug.Log("Is Ice");
+            /*if (!gridManager.IsCellEmpty(destinationX + playerGridX, destinationZ + playerGridZ))
+            {
+
+                SnapPlayerToTile(destinationX + playerGridX, destinationZ + playerGridZ);
+
+            }*/
+;
             TryToMovePlayer(deltaX, deltaZ);
 
         }
@@ -245,9 +256,9 @@ public class PlayerFixedMovement : MonoBehaviour
         Debug.Log(coordX + ", " + cordZ);
         // Grab the X and Z coordinates in Vector3 from the GridManager
         newCoords = gridManager.GridToWorld(coordX, cordZ);
-        newPosition = new Vector3(newCoords.x, transform.position.y, newCoords.z);
+        newPosition = new Vector3(newCoords.x, transform.localPosition.y, newCoords.z);
         Debug.Log("New Position:" + newPosition);
-        transform.position = newPosition;
+        transform.localPosition = newPosition;
 
         playerGridX = coordX;
         playerGridZ = cordZ;
@@ -266,6 +277,10 @@ public class PlayerFixedMovement : MonoBehaviour
         if (endTileX == playerGridX && endTileZ == playerGridZ)
         {
             Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
+
+            transform.parent = null;
+            transform.position = new Vector3(3.59f, 0.83f, 21.43f);
+
             puzzleCompleted.Invoke(); // For the GameStateManager
             updatePuzzleStatus?.Invoke(puzzleInfo); // For the IslandPuzzleManager
         }
