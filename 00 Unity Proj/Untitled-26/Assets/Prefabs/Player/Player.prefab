@@ -320,6 +320,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   jumpPower: 4
+  jumpMovement: 0
+  maxJumps: 1
+  jumpsRemaining: 0
+  groundCheckPos: {fileID: 137271524649294906}
+  groundCheckSize: {x: 0.5, y: 0.05, z: 0.5}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  isGrounded: 0
+  groundCoord: 1.9
+  baseGravity: 2
+  maxFallSpeed: 18
+  fallMultiplier: 1
 --- !u!114 &6709136814799094051
 MonoBehaviour:
   m_ObjectHideFlags: 0
