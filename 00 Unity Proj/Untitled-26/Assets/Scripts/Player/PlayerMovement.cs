@@ -2,6 +2,7 @@
 using UnityEditor.Build;
 #endif
 
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,20 +15,23 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb; //contains the rigidbody of the player
     
     // ========== Jumping ==========
-    [Header("Jump")]
+    [Space]
+    [Title("Jump", "Variables used for the Player's jumping mechanic.")]
     public float jumpPower = 4.0f; //how strong the jump force is
     public float jumpMovement;
     public int maxJumps = 1;
     public int jumpsRemaining;
 
-    [Header("GroundCheck")]
-    public Transform groundCheckPos;
+    [Space]
+    [Title("Ground Check", "Variables used to perform ground checks for jumping.")]
+    public Transform playerTransform;
     public Vector3 groundCheckSize = new Vector3(0.5f, 0.05f, 0.5f);
     public LayerMask groundLayer;
     public bool isGrounded;
     public float groundCoord = 1.9f;
 
-    [Header("Gravity")]
+    [Space]
+    [Title("Gravity", "Variables used to control the gravity.")]
     public float baseGravity = 2f;
     public float maxFallSpeed = 18f;
     public float fallMultiplier = 1f;
@@ -50,6 +54,9 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 localMoveDirection = transform.right * xMovement + transform.forward * yMovement;
         transform.position += localMoveDirection * moveSpeed * Time.deltaTime;
+
+        // Perform ground check
+        GroundCheck();
     }
     
     /// <summary>
@@ -75,9 +82,30 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="context"></param>
     public void PlayerJump(InputAction.CallbackContext context)
     {
-        if (context.performed && rb != null)
+        if (context.performed && isGrounded && jumpsRemaining > 0)
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpPower, rb.linearVelocity.z);
+        }
+    }
+    
+    /// <summary>
+    /// Checks if the Player is on the ground. Consistently works
+    /// to update the isGrounded and jumpsRemaining variables
+    /// Called at the end of every FixedUpdate().
+    /// </summary>
+    private void GroundCheck()
+    {
+        // If the Player's Y-position is less than or
+        // equal to the ground coordinate
+        if (playerTransform.position.y <= groundCoord)
+        {
+            isGrounded = true; // Player is on the ground
+            jumpsRemaining = maxJumps; // Reset the jumps
+        }
+        else
+        {
+            // Player is not on the ground
+            isGrounded = false;
         }
     }
 }
