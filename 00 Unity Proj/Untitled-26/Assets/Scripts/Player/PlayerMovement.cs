@@ -7,29 +7,36 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    // ==== Variables =====
-
-
     // ==== Movement ====
     float moveSpeed = 5.0f; //speed coefficient
     float xMovement; //left to right movement data
     float yMovement; //forward to back movement data
-    public float jumpPower = 4.0f; //how strong the jump force is
-
-   
     Rigidbody rb; //contains the rigidbody of the player
+    
+    // ========== Jumping ==========
+    [Header("Jump")]
+    public float jumpPower = 4.0f; //how strong the jump force is
+    public float jumpMovement;
+    public int maxJumps = 1;
+    public int jumpsRemaining;
 
-    /*
-     * 
-     * Assign the rigidbody component to rb
-     * 
-     */
+    [Header("GroundCheck")]
+    public Transform groundCheckPos;
+    public Vector3 groundCheckSize = new Vector3(0.5f, 0.05f, 0.5f);
+    public LayerMask groundLayer;
+    public bool isGrounded;
+    public float groundCoord = 1.9f;
+
+    [Header("Gravity")]
+    public float baseGravity = 2f;
+    public float maxFallSpeed = 18f;
+    public float fallMultiplier = 1f;
+    // =============================
+    
     private void Start()
     {
-        
+        // Assign the rigidbody component to rb
         rb = GetComponent<Rigidbody>();
-
     }
 
     /*
@@ -43,11 +50,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
         Vector3 localMoveDirection = transform.right * xMovement + transform.forward * yMovement;
-
         transform.position += localMoveDirection * moveSpeed * Time.deltaTime;
-
     }
 
     /*
@@ -70,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
     /*
      * 
      * Takes the player's jump input in the context parameter
-     * then checks if context wwas just performed and that the
+     * then checks if context was just performed and that the
      * player has a rigidbody variable and if both are true
      * the players vertical velocity gets boosted by jumpPower
      * 
@@ -79,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
     public void PlayerJump(InputAction.CallbackContext context)
     {
 
-        
         if (context.performed && rb != null)
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpPower, rb.linearVelocity.z);
