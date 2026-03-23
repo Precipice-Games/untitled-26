@@ -38,55 +38,46 @@ public class PlayerMovement : MonoBehaviour
         // Assign the rigidbody component to rb
         rb = GetComponent<Rigidbody>();
     }
-
-    /*
-     * 
-     * Takes the movement variables and adjusts the corresponding axes
-     * in a Vector3 variable, then adjusts the player's position based
-     * on moveSpeed, the localMoveDirection variable, and deltaTime
-     * (deltaTiem to normalize the movement)
-     * 
-     */
+    
+    /// <summary>
+    /// Takes the movement variables and adjusts the corresponding axes
+    /// in a Vector3 variable, then adjusts the player's position based
+    /// on moveSpeed, the localMoveDirection variable, and deltaTime.
+    /// The deltaTime is used to normalize the movement.
+    /// </summary>
 
     private void FixedUpdate()
     {
         Vector3 localMoveDirection = transform.right * xMovement + transform.forward * yMovement;
         transform.position += localMoveDirection * moveSpeed * Time.deltaTime;
     }
-
-    /*
-     * 
-     * Takes the player's keyboard input in context as a Vector2
-     * the x value of the Vector2 (left and right movement) gets 
-     * assigned to xMovement, and the y value of the Vector2 
-     * (forward and back movement) gets assigned to yMovement
-     * 
-     */
+    
+    /// <summary>
+    /// Takes the player's keyboard input in context as a Vector2
+    /// the x value of the Vector2 (left and right movement) gets
+    /// assigned to xMovement, and the y value of the Vector2
+    /// (forward and back movement) gets assigned to yMovement.
+    /// </summary>
+    /// <param name="context"></param>
 
     public void PlayerMove(InputAction.CallbackContext context)
     {
-
         xMovement = context.ReadValue<Vector2>().x;
-        yMovement = context.ReadValue<Vector2>().y;        
-
+        yMovement = context.ReadValue<Vector2>().y;
     }
 
-    /*
-     * 
-     * Takes the player's jump input in the context parameter
-     * then checks if context was just performed and that the
-     * player has a rigidbody variable and if both are true
-     * the players vertical velocity gets boosted by jumpPower
-     * 
-     */
-
+    /// <summary>
+    /// Takes the player's jump input in the context parameter
+    /// then checks if context was just performed and that the
+    /// player has a rigidbody variable and if both are true
+    /// the players vertical velocity gets boosted by jumpPower
+    /// </summary>
+    /// <param name="context"></param>
     public void PlayerJump(InputAction.CallbackContext context)
     {
-
         if (context.performed && rb != null)
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpPower, rb.linearVelocity.z);
         }
-
     }
 }
