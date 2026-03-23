@@ -20,7 +20,7 @@ public class Skye_Idle_Animation : MonoBehaviour
 
         Vector2 currentScale = GetComponent<MeshRenderer>().material.mainTextureScale;
 
-        currentScale.y *= -1f;
+        //currentScale.y *= -1f;
 
         GetComponent<MeshRenderer>().material.mainTextureScale = currentScale;
         
