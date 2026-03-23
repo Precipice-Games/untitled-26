@@ -52,6 +52,7 @@ public class Player : MonoSingleton<Player>
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
         PhysicsManager.kinematicsUpdated += SwitchKinematics;
+        GameStateManager.transitionedToNewState += ConfigureOrientation;
 
         _playerControls.UI.Enable();
         _playerControls.Player.Enable();
@@ -65,6 +66,7 @@ public class Player : MonoSingleton<Player>
         InputManager.inputMapSwitched -= SwitchActionMap;
         InputManager.cursorChanged -= SwitchCursorFunctionality;
         PhysicsManager.kinematicsUpdated -= SwitchKinematics;
+        GameStateManager.transitionedToNewState -= ConfigureOrientation;
         
         _playerControls.UI.Disable();
         _playerControls.Player.Disable();
@@ -122,5 +124,25 @@ public class Player : MonoSingleton<Player>
     {
         rb.isKinematic = isKinematic;
         Debug.Log("Player.cs >> Kinematics were set to " + isKinematic);
+    }
+    
+    /// <summary>
+    /// Used to configure the Player's orientation based on the game state.
+    /// For instance, the orientation should be different in Puzzle mode to
+    /// ensure we can see Skye's sprite properly.
+    /// </summary>
+    /// <param name="newState"></param>
+    private void ConfigureOrientation(GameStateManager.GameState newState)
+    {
+        // If we're in Puzzle Mode, we want to orient the Player so
+        // her 2D sprite is more visible to the camera.
+        if (newState != GameStateManager.GameState.Puzzle)
+        {
+            transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(90, transform.rotation.y, transform.rotation.z);
+        }
     }
 }
