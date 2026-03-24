@@ -1201,6 +1201,10 @@ PrefabInstance:
       propertyPath: interactionUI
       value: 
       objectReference: {fileID: 680023778}
+    - target: {fileID: 8839583978902556456, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d634fb24ab058241a1c4b73c7d30724, type: 2}
     - target: {fileID: 9071040957621364692, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: m_Mesh
       value: 
