@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 22203974}
   m_Layer: 0
   m_Name: Starting Area
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21117,6 +21117,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29e0129ee383aac4192c73f2e7d21121, type: 3}
       propertyPath: m_Name
       value: SnowIsland_v1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29e0129ee383aac4192c73f2e7d21121, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 1874375098057135383, guid: 29e0129ee383aac4192c73f2e7d21121, type: 3}
       propertyPath: m_LocalScale.x
