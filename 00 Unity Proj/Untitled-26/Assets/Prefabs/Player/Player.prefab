@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 6709136814799094051}
   - component: {fileID: 6109077836722222614}
   - component: {fileID: 6739596773503058293}
+  - component: {fileID: 5519739034169789386}
   - component: {fileID: 6922169669516928053}
   - component: {fileID: 4698028750357769851}
   - component: {fileID: -5156860291110842563}
@@ -323,7 +324,7 @@ MonoBehaviour:
   jumpMovement: 0
   maxJumps: 1
   jumpsRemaining: 0
-  groundCheckPos: {fileID: 137271524649294906}
+  playerTransform: {fileID: 0}
   groundCheckSize: {x: 0.5, y: 0.05, z: 0.5}
   groundLayer:
     serializedVersion: 2
@@ -425,6 +426,25 @@ MonoBehaviour:
   activeInteractable: {fileID: 0}
   canInteract: 1
   interactionUI: {fileID: 0}
+  activeTimer: 5
+  maxTime: 5
+--- !u!114 &5519739034169789386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438321986708604092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedee67d3aad46888a28ebb90e54211f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoxCastGrounded
+  rawRayLength: 0.71055
+  rayLengthBuffer: 0.2
+  groundRaycastEnabled: 1
+  currentPlatform: {fileID: 0}
+  canInteract: 1
   activeTimer: 5
   maxTime: 5
 --- !u!114 &6922169669516928053
