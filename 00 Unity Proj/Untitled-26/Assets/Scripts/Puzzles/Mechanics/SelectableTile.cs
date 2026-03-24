@@ -36,7 +36,7 @@ public class SelectableTile : MonoBehaviour
         if (debugMode) Debug.Log(name + " starting at: " + gridX + "," + gridZ);
 
         GridManager.Instance.PlaceTile(this, gridX, gridZ);
-        transform.position = GridManager.Instance.GridToWorld(gridX, gridZ);
+        transform.localPosition = GridManager.Instance.GridToWorld(gridX, gridZ);
     }
 
     public void Select()
@@ -79,7 +79,7 @@ public class SelectableTile : MonoBehaviour
 
         GridManager.Instance.PlaceTile(this, gridX, gridZ);
 
-        transform.position = GridManager.Instance.GridToWorld(gridX, gridZ);
+        transform.localPosition = GridManager.Instance.GridToWorld(gridX, gridZ);
 
         Debug.Log(name + " moved to: " + gridX + "," + gridZ);
 

@@ -20,14 +20,14 @@ public class Skye_Idle_Animation : MonoBehaviour
 
         Vector2 currentScale = GetComponent<MeshRenderer>().material.mainTextureScale;
 
-        currentScale.y *= -1f;
+        //currentScale.y *= -1f;
 
         GetComponent<MeshRenderer>().material.mainTextureScale = currentScale;
         
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
         if (_frameCounter < _idleTextures.Length)
@@ -38,7 +38,7 @@ public class Skye_Idle_Animation : MonoBehaviour
 
             _idleAnimationMaterial.mainTexture = _idleTextures[(int)_frameCounter];
 
-            _frameCounter += 0.25f;
+            _frameCounter += 15f * Time.deltaTime;
 
 
         }
