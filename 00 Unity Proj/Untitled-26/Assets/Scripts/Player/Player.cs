@@ -99,6 +99,7 @@ public class Player : MonoSingleton<Player>
             return;
         }
         
+        
         _playerInput.SwitchCurrentActionMap(actionMapName);
         if (debugMode) Debug.Log($"Player.cs >> Switched action map for {actionMapName} state.");
     }
