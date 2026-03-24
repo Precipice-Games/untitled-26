@@ -19,7 +19,7 @@ public class CompletionButton : MonoBehaviour, IInteractable
     {
          if (variableStorage == null)
         {
-            variableStorage = FindObjectOfType<InMemoryVariableStorage>();
+            variableStorage = FindFirstObjectByType<InMemoryVariableStorage>();
         }
 
         if (variableStorage == null)
