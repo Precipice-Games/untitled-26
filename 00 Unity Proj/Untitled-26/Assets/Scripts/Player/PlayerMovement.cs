@@ -17,24 +17,13 @@ public class PlayerMovement : MonoBehaviour
     // ========== Jumping ==========
     [Space]
     [Title("Jump", "Variables used for the Player's jumping mechanic.")]
-    public float jumpPower = 4.0f; //how strong the jump force is
-    public float jumpMovement;
+    public float jumpPower = 4.0f; // How strong the jump force is
     public int maxJumps = 1;
     public int jumpsRemaining;
 
     [Space]
     [Title("Ground Check", "Variables used to perform ground checks for jumping.")]
-    public Transform playerTransform;
-    public Vector3 groundCheckSize = new Vector3(0.5f, 0.05f, 0.5f);
-    public LayerMask groundLayer;
-    public bool isGrounded;
-    public float groundCoord = 1.9f;
-
-    [Space]
-    [Title("Gravity", "Variables used to control the gravity.")]
-    public float baseGravity = 2f;
-    public float maxFallSpeed = 18f;
-    public float fallMultiplier = 1f;
+    [SerializeField] private bool isGrounded;
     
     // Subscribe to events
     private void OnEnable()
