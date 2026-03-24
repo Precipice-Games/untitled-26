@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 22203976}
   - component: {fileID: 22203975}
   - component: {fileID: 22203974}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Starting Area
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -16318,7 +16318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 617803613672485369, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.99975586
+      value: 0.9992676
       objectReference: {fileID: 0}
     - target: {fileID: 1100297765787535934, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -16346,7 +16346,15 @@ PrefabInstance:
       objectReference: {fileID: 1332926697}
     - target: {fileID: 2216021129077026559, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.49975586
+      value: 0.49926758
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708005216323003206, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: debugMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745341397233381068, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: debugMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3119200679773075960, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16394,7 +16402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4908240791910150784, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.49975586
+      value: 0.49926758
       objectReference: {fileID: 0}
     - target: {fileID: 4908240791910150784, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -16422,7 +16430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7831931681210109834, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.49975586
+      value: 0.49926758
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410000227044513620, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8794883448765901352, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -21108,6 +21120,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29e0129ee383aac4192c73f2e7d21121, type: 3}
       propertyPath: m_Name
       value: SnowIsland_v1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29e0129ee383aac4192c73f2e7d21121, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 29e0129ee383aac4192c73f2e7d21121, type: 3}
       propertyPath: m_TagString
