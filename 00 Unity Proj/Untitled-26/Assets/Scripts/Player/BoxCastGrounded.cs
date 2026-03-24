@@ -29,6 +29,8 @@ public class BoxCastGrounded : MonoBehaviour
     [PropertyTooltip("Be sure to add a buffer for the ray length to ensure consistency in ground detection.")]
     public float rayLengthBuffer;
     private float groundRayLength; // Actual ray length
+    
+    private LayerMask layerMask;
 
     private void Awake()
     {
@@ -38,6 +40,8 @@ public class BoxCastGrounded : MonoBehaviour
         // Even though the raw value of a ray is often half the size
         // of the object's height, sometimes there are issues detecting
         // the ground. Hence, why adding a tweakable buffer is necessary.
+        
+        layerMask = LayerMask.GetMask("Ground");
     }
     
     /// <summary>
@@ -71,21 +75,15 @@ public class BoxCastGrounded : MonoBehaviour
         Vector3 direction = groundInteractionRay.direction;
 
         // Perform the raycast using the ray's origin and downward direction
-        hittingGround = Physics.Raycast(groundInteractionRay, out groundRaycastHit, groundRayLength);
+        hittingGround = Physics.Raycast(groundInteractionRay, out groundRaycastHit, groundRayLength, layerMask);
 
         // If the ray is hitting something
         if (hittingGround)
         {
-
             // Turn the ray green
             Debug.DrawRay(origin, direction * groundRayLength, Color.green);
-
-            // Check if the object it's colliding with is tagged as "Ground"
-            if (groundRaycastHit.collider.CompareTag("Ground"))
-            {
-                currentPlatform = groundRaycastHit.collider.gameObject;
-            }
-
+            currentPlatform = groundRaycastHit.collider.gameObject;
+            Debug.Log("Grounded on: " + currentPlatform.name);
         }
         else
         {
