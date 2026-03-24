@@ -66,11 +66,7 @@ public class BoxCastGrounded : MonoBehaviour
         }
 
         // Set the origin and direction of the ray
-        // Start the ray slightly above the player's position to avoid starting inside a collider
-        groundInteractionRay.origin = transform.position + Vector3.up * 0.1f;
-        // Cast downward so we hit the ground under the player (use world down for stability)
-        groundInteractionRay.direction = Vector3.down;
-
+        SetOriginAndDirection();
         Vector3 origin = groundInteractionRay.origin;
         Vector3 direction = groundInteractionRay.direction;
 
@@ -81,14 +77,10 @@ public class BoxCastGrounded : MonoBehaviour
         if (hittingGround)
         {
 
+            // Turn the ray green
             Debug.DrawRay(origin, direction * groundRayLength, Color.green);
-            Debug.Log(groundRaycastHit.collider.gameObject.name);
 
-            // if (raycastHit.collider.GetComponent<IInteractable>() != null)
-            // {
-            //     currentPlatform = raycastHit.collider.gameObject;
-            // }
-
+            // Check if the object it's colliding with is tagged as "Ground"
             if (groundRaycastHit.collider.CompareTag("Ground"))
             {
                 currentPlatform = groundRaycastHit.collider.gameObject;
@@ -100,5 +92,16 @@ public class BoxCastGrounded : MonoBehaviour
             Debug.DrawRay(origin, direction * groundRayLength, Color.red);
             currentPlatform = null;
         }
+    }
+
+    /// <summary>
+    /// Sets the origin and direction of the raycast.
+    /// </summary>
+    private void SetOriginAndDirection()
+    {
+        // Start the ray slightly above the player's position to avoid starting inside a collider
+        groundInteractionRay.origin = transform.position + Vector3.up * 0.1f;
+        // Cast downward so we hit the ground under the player (use world down for stability)
+        groundInteractionRay.direction = Vector3.down;
     }
 }
