@@ -18,6 +18,7 @@ public class BoxCastGrounded : MonoBehaviour
     private Ray groundInteractionRay;
     private RaycastHit groundRaycastHit;
     bool hittingGround;
+    private LayerMask layerMask;
     public GameObject currentPlatform;
     public float activeTimer = 5.0f;
     public float maxTime = 5.0f;
@@ -30,7 +31,8 @@ public class BoxCastGrounded : MonoBehaviour
     public float rayLengthBuffer;
     private float groundRayLength; // Actual ray length
     
-    private LayerMask layerMask;
+    // Static event to notify subscribers of game state changes
+    public static event Action<bool> groundCheck;
 
     private void Awake()
     {
@@ -90,6 +92,8 @@ public class BoxCastGrounded : MonoBehaviour
             Debug.DrawRay(origin, direction * groundRayLength, Color.red);
             currentPlatform = null;
         }
+        
+        groundCheck?.Invoke(hittingGround);
     }
 
     /// <summary>
