@@ -324,7 +324,7 @@ MonoBehaviour:
   jumpMovement: 0
   maxJumps: 1
   jumpsRemaining: 0
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 137271524649294906}
   groundCheckSize: {x: 0.5, y: 0.05, z: 0.5}
   groundLayer:
     serializedVersion: 2
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dedee67d3aad46888a28ebb90e54211f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoxCastGrounded
+  groundChecking: 1
   rawRayLength: 0.71055
   rayLengthBuffer: 0.2
-  groundRaycastEnabled: 1
   currentPlatform: {fileID: 0}
   canInteract: 1
   activeTimer: 5
