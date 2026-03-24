@@ -9,7 +9,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Vector3 = UnityEngine.Vector3;
-using Unity.VisualScripting;
 
 // This script is used to snap the Player in a fixed movement style during puzzle mode.
 // It is similar to the PlayerMovement.cs script, but it is used to snap the player to
@@ -19,6 +18,7 @@ using Unity.VisualScripting;
 public class PlayerFixedMovement : MonoBehaviour
 {
     // ==== Variables =====
+    private PuzzleInformation puzzleInfo;
     private Vector3 playerCurrentPosition; // Current Vector3 position
     private Vector3 startPosition;
     private GridManager gridManager;
@@ -62,6 +62,7 @@ public class PlayerFixedMovement : MonoBehaviour
     [Space]
     [Title("Puzzle Completion Event", "Event fired when Player reaches the end tile of the puzzle.")]
     public UnityEvent puzzleCompleted;
+    public static event Action<PuzzleInformation> updatePuzzleStatus;
 
     private void Start()
     {
@@ -85,9 +86,10 @@ public class PlayerFixedMovement : MonoBehaviour
     /// regarding the current puzzle, such as the starting and ending tiles.
     /// This data is packaged and sent from the InteractablePillar.cs script.
     /// </summary>
-    /// <param name="puzzleInfo"></param>
-    private void UpdatePuzzleInformation(PuzzleInformation puzzleInfo)
+    /// <param name="info"></param>
+    private void UpdatePuzzleInformation(PuzzleInformation info)
     {
+        puzzleInfo = info;
         gridManager = puzzleInfo.gridManager.GetComponent<GridManager>();
         startTile = puzzleInfo.startTile;
         endTile = puzzleInfo.endTile;
@@ -279,7 +281,8 @@ public class PlayerFixedMovement : MonoBehaviour
             transform.parent = null;
             transform.position = new Vector3(3.59f, 0.83f, 21.43f);
 
-            puzzleCompleted.Invoke();
+            puzzleCompleted.Invoke(); // For the GameStateManager
+            updatePuzzleStatus?.Invoke(puzzleInfo); // For the IslandPuzzleManager
         }
         
         playerMoved?.Invoke(playerGridX, playerGridZ);
