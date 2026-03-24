@@ -1,3 +1,7 @@
+#if UNITY_EDITOR
+using UnityEditor.Build;
+#endif
+
 using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -8,20 +12,23 @@ using UnityEngine;
 public class BoxCastGrounded : MonoBehaviour
 {
     [Space]
-    [Title("Grounded Raycasting", "Variables used to handle ground checking.")]
+    [Title("Grounded Checker", "General variables used to handle ground checking.")]
+    public bool groundChecking = true;
+    public bool canInteract = true;
     private Ray groundInteractionRay;
     private RaycastHit groundRaycastHit;
     bool hittingGround;
-    public float rawRayLength; // Set a default ray length for ground detection
-    public float rayLengthBuffer; // Be sure to add a buffer for the ray length to ensure consistency in ground detection.
-    private float groundRayLength; // Actual ray length
-    public bool groundRaycastEnabled = true;
-
-    // ===== Variables =====
     public GameObject currentPlatform;
-    public bool canInteract = true;
     public float activeTimer = 5.0f;
     public float maxTime = 5.0f;
+    
+    [Space]
+    [Title("Raycast Settings", "Settings for the ray. Hover over variables for more information.")]
+    [PropertyTooltip("Baseline desired length of a ray.")]
+    public float rawRayLength;
+    [PropertyTooltip("Be sure to add a buffer for the ray length to ensure consistency in ground detection.")]
+    public float rayLengthBuffer;
+    private float groundRayLength; // Actual ray length
 
     private void Awake()
     {
@@ -42,7 +49,7 @@ public class BoxCastGrounded : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (!groundRaycastEnabled)
+        if (!groundChecking)
         {
             currentPlatform = null;
             return; // exit early if raycast is disabled (used for dialogue and puzzle states)
