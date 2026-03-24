@@ -35,6 +35,19 @@ public class PlayerMovement : MonoBehaviour
     public float baseGravity = 2f;
     public float maxFallSpeed = 18f;
     public float fallMultiplier = 1f;
+    
+    // Subscribe to events
+    private void OnEnable()
+    {
+        BoxCastGrounded.groundCheck += GroundCheck;
+    }
+    
+    // Unsubscribe from events
+    private void OnDisable()
+    {
+        BoxCastGrounded.groundCheck -= GroundCheck;
+    }
+    
     // =============================
     
     private void Start()
@@ -54,9 +67,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 localMoveDirection = transform.right * xMovement + transform.forward * yMovement;
         transform.position += localMoveDirection * moveSpeed * Time.deltaTime;
-
-        // Perform ground check
-        GroundCheck();
     }
     
     /// <summary>
@@ -93,11 +103,10 @@ public class PlayerMovement : MonoBehaviour
     /// to update the isGrounded and jumpsRemaining variables
     /// Called at the end of every FixedUpdate().
     /// </summary>
-    private void GroundCheck()
+    private void GroundCheck(bool grounded)
     {
-        // If the Player's Y-position is less than or
-        // equal to the ground coordinate
-        if (playerTransform.position.y <= groundCoord)
+        // If the Player is grounded
+        if (grounded)
         {
             isGrounded = true; // Player is on the ground
             jumpsRemaining = maxJumps; // Reset the jumps
