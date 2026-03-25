@@ -8961,7 +8961,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 22.736439}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1008845755}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &822727304
 BoxCollider:
@@ -10321,6 +10321,22 @@ MonoBehaviour:
   assetTable:
     m_TableReference:
       m_TableCollectionName: GUID:0cab315d749f0c241b0537baec364c2b
+--- !u!1 &977928729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3416868783655305253, guid: 52571f68872914e24837210513edea1d, type: 3}
+  m_PrefabInstance: {fileID: 977928726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &977928730 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8635081094713202853, guid: 52571f68872914e24837210513edea1d, type: 3}
+  m_PrefabInstance: {fileID: 977928726}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977928727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610c541718d694070a21327d1ae62e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &983981670
 GameObject:
   m_ObjectHideFlags: 0
@@ -22056,6 +22072,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 897056844}
     - target: {fileID: 2256523913752244413, guid: 34e361e532974434c8ac75f1dc46faf2, type: 3}
+      propertyPath: variableStorage
+      value: 
+      objectReference: {fileID: 977928730}
+    - target: {fileID: 2256523913752244413, guid: 34e361e532974434c8ac75f1dc46faf2, type: 3}
       propertyPath: islandPuzzleManager
       value: 
       objectReference: {fileID: 7795512651711934440}
@@ -22653,3 +22673,4 @@ SceneRoots:
   - {fileID: 8739545680216347640}
   - {fileID: 977928726}
   - {fileID: 1098756137}
+  - {fileID: 822727303}
