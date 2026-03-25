@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
 // This script is used to track information about each puzzle on
 // a given island. It's attached to the IslandManager of that
@@ -8,10 +9,13 @@ using UnityEngine;
 
 public class IslandPuzzleManager : MonoBehaviour
 {
-    [Title("Puzzle Information")]
-    [InfoBox("Attach each of the Puzzle Prefabs for this island.")]
+    [Title("Puzzle Prefabs", "Attach each of the Puzzle Prefabs for this island.")]
     public List<GameObject> puzzlePrefabs;
     
+    [Space]
+    [Title("IslandCompleted", "This event is fired when an island is complete.")]
+    public UnityEvent islandCompleted;
+
     // Subscribe to events
     private void OnEnable()
     {
@@ -47,6 +51,10 @@ public class IslandPuzzleManager : MonoBehaviour
             }
             
             Debug.Log("IslandPuzzleManager.cs >> All puzzles completed!");
+            
+            // Notify the IslandManager that all puzzles have been completed.
+            // This event is assigned in the Unity Editor.
+            islandCompleted.Invoke();
         }
     }
 }

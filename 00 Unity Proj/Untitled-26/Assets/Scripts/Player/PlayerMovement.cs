@@ -9,10 +9,11 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     // ==== Movement ====
-    float moveSpeed = 5.0f; //speed coefficient
-    float xMovement; //left to right movement data
-    float yMovement; //forward to back movement data
-    Rigidbody rb; //contains the rigidbody of the player
+    [Title("Movement", "Variables used for the Player's movement mechanic.")]
+    [SerializeField] private float moveSpeed = 5.0f; //speed coefficient
+    [SerializeField] private float xMovement; //left to right movement data
+    [SerializeField] private float yMovement; //forward to back movement data
+    [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
     
     // ========== Jumping ==========
     [Space]
