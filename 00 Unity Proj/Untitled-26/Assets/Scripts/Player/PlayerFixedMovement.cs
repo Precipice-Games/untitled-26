@@ -187,6 +187,9 @@ public class PlayerFixedMovement : MonoBehaviour
         destinationZ += deltaZ;
 
         Debug.Log($"PlayerFixedMovement.cs >> deltaX,deltaZ: ({deltaX},{deltaZ})");
+        Debug.Log($"PlayerFixedMovement.cs >> destinationX,destinationZ: ({destinationX},{destinationZ})");
+        Debug.Log($"PlayerFixedMovement.cs >> destinationX + playerGridX = {destinationX + playerGridX}");
+        Debug.Log($"PlayerFixedMovement.cs >> destinationZ + playerGridZ = {destinationZ + playerGridZ}");
 
         Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {destinationX + playerGridX},{destinationX + playerGridX}");
 
