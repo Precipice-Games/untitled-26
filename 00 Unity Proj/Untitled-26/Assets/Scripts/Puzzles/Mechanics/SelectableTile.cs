@@ -11,6 +11,8 @@ public class SelectableTile : MonoBehaviour
 
     public TileType tileType = TileType.Normal;
 
+    public int startingGridX;
+    public int startingGridZ;
     public int gridX;
     public int gridZ;
 
@@ -26,12 +28,26 @@ public class SelectableTile : MonoBehaviour
     [PropertyTooltip("Enables or disables debug logs in a given script.")]
     public bool debugMode = true;
 
+    private void OnEnable()
+    {
+        ResetPuzzle.resetPuzzle += ResetTiles;
+    }
+
+    private void OnDisable()
+    {
+        ResetPuzzle.resetPuzzle -= ResetTiles;
+    }
+
+
     void Start()
     {
         rend = GetComponent<Renderer>();
         originalColor = rend.material.color;
         rend.material.color = originalColor;
         // rend.material.SetColor("_BaseColor", originalColor);
+
+        startingGridX = gridX;
+        startingGridZ = gridZ;
 
         if (debugMode) Debug.Log(name + " starting at: " + gridX + "," + gridZ);
 
@@ -83,5 +99,12 @@ public class SelectableTile : MonoBehaviour
 
         Debug.Log(name + " moved to: " + gridX + "," + gridZ);
 
+    }
+
+    private void ResetTiles()
+    {
+        gridX = startingGridX;
+        gridZ = startingGridZ;
+        transform.localPosition = GridManager.Instance.GridToWorld(gridX, gridZ);
     }
 }
