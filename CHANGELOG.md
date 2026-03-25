@@ -7,6 +7,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Working on connecting puzzle completion status to YarnSpinner's persistent variable storage.
 
+## [v1.0.1] - 2026-03-24
+
+### Added
+* Added Puzzle2.prefab to the Ice Island.
+* Added orientation handling to the Player class so that the Player faces upwards during Puzzle mode.
+* Added UI Actions to Puzzle action map on the PlayerControls.inputactions asset.
+* Created the "Ground" layer mask.
+* Added a death barrier/void to the Ice Island.
+
+### Fixed
+* Fixed infinite jumping bug by adding a raycast-based ground checking system.
+* Fixed a graphical issue to ensure the surrounding edges of Skye's sprite within the 3D environment was transparent.
+* Fixed the speed of the Player's idle animation by making it frame-independent.
+
+### Changed
+* Changed the StartArea and SnowIsland_v1 prefab object to be within the Ground layer mask.
+* Restored missing code from the puzzle completion status system within the Island scripts (WIP).
+
 ## [v1.0.0] - 2026-03-12
 
 ### Added
