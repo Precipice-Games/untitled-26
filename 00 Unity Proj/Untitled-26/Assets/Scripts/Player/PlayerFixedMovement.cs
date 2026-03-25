@@ -72,12 +72,14 @@ public class PlayerFixedMovement : MonoBehaviour
     private void OnEnable()
     {
         InteractablePillar.puzzleTriggered += UpdatePuzzleInformation;
+        ResetPuzzle.resetPuzzle += ResetPlayerPosition;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         InteractablePillar.puzzleTriggered -= UpdatePuzzleInformation;
+        ResetPuzzle.resetPuzzle -= ResetPlayerPosition;
     }
     
     /// <summary>
@@ -282,5 +284,16 @@ public class PlayerFixedMovement : MonoBehaviour
         }
         
         playerMoved?.Invoke(playerGridX, playerGridZ);
+    }
+
+    private void ResetPlayerPosition()
+    {
+        // Get the grid coordinates of the starting tile
+        startTileX = startTile.GetComponent<SelectableTile>().gridX;
+        startTileZ = startTile.GetComponent<SelectableTile>().gridZ;
+
+        // After gathering data, move Player to the startTile
+        newPosition = new Vector3(startTileX, transform.localPosition.y, startTileZ);
+        transform.localPosition = newPosition;
     }
 }
