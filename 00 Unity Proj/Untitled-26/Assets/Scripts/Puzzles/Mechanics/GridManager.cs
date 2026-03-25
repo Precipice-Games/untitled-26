@@ -48,15 +48,14 @@ public class GridManager : MonoBehaviour
     /// <returns></returns>
     public bool IsIceTileType(int x, int z)
     {
-
         if (!IsCellEmpty(x,z) && grid[x,z].tileType == SelectableTile.TileType.Ice)
         {
-            Debug.Log("true");
+            // Debug.Log("true");
             return true;
         }
         else
         {
-            Debug.Log("false");
+            // Debug.Log("false");
             return false;
         }
 
