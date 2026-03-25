@@ -100,7 +100,7 @@ public class PlayerFixedMovement : MonoBehaviour
         startTileX = startTile.GetComponent<SelectableTile>().gridX;
         startTileZ = startTile.GetComponent<SelectableTile>().gridZ;
 
-        Debug.Log("Starting X,Z: " + startTileX + "," + startTileZ);
+        Debug.Log($"PlayerFixedMovement.cs >> Starting X,Z: ({startTileX},{startTileZ})");
         
         // Get the grid coordinates of the end tile
         endTileX = endTile.GetComponent<SelectableTile>().gridX;
@@ -185,7 +185,7 @@ public class PlayerFixedMovement : MonoBehaviour
         destinationX += deltaX;
         destinationZ += deltaZ;
 
-        Debug.Log("deltaX,deltaZ" + deltaX + ", " + deltaZ);
+        Debug.Log($"PlayerFixedMovement.cs >> deltaX,deltaZ: ({deltaX},{deltaZ})");
 
         Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {destinationX + playerGridX},{destinationX + playerGridX}");
 
@@ -202,10 +202,8 @@ public class PlayerFixedMovement : MonoBehaviour
             return;
         }
 
-        Debug.Log("destinationX: " + destinationX);
-        Debug.Log("destinationZ: " + destinationZ);
-
-        Debug.Log("Dest + pt" + (destinationX + playerGridX) + "," + (destinationZ + playerGridZ));
+        Debug.Log($"PlayerFixedMovement.cs >> Destination: ({destinationX},{destinationZ})");
+        Debug.Log($"PlayerFixedMovement.cs >> Destination + CurrentPosition: ({destinationX + playerGridX},{destinationZ + playerGridZ})");
 
         if (gridManager.IsIceTileType(destinationX + playerGridX, destinationZ + playerGridZ))
         {
@@ -236,6 +234,8 @@ public class PlayerFixedMovement : MonoBehaviour
 
         }
 
+        // TODO: Remove gridX and gridZ? My IDE said they are
+        //       assigned but never used. Lmk. -- Nikki
         int gridX = newX;
         int gridZ = newZ;
 
@@ -243,8 +243,8 @@ public class PlayerFixedMovement : MonoBehaviour
         //       The same should be done with a normal tile.
         // HandleTileType();
 
-        Debug.Log("dest + playerGrid: " + (destinationX + playerGridX) + "," + (destinationZ + playerGridZ));
-        Debug.Log("landings: " + landingX + "," + landingZ);
+        Debug.Log($"PlayerFixedMovement.cs >> Destination + PlayerGrid: ({destinationX + playerGridX},{destinationZ + playerGridZ})");
+        Debug.Log($"PlayerFixedMovement.cs >> Landings: ({landingX},{landingZ})");
 
         // For right now, we will just snap the player to the new tile.
         SnapPlayerToTile(landingX, landingZ);
@@ -252,12 +252,10 @@ public class PlayerFixedMovement : MonoBehaviour
 
     public void SnapPlayerToTile(int coordX, int cordZ)
     {
-
-        Debug.Log(coordX + ", " + cordZ);
         // Grab the X and Z coordinates in Vector3 from the GridManager
         newCoords = gridManager.GridToWorld(coordX, cordZ);
         newPosition = new Vector3(newCoords.x, transform.localPosition.y, newCoords.z);
-        Debug.Log("New Position:" + newPosition);
+        Debug.Log($"PlayerFixedMovement.cs >> New Position: {newPosition}");
         transform.localPosition = newPosition;
 
         playerGridX = coordX;
@@ -276,7 +274,7 @@ public class PlayerFixedMovement : MonoBehaviour
         // Check if the Player's coordinates match the end tile's coordinates
         if (endTileX == playerGridX && endTileZ == playerGridZ)
         {
-            Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at [{endTileX}, {endTileZ}].");
+            Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at ({endTileX}, {endTileZ}).");
 
             transform.parent = null;
             transform.position = new Vector3(3.59f, 0.83f, 21.43f);
