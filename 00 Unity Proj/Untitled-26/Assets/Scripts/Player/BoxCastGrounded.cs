@@ -11,7 +11,6 @@ using UnityEngine;
 
 public class BoxCastGrounded : MonoBehaviour
 {
-    [Space]
     [Title("Grounded Checker", "General variables used to handle ground checking.")]
     public bool groundChecking = true;
     private Ray groundInteractionRay;
