@@ -16203,7 +16203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 617803613672485369, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.9992676
+      value: 0.9991455
       objectReference: {fileID: 0}
     - target: {fileID: 1100297765787535934, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -21507,7 +21507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6875277700547341980, guid: 172b1c960f6826a40af1cf3c7adfa91a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7526788016096355761, guid: 172b1c960f6826a40af1cf3c7adfa91a, type: 3}
       propertyPath: gridManager
