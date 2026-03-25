@@ -292,8 +292,9 @@ public class PlayerFixedMovement : MonoBehaviour
         startTileX = startTile.GetComponent<SelectableTile>().gridX;
         startTileZ = startTile.GetComponent<SelectableTile>().gridZ;
 
+        Debug.Log("Starting X,Z: " + startTileX + "," + startTileZ);
+
         // After gathering data, move Player to the startTile
-        newPosition = new Vector3(startTileX, transform.localPosition.y, startTileZ);
-        transform.localPosition = newPosition;
+        SnapPlayerToTile(startTileX, startTileZ);
     }
 }
