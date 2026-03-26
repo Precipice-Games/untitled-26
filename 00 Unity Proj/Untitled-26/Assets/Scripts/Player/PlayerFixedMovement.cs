@@ -108,7 +108,22 @@ public class PlayerFixedMovement : MonoBehaviour
         endTileZ = endTile.GetComponent<SelectableTile>().gridZ;
         
         // After gathering data, move Player to the startTile
-        TryToMovePlayer(startTileX, startTileZ);
+        //TryToMovePlayer(startTileX, startTileZ);
+        MovePlayerToStartTile(startTileX, startTileZ);
+    }
+
+    /// <summary>
+    /// This method simply moves the Player to the starting tile. It was created as a
+    /// way to break down the complexity of the movement system itself. We may want to
+    /// optimize it later on by reducing code redundancy, but for now, it is functional
+    /// and should probably be kept for bug testing.
+    /// </summary>
+    /// <param name="startX"></param>
+    /// <param name="startz"></param>
+    private void MovePlayerToStartTile(int startX, int startZ)
+    {
+        Debug.Log($"PlayerFixedMovement.cs >> Moving Player to the starting tile ({startX},{startZ})...");
+        SnapPlayerToTile(startX, startZ);
     }
     
     // The following methods listen to callback events from the Puzzle map from the
@@ -177,18 +192,16 @@ public class PlayerFixedMovement : MonoBehaviour
     //       special tiles, like the ice mechanic.
     public void TryToMovePlayer(int xDir, int zDir)
     {
-
-        // Calculate the new position on the grid
-        int newX = playerGridX + xDir;
-        int newZ = playerGridZ + zDir;
-
         deltaX = xDir;
         deltaZ = zDir;
+        
+        Debug.Log($"PlayerFixedMovement.cs >> destinationX,destinationZ: ({destinationX},{destinationZ})");
+        Debug.Log($"PlayerFixedMovement.cs >> deltaX,deltaZ: ({deltaX},{deltaZ})");
+        Debug.Log("PlayerFixedMovement.cs >> Now adding the delta values onto the destination values...");
 
         destinationX += deltaX;
         destinationZ += deltaZ;
-
-        Debug.Log($"PlayerFixedMovement.cs >> deltaX,deltaZ: ({deltaX},{deltaZ})");
+        
         Debug.Log($"PlayerFixedMovement.cs >> destinationX,destinationZ: ({destinationX},{destinationZ})");
         Debug.Log($"PlayerFixedMovement.cs >> destinationX + playerGridX = {destinationX + playerGridX}");
         Debug.Log($"PlayerFixedMovement.cs >> destinationZ + playerGridZ = {destinationZ + playerGridZ}");
