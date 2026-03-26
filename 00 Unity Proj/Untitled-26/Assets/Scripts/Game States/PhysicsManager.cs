@@ -12,11 +12,6 @@ public class PhysicsManager : MonoBehaviour
 {
     public static event Action<bool> kinematicsUpdated;
     
-    [Title("Debug Mode")]
-    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
-    [PropertyTooltip("Enables or disables debug logs in a given script.")]
-    public bool debugMode = true;
-    
     // Subscribe to events
     private void OnEnable()
     {
@@ -45,6 +40,5 @@ public class PhysicsManager : MonoBehaviour
         }
         
         kinematicsUpdated?.Invoke(kinematics);
-        if (debugMode) Debug.Log("kinematicsUpdated invoked.");
     }
 }
