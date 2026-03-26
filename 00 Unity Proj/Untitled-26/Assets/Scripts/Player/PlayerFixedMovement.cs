@@ -182,24 +182,25 @@ public class PlayerFixedMovement : MonoBehaviour
         deltaX = xDir;
         deltaZ = zDir;
 
-        destinationX += deltaX;
-        destinationZ += deltaZ;
+        // Removed the += and made it just = which removed the puzzle start error
+        destinationX = deltaX;
+        destinationZ = deltaZ;
 
         Debug.Log($"PlayerFixedMovement.cs >> deltaX,deltaZ: ({deltaX},{deltaZ})");
         Debug.Log($"PlayerFixedMovement.cs >> destinationX,destinationZ: ({destinationX},{destinationZ})");
         Debug.Log($"PlayerFixedMovement.cs >> destinationX + playerGridX = {destinationX + playerGridX}");
         Debug.Log($"PlayerFixedMovement.cs >> destinationZ + playerGridZ = {destinationZ + playerGridZ}");
 
-        Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {destinationX + playerGridX},{destinationX + playerGridX}");
+        Debug.Log($"PlayerFixedMovement.cs >> Attempting to move the Player to: {destinationX + playerGridX},{destinationZ + playerGridZ}");
 
         // Check if there's a tile to move to
-        if (gridManager.IsCellEmpty(destinationX + playerGridX, destinationX + playerGridX))
+        if (gridManager.IsCellEmpty(destinationX + playerGridX, destinationZ + playerGridZ))
         {
             Debug.Log($"PlayerFixedMovement.cs >> There is no tile to jump to at: {destinationX + playerGridX},{destinationX + playerGridX}");
             return;
         }
         
-        if (!gridManager.IsInsideGrid(destinationX + playerGridX, destinationX + playerGridX))
+        if (!gridManager.IsInsideGrid(destinationX + playerGridX, destinationZ + playerGridZ))
         {
             Debug.Log("PlayerFixedMovement.cs >> Move blocked: Outside grid");
             return;
