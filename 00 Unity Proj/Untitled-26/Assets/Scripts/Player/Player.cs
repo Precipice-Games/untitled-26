@@ -22,17 +22,21 @@ public class Player : MonoSingleton<Player>
     /// Listeners should check the game is in exploration state.
     /// </summary>
     public UnityEvent Map;
-
+    
     public Rigidbody rb;
     
     public PlayerControls _playerControls { get; private set; }
     
     [SerializeField] private PlayerInput _playerInput;
     
-    [Title("Debug Mode")]
-    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
-    [PropertyTooltip("Enables or disables debug logs in a given script.")]
-    public bool debugMode = true;
+    [Space]
+    [Title("Debugging Options", "Settings for quick debugging options.")]
+    [PropertyTooltip("Print out messages regarding the Player's kinematics. False by default.")]
+    public bool printKinematics = false;
+    [PropertyTooltip("Print out updates regarding the action map. False by default.")]
+    public bool printActionMapUpdates = false;
+    [PropertyTooltip("Print out updates regarding the cursor. False by default.")]
+    public bool printCursorUpdates = false;
 
     void Awake()
     {
@@ -95,13 +99,13 @@ public class Player : MonoSingleton<Player>
     {
         if (_playerInput == null)
         {
-            if (debugMode) Debug.LogError("Player.cs >> Cannot switch action map: PlayerInput is null!");
+            if (printActionMapUpdates) Debug.LogError("Player.cs >> Cannot switch action map: PlayerInput is null!");
             return;
         }
         
         
         _playerInput.SwitchCurrentActionMap(actionMapName);
-        if (debugMode) Debug.Log($"Player.cs >> Switched action map for {actionMapName} state.");
+        if (printActionMapUpdates) Debug.Log($"Player.cs >> Switched action map for {actionMapName} state.");
     }
     
     // TODO: The cursor commands are static, so it's not as easy to assign
@@ -115,7 +119,7 @@ public class Player : MonoSingleton<Player>
         Cursor.lockState = lockMode;
         Cursor.visible = visible;
         
-        if (debugMode) Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
+        if (printCursorUpdates) Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
     }
     
     /// <summary>
@@ -125,7 +129,7 @@ public class Player : MonoSingleton<Player>
     private void SwitchKinematics(bool isKinematic)
     {
         rb.isKinematic = isKinematic;
-        Debug.Log("Player.cs >> Kinematics were set to " + isKinematic);
+        if (printKinematics) Debug.Log("Player.cs >> Kinematics were set to " + isKinematic);
     }
     
     /// <summary>

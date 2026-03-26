@@ -1190,6 +1190,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: printAttemptedTileType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1604888279}
@@ -16201,6 +16205,14 @@ PrefabInstance:
       propertyPath: gameState
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 497008879434423276, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: printSceneDefaults
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497008879434423276, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: printStateTransition
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 617803613672485369, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.9992676
@@ -21507,7 +21519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6875277700547341980, guid: 172b1c960f6826a40af1cf3c7adfa91a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7526788016096355761, guid: 172b1c960f6826a40af1cf3c7adfa91a, type: 3}
       propertyPath: gridManager
