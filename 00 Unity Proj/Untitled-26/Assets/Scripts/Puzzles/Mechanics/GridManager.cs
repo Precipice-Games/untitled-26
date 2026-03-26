@@ -30,7 +30,7 @@ public class GridManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Check if a cell is vacant.
+    /// Check if a cell is vacant. If it is, return true.
     /// </summary>
     /// <param name="x"></param>
     /// <param name="z"></param>

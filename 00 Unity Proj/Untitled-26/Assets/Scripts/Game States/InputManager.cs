@@ -16,10 +16,10 @@ public class InputManager : MonoBehaviour
     public static event Action<string> inputMapSwitched;
     public static event Action<CursorLockMode, bool> cursorChanged;
 
-    [Title("Debug Mode")]
-    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
-    [PropertyTooltip("Enables or disables debug logs in a given script.")]
-    public bool debugMode = true;
+    [Space]
+    [Title("Debugging Options", "Settings for quick debugging options.")]
+    [PropertyTooltip("Print out messages regarding the Player's relation to this manager. False by default.")]
+    public bool printPlayerInfo = false;
 
     private void Awake()
     {
@@ -53,7 +53,7 @@ public class InputManager : MonoBehaviour
     {
         if (Player.Instance == null)
         {
-            if (debugMode) Debug.LogWarning("InputManager.cs >> Can't find the Player instance. Make sure it is in the scene with Player.cs attached.");
+            if (printPlayerInfo) Debug.LogWarning("InputManager.cs >> Can't find the Player instance. Make sure it is in the scene with Player.cs attached.");
             playerInput = null;
         }
         else
@@ -61,11 +61,11 @@ public class InputManager : MonoBehaviour
             playerInput = Player.Instance.GetComponent<PlayerInput>();
             if (playerInput != null)
             {
-                if (debugMode) Debug.Log("InputManager.cs >> Successfully acquired PlayerInput reference.");
+                if (printPlayerInfo) Debug.Log("InputManager.cs >> Successfully acquired PlayerInput reference.");
             }
             else
             {
-                if (debugMode) Debug.LogWarning("InputManager.cs >> Player instance found but PlayerInput component is missing!");
+                if (printPlayerInfo) Debug.LogWarning("InputManager.cs >> Player instance found but PlayerInput component is missing!");
             }
         }
     }
