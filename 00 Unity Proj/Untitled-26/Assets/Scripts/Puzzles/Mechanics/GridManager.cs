@@ -30,7 +30,7 @@ public class GridManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Check if a cell is vacant.
+    /// Check if a cell is vacant. If it is, return true.
     /// </summary>
     /// <param name="x"></param>
     /// <param name="z"></param>
@@ -58,7 +58,18 @@ public class GridManager : MonoBehaviour
             // Debug.Log("false");
             return false;
         }
-
+    }
+    
+    /// <summary>
+    /// Returns the TileType of a given tile.
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="z"></param>
+    /// <returns></returns>
+    public SelectableTile.TileType GetTileType(int x, int z)
+    {
+        SelectableTile.TileType type = grid[x, z].tileType;
+        return type;
     }
 
     /// <summary>

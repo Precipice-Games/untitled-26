@@ -94,7 +94,7 @@ public class BoxCastGrounded : MonoBehaviour
             Debug.DrawRay(origin, direction * groundRayLength, Color.red);
             currentPlatform = null;
         }
-        
+
         groundCheck?.Invoke(hittingGround);
     }
 
