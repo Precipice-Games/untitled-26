@@ -38,12 +38,6 @@ public class IslandManager : MonoBehaviour
             case IslandName.IceIsland:
                 Debug.Log("Ice Island completed!");
                 variableStorage.SetValue("$iceFinished", true);
-                
-                // NOTE: Currently, I have it set to reach into the variableStorage.
-                // However, I'm not sure if I'm supposed to do this or if I should
-                // access the properties in YarnVariables.cs ? We are lacking
-                // documentation on this system so that would help. -- Nikki
-                
                 break;
             case IslandName.OasisIsland:
                 Debug.Log("Oasis Island completed!");
