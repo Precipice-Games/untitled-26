@@ -8,8 +8,7 @@ using UnityEngine;
 
 public class PuzzleInformation : MonoBehaviour
 {
-    [Title("Puzzle Information")]
-    [InfoBox("Attach the relevant data of this puzzle.")]
+    [Title("Puzzle Information", "Attach the relevant data of this puzzle.")]
     public Camera camera;
     public GameObject canvas;
     public GameObject startTile;

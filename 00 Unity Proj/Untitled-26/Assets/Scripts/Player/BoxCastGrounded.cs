@@ -11,10 +11,8 @@ using UnityEngine;
 
 public class BoxCastGrounded : MonoBehaviour
 {
-    [Space]
     [Title("Grounded Checker", "General variables used to handle ground checking.")]
     public bool groundChecking = true;
-    public bool canInteract = true;
     private Ray groundInteractionRay;
     private RaycastHit groundRaycastHit;
     bool hittingGround;
@@ -30,6 +28,11 @@ public class BoxCastGrounded : MonoBehaviour
     [PropertyTooltip("Be sure to add a buffer for the ray length to ensure consistency in ground detection.")]
     public float rayLengthBuffer;
     private float groundRayLength; // Actual ray length
+    
+    [Space]
+    [Title("Debugging Options", "Settings for quick debugging options.")]
+    [PropertyTooltip("Print out what ground the Player is standing on. False by default.")]
+    public bool printGroundedStatus = false;
     
     // Static event to notify subscribers of game state changes
     public static event Action<bool> groundCheck;
@@ -67,7 +70,6 @@ public class BoxCastGrounded : MonoBehaviour
         }
         else
         {
-            canInteract = true;
             activeTimer = 0.0f;
         }
 
@@ -85,7 +87,7 @@ public class BoxCastGrounded : MonoBehaviour
             // Turn the ray green
             Debug.DrawRay(origin, direction * groundRayLength, Color.green);
             currentPlatform = groundRaycastHit.collider.gameObject;
-            Debug.Log("Grounded on: " + currentPlatform.name);
+            if (printGroundedStatus) Debug.Log("BoxCastGrounded.cs >> Grounded on: " + currentPlatform.name);
         }
         else
         {

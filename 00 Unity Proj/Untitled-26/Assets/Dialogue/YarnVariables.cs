@@ -23,6 +23,10 @@ namespace Yarn.Unity.Variables {
         }
 
         // Accessor for Bool $iceFinished
+        /// <summary>
+        /// Whether the Ice Island has been completed or not. this will be changed through an external method in IslandManager.cs using the method
+        /// variableStorage.SetValue("$iceFinished", true);
+        /// </summary>
         public bool IceFinished {
             get => this.GetValueOrDefault<bool>("$iceFinished");
             set => this.SetValue<bool>("$iceFinished", value);

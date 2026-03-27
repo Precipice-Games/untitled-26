@@ -1,11 +1,16 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.UI.Image;
 
+// This script is responsible for handling the player's interaction-based
+// raycast in the environment. There is another raycast created for the Player
+// in BoxCastGrounded.cs, but that is for ground checks, NOT for interactions
+// in the environment.
+
 public class PlayerRaycastInteraction : MonoBehaviour
 {
-
     //     ==== Player Raycast ====
     Ray interactionRay; //ray to cast
     RaycastHit raycastHit; //information about what is being hit
@@ -23,6 +28,11 @@ public class PlayerRaycastInteraction : MonoBehaviour
     //    ==== Timer ====
     public float activeTimer = 5.0f;
     public float maxTime = 5.0f;
+    
+    [Space]
+    [Title("Debugging Options", "Settings for quick debugging options.")]
+    [PropertyTooltip("Print out what object the Player's raycast is hitting. False by default.")]
+    public bool printRaycastHit = false;
     
     // Static event to notify subscribers of raycast toggling
     public static event Action<bool> raycastToggled;
@@ -50,85 +60,62 @@ public class PlayerRaycastInteraction : MonoBehaviour
 
         if (activeTimer < maxTime)
         {
-            
             activeTimer +=  Time.deltaTime;
-
         }
         else
         {
-
             canInteract = true;
             activeTimer = 0.0f;
-
         }
-
-
+        
         interactionRay.origin = transform.position;
         interactionRay.direction = transform.forward;
 
         Vector3 origin = interactionRay.origin;
         Vector3 direction = interactionRay.direction;
 
+        // Bool to store if the ray is hitting anything
         isHitting = Physics.Raycast(interactionRay, out raycastHit, rayLength);
 
         if (isHitting)
         {
-
             Debug.DrawRay(origin, direction * rayLength, Color.green);
-            Debug.Log(raycastHit.collider.gameObject.name);
+            if (printRaycastHit) Debug.Log($"PlayerRaycastInteraction.cs >> Raycast Hit: {raycastHit.collider.gameObject.name}");
 
             if (raycastHit.collider.GetComponent<IInteractable>() != null)
             {
-
                 activeInteractable = raycastHit.collider.gameObject;
                 interactionUI.SetActive(true);
-
             }
-
         }
         else
         {
-
             Debug.DrawRay(origin, direction * rayLength, Color.red);
             activeInteractable = null;
             interactionUI.SetActive(false);
-
         }
 
     }
-
-    /*
-     * 
-     * If the interact key is pressed the interact function triggers
-     * the Interaction() function of the interactable object
-     * 
-     */
-
+    
+    /// <summary>
+    /// If the interact key is pressed the interact function triggers
+    /// the Interaction() function of the interactable object
+    /// </summary>
     public void Interact()
     {
-
         if (activeInteractable != null && canInteract)
         {
-
             activeInteractable.GetComponent<IInteractable>().Interaction();
             canInteract = false;
             activeInteractable = null;
             interactionUI.SetActive(false);
-
         }
-
     }
-
-
-
-
-    /*
-     * 
-     * Toggles the raycast on and off. Used for dialogue and puzzle states
-     * to prevent the player from interacting with objects while in those states
-     * 
-     */
-
+    
+    /// <summary>
+    /// Toggles the raycast on and off. Used for dialogue and puzzle states
+    /// to prevent the player from interacting with objects while in those states
+    /// </summary>
     private void OnEnable()
     {
         GameStateManager.transitionedToNewState += ToggleRaycast;
