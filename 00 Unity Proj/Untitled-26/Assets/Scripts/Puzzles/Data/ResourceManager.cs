@@ -49,6 +49,15 @@ public class ResourceManager : MonoBehaviour
         Instance = this;
     }
 
+    private void OnEnable()
+    {
+        ResetPuzzle.resetPuzzle += ResetResources;
+    }
+
+    private void OnDisable()
+    {
+        ResetPuzzle.resetPuzzle -= ResetResources;
+    }
 
     void Start()
     {
@@ -166,4 +175,17 @@ public class ResourceManager : MonoBehaviour
         downLabel.text = amount.ToString();
     }
 
+    private void ResetResources()
+    {
+        currentMana = startingMana;
+        moveLeftUses = 3;
+        moveRightUses = 3;
+        moveForwardUses = 3;
+        moveBackUses = 3;
+        UpdateManaText(currentMana);
+        UpdateLeftText(moveLeftUses);
+        UpdateRightText(moveRightUses);
+        UpdateUpText(moveForwardUses);
+        UpdateDownText(moveBackUses);
+    }
 }
