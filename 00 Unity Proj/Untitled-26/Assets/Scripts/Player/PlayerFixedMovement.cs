@@ -203,15 +203,22 @@ public class PlayerFixedMovement : MonoBehaviour
     //       special tiles, like the ice mechanic.
     public void TryToMovePlayer(int xDir, int zDir)
     {
+        // Directional Coordinates (Up, Down, Left, Right)
         deltaX = xDir;
         deltaZ = zDir;
-        
-        // Calculate the attempted destination based on a move
-        int attemptedDestX = playerGridX + deltaX;
-        int attemptedDestZ = playerGridZ + deltaZ;
+        Debug.Log($"PlayerFixedMovement.cs >> Directional Coordinates: ({xDir},{zDir})");
 
         destinationX += deltaX;
         destinationZ += deltaZ;
+        
+        // Calculate the attempted destination based on a move.
+        // This is used just for the first tile.
+        int attemptedDestX = playerGridX + deltaX;
+        int attemptedDestZ = playerGridZ + deltaZ;
+        Debug.Log($"PlayerFixedMovement.cs >> Attempted Destination Coordinates: ({attemptedDestX},{attemptedDestZ})");
+
+        // destinationX += deltaX;
+        // destinationZ += deltaZ;
         
         // Before anything, check to see if the attempted move is valid. This is performed
         // as though the Player is only traveling one tile. We want to ensure that first
@@ -231,70 +238,6 @@ public class PlayerFixedMovement : MonoBehaviour
                 IceTile(attemptedDestX, attemptedDestZ);
                 break;
         }
-        
-        // Instead call CheckForEmptyCell() method to reduce redundancy and clean up code. -- Nikki
-        // CheckForEmptyCell(destinationX + playerGridX, destinationZ + playerGridZ);
-        
-        // if (gridManager.IsCellEmpty(destinationX + playerGridX, destinationZ + playerGridZ))
-        // {
-        //     Debug.Log($"PlayerFixedMovement.cs >> There is no tile to jump to at: {destinationX + playerGridX},{destinationX + playerGridX}");
-        //     return;
-        // }
-
-        // Instead call BoundsCheck() method. -- Nikki
-        // if (!gridManager.IsInsideGrid(destinationX + playerGridX, destinationZ + playerGridZ))
-        // {
-        //     Debug.Log("PlayerFixedMovement.cs >> Move blocked: Outside grid");
-        //     return;
-        // }
-
-        // Debug.Log($"PlayerFixedMovement.cs >> Destination: ({destinationX},{destinationZ})");
-        // Debug.Log($"PlayerFixedMovement.cs >> Destination + CurrentPosition: ({destinationX + playerGridX},{destinationZ + playerGridZ})");
-        //
-        // // We should have something here to handle normal tiles as well as ice tiles.
-        //
-        // if (gridManager.IsIceTileType(destinationX + playerGridX, destinationZ + playerGridZ))
-        // {
-        //     Debug.Log("Is Ice");
-        //     
-        //      if (!gridManager.IsCellEmpty(destinationX + playerGridX, destinationZ + playerGridZ))
-        //      {
-        //          SnapPlayerToTile(destinationX + playerGridX, destinationZ + playerGridZ);
-        //      }
-        //     
-        //     TryToMovePlayer(deltaX, deltaZ);
-        //
-        // }
-        // else
-        // {
-        //
-        //     landingX = destinationX + playerGridX;
-        //     landingZ = destinationZ + playerGridZ;
-        //
-        //     if (gridManager.IsCellEmpty(landingX,landingZ))
-        //     {
-        //
-        //         landingX = playerGridX;
-        //         landingZ = playerGridZ;
-        //
-        //     }
-        //
-        // }
-        //
-        // // TODO: Remove gridX and gridZ? My IDE said they are
-        // //       assigned but never used. Lmk. -- Nikki
-        // int gridX = newX;
-        // int gridZ = newZ;
-        //
-        // // TODO: Add tile type checking here to handle special mechanics.
-        // //       The same should be done with a normal tile.
-        // // HandleTileType();
-        //
-        // Debug.Log($"PlayerFixedMovement.cs >> Destination + PlayerGrid: ({destinationX + playerGridX},{destinationZ + playerGridZ})");
-        // Debug.Log($"PlayerFixedMovement.cs >> Landings: ({landingX},{landingZ})");
-        //
-        // // For right now, we will just snap the player to the new tile.
-        // SnapPlayerToTile(landingX, landingZ);
     }
 
     /// <summary>
@@ -329,7 +272,7 @@ public class PlayerFixedMovement : MonoBehaviour
     /// Checks for an empty cell.
     /// </summary>
     /// <param name="coordX"></param>
-    /// <param name="cordZ"></param>
+    /// <param name="coordZ"></param>
     private bool CheckForEmptyCell(int coordX, int coordZ)
     {
         if (gridManager.IsCellEmpty(coordX, coordZ))
@@ -380,10 +323,18 @@ public class PlayerFixedMovement : MonoBehaviour
     /// </summary>
     private void IceTile(int coordX, int coordZ)
     {
-        Debug.Log("PlayerFixedMovement.cs >> It's understood that the Player is trying to move onto an ice tile.");
+        Debug.Log($"PlayerFixedMovement.cs >> Recursively checking through ice tiles. Currently at ({coordX},{coordZ}).");
         
-        // SnapPlayerToTile(destinationX + playerGridX, destinationZ + playerGridZ);
-        // TryToMovePlayer(deltaX, deltaZ);
+        // Create new values that can be pased into TryToMovePlayer()
+        // without affecting the original destination coordinates. This is
+        // necessary to ensure that the Player continues to slide in the
+        // correct direction until they reach a non-ice tile or an obstacle.
+        int newDeltaX = destinationX;
+        int newDeltaZ = destinationZ;
+
+        Debug.Log($"PlayerFixedMovement.cs >> newDeltaX/Z Coordinates: ({newDeltaX},{newDeltaZ})");
+
+        TryToMovePlayer(newDeltaX, newDeltaZ);
     }
     
     /// <summary>
