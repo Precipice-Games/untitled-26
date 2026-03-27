@@ -72,12 +72,14 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
+        ExitPuzzleButton.exitPuzzle += TransitionToState;
     }
     
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneManager.activeSceneChanged -= OnActiveSceneChanged;
+        ExitPuzzleButton.exitPuzzle -= TransitionToState;
     }
     
     // Runs when a scene is loaded

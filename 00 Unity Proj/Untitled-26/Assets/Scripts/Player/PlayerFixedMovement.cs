@@ -106,7 +106,14 @@ public class PlayerFixedMovement : MonoBehaviour
         // Get the grid coordinates of the end tile
         endTileX = endTile.GetComponent<SelectableTile>().gridX;
         endTileZ = endTile.GetComponent<SelectableTile>().gridZ;
-        
+
+        //Reset tile info upon new puzzle start
+        playerGridX = 0;
+        playerGridZ = 0;
+
+        destinationX = 0;
+        destinationZ = 0;
+
         // After gathering data, move Player to the startTile
         TryToMovePlayer(startTileX, startTileZ);
     }
