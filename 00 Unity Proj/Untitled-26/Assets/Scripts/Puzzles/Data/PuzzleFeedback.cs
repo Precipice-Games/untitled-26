@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using SimpleTimer;
 
 /// <summary>
 /// This script takes in and communicates data regarding the feedback of the puzzle.
@@ -11,7 +12,7 @@ using TMPro;
 public class PuzzleFeedback : MonoBehaviour
 {
     public GameObject feedbackPrefab;
-    public TMP_Text manaLabel;
+    public TMP_Text onScreenText;
     
     // Subscribe to Events
     // private void OnEnable()
