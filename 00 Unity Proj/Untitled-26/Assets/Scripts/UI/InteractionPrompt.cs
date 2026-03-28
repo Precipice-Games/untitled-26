@@ -16,13 +16,16 @@ public class InteractionPrompt : MonoBehaviour
     private void OnEnable()
     {
         PlayerRaycastInteraction.raycastToggled += TogglePrompt;
+        RuneCircle.playerInCircle += TogglePrompt;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         PlayerRaycastInteraction.raycastToggled -= TogglePrompt;
+        RuneCircle.playerInCircle -= TogglePrompt;
     }
+
     
     /// <summary>
     /// This method properly toggles the interaction prompt on and
