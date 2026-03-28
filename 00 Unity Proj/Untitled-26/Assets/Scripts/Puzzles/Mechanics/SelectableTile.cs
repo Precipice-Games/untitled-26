@@ -9,12 +9,24 @@ public class SelectableTile : MonoBehaviour
         Ice
     }
 
+    // Default tile type is Normal
     public TileType tileType = TileType.Normal;
 
     public int startingGridX;
     public int startingGridZ;
     public int gridX;
     public int gridZ;
+    
+    // Reference to the GridManager for this specific puzzle.
+    public GridManager gridManager;
+    
+    // NOTE: Remember how I said that we couldn't have more than one puzzle active
+    // at a time in order for things to work? I think it has to do with the fact
+    // that each puzzle has its own GridManager script, which was attempting to
+    // create a singleton that all could reference, but I think it's confusing
+    // the other scripts looking to reference it. In the meantime, I went ahead
+    // and attached the GridManager to each of the tiles in Puzzle1.prefab.
+    // -- Nikki
 
     private Renderer rend;
     
@@ -28,16 +40,17 @@ public class SelectableTile : MonoBehaviour
     [PropertyTooltip("Enables or disables debug logs in a given script.")]
     public bool debugMode = true;
 
+    // Subscribe to events
     private void OnEnable()
     {
         ResetPuzzle.resetPuzzle += ResetTiles;
     }
-
+    
+    // Unsubscribe from events
     private void OnDisable()
     {
         ResetPuzzle.resetPuzzle -= ResetTiles;
     }
-
 
     void Start()
     {
@@ -51,20 +64,22 @@ public class SelectableTile : MonoBehaviour
 
         if (debugMode) Debug.Log(name + " starting at: " + gridX + "," + gridZ);
 
-        GridManager.Instance.PlaceTile(this, gridX, gridZ);
-        transform.localPosition = GridManager.Instance.GridToWorld(gridX, gridZ);
+        gridManager.PlaceTile(this, gridX, gridZ);
+        transform.localPosition = gridManager.GridToWorld(gridX, gridZ);
     }
 
+    // Run when a tile is selected
     public void Select()
     {
         rend.material.color = highlightColor;
-        if (debugMode) Debug.Log(name + " SELECTED");
+        Debug.Log($"SelectableTile.cs >> {name} SELECTED at: ({gridX},{gridZ})");
     }
 
+    // Run when a tile is deselected
     public void Deselect()
     {
         rend.material.color = originalColor;
-        if (debugMode) Debug.Log(name + " DESELECTED");
+        Debug.Log($"SelectableTile.cs >> {name} DESELECTED");
     }
 
     public void TryMove(int xDir, int zDir)
@@ -72,39 +87,64 @@ public class SelectableTile : MonoBehaviour
         int newX = gridX + xDir;
         int newZ = gridZ + zDir;
 
-        if (debugMode) Debug.Log(name + " trying move to: " + newX + "," + newZ);
-
-        // Check that it's inside the grid
-        if (!GridManager.Instance.IsInsideGrid(newX, newZ))
-        {
-            if (debugMode) Debug.Log("BLOCKED: Outside grid – no mana spent");
-            return;
-        }
-
-        // Check for cell vacancy
-        if (!GridManager.Instance.IsCellEmpty(newX, newZ))
-        {
-            if (debugMode) Debug.Log("BLOCKED: Cell occupied – no mana spent");
-            return;
-        }
-
-        GridManager.Instance.ClearCell(gridX, gridZ);
-
+        Debug.Log($"SelectableTile.cs >> {name} trying move to: ({newX},{newZ})");
+        
+        // Before anything, check to see if the attempted move is valid.
+        if (CheckForOutOfBounds(newX, newZ)) return; // Must be inside the grid
+        if (!CheckForEmptyCell(newX, newZ)) return; // Must be an empty cell
+        
+        gridManager.ClearCell(gridX, gridZ);
+        
         gridX = newX;
         gridZ = newZ;
 
-        GridManager.Instance.PlaceTile(this, gridX, gridZ);
+        gridManager.PlaceTile(this, gridX, gridZ);
 
-        transform.localPosition = GridManager.Instance.GridToWorld(gridX, gridZ);
+        transform.localPosition = gridManager.GridToWorld(gridX, gridZ);
 
-        Debug.Log(name + " moved to: " + gridX + "," + gridZ);
-
+        Debug.Log($"SelectableTile.cs >> {name} moved to: ({gridX},{gridZ})");
+    }
+    
+    /// <summary>
+    /// Checks for an empty cell.
+    /// </summary>
+    /// <param name="coordX"></param>
+    /// <param name="coordZ"></param>
+    private bool CheckForEmptyCell(int coordX, int coordZ)
+    {
+        if (gridManager.IsCellEmpty(coordX, coordZ))
+        {
+            Debug.Log($"SelectableTile.cs >> BLOCKED: Cell at ({coordX},{coordZ}) occupied – no mana spent");
+            return true; // If it's empty, return true.
+        }
+        return false;
+    }
+    
+    
+    /// <summary>
+    /// Checks that a tile is out of bounds of the grid. If it's
+    /// out of bounds, return true.
+    /// </summary>
+    /// <param name="coordX"></param>
+    /// <param name="coordZ"></param>
+    private bool CheckForOutOfBounds(int coordX, int coordZ)
+    {
+        // If it's out of bounds, return true.
+        if (!gridManager.IsInsideGrid(coordX, coordZ))
+        {
+            Debug.Log("SelectableTile.cs >> BLOCKED: Outside grid – no mana spent");
+            return true;
+        }
+        return false;
     }
 
+    /// <summary>
+    /// Resets tiles to their original positions. This is called when the ResetPuzzle event is triggered.
+    /// </summary>
     private void ResetTiles()
     {
         gridX = startingGridX;
         gridZ = startingGridZ;
-        transform.localPosition = GridManager.Instance.GridToWorld(gridX, gridZ);
+        transform.localPosition = gridManager.GridToWorld(gridX, gridZ);
     }
 }

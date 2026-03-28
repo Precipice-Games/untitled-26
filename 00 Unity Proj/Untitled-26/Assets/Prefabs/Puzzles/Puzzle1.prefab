@@ -159,6 +159,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 3
   gridZ: 3
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -337,6 +338,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 0
   gridZ: 3
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -1069,6 +1071,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 4
   gridZ: 4
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0.8352941, g: 0, b: 1, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -1247,6 +1250,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 4
   gridZ: 1
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -1598,6 +1602,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 1
   gridZ: 1
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -1913,6 +1918,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 3
   gridZ: 0
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -2363,6 +2369,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 2
   gridZ: 0
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -2679,6 +2686,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 0
   gridZ: 4
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -2857,6 +2865,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 1
   gridZ: 2
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -3786,6 +3795,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 4
   gridZ: 2
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -3964,6 +3974,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 2
   gridZ: 4
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -4628,6 +4639,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 2
   gridZ: 1
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -4806,6 +4818,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 3
   gridZ: 1
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -5062,6 +5075,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 0
   gridZ: 0
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0.13494706, g: 1, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -5342,6 +5356,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 0
   gridZ: 2
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
@@ -5715,6 +5730,7 @@ MonoBehaviour:
   startingGridZ: 0
   gridX: 2
   gridZ: 2
+  gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
