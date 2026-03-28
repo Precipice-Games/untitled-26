@@ -15,9 +15,27 @@ public class PuzzleFeedback : MonoBehaviour
     public TMP_Text onScreenText;
     
     private TimerManager.Timer myTimer;
+    
+    // Subscribe to events
+    private void OnEnable()
+    {
+        SelectableTile.cellOccupied += CellIsOccupied;
+    }
+    
+    // Unsubscribe from events
+    private void OnDisable()
+    {
+        SelectableTile.cellOccupied -= CellIsOccupied;
+    }
 
     void Start()
     {
+        // myTimer = TimerManager.CreateTimer(3.0f, OnTimerFinished, OnTimerTick);
+    }
+
+    private void CellIsOccupied(SelectableTile tile)
+    {
+        Debug.Log($"PuzzleFeedback.cs >> You tried to move {tile}, but another tile is occupying that cell!");
         myTimer = TimerManager.CreateTimer(3.0f, OnTimerFinished, OnTimerTick);
     }
     
