@@ -40,7 +40,13 @@ public class PlayerFixedMovement : MonoBehaviour
     private int endTileZ;
 
     //Keeps track of the potential tile for the player to move to
+    /// <summary>
+    /// The X coordinate of the tile the Player is attempting to move to. This is used to check if the move is valid.
+    /// </summary>
     private int destinationX = 0;
+    /// <summary>
+    /// The Y coordinate of the tile the Player is attempting to move to. This is used to check if the move is valid.
+    /// </summary>
     private int destinationZ = 0;
 
     private int deltaX;
@@ -192,6 +198,7 @@ public class PlayerFixedMovement : MonoBehaviour
     /// <param name="zDir"></param>
     private void MoveDirection(int xDir, int zDir)
     {
+        // reset values of destination coords
         destinationX = 0;
         destinationZ = 0;
         TryToMovePlayer(xDir, zDir);
@@ -220,8 +227,8 @@ public class PlayerFixedMovement : MonoBehaviour
         
         // Calculate the attempted destination based on a move.
         // This is used just for the first tile.
-        int attemptedDestX = playerGridX + deltaX;
-        int attemptedDestZ = playerGridZ + deltaZ;
+        int attemptedDestX = playerGridX + destinationX;
+        int attemptedDestZ = playerGridZ + destinationZ;
         Debug.Log($"PlayerFixedMovement.cs >> Attempted Destination Coordinates: ({attemptedDestX},{attemptedDestZ})");
 
         // destinationX += deltaX;
@@ -336,8 +343,8 @@ public class PlayerFixedMovement : MonoBehaviour
         // without affecting the original destination coordinates. This is
         // necessary to ensure that the Player continues to slide in the
         // correct direction until they reach a non-ice tile or an obstacle.
-        int newDeltaX = destinationX;
-        int newDeltaZ = destinationZ;
+        int newDeltaX = deltaX;
+        int newDeltaZ = deltaZ;
 
         Debug.Log($"PlayerFixedMovement.cs >> newDeltaX/Z Coordinates: ({newDeltaX},{newDeltaZ})");
 
