@@ -1,3 +1,4 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -39,6 +40,11 @@ public class SelectableTile : MonoBehaviour
     [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
     [PropertyTooltip("Enables or disables debug logs in a given script.")]
     public bool debugMode = true;
+    
+    // Event fired when a move is blocked by an occupied cell
+    public static event Action<SelectableTile> cellOccupied;
+    // Event fired when a move is out of bounds
+    public static event Action<SelectableTile> moveOutOfBounds;
 
     // Subscribe to events
     private void OnEnable()
@@ -117,9 +123,11 @@ public class SelectableTile : MonoBehaviour
             Debug.Log($"SelectableTile.cs >> BLOCKED: Cell at ({coordX},{coordZ}) occupied – no mana spent");
             return true; // If it's empty, return true.
         }
+        
+        // Fire off an event to say that a cell is occupied
+        cellOccupied?.Invoke(this);
         return false;
     }
-    
     
     /// <summary>
     /// Checks that a tile is out of bounds of the grid. If it's
@@ -133,6 +141,7 @@ public class SelectableTile : MonoBehaviour
         if (!gridManager.IsInsideGrid(coordX, coordZ))
         {
             Debug.Log("SelectableTile.cs >> BLOCKED: Outside grid – no mana spent");
+            // Fire off an event to say that the move is out of bounds
             return true;
         }
         return false;
