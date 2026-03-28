@@ -20763,6 +20763,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5210052636578805895, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210052636578805895, guid: 8983198ca1734284785ea41f83d1e4bf, type: 3}
       propertyPath: puzzleInfo
       value: 
       objectReference: {fileID: 1564784669105535866}
@@ -22722,10 +22726,6 @@ PrefabInstance:
       propertyPath: gridManager
       value: 
       objectReference: {fileID: 1800943169}
-    - target: {fileID: 4173212478788377525, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -5.4983215
-      objectReference: {fileID: 0}
     - target: {fileID: 4272864839946960334, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: debugMode
       value: 0
@@ -22842,10 +22842,6 @@ PrefabInstance:
       propertyPath: gridManager
       value: 
       objectReference: {fileID: 1800943169}
-    - target: {fileID: 5744226596463354833, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6106117261593328848, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -22904,11 +22900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6957286812768726538, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: debugMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6968957557391545249, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
-      propertyPath: m_IsActive
-      value: 
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7012397342193439338, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: debugMode
@@ -22958,10 +22950,6 @@ PrefabInstance:
       propertyPath: printStartingValues
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7315429475126077736, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7470132292000716953, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_Name
       value: p1DriftIsland (2)
@@ -22969,10 +22957,6 @@ PrefabInstance:
     - target: {fileID: 8066876773405094797, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_Name
       value: p1DriftIsland (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8346347597813341337, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.99957275
       objectReference: {fileID: 0}
     - target: {fileID: 8379185926904379591, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -23010,6 +22994,26 @@ PrefabInstance:
       propertyPath: gridManager
       value: 
       objectReference: {fileID: 1800943169}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.4983215
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.99957275
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
