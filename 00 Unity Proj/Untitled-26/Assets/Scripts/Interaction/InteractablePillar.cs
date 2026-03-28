@@ -18,6 +18,8 @@ public class InteractablePillar : MonoBehaviour, IInteractable
     [InfoBox("Attach the data of the puzzle that this terminal corresponds to.")]
     public PuzzleInformation puzzleInfo;
 
+    public ExitPuzzleButton exitPuzzleButton;
+
     public void Interaction()
     {
         // If there's no puzzle info, break out
@@ -25,6 +27,10 @@ public class InteractablePillar : MonoBehaviour, IInteractable
 
         // Ensure the puzzle has not already been completed.
         if (puzzleInfo.puzzleSolved == true) return;
+
+        //
+        exitPuzzleButton.currentPillar = this;
+        exitPuzzleButton.respawnLocation = new Vector3 (transform.position.x, transform.position.y, transform.position.z - 0.25f);
 
         // If the puzzle has not been completed, trigger the
         // event to notify subscribers.
