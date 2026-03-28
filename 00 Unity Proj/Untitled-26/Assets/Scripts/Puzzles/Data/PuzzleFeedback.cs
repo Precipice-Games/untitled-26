@@ -14,27 +14,23 @@ public class PuzzleFeedback : MonoBehaviour
     public GameObject feedbackPrefab;
     public TMP_Text onScreenText;
     
-    // Subscribe to Events
-    // private void OnEnable()
-    // {
-    //     PlayerFixedMovement.playerOccupiedTile += PlayerOccupiedTile;
-    //     PlayerFixedMovement.moveBlocked += MoveBlocked;
-    //     PlayerFixedMovement.outsideGrid += OutsideGrid;
-    // }
-    //
-    // // Unsubscribe from Events
-    // private void OnDisable()
-    // {
-    //     ResetPuzzle.resetPuzzle -= ResetResources;
-    // }
-    //
-    // private void MoveBlocked(parameters)
-    // {
-    //     manaLabel.text = $"Mana\n{amount}";
-    // }
-    //
-    // private void OutsideGrid(parameters)
-    // {
-    //     manaLabel.text = $"Mana\n{amount}";
-    // }
+    private TimerManager.Timer myTimer;
+
+    void Start()
+    {
+        myTimer = TimerManager.CreateTimer(3.0f, OnTimerFinished, OnTimerTick);
+    }
+    
+    void OnTimerFinished()
+    {
+        Debug.Log("Timer finished!");
+        
+        // MUST delete the timer to prevent a memory leak
+        TimerManager.DeleteTimer(myTimer);
+    }
+
+    void OnTimerTick()
+    {
+        Debug.Log("Timer running...");
+    }
 }
