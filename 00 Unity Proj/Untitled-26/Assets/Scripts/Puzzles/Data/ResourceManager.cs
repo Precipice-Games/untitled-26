@@ -12,8 +12,6 @@ using TMPro;
 
 public class ResourceManager : MonoBehaviour
 {
-    public static ResourceManager Instance;
-    
     public int startingMana = 5;
     private int currentMana;
 
@@ -42,18 +40,14 @@ public class ResourceManager : MonoBehaviour
     public bool printCardDeductions = true;
     [PropertyTooltip("Print out when a specific movement card has no uses left. True by default.")]
     public bool printCardDrainage = true;
-
-
-    void Awake()
-    {
-        Instance = this;
-    }
-
+    
+    // Subscribe to events
     private void OnEnable()
     {
         ResetPuzzle.resetPuzzle += ResetResources;
     }
 
+    // Unsubscribe from events
     private void OnDisable()
     {
         ResetPuzzle.resetPuzzle -= ResetResources;
