@@ -19,6 +19,12 @@ public class CameraRotation : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // TODO: Is there anyway we could improve the polling rate or the way the mouse
+        //       input is detected? I've noticed that the mouse input is totally fine when
+        //       I'm turning on my laptop, but when I try to play on my desktop, it's very
+        //       laggy and hard to turn the character. It could be a problem with the
+        //       polling or update rate. Let me know what you guys think. -- Nikki
+        
         if (isRotating)
         {
             //Grabs the mouse input
