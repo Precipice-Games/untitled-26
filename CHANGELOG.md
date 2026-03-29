@@ -5,7 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-* Working on connecting puzzle completion status to YarnSpinner's persistent variable storage.
+* Put any unreleased features here.
+
+## [v1.0.2] - 2026-03-29
+
+### Added
+* Added a reset button to puzzles in puzzle mode.
+* Added the ability to exit puzzles from puzzle mode back into exploration mode.
+* Added Oasis Island scene (not yet in build settings, but present in the project folder).
+* Created PuzzleFeedback.cs with a prototype "error flashing" system on tiles attempting to move into occupied cells (WIP).
+
+### Fixed
+* Fixed the ice tile recursion logic to prevent the Player from skipping over a gap.
+* Resolved game-breaking issue in puzzle mode by converting singletons for puzzle components into private, individualized references.
+* Temporarily adjusted tile textures and lighting for greater visibility in puzzle mode (hotfix).
+
+### Changed
+* Connected island completion status system to YarnSpinner InMemoryVariableStorage.
+* Refactored the PlayerFixedMovement logic and tile type handling for a more modular approach.
+* Updated some properties with more Odin Inspector features to improve the debugging options in several classes.
 
 ## [v1.0.1] - 2026-03-24
 
