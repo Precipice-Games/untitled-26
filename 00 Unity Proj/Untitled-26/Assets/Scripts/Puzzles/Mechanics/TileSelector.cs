@@ -6,6 +6,8 @@ public class TileSelector : MonoBehaviour
 {
     // ===== Variables =====
     private GridManager gridManager;
+    [PropertyTooltip("Please assign the ResourceManager for this specific puzzle prefab.")]
+    public ResourceManager resourceManager;
 
     /// <summary>
     /// Reference to the currently selected tile.
@@ -144,7 +146,7 @@ public class TileSelector : MonoBehaviour
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
 
-        if (!ResourceManager.Instance.UseMove("Right")) return;
+        if (!resourceManager.UseMove("Right")) return;
         
         selectedTile.TryMove(1, 0); // moves right
     }
@@ -157,7 +159,7 @@ public class TileSelector : MonoBehaviour
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
 
-        if (!ResourceManager.Instance.UseMove("Left")) return;
+        if (!resourceManager.UseMove("Left")) return;
         
         selectedTile.TryMove(-1, 0); // moves left
     }
@@ -170,7 +172,7 @@ public class TileSelector : MonoBehaviour
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
 
-        if (!ResourceManager.Instance.UseMove("Forward")) return;
+        if (!resourceManager.UseMove("Forward")) return;
         
         selectedTile.TryMove(0, 1); // moves forward
     }
@@ -183,7 +185,7 @@ public class TileSelector : MonoBehaviour
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
 
-        if (!ResourceManager.Instance.UseMove("Back")) return;
+        if (!resourceManager.UseMove("Back")) return;
         
         selectedTile.TryMove(0, -1); // moves back
     }
