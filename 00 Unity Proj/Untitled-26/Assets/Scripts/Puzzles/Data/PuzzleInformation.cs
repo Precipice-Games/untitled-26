@@ -17,4 +17,9 @@ public class PuzzleInformation : MonoBehaviour
     public bool puzzleSolved; // Has the puzzle been solved?
 
     // TODO: Perhaps put the Mana and movement information here as well?
+    
+    // NOTE: We cannot, with the current puzzle system, have two puzzles
+    // active at once. I know Cass wrote about this a bit in Issue #249,
+    // but as I'm working on Issue #254, I wanted to make a note that I
+    // was having this issue here as well. -- Nikki
 }

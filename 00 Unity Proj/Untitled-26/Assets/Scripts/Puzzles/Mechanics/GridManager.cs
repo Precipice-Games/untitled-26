@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    public static GridManager Instance;
-
     public int width = 4;
     public int height = 3;
     public float tileSize = .25f;
@@ -14,7 +12,6 @@ public class GridManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
         grid = new SelectableTile[width, height];
     }
 
@@ -30,7 +27,7 @@ public class GridManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Check if a cell is vacant.
+    /// Check if a cell is vacant. If it is, return true.
     /// </summary>
     /// <param name="x"></param>
     /// <param name="z"></param>
@@ -39,26 +36,17 @@ public class GridManager : MonoBehaviour
     {
         return grid[x, z] == null;
     }
-
+    
     /// <summary>
-    /// Check if a tile is of type Ice.
+    /// Returns the TileType of a given tile.
     /// </summary>
     /// <param name="x"></param>
     /// <param name="z"></param>
     /// <returns></returns>
-    public bool IsIceTileType(int x, int z)
+    public SelectableTile.TileType GetTileType(int x, int z)
     {
-        if (!IsCellEmpty(x,z) && grid[x,z].tileType == SelectableTile.TileType.Ice)
-        {
-            // Debug.Log("true");
-            return true;
-        }
-        else
-        {
-            // Debug.Log("false");
-            return false;
-        }
-
+        SelectableTile.TileType type = grid[x, z].tileType;
+        return type;
     }
 
     /// <summary>
