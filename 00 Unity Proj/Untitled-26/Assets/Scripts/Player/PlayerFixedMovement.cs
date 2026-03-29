@@ -394,6 +394,10 @@ public class PlayerFixedMovement : MonoBehaviour
         playerMoved?.Invoke(playerGridX, playerGridZ);
     }
 
+    /// <summary>
+    /// Resets the Player's position to the starting tile. This is used for when the
+    /// Reset Puzzle button is pressed.
+    /// </summary>
     private void ResetPlayerPosition()
     {
         // Get the grid coordinates of the starting tile

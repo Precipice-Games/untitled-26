@@ -45,7 +45,7 @@ public class BoxCastGrounded : MonoBehaviour
         // Even though the raw value of a ray is often half the size
         // of the object's height, sometimes there are issues detecting
         // the ground. Hence, why adding a tweakable buffer is necessary.
-        
+          
         layerMask = LayerMask.GetMask("Ground");
     }
     
