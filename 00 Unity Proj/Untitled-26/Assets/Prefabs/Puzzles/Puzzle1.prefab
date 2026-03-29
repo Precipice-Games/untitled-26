@@ -1413,6 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71b6132a17b2644b90a1861ebd8c274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CubeSelector
+  resourceManager: {fileID: 7213066574574228598}
   debugMode: 1
 --- !u!114 &6021735229776701839
 MonoBehaviour:
