@@ -28,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874532845149531710}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19749649, y: -0, z: -0, w: 0.9803036}
-  m_LocalPosition: {x: 0, y: 2.7654634, z: -167.25351}
+  m_LocalRotation: {x: 0.11516102, y: -0.00021870913, z: 0.00075437, w: 0.9933465}
+  m_LocalPosition: {x: 0.383, y: 1.603, z: -101.7}
   m_LocalScale: {x: 0.6612882, y: 0.8218849, z: 3.8121305}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 137271524649294906}
-  m_LocalEulerAnglesHint: {x: 22.781, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.226, y: -0.015, z: 0.085}
 --- !u!20 &2384675142033647082
 Camera:
   m_ObjectHideFlags: 0
@@ -204,7 +204,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5438321986708604092}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &8839583978902556456
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8748892135801146194, guid: 073293fd8cc0ef0449c9d9d216631f12, type: 3}
+  - {fileID: 2100000, guid: 5d634fb24ab058241a1c4b73c7d30724, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -273,8 +273,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.35, y: 0.76, z: 4.9100056}
+  m_Center: {x: -0.05000001, y: -0.029999997, z: 0.07207629}
 --- !u!114 &3103343398758482961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +307,9 @@ MonoBehaviour:
       m_Calls: []
   rb: {fileID: 0}
   _playerInput: {fileID: 6922169669516928053}
-  debugMode: 1
+  printKinematics: 0
+  printActionMapUpdates: 0
+  printCursorUpdates: 0
 --- !u!114 &1173698383739407512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,20 +322,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffb8cce26a91974988192e7f4eb0d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  moveSpeed: 5
+  xMovement: 0
+  yMovement: 0
+  rb: {fileID: 0}
   jumpPower: 4
-  jumpMovement: 0
   maxJumps: 1
   jumpsRemaining: 0
-  playerTransform: {fileID: 137271524649294906}
-  groundCheckSize: {x: 0.5, y: 0.05, z: 0.5}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
   isGrounded: 0
-  groundCoord: 1.9
-  baseGravity: 2
-  maxFallSpeed: 18
-  fallMultiplier: 1
 --- !u!114 &6709136814799094051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +344,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFixedMovement
   playerGridX: 0
   playerGridZ: 0
+  printMoveAction: 1
+  printPlayerGridCoords: 1
+  printPlayerVector3: 0
+  printAttemptedTileType: 1
   puzzleCompleted:
     m_PersistentCalls:
       m_Calls:
@@ -421,13 +421,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bac280ae8eaeff4fbe1ad97ae2553e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRaycastInteraction
-  rayLength: 2.5
+  rayLength: 5
   raycastEnabled: 1
   activeInteractable: {fileID: 0}
   canInteract: 1
   interactionUI: {fileID: 0}
   activeTimer: 5
   maxTime: 5
+  printRaycastHit: 0
 --- !u!114 &5519739034169789386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,12 +442,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoxCastGrounded
   groundChecking: 1
-  rawRayLength: 0.71055
-  rayLengthBuffer: 0.2
   currentPlatform: {fileID: 0}
-  canInteract: 1
   activeTimer: 5
   maxTime: 5
+  rawRayLength: 0.71055
+  rayLengthBuffer: 0.2
+  printGroundedStatus: 0
 --- !u!114 &6922169669516928053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +697,54 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 7196a9a0-d927-4aaa-b00b-6c797501fe02
     m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9e446b2b-9adc-4bfd-b946-d3add9171d33
+    m_ActionName: 'Puzzle/Submit[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5d6c1e9f-b067-423b-86d8-bba0b5b8b0c9
+    m_ActionName: 'Puzzle/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: db106398-fb81-4813-aa82-32b1cfa8ffec
+    m_ActionName: 'Puzzle/Cancel[/Keyboard/l]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 975b6506-e84c-4991-bf08-03e49d35f4cc
+    m_ActionName: 'Puzzle/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c56fc27a-1aa3-46db-b639-ba707d844a60
+    m_ActionName: 'Puzzle/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 75fcc726-6fe2-4cdb-a815-d0bb4ac5ce92
+    m_ActionName: 'Puzzle/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d24449a1-a8ff-438f-b084-01a08c90d5d9
+    m_ActionName: 'Puzzle/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fa018457-907a-4dd2-8546-7aa1f8ef5711
+    m_ActionName: 'Puzzle/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f41818e0-85b3-42df-8acd-082cbb1fd367
+    m_ActionName: Puzzle/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0de39480-3a9b-447b-aa5e-3757520990c0
+    m_ActionName: Puzzle/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f5d826c-eec8-4d4d-b763-1758f0217f82
+    m_ActionName: 'Puzzle/Pause1[/Keyboard/t,/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f034ef4d-e911-4b53-8b45-20d99924816e
+    m_ActionName: 'Puzzle/Map1[/Keyboard/m]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
