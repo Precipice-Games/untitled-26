@@ -12621,6 +12621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountainrange_v1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 51db6255457c4994cacdc835cf4bac73, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14322,6 +14326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mountainrange_v1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 51db6255457c4994cacdc835cf4bac73, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14883,11 +14891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4891093683927560971, guid: 71fd035891d3e234e90910c605f52db7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.11
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4891093683927560971, guid: 71fd035891d3e234e90910c605f52db7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.3
+      value: 26.96
       objectReference: {fileID: 0}
     - target: {fileID: 6361288483229341380, guid: 71fd035891d3e234e90910c605f52db7, type: 3}
       propertyPath: puzzleInfo
