@@ -2,7 +2,7 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class RuneCircle : MonoBehaviour, IInteractable
+public class RuneCircle : MonoBehaviour
 {
     [Title("Puzzle Information")]
     [InfoBox("Attach the data of the puzzle that this terminal corresponds to.")]
