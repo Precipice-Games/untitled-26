@@ -65,7 +65,7 @@ jobs:
           projectPath: "00 Unity Proj/Untitled-26"
           buildProfile: 'Assets/Settings/Build Profiles/macOS.asset'
           targetPlatform: StandaloneOSX
-          versioning: None
+          versioning: Semantic
 
       # Output
       - uses: actions/upload-artifact@v4
