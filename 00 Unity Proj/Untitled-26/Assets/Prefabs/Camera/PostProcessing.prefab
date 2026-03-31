@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2603048540492959415}
   - component: {fileID: 5044123975584922475}
+  - component: {fileID: 4365980847604330081}
   m_Layer: 0
   m_Name: PostProcessing
   m_TagString: Untagged
@@ -49,3 +50,16 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 7a24e1c5dcc2dd94198cfe97ad59ff5c, type: 2}
+--- !u!114 &4365980847604330081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5392254640924224319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238308a8cc94b0b43ae0b28a1b3d5ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PostProcessingManager
+  volume: {fileID: 5044123975584922475}
