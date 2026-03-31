@@ -89,14 +89,14 @@ public class PlayerFixedMovement : MonoBehaviour
     // Subscribe to events
     private void OnEnable()
     {
-        InteractablePillar.puzzleTriggered += UpdatePuzzleInformation;
+        RuneCircle.puzzleTriggered += UpdatePuzzleInformation;
         ResetPuzzle.resetPuzzle += ResetPlayerPosition;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
-        InteractablePillar.puzzleTriggered -= UpdatePuzzleInformation;
+        RuneCircle.puzzleTriggered -= UpdatePuzzleInformation;
         ResetPuzzle.resetPuzzle -= ResetPlayerPosition;
     }
     

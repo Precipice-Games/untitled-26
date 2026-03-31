@@ -88,13 +88,13 @@ public class ViewManager : MonoBehaviour
     private void OnEnable()
     {
         GameStateManager.transitionedToNewState += HandleViewChange;
-        InteractablePillar.puzzleTriggered += UpdatePuzzleInformation;
+        RuneCircle.puzzleTriggered += UpdatePuzzleInformation;
     }
     
     private void OnDisable()
     {
         GameStateManager.transitionedToNewState -= HandleViewChange;
-        InteractablePillar.puzzleTriggered -= UpdatePuzzleInformation;
+        RuneCircle.puzzleTriggered -= UpdatePuzzleInformation;
     }
 
     /// <summary>

@@ -6,7 +6,7 @@ public class ExitPuzzleButton : MonoBehaviour
     public GameObject player;
 
     public static event Action<GameStateManager.GameState> exitPuzzle;
-    public InteractablePillar currentPillar;
+    public RuneCircle currentRuneCircle;
 
     public Vector3 respawnLocation;
 
