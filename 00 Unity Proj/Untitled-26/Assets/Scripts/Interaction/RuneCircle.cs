@@ -5,7 +5,7 @@ using UnityEngine;
 public class RuneCircle : MonoBehaviour
 {
     [Title("Puzzle Information")]
-    [InfoBox("Attach the data of the puzzle that this terminal corresponds to.")]
+    [InfoBox("Attach the data of the puzzle that this rune circle corresponds to.")]
     public PuzzleInformation puzzleInfo;
     public ExitPuzzleButton exitPuzzleButton;
     /// <summary>
@@ -27,16 +27,24 @@ public class RuneCircle : MonoBehaviour
     // Static event to notify subscribers of game state changes
     public static event Action<PuzzleInformation> puzzleTriggered;
 
+    // Subscribe to events
     private void OnEnable()
     {
         PlayerInteraction.playerInteraction += Interaction;
     }
 
+    // Unsubscribe from events
     private void OnDisable()
     {
         PlayerInteraction.playerInteraction -= Interaction;
     }
 
+    /// <summary>
+    /// Called when the Player's collider enters the rune circle collider.
+    /// This sets inCircle to true and invokes the playerInCircle event
+    /// (true), which is picked up by InteractionPrompt.cs.
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -47,6 +55,12 @@ public class RuneCircle : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Called when the Player's collider exits the rune circle collider.
+    /// This sets inCircle to false and invokes the playerInCircle event
+    /// (false), which is picked up by InteractionPrompt.cs.
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -56,6 +70,13 @@ public class RuneCircle : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Subscribed to the playerInteraction event in PlayerInteraction.cs. This is
+    /// triggered when the Player presses 'E' while standing in the rune circle. It
+    /// first checks if the puzzle has already been completed. If so, the Player is
+    /// teleported to the next rune circle. Otherwise, puzzleTriggered is fired to
+    /// set up the puzzle state.
+    /// </summary>
     public void Interaction()
     {
         // If the player is not standing on the rune circle, break out.
@@ -80,6 +101,10 @@ public class RuneCircle : MonoBehaviour
         puzzleTriggered.Invoke(puzzleInfo);
     }
 
+    /// <summary>
+    /// Verifies that this rune circle has the puzzleInfo variable for its corresponding puzzle.
+    /// </summary>
+    /// <returns></returns>
     private bool PuzzleInfoFound()
     {
         if (puzzleInfo != null)
