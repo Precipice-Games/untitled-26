@@ -112,7 +112,7 @@ public class RuneCircle : MonoBehaviour
             return true;
         }
 
-        Debug.LogError("No puzzle information attached to this pillar.");
+        Debug.LogError("RuneCircle.cs >> No puzzle information attached to this rune circle.");
         return false;
     }
 
@@ -128,7 +128,7 @@ public class RuneCircle : MonoBehaviour
         }
         else
         {
-            Debug.Log("Could not find player");
+            Debug.Log("RuneCircle.cs >> Could not find player.");
         }
     }
 }
