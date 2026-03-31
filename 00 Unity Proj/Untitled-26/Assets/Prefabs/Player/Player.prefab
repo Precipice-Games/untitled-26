@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2692560453236832567}
   - component: {fileID: 468646906096890671}
   - component: {fileID: 54466896041126900}
+  - component: {fileID: 2827238814617370988}
   m_Layer: 2
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -152,6 +153,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotation
   player: {fileID: 137271524649294906}
   mouseSensitivity: 4
+--- !u!114 &2827238814617370988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874532845149531710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.PostProcessVolume
+  sharedProfile: {fileID: 11400000, guid: 74e80bb214d840f48a8ede74e1d5c178, type: 2}
+  isGlobal: 0
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &5438321986708604092
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +325,9 @@ MonoBehaviour:
       m_Calls: []
   rb: {fileID: 0}
   _playerInput: {fileID: 6922169669516928053}
-  debugMode: 1
+  printKinematics: 0
+  printActionMapUpdates: 0
+  printCursorUpdates: 0
 --- !u!114 &1173698383739407512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,20 +340,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffb8cce26a91974988192e7f4eb0d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  moveSpeed: 5
+  xMovement: 0
+  yMovement: 0
+  rb: {fileID: 0}
   jumpPower: 4
-  jumpMovement: 0
   maxJumps: 1
   jumpsRemaining: 0
-  playerTransform: {fileID: 137271524649294906}
-  groundCheckSize: {x: 0.5, y: 0.05, z: 0.5}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
   isGrounded: 0
-  groundCoord: 1.9
-  baseGravity: 2
-  maxFallSpeed: 18
-  fallMultiplier: 1
 --- !u!114 &6709136814799094051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +362,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFixedMovement
   playerGridX: 0
   playerGridZ: 0
+  printMoveAction: 1
+  printPlayerGridCoords: 1
+  printPlayerVector3: 0
+  printAttemptedTileType: 0
   puzzleCompleted:
     m_PersistentCalls:
       m_Calls:
@@ -428,6 +446,7 @@ MonoBehaviour:
   interactionUI: {fileID: 0}
   activeTimer: 5
   maxTime: 5
+  printRaycastHit: 0
 --- !u!114 &5519739034169789386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,12 +460,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoxCastGrounded
   groundChecking: 1
-  rawRayLength: 0.71055
-  rayLengthBuffer: 0.2
   currentPlatform: {fileID: 0}
-  canInteract: 1
   activeTimer: 5
   maxTime: 5
+  rawRayLength: 0.71055
+  rayLengthBuffer: 0.2
+  printGroundedStatus: 0
 --- !u!114 &6922169669516928053
 MonoBehaviour:
   m_ObjectHideFlags: 0
