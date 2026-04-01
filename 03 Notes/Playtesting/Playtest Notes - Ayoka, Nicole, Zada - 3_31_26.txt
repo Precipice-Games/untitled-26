@@ -1,0 +1,60 @@
+Playtest Notes - Ayoka, Nicole, Zada - 3/31/26
+
+Version: v1.0.2
+Platform: Windows (PC)
+
+Misc.
+- Music is nice.
+
+Dialogue
+- Nicole and Zada were a bit confused with how to continue the dialogue.
+	- Nicole immediately figured she was supposed to use the spacebar.
+	- Zada tried to click the small white arrow at the bottom but found it difficult to click and continue.
+- "I think we're Skye, and that's Judith." -- Nicole and Zada were a bit confused as to who each of the characters were in the scene.
+	- Suggestion: overhead tags or something to tell which character is speaking.
+- "Judith is so mean!!!"
+- Dialogue is a little long for early game but solid dialogue in terms of quality.
+	- Would be nice to discover more characters later.
+	- "I don't think you should change her personality, I like that she's mean." -- Zada.
+	- Suggestion: Maybe shorten her first meeting and focus on her telling you to do the puzzle.
+	- Spread out the lore over a few puzzles to help cut down the bulk.
+	- There is a lot of story that they're being hit with at once.
+
+B. Puzzle Mode
+- "Ohhh we select the tile!" Nicole said.
+	- Wasn't sure what to do upon first entry into puzzle mode.
+	- Began to understand through the yellow highlight feedback on the selected tile.
+- Emphasized the need for a tutorial, perhaps little pop ups.
+	- i.e., not a full tutorial, just something to get users started.
+- Confused about the how ice tiles work.
+- Likes the multiple options to solve puzzle.
+- Couldn't restart the second puzzle.
+- Mana points deducted even when a tile was blocked from moving.
+- It appears like Skye is not visible on the tiles in the second puzzle.
+	- Either she's just very hard to see or she's not being configured correctly in Puzzle2.prefab. Need to check this.
+- Check that the backend data (e.g., move count values) are correct on Puzzle2.prefab.
+	- Is Puzzle 2 even solvable?
+- After I quickly explained the ice mechanic, Nicole understood it well enough to explain it to Ayoka.
+	- Easy to learn mechanic!
+- Ayoka was confused about the numbers on the puzzle cards.
+	- She actually thought she had to click a number on the keyboard that cooresponded to a card.
+- Nicole: With the energy limit being higher than the moves available, this makes the puzzles feel a bit redundant.
+	- Can't do anything with that extra Mana.
+	- Would be better to have more Move Cards than Mana available because that lends itself to more possibilities.
+	- Gives an opportunity for greater flexibility for those early puzzles.
+	- This could be a backend data error in terms of the resource system, should have the engineers cross reference it with the Figma data.
+
+C. Physical & Visual Navigation
+- Nicole walked straight into the void.
+	- Didn't even see the first puzzle terminal and there were no instructions on how to enter the puzzle.
+	- Suggestion: Waypoint possibly pointing you to the location of the first puzzle.
+- Found the terminal for the second puzzle very easily after completing the first one.
+- Cannot see normal tiles on the white backdrop of the snow.
+- Suggestion: Add directional arrows onto cards to indicate the direction that the tiles can move in.
+	- Both Nicole and Zada have a hard time telling left from right, so this would be a helpful accessibility feature for them.
+- Need to make Skye's icon more visible in puzzle mode.
+- Need to ensure she is locked on the right axis so she's not turning.
+- Difficulty indicators, possibly?
+	- i.e., easy puzzle, harder puzzle.
+	- Might not apply as much if all puzzles need to be solved in the same order.
+- Navigating the overworld, would be nice if the angle followed the character a little more smoothly.
