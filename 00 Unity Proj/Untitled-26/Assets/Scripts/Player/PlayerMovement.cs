@@ -72,6 +72,11 @@ public class PlayerMovement : MonoBehaviour
         xMovement = context.ReadValue<Vector2>().x;
         yMovement = context.ReadValue<Vector2>().y;
     }
+    
+    // public void OnLook(InputAction.CallbackContext context)
+    // {
+    //     lookInput = context.ReadValue<Vector2>();
+    // }
 
     /// <summary>
     /// Takes the player's jump input in the context parameter

@@ -28,6 +28,8 @@ public class CameraRotation : MonoBehaviour
         if (isRotating)
         {
             //Grabs the mouse input
+            // float inputX = lookInput.x * mouseSensitivity;
+            // float inputY = lookInput.y * mouseSensitivity;
             float inputX = Input.GetAxis("Mouse X") * mouseSensitivity;
             float inputY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
