@@ -37,6 +37,10 @@ public class ViewManager : MonoBehaviour
     [Space]
     [Title("Puzzle Triggering Event", "Event fired when the Player interacts with an InteractablePillar.")]
     public UnityEvent puzzleSwitchDetected;
+    // [Title("Update Post Processor", "Event fired to update the post processor.")]
+    // public UnityEvent postProcessorUpdate;
+    // Static event to notify subscribers of game state changes
+    public static event Action<bool> togglePostProcessor;
     
     [Space]
     [Title("Debugging Options", "Settings for quick debugging options.")]
@@ -85,16 +89,20 @@ public class ViewManager : MonoBehaviour
         if (printSceneDefaults) Debug.Log($"ViewManager.cs >> Initialized with {uiCanvases.Count} UI Canvases.");
     }
 
+    // Subscribe to events
     private void OnEnable()
     {
         GameStateManager.transitionedToNewState += HandleViewChange;
-        InteractablePillar.puzzleTriggered += UpdatePuzzleInformation;
+        GameStateManager.transitionedToNewState += HandlePostProcessor;
+        RuneCircle.puzzleTriggered += UpdatePuzzleInformation;
     }
     
+    // Unsubscribe from events
     private void OnDisable()
     {
         GameStateManager.transitionedToNewState -= HandleViewChange;
-        InteractablePillar.puzzleTriggered -= UpdatePuzzleInformation;
+        GameStateManager.transitionedToNewState -= HandlePostProcessor;
+        RuneCircle.puzzleTriggered -= UpdatePuzzleInformation;
     }
 
     /// <summary>
@@ -209,4 +217,20 @@ public class ViewManager : MonoBehaviour
             }
         }
     }
+    
+    
+    private void HandlePostProcessor(GameStateManager.GameState newState)
+    {
+        if (newState == GameStateManager.GameState.Paused)
+        {
+            togglePostProcessor?.Invoke(true);
+        }
+        else
+        {
+            togglePostProcessor?.Invoke(false);
+        }
+    }
+    
+    // HandlePostProcessorToggle();
+    // postProcessorToggle?.Invoke(false);
 }
