@@ -2729,6 +2729,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
   gameState: 0
+  printTimescalePausable: 0
+  printSceneDefaults: 1
+  printStateTransition: 1
 --- !u!114 &1963081915272111325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2766,6 +2769,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  printSceneDefaults: 0
+  printCanvasUpdate: 0
+  printCameraUpdate: 0
 --- !u!114 &2745341397233381068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2790,6 +2796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65197e0c65b7b8343ae036d2df089ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
+  printPlayerInfo: 0
 --- !u!1 &6843366221423863254
 GameObject:
   m_ObjectHideFlags: 0
@@ -6134,6 +6141,10 @@ PrefabInstance:
       propertyPath: m_WholeNumbers
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4613736752988526779, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4739468237433266660, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_TextStyleHashCode
       value: -1183493901
@@ -6466,6 +6477,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -45.645
       objectReference: {fileID: 0}
+    - target: {fileID: 7606258516178848760, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7679656677912847970, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -6500,7 +6515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7889292977373239584, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7914138571576878347, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_fontSize
