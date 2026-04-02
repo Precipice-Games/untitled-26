@@ -22658,6 +22658,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213066574574228598, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: startingMana
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7213066574574228598, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: printCardDrainage
       value: 0
       objectReference: {fileID: 0}
