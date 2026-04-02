@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     // to the current input map as needed.
     public static event Action<string> inputMapSwitched;
     public static event Action<CursorLockMode, bool> cursorChanged;
+    public static event Action leftClickEvent;
 
     [Space]
     [Title("Debugging Options", "Settings for quick debugging options.")]
@@ -126,6 +127,22 @@ public class InputManager : MonoBehaviour
             }
             
             cursorChanged?.Invoke(lockMode, visible);
+        }
+    }
+    
+    /// <summary>
+    /// This is subscribed to the left click input action in the Player action map.
+    /// It is used to invoke the left click event, which TileSelector.cs is
+    /// subscribed to. This is important because there is one TileSelector.cs per
+    /// puzzle, not one per scene, so we can't handle the callback explicitly.
+    /// </summary>
+    /// <param name="context"></param>
+    public void LeftClickDetected(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            // Invoke the left click event for any subscribers
+            leftClickEvent?.Invoke();
         }
     }
 }

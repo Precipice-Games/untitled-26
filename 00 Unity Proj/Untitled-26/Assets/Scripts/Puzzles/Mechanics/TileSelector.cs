@@ -36,31 +36,35 @@ public class TileSelector : MonoBehaviour
     {
         PlayerFixedMovement.playerMoved += UpdatePlayerCoordinates;
         RuneCircle.puzzleTriggered += AssignStartAndEndTiles;
+        InputManager.leftClickEvent += ClickDetected;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         PlayerFixedMovement.playerMoved -= UpdatePlayerCoordinates;
-        RuneCircle.puzzleTriggered -= AssignStartAndEndTiles; // FIXED
+        RuneCircle.puzzleTriggered -= AssignStartAndEndTiles;
+        InputManager.leftClickEvent -= ClickDetected;
     }
 
-    void Update()
+    /// <summary>
+    /// This method is subscribed to the leftClickEvent invoked by InputManager.cs.
+    /// This is because there is one TileSelector.cs per puzzle rather than one for
+    /// the entire scene, so it cannot be subscribed explicitly.
+    /// </summary>
+    public void ClickDetected()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (Physics.Raycast(ray, out RaycastHit hit))
+            SelectableTile tile = hit.collider.GetComponent<SelectableTile>();
+            if (tile != null)
             {
-                SelectableTile tile = hit.collider.GetComponent<SelectableTile>();
-                if (tile != null)
-                {
-                    if (selectedTile != null)
-                        selectedTile.Deselect();
+                if (selectedTile != null)
+                    selectedTile.Deselect();
 
-                    selectedTile = tile;
-                    selectedTile.Select();
-                }
+                selectedTile = tile;
+                selectedTile.Select();
             }
         }
     }
