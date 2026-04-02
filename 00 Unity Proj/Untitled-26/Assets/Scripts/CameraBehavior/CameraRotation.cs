@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,23 +11,30 @@ using UnityEngine.InputSystem;
 
 public class CameraRotation : MonoBehaviour
 {
-    // Variables
+    [Title("Camera Rotation Variables", "Variables used in the rotation of the camera. Some influence Player rotation.")]
+    [PropertyTooltip("Please attach the Player GameObject.")]
     public GameObject player;
-    public float mouseSensitivity = 4f;
+    [PropertyTooltip("Mouse sensitivity. Default is 0.5f.")]
+    public float mouseSensitivity = 1f;
     private bool isRotating = true;
     
-    [SerializeField] private float lookX;
-    [SerializeField] private float lookY;
-    [SerializeField] private float sqrMag;
-    
-    private float _camYaw;
-    private float _camPitch;
-    
+    // Variables used to store the input values from
+    // the Look action on the PlayerControls map
+    private float lookX;
+    private float lookY;
+    private float sqrMag;
     private const float _threshold = 0.01f;
+    
+    // Variables used to store the current yaw and pitch of
+    // the camera. Yaw is the horizontal rotation and pitch
+    // is the vertical rotation.
+    private float camYaw;
+    private float camPitch;
+
     
     private void Start()
     {
-        _camYaw = player.transform.rotation.eulerAngles.y;
+        camYaw = player.transform.rotation.eulerAngles.y;
     }
     
     public void LookRotation(InputAction.CallbackContext context)
@@ -40,16 +48,16 @@ public class CameraRotation : MonoBehaviour
         if (sqrMag >= _threshold)
         {
             // Get the yaw and pitch values
-            _camYaw += lookX;
-            _camPitch += lookY;
+            camYaw += lookX;
+            camPitch += lookY;
         }
         
-        _camYaw -= lookY; // Invert the y-axis
-        
-        _camPitch = Mathf.Clamp(_camPitch, 0f, 15.0f);
-        transform.localEulerAngles = Vector3.right * _camPitch;
+        camPitch = Mathf.Clamp(camPitch, 0f, 15.0f);
+        transform.localEulerAngles = Vector3.right * camPitch;
     }
 
+    // TODO: Should we get rid of this method? It
+    //       Doesn't appear to be in use. -- Nikki
     public void toggleRotation()
     {
         isRotating = !isRotating;
