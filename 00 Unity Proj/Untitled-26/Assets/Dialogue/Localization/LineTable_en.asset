@@ -431,6 +431,28 @@ MonoBehaviour:
     m_Localized: 'Judith: You too. And I really do mean that.'
     m_Metadata:
       m_Items: []
+  - m_Id: 13042942170918916
+    m_Localized: '[boldend]Message to Player:[/boldend] Talk to Dad at the dock'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13042942170918915
+    m_Localized: "Sky: \u201CDad\u2019s already out fixing an airship, as usual.
+      Maybe he knows what that was.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13042942170918914
+    m_Localized: "Sky: \u201CI don\u2019t know what that was, but it all felt so\u2026
+      real.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13042942170918913
+    m_Localized: "Sky: \u201CChild of the sky\u2026 hear my plea\u2026 and a hero??\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13042942170918912
+    m_Localized: "Sky: \u201CThat voice\u2026 what was that?\u201D"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
