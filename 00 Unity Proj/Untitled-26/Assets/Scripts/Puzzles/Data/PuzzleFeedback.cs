@@ -32,12 +32,14 @@ public class PuzzleFeedback : MonoBehaviour
     private void OnEnable()
     {
         SelectableTile.cellOccupied += CellIsOccupied;
+        SelectableTile.moveOutOfBounds += MoveIsOutOfBounds;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         SelectableTile.cellOccupied -= CellIsOccupied;
+        SelectableTile.moveOutOfBounds -= MoveIsOutOfBounds;
     }
 
     private void CellIsOccupied(SelectableTile selectableTile)
@@ -53,6 +55,11 @@ public class PuzzleFeedback : MonoBehaviour
     
         Debug.Log($"PuzzleFeedback.cs >> You tried to move {tile}, but another tile is occupying that cell!");
         flickerTimer = TimerManager.CreateTimer(2.0f, OnTimerFinished, OnTimerTick);
+    }
+    
+    private void MoveIsOutOfBounds(SelectableTile selectableTile)
+    {
+        // Insert logic here regarding the move being out of bounds.
     }
     
     void OnTimerFinished()
