@@ -10,38 +10,44 @@ using UnityEngine.InputSystem;
 
 public class CameraRotation : MonoBehaviour
 {
-    //Variables
-    public Transform player;
+    // Variables
+    public GameObject player;
     public float mouseSensitivity = 4f;
-    private float cameraVerticalRotation = 0f;
     private bool isRotating = true;
-
-    // Update is called once per frame
-    void FixedUpdate()
+    
+    [SerializeField] private float lookX;
+    [SerializeField] private float lookY;
+    [SerializeField] private float sqrMag;
+    
+    private float _camYaw;
+    private float _camPitch;
+    
+    private const float _threshold = 0.01f;
+    
+    private void Start()
     {
-        // TODO: Is there anyway we could improve the polling rate or the way the mouse
-        //       input is detected? I've noticed that the mouse input is totally fine when
-        //       I'm turning on my laptop, but when I try to play on my desktop, it's very
-        //       laggy and hard to turn the character. It could be a problem with the
-        //       polling or update rate. Let me know what you guys think. -- Nikki
+        _camYaw = player.transform.rotation.eulerAngles.y;
+    }
+    
+    public void LookRotation(InputAction.CallbackContext context)
+    {
+        // Get the look input
+        lookX = context.ReadValue<Vector2>().x; // Yaw
+        lookY = context.ReadValue<Vector2>().y; // Pitch
+        sqrMag = context.ReadValue<Vector2>().sqrMagnitude;
         
-        if (isRotating)
+        // if there is an input and camera position is not fixed
+        if (sqrMag >= _threshold)
         {
-            //Grabs the mouse input
-            // float inputX = lookInput.x * mouseSensitivity;
-            // float inputY = lookInput.y * mouseSensitivity;
-            float inputX = Input.GetAxis("Mouse X") * mouseSensitivity;
-            float inputY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-
-
-            //rotate the camera around local x axis
-            cameraVerticalRotation -= inputY;
-            cameraVerticalRotation = Mathf.Clamp(cameraVerticalRotation, 0f, 15.0f);
-            transform.localEulerAngles = Vector3.right * cameraVerticalRotation;
-
-            //rotate the players and camera around its Y axis
-            player.Rotate(Vector3.up * inputX);
+            // Get the yaw and pitch values
+            _camYaw += lookX;
+            _camPitch += lookY;
         }
+        
+        _camYaw -= lookY; // Invert the y-axis
+        
+        _camPitch = Mathf.Clamp(_camPitch, 0f, 15.0f);
+        transform.localEulerAngles = Vector3.right * _camPitch;
     }
 
     public void toggleRotation()
