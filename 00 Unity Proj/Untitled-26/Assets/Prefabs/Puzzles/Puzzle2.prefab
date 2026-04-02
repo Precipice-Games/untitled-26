@@ -323,7 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &1748856878159848439
 GameObject:
@@ -915,7 +915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &3415398242704777851
 GameObject:
@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &3680815147939373687
 GameObject:
@@ -1670,7 +1670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &4068169703386918078
 GameObject:
@@ -2071,7 +2071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &4384060395358065249
 GameObject:
@@ -3080,7 +3080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &6872575536405331139
 GameObject:
@@ -3259,7 +3259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &6875277700547341980
 GameObject:
@@ -3292,6 +3292,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 997324212889455551}
+  - {fileID: 3682826887452900690}
   - {fileID: 6495005958489118381}
   - {fileID: 4328405354012038814}
   - {fileID: 2561820659644964844}
@@ -3707,7 +3708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &7899876809025424050
 GameObject:
@@ -4317,7 +4318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &8695166807554766526
 GameObject:
@@ -4496,7 +4497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &8733896185268234611
 GameObject:
@@ -4717,7 +4718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
   tileRenderer: {fileID: 0}
   tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &9207146543148899930
 GameObject:
@@ -4856,3 +4857,109 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &5266628853964521290
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1111893447414092744}
+    m_Modifications:
+    - target: {fileID: 6756488729712636185, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_Name
+      value: PuzzleCanvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756488729712636185, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+--- !u!224 &3682826887452900690 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+  m_PrefabInstance: {fileID: 5266628853964521290}
+  m_PrefabAsset: {fileID: 0}

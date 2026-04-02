@@ -57,6 +57,7 @@ jobs:
       # Build - Added projectPath
       - name: Build project
         uses: game-ci/unity-builder@v4
+        id: buildStep
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
@@ -65,7 +66,13 @@ jobs:
           projectPath: "00 Unity Proj/Untitled-26"
           buildProfile: 'Assets/Settings/Build Profiles/macOS.asset'
           targetPlatform: StandaloneOSX
-          versioning: None
+          versioning: Tag
+          # testing this out with the Tag variable
+
+      # Try to print the build version from the versioning variable (Tag)
+      - name: Print macOS build version (Tag)
+        run: |
+          echo "Project Version: ${{ steps.buildStep.outputs.buildVersion }}"
 
       # Output
       - uses: actions/upload-artifact@v4

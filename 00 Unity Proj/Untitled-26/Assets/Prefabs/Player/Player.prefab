@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78a263897c9f894386991ffd585aaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotation
-  player: {fileID: 137271524649294906}
-  mouseSensitivity: 4
+  player: {fileID: 5438321986708604092}
+  mouseSensitivity: 1
 --- !u!1 &5438321986708604092
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 4698028750357769851}
   - component: {fileID: -5156860291110842563}
   - component: {fileID: -4027242432962083161}
+  - component: {fileID: 3689884208207083878}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -326,6 +327,7 @@ MonoBehaviour:
   xMovement: 0
   yMovement: 0
   rb: {fileID: 0}
+  cameraRotation: {fileID: 54466896041126900}
   jumpPower: 4
   maxJumps: 1
   jumpsRemaining: 0
@@ -347,7 +349,7 @@ MonoBehaviour:
   printMoveAction: 1
   printPlayerGridCoords: 1
   printPlayerVector3: 0
-  printAttemptedTileType: 1
+  printAttemptedTileType: 0
   puzzleCompleted:
     m_PersistentCalls:
       m_Calls:
@@ -425,7 +427,6 @@ MonoBehaviour:
   raycastEnabled: 1
   activeInteractable: {fileID: 0}
   canInteract: 1
-  interactionUI: {fileID: 0}
   activeTimer: 5
   maxTime: 5
   printRaycastHit: 0
@@ -479,8 +480,8 @@ MonoBehaviour:
     m_ActionName: 'Player/Attack[/Mouse/leftButton,/Keyboard/enter]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6739596773503058293}
-        m_TargetAssemblyTypeName: PlayerRaycastInteraction, Assembly-CSharp
+      - m_Target: {fileID: 3689884208207083878}
+        m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
         m_MethodName: Interact
         m_Mode: 1
         m_Arguments:
@@ -712,11 +713,11 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 975b6506-e84c-4991-bf08-03e49d35f4cc
-    m_ActionName: 'Puzzle/Point[/Mouse/position]'
+    m_ActionName: 'Puzzle/Point[/Mouse/position,/Pen/position,/Touchscreen/touch0/position,/Touchscreen/touch1/position,/Touchscreen/touch2/position,/Touchscreen/touch3/position,/Touchscreen/touch4/position,/Touchscreen/touch5/position,/Touchscreen/touch6/position,/Touchscreen/touch7/position,/Touchscreen/touch8/position,/Touchscreen/touch9/position]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: c56fc27a-1aa3-46db-b639-ba707d844a60
-    m_ActionName: 'Puzzle/Click[/Mouse/leftButton]'
+    m_ActionName: 'Puzzle/Click[/Mouse/leftButton,/Pen/tip,/Touchscreen/touch0/press,/Touchscreen/touch1/press,/Touchscreen/touch2/press,/Touchscreen/touch3/press,/Touchscreen/touch4/press,/Touchscreen/touch5/press,/Touchscreen/touch6/press,/Touchscreen/touch7/press,/Touchscreen/touch8/press,/Touchscreen/touch9/press]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 75fcc726-6fe2-4cdb-a815-d0bb4ac5ce92
@@ -891,3 +892,15 @@ MonoBehaviour:
   waitTimeBeforeLineStart: 0
   waitTimeAfterLineComplete: 0
   audioSource: {fileID: 0}
+--- !u!114 &3689884208207083878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438321986708604092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a3fbcb75602f442a47d0e163a622a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
