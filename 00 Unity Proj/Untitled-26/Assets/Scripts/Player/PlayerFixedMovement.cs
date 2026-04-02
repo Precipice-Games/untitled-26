@@ -21,6 +21,7 @@ public class PlayerFixedMovement : MonoBehaviour
     private PuzzleInformation puzzleInfo;
     private Vector3 playerCurrentPosition; // Current Vector3 position
     private Vector3 startPosition;
+    private Vector3 endPosition;
     private GridManager gridManager;
     private GameObject puzzleCam; // The camera object holds relevant scripts
     
@@ -384,8 +385,9 @@ public class PlayerFixedMovement : MonoBehaviour
         {
             Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at ({endTileX}, {endTileZ}).");
 
+            endPosition = new Vector3(endTile.transform.position.x, transform.position.y + 1.0f, endTile.transform.position.z);
             transform.parent = null;
-            transform.position = new Vector3(3.59f, 0.83f, 21.43f);
+            transform.position = endPosition;
 
             puzzleCompleted.Invoke(); // For the GameStateManager
             updatePuzzleStatus?.Invoke(puzzleInfo); // For the IslandPuzzleManager
