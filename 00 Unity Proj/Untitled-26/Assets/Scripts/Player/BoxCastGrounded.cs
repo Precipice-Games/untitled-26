@@ -6,6 +6,11 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+// TODO: Rename this script to PlayerGroundcast.cs. I originally named it BoxCastGrounded.cs
+//       because I was attempting to do ground detection with a BoxCast, but eventually ended
+//       up using the same type of raycast we use for interaction. Likewise, I want the class
+//       name to accurately reflect the feature. -- Nikki
+
 // This script creates a raycast that shoots downwards from the Player.
 // It is used to check if the Player is currently on the ground.
 
