@@ -144,6 +144,7 @@ public class SelectableTile : MonoBehaviour
         {
             Debug.Log("SelectableTile.cs >> BLOCKED: Outside grid – no mana spent");
             // Fire off an event to say that the move is out of bounds
+            moveOutOfBounds?.Invoke(this);
             return true;
         }
         return false;
