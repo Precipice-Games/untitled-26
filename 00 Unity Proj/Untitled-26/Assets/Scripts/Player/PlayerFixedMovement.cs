@@ -306,7 +306,7 @@ public class PlayerFixedMovement : MonoBehaviour
     private bool CheckForOutOfBounds(int coordX, int coordZ)
     {
         // If it's out of bounds, return true.
-        if (!gridManager.IsInsideGrid(coordX, coordZ))
+        if (!gridManager.IsInsideGridPlayer(coordX, coordZ))
         {
             Debug.Log($"PlayerFixedMovement.cs >> Move blocked: ({coordX},{coordZ}) is outside the grid.");
             return true;
