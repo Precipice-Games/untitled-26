@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float xMovement; //left to right movement data
     [SerializeField] private float yMovement; //forward to back movement data
     [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
+    [PropertyTooltip("Please attach the CameraRotation script. It is used to rotate the Player with the camera.")]
+    [SerializeField] private CameraRotation cameraRotation;
     
     // ========== Jumping ==========
     [Space]
@@ -25,6 +27,9 @@ public class PlayerMovement : MonoBehaviour
     [Space]
     [Title("Ground Check", "Variables used to perform ground checks for jumping.")]
     [SerializeField] private bool isGrounded;
+
+    private float lookX;
+    private float turnInput;
     
     // Subscribe to events
     private void OnEnable()
@@ -57,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 localMoveDirection = transform.right * xMovement + transform.forward * yMovement;
         transform.position += localMoveDirection * moveSpeed * Time.deltaTime;
+        
+        transform.Rotate(Vector3.up * turnInput);
     }
     
     /// <summary>
@@ -73,10 +80,21 @@ public class PlayerMovement : MonoBehaviour
         yMovement = context.ReadValue<Vector2>().y;
     }
     
-    // public void OnLook(InputAction.CallbackContext context)
-    // {
-    //     lookInput = context.ReadValue<Vector2>();
-    // }
+    /// <summary>
+    /// Takes in the Player's mouse pointer (delta) input in as a
+    /// Vector2 and assigns it to lookX, which defines the turning
+    /// direction. Then we multiply that value by the mouseSensitivity
+    /// and apply it to turnInput. This comes to fruition in the
+    /// FixedUpdate() method to physically rotate the Player.
+    /// </summary>
+    /// <param name="context"></param>
+    public void PlayerLook(InputAction.CallbackContext context)
+    {
+        lookX = context.ReadValue<Vector2>().x;
+        turnInput = lookX * cameraRotation.mouseSensitivity;
+        // The mouse sensitivity is retrieved from CameraRotation.cs
+        // for relevance and to avoid repetition in both files.
+    }
 
     /// <summary>
     /// Takes the player's jump input in the context parameter

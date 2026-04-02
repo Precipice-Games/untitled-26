@@ -32,31 +32,22 @@ public class CameraRotation : MonoBehaviour
     public void LookRotation(InputAction.CallbackContext context)
     {
         // Get the look input
-        lookX = context.ReadValue<Vector2>().x;
-        lookY = context.ReadValue<Vector2>().y;
+        lookX = context.ReadValue<Vector2>().x; // Yaw
+        lookY = context.ReadValue<Vector2>().y; // Pitch
         sqrMag = context.ReadValue<Vector2>().sqrMagnitude;
         
         // if there is an input and camera position is not fixed
         if (sqrMag >= _threshold)
         {
             // Get the yaw and pitch values
-            // _camYaw += lookX * mouseSensitivity;
-            // _camPitch += lookY * mouseSensitivity;
-            
             _camYaw += lookX;
             _camPitch += lookY;
         }
         
         _camYaw -= lookY; // Invert the y-axis
-        _camYaw = Mathf.Clamp(_camYaw, 0f, 15.0f);
         
-        // Camera should follow the Player
-        player.transform.rotation = Quaternion.Euler(_camPitch, _camYaw, 0.0f);
-    }
-    
-    private void LateUpdate()
-    {
-        transform.localEulerAngles = Vector3.right * _camYaw;
+        _camPitch = Mathf.Clamp(_camPitch, 0f, 15.0f);
+        transform.localEulerAngles = Vector3.right * _camPitch;
     }
 
     public void toggleRotation()
