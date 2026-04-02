@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78a263897c9f894386991ffd585aaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotation
-  player: {fileID: 137271524649294906}
-  mouseSensitivity: 4
+  player: {fileID: 5438321986708604092}
+  mouseSensitivity: 1
 --- !u!1 &5438321986708604092
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +327,7 @@ MonoBehaviour:
   xMovement: 0
   yMovement: 0
   rb: {fileID: 0}
+  cameraRotation: {fileID: 54466896041126900}
   jumpPower: 4
   maxJumps: 1
   jumpsRemaining: 0

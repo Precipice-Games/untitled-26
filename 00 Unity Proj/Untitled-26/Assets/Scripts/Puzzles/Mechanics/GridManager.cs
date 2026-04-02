@@ -12,6 +12,8 @@ public class GridManager : MonoBehaviour
 
     void Awake()
     {
+        width += 2;
+        height += 2;
         grid = new SelectableTile[width, height];
     }
 
@@ -22,6 +24,18 @@ public class GridManager : MonoBehaviour
     /// <param name="z"></param>
     /// <returns></returns>
     public bool IsInsideGrid(int x, int z)
+    {
+        return x > 0 && x < width - 1 && z > 0 && z < height - 1;
+    }
+
+    /// <summary>
+    /// Check if movement action is within grid for player. 
+    /// This is used to allow the player to move onto the start and end tiles, outside the area allowed for other tiles.
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="z"></param>
+    /// <returns></returns>
+    public bool IsInsideGridPlayer(int x, int z)
     {
         return x >= 0 && x < width && z >= 0 && z < height;
     }
