@@ -94,7 +94,7 @@ public class RuneCircle : MonoBehaviour
 
         // Assign the transform position of the player's respawn location to be on the starting rune circle.
         exitPuzzleButton.currentRuneCircle = this;
-        exitPuzzleButton.respawnLocation = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        exitPuzzleButton.respawnLocation = new Vector3(transform.position.x, transform.position.y + 1.0f, transform.position.z);
 
         // If the puzzle has not been completed, trigger the
         // event to notify subscribers.
@@ -124,7 +124,9 @@ public class RuneCircle : MonoBehaviour
     {
         if (player)
         {
-            player.transform.position = otherRuneCircle.transform.position;
+            Vector3 otherCirclePosition = otherRuneCircle.transform.position;
+            // Have sky teleport to slightly above rune circle to prevent player from getting stuck in the ground or bouncing.
+            player.transform.position = new Vector3(otherCirclePosition.x, otherCirclePosition.y + 1.0f, otherCirclePosition.z);
         }
         else
         {

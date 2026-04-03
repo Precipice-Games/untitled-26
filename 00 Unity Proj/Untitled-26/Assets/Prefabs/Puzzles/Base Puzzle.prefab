@@ -1363,7 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
+  tileType: 0
   startingGridX: 0
   startingGridZ: 0
   gridX: 3
@@ -2081,7 +2081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
+  tileType: 0
   startingGridX: 0
   startingGridZ: 0
   gridX: 2
@@ -2486,7 +2486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
+  tileType: 0
   startingGridX: 0
   startingGridZ: 0
   gridX: 4
@@ -2844,7 +2844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
+  tileType: 0
   startingGridX: 0
   startingGridZ: 0
   gridX: 3
@@ -3241,7 +3241,7 @@ GameObject:
   - component: {fileID: 3397337548393501967}
   - component: {fileID: 9191018659038673785}
   m_Layer: 0
-  m_Name: Puzzle1
+  m_Name: Base Puzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3283,8 +3283,8 @@ MonoBehaviour:
   camera: {fileID: 5399598612880335045}
   canvas: {fileID: 4526878413659049423}
   startTile: {fileID: 3796191418792194300}
-  endTile: {fileID: 3427067941324799217}
-  gridManager: {fileID: 4785314922009797101}
+  endTile: {fileID: 3796191418792194300}
+  gridManager: {fileID: 3427067941324799217}
   puzzleSolved: 0
 --- !u!1 &7264184287714543087
 GameObject:
@@ -3488,7 +3488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
+  tileType: 0
   startingGridX: 0
   startingGridZ: 0
   gridX: 3
