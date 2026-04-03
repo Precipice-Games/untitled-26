@@ -1,55 +1,15 @@
-﻿title: TestCapsule
-position: -29,-120
----
-<<once>>
-/// Whether Capsley like you or not. This starts true, but may change.
-<<declare $capsley_likes_you = true as bool>>
-/// The player's name. The player chooses this. It starts empty.
-<<declare $player_name = "" as string>>
-
-Capsley: Hello, I am Mr Capsley. #line:04df4da
-Capsley: I'm only going to ask this once #line:0ba50d9 
-Capsley: Who are you then? #line:00ef629 
-
--> I'm Capsule, but my friends call me "Tic Tac". No idea why... #line:0132556 
-    <<set $player_name to "Tic Tac">>
--> The name's Triquandle. #line:034dd0d 
-    <<set $player_name to "Triquandle">>
--> Pyramid. Why - who wants to know? #line:003851f 
-    <<set $player_name to "Pyramid">>
-    <<set $capsley_likes_you to false>>
-
-<<if $capsley_likes_you>>
-    Capsley: Nice to meet you {$player_name}! #line:0a96a9d 
-<<else>>
-    Capsley: No need to be so rude... #line:0f8ef9c 
-    Capsley: Maybe you should be called Grumpy {$player_name}. #line:070aab9 
-<<endif>>
-<<else>> I said I would only say it once #line:06347bf 
-<<endonce>>
-===
-title: IntroDialogue
+﻿title: IntroDialogue
 position: 140,130
 ---
 //1 - Initiate dream sequence
 
-*black screen, text fades in, mother crystal starts to fade in very slowly during the exposition* #line:04de9d1 
+//*black screen, text fades in, mother crystal starts to fade in very slowly during the exposition*
 
 Mother Crystal:“Child of the sky…” #line:05c319b 
-
 Mother Crystal:“Do you hear my voice?” #line:0ad468d 
-
-“Mother Crystal:I am the heart and soul of The Islands of Ethor.” #line:09cac79 
-
+Mother Crystal:"I am the heart and soul of The Islands of Ethor.” #line:09cac79 
 Mother Crystal:“It is through I that the islands stay bound as one.” #line:09cdf5d 
-
-Mother Crystal:“However, that couldn’t be any further from the truth as of late”  #line:025f38e 
-
-Mother Crystal:“Long ago, my light shone freely throughout all the land. The people of Ethor utilized my power, and the world flourished.” #line:0613645 
-
-Mother Crystal:“But as people’s appetite for more power grew, so did the imbalance, and the threat of calamity arose. In order to prevent such a catastrophe, I did what I must: I fractured the land and scattered my power.” #line:0484508 
-
-Mother Crystal:“Each island carries a fraction of my essence, but their crystals are frail, leaving their lands in distress.” #line:0cfa7ff 
+Mother Crystal:“Or at least, so it used to be…” #line:0bccf5c 
 
 
 //2 - Mother Crystal cracks
@@ -58,13 +18,26 @@ Mother Crystal:“Each island carries a fraction of my essence, but their crysta
 
 //(Mother crystal lets off a brief sparkle)
 
-Mother Crystal:“Child…” #line:0f39b7f 
+Mother Crystal:“Child…Hear my plea…” #line:0f39b7f 
 
-Mother Crystal:“The binding light of the Isles of Ethor is fading…” (crystal cracks)  #line:05ea307 
+//(crystal cracks) 
 
-Mother Crystal:“The islands cry out for a hero, and the land yearns to restore its unity” (light shoots out, screen starts shaking) #line:0e48416 
+Mother Crystal:“The binding light of the Isles of Ethor is fading…”  #line:05ea307 
+Mother Crystal:“The islands cry out for a hero, and the land yearns to restore its unity”  #line:0e48416 
+
+//(light shoots out, screen starts shaking)
 
 //*screen flashes white, hard cut to Sky waking up* 
+
+Sky: “That voice… what was that?” #line:0234378 
+Sky: “Child of the sky… hear my plea… and a hero??” #line:00140c7 
+Sky: “I don’t know what that was, but it all felt so… real.” #line:00d6cb9 
+
+//(Sky begins to look around a bit, camera slowly pans around sky and stops at the dock where Cumulus and the airship are)
+
+Sky: “Dad’s already out fixing an airship, as usual. Maybe he knows what that was.” #line:0f045dd 
+
+[boldend]Message to Player:[/boldend] Talk to Dad at the dock #line:0f57e37 
 
 ===
 title: Judith
@@ -124,7 +97,6 @@ Judith: Hah. Good one. #line:049392f
 Sky: No, I’m serious! My sky ship is right over there if you don’t believe me. #line:0cf98ac 
 
 Judith: … #line:0c26e84 
-
 Judith: That…that’s not possible. That shouldn’t be possible, travel between the islands hasn’t existed since the Fracture. #line:02a8a6c 
 
 Sky: And technically that’s still true, I’m just a bit of a…special circumstance. #line:0774467 
@@ -157,9 +129,7 @@ Judith: Back already? I knew you were full of it. #line:0b97180
 Sky: I told you I could do it! #line:04367d8 
 
 Judith: I…I don’t believe it. #line:0053f69 
-
 Judith: … #line:08ba995 
-
 Judith: Thank you. #line:0c874de 
 
 Sky: Of course, Judith. I hope things can get a little easier for you now. #line:08a7e1f 
@@ -169,9 +139,7 @@ Judith: You’re going to go to all the islands, right? #line:0fb6aac
 Sky: That’s the plan. #line:014af39 
 
 Judith: Good. That’s good. #line:0427171 
-
 Judith: I don’t know the specifics, but I’m sure they also have problems related to their crystals. #line:084e841 
-
 Judith: Make sure you talk to them.  #line:0035258 
 
 Sky: Can do. #line:07c9cc3 
@@ -189,32 +157,32 @@ Judith: Best of luck on your journey. I’m sure you’re gonna need it. #line:0
 title: Penguin
 position: -256,-126
 ---
-=>Penguin NPC: Brrrrr! (What are you doing here?!) #line:00733af 
+=>Penguin: Brrrrr! (What are you doing here?!) #line:00733af 
     Sky: Uh, what? #line:0a69426 
     Penguin: Brrrrrrrrrrrrrr! (You shall meet your End!) #line:03a19d6 
     Sky: Sorry, I don’t speak penguin. #line:058eff8 
     Penguin: Br! (Fear me human) #line:0e6ceb1 
     Sky: It was probably just trying to say hello! #line:036e380 
-=>Penguin NPC: Noot Noot! (Nothing on this island is as cold as my soul) #line:0cefee7 
+=>Penguin: Noot Noot! (Nothing on this island is as cold as my soul) #line:0cefee7 
     Sky: What a cute little guy. #line:0d826ae 
-    Penguin NPC: Noot! Noot! (Get off the island while you still can!) #line:003b978 
+    Penguin: Noot! Noot! (Get off the island while you still can!) #line:003b978 
     Sky: Well, bye! #line:0cca570 
-    Penguin NPC: Nooot! Nooot! (Noooo! The Beast will feast on your bones)  #line:086e19f //[The “Beast” is actually Judith when she scares the penguins away]
-=>Penguin NPC: Gak! (I’m training to be able to fly!) #line:06694de 
+    Penguin: Nooot! Nooot! (Noooo! The Beast will feast on your bones)  #line:086e19f //[The “Beast” is actually Judith when she scares the penguins away]
+=>Penguin: Gak! (I’m training to be able to fly!) #line:06694de 
     Sky: Sorry little buddy, but penguins can’t fly. #line:0d710f9 
-    Penguin NPC: Gaaak! (Coward! I’ll show you!) #line:028113e 
-=>Penguin NPC: Quank! (Where is that Bastard!) #line:00ad797 
+    Penguin: Gaaak! (Coward! I’ll show you!) #line:028113e 
+=>Penguin: Quank! (Where is that Bastard!) #line:00ad797 
     Sky: Aww! Look at this little cutie! #line:0c5c627 
-    Penguin NPC: Quack!(I’m looking for that bastard, Marvin!) #line:0b6bac4 
+    Penguin: Quack!(I’m looking for that bastard, Marvin!) #line:0b6bac4 
     Sky: Aw so cute wiggling their little flippers. #line:0a50a0f 
-    Penguin NPC: Quank! (That bastard tossed my child over the Island!) #line:04ccf11 
+    Penguin: Quank! (That bastard tossed my child over the Island!) #line:04ccf11 
     Sky: Aww well bye little guy. #line:0465a3c 
-    Penguin NPC: Quank! Quank! Quank!(Wait where are you going! Come Back! HELP MY CHILD!!!) #line:013e3c5 
-=>Penguin NPC: Brrr (You are not a penguin, get out!) #line:0bef339 
+    Penguin: Quank! Quank! Quank!(Wait where are you going! Come Back! HELP MY CHILD!!!) #line:013e3c5 
+=>Penguin: Brrr (You are not a penguin, get out!) #line:0bef339 
     Sky: Oh my gosh you’re such a cutie patootie! #line:04cf655 
-    Penguin NPC: Brr! (I’ll rip your face clean off if you take another step!) #line:0afde0f 
+    Penguin: Brr! (I’ll rip your face clean off if you take another step!) #line:0afde0f 
     Sky: Awww you’re just as sweet as you are adorable! #line:0b019f9 
-=>Penguin NPC: Squawk! (Why do we live just to die?) #line:007c292 
+=>Penguin: Squawk! (Why do we live just to die?) #line:007c292 
     Sky: Awww look at this cute little fella! Not a single thought behind those eyes! #line:09af056 
-    Penguin NPC: Squuuaaawwk! (Your story will turn its final page one day whether you like it or not!) #line:0d2c4e4 
+    Penguin: Squuuaaawwk! (Your story will turn its final page one day whether you like it or not!) #line:0d2c4e4 
 ===
