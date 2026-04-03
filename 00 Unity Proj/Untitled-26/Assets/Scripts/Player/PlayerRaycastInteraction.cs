@@ -23,7 +23,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
     public bool canInteract = true;
 
     //    === UI ===
-    public GameObject interactionUI;
+    //public GameObject interactionUI;
 
     //    ==== Timer ====
     public float activeTimer = 5.0f;
@@ -36,6 +36,8 @@ public class PlayerRaycastInteraction : MonoBehaviour
     
     // Static event to notify subscribers of raycast toggling
     public static event Action<bool> raycastToggled;
+    // Static event to notofy subscribers that the raycast is hitting an interactable object
+    public static event Action<bool> raycastHitInteractable;
 
     /*
      * 
@@ -53,7 +55,6 @@ public class PlayerRaycastInteraction : MonoBehaviour
 
         if (!raycastEnabled)
         {
-            interactionUI.SetActive(false);
             activeInteractable = null;
             return; // exit early if raycast is disabled (used for dialogue and puzzle states)
         }
@@ -85,14 +86,19 @@ public class PlayerRaycastInteraction : MonoBehaviour
             if (raycastHit.collider.GetComponent<IInteractable>() != null)
             {
                 activeInteractable = raycastHit.collider.gameObject;
-                interactionUI.SetActive(true);
+                raycastHitInteractable?.Invoke(true);
+            }
+            else
+            {
+                activeInteractable = null;
+                raycastHitInteractable?.Invoke(false);
             }
         }
         else
         {
             Debug.DrawRay(origin, direction * rayLength, Color.red);
             activeInteractable = null;
-            interactionUI.SetActive(false);
+            raycastHitInteractable?.Invoke(false);
         }
 
     }
@@ -108,7 +114,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
             activeInteractable.GetComponent<IInteractable>().Interaction();
             canInteract = false;
             activeInteractable = null;
-            interactionUI.SetActive(false);
+            raycastHitInteractable?.Invoke(true);
         }
     }
     
@@ -119,11 +125,13 @@ public class PlayerRaycastInteraction : MonoBehaviour
     private void OnEnable()
     {
         GameStateManager.transitionedToNewState += ToggleRaycast;
+        PlayerInteraction.playerInteraction += Interact;
     }
 
     private void OnDisable()
     {
         GameStateManager.transitionedToNewState -= ToggleRaycast;
+        PlayerInteraction.playerInteraction -= Interact;
     }
 
     /// <summary>

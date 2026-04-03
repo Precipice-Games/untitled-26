@@ -21,6 +21,7 @@ public class PlayerFixedMovement : MonoBehaviour
     private PuzzleInformation puzzleInfo;
     private Vector3 playerCurrentPosition; // Current Vector3 position
     private Vector3 startPosition;
+    private Vector3 endPosition;
     private GridManager gridManager;
     private GameObject puzzleCam; // The camera object holds relevant scripts
     
@@ -89,14 +90,14 @@ public class PlayerFixedMovement : MonoBehaviour
     // Subscribe to events
     private void OnEnable()
     {
-        InteractablePillar.puzzleTriggered += UpdatePuzzleInformation;
+        RuneCircle.puzzleTriggered += UpdatePuzzleInformation;
         ResetPuzzle.resetPuzzle += ResetPlayerPosition;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
-        InteractablePillar.puzzleTriggered -= UpdatePuzzleInformation;
+        RuneCircle.puzzleTriggered -= UpdatePuzzleInformation;
         ResetPuzzle.resetPuzzle -= ResetPlayerPosition;
     }
     
@@ -306,7 +307,7 @@ public class PlayerFixedMovement : MonoBehaviour
     private bool CheckForOutOfBounds(int coordX, int coordZ)
     {
         // If it's out of bounds, return true.
-        if (!gridManager.IsInsideGrid(coordX, coordZ))
+        if (!gridManager.IsInsideGridPlayer(coordX, coordZ))
         {
             Debug.Log($"PlayerFixedMovement.cs >> Move blocked: ({coordX},{coordZ}) is outside the grid.");
             return true;
@@ -384,10 +385,12 @@ public class PlayerFixedMovement : MonoBehaviour
         {
             Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at ({endTileX}, {endTileZ}).");
 
+            endPosition = new Vector3(endTile.transform.position.x, transform.position.y + 1.0f, endTile.transform.position.z);
             transform.parent = null;
-            transform.position = new Vector3(3.59f, 0.83f, 21.43f);
+            transform.position = endPosition;
 
-            puzzleCompleted.Invoke();
+            puzzleCompleted.Invoke(); // For the GameStateManager
+            updatePuzzleStatus?.Invoke(puzzleInfo); // For the IslandPuzzleManager
         }
         
         playerMoved?.Invoke(playerGridX, playerGridZ);

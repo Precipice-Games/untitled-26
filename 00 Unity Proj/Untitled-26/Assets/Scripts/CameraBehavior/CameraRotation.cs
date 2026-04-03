@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,38 +11,53 @@ using UnityEngine.InputSystem;
 
 public class CameraRotation : MonoBehaviour
 {
-    //Variables
-    public Transform player;
-    public float mouseSensitivity = 4f;
-    private float cameraVerticalRotation = 0f;
+    [Title("Camera Rotation Variables", "Variables used in the rotation of the camera. Some influence Player rotation.")]
+    [PropertyTooltip("Please attach the Player GameObject.")]
+    public GameObject player;
+    [PropertyTooltip("Mouse sensitivity. Default is 0.5f.")]
+    public float mouseSensitivity = 1f;
     private bool isRotating = true;
+    
+    // Variables used to store the input values from
+    // the Look action on the PlayerControls map
+    private float lookX;
+    private float lookY;
+    private float sqrMag;
+    private const float _threshold = 0.01f;
+    
+    // Variables used to store the current yaw and pitch of
+    // the camera. Yaw is the horizontal rotation and pitch
+    // is the vertical rotation.
+    private float camYaw;
+    private float camPitch;
 
-    // Update is called once per frame
-    void FixedUpdate()
+    
+    private void Start()
     {
-        // TODO: Is there anyway we could improve the polling rate or the way the mouse
-        //       input is detected? I've noticed that the mouse input is totally fine when
-        //       I'm turning on my laptop, but when I try to play on my desktop, it's very
-        //       laggy and hard to turn the character. It could be a problem with the
-        //       polling or update rate. Let me know what you guys think. -- Nikki
+        camYaw = player.transform.rotation.eulerAngles.y;
+    }
+    
+    public void LookRotation(InputAction.CallbackContext context)
+    {
+        // Get the look input
+        lookX = context.ReadValue<Vector2>().x; // Yaw
+        lookY = context.ReadValue<Vector2>().y; // Pitch
+        sqrMag = context.ReadValue<Vector2>().sqrMagnitude;
         
-        if (isRotating)
+        // if there is an input and camera position is not fixed
+        if (sqrMag >= _threshold)
         {
-            //Grabs the mouse input
-            float inputX = Input.GetAxis("Mouse X") * mouseSensitivity;
-            float inputY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-
-
-            //rotate the camera around local x axis
-            cameraVerticalRotation -= inputY;
-            cameraVerticalRotation = Mathf.Clamp(cameraVerticalRotation, 0f, 15.0f);
-            transform.localEulerAngles = Vector3.right * cameraVerticalRotation;
-
-            //rotate the players and camera around its Y axis
-            player.Rotate(Vector3.up * inputX);
+            // Get the yaw and pitch values
+            camYaw += lookX;
+            camPitch += lookY;
         }
+        
+        camPitch = Mathf.Clamp(camPitch, 0f, 15.0f);
+        transform.localEulerAngles = Vector3.right * camPitch;
     }
 
+    // TODO: Should we get rid of this method? It
+    //       Doesn't appear to be in use. -- Nikki
     public void toggleRotation()
     {
         isRotating = !isRotating;
