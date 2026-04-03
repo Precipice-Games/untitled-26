@@ -58,7 +58,6 @@ public class Player : MonoSingleton<Player>
         PhysicsManager.kinematicsUpdated += SwitchKinematics;
         GameStateManager.transitionedToNewState += ConfigureOrientation;
 
-
         _playerControls.UI.Enable();
         _playerControls.Player.Enable();
         _playerControls.UI.Pause.performed += OnPause;
