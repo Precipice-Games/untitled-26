@@ -1,0 +1,20 @@
+# Unity text-based assets that are safe for Smart Merge / YAMLMerge
+*.unity                  merge=unityyamlmerge
+*.prefab                 merge=unityyamlmerge
+*.mat                    merge=unityyamlmerge
+*.physicMaterial         merge=unityyamlmerge
+*.physicsMaterial2D      merge=unityyamlmerge
+*.controller             merge=unityyamlmerge
+*.anim                   merge=unityyamlmerge
+*.overrideController     merge=unityyamlmerge
+*.mask                   merge=unityyamlmerge
+
+# IMPORTANT:
+# Do NOT use YAMLMerge on .asset files.
+# Although some .asset files are YAML-based, others (e.g., LightingData.asset)
+# are binary and will be corrupted if YAMLMerge is applied.
+# Unity’s own documentation specifies YAMLMerge is only safe for .unity and .prefab files.
+#*.asset                 merge=unityyamlmerge   # ← commented out on purpose
+
+# Meta files should use "ours" to avoid merge conflicts
+*.meta                   merge=ours

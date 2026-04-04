@@ -4,11 +4,6 @@ namespace Yarn.Unity.Variables {
 
     [System.CodeDom.Compiler.GeneratedCode("YarnSpinner", "3.1.3.0")]
     public partial class YarnVariables : Yarn.Unity.InMemoryVariableStorage, Yarn.Unity.IGeneratedVariableStorage {
-        // Accessor for Bool $iceFinished
-        public bool IceFinished {
-            get => this.GetValueOrDefault<bool>("$iceFinished");
-            set => this.SetValue<bool>("$iceFinished", value);
-        }
 
         // Accessor for Bool $capsley_likes_you
         /// <summary>
@@ -26,6 +21,16 @@ namespace Yarn.Unity.Variables {
         public string PlayerName {
             get => this.GetValueOrDefault<string>("$player_name");
             set => this.SetValue<string>("$player_name", value);
+        }
+
+        // Accessor for Bool $iceFinished
+        /// <summary>
+        /// Whether the Ice Island has been completed or not. this will be changed through an external method in IslandManager.cs using the method
+        /// variableStorage.SetValue("$iceFinished", true);
+        /// </summary>
+        public bool IceFinished {
+            get => this.GetValueOrDefault<bool>("$iceFinished");
+            set => this.SetValue<bool>("$iceFinished", value);
         }
 
     }
