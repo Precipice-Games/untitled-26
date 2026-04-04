@@ -4,6 +4,7 @@ namespace Yarn.Unity.Variables {
 
     [System.CodeDom.Compiler.GeneratedCode("YarnSpinner", "3.1.3.0")]
     public partial class YarnVariables : Yarn.Unity.InMemoryVariableStorage, Yarn.Unity.IGeneratedVariableStorage {
+
         // Accessor for Bool $capsley_likes_you
         /// <summary>
         /// Whether Capsley like you or not. This starts true, but may change.

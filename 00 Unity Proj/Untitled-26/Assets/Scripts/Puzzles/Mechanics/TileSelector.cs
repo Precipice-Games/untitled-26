@@ -35,14 +35,14 @@ public class TileSelector : MonoBehaviour
     private void OnEnable()
     {
         PlayerFixedMovement.playerMoved += UpdatePlayerCoordinates;
-        InteractablePillar.puzzleTriggered += AssignStartAndEndTiles;
+        RuneCircle.puzzleTriggered += AssignStartAndEndTiles;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         PlayerFixedMovement.playerMoved -= UpdatePlayerCoordinates;
-        InteractablePillar.puzzleTriggered += AssignStartAndEndTiles;
+        RuneCircle.puzzleTriggered += AssignStartAndEndTiles;
     }
 
     void Update()

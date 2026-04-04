@@ -297,7 +297,7 @@ namespace SimpleTimer // Project name
         /// </summary>
 	    private void Update()
 	    {
-		    Debug.Log("Update was called on a timer.");
+		    //Debug.Log("Update was called on a timer.");
 		    
 		    // Had to comment this out because it was throwing an error
 			// foreach (Timer t in timers) // Call update all timers so that they can add deltatime each frame.

@@ -29,7 +29,7 @@ public class InteractablePillar : MonoBehaviour, IInteractable
         if (puzzleInfo.puzzleSolved == true) return;
 
         //
-        exitPuzzleButton.currentPillar = this;
+        //exitPuzzleButton.currentRuneCircle = this;
         exitPuzzleButton.respawnLocation = new Vector3 (transform.position.x, transform.position.y, transform.position.z - 0.25f);
 
         // If the puzzle has not been completed, trigger the

@@ -17,6 +17,13 @@ public class Texture_Animation : MonoBehaviour
     {
      
         _idleAnimationMaterial = GetComponent<MeshRenderer>().materials[0];
+
+        // Commenting this out; added through a merge conflict.
+        // Vector2 currentScale = GetComponent<MeshRenderer>().material.mainTextureScale;
+
+        //currentScale.y *= -1f;
+
+        // GetComponent<MeshRenderer>().material.mainTextureScale = currentScale;
         
     }
 
