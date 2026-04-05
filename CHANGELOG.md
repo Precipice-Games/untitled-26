@@ -7,6 +7,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Put any unreleased features here.
 
+## [v1.0.3] - 2026-03-29
+
+### Added
+* Created URP post-processing system for real-time camera blur during Paused mode.
+* Added the correct start and end tile systems to meet design goals.
+
+### Fixed
+* Fixed a bug where the Player kept rotating in Puzzle mode.
+* Fixed a bug where the camera polling rate was causing significant lagging effects on different devices.
+
+### Changed
+* Changed puzzle terminals to be rune circles.
+* Updated GridManager.cs to account for additional rows for new start and end tiles.
+* Refined camera rotation system to be frame-independent and work with the input system callback context events.
+* PlayerMovement.cs now handles Player rotation instead of CameraRotation.cs.
+
 ## [v1.0.2] - 2026-03-29
 
 ### Added
