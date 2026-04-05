@@ -88,7 +88,7 @@ public class SelectableTile : MonoBehaviour
         Debug.Log($"SelectableTile.cs >> {name} DESELECTED");
     }
 
-    public void TryMove(int xDir, int zDir)
+    public bool TryMove(int xDir, int zDir)
     {
         int newX = gridX + xDir;
         int newZ = gridZ + zDir;
@@ -96,8 +96,8 @@ public class SelectableTile : MonoBehaviour
         Debug.Log($"SelectableTile.cs >> {name} trying move to: ({newX},{newZ})");
         
         // Before anything, check to see if the attempted move is valid.
-        if (CheckForOutOfBounds(newX, newZ)) return; // Must be inside the grid
-        if (!CheckForEmptyCell(newX, newZ)) return; // Must be an empty cell
+        if (CheckForOutOfBounds(newX, newZ)) return false; // Must be inside the grid
+        if (!CheckForEmptyCell(newX, newZ)) return false; // Must be an empty cell
         
         gridManager.ClearCell(gridX, gridZ);
         
@@ -109,6 +109,8 @@ public class SelectableTile : MonoBehaviour
         transform.localPosition = gridManager.GridToWorld(gridX, gridZ);
 
         Debug.Log($"SelectableTile.cs >> {name} moved to: ({gridX},{gridZ})");
+
+        return true;
     }
     
     /// <summary>
@@ -142,6 +144,7 @@ public class SelectableTile : MonoBehaviour
         {
             Debug.Log("SelectableTile.cs >> BLOCKED: Outside grid – no mana spent");
             // Fire off an event to say that the move is out of bounds
+            moveOutOfBounds?.Invoke(this);
             return true;
         }
         return false;

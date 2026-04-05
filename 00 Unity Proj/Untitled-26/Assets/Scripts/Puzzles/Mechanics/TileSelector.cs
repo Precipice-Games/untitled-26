@@ -36,31 +36,35 @@ public class TileSelector : MonoBehaviour
     {
         PlayerFixedMovement.playerMoved += UpdatePlayerCoordinates;
         RuneCircle.puzzleTriggered += AssignStartAndEndTiles;
+        InputManager.leftClickEvent += ClickDetected;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         PlayerFixedMovement.playerMoved -= UpdatePlayerCoordinates;
-        RuneCircle.puzzleTriggered += AssignStartAndEndTiles;
+        RuneCircle.puzzleTriggered -= AssignStartAndEndTiles;
+        InputManager.leftClickEvent -= ClickDetected;
     }
 
-    void Update()
+    /// <summary>
+    /// This method is subscribed to the leftClickEvent invoked by InputManager.cs.
+    /// This is because there is one TileSelector.cs per puzzle rather than one for
+    /// the entire scene, so it cannot be subscribed explicitly.
+    /// </summary>
+    public void ClickDetected()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+        if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-            if (Physics.Raycast(ray, out RaycastHit hit))
+            SelectableTile tile = hit.collider.GetComponent<SelectableTile>();
+            if (tile != null)
             {
-                SelectableTile tile = hit.collider.GetComponent<SelectableTile>();
-                if (tile != null)
-                {
-                    if (selectedTile != null)
-                        selectedTile.Deselect();
+                if (selectedTile != null)
+                    selectedTile.Deselect();
 
-                    selectedTile = tile;
-                    selectedTile.Select();
-                }
+                selectedTile = tile;
+                selectedTile.Select();
             }
         }
     }
@@ -69,8 +73,6 @@ public class TileSelector : MonoBehaviour
     /// Used to update the reference to the Player's coordinates on the grid. It
     /// ensures that we're not moving the tile that the Player is currently on.
     /// </summary>
-    /// <param name="playerX"></param>
-    /// <param name="playerZ"></param>
     private void UpdatePlayerCoordinates(int playerX, int playerZ)
     {
         playerGridX = playerX;
@@ -81,7 +83,6 @@ public class TileSelector : MonoBehaviour
     /// Assigns the coordinates of the start and end tiles for the current puzzle.
     /// This is used to prevent the Player from moving these tiles.
     /// </summary>
-    /// <param name="puzzleInformation"></param>
     private void AssignStartAndEndTiles(PuzzleInformation puzzleInfo)
     {
         // Assign the GridManager and the Start & End tiles
@@ -102,13 +103,11 @@ public class TileSelector : MonoBehaviour
     /// Checks if the Player is currently on the selected tile. If so, it prevents
     /// the system from continuing before even attempting to move the tile.
     /// </summary>
-    /// <returns></returns>
     private bool PlayerOnSelectedTile()
     {
         if (selectedTile.gridX == playerGridX && selectedTile.gridZ == playerGridZ)
         {
             if (debugMode) Debug.Log("TileSelector.cs >> Cannot the tile the Player is currently on.");
-            
             return true;
         }
         return false;
@@ -117,14 +116,12 @@ public class TileSelector : MonoBehaviour
     /// <summary>
     /// Checks if the current tile is either the start or end tile.
     /// </summary>
-    /// <returns></returns>
     private bool SelectedTileIsStartOrEnd()
     {
         // Check for Start tile
         if (selectedTile.gridX == startTileX && selectedTile.gridZ == startTileZ)
         {
             if (debugMode) Debug.Log("TileSelector.cs >> Cannot move the Start tile.");
-
             return true;
         }
 
@@ -146,9 +143,11 @@ public class TileSelector : MonoBehaviour
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
 
-        if (!resourceManager.UseMove("Right")) return;
-        
-        selectedTile.TryMove(1, 0); // moves right
+        // Only spend mana if the move actually succeeds
+        if (selectedTile.TryMove(1, 0))
+        {
+            resourceManager.UseMove("Right");
+        }
     }
 
     public void MoveSelectedLeft()
@@ -159,9 +158,11 @@ public class TileSelector : MonoBehaviour
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
 
-        if (!resourceManager.UseMove("Left")) return;
-        
-        selectedTile.TryMove(-1, 0); // moves left
+        // Only spend mana if the move actually succeeds
+        if (selectedTile.TryMove(-1, 0))
+        {
+            resourceManager.UseMove("Left");
+        }
     }
 
     public void MoveSelectedForward()
@@ -172,9 +173,11 @@ public class TileSelector : MonoBehaviour
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
 
-        if (!resourceManager.UseMove("Forward")) return;
-        
-        selectedTile.TryMove(0, 1); // moves forward
+        // Only spend mana if the move actually succeeds
+        if (selectedTile.TryMove(0, 1))
+        {
+            resourceManager.UseMove("Forward");
+        }
     }
 
     public void MoveSelectedBack()
@@ -185,8 +188,10 @@ public class TileSelector : MonoBehaviour
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
 
-        if (!resourceManager.UseMove("Back")) return;
-        
-        selectedTile.TryMove(0, -1); // moves back
+        // Only spend mana if the move actually succeeds
+        if (selectedTile.TryMove(0, -1))
+        {
+            resourceManager.UseMove("Back");
+        }
     }
 }
