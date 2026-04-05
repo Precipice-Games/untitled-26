@@ -5,7 +5,41 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-* Put any unreleased features here.
+* Mother Island is not yet available for the Player.
+* Oasis Island is not yet available for the Player.
+
+## [v1.1.0] - 2026-04-05
+
+### Added
+* Implemented winter sky box on Ice Island.
+* Added Judith artwork & sprite animation scripting.
+* Created baseline puzzle prefab for quick future iteration.
+* Started the construction of the Mother Island (not yet available).
+* Added more prefabs and an EventSystem handler to Oasis Island.
+
+### Fixed
+* Fixed a bug where the Player kept rotating in Puzzle mode.
+* Fixed a bug where the camera polling rate was causing significant lagging effects on different devices.
+* Fixed an InputActions bug where the Player couldn't select tiles in Puzzle mode.
+* Fixed a bug where Skye was bouncing and/or being slingshotted into when being teleported to the rune circle end tile after completing a puzzle.
+* Fixed a bug where the Mana was being consumed for invalid moves.
+
+### Changed
+* Converted left click input in TileSelector.cs to InputActions.CallbackContext event stream.
+* Updated InputManager.cs to listen for left click inputs.
+* Updated YarnSpinner with new dialogue from the writers.
+* Updated comments & dev serializations for ResourceManager.cs, TileSelector.cs, and GridManager.cs.
+* Changed model of original ice island tiles to modern iceberg model (made by @Samisushi).
+* Tweaked the size of rune circles' collision boxes.
+* Updated the puzzle feedback system with new events (moveOutOfBounds).
+
+### Removed
+* Deleted TileMovement.cs.
+* Deleted ClickRayTest.cs.
+* Cleaned out some unused assets during sprint 8.
+* Removed the old puzzle terminals from Ice Island hierarchy.
+     * There might still be some left over from merge conflict #300.
+* Removed duplicate PenguinBack sprite.
 
 ## [v1.0.3] - 2026-04-02
 
