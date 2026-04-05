@@ -22,10 +22,9 @@ public class TileSelector : MonoBehaviour
     private int endTileZ;
     
     [Space]
-    [Title("Debug Mode")]
-    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
-    [PropertyTooltip("Enables or disables debug logs in a given script.")]
-    public bool debugMode = true;
+    [Title("Debugging Options", "Settings for quick debugging options.")]
+    [PropertyTooltip("Prints out invalid moves. True by default.")]
+    public bool printInvalidMoves = true;
 
     // Subscribe to events
     private void OnEnable()
@@ -102,7 +101,7 @@ public class TileSelector : MonoBehaviour
     {
         if (selectedTile.gridX == playerGridX && selectedTile.gridZ == playerGridZ)
         {
-            if (debugMode) Debug.Log("TileSelector.cs >> Cannot the tile the Player is currently on.");
+            if (printInvalidMoves) Debug.Log("TileSelector.cs >> Cannot the tile the Player is currently on.");
             return true;
         }
         return false;
@@ -116,14 +115,14 @@ public class TileSelector : MonoBehaviour
         // Check for Start tile
         if (selectedTile.gridX == startTileX && selectedTile.gridZ == startTileZ)
         {
-            if (debugMode) Debug.Log("TileSelector.cs >> Cannot move the Start tile.");
+            if (printInvalidMoves) Debug.Log("TileSelector.cs >> Cannot move the Start tile.");
             return true;
         }
 
         // Check for End tile
         if (selectedTile.gridX == endTileX && selectedTile.gridZ == endTileZ)
         {
-            if (debugMode) Debug.Log("TileSelector.cs >> Cannot move the End tile.");
+            if (printInvalidMoves) Debug.Log("TileSelector.cs >> Cannot move the End tile.");
             return true;
         }
 
