@@ -3,32 +3,33 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
-/// <summary>
-/// This script stores data regarding the resources provided during each puzzle. Specifically,
-/// it keeps track of Mana points and available movement cards for the Player to use.
-/// </summary>
-
+// This script stores data regarding the resources provided during each puzzle.
+// Specifically, it keeps track of Mana points and available movement cards for
+// the Player to use. Note that it maintains a tight relationship with
+// TileSelector.cs to check resource availability for performing a move.
 
 public class ResourceManager : MonoBehaviour
 {
+    [Title("Resource Data", "Set the appropriate Mana and Move Card count for this puzzle.")]
+    [PropertyTooltip("The starting Mana count. Set to 5 by default, but should be updated per puzzle.")]
     public int startingMana = 5;
+    [PropertyTooltip("The starting Left Card move count. Set to 3 by default, but should be updated per puzzle.")]
+    public int moveLeftUses = 3;
+    [PropertyTooltip("The starting Right Card move count. Set to 3 by default, but should be updated per puzzle.")]
+    public int moveRightUses = 3;
+    [PropertyTooltip("The starting Up/Forward Card move count. Set to 3 by default, but should be updated per puzzle.")]
+    public int moveForwardUses = 3;
+    [PropertyTooltip("The starting Down/Back Card move count. Set to 3 by default, but should be updated per puzzle.")]
+    public int moveBackUses = 3;
     private int currentMana;
 
-    [Title("Resource Data")]
-    [EnumToggleButtons, HideLabel]
-    [InfoBox("Attach the resource data related to the given puzzle.")]
+    [Space]
+    [Title("UI Data", "Attach the UI elements for this puzzle's resources.")]
     public TMP_Text manaLabel;
     public TMP_Text leftLabel;
+    public TMP_Text rightLabel;
     public TMP_Text upLabel;
     public TMP_Text downLabel;
-
-    public TMP_Text rightLabel;
-
-    public int moveLeftUses = 3;
-    public int moveRightUses = 3;
-    public int moveForwardUses = 3;
-    public int moveBackUses = 3;
     
     [Space]
     [Title("Debugging Options", "Settings for quick debugging options.")]
@@ -70,15 +71,23 @@ public class ResourceManager : MonoBehaviour
         UpdateDownText(moveBackUses);
     }
 
+    /// <summary>
+    /// Called in TileSelector.cs when the Player tries to use a movement card.
+    /// Checks if the Player has enough resources before deducting anything. If
+    /// a move is valid, return true. Otherwise, return false.
+    /// </summary>
+    /// <param name="moveType"></param>
+    /// <returns></returns>
     public bool UseMove(string moveType)
     {
+        // Ensure that the Player has enough Mana to make a move
         if (currentMana <= 0)
         {
             Debug.Log("ResourceManager.cs >> No mana to move.");
             return false;
         }
 
-
+        // Ensure that there's enough card uses for the specified move
         switch (moveType)
         {
             case "Left":
@@ -124,10 +133,8 @@ public class ResourceManager : MonoBehaviour
                 UpdateDownText(moveBackUses);
                 break;
         }
-
-
+        
         currentMana--;
-
 
         Debug.Log("ResourceManager.cs >> Mana remaining: " + currentMana);
         Debug.Log("ResourceManager.cs >> Card used: " + moveType);
@@ -136,39 +143,65 @@ public class ResourceManager : MonoBehaviour
 
         return true;
     }
-
-
+    
+    /// <summary>
+    /// Returns the current Mana count.
+    /// </summary>
+    /// <returns></returns>
     public int GetMana()
     {
         return currentMana;
     }
-
-     
+    
+    /// <summary>
+    /// Updates the Mana text on the UI.
+    /// </summary>
+    /// <param name="amount"></param>
     private void UpdateManaText(int amount)
     {
         manaLabel.text = $"Mana\n{amount}";
     }
 
+    /// <summary>
+    /// Updates the Left card uses text on the UI.
+    /// </summary>
+    /// <param name="amount"></param>
     private void UpdateLeftText(int amount)
     {
         leftLabel.text = amount.ToString();
     }
 
+    /// <summary>
+    /// Updates the Right card uses text on the UI.
+    /// </summary>
+    /// <param name="amount"></param>
     private void UpdateRightText(int amount)
     {
         rightLabel.text = amount.ToString();
     }
 
+    /// <summary>
+    /// Updates the Up card uses text on the UI.
+    /// </summary>
+    /// <param name="amount"></param>
     private void UpdateUpText(int amount)
     {
         upLabel.text = amount.ToString();
     }
-
+    
+    /// <summary>
+    /// Updates the Down card uses text on the UI.
+    /// </summary>
+    /// <param name="amount"></param>
     private void UpdateDownText(int amount)
     {
         downLabel.text = amount.ToString();
     }
-
+    
+    /// <summary>
+    /// Resets the Mana and movement card resources to their starting
+    /// values. Called when the resetPuzzle event is triggered.
+    /// </summary>
     private void ResetResources()
     {
         currentMana = startingMana;
