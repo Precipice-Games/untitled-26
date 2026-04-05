@@ -1,0 +1,994 @@
+fileFormatVersion: 2
+guid: 1bbe7825471715a41a15aad73feb3fb7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JudithSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 13909
+        width: 645
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af925352a93a1b6419d0564ad803a4b1
+      internalID: 957181384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 13909
+        width: 645
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d6a6c449c58214c9fcd6ff30d36b90
+      internalID: -1194223155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 4481
+        y: 13909
+        width: 645
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cd2fef74f94b849863ceb381ebf482
+      internalID: 2059840828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 6401
+        y: 13909
+        width: 645
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97c943b88719db4fa0a0466222cb426
+      internalID: 954440123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 8314
+        y: 13909
+        width: 652
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830a8611e149ef148b63be74d3a6be74
+      internalID: -1595141373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 11989
+        width: 652
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd457dcf0497b02448a2314ff25f8e7d
+      internalID: -1154337406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 11989
+        width: 668
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496e4222f9f577340a5b33b214f4b524
+      internalID: -1937540174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 11989
+        width: 675
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0488f9bc87679aa42bd4f07ae2a9f22b
+      internalID: -272743348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 6379
+        y: 11989
+        width: 682
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d8252e73eafd44b8b556628a85aeca
+      internalID: -672451904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 8291
+        y: 11989
+        width: 690
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6412aa60c5ea43a42b36e8b52d9dde2b
+      internalID: 1552688618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 10069
+        width: 705
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f67e8280c12a6f46b667026126b9292
+      internalID: 1565519447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 10069
+        width: 705
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5eb305d49a8f84d9ef143aeeb84d4f
+      internalID: -679397587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 4444
+        y: 10069
+        width: 705
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4de0d6a9b4f664d8e58c5c2bead3eb
+      internalID: 532773741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 6356
+        y: 10069
+        width: 713
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b0f273a07f7a64e9a3eec34718ee69
+      internalID: 876217425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 8276
+        y: 10069
+        width: 713
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47a8792da0396b47a9ebe6f102b2adb
+      internalID: -90669896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 8149
+        width: 705
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d514bbdcc3a31b7468db9af7c068788c
+      internalID: 1196287767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 2531
+        y: 8149
+        width: 690
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c34ca22b7090e44a15e798440398c0
+      internalID: 1073221268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 8149
+        width: 682
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919cec7cb4004af4292e6c46ae4af7ff
+      internalID: 382658494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 6386
+        y: 8149
+        width: 668
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c097dd7906a48b749af6042b861c2747
+      internalID: -394244663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 8314
+        y: 8149
+        width: 652
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf38fdb0d8866144ba5b157fae3d45e
+      internalID: -1381744584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 6229
+        width: 645
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4695a34eaccf24aaeb798a6d0756d4
+      internalID: 2077938976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 2561
+        y: 6229
+        width: 645
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230785248ac9f494f831e54d96143ff3
+      internalID: 1399922008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 4481
+        y: 6229
+        width: 645
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a18b4b6fd51f34abc49d7052e67777
+      internalID: -236200116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 6394
+        y: 6229
+        width: 652
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f5b104aefb4d84ab94c992b9b01e23
+      internalID: -1680249170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 8314
+        y: 6229
+        width: 660
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85a95a27a88ca345a0a09c731167a19
+      internalID: -672124313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 4309
+        width: 675
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d975cf77571d11a43ad3471d359005db
+      internalID: -164454176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 4309
+        width: 688
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fefba18097ff79a47a795fc99483b29a
+      internalID: 916936696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 4309
+        width: 697
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda3683236d4df74e9015bd41d6a43cf
+      internalID: -1222039859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 6379
+        y: 4309
+        width: 697
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc54a6c84aeb02428dbdbd45ee62359
+      internalID: -2042569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 8299
+        y: 4309
+        width: 697
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa73d4084fcd73247a5e9640c54a97bc
+      internalID: 265795136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 2389
+        width: 697
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a193f65ec5773194198c172930383245
+      internalID: 1084947576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 2539
+        y: 2389
+        width: 697
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25f38da97aecfd42808666cf3970e45
+      internalID: -1737025198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 2389
+        width: 690
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0010e12d30b3bc4cb27a5e9a732a018
+      internalID: 253778210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 6386
+        y: 2389
+        width: 683
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3c49a254ce4ba4986e5016782bfdf4
+      internalID: 1052806735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 8306
+        y: 2389
+        width: 675
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4629ab512576946bd661e53936cfec
+      internalID: -1340095207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 469
+        width: 667
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca3b4ec00d35e6439157a67901daa8c
+      internalID: -2060477694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 2554
+        y: 469
+        width: 660
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74b930b69574324cb278f3c18f2cbdd
+      internalID: -521705129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JudithSpritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 4474
+        y: 469
+        width: 660
+        height: 870
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b087bf736b79544aba4ca334e573ac8
+      internalID: -984214732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: adabcf514df38a942a47bf7601dd1954
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      JudithSpritesheet_0: 957181384
+      JudithSpritesheet_1: -1194223155
+      JudithSpritesheet_10: 1565519447
+      JudithSpritesheet_11: -679397587
+      JudithSpritesheet_12: 532773741
+      JudithSpritesheet_13: 876217425
+      JudithSpritesheet_14: -90669896
+      JudithSpritesheet_15: 1196287767
+      JudithSpritesheet_16: 1073221268
+      JudithSpritesheet_17: 382658494
+      JudithSpritesheet_18: -394244663
+      JudithSpritesheet_19: -1381744584
+      JudithSpritesheet_2: 2059840828
+      JudithSpritesheet_20: 2077938976
+      JudithSpritesheet_21: 1399922008
+      JudithSpritesheet_22: -236200116
+      JudithSpritesheet_23: -1680249170
+      JudithSpritesheet_24: -672124313
+      JudithSpritesheet_25: -164454176
+      JudithSpritesheet_26: 916936696
+      JudithSpritesheet_27: -1222039859
+      JudithSpritesheet_28: -2042569
+      JudithSpritesheet_29: 265795136
+      JudithSpritesheet_3: 954440123
+      JudithSpritesheet_30: 1084947576
+      JudithSpritesheet_31: -1737025198
+      JudithSpritesheet_32: 253778210
+      JudithSpritesheet_33: 1052806735
+      JudithSpritesheet_34: -1340095207
+      JudithSpritesheet_35: -2060477694
+      JudithSpritesheet_36: -521705129
+      JudithSpritesheet_37: -984214732
+      JudithSpritesheet_38: -1338905169
+      JudithSpritesheet_4: -1595141373
+      JudithSpritesheet_5: -1154337406
+      JudithSpritesheet_6: -1937540174
+      JudithSpritesheet_7: -272743348
+      JudithSpritesheet_8: -672451904
+      JudithSpritesheet_9: 1552688618
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

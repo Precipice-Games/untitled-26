@@ -28,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874532845149531710}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19749649, y: -0, z: -0, w: 0.9803036}
-  m_LocalPosition: {x: 0, y: 2.7654634, z: -167.25351}
+  m_LocalRotation: {x: 0.11516102, y: -0.00021870913, z: 0.00075437, w: 0.9933465}
+  m_LocalPosition: {x: 0.383, y: 1.603, z: -101.7}
   m_LocalScale: {x: 0.6612882, y: 0.8218849, z: 3.8121305}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 137271524649294906}
-  m_LocalEulerAnglesHint: {x: 22.781, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.226, y: -0.015, z: 0.085}
 --- !u!20 &2384675142033647082
 Camera:
   m_ObjectHideFlags: 0
@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 3103343398758482961}
   - component: {fileID: 1173698383739407512}
   - component: {fileID: 6709136814799094051}
-  - component: {fileID: 6109077836722222614}
   - component: {fileID: 6739596773503058293}
   - component: {fileID: 5519739034169789386}
   - component: {fileID: 6922169669516928053}
@@ -175,6 +174,7 @@ GameObject:
   - component: {fileID: -5156860291110842563}
   - component: {fileID: -4027242432962083161}
   - component: {fileID: 3689884208207083878}
+  - component: {fileID: 6616755409195078602}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -205,7 +205,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5438321986708604092}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &8839583978902556456
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8748892135801146194, guid: 073293fd8cc0ef0449c9d9d216631f12, type: 3}
+  - {fileID: 2100000, guid: 5d634fb24ab058241a1c4b73c7d30724, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -274,8 +274,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.35, y: 0.76, z: 4.9100056}
+  m_Center: {x: -0.05000001, y: -0.029999997, z: 0.07207629}
 --- !u!114 &3103343398758482961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,52 +365,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6109077836722222614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5438321986708604092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0d2799d07156a4429e90b0ac67f5259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Skye_Idle_Animation
-  _idleAnimationMaterial: {fileID: 0}
-  _frameCounter: 0
-  _idleTextures:
-  - {fileID: 2800000, guid: 51263702b4e13bc4e9b28c07b9b08a4b, type: 3}
-  - {fileID: 2800000, guid: e7a6755aa0900d94c99f007673f6a14c, type: 3}
-  - {fileID: 2800000, guid: 898eb7c3ee1e1f045a5a6a26864d1844, type: 3}
-  - {fileID: 2800000, guid: 491ff42a235346d41b5d739562c211ec, type: 3}
-  - {fileID: 2800000, guid: 6b98279c85b55894e897b458b555987d, type: 3}
-  - {fileID: 2800000, guid: d2be11ca82045d44eaf6bff7dd41939e, type: 3}
-  - {fileID: 2800000, guid: d8b902e46588dcb4eb7b502835c018d5, type: 3}
-  - {fileID: 2800000, guid: 173b0e0c51ff657469071efe94267ce5, type: 3}
-  - {fileID: 2800000, guid: 2a354d8b151294b4aaea4fc59af4a22e, type: 3}
-  - {fileID: 2800000, guid: af9733e315c6ae3448ab386dd5128d2e, type: 3}
-  - {fileID: 2800000, guid: 866a4c1d00740a34585a4a1c89e30bd5, type: 3}
-  - {fileID: 2800000, guid: 252ce680f69186146a964940b9a34e1e, type: 3}
-  - {fileID: 2800000, guid: 1f2bed9769697054fa46dfda482f9163, type: 3}
-  - {fileID: 2800000, guid: b056cb7e95bced545a6aee21316ccd36, type: 3}
-  - {fileID: 2800000, guid: 4a2434cb725ed104d8154129171b2942, type: 3}
-  - {fileID: 2800000, guid: b9f17d1d60f138a48bc8fc047d1f1a12, type: 3}
-  - {fileID: 2800000, guid: 4e608a48c41e0e444ae300264d6f3ef7, type: 3}
-  - {fileID: 2800000, guid: b31622cd235f8f74c877f90369259f47, type: 3}
-  - {fileID: 2800000, guid: 57111ac9ab3409a4891672d8ae1fa881, type: 3}
-  - {fileID: 2800000, guid: a97fe3f611c2d274ab845196c4250708, type: 3}
-  - {fileID: 2800000, guid: ff0fd8530cfded44fa31d9cc6df35d6c, type: 3}
-  - {fileID: 2800000, guid: a966484bdddf6fd4aad55be15a7d23fd, type: 3}
-  - {fileID: 2800000, guid: 7a9490ff04a7197409d2ff9ea10ec85e, type: 3}
-  - {fileID: 2800000, guid: 1d1953e15b183724a8ea2d9bcc13b3d5, type: 3}
-  - {fileID: 2800000, guid: eb22050984d52f345b8a562755dd2f41, type: 3}
-  - {fileID: 2800000, guid: bdb12b8aaecd7404a8b6ed74c6dd1b12, type: 3}
-  - {fileID: 2800000, guid: ec879dfc43d2cba439aa52ea6c267194, type: 3}
-  - {fileID: 2800000, guid: b67a5312873505c4897b4cc25fc19570, type: 3}
-  - {fileID: 2800000, guid: 350fc9cf29cb455469c0bfd6f05caa1f, type: 3}
-  - {fileID: 2800000, guid: b5cdbb3e509855f4c99752c0b17094a3, type: 3}
-  - {fileID: 2800000, guid: fc47975b19d8140498b7edcd8ede2f2d, type: 3}
 --- !u!114 &6739596773503058293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bac280ae8eaeff4fbe1ad97ae2553e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRaycastInteraction
-  rayLength: 2.5
+  rayLength: 5
   raycastEnabled: 1
   activeInteractable: {fileID: 0}
   canInteract: 1
@@ -477,7 +431,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
-    m_ActionName: 'Player/Attack[/Mouse/leftButton,/Keyboard/enter]'
+    m_ActionName: Player/Attack[/Mouse/leftButton,/Keyboard/enter]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3689884208207083878}
@@ -493,11 +447,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
-    m_ActionName: 'Player/Interact[/Keyboard/e]'
+    m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 27c5f898-bc57-4ee1-8800-db469aca5fe3
-    m_ActionName: 'Player/Crouch[/Keyboard/c]'
+    m_ActionName: Player/Crouch[/Keyboard/c]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1173698383739407512}
@@ -513,47 +467,47 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: f1ba0d36-48eb-4cd5-b651-1c94a6531f70
-    m_ActionName: 'Player/Jump[/Keyboard/space]'
+    m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 2776c80d-3c14-4091-8c56-d04ced07a2b0
-    m_ActionName: 'Player/Previous[/Keyboard/1]'
+    m_ActionName: Player/Previous[/Keyboard/1]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: b7230bb6-fc9b-4f52-8b25-f5e19cb2c2ba
-    m_ActionName: 'Player/Next[/Keyboard/2]'
+    m_ActionName: Player/Next[/Keyboard/2]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 641cd816-40e6-41b4-8c3d-04687c349290
-    m_ActionName: 'Player/Sprint[/Keyboard/leftShift]'
+    m_ActionName: Player/Sprint[/Keyboard/leftShift]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 7607c7b6-cd76-4816-beef-bd0341cfe950
-    m_ActionName: 'UI/Submit[/Keyboard/enter]'
+    m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 15cef263-9014-4fd5-94d9-4e4a6234a6ef
-    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
+    m_ActionName: UI/Cancel[/Keyboard/escape]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 32b35790-4ed0-4e9a-aa41-69ac6d629449
-    m_ActionName: 'UI/Point[/Mouse/position]'
+    m_ActionName: UI/Point[/Mouse/position]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 3c7022bf-7922-4f7c-a998-c437916075ad
-    m_ActionName: 'UI/Click[/Mouse/leftButton]'
+    m_ActionName: UI/Click[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 44b200b1-1557-4083-816c-b22cbdf77ddf
-    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: dad70c86-b58c-4b17-88ad-f5e53adf419e
-    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 0489e84a-4833-4c40-bfae-cea84b696689
-    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 24908448-c609-4bc3-a128-ea258674378a
@@ -577,7 +531,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: ab4e3fad-27e4-4f2e-99f7-85b9cf0d5c8c
-    m_ActionName: 'Player/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+    m_ActionName: Player/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 497008879434423276, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
@@ -593,11 +547,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 2c930d0c-70da-4e1f-ab4e-00ea3ae3497a
-    m_ActionName: 'Player/Pause[/Keyboard/t]'
+    m_ActionName: Player/Pause[/Keyboard/t]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: e5a12341-7a6e-4866-a830-0d8b36e6c269
-    m_ActionName: 'Player/Map[/Keyboard/m]'
+    m_ActionName: Player/Map[/Keyboard/m]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 497008879434423276, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
@@ -613,23 +567,23 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 2404a230-01fa-4b27-827a-e1f3ee0e1507
-    m_ActionName: 'UI/Pause[/Keyboard/t]'
+    m_ActionName: UI/Pause[/Keyboard/t]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: a9261acb-460a-473b-b5b7-b83f578b2326
-    m_ActionName: 'UI/Map[/Keyboard/m]'
+    m_ActionName: UI/Map[/Keyboard/m]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 2e9ff2ac-a7c8-464a-bccd-e49e4e132b12
-    m_ActionName: 'Puzzle/Interact[/Keyboard/e]'
+    m_ActionName: Puzzle/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 95650de4-f74b-4401-a6d5-73846c9655d9
-    m_ActionName: 'Puzzle/Pause[/Keyboard/t]'
+    m_ActionName: Puzzle/Pause[/Keyboard/t]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 44958ec9-ff14-4b2a-800c-b429c1f4d6f5
-    m_ActionName: 'Puzzle/Map[/Keyboard/m]'
+    m_ActionName: Puzzle/Map[/Keyboard/m]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6709136814799094051}
@@ -645,7 +599,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: f292a0eb-19f8-4e56-8161-9f22683184bd
-    m_ActionName: 'Puzzle/MoveUp[/Keyboard/w]'
+    m_ActionName: Puzzle/MoveUp[/Keyboard/w]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6709136814799094051}
@@ -661,7 +615,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: e8a30b47-ab05-43d2-bb19-ce8bb72b38de
-    m_ActionName: 'Puzzle/MoveDown[/Keyboard/s]'
+    m_ActionName: Puzzle/MoveDown[/Keyboard/s]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6709136814799094051}
@@ -677,7 +631,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: ffc436f0-3509-421d-b1c1-850737279dad
-    m_ActionName: 'Puzzle/MoveLeft[/Keyboard/a]'
+    m_ActionName: Puzzle/MoveLeft[/Keyboard/a]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6709136814799094051}
@@ -693,43 +647,43 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 8dab30dc-efb8-4acc-8656-c5191801d844
-    m_ActionName: 'Puzzle/MoveRight[/Keyboard/d]'
+    m_ActionName: Puzzle/MoveRight[/Keyboard/d]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 7196a9a0-d927-4aaa-b00b-6c797501fe02
-    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 9e446b2b-9adc-4bfd-b946-d3add9171d33
-    m_ActionName: 'Puzzle/Submit[/Keyboard/enter]'
+    m_ActionName: Puzzle/Submit[/Keyboard/enter]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 5d6c1e9f-b067-423b-86d8-bba0b5b8b0c9
-    m_ActionName: 'Puzzle/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+    m_ActionName: Puzzle/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: db106398-fb81-4813-aa82-32b1cfa8ffec
-    m_ActionName: 'Puzzle/Cancel[/Keyboard/l]'
+    m_ActionName: Puzzle/Cancel[/Keyboard/l]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 975b6506-e84c-4991-bf08-03e49d35f4cc
-    m_ActionName: 'Puzzle/Point[/Mouse/position,/Pen/position,/Touchscreen/touch0/position,/Touchscreen/touch1/position,/Touchscreen/touch2/position,/Touchscreen/touch3/position,/Touchscreen/touch4/position,/Touchscreen/touch5/position,/Touchscreen/touch6/position,/Touchscreen/touch7/position,/Touchscreen/touch8/position,/Touchscreen/touch9/position]'
+    m_ActionName: Puzzle/Point[/Mouse/position,/Pen/position,/Touchscreen/touch0/position,/Touchscreen/touch1/position,/Touchscreen/touch2/position,/Touchscreen/touch3/position,/Touchscreen/touch4/position,/Touchscreen/touch5/position,/Touchscreen/touch6/position,/Touchscreen/touch7/position,/Touchscreen/touch8/position,/Touchscreen/touch9/position]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: c56fc27a-1aa3-46db-b639-ba707d844a60
-    m_ActionName: 'Puzzle/Click[/Mouse/leftButton,/Pen/tip,/Touchscreen/touch0/press,/Touchscreen/touch1/press,/Touchscreen/touch2/press,/Touchscreen/touch3/press,/Touchscreen/touch4/press,/Touchscreen/touch5/press,/Touchscreen/touch6/press,/Touchscreen/touch7/press,/Touchscreen/touch8/press,/Touchscreen/touch9/press]'
+    m_ActionName: Puzzle/Click[/Mouse/leftButton,/Pen/tip,/Touchscreen/touch0/press,/Touchscreen/touch1/press,/Touchscreen/touch2/press,/Touchscreen/touch3/press,/Touchscreen/touch4/press,/Touchscreen/touch5/press,/Touchscreen/touch6/press,/Touchscreen/touch7/press,/Touchscreen/touch8/press,/Touchscreen/touch9/press]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 75fcc726-6fe2-4cdb-a815-d0bb4ac5ce92
-    m_ActionName: 'Puzzle/RightClick[/Mouse/rightButton]'
+    m_ActionName: Puzzle/RightClick[/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: d24449a1-a8ff-438f-b084-01a08c90d5d9
-    m_ActionName: 'Puzzle/MiddleClick[/Mouse/middleButton]'
+    m_ActionName: Puzzle/MiddleClick[/Mouse/middleButton]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: fa018457-907a-4dd2-8546-7aa1f8ef5711
-    m_ActionName: 'Puzzle/ScrollWheel[/Mouse/scroll]'
+    m_ActionName: Puzzle/ScrollWheel[/Mouse/scroll]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: f41818e0-85b3-42df-8acd-082cbb1fd367
@@ -741,11 +695,59 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 6f5d826c-eec8-4d4d-b763-1758f0217f82
-    m_ActionName: 'Puzzle/Pause1[/Keyboard/t,/Keyboard/escape]'
+    m_ActionName: Puzzle/Pause1[/Keyboard/t,/Keyboard/escape]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: f034ef4d-e911-4b53-8b45-20d99924816e
-    m_ActionName: 'Puzzle/Map1[/Keyboard/m]'
+    m_ActionName: Puzzle/Map1[/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9e446b2b-9adc-4bfd-b946-d3add9171d33
+    m_ActionName: Puzzle/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5d6c1e9f-b067-423b-86d8-bba0b5b8b0c9
+    m_ActionName: Puzzle/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: db106398-fb81-4813-aa82-32b1cfa8ffec
+    m_ActionName: Puzzle/Cancel[/Keyboard/l]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 975b6506-e84c-4991-bf08-03e49d35f4cc
+    m_ActionName: Puzzle/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c56fc27a-1aa3-46db-b639-ba707d844a60
+    m_ActionName: Puzzle/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 75fcc726-6fe2-4cdb-a815-d0bb4ac5ce92
+    m_ActionName: Puzzle/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d24449a1-a8ff-438f-b084-01a08c90d5d9
+    m_ActionName: Puzzle/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fa018457-907a-4dd2-8546-7aa1f8ef5711
+    m_ActionName: Puzzle/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f41818e0-85b3-42df-8acd-082cbb1fd367
+    m_ActionName: Puzzle/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0de39480-3a9b-447b-aa5e-3757520990c0
+    m_ActionName: Puzzle/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f5d826c-eec8-4d4d-b763-1758f0217f82
+    m_ActionName: Puzzle/Pause1[/Keyboard/t,/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f034ef4d-e911-4b53-8b45-20d99924816e
+    m_ActionName: Puzzle/Map1[/Keyboard/m]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -904,3 +906,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a3fbcb75602f442a47d0e163a622a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
+--- !u!114 &6616755409195078602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438321986708604092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12702beb792a8074fa5494122538e80e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Texture_Animation
+  _idleAnimationMaterial: {fileID: 2100000, guid: cc8764a78abe00447b9298d11d64302a, type: 2}
+  _frameCounter: 0
+  _idleTextures:
+  - {fileID: 2800000, guid: 51263702b4e13bc4e9b28c07b9b08a4b, type: 3}
+  - {fileID: 2800000, guid: e7a6755aa0900d94c99f007673f6a14c, type: 3}
+  - {fileID: 2800000, guid: 898eb7c3ee1e1f045a5a6a26864d1844, type: 3}
+  - {fileID: 2800000, guid: 491ff42a235346d41b5d739562c211ec, type: 3}
+  - {fileID: 2800000, guid: 6b98279c85b55894e897b458b555987d, type: 3}
+  - {fileID: 2800000, guid: d2be11ca82045d44eaf6bff7dd41939e, type: 3}
+  - {fileID: 2800000, guid: d8b902e46588dcb4eb7b502835c018d5, type: 3}
+  - {fileID: 2800000, guid: 173b0e0c51ff657469071efe94267ce5, type: 3}
+  - {fileID: 2800000, guid: 2a354d8b151294b4aaea4fc59af4a22e, type: 3}
+  - {fileID: 2800000, guid: af9733e315c6ae3448ab386dd5128d2e, type: 3}
+  - {fileID: 2800000, guid: 866a4c1d00740a34585a4a1c89e30bd5, type: 3}
+  - {fileID: 2800000, guid: 252ce680f69186146a964940b9a34e1e, type: 3}
+  - {fileID: 2800000, guid: 1f2bed9769697054fa46dfda482f9163, type: 3}
+  - {fileID: 2800000, guid: b056cb7e95bced545a6aee21316ccd36, type: 3}
+  - {fileID: 2800000, guid: 4a2434cb725ed104d8154129171b2942, type: 3}
+  - {fileID: 2800000, guid: b9f17d1d60f138a48bc8fc047d1f1a12, type: 3}
+  - {fileID: 2800000, guid: 4e608a48c41e0e444ae300264d6f3ef7, type: 3}
+  - {fileID: 2800000, guid: b31622cd235f8f74c877f90369259f47, type: 3}
+  - {fileID: 2800000, guid: 57111ac9ab3409a4891672d8ae1fa881, type: 3}
+  - {fileID: 2800000, guid: a97fe3f611c2d274ab845196c4250708, type: 3}
+  - {fileID: 2800000, guid: ff0fd8530cfded44fa31d9cc6df35d6c, type: 3}
+  - {fileID: 2800000, guid: a966484bdddf6fd4aad55be15a7d23fd, type: 3}
+  - {fileID: 2800000, guid: 7a9490ff04a7197409d2ff9ea10ec85e, type: 3}
+  - {fileID: 2800000, guid: 1d1953e15b183724a8ea2d9bcc13b3d5, type: 3}
+  - {fileID: 2800000, guid: eb22050984d52f345b8a562755dd2f41, type: 3}
+  - {fileID: 2800000, guid: bdb12b8aaecd7404a8b6ed74c6dd1b12, type: 3}
+  - {fileID: 2800000, guid: ec879dfc43d2cba439aa52ea6c267194, type: 3}
+  - {fileID: 2800000, guid: b67a5312873505c4897b4cc25fc19570, type: 3}
+  - {fileID: 2800000, guid: 350fc9cf29cb455469c0bfd6f05caa1f, type: 3}
+  - {fileID: 2800000, guid: b5cdbb3e509855f4c99752c0b17094a3, type: 3}
+  - {fileID: 2800000, guid: fc47975b19d8140498b7edcd8ede2f2d, type: 3}

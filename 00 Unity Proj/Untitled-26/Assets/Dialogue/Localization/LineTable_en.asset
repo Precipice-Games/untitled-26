@@ -58,9 +58,8 @@ MonoBehaviour:
     m_Localized: I said I would only say it once
     m_Metadata:
       m_Items: []
-  - m_Id: 157193228291
-    m_Localized: '*black screen, text fades in, mother crystal starts to fade in
-      very slowly during the exposition*'
+  - m_Id: 13033750294982656
+    m_Localized: "Mother Crystal:\u201COr at least, so it used to be\u2026\u201D"
     m_Metadata:
       m_Items: []
   - m_Id: 157193228292
@@ -72,8 +71,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 157193228294
-    m_Localized: "\u201CMother Crystal:I am the heart and soul of The Islands of
-      Ethor.\u201D"
+    m_Localized: "Mother Crystal:\"I am the heart and soul of The Islands of Ethor.\u201D"
     m_Metadata:
       m_Items: []
   - m_Id: 157193228295
@@ -81,52 +79,18 @@ MonoBehaviour:
       as one.\u201D"
     m_Metadata:
       m_Items: []
-  - m_Id: 157193228296
-    m_Localized: "Mother Crystal:\u201CHowever, that couldn\u2019t be any further
-      from the truth as of late\u201D"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 157193228297
-    m_Localized: "Mother Crystal:\u201CLong ago, my light shone freely throughout
-      all the land. The people of Ethor utilized my power, and the world flourished.\u201D"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 157193228298
-    m_Localized: "Mother Crystal:\u201CBut as people\u2019s appetite for more power
-      grew, so did the imbalance, and the threat of calamity arose. In order to prevent
-      such a catastrophe, I did what I must: I fractured the land and scattered my
-      power.\u201D"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 157193228299
-    m_Localized: "Mother Crystal:\u201CEach island carries a fraction of my essence,
-      but their crystals are frail, leaving their lands in distress.\u201D"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 157193228300
-    m_Localized: '*zoom in shot of mother crystal (should be fully faded in by now)'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 157193228301
-    m_Localized: (Mother crystal lets off a brief sparkle)
-    m_Metadata:
-      m_Items: []
   - m_Id: 157193228302
-    m_Localized: "Mother Crystal:\u201CChild\u2026\u201D"
+    m_Localized: "Mother Crystal:\u201CChild\u2026Hear my plea\u2026\u201D"
     m_Metadata:
       m_Items: []
   - m_Id: 157193228303
     m_Localized: "Mother Crystal:\u201CThe binding light of the Isles of Ethor is
-      fading\u2026\u201D (crystal cracks)"
+      fading\u2026\u201D"
     m_Metadata:
       m_Items: []
   - m_Id: 157193228304
     m_Localized: "Mother Crystal:\u201CThe islands cry out for a hero, and the land
-      yearns to restore its unity\u201D (light shoots out, screen starts shaking)"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 157193228305
-    m_Localized: '*screen flashes white, hard cut to Sky waking up*'
+      yearns to restore its unity\u201D"
     m_Metadata:
       m_Items: []
   - m_Id: 4026151493914624
@@ -352,7 +316,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701336
-    m_Localized: 'Penguin NPC: Squawk! (Why do we live just to die?)'
+    m_Localized: 'Penguin: Squawk! (Why do we live just to die?)'
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701337
@@ -361,13 +325,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701338
-    m_Localized: 'Penguin NPC: Squuuaaawwk! (Your story will turn its final page
-      one day whether you like it or not!)'
+    m_Localized: 'Penguin: Squuuaaawwk! (Your story will turn its final page one
+      day whether you like it or not!)'
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701334
-    m_Localized: "Penguin NPC: Brr! (I\u2019ll rip your face clean off if you take
-      another step!)"
+    m_Localized: "Penguin: Brr! (I\u2019ll rip your face clean off if you take another
+      step!)"
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701333
@@ -375,12 +339,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701332
-    m_Localized: 'Penguin NPC: Brrr (You are not a penguin, get out!)'
+    m_Localized: 'Penguin: Brrr (You are not a penguin, get out!)'
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701331
-    m_Localized: 'Penguin NPC: Quank! Quank! Quank!(Wait where are you going! Come
-      Back! HELP MY CHILD!!!)'
+    m_Localized: 'Penguin: Quank! Quank! Quank!(Wait where are you going! Come Back!
+      HELP MY CHILD!!!)'
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701330
@@ -388,7 +352,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701329
-    m_Localized: 'Penguin NPC: Quank! (That bastard tossed my child over the Island!)'
+    m_Localized: 'Penguin: Quank! (That bastard tossed my child over the Island!)'
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701328
@@ -396,7 +360,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701327
-    m_Localized: "Penguin NPC: Quack!(I\u2019m looking for that bastard, Marvin!)"
+    m_Localized: "Penguin: Quack!(I\u2019m looking for that bastard, Marvin!)"
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701326
@@ -404,11 +368,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701325
-    m_Localized: 'Penguin NPC: Quank! (Where is that Bastard!)'
+    m_Localized: 'Penguin: Quank! (Where is that Bastard!)'
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701324
-    m_Localized: "Penguin NPC: Gaaak! (Coward! I\u2019ll show you!)"
+    m_Localized: "Penguin: Gaaak! (Coward! I\u2019ll show you!)"
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701323
@@ -416,12 +380,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701322
-    m_Localized: "Penguin NPC: Gak! (I\u2019m training to be able to fly!)"
+    m_Localized: "Penguin: Gak! (I\u2019m training to be able to fly!)"
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701321
-    m_Localized: 'Penguin NPC: Nooot! Nooot! (Noooo! The Beast will feast on your
-      bones)'
+    m_Localized: 'Penguin: Nooot! Nooot! (Noooo! The Beast will feast on your bones)'
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701320
@@ -429,7 +392,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701319
-    m_Localized: 'Penguin NPC: Noot! Noot! (Get off the island while you still can!)'
+    m_Localized: 'Penguin: Noot! Noot! (Get off the island while you still can!)'
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701318
@@ -437,8 +400,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701317
-    m_Localized: 'Penguin NPC: Noot Noot! (Nothing on this island is as cold as my
-      soul)'
+    m_Localized: 'Penguin: Noot Noot! (Nothing on this island is as cold as my soul)'
     m_Metadata:
       m_Items: []
   - m_Id: 4488983522701316
@@ -462,11 +424,33 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4488983518507008
-    m_Localized: 'Penguin NPC: Brrrrr! (What are you doing here?!)'
+    m_Localized: 'Penguin: Brrrrr! (What are you doing here?!)'
     m_Metadata:
       m_Items: []
   - m_Id: 4488044673888256
     m_Localized: 'Judith: You too. And I really do mean that.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13042942170918916
+    m_Localized: '[boldend]Message to Player:[/boldend] Talk to Dad at the dock'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13042942170918915
+    m_Localized: "Sky: \u201CDad\u2019s already out fixing an airship, as usual.
+      Maybe he knows what that was.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13042942170918914
+    m_Localized: "Sky: \u201CI don\u2019t know what that was, but it all felt so\u2026
+      real.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13042942170918913
+    m_Localized: "Sky: \u201CChild of the sky\u2026 hear my plea\u2026 and a hero??\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13042942170918912
+    m_Localized: "Sky: \u201CThat voice\u2026 what was that?\u201D"
     m_Metadata:
       m_Items: []
   references:
