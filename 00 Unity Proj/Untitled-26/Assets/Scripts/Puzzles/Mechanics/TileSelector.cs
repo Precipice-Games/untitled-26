@@ -4,19 +4,14 @@ using UnityEngine.InputSystem;
 
 public class TileSelector : MonoBehaviour
 {
-    // ===== Variables =====
-    private GridManager gridManager;
+    [Title("Tile Selector Variables", "Variables used in the Tile Selection process.")]
     [PropertyTooltip("Please assign the ResourceManager for this specific puzzle prefab.")]
     public ResourceManager resourceManager;
-
-    /// <summary>
-    /// Reference to the currently selected tile.
-    /// </summary>
+    
+    // Reference to the currently selected tile
     private SelectableTile selectedTile;
     
-    /// <summary>
-    /// Reference to the Player's coordinates on the grid.
-    /// </summary>
+    // Reference to the Player's coordinates on the grid
     private int playerGridX;
     private int playerGridZ;
 
@@ -26,6 +21,7 @@ public class TileSelector : MonoBehaviour
     private int endTileX;
     private int endTileZ;
     
+    [Space]
     [Title("Debug Mode")]
     [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
     [PropertyTooltip("Enables or disables debug logs in a given script.")]
@@ -85,8 +81,7 @@ public class TileSelector : MonoBehaviour
     /// </summary>
     private void AssignStartAndEndTiles(PuzzleInformation puzzleInfo)
     {
-        // Assign the GridManager and the Start & End tiles
-        gridManager = puzzleInfo.gridManager.GetComponent<GridManager>();
+        // Assign the Start & End tiles
         GameObject startTile = puzzleInfo.startTile;
         GameObject endTile = puzzleInfo.endTile;
         
@@ -135,6 +130,9 @@ public class TileSelector : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Used to move the currently selected tile to the right.
+    /// </summary>
     public void MoveSelectedRight()
     {
         // Ensure that a tile is selected, and that we're not moving
@@ -150,6 +148,9 @@ public class TileSelector : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Used to move the currently selected tile to the left.
+    /// </summary>
     public void MoveSelectedLeft()
     {
         // Ensure that a tile is selected, and that we're not moving
@@ -165,6 +166,9 @@ public class TileSelector : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Used to move the currently selected tile to the up/forwards.
+    /// </summary>
     public void MoveSelectedForward()
     {
         // Ensure that a tile is selected, and that we're not moving
@@ -180,6 +184,9 @@ public class TileSelector : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Used to move the currently selected tile to the down/backwards.
+    /// </summary>
     public void MoveSelectedBack()
     {
         // Ensure that a tile is selected, and that we're not moving
