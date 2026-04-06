@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 
@@ -36,7 +37,7 @@ public class Music
 
 public class Location
 {
-    static SpriteRenderer currentLocation;
+    static Image currentLocation;
 
     [YarnCommand("Swap")]
     public static void Swap(GameObject Location)
@@ -44,8 +45,8 @@ public class Location
         Debug.Log("The current Location is " + currentLocation);
         if (Location != null)
         {
-            SpriteRenderer locationSprite = Location.GetComponent<SpriteRenderer>();
-            SpriteRenderer lastLocation;
+            Image locationSprite = Location.GetComponent<Image>();
+            Image lastLocation;
 
 
             lastLocation = currentLocation;
@@ -59,6 +60,18 @@ public class Location
             }
         }
         else Debug.LogWarning("GameObject not found for command 'Swap'.");
+    }
+    [YarnCommand("StopCutscene")]
+    public static void StopCutscene()
+    {
+        Debug.Log("The current cutscene is " + currentLocation);
+        if (currentLocation != null)
+        {
+            Image locationSprite = currentLocation.GetComponent<Image>();
+            locationSprite.enabled = false;
+            Debug.Log(locationSprite + " is no longer active");
+            currentLocation = null;
+        }
     }
 }
 

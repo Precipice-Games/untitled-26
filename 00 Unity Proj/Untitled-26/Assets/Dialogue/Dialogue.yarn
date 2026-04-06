@@ -4,6 +4,7 @@ position: 140,130
 //1 - Initiate dream sequence
 
 //*black screen, text fades in, mother crystal starts to fade in very slowly during the exposition*
+<<Swap Intro1>>
 
 Mother Crystal:“Child of the sky…” #line:05c319b 
 Mother Crystal:“Do you hear my voice?” #line:0ad468d 
@@ -15,29 +16,35 @@ Mother Crystal:“Or at least, so it used to be…” #line:0bccf5c
 //2 - Mother Crystal cracks
 
 //*zoom in shot of mother crystal (should be fully faded in by now)
+<<Swap Intro2>>
 
 //(Mother crystal lets off a brief sparkle)
+<<Swap Intro3>>
 
 Mother Crystal:“Child…Hear my plea…” #line:0f39b7f 
 
-//(crystal cracks) 
+//(crystal cracks)
+<<Swap Intro4>> 
 
 Mother Crystal:“The binding light of the Isles of Ethor is fading…”  #line:05ea307 
 Mother Crystal:“The islands cry out for a hero, and the land yearns to restore its unity”  #line:0e48416 
 
 //(light shoots out, screen starts shaking)
+<<Swap Intro5>>
 
-//*screen flashes white, hard cut to Sky waking up* 
+//*screen flashes white, hard cut to Sky waking up*
+<<Swap Intro6>> 
 
 Sky: “That voice… what was that?” #line:0234378 
 Sky: “Child of the sky… hear my plea… and a hero??” #line:00140c7 
 Sky: “I don’t know what that was, but it all felt so… real.” #line:00d6cb9 
 
 //(Sky begins to look around a bit, camera slowly pans around sky and stops at the dock where Cumulus and the airship are)
+<<Swap Intro7>>
 
 Sky: “Dad’s already out fixing an airship, as usual. Maybe he knows what that was.” #line:0f045dd 
-
-[boldend]Message to Player:[/boldend] Talk to Dad at the dock #line:0f57e37 
+<<StopCutscene>>
+<b>Talk to Dad at the dock</b> #line:0f57e37 
 
 ===
 title: Judith
