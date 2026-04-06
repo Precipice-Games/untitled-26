@@ -3,8 +3,13 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
+    [Space]
+    [Title("Grid Settings", "Settings for the puzzle grid.")]
+    [PropertyTooltip("Grid Width.")]
     public int width = 4;
+    [PropertyTooltip("Grid Height.")]
     public int height = 3;
+    [PropertyTooltip("Size of tiles.")]
     public float tileSize = .25f;
 
     // Grid of selectable tiles
@@ -12,6 +17,8 @@ public class GridManager : MonoBehaviour
 
     void Awake()
     {
+        // An additional 2 rows and columns are added to the
+        // grid to allow for the start and end rune tiles.
         width += 2;
         height += 2;
         grid = new SelectableTile[width, height];
