@@ -11,16 +11,23 @@ public class MusicManager : MonoBehaviour
 
     [Header("Mapping Music to Scenes")]
     [SerializeField] private AudioClip mainMenuTrack;
-    [SerializeField] private AudioClip tileMoveTrack;
-    [SerializeField] private AudioClip movementInteractionTrack;
-    [SerializeField] private AudioClip dialogueTestTrack;
+    [SerializeField] private AudioClip motherIslandTrack;
+    [SerializeField] private AudioClip oasisIslandTrack;
     [SerializeField] private AudioClip iceIslandTrack;
+
+    [Header("Puzzle Track Per Scene")]
+    [SerializeField] private AudioClip motherIslandPuzzleTrack;
+    [SerializeField] private AudioClip oasisIslandPuzzleTrack;
+    [SerializeField] private AudioClip iceIslandPuzzleTrack;
 
     [Header("Settings")]
     [SerializeField] private float fadeDuration = 0.75f;
     [SerializeField] private float defaultVolume = 0.6f;
 
     private Coroutine fadeRoutine;
+    private AudioClip currentSceneTrack;
+    private AudioClip currentPuzzleTrack;
+    private bool isInPuzzleMode = false;
 
     private void Awake()
     {
@@ -48,51 +55,97 @@ public class MusicManager : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.activeSceneChanged += OnSceneChanged;
+        RuneCircle.puzzleTriggered += OnPuzzleTriggered;
+        PlayerFixedMovement.updatePuzzleStatus += OnPuzzleCompleted;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         SceneManager.activeSceneChanged -= OnSceneChanged;
+        RuneCircle.puzzleTriggered -= OnPuzzleTriggered;
+        PlayerFixedMovement.updatePuzzleStatus -= OnPuzzleCompleted;
     }
     
     private void Start()
     {
         // Apply the appropriate music for the initial scene
-        ApplySceneMusic(SceneManager.GetActiveScene().name);
+        UpdateSceneTrackReferences(SceneManager.GetActiveScene().name);
+        PlayCorrectTrackForCurrentState();
     }
 
     private void OnSceneChanged(Scene oldScene, Scene newScene)
     {
         // Update the music based on the new active scene
-        ApplySceneMusic(newScene.name);
+        UpdateSceneTrackReferences(newScene.name);
+        isInPuzzleMode = false;
+        PlayCorrectTrackForCurrentState();
     }
     /// <summary>
     /// Determines which music track to play based on the current
     /// scene name and initiates playback with a fade transition.
+    /// Also determines when to fade into the puzzle track for the 
+    /// island that the player is currently on, if applicable.
     /// </summary>
     /// <param name="sceneName"></param>
-    private void ApplySceneMusic(string sceneName)
+    private void OnPuzzleTriggered(PuzzleInformation info)
     {
-        AudioClip trackToPlay = null;
+        isInPuzzleMode = true;
+        PlayCorrectTrackForCurrentState();
+    }
+
+    private void OnPuzzleCompleted(PuzzleInformation info)
+    {
+        EndPuzzleModeMusic();
+    }
+
+    public void EndPuzzleModeMusic()
+    {
+        if (!isInPuzzleMode) return;
+
+        isInPuzzleMode = false;
+        PlayCorrectTrackForCurrentState();
+    }
+
+    private void UpdateSceneTrackReferences(string sceneName)
+    {
+        currentSceneTrack = null;
+        currentPuzzleTrack = null;
 
         switch (sceneName)
         {
             case "MainMenu":
-                trackToPlay = mainMenuTrack;
+                currentSceneTrack = mainMenuTrack;
                 break;
-            case "TileMoveExperiment":
-                trackToPlay = tileMoveTrack;
+
+            case "Mother_Island":
+                currentSceneTrack = motherIslandTrack;
+                currentPuzzleTrack = motherIslandPuzzleTrack;
                 break;
-            case "MovementInteraction_1":
-                trackToPlay = movementInteractionTrack;
+
+            case "Oasis_Island":
+                currentSceneTrack = oasisIslandTrack;
+                currentPuzzleTrack = oasisIslandPuzzleTrack;
                 break;
-            case "DialogueTest_1":
-                trackToPlay = dialogueTestTrack;
-                break;
+
             case "Ice_Island":
-                trackToPlay = iceIslandTrack;
+                currentSceneTrack = iceIslandTrack;
+                currentPuzzleTrack = iceIslandPuzzleTrack;
                 break;
+        }
+    }
+
+    private void PlayCorrectTrackForCurrentState()
+    {
+        AudioClip trackToPlay = null;
+
+        if (isInPuzzleMode)
+        {
+            trackToPlay = currentPuzzleTrack != null ? currentPuzzleTrack : currentSceneTrack;
+        }
+        else
+        {
+            trackToPlay = currentSceneTrack;
         }
 
         if (trackToPlay != null)

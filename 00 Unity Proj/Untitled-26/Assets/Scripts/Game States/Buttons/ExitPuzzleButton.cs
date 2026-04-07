@@ -15,6 +15,12 @@ public class ExitPuzzleButton : MonoBehaviour
         player.transform.parent = null;
         player.transform.position = respawnLocation;
         player.GetComponent<PlayerRaycastInteraction>().canInteract = true;
+
+        if (MusicManager.Instance != null)
+        {
+            MusicManager.Instance.EndPuzzleModeMusic();
+        }
+        
         exitPuzzle.Invoke(GameStateManager.GameState.Exploration);
     }
 }
