@@ -8,6 +8,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 * Mother Island is not yet available for the Player.
 * Oasis Island is not yet available for the Player.
 
+## [v1.1.1] - 2026-04-07
+
+### Added
+* Implemented ice tree art by @fwooley.
+* Added puzzle mode to Music Manager to play soundtracks separate from the standard scene music.
+* Added some prototype feedback text as part of puzzle feedback system (WIP).
+
+### Fixed
+* Fixed an issue where the Ice Island was overexposed with too many light sources.
+* Fixed an issue where the Player was not able to jump on regions of the ice island following puzzle 1.
+
+### Changed
+* Adjusted lighting and island materials in the Ice Island.
+* Replaced the prototype trees on the Ice Island with the finalized ice trees.
+
 ## [v1.1.0] - 2026-04-05
 
 ### Added
