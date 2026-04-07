@@ -978,7 +978,6 @@ GameObject:
   - component: {fileID: 6811730300114549069}
   - component: {fileID: 6957286812768726538}
   - component: {fileID: 6021735229776701839}
-  - component: {fileID: 9071558003019024}
   m_Layer: 0
   m_Name: PuzzleCamera
   m_TagString: MainCamera
@@ -1109,7 +1108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CubeSelector
   resourceManager: {fileID: 7213066574574228598}
-  debugMode: 1
+  printInvalidMoves: 1
 --- !u!114 &6021735229776701839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,19 +1125,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
---- !u!114 &9071558003019024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2049235727765495089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc1cd66239eb1b34ba660e953023f763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickRayTest
-  debugMode: 1
 --- !u!1 &2050086839141752138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,15 +3544,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   startingMana: 10
-  manaLabel: {fileID: 4244620660118580199}
-  leftLabel: {fileID: 1230731256228544730}
-  upLabel: {fileID: 4247431490022177219}
-  downLabel: {fileID: 8218137926958000874}
-  rightLabel: {fileID: 7222528822434926062}
   moveLeftUses: 2
   moveRightUses: 2
   moveForwardUses: 2
   moveBackUses: 2
+  manaLabel: {fileID: 4244620660118580199}
+  leftLabel: {fileID: 1230731256228544730}
+  rightLabel: {fileID: 4912949784702118134}
+  upLabel: {fileID: 5764576976159104752}
+  downLabel: {fileID: 1695679866546868791}
   printStartingValues: 1
   printManaDeductions: 1
   printCardDeductions: 1
@@ -3820,14 +3806,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3397337548393501967}
     m_Modifications:
+    - target: {fileID: 1280597060774139644, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6957286812768726538}
+    - target: {fileID: 1280597060774139644, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveSelectedBack
+      objectReference: {fileID: 0}
     - target: {fileID: 1682574301631202321, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6957286812768726538}
+    - target: {fileID: 2355448703207791812, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_Name
+      value: UpUsageNumber
+      objectReference: {fileID: 0}
     - target: {fileID: 2828891172051885773, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6957286812768726538}
+    - target: {fileID: 3125944435565750978, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_Name
+      value: RightUsageNumber
+      objectReference: {fileID: 0}
     - target: {fileID: 3259298429907286729, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3836,6 +3838,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6957286812768726538}
+    - target: {fileID: 4783832343663389757, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6957286812768726538}
+    - target: {fileID: 4783832343663389757, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveSelectedRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310377077131647547, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6957286812768726538}
+    - target: {fileID: 5310377077131647547, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveSelectedForward
+      objectReference: {fileID: 0}
     - target: {fileID: 6756488729712636185, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
       propertyPath: m_Name
       value: PuzzleCanvas
@@ -3843,6 +3861,10 @@ PrefabInstance:
     - target: {fileID: 8293636499145607950, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 22.750977
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703096262885363715, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+      propertyPath: m_Name
+      value: DownUsageNumber
       objectReference: {fileID: 0}
     - target: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
       propertyPath: m_Pivot.x
@@ -3940,6 +3962,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1695679866546868791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8401797740659830497, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+  m_PrefabInstance: {fileID: 7138607130776157398}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!224 &1809244039853653710 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8794074883102573080, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
@@ -3956,9 +3989,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!114 &4247431490022177219 stripped
+--- !u!1 &4526878413659049423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6756488729712636185, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+  m_PrefabInstance: {fileID: 7138607130776157398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4912949784702118134 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6476322717148628245, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2828014900578341920, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
   m_PrefabInstance: {fileID: 7138607130776157398}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3967,11 +4005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!1 &4526878413659049423 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6756488729712636185, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
-  m_PrefabInstance: {fileID: 7138607130776157398}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4943596135170749970 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2849163532155685572, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
@@ -3983,20 +4016,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e542f1f838a2b479a6e6dc0db540ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExitPuzzleButton
---- !u!114 &7222528822434926062 stripped
+--- !u!114 &5764576976159104752 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 516505411981586744, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
-  m_PrefabInstance: {fileID: 7138607130776157398}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!114 &8218137926958000874 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1233385664566040124, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3237676273918566950, guid: 6112f478f7cbb684481585851a3c27ae, type: 3}
   m_PrefabInstance: {fileID: 7138607130776157398}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
