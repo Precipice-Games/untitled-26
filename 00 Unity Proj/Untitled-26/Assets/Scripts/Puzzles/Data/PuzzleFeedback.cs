@@ -27,6 +27,12 @@ public class PuzzleFeedback : MonoBehaviour
     private float errorLastIntervalTime = 0f;
     private float errorInterval = 0.25f;
     
+    void Start()
+    {
+        // Hide popup text at start
+        if (onScreenText != null)
+            onScreenText.gameObject.SetActive(false);
+    }
     
     // Subscribe to events
     private void OnEnable()
@@ -44,6 +50,16 @@ public class PuzzleFeedback : MonoBehaviour
 
     private void CellIsOccupied(SelectableTile selectableTile)
     {
+        StartFeedback(selectableTile, "That space is occupied!");
+    }
+    
+    private void MoveIsOutOfBounds(SelectableTile selectableTile)
+    {
+        StartFeedback(selectableTile, "You can't move outside the grid!");
+    }
+
+    private void StartFeedback(SelectableTile selectableTile, string message)
+    {
         tile = selectableTile;
         tileRenderer = tile.GetComponent<Renderer>();
         originalColor = tileRenderer.material.color;
@@ -51,21 +67,26 @@ public class PuzzleFeedback : MonoBehaviour
         // Reset interval timing every time an error happens
         errorLastIntervalTime = 0f;
         isFlashing = false;
-        // The flicker did not remember the last time it flashed so it never reset.
-    
-        Debug.Log($"PuzzleFeedback.cs >> You tried to move {tile}, but another tile is occupying that cell!");
+
+        // Show popup text
+        if (onScreenText != null)
+        {
+            onScreenText.text = message;
+            onScreenText.gameObject.SetActive(true);
+        }
+
+        Debug.Log($"PuzzleFeedback.cs >> {message}");
         flickerTimer = TimerManager.CreateTimer(2.0f, OnTimerFinished, OnTimerTick);
     }
-    
-    private void MoveIsOutOfBounds(SelectableTile selectableTile)
-    {
-        // Insert logic here regarding the move being out of bounds.
-    }
-    
+
     void OnTimerFinished()
     {
         Debug.Log("Timer finished!");
         tileRenderer.material.color = originalColor;
+
+        // Hide popup text
+        if (onScreenText != null)
+            onScreenText.gameObject.SetActive(false);
         
         TimerManager.DeleteTimer(flickerTimer);
     }
@@ -79,17 +100,13 @@ public class PuzzleFeedback : MonoBehaviour
         {
             errorLastIntervalTime = elapsedTime;
 
-            // Toggle color instead of comparing colors
+            // Toggle color
             isFlashing = !isFlashing;
 
             if (isFlashing)
                 tileRenderer.material.color = flashColor;
             else
                 tileRenderer.material.color = originalColor;
-
-            Debug.Log("Interval hit!");
         }
-
-        Debug.Log("Timer running...");
     }
 }
