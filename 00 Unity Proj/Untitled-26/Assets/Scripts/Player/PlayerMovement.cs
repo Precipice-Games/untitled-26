@@ -14,8 +14,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float xMovement; //left to right movement data
     [SerializeField] private float yMovement; //forward to back movement data
     [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
-    [PropertyTooltip("Please attach the CameraRotation script. It is used to rotate the Player with the camera.")]
-    [SerializeField] private CameraRotation cameraRotation;
+
+    [PropertyTooltip("Please attach the Player's camera. This is necessary for making it revolve around the Player as they turn.")]
+    public GameObject playerCamera;
+    private PlayerCameraRotation cameraRotation;
     
     // ========== Jumping ==========
     [Space]
@@ -28,8 +30,9 @@ public class PlayerMovement : MonoBehaviour
     [Title("Ground Check", "Variables used to perform ground checks for jumping.")]
     [SerializeField] private bool isGrounded;
 
-    private float lookX;
+    
     private float turnInput;
+    private float lookX;
     
     // Subscribe to events
     private void OnEnable()
@@ -49,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Assign the rigidbody component to rb
         rb = GetComponent<Rigidbody>();
+        cameraRotation = playerCamera.GetComponent<PlayerCameraRotation>();
     }
     
     /// <summary>
