@@ -15,6 +15,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float yMovement; //forward to back movement data
     [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
     public float mouseSensitivity = 1f;
+    private float targetRotation = 0.0f;
+    public GameObject mainCamera;
+    private float _rotationVelocity;
+    
+    [Tooltip("How fast the character turns to face movement direction")]
+    [Range(0.0f, 0.3f)]
+    public float RotationSmoothTime = 0.12f;
     
     // [PropertyTooltip("Please attach the Player's camera. This is necessary for making it revolve around the Player as they turn.")]
     // public GameObject playerCamera;
@@ -35,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     
     private float turnInput;
-    private float lookX;
+    private Vector2 look;
     
     // Subscribe to events
     private void OnEnable()
@@ -68,8 +75,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 localMoveDirection = transform.right * xMovement + transform.forward * yMovement;
         transform.position += localMoveDirection * moveSpeed * Time.deltaTime;
-        
-        transform.Rotate(Vector3.up * turnInput);
     }
     
     /// <summary>
@@ -96,8 +101,17 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="context"></param>
     public void PlayerLook(InputAction.CallbackContext context)
     {
-        lookX = context.ReadValue<Vector2>().x;
-        turnInput = lookX * mouseSensitivity;
+        look = context.ReadValue<Vector2>();
+        
+        // Normalize look input direction
+        Vector3 inputDirection = new Vector3(look.x, 0.0f, look.y).normalized;
+        
+        targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
+        float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
+
+        // rotate to face input direction relative to camera position
+        transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+        
     }
 
     /// <summary>
