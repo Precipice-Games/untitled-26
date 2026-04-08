@@ -2,12 +2,9 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/// <summary>
-/// This script allows the camera to revolve around the Player. The Player
-/// will always face the camera itself. Additionally, DO NOT add any controls
-/// or cursor handling here; that is all handled in seperate files and events,
-/// such as game state switches.
-/// </summary>
+// This is the old camera rotational script. This should be removed when the
+// PlayerCameraRotation.cs script is fully integrated with the new Cinemachine
+// system for the PlayerCamera.
 
 public class CameraRotation : MonoBehaviour
 {
