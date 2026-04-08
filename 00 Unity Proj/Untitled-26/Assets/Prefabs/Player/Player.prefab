@@ -174,7 +174,7 @@ MonoBehaviour:
   xMovement: 0
   yMovement: 0
   rb: {fileID: 0}
-  playerCamera: {fileID: 0}
+  mouseSensitivity: 1
   jumpPower: 4
   maxJumps: 1
   jumpsRemaining: 0
@@ -284,7 +284,7 @@ MonoBehaviour:
       - m_Target: {fileID: 3689884208207083878}
         m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
         m_MethodName: Interact
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -573,18 +573,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerCameraRotation, Assembly-CSharp
-        m_MethodName: LookRotation
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 9e446b2b-9adc-4bfd-b946-d3add9171d33
     m_ActionName: 'Puzzle/Submit[/Keyboard/enter]'
   - m_PersistentCalls:
@@ -632,7 +620,19 @@ MonoBehaviour:
     m_ActionId: f034ef4d-e911-4b53-8b45-20d99924816e
     m_ActionName: 'Puzzle/Map1[/Keyboard/m]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1173698383739407512}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: PlayerLook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 9c4359d1-6960-428b-8de5-d7670b623c85
     m_ActionName: 'Player/Look[/Mouse/delta,/Touchscreen/delta,/Pen/delta]'
   m_NeverAutoSwitchControlSchemes: 0
