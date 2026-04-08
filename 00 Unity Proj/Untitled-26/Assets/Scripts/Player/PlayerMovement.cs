@@ -14,10 +14,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float xMovement; //left to right movement data
     [SerializeField] private float yMovement; //forward to back movement data
     [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
-
-    [PropertyTooltip("Please attach the Player's camera. This is necessary for making it revolve around the Player as they turn.")]
-    public GameObject playerCamera;
-    private PlayerCameraRotation cameraRotation;
+    public float mouseSensitivity = 1f;
+    
+    // [PropertyTooltip("Please attach the Player's camera. This is necessary for making it revolve around the Player as they turn.")]
+    // public GameObject playerCamera;
+    // private PlayerCameraRotation cameraRotation;
+    // [PropertyTooltip("Mouse sensitivity. Default is 0.5f.")]
+    // public float mouseSensitivity = 1f;
     
     // ========== Jumping ==========
     [Space]
@@ -52,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
     {
         // Assign the rigidbody component to rb
         rb = GetComponent<Rigidbody>();
-        cameraRotation = playerCamera.GetComponent<PlayerCameraRotation>();
     }
     
     /// <summary>
@@ -95,9 +97,7 @@ public class PlayerMovement : MonoBehaviour
     public void PlayerLook(InputAction.CallbackContext context)
     {
         lookX = context.ReadValue<Vector2>().x;
-        turnInput = lookX * cameraRotation.mouseSensitivity;
-        // The mouse sensitivity is retrieved from CameraRotation.cs
-        // for relevance and to avoid repetition in both files.
+        turnInput = lookX * mouseSensitivity;
     }
 
     /// <summary>
