@@ -7,6 +7,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Mother Island is not yet available for the Player.
 * Oasis Island is not yet available for the Player.
+* Mana Well puzzle tile not yet available.
+
+## [v1.1.2] - 2026-04-09
+
+### Added
+* Started creating Mana Well tile (not yet available).
+* Added Cinemachine 3.1.6 to the project.
+
+### Fixed
+* Created a solid workaround for cross-platform mouse polling inconsistencies.
+* Fixed a bug where the different puzzle prefabs led to puzzle 2 on Ice Island being extremely behind puzzle 1's features.
+
+### Changed
+* Updated Penguin NPC to have white paper outline that matches other characters (made by @fwooley).
+* Replaced all puzzle instantiations with new base puzzle prefabs (one prefab per island).
+* Converted all normal Unity cameras into CinemachineCameras.
+* Updated Game State Manager scripts to handle new CinemachineCameras.
+
+### Removed
+* Deleted camera rotation scripts.
+* Deleted Puzzle2.prefab (originally intended for Ice Island).
 
 ## [v1.1.1] - 2026-04-07
 
