@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ### Fixed
 * Created a solid workaround for cross-platform mouse polling inconsistencies.
 * Fixed a bug where the different puzzle prefabs led to puzzle 2 on Ice Island being extremely behind puzzle 1's features.
+* Fixed a bug where Skye was not visible from the overhead view of puzzle 2 on Ice Island.
 
 ### Changed
 * Updated Penguin NPC to have white paper outline that matches other characters (made by @fwooley).
