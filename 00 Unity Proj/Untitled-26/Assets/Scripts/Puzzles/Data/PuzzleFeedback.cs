@@ -1,19 +1,19 @@
 using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using SimpleTimer;
 
 /// <summary>
 /// This script takes in and communicates data regarding the feedback of the puzzle.
+/// Handles puzzle feedback for invalid moves and other messages.
 /// </summary>
-
 public class PuzzleFeedback : MonoBehaviour
 {
+    [Title("UI Elements")]
     public GameObject feedbackPrefab;
     public TMP_Text onScreenText;
-    
+
     private TimerManager.Timer flickerTimer;
 
     private SelectableTile tile;
@@ -24,9 +24,10 @@ public class PuzzleFeedback : MonoBehaviour
     private bool isFlashing = false;
     
     // Intervals used to determine when to flash the tile's color during the timer
+    // Flash intervals
     private float errorLastIntervalTime = 0f;
     private float errorInterval = 0.25f;
-    
+
     void Start()
     {
         // Hide popup text at start
@@ -58,13 +59,25 @@ public class PuzzleFeedback : MonoBehaviour
         StartFeedback(selectableTile, "You can't move outside the grid!");
     }
 
+    /// <summary>
+    /// General method to show feedback on screen and flash the tile.
+    /// </summary>
+    public void ShowMessage(string message)
+    {
+        StartFeedback(null, message);
+    }
+
     private void StartFeedback(SelectableTile selectableTile, string message)
     {
         tile = selectableTile;
-        tileRenderer = tile.GetComponent<Renderer>();
-        originalColor = tileRenderer.material.color;
+
+        tileRenderer = tile != null ? tile.GetComponent<Renderer>() : null;
+
+        if (tileRenderer != null)
+            originalColor = tileRenderer.material.color;
 
         // Reset interval timing every time an error happens
+        // Reset intervals
         errorLastIntervalTime = 0f;
         isFlashing = false;
 
@@ -76,23 +89,29 @@ public class PuzzleFeedback : MonoBehaviour
         }
 
         Debug.Log($"PuzzleFeedback.cs >> {message}");
+
+        // Create a 2-second timer with tick for flashing
         flickerTimer = TimerManager.CreateTimer(2.0f, OnTimerFinished, OnTimerTick);
     }
 
-    void OnTimerFinished()
+    private void OnTimerFinished()
     {
         Debug.Log("Timer finished!");
-        tileRenderer.material.color = originalColor;
+
+        if (tileRenderer != null)
+            tileRenderer.material.color = originalColor;
 
         // Hide popup text
         if (onScreenText != null)
             onScreenText.gameObject.SetActive(false);
-        
+
         TimerManager.DeleteTimer(flickerTimer);
     }
 
-    void OnTimerTick()
+    private void OnTimerTick()
     {
+        if (tileRenderer == null) return;
+
         float elapsedTime = flickerTimer.GetElapsedTime();
         bool intervalHit = elapsedTime - errorLastIntervalTime >= errorInterval;
 
@@ -103,10 +122,7 @@ public class PuzzleFeedback : MonoBehaviour
             // Toggle color
             isFlashing = !isFlashing;
 
-            if (isFlashing)
-                tileRenderer.material.color = flashColor;
-            else
-                tileRenderer.material.color = originalColor;
+            tileRenderer.material.color = isFlashing ? flashColor : originalColor;
         }
     }
 }
