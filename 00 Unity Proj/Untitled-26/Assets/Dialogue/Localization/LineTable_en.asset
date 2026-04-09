@@ -94,7 +94,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4026151493914624
-    m_Localized: "Judith: \u2026"
+    m_Localized: "???: \u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 4026151577800704
@@ -432,7 +432,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13042942170918916
-    m_Localized: '[boldend]Message to Player:[/boldend] Talk to Dad at the dock'
+    m_Localized: <b>Talk to Dad at the dock</b>
     m_Metadata:
       m_Items: []
   - m_Id: 13042942170918915
@@ -451,6 +451,67 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13042942170918912
     m_Localized: "Sky: \u201CThat voice\u2026 what was that?\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353689665536
+    m_Localized: "Cumulus: \u201CWhat\u2019s up, kiddo? You\u2019re up early.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353756774400
+    m_Localized: "Cumulus: \u201CHmmm, you look like you got thunderclouds crashing
+      in your head.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353756774401
+    m_Localized: "Sky: \u201C...Dad I think I heard something\u2026 A voice, and
+      it called for me!\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353756774402
+    m_Localized: "Cumulus: \u201CThe wind carries many voices across Ethor. Most
+      people have stopped listening\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353756774403
+    m_Localized: "Sky: \u201CDad! Listen to me! Something about it felt so\u2026
+      real\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353756774404
+    m_Localized: "Cumulus: \u201CReal, you say? What did you hear, then?\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353765163008
+    m_Localized: "Sky: \u201CIt said the islands are in danger, and something about
+      a hero, and -\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353765163009
+    m_Localized: "Cumulus: \u201CA hero\u2026 so the Mother Crystal truly has called
+      for you\u2026\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353765163010
+    m_Localized: "Sky: \u201CWhat? How do you know, dad?\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353765163011
+    m_Localized: "Cumulus: \u201CWhen you were younger you also mentioned that voice.
+      I thought that, over time, maybe you had forgotten\u2026\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353765163012
+    m_Localized: "Cumulus: \u201CBut the fact of the matter is that you\u2019ve always
+      had the strongest connection to the crystal more than the rest of us on the
+      island."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353765163013
+    m_Localized: "Cumulus: And if you feel called\u2026 you should go see her.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15575353765163014
+    m_Localized: <b>Go to Mother Crystal</b>
     m_Metadata:
       m_Items: []
   references:

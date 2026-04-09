@@ -582,7 +582,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 772706793502206034, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
       propertyPath: m_Name
-      value: Penguin
+      value: IntroDIalogue
       objectReference: {fileID: 0}
     - target: {fileID: 7507354175440329553, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
       propertyPath: player
