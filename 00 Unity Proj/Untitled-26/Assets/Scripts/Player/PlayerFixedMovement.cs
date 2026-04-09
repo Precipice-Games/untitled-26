@@ -45,6 +45,7 @@ public class PlayerFixedMovement : MonoBehaviour
     /// The X coordinate of the tile the Player is attempting to move to. This is used to check if the move is valid.
     /// </summary>
     private int destinationX = 0;
+
     /// <summary>
     /// The Y coordinate of the tile the Player is attempting to move to. This is used to check if the move is valid.
     /// </summary>
@@ -60,26 +61,33 @@ public class PlayerFixedMovement : MonoBehaviour
     Vector3 newCoords;
     Vector3 newPosition;
 
-   // Player's Rigidbody
+    // Player's Rigidbody
     private Rigidbody rb;
-    
+
+    [Title("References")]
+    public ResourceManager resourceManager;
+
     [Space]
     [Title("Debugging Options", "Settings for quick debugging options.")]
     [PropertyTooltip("Print out what move action was taken. True by default.")]
     public bool printMoveAction = true;
+
     [PropertyTooltip("Print out the Player's current grid coordinates are (X,Z). True by default.")]
     public bool printPlayerGridCoords = true;
+
     [PropertyTooltip("Print out the Player's current grid coordinates are as a Vector3. False by default.")]
     public bool printPlayerVector3 = false;
+
     [PropertyTooltip("Print out the tile type of the attempted tile the Player tried to move to. False by default.")]
     public bool printAttemptedTileType = false;
     
     // Static event to notify subscribers of the Player's movement
     public static event Action<int, int> playerMoved;
-    
+
     [Space]
     [Title("Puzzle Completion Event", "Event fired when Player reaches the end tile of the puzzle.")]
     public UnityEvent puzzleCompleted;
+
     public static event Action<PuzzleInformation> updatePuzzleStatus;
 
     private void Start()
@@ -126,7 +134,7 @@ public class PlayerFixedMovement : MonoBehaviour
         endTileX = endTile.GetComponent<SelectableTile>().gridX;
         endTileZ = endTile.GetComponent<SelectableTile>().gridZ;
 
-        //Reset tile info upon new puzzle start
+        // Reset tile info upon new puzzle start
         playerGridX = 0;
         playerGridZ = 0;
 
@@ -144,7 +152,7 @@ public class PlayerFixedMovement : MonoBehaviour
     /// and should probably be kept for bug testing.
     /// </summary>
     /// <param name="startX"></param>
-    /// <param name="startz"></param>
+    /// <param name="startZ"></param>
     private void MovePlayerToStartTile(int startX, int startZ)
     {
         Debug.Log($"PlayerFixedMovement.cs >> Moving Player to the starting tile ({startX},{startZ})...");
@@ -162,7 +170,7 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         if (printMoveAction) Debug.Log("PlayerFixedMovement.cs >> MoveUp performed.");
-        MoveDirection(0,1);
+        MoveDirection(0, 1);
     }
     
     public void MoveDown(InputAction.CallbackContext context)
@@ -189,7 +197,7 @@ public class PlayerFixedMovement : MonoBehaviour
         if (!context.performed) return;
         
         if (printMoveAction) Debug.Log("PlayerFixedMovement.cs >> MoveRight called.");
-        MoveDirection(1,0);
+        MoveDirection(1, 0);
     }
     
     /// <summary>
@@ -221,6 +229,7 @@ public class PlayerFixedMovement : MonoBehaviour
         // Directional Coordinates (Up, Down, Left, Right)
         deltaX = xDir;
         deltaZ = zDir;
+
         Debug.Log($"PlayerFixedMovement.cs >> Directional Coordinates: ({xDir},{zDir})");
 
         destinationX += deltaX;
@@ -230,10 +239,8 @@ public class PlayerFixedMovement : MonoBehaviour
         // This is used just for the first tile.
         int attemptedDestX = playerGridX + destinationX;
         int attemptedDestZ = playerGridZ + destinationZ;
-        Debug.Log($"PlayerFixedMovement.cs >> Attempted Destination Coordinates: ({attemptedDestX},{attemptedDestZ})");
 
-        // destinationX += deltaX;
-        // destinationZ += deltaZ;
+        Debug.Log($"PlayerFixedMovement.cs >> Attempted Destination Coordinates: ({attemptedDestX},{attemptedDestZ})");
         
         // Before anything, check to see if the attempted move is valid. This is performed
         // as though the Player is only traveling one tile. We want to ensure that first
@@ -249,8 +256,13 @@ public class PlayerFixedMovement : MonoBehaviour
             case SelectableTile.TileType.Normal:
                 NormalTile(attemptedDestX, attemptedDestZ);
                 break;
+
             case SelectableTile.TileType.Ice:
                 IceTile(attemptedDestX, attemptedDestZ);
+                break;
+
+            case SelectableTile.TileType.ManaWell:
+                NormalTile(attemptedDestX, attemptedDestZ);
                 break;
         }
     }
@@ -270,18 +282,11 @@ public class PlayerFixedMovement : MonoBehaviour
         // be used to determine how the Player should move and interact with the tile.
         SelectableTile.TileType tileType = gridManager.GetTileType(coordX, coordZ);
 
-        switch (tileType)
-        {
-            case SelectableTile.TileType.Normal:
-                break;
-            case SelectableTile.TileType.Ice:
-                break;
-        }
+        if (printAttemptedTileType)
+            Debug.Log($"PlayerFixedMovement.cs >> Tile at ({coordX},{coordZ}) is {tileType} tile.");
 
-        if (printAttemptedTileType) Debug.Log($"PlayerFixedMovement.cs >> Tile at ({coordX},{coordZ}) is {tileType} tile.");
         return tileType;
     }
-    
     
     /// <summary>
     /// Checks for an empty cell.
@@ -293,8 +298,9 @@ public class PlayerFixedMovement : MonoBehaviour
         if (gridManager.IsCellEmpty(coordX, coordZ))
         {
             Debug.Log($"PlayerFixedMovement.cs >> There is no tile to jump to at: ({coordX},{coordZ})");
-            return true; // If it's empty, return true.
+            return true;
         }
+
         return false;
     }
     
@@ -312,6 +318,7 @@ public class PlayerFixedMovement : MonoBehaviour
             Debug.Log($"PlayerFixedMovement.cs >> Move blocked: ({coordX},{coordZ}) is outside the grid.");
             return true;
         }
+
         return false;
     }
     
@@ -340,7 +347,7 @@ public class PlayerFixedMovement : MonoBehaviour
     {
         Debug.Log($"PlayerFixedMovement.cs >> Recursively checking through ice tiles. Currently at ({coordX},{coordZ}).");
         
-        // Create new values that can be pased into TryToMovePlayer()
+        // Create new values that can be passed into TryToMovePlayer()
         // without affecting the original destination coordinates. This is
         // necessary to ensure that the Player continues to slide in the
         // correct direction until they reach a non-ice tile or an obstacle.
@@ -362,22 +369,44 @@ public class PlayerFixedMovement : MonoBehaviour
         // Grab the X and Z coordinates in Vector3 from the GridManager
         newCoords = gridManager.GridToWorld(coordX, coordZ);
         newPosition = new Vector3(newCoords.x, transform.localPosition.y, newCoords.z);
-        if (printPlayerVector3) Debug.Log($"PlayerFixedMovement.cs >> Player Vector3 Position: {newPosition}");
+
+        if (printPlayerVector3)
+            Debug.Log($"PlayerFixedMovement.cs >> Player Vector3 Position: {newPosition}");
+
         transform.localPosition = newPosition;
 
         playerGridX = coordX;
         playerGridZ = coordZ;
         
-        if (printPlayerGridCoords) Debug.Log($"PlayerFixedMovement.cs >> Player Grid Coordinates: ({coordX},{coordZ})");
+        if (printPlayerGridCoords)
+            Debug.Log($"PlayerFixedMovement.cs >> Player Grid Coordinates: ({coordX},{coordZ})");
+
+        // Handle tile effects (ManaWell, etc.)
+        CheckTileEffects(coordX, coordZ);
 
         IsPlayerOnEndTile();
+    }
+    
+    /// <summary>
+    /// Handles special tile effects such as ManaWell.
+    /// </summary>
+    private void CheckTileEffects(int coordX, int coordZ)
+    {
+        SelectableTile.TileType tileType = gridManager.GetTileType(coordX, coordZ);
+
+        if (tileType == SelectableTile.TileType.ManaWell)
+        {
+            Debug.Log("PlayerFixedMovement.cs >> Player stepped on ManaWell! +2 Mana");
+
+            if (resourceManager != null)
+                resourceManager.AddMana(2);
+        }
     }
     
     /// <summary>
     /// Used to check if the Player has reached the end tile. If so, the puzzle
     /// has been completed and the appropriate events can be triggered.
     /// </summary>
-    /// <returns></returns>
     private void IsPlayerOnEndTile()
     {
         // Check if the Player's coordinates match the end tile's coordinates
@@ -385,7 +414,12 @@ public class PlayerFixedMovement : MonoBehaviour
         {
             Debug.Log($"PlayerFixedMovement.cs >> Player has reached the end tile at ({endTileX}, {endTileZ}).");
 
-            endPosition = new Vector3(endTile.transform.position.x, transform.position.y + 1.0f, endTile.transform.position.z);
+            endPosition = new Vector3(
+                endTile.transform.position.x,
+                transform.position.y + 1.0f,
+                endTile.transform.position.z
+            );
+
             transform.parent = null;
             transform.position = endPosition;
 

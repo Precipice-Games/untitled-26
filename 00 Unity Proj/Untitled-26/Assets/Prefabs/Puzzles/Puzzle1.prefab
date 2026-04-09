@@ -978,7 +978,6 @@ GameObject:
   - component: {fileID: 6811730300114549069}
   - component: {fileID: 6957286812768726538}
   - component: {fileID: 6021735229776701839}
-  - component: {fileID: 9071558003019024}
   m_Layer: 0
   m_Name: PuzzleCamera
   m_TagString: MainCamera
@@ -1109,7 +1108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CubeSelector
   resourceManager: {fileID: 7213066574574228598}
-  debugMode: 1
+  printInvalidMoves: 1
 --- !u!114 &6021735229776701839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,19 +1125,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
---- !u!114 &9071558003019024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2049235727765495089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc1cd66239eb1b34ba660e953023f763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickRayTest
-  debugMode: 1
 --- !u!1 &2050086839141752138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3725,7 +3711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
+  tileType: 2
   startingGridX: 0
   startingGridZ: 0
   gridX: 5
