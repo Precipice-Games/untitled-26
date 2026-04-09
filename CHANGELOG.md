@@ -29,6 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ### Removed
 * Deleted camera rotation scripts.
 * Deleted Puzzle2.prefab (originally intended for Ice Island).
+* Removed puzzle 2 pillar from Ice_Island.unity.
 
 ## [v1.1.1] - 2026-04-07
 
