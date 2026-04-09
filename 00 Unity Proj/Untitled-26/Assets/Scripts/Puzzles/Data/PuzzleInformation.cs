@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using Unity.Cinemachine;
 using UnityEngine;
 
 // This script is used to grab information about the current puzzle.
@@ -9,7 +10,8 @@ using UnityEngine;
 public class PuzzleInformation : MonoBehaviour
 {
     [Title("Puzzle Information", "Attach the relevant data of this puzzle.")]
-    public Camera camera;
+    // public Camera camera;
+    public CinemachineCamera camera;
     public GameObject canvas;
     public GameObject startTile;
     public GameObject endTile;

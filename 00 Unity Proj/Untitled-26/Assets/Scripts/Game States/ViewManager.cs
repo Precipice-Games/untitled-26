@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -26,12 +27,19 @@ public class ViewManager : MonoBehaviour
     private GameObject _targetUI;
 
     [Header("Cameras")]
-    private List<Camera> cameras;
-    public Camera playerCamera;
-    public Camera puzzleCamera;
-    public Camera dialogueCamera;
-    public Camera menuCamera;
-    private Camera _targetCamera;
+    // private List<Camera> cameras;
+    // public Camera playerCamera;
+    // public Camera puzzleCamera;
+    // public Camera dialogueCamera;
+    // public Camera menuCamera;
+    // private Camera _targetCamera;
+    
+    private List<CinemachineCamera> cameras;
+    public CinemachineCamera playerCamera;
+    public CinemachineCamera puzzleCamera;
+    public CinemachineCamera dialogueCamera;
+    public CinemachineCamera menuCamera;
+    private CinemachineCamera _targetCamera;
 
     [Space]
     [Title("Puzzle Triggering Event", "Event fired when the Player interacts with an InteractablePillar.")]
@@ -55,7 +63,8 @@ public class ViewManager : MonoBehaviour
         // Initialize cameras list if null
         if (cameras == null)
         {
-            cameras = new List<Camera>();
+            // cameras = new List<Camera>();
+            cameras = new List<CinemachineCamera>();
         }
         
         // Clear and rebuild the list to ensure it's up to date
@@ -196,22 +205,24 @@ public class ViewManager : MonoBehaviour
     /// <remarks> 
     /// This method enables the correct camera and disables all others.
     /// </remarks>
-    private void HandleCameraChange(Camera targetCamera)
+    private void HandleCameraChange(CinemachineCamera targetCamera)
     {
         // TODO: Refactor this if-else tree later on for better readability and maintainability.
 
-        foreach (Camera cam in cameras)
+        foreach (CinemachineCamera cam in cameras)
         {
             if (cam != null)
             {
                 if (cam == targetCamera)
                 {
-                    cam.enabled = true;
+                    // cam.enabled = true;
+                    cam.Priority = 10; // Set the priority of the target camera higher than the others to make it active
                     if (printCameraUpdate) Debug.Log($"ViewManager.cs >> Enabled camera: {cam.name}");
                 }
                 else
                 {
-                    cam.enabled = false;
+                    cam.Priority = 0;
+                    // cam.enabled = false;
                 }
             }
         }
