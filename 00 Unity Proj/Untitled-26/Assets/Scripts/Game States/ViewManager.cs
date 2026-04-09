@@ -215,13 +215,14 @@ public class ViewManager : MonoBehaviour
             {
                 if (cam == targetCamera)
                 {
-                    // cam.enabled = true;
+                    cam.gameObject.SetActive(true);
                     cam.Priority = 10; // Set the priority of the target camera higher than the others to make it active
                     if (printCameraUpdate) Debug.Log($"ViewManager.cs >> Enabled camera: {cam.name}");
                 }
                 else
                 {
                     cam.Priority = 0;
+                    cam.gameObject.SetActive(false);
                     // cam.enabled = false;
                 }
             }

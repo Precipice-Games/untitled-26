@@ -19229,10 +19229,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8600581230760321560}
     - target: {fileID: 1963081915272111325, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
-      propertyPath: puzzleCamera
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963081915272111325, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: dialogueCamera
       value: 
       objectReference: {fileID: 8600581230760321560}
@@ -24707,10 +24703,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2334162660176856942, guid: 883f2f309a01da144b5bf7a5f9cdc71a, type: 3}
-      propertyPath: DefaultBlend.Style
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2994276476497002857, guid: 883f2f309a01da144b5bf7a5f9cdc71a, type: 3}
       propertyPath: player
       value: 
