@@ -140,6 +140,10 @@ public class TileSelector : MonoBehaviour
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
 
+        // Ensure there are enough resources before attempting the move.
+        if (resourceManager.moveRightUses <= 0 || resourceManager.GetMana() <= 0)
+            return;
+
         // Only spend mana if the move actually succeeds
         if (selectedTile.TryMove(1, 0))
         {
@@ -157,6 +161,10 @@ public class TileSelector : MonoBehaviour
         if (selectedTile == null) return;
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
+
+        // Ensure there are enough resources before attempting the move.
+        if (resourceManager.moveLeftUses <= 0 || resourceManager.GetMana() <= 0)
+            return;
 
         // Only spend mana if the move actually succeeds
         if (selectedTile.TryMove(-1, 0))
@@ -176,6 +184,10 @@ public class TileSelector : MonoBehaviour
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
 
+        // Ensure there are enough resources before attempting the move.
+        if (resourceManager.moveForwardUses <= 0 || resourceManager.GetMana() <= 0)
+            return;
+
         // Only spend mana if the move actually succeeds
         if (selectedTile.TryMove(0, 1))
         {
@@ -193,6 +205,10 @@ public class TileSelector : MonoBehaviour
         if (selectedTile == null) return;
         if (PlayerOnSelectedTile()) return;
         if (SelectedTileIsStartOrEnd()) return;
+
+        // Ensure there are enough resources before attempting the move.
+        if (resourceManager.moveBackUses <= 0 || resourceManager.GetMana() <= 0)
+            return;
 
         // Only spend mana if the move actually succeeds
         if (selectedTile.TryMove(0, -1))
