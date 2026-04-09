@@ -591,6 +591,71 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 7483620503347527692
+  - m_Id: 15626577354493952
+    m_Key: line:0cb9aac
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359872
+  - m_Id: 15626577388048384
+    m_Key: line:0dfda14
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359873
+  - m_Id: 15626577388048385
+    m_Key: line:07ad266
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359874
+  - m_Id: 15626577388048386
+    m_Key: line:012beff
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359875
+  - m_Id: 15626577388048387
+    m_Key: line:05cc2b8
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359876
+  - m_Id: 15626577388048388
+    m_Key: line:08b8f3f
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359877
+  - m_Id: 15626577388048389
+    m_Key: line:0b2b470
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359878
+  - m_Id: 15626577388048390
+    m_Key: line:0d91667
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359879
+  - m_Id: 15626577388048391
+    m_Key: line:016c213
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359880
+  - m_Id: 15626577388048392
+    m_Key: line:09c0cf7
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359881
+  - m_Id: 15626577388048393
+    m_Key: line:0d161b8
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359882
+  - m_Id: 15626577388048394
+    m_Key: line:0757bfa
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359883
+  - m_Id: 15626577388048395
+    m_Key: line:0a2c696
+    m_Metadata:
+      m_Items:
+      - rid: 8403691836673359884
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -1178,4 +1243,69 @@ MonoBehaviour:
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
         nodeName: IntroDialogue
+        tags: []
+    - rid: 8403691836673359872
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359873
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359874
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359875
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359876
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359877
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359878
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359879
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359880
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359881
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359882
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359883
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
+        tags: []
+    - rid: 8403691836673359884
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Cumulus
         tags: []

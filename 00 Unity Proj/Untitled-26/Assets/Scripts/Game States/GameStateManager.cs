@@ -104,27 +104,6 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SetSceneDefaults(gameState);
     }
 
-    
-    // TODO: Clean up this old method from early development of the GameStateManager.
-    /// <summary>
-    /// A helper method to transition the game to a new state. 
-    /// It includes a small delay to simulate the time it may take to transition between states.
-    /// </summary>
-    /// <param name="newState"> The <see cref="GameState"/> the game will transition to. </param>
-    // private IEnumerator TransitionToState(GameState newState)
-    // {
-    //     //yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
-    //     // if (newState != GameState.MainMenu)
-    //     // {
-    //     //     yield return new WaitForSecondsRealtime(0.1f); // Simulate a delay for transitioning states (e.g., for animations or loading screens)
-    //     // }
-    //     
-    //     prevState = CurrentGameState;
-    //     CurrentGameState = newState;
-    //     Debug.Log("ViewManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
-    //     transitionedToNewState?.Invoke(CurrentGameState);
-    // }
-
     // Method just used to set the scene defaults.
     // All other state changes occur in TransitionToState().
     private void SetSceneDefaults(GameState defaultState)
@@ -223,7 +202,8 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     {
         if (CurrentGameState == GameState.Dialogue)
         {
-            // As of now this should only return to Exploration state. However, this accounts for if future dialogue is triggered in a puzzle state.
+            // As of now this should only return to Exploration state. However,
+            // this accounts for if future dialogue is triggered in a puzzle state.
             TransitionToState(prevState);
         }
         else
