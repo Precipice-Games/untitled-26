@@ -10,7 +10,6 @@ using UnityEngine;
 public class PuzzleInformation : MonoBehaviour
 {
     [Title("Puzzle Information", "Attach the relevant data of this puzzle.")]
-    // public Camera camera;
     public CinemachineCamera camera;
     public GameObject canvas;
     public GameObject startTile;

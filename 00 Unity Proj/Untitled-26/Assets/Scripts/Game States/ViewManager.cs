@@ -16,7 +16,7 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class ViewManager : MonoBehaviour
 {
-    [Header("GameUIs")]
+    [Title("UI Canvases", "Canvases used to drive the game's UI experience. Please do not assign the puzzleCanvas, as it will be assigned dynamically.")]
     private List<GameObject> uiCanvases;
     public GameObject mainMenuUI;
     public GameObject explorationUI;
@@ -26,14 +26,8 @@ public class ViewManager : MonoBehaviour
     public GameObject settingsUI;
     private GameObject _targetUI;
 
-    [Header("Cameras")]
-    // private List<Camera> cameras;
-    // public Camera playerCamera;
-    // public Camera puzzleCamera;
-    // public Camera dialogueCamera;
-    // public Camera menuCamera;
-    // private Camera _targetCamera;
-    
+    [Space]
+    [Title("Cameras", "Cinemachine Cameras used to drive the game experience. Please do not assign the puzzleCamera, as it will be assigned dynamically.")]
     private List<CinemachineCamera> cameras;
     public CinemachineCamera playerCamera;
     public CinemachineCamera puzzleCamera;
@@ -44,8 +38,7 @@ public class ViewManager : MonoBehaviour
     [Space]
     [Title("Puzzle Triggering Event", "Event fired when the Player interacts with an InteractablePillar.")]
     public UnityEvent puzzleSwitchDetected;
-    // [Title("Update Post Processor", "Event fired to update the post processor.")]
-    // public UnityEvent postProcessorUpdate;
+
     // Static event to notify subscribers of game state changes
     public static event Action<bool> togglePostProcessor;
     
@@ -193,7 +186,6 @@ public class ViewManager : MonoBehaviour
                 else
                 {
                     canvas.SetActive(false);
-                    //Debug.Log($"ViewManager.cs >> Disabled UI Canvas: {canvas.name}");
                 }
             }
         }
@@ -207,29 +199,32 @@ public class ViewManager : MonoBehaviour
     /// </remarks>
     private void HandleCameraChange(CinemachineCamera targetCamera)
     {
-        // TODO: Refactor this if-else tree later on for better readability and maintainability.
-
         foreach (CinemachineCamera cam in cameras)
         {
             if (cam != null)
             {
                 if (cam == targetCamera)
                 {
+                    // Set the priority of the target camera
+                    // higher than the others to make it active
+                    cam.Priority = 10;
                     cam.gameObject.SetActive(true);
-                    cam.Priority = 10; // Set the priority of the target camera higher than the others to make it active
                     if (printCameraUpdate) Debug.Log($"ViewManager.cs >> Enabled camera: {cam.name}");
                 }
                 else
                 {
                     cam.Priority = 0;
                     cam.gameObject.SetActive(false);
-                    // cam.enabled = false;
                 }
             }
         }
     }
     
-    
+    /// <summary>
+    /// Used to update the post processor according to the game state. Fires the
+    /// togglePostProcessor event, which is picked up by PostProcessorManager.cs.
+    /// </summary>
+    /// <param name="newState"></param>
     private void HandlePostProcessor(GameStateManager.GameState newState)
     {
         if (newState == GameStateManager.GameState.Paused)
@@ -241,7 +236,4 @@ public class ViewManager : MonoBehaviour
             togglePostProcessor?.Invoke(false);
         }
     }
-    
-    // HandlePostProcessorToggle();
-    // postProcessorToggle?.Invoke(false);
 }

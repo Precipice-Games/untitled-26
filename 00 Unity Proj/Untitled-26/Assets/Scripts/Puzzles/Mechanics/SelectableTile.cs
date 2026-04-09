@@ -13,23 +13,14 @@ public class SelectableTile : MonoBehaviour
 
     // Default tile type is Normal
     public TileType tileType = TileType.Normal;
-
+    
     public int startingGridX;
     public int startingGridZ;
     public int gridX;
     public int gridZ;
     
-    // Reference to the GridManager for this specific puzzle.
+    // Reference to the GridManager for this specific puzzle
     public GridManager gridManager;
-    
-    // NOTE: Remember how I said that we couldn't have more than one puzzle active
-    // at a time in order for things to work? I think it has to do with the fact
-    // that each puzzle has its own GridManager script, which was attempting to
-    // create a singleton that all could reference, but I think it's confusing
-    // the other scripts looking to reference it. In the meantime, I went ahead
-    // and attached the GridManager to each of the tiles in Puzzle1.prefab.
-    // -- Nikki
-
     private Renderer rend;
     
     // Making originalColor public for now to tell
