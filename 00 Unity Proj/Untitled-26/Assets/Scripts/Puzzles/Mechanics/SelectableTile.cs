@@ -7,28 +7,20 @@ public class SelectableTile : MonoBehaviour
     public enum TileType
     {
         Normal,
-        Ice
+        Ice,
+        ManaWell
     }
 
     // Default tile type is Normal
     public TileType tileType = TileType.Normal;
-
+    
     public int startingGridX;
     public int startingGridZ;
     public int gridX;
     public int gridZ;
     
-    // Reference to the GridManager for this specific puzzle.
+    // Reference to the GridManager for this specific puzzle
     public GridManager gridManager;
-    
-    // NOTE: Remember how I said that we couldn't have more than one puzzle active
-    // at a time in order for things to work? I think it has to do with the fact
-    // that each puzzle has its own GridManager script, which was attempting to
-    // create a singleton that all could reference, but I think it's confusing
-    // the other scripts looking to reference it. In the meantime, I went ahead
-    // and attached the GridManager to each of the tiles in Puzzle1.prefab.
-    // -- Nikki
-
     private Renderer rend;
     
     // Making originalColor public for now to tell
@@ -43,6 +35,7 @@ public class SelectableTile : MonoBehaviour
     
     // Event fired when a move is blocked by an occupied cell
     public static event Action<SelectableTile> cellOccupied;
+    
     // Event fired when a move is out of bounds
     public static event Action<SelectableTile> moveOutOfBounds;
 
@@ -61,6 +54,14 @@ public class SelectableTile : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
+
+        // Set color based on tile type
+        // For now, ManaWell tiles are purple so we can test them visually.
+        if (tileType == TileType.ManaWell)
+        {
+            rend.material.color = Color.magenta;
+        }
+
         originalColor = rend.material.color;
         rend.material.color = originalColor;
         // rend.material.SetColor("_BaseColor", originalColor);
@@ -120,11 +121,13 @@ public class SelectableTile : MonoBehaviour
     /// <param name="coordZ"></param>
     private bool CheckForEmptyCell(int coordX, int coordZ)
     {
+        // If it's empty, return true.
         if (gridManager.IsCellEmpty(coordX, coordZ))
         {
-            Debug.Log($"SelectableTile.cs >> BLOCKED: Cell at ({coordX},{coordZ}) occupied – no mana spent");
-            return true; // If it's empty, return true.
+            return true;
         }
+        
+        Debug.Log($"SelectableTile.cs >> BLOCKED: Cell at ({coordX},{coordZ}) is occupied.");
         
         // Fire off an event to say that a cell is occupied
         cellOccupied?.Invoke(this);
@@ -143,10 +146,12 @@ public class SelectableTile : MonoBehaviour
         if (!gridManager.IsInsideGrid(coordX, coordZ))
         {
             Debug.Log("SelectableTile.cs >> BLOCKED: Outside grid – no mana spent");
+            
             // Fire off an event to say that the move is out of bounds
             moveOutOfBounds?.Invoke(this);
             return true;
         }
+
         return false;
     }
 
@@ -157,6 +162,15 @@ public class SelectableTile : MonoBehaviour
     {
         gridX = startingGridX;
         gridZ = startingGridZ;
+
         transform.localPosition = gridManager.GridToWorld(gridX, gridZ);
+
+        // Reset tile color after reset
+        if (tileType == TileType.ManaWell)
+        {
+            originalColor = Color.magenta;
+        }
+
+        rend.material.color = originalColor;
     }
 }

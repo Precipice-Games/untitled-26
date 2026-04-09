@@ -1,0 +1,84 @@
+﻿title: IntroDialogue
+position: 138,-50
+---
+//1 - Initiate dream sequence
+
+//*black screen, text fades in, mother crystal starts to fade in very slowly during the exposition*
+<<Swap Intro1>>
+
+Mother Crystal:“Child of the sky…” #line:05c319b 
+Mother Crystal:“Do you hear my voice?” #line:0ad468d 
+Mother Crystal:"I am the heart and soul of The Islands of Ethor.” #line:09cac79 
+Mother Crystal:“It is through I that the islands stay bound as one.” #line:09cdf5d 
+Mother Crystal:“Or at least, so it used to be…” #line:0bccf5c 
+
+//*zoom in shot of mother crystal (should be fully faded in by now)
+<<Swap Intro2>>
+
+//(Mother crystal lets off a brief sparkle)
+<<Swap Intro3>>
+
+Mother Crystal:“Child…Hear my plea…” #line:0f39b7f 
+
+//(crystal cracks)
+<<Swap Intro4>> 
+
+Mother Crystal:“The binding light of the Isles of Ethor is fading…”  #line:05ea307 
+Mother Crystal:“The islands cry out for a hero, and the land yearns to restore its unity”  #line:0e48416 
+
+//(light shoots out, screen starts shaking)
+<<Swap Intro5>>
+
+//*screen flashes white, hard cut to Sky waking up*
+<<Swap Intro6>> 
+
+Sky: “That voice… what was that?” #line:0234378 
+Sky: “Child of the sky… hear my plea… and a hero??” #line:00140c7 
+Sky: “I don’t know what that was, but it all felt so… real.” #line:00d6cb9 
+
+//(Sky begins to look around a bit, camera slowly pans around sky and stops at the dock where Cumulus and the airship are)
+<<Swap Intro7>>
+
+Sky: “Dad’s already out fixing an airship, as usual. Maybe he knows what that was.” #line:0f045dd 
+<<StopCutscene>>
+<b>Talk to Dad at the dock</b> #line:0f57e37 
+===
+
+title: Cumulus
+position: -117,10
+---
+Cumulus: “What’s up, kiddo? You’re up early.” #line:0cb9aac 
+
+//(Cumulus looks up at Sky, properly noting her expression)
+
+Cumulus: “Hmmm, you look like you got thunderclouds crashing in your head.” #line:0dfda14 
+
+Sky: “...Dad I think I heard something… A voice, and it called for me!” #line:07ad266 
+
+Cumulus: “The wind carries many voices across Ethor. Most people have stopped listening” #line:012beff 
+
+Sky: “Dad! Listen to me! Something about it felt so… real” #line:05cc2b8 
+
+Cumulus: “Real, you say? What did you hear, then?” #line:08b8f3f 
+
+Sky: “It said the islands are in danger, and something about a hero, and -” #line:0b2b470 
+
+Cumulus: “A hero… so the Mother Crystal truly has called for you…” #line:0d91667 
+
+Sky: “What? How do you know, dad?” #line:016c213 
+
+Cumulus: “When you were younger you also mentioned that voice. I thought that, over time, maybe you had forgotten…” #line:09c0cf7 
+
+Cumulus: “But the fact of the matter is that you’ve always had the strongest connection to the crystal more than the rest of us on the island. #line:0d161b8 
+
+Cumulus: And if you feel called… you should go see her.” #line:0757bfa 
+
+//(Camera briefly pans to Mother Crystal’s Temple)
+
+<b>Go to Mother Crystal</b> #line:0a2c696 
+===
+title: MotherCrystal
+position: -87,210
+---
+
+===

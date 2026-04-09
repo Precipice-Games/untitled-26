@@ -13,14 +13,19 @@ public class ResourceManager : MonoBehaviour
     [Title("Resource Data", "Set the appropriate Mana and Move Card count for this puzzle.")]
     [PropertyTooltip("The starting Mana count. Set to 5 by default, but should be updated per puzzle.")]
     public int startingMana = 5;
+
     [PropertyTooltip("The starting Left Card move count. Set to 3 by default, but should be updated per puzzle.")]
     public int moveLeftUses = 3;
+
     [PropertyTooltip("The starting Right Card move count. Set to 3 by default, but should be updated per puzzle.")]
     public int moveRightUses = 3;
+
     [PropertyTooltip("The starting Up/Forward Card move count. Set to 3 by default, but should be updated per puzzle.")]
     public int moveForwardUses = 3;
+
     [PropertyTooltip("The starting Down/Back Card move count. Set to 3 by default, but should be updated per puzzle.")]
     public int moveBackUses = 3;
+
     private int currentMana;
 
     [Space]
@@ -35,10 +40,13 @@ public class ResourceManager : MonoBehaviour
     [Title("Debugging Options", "Settings for quick debugging options.")]
     [PropertyTooltip("Prints out the starting value for each resource. True by default.")]
     public bool printStartingValues = true;
+
     [PropertyTooltip("Print out the value of the Mana resource after being used. True by default.")]
     public bool printManaDeductions = true;
+
     [PropertyTooltip("Print out the value of a movement card after being used. True by default.")]
     public bool printCardDeductions = true;
+
     [PropertyTooltip("Print out when a specific movement card has no uses left. True by default.")]
     public bool printCardDrainage = true;
     
@@ -57,6 +65,7 @@ public class ResourceManager : MonoBehaviour
     void Start()
     {
         currentMana = startingMana;
+
         if (printStartingValues) Debug.Log("ResourceManager.cs >> Starting Mana: " + currentMana);
         if (printStartingValues) Debug.Log("ResourceManager.cs >> Starting Left Card Uses: " + moveLeftUses);
         if (printStartingValues) Debug.Log("ResourceManager.cs >> Starting Right Card Uses: " + moveRightUses);
@@ -64,7 +73,6 @@ public class ResourceManager : MonoBehaviour
         if (printStartingValues) Debug.Log("ResourceManager.cs >> Starting Down Card Uses: " + moveBackUses);
         
         UpdateManaText(currentMana);
-
         UpdateLeftText(moveLeftUses);
         UpdateRightText(moveRightUses);
         UpdateUpText(moveForwardUses);
@@ -73,8 +81,8 @@ public class ResourceManager : MonoBehaviour
 
     /// <summary>
     /// Called in TileSelector.cs when the Player tries to use a movement card.
-    /// Checks if the Player has enough resources before deducting anything. If
-    /// a move is valid, return true. Otherwise, return false.
+    /// Checks if the Player has enough resources before deducting anything.
+    /// If a move is valid, return true. Otherwise, return false.
     /// </summary>
     /// <param name="moveType"></param>
     /// <returns></returns>
@@ -93,42 +101,51 @@ public class ResourceManager : MonoBehaviour
             case "Left":
                 if (moveLeftUses <= 0)
                 {
-                    if (printCardDrainage) Debug.Log("ResourceManager.cs >> No Left card uses remaining");
+                    if (printCardDrainage)
+                        Debug.Log("ResourceManager.cs >> No Left card uses remaining");
+
                     return false;
                 }
+
                 moveLeftUses--;
                 UpdateLeftText(moveLeftUses);
                 break;
 
-
             case "Right":
                 if (moveRightUses <= 0)
                 {
-                    if (printCardDrainage) Debug.Log("ResourceManager.cs >> No Right card uses remaining");
+                    if (printCardDrainage)
+                        Debug.Log("ResourceManager.cs >> No Right card uses remaining");
+
                     return false;
                 }
+
                 moveRightUses--;
                 UpdateRightText(moveRightUses);
                 break;
 
-
             case "Forward":
                 if (moveForwardUses <= 0)
                 {
-                    if (printCardDrainage) Debug.Log("ResourceManager.cs >> No Forward card uses remaining");
+                    if (printCardDrainage)
+                        Debug.Log("ResourceManager.cs >> No Forward card uses remaining");
+
                     return false;
                 }
+
                 moveForwardUses--;
                 UpdateUpText(moveForwardUses);
                 break;
 
-
             case "Back":
                 if (moveBackUses <= 0)
                 {
-                    if (printCardDrainage) Debug.Log("ResourceManager.cs >> No Back card uses remaining");
+                    if (printCardDrainage)
+                        Debug.Log("ResourceManager.cs >> No Back card uses remaining");
+
                     return false;
                 }
+
                 moveBackUses--;
                 UpdateDownText(moveBackUses);
                 break;
@@ -136,12 +153,28 @@ public class ResourceManager : MonoBehaviour
         
         currentMana--;
 
-        Debug.Log("ResourceManager.cs >> Mana remaining: " + currentMana);
-        Debug.Log("ResourceManager.cs >> Card used: " + moveType);
+        if (printManaDeductions)
+            Debug.Log("ResourceManager.cs >> Mana remaining: " + currentMana);
+
+        if (printCardDeductions)
+            Debug.Log("ResourceManager.cs >> Card used: " + moveType);
+
         UpdateManaText(currentMana);
-        Debug.Log("ResourceManager.cs >> Mana remaining after move: " + currentMana);
 
         return true;
+    }
+    
+    /// <summary>
+    /// Adds mana (used for ManaWell tiles).
+    /// </summary>
+    public void AddMana(int amount)
+    {
+        currentMana += amount;
+
+        Debug.Log("ResourceManager.cs >> Mana gained: +" + amount);
+        Debug.Log("ResourceManager.cs >> Current Mana: " + currentMana);
+
+        UpdateManaText(currentMana);
     }
     
     /// <summary>
@@ -205,10 +238,12 @@ public class ResourceManager : MonoBehaviour
     private void ResetResources()
     {
         currentMana = startingMana;
+
         moveLeftUses = 3;
         moveRightUses = 3;
         moveForwardUses = 3;
         moveBackUses = 3;
+
         UpdateManaText(currentMana);
         UpdateLeftText(moveLeftUses);
         UpdateRightText(moveRightUses);
