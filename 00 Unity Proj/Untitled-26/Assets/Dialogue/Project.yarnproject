@@ -1,14 +1,35 @@
 {
-  "projectFileVersion": 3,
-  "sourceFiles": [
-    "**/*.yarn"
-  ],
-  "excludeFiles": [
-    "**/*~/*",
-    "./Samples/Yarn Spinner*/*"
-  ],
-  "localisation": {},
-  "baseLanguage": "en",
-  "compilerOptions": {},
-  "definitionsFiles": []
+    "projectFileVersion": 3,
+    "sourceFiles": [
+        "**/*.yarn"
+    ],
+    "excludeFiles": [
+        "**/*~/*",
+        "./Samples/Yarn Spinner*/*"
+    ],
+    "localisation": {},
+    "baseLanguage": "en",
+    "compilerOptions": {
+        "yarnScriptEditor": {
+            "projectGraphPositions": {
+                "IceIsland.yarn": {
+                    "x": 737,
+                    "y": 12
+                },
+                "MotherIsland.yarn": {
+                    "x": -13,
+                    "y": 381
+                },
+                "OasisIsland.yarn": {
+                    "x": 282,
+                    "y": 12
+                },
+                "TestDialogue.yarn": {
+                    "x": 12,
+                    "y": 12
+                }
+            }
+        }
+    },
+    "definitionsFiles": []
 }

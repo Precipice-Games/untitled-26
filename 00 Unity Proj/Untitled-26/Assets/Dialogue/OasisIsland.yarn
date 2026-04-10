@@ -1,0 +1,139 @@
+﻿title: Julien
+---
+<<declare $oasisFinished = false>>
+// Has the player completed the oasis island?
+<<declare $talkedWithJulien= false>>
+<<if $oasisFinished == false>>
+???: Well, well, well… #line:0d2589d 
+Julien: Who dares to trespass upon King Julien’s domain?! #line:01b7a29 
+
+Sky: I’m not trespassing! I’m here to help, honest! My name is Sky. #line:03bb052 
+
+Julien: Sky…hm…quite the unique intruder you are. #line:033754c 
+Julien: Your kind is unlike anything I’ve ever seen before. #line:0200fcb 
+Julien: How interesting... #line:0f01083 
+Julien: Lucky for you, trespasser, I’m feeling merciful today. #line:0b3b43c 
+
+Sky: That’s good. I think. #line:0c3cc9d 
+
+Julien: So I’ll allow you to keep your life. However! #line:0d89991 
+Julien: Before I can allow you to leave my lands, you must embark on a quest of utmost #line:07344db 
+importance. #line:0d43163 
+Julien: Recently this island seems to be plagued by some unknown sorcery! Crops aren’t growing, currents are slowing, and the light of day is dimly glowing... #line:0e98311 
+
+Sky: Hey, that rhymes! #line:0d953be 
+
+Julien: Silence! And pay attention! Now, my quest to you is to find the source of this treachery and DESTROY IT! #line:0057264 
+Julien: Do this, and I shall reward you with your life and passage out of my lands. #line:02a76b1 
+
+Sky: That’s not much of a reward... #line:06a9c84 
+
+Julien: And yet, it’s all you shall receive! My guard shall provide you with some assistance in crossing the hot sands. #line:0e35c4e 
+Julien: However, my people’s crustacean bodies can’t stand the heat for too long. #line:0436a17 
+Julien: So, once you’ve made it to the other side, we won’t be able to assist you any further. #line:089c248 
+Julien: Should you refuse this task or fail in your attempt, it will be... #line:043658c 
+Julien: A MILLION-YEARS IN THE DUNGEON!!! #line:00744a2 
+Julien: Once you’ve completed your task, inform one of my followers, and I shall provide you #line:01ecc71 
+with safe passage. #line:03ef148 
+
+Sky: Thank you, King Julien. I appreciate your…kindness. #line:0353b66 
+
+Julien: Now GO! May Karkinos bless your venture! #line:09fc12e 
+<<set $talkedWithJulien = true>>
+<<else>>
+
+Julien: Back already, trespasser? Have you completed your task? Or will I have to send you to the dungeon for one million years–  #line:04b1f8f 
+
+Sky: No! No dungeon! I did as you asked. #line:05156c2 
+
+Julien: Oh? That’s excellent news! I shall inform my people that our lands are now cleansed. #line:0cc98d1 
+
+Sky: Can I leave now? #line:03058c6 
+
+Julien: Yes, of course! I do apologize for my rudeness. #line:039f147 
+Julien: I thought you’d surely perish. #line:05eca49 
+Julien: Anyway, I’ll have my people prepare your vessel for your next voyage. #line:0098430 
+Julien: It will be docked by where you first arrived. #line:01e7124 
+
+Sky: Great. I can’t wait to get out of this heat… #line:09e921f 
+
+Julien: You’ve done a great service to my kingdom and have my thanks. I wish you luck on your #line:038e84a 
+journey, trespasser. #line:0a2a0d3 
+<<endif>>
+===
+
+title: Crab1
+---
+Crab Citizen: All hail King Julien! #line:0edacc7 
+
+Sky: Who's King Julien? #line:06a81f7 
+
+Crab Citizen: Why, only the greatest king in our history! #line:057b251 
+
+===
+
+title: Crab2
+---
+Crab Citizen: Praise be Karkinos! He’s given us a truly just king! #line:0a49a0b 
+
+Sky: Whose Karkinos? #line:024ea54 
+
+Crab Citizen: I can’t believe someone on this island doesn’t know about the Crab God, #line:063f3a1 
+Karkinos... #line:013ee1a 
+Crab Citizen: Unless... #line:00e5119 
+Crab Citizen: YOU'RE A TRESPASSER?!? #line:04ffb76 
+
+Sky: Hold on jus– #line:0225888 
+
+Crab Citizen: ABSOLUTELY NOT! I’m not consorting with the likes of you! #line:0cc37d9 
+
+Sky: Jeez. That was a bit harsh. #line:056dd7e 
+===
+
+title: SignCrab
+---
+<<if $talkedWithJulien == false>>
+Sign Crab: STOP, FLESHY CREATURE! DO NOT GO FORWARD! #line:0bb2102 
+
+Sky: Woah! Why not? #line:08467f0 
+
+Sign Crab: Because over there are the burning sands. You’ll DIE if you try to cross it. #line:09cc6e4 
+
+Sky: Thanks for the heads up. #line:028001e 
+
+Sign Crab: You’re clearly not from around here... #line:0fd1eae 
+Sign Crab: If you don’t want to be branded as a trespasser, you better seek an audience with #line:030ae00 
+the king. #line:0400b54 
+
+Sky: Where might I find this king of yours? #line:0b38c2c 
+
+Sign Crab: There’s a big oasis located across from those splintered islands over there. #line:0dc88e0 
+Sign Crab: That’s where the king resides. #line:00674eb 
+
+Sky: Appreciate the help. #line:093b41e 
+
+Sign Crab: I’ll let you leave with this warning... #line:0d4f03c 
+Sign Crab: Our king can be a bit... unpredictable. #line:09eb9c0 
+Sign Crab: Okay... I’ll have to keep that in mind. #line:0e71b6a 
+
+<<else>>
+
+Sign Crab: You’ve returned! Somehow alive... #line:09373d7 
+
+Sky: I think "unpredictable" was an understatement. #line:09ea84a 
+
+Sign Crab: Yeah... Sorry about that. #line:0147a92 
+Sign Crab: If I say too much, I might get accused of treason. #line:0caad33 
+
+Sky: Wait. Wha– #line:0cb11ed 
+
+Sign Crab: ANYWAYS... The guards came through and made a little path for you. #line:03ac19e 
+Sign Crab: It might be a little tricky for someone with just two legs but I believe in you, fleshy... #line:0cc8a1a 
+thing? #line:087d5de 
+
+Sky: Okay... just gonna ignore the treason bit for now. #line:07cefbd 
+Sky: But I appreciate the support, I guess... #line:078da57 
+
+<<endif>>
+===
+
