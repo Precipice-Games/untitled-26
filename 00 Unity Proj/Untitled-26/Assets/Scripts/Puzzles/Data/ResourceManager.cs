@@ -1,15 +1,19 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-// This script stores data regarding the resources provided during each puzzle.
-// Specifically, it keeps track of Mana points and available movement cards for
-// the Player to use. Note that it maintains a tight relationship with
-// TileSelector.cs to check resource availability for performing a move.
-
+/// <summary>
+/// This script stores data regarding the resources provided during each puzzle.
+/// Specifically, it keeps track of Mana points and available movement cards for
+/// the Player to use. Note that it maintains a tight relationship with
+/// TileSelector.cs to check resource availability for performing a move.
+/// </summary>
 public class ResourceManager : MonoBehaviour
 {
+    public static event Action noMoreCardUses;
+
     [Title("Resource Data", "Set the appropriate Mana and Move Card count for this puzzle.")]
     [PropertyTooltip("The starting Mana count. Set to 5 by default, but should be updated per puzzle.")]
     public int startingMana = 5;
@@ -35,7 +39,7 @@ public class ResourceManager : MonoBehaviour
     public TMP_Text rightLabel;
     public TMP_Text upLabel;
     public TMP_Text downLabel;
-    
+
     [Space]
     [Title("Debugging Options", "Settings for quick debugging options.")]
     [PropertyTooltip("Prints out the starting value for each resource. True by default.")]
@@ -49,7 +53,7 @@ public class ResourceManager : MonoBehaviour
 
     [PropertyTooltip("Print out when a specific movement card has no uses left. True by default.")]
     public bool printCardDrainage = true;
-    
+
     // Subscribe to events
     private void OnEnable()
     {
@@ -66,12 +70,15 @@ public class ResourceManager : MonoBehaviour
     {
         currentMana = startingMana;
 
-        if (printStartingValues) Debug.Log("ResourceManager.cs >> Starting Mana: " + currentMana);
-        if (printStartingValues) Debug.Log("ResourceManager.cs >> Starting Left Card Uses: " + moveLeftUses);
-        if (printStartingValues) Debug.Log("ResourceManager.cs >> Starting Right Card Uses: " + moveRightUses);
-        if (printStartingValues) Debug.Log("ResourceManager.cs >> Starting Up Card Uses: " + moveForwardUses);
-        if (printStartingValues) Debug.Log("ResourceManager.cs >> Starting Down Card Uses: " + moveBackUses);
-        
+        if (printStartingValues)
+        {
+            Debug.Log("ResourceManager.cs >> Starting Mana: " + currentMana);
+            Debug.Log("ResourceManager.cs >> Starting Left Card Uses: " + moveLeftUses);
+            Debug.Log("ResourceManager.cs >> Starting Right Card Uses: " + moveRightUses);
+            Debug.Log("ResourceManager.cs >> Starting Up Card Uses: " + moveForwardUses);
+            Debug.Log("ResourceManager.cs >> Starting Down Card Uses: " + moveBackUses);
+        }
+
         UpdateManaText(currentMana);
         UpdateLeftText(moveLeftUses);
         UpdateRightText(moveRightUses);
@@ -84,18 +91,15 @@ public class ResourceManager : MonoBehaviour
     /// Checks if the Player has enough resources before deducting anything.
     /// If a move is valid, return true. Otherwise, return false.
     /// </summary>
-    /// <param name="moveType"></param>
-    /// <returns></returns>
     public bool UseMove(string moveType)
     {
-        // Ensure that the Player has enough Mana to make a move
         if (currentMana <= 0)
         {
             Debug.Log("ResourceManager.cs >> No mana to move.");
+            PuzzleFeedback.Instance?.ShowMessage("No more mana!");
             return false;
         }
 
-        // Ensure that there's enough card uses for the specified move
         switch (moveType)
         {
             case "Left":
@@ -104,6 +108,8 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Left card uses remaining");
 
+                    PuzzleFeedback.Instance?.ShowMessage("No more Left card usages!");
+                    noMoreCardUses?.Invoke();
                     return false;
                 }
 
@@ -117,6 +123,8 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Right card uses remaining");
 
+                    PuzzleFeedback.Instance?.ShowMessage("No more Right card usages!");
+                    noMoreCardUses?.Invoke();
                     return false;
                 }
 
@@ -130,6 +138,8 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Forward card uses remaining");
 
+                    PuzzleFeedback.Instance?.ShowMessage("No more Forward card usages!");
+                    noMoreCardUses?.Invoke();
                     return false;
                 }
 
@@ -143,6 +153,8 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Back card uses remaining");
 
+                    PuzzleFeedback.Instance?.ShowMessage("No more Back card usages!");
+                    noMoreCardUses?.Invoke();
                     return false;
                 }
 
@@ -150,7 +162,7 @@ public class ResourceManager : MonoBehaviour
                 UpdateDownText(moveBackUses);
                 break;
         }
-        
+
         currentMana--;
 
         if (printManaDeductions)
@@ -163,7 +175,7 @@ public class ResourceManager : MonoBehaviour
 
         return true;
     }
-    
+
     /// <summary>
     /// Adds mana (used for ManaWell tiles).
     /// </summary>
@@ -176,20 +188,18 @@ public class ResourceManager : MonoBehaviour
 
         UpdateManaText(currentMana);
     }
-    
+
     /// <summary>
     /// Returns the current Mana count.
     /// </summary>
-    /// <returns></returns>
     public int GetMana()
     {
         return currentMana;
     }
-    
+
     /// <summary>
     /// Updates the Mana text on the UI.
     /// </summary>
-    /// <param name="amount"></param>
     private void UpdateManaText(int amount)
     {
         manaLabel.text = $"Mana\n{amount}";
@@ -198,7 +208,6 @@ public class ResourceManager : MonoBehaviour
     /// <summary>
     /// Updates the Left card uses text on the UI.
     /// </summary>
-    /// <param name="amount"></param>
     private void UpdateLeftText(int amount)
     {
         leftLabel.text = amount.ToString();
@@ -207,7 +216,6 @@ public class ResourceManager : MonoBehaviour
     /// <summary>
     /// Updates the Right card uses text on the UI.
     /// </summary>
-    /// <param name="amount"></param>
     private void UpdateRightText(int amount)
     {
         rightLabel.text = amount.ToString();
@@ -216,21 +224,19 @@ public class ResourceManager : MonoBehaviour
     /// <summary>
     /// Updates the Up card uses text on the UI.
     /// </summary>
-    /// <param name="amount"></param>
     private void UpdateUpText(int amount)
     {
         upLabel.text = amount.ToString();
     }
-    
+
     /// <summary>
     /// Updates the Down card uses text on the UI.
     /// </summary>
-    /// <param name="amount"></param>
     private void UpdateDownText(int amount)
     {
         downLabel.text = amount.ToString();
     }
-    
+
     /// <summary>
     /// Resets the Mana and movement card resources to their starting
     /// values. Called when the resetPuzzle event is triggered.
