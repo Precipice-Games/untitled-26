@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
+  tileType: 2
   startingGridX: 0
   startingGridZ: 0
   gridX: 5
@@ -3473,7 +3473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25cdba096906e54bb7d84f6b69f698b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startingMana: 10
+  startingMana: 3
   moveLeftUses: 2
   moveRightUses: 2
   moveForwardUses: 2
