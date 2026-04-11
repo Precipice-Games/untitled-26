@@ -4,6 +4,7 @@
 // Has the player completed the oasis island?
 <<declare $talkedWithJulien= false>>
 <<if $oasisFinished == false>>
+<<once>>
 ???: Well, well, well… #line:0d2589d 
 Julien: Who dares to trespass upon King Julien’s domain?! #line:01b7a29 
 
@@ -40,6 +41,13 @@ Sky: Thank you, King Julien. I appreciate your…kindness. #line:0353b66
 
 Julien: Now GO! May Karkinos bless your venture! #line:09fc12e 
 <<set $talkedWithJulien = true>>
+<<else>>
+King Julien: What the hell are you doing?! #line:0a47018 
+
+Sky: I jus– #line:0581f3d 
+
+King Julien: GO FINISH YOUR MISSION TRESSPASSER! #line:0323367 
+<<endonce>>
 <<else>>
 
 Julien: Back already, trespasser? Have you completed your task? Or will I have to send you to the dungeon for one million years–  #line:04b1f8f 
