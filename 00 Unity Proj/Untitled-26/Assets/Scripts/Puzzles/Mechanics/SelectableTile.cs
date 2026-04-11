@@ -2,6 +2,7 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
+[ExecuteAlways]
 public class SelectableTile : MonoBehaviour
 {
     public enum TileType
@@ -54,6 +55,10 @@ public class SelectableTile : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
+        
+        // Ensure we have the GridManager reference since this script is
+        // using [ExecuteAlways] and we need that reference before runtime.
+        if (gridManager == null) gridManager = GetComponent<GridManager>();
 
         // Set color based on tile type
         // For now, ManaWell tiles are purple so we can test them visually.
@@ -61,10 +66,11 @@ public class SelectableTile : MonoBehaviour
         {
             rend.material.color = Color.magenta;
         }
-
-        originalColor = rend.material.color;
-        rend.material.color = originalColor;
-        // rend.material.SetColor("_BaseColor", originalColor);
+        
+        // Changed to rend.SharedMaterial to prevent memory leaks
+        // in the scene since this script is using [ExecuteAlways].
+        originalColor = rend.sharedMaterial.color;
+        rend.sharedMaterial.color = originalColor;
 
         startingGridX = gridX;
         startingGridZ = gridZ;
