@@ -1528,7 +1528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
+  tileType: 2
   startingGridX: 0
   startingGridZ: 0
   gridX: 5
@@ -3543,16 +3543,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25cdba096906e54bb7d84f6b69f698b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startingMana: 10
-  manaLabel: {fileID: 4244620660118580199}
-  leftLabel: {fileID: 1230731256228544730}
-  upLabel: {fileID: 4247431490022177219}
-  downLabel: {fileID: 8218137926958000874}
-  rightLabel: {fileID: 7222528822434926062}
+  startingMana: 3
   moveLeftUses: 2
   moveRightUses: 2
   moveForwardUses: 2
   moveBackUses: 2
+  manaLabel: {fileID: 4244620660118580199}
+  leftLabel: {fileID: 1230731256228544730}
+  rightLabel: {fileID: 7222528822434926062}
+  upLabel: {fileID: 4247431490022177219}
+  downLabel: {fileID: 8218137926958000874}
   printStartingValues: 1
   printManaDeductions: 1
   printCardDeductions: 1
