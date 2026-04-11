@@ -51,6 +51,9 @@ public class PlayerFixedMovement : MonoBehaviour
     /// </summary>
     private int destinationZ = 0;
 
+    private int lastTileX = int.MinValue;
+    private int lastTileZ = int.MinValue;
+
     private int deltaX;
     private int deltaZ;
 
@@ -90,6 +93,9 @@ public class PlayerFixedMovement : MonoBehaviour
 
     public static event Action<PuzzleInformation> updatePuzzleStatus;
 
+
+    private bool manaWellTriggeredThisEntry = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -101,7 +107,6 @@ public class PlayerFixedMovement : MonoBehaviour
         RuneCircle.puzzleTriggered += UpdatePuzzleInformation;
         ResetPuzzle.resetPuzzle += ResetPlayerPosition;
     }
-    
     // Unsubscribe from events
     private void OnDisable()
     {
@@ -364,45 +369,50 @@ public class PlayerFixedMovement : MonoBehaviour
     /// </summary>
     /// <param name="coordX"></param>
     /// <param name="coordZ"></param>
-    public void SnapPlayerToTile(int coordX, int coordZ)
+    public void SnapPlayerToTile(int coordX, int coordZ) 
     {
         // Grab the X and Z coordinates in Vector3 from the GridManager
-        newCoords = gridManager.GridToWorld(coordX, coordZ);
-        newPosition = new Vector3(newCoords.x, transform.localPosition.y, newCoords.z);
+    newCoords = gridManager.GridToWorld(coordX, coordZ);
+    newPosition = new Vector3(newCoords.x, transform.localPosition.y, newCoords.z);
 
-        if (printPlayerVector3)
-            Debug.Log($"PlayerFixedMovement.cs >> Player Vector3 Position: {newPosition}");
+    transform.localPosition = newPosition;
 
-        transform.localPosition = newPosition;
+    playerGridX = coordX;
+    playerGridZ = coordZ;
 
-        playerGridX = coordX;
-        playerGridZ = coordZ;
-        
-        if (printPlayerGridCoords)
-            Debug.Log($"PlayerFixedMovement.cs >> Player Grid Coordinates: ({coordX},{coordZ})");
-
+    // Only runs if tile is changed
+    if (coordX != lastTileX || coordZ != lastTileZ)
+    {
+        lastTileX = coordX;
+        lastTileZ = coordZ;
         // Handle tile effects (ManaWell, etc.)
         CheckTileEffects(coordX, coordZ);
+    }
 
-        IsPlayerOnEndTile();
+    IsPlayerOnEndTile();
     }
     
     /// <summary>
     /// Handles special tile effects such as ManaWell.
     /// </summary>
-    private void CheckTileEffects(int coordX, int coordZ)
+private void CheckTileEffects(int coordX, int coordZ)
+{
+    SelectableTile.TileType tileType = gridManager.GetTileType(coordX, coordZ);
+
+    if (tileType == SelectableTile.TileType.ManaWell)
     {
-        SelectableTile.TileType tileType = gridManager.GetTileType(coordX, coordZ);
+        
+        if (manaWellTriggeredThisEntry)
+            return;
 
-        if (tileType == SelectableTile.TileType.ManaWell)
-        {
-            Debug.Log("PlayerFixedMovement.cs >> Player stepped on ManaWell! +2 Mana");
+        manaWellTriggeredThisEntry = true;
 
-            if (resourceManager != null)
-                resourceManager.AddMana(2);
-        }
+        Debug.Log("PlayerFixedMovement.cs >> Player stepped on ManaWell! +2 Mana");
+
+        if (resourceManager != null)
+            resourceManager.AddMana(2);
     }
-    
+}    
     /// <summary>
     /// Used to check if the Player has reached the end tile. If so, the puzzle
     /// has been completed and the appropriate events can be triggered.
