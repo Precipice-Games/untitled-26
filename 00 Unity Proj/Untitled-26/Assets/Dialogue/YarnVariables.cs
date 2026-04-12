@@ -10,6 +10,18 @@ namespace Yarn.Unity.Variables {
             set => this.SetValue<bool>("$iceFinished", value);
         }
 
+        // Accessor for Bool $oasisFinished
+        public bool OasisFinished {
+            get => this.GetValueOrDefault<bool>("$oasisFinished");
+            set => this.SetValue<bool>("$oasisFinished", value);
+        }
+
+        // Accessor for Bool $talkedWithJulien
+        public bool TalkedWithJulien {
+            get => this.GetValueOrDefault<bool>("$talkedWithJulien");
+            set => this.SetValue<bool>("$talkedWithJulien", value);
+        }
+
         // Accessor for Bool $capsley_likes_you
         /// <summary>
         /// Whether Capsley like you or not. This starts true, but may change.
