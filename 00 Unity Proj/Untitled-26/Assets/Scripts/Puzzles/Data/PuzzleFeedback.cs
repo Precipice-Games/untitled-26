@@ -90,6 +90,13 @@ public class PuzzleFeedback : MonoBehaviour
         StartFeedback(null, message);
     }
 
+    private void PlayInvalidMoveSFX()
+    {
+        if (SFXManager.Instance != null)
+        {
+            SFXManager.Instance.PlayInvalidMove();
+        }
+    }
     private void StartFeedback(SelectableTile selectableTile, string message)
     {
         tile = selectableTile;
@@ -103,6 +110,9 @@ public class PuzzleFeedback : MonoBehaviour
         errorLastIntervalTime = 0f;
         isFlashing = false;
 
+        //Play SFX for invalid move
+        PlayInvalidMoveSFX(); 
+        
         // Stop previous timer if it exists
         if (flickerTimer != null)
             TimerManager.DeleteTimer(flickerTimer);
