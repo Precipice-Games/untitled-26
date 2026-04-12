@@ -1021,6 +1021,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 8773324580227383448
+  - m_Id: 16456455292223488
+    m_Key: line:0a47018
+    m_Metadata:
+      m_Items:
+      - rid: 1731521079247372362
+  - m_Id: 16456455321583616
+    m_Key: line:0581f3d
+    m_Metadata:
+      m_Items:
+      - rid: 1731521079247372363
+  - m_Id: 16456455321583617
+    m_Key: line:0323367
+    m_Metadata:
+      m_Items:
+      - rid: 1731521079247372364
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
@@ -1030,6 +1045,21 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 1731521079247372362
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Julien
+        tags: []
+    - rid: 1731521079247372363
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Julien
+        tags: []
+    - rid: 1731521079247372364
+      type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
+      data:
+        nodeName: Julien
+        tags: []
     - rid: 1920193901558497367
       type: {class: LineMetadata, ns: Yarn.Unity.UnityLocalization, asm: YarnSpinner.Unity}
       data:
