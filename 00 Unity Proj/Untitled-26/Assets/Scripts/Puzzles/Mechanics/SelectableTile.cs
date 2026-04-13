@@ -2,7 +2,7 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[ExecuteAlways]
+//[ExecuteAlways]
 public class SelectableTile : MonoBehaviour
 {
     public enum TileType

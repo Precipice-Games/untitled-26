@@ -1,7 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[ExecuteAlways]
+//[ExecuteAlways]
 public class GridManager : MonoBehaviour
 {
     [Space]
