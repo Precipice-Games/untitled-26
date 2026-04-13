@@ -332,13 +332,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
   musicSource: {fileID: 816375123}
   mainMenuTrack: {fileID: 8300000, guid: 269b283e344094ef2a6874d2bf883cee, type: 3}
-  motherIslandTrack: {fileID: 0}
+  motherIslandTrack: {fileID: 8300000, guid: 16423356ea11343ed9f88b09cca959dd, type: 3}
   oasisIslandTrack: {fileID: 0}
   iceIslandTrack: {fileID: 8300000, guid: 2e90ff6591a7e4a058d3cb654ad3a962, type: 3}
-  motherIslandPuzzleTrack: {fileID: 0}
+  motherIslandPuzzleTrack: {fileID: 8300000, guid: 8631798488cc64812800bb5bc4815413, type: 3}
   oasisIslandPuzzleTrack: {fileID: 0}
   iceIslandPuzzleTrack: {fileID: 8300000, guid: 61bc7a410ba3849d1a2eb2f44752f2c7, type: 3}
-  fadeDuration: 1.25
+  fadeDuration: 1.05
   defaultVolume: 0.6
 --- !u!82 &816375123
 AudioSource:
