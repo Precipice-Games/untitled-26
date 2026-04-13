@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RuneCircle
   puzzleInfo: {fileID: 9191018659038673785}
-  exitPuzzleButton: {fileID: 0}
+  exitPuzzleButton: {fileID: 4943596135170749970}
   otherRuneCircle: {fileID: 2050086839141752138}
 --- !u!1 &925581002351369635
 GameObject:
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RuneCircle
   puzzleInfo: {fileID: 9191018659038673785}
   exitPuzzleButton: {fileID: 4943596135170749970}
-  otherRuneCircle: {fileID: 0}
+  otherRuneCircle: {fileID: 703785744850392240}
 --- !u!1 &2065247099526973384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 0
+  tileType: 2
   startingGridX: 0
   startingGridZ: 0
   gridX: 5
@@ -3473,7 +3473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25cdba096906e54bb7d84f6b69f698b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startingMana: 10
+  startingMana: 3
   moveLeftUses: 2
   moveRightUses: 2
   moveForwardUses: 2
@@ -3674,6 +3674,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3397337548393501967}
     m_Modifications:
+    - target: {fileID: 2396372427838243438, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
+      propertyPath: feedbackPrefab
+      value: 
+      objectReference: {fileID: 1580311064563317073}
     - target: {fileID: 3845136706088205176, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
       propertyPath: m_Name
       value: FeedbackController
@@ -3723,6 +3727,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
+--- !u!1 &1580311064563317073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3845136706088205176, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
+  m_PrefabInstance: {fileID: 2356174237965320745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5158399700957503990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432239896893596639, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}

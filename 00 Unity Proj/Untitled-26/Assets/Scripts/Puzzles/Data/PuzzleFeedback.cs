@@ -10,6 +10,8 @@ using SimpleTimer;
 /// </summary>
 public class PuzzleFeedback : MonoBehaviour
 {
+    public static PuzzleFeedback Instance;
+
     [Title("UI Elements")]
     public GameObject feedbackPrefab;
     public TMP_Text onScreenText;
@@ -28,6 +30,17 @@ public class PuzzleFeedback : MonoBehaviour
     private float errorLastIntervalTime = 0f;
     private float errorInterval = 0.25f;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
+    }
+
     void Start()
     {
         // Hide popup text at start
@@ -40,6 +53,7 @@ public class PuzzleFeedback : MonoBehaviour
     {
         SelectableTile.cellOccupied += CellIsOccupied;
         SelectableTile.moveOutOfBounds += MoveIsOutOfBounds;
+        ResourceManager.noMoreCardUses += NoMoreCardUses;
     }
     
     // Unsubscribe from events
@@ -47,6 +61,7 @@ public class PuzzleFeedback : MonoBehaviour
     {
         SelectableTile.cellOccupied -= CellIsOccupied;
         SelectableTile.moveOutOfBounds -= MoveIsOutOfBounds;
+        ResourceManager.noMoreCardUses -= NoMoreCardUses;
     }
 
     private void CellIsOccupied(SelectableTile selectableTile)
@@ -60,6 +75,14 @@ public class PuzzleFeedback : MonoBehaviour
     }
 
     /// <summary>
+    /// NEW: Triggered when player has no more card usages left
+    /// </summary>
+    private void NoMoreCardUses()
+    {
+        StartFeedback(null, "No more card usages!");
+    }
+
+    /// <summary>
     /// General method to show feedback on screen and flash the tile.
     /// </summary>
     public void ShowMessage(string message)
@@ -67,6 +90,13 @@ public class PuzzleFeedback : MonoBehaviour
         StartFeedback(null, message);
     }
 
+    private void PlayInvalidMoveSFX()
+    {
+        if (SFXManager.Instance != null)
+        {
+            SFXManager.Instance.PlayInvalidMove();
+        }
+    }
     private void StartFeedback(SelectableTile selectableTile, string message)
     {
         tile = selectableTile;
@@ -77,9 +107,15 @@ public class PuzzleFeedback : MonoBehaviour
             originalColor = tileRenderer.material.color;
 
         // Reset interval timing every time an error happens
-        // Reset intervals
         errorLastIntervalTime = 0f;
         isFlashing = false;
+
+        //Play SFX for invalid move
+        PlayInvalidMoveSFX(); 
+        
+        // Stop previous timer if it exists
+        if (flickerTimer != null)
+            TimerManager.DeleteTimer(flickerTimer);
 
         // Show popup text
         if (onScreenText != null)
@@ -105,7 +141,11 @@ public class PuzzleFeedback : MonoBehaviour
         if (onScreenText != null)
             onScreenText.gameObject.SetActive(false);
 
-        TimerManager.DeleteTimer(flickerTimer);
+        if (flickerTimer != null)
+        {
+            TimerManager.DeleteTimer(flickerTimer);
+            flickerTimer = null;
+        }
     }
 
     private void OnTimerTick()
