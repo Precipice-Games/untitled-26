@@ -21,19 +21,13 @@ MonoBehaviour:
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
-    m_path: Assets/Scenes/SplashPage.unity
-  - m_enabled: 1
     m_path: Assets/Scenes/MainMenu.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/PlayerExperiments/MovementInteraction_1.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/PlayerExperiments/DialogueTest_1.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/TileExperiments/TileMoveExperiment.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/AudioExperiments/ButtonSFX.unity
+    m_path: Assets/Scenes/Islands/Mother_Island.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Islands/Ice_Island.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Islands/Oasis_Island.unity
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
@@ -181,7 +175,7 @@ MonoBehaviour:
     - line: '|   loadStoreDebugModeEnabled: 0'
     - line: '|   visionOSBundleVersion: 1.0'
     - line: '|   tvOSBundleVersion: 1.0'
-    - line: '|   bundleVersion: 0.1.1-prototype.1'
+    - line: '|   bundleVersion: '
     - line: '|   preloadedAssets:'
     - line: '|   - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b,
         type: 3}'
