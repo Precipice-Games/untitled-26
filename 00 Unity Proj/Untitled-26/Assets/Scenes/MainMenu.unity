@@ -1363,7 +1363,7 @@ MonoBehaviour:
   sfxSource: {fileID: 1946899193}
   sfxMixerGroup: {fileID: -2769029692214463626, guid: 3bdf0d7a8ed5c49df80eae5daf33256f, type: 2}
   cardClickSFX: {fileID: 8300000, guid: 10352ce73fb3948e58aa34a187e9d16a, type: 3}
-  invalidMoveSFX: {fileID: 8300000, guid: 707c56ebc14ec407c895361130478556, type: 3}
+  invalidMoveSFX: {fileID: 8300000, guid: efd67c457dfcb4755a34e1d84934e7a8, type: 3}
 --- !u!4 &1946899195
 Transform:
   m_ObjectHideFlags: 0
