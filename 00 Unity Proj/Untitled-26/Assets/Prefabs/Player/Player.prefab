@@ -175,6 +175,8 @@ MonoBehaviour:
   yMovement: 0
   rb: {fileID: 0}
   mouseSensitivity: 1
+  mainCamera: {fileID: 0}
+  RotationSmoothTime: 0.12
   jumpPower: 4
   maxJumps: 1
   jumpsRemaining: 0
@@ -193,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFixedMovement
   playerGridX: 0
   playerGridZ: 0
+  resourceManager: {fileID: 0}
   printMoveAction: 1
   printPlayerGridCoords: 1
   printPlayerVector3: 0
@@ -240,7 +243,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5438321986708604092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dedee67d3aad46888a28ebb90e54211f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b3dd49a72a446f4ebaf91862e04984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoxCastGrounded
   groundChecking: 1
