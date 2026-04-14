@@ -6,15 +6,10 @@ using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-// TODO: Rename this script to PlayerGroundcast.cs. I originally named it BoxCastGrounded.cs
-//       because I was attempting to do ground detection with a BoxCast, but eventually ended
-//       up using the same type of raycast we use for interaction. Likewise, I want the class
-//       name to accurately reflect the feature. -- Nikki
-
 // This script creates a raycast that shoots downwards from the Player.
 // It is used to check if the Player is currently on the ground.
 
-public class BoxCastGrounded : MonoBehaviour
+public class PlayerGroundcast : MonoBehaviour
 {
     [Title("Grounded Checker", "General variables used to handle ground checking.")]
     public bool groundChecking = true;
@@ -62,22 +57,6 @@ public class BoxCastGrounded : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        if (!groundChecking)
-        {
-            currentPlatform = null;
-            return; // exit early if raycast is disabled (used for dialogue and puzzle states)
-        }
-
-        if (activeTimer < maxTime)
-        {
-            activeTimer += Time.deltaTime;
-        }
-        else
-        {
-            activeTimer = 0.0f;
-        }
-
         // Set the origin and direction of the ray
         SetOriginAndDirection();
         Vector3 origin = groundInteractionRay.origin;
@@ -92,7 +71,7 @@ public class BoxCastGrounded : MonoBehaviour
             // Turn the ray green
             Debug.DrawRay(origin, direction * groundRayLength, Color.green);
             currentPlatform = groundRaycastHit.collider.gameObject;
-            if (printGroundedStatus) Debug.Log("BoxCastGrounded.cs >> Grounded on: " + currentPlatform.name);
+            if (printGroundedStatus) Debug.Log("PlayerGroundcast.cs >> Grounded on: " + currentPlatform.name);
         }
         else
         {
