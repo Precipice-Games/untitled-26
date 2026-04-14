@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 115618297942063103}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 6, y: 0, z: 9}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -155,12 +155,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 2
+  startingGridZ: 3
   gridX: 2
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &2518381043934893438
@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 136645902339605885}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 3, y: 0, z: 3}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -334,12 +334,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 1
+  startingGridZ: 1
   gridX: 1
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &3318057155961036070
@@ -459,7 +459,7 @@ Transform:
   m_GameObject: {fileID: 925581002351369635}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 9, y: 0, z: 15}
   m_LocalScale: {x: 2, y: 0.028083699, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -583,12 +583,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 3
+  startingGridZ: 5
   gridX: 3
   gridZ: 5
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &952428353248100859
@@ -638,7 +638,7 @@ Transform:
   m_GameObject: {fileID: 1712450131070757306}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 3, y: 0, z: 12}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -762,12 +762,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 1
+  startingGridZ: 4
   gridX: 1
   gridZ: 4
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0.8352941, g: 0, b: 1, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &1506219520340587611
@@ -817,7 +817,7 @@ Transform:
   m_GameObject: {fileID: 1872530666423440456}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 3, y: 0, z: 15}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -941,12 +941,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 1
+  startingGridZ: 5
   gridX: 1
   gridZ: 5
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &6505779349774599911
@@ -1066,7 +1066,7 @@ Transform:
   m_GameObject: {fileID: 2065247099526973384}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 9, y: 0, z: 6}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1190,12 +1190,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 3
+  startingGridZ: 2
   gridX: 3
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &747859353823768086
@@ -1245,7 +1245,7 @@ Transform:
   m_GameObject: {fileID: 2595629101245525352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 15, y: 0, z: 9}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1284,7 +1284,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1369,12 +1369,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 2
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 5
+  startingGridZ: 3
   gridX: 5
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &864764580593589462
@@ -1424,7 +1424,7 @@ Transform:
   m_GameObject: {fileID: 3427067941324799217}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 3, y: 0, z: 18}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1549,12 +1549,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 1
+  startingGridZ: 6
   gridX: 1
   gridZ: 6
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &5952923576471507331
@@ -1604,7 +1604,7 @@ Transform:
   m_GameObject: {fileID: 3796191418792194300}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 9, y: 0, z: 0}
   m_LocalScale: {x: 1.37486, y: 0.09193132, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1729,12 +1729,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
+  startingGridX: 3
   startingGridZ: 0
   gridX: 3
   gridZ: 0
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &4226547229773223782
@@ -1784,7 +1784,7 @@ Transform:
   m_GameObject: {fileID: 3816189780632181019}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 6, y: 0, z: 6}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1908,12 +1908,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 2
+  startingGridZ: 2
   gridX: 2
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &4038837667630203649
@@ -2066,8 +2066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14eb0a16258e2034d9bb137e1435805f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
-  width: 5
-  height: 5
+  width: 7
+  height: 7
   tileSize: 3
 --- !u!1 &5059960743704218579
 GameObject:
@@ -2100,7 +2100,7 @@ Transform:
   m_GameObject: {fileID: 5059960743704218579}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 12, y: 0, z: 12}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2224,12 +2224,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 4
+  startingGridZ: 4
   gridX: 4
   gridZ: 4
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &7615802789705735621
@@ -2279,7 +2279,7 @@ Transform:
   m_GameObject: {fileID: 5169605109640841623}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 12, y: 0, z: 6}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2403,12 +2403,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 4
+  startingGridZ: 2
   gridX: 4
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &7523160706761227275
@@ -2458,7 +2458,7 @@ Transform:
   m_GameObject: {fileID: 6337408609227900163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 3, y: 0, z: 9}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2582,12 +2582,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 1
+  startingGridZ: 3
   gridX: 1
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &4017039502483098492
@@ -2637,7 +2637,7 @@ Transform:
   m_GameObject: {fileID: 6609728866790066902}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 9, y: 0, z: 9}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2761,12 +2761,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 3
+  startingGridZ: 3
   gridX: 3
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &6211965852161980555
@@ -2998,7 +2998,7 @@ Transform:
   m_GameObject: {fileID: 6919531168105839388}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 12, y: 0, z: 3}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3122,12 +3122,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 4
+  startingGridZ: 1
   gridX: 4
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0.13494706, g: 1, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &6909150226320128903
@@ -3281,7 +3281,7 @@ Transform:
   m_GameObject: {fileID: 7470132292000716953}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 9, y: 0, z: 3}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3405,12 +3405,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 3
+  startingGridZ: 1
   gridX: 3
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &4489662516922727035
@@ -3518,7 +3518,7 @@ Transform:
   m_GameObject: {fileID: 8066876773405094797}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 15, y: 0, z: 6}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3642,12 +3642,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
+  startingGridX: 5
+  startingGridZ: 2
   gridX: 5
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   debugMode: 1
 --- !u!114 &2860040158086677344
@@ -3681,6 +3681,10 @@ PrefabInstance:
     - target: {fileID: 3845136706088205176, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
       propertyPath: m_Name
       value: FeedbackController
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016069986699250757, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 247
       objectReference: {fileID: 0}
     - target: {fileID: 7432239896893596639, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
       propertyPath: m_LocalPosition.x
