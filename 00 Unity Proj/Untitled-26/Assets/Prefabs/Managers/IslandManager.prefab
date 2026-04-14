@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IslandManager
   islandName: 0
   islandPuzzleManager: {fileID: 0}
+  endCrystal: {fileID: 0}
   variableStorage: {fileID: 0}
   islandCompleted:
     m_PersistentCalls:
