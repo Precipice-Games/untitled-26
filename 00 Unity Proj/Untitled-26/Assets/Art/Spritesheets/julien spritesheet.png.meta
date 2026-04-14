@@ -1,0 +1,1170 @@
+fileFormatVersion: 2
+guid: 349b9667f4ce48f4b97f13d03c89d8b8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: julien spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 8666
+        width: 1201
+        height: 950
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089566bbacd696b47ad2027164e10dde
+      internalID: -390816793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 8666
+        width: 1201
+        height: 950
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13841fecbc15ef24e9ae3556b2f64187
+      internalID: 1527350155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 4157
+        y: 8666
+        width: 1201
+        height: 959
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c193109965dfe4a9a13ac0b6006c17
+      internalID: 1260539780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 6079
+        y: 8666
+        width: 1200
+        height: 969
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6def9e21db0c34c4680dbf245e624c2e
+      internalID: -182851224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 7996
+        y: 8666
+        width: 1205
+        height: 983
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298dde227e2951b4da8a433a83daa03d
+      internalID: -1035959028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 7584
+        width: 1196
+        height: 997
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d9de85c77c12040a7da3e238da7035
+      internalID: -1154616408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 7584
+        width: 1195
+        height: 1011
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3b7b9068ab75c43a8cd44647a238c3
+      internalID: 1860227795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 4171
+        y: 7584
+        width: 1187
+        height: 1025
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff16ddbc1fbd7d42bd8e9d428ebfebe
+      internalID: 1625659999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 6098
+        y: 7580
+        width: 1177
+        height: 1039
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9fb16ded959be40a998784ccebf7be
+      internalID: 625146666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 8025
+        y: 7580
+        width: 1162
+        height: 1048
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9d1d1985b95a04ba1aee77ee67640e
+      internalID: -2104706737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 6497
+        width: 1148
+        height: 1054
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608eb2500a1ca26488bfb8b136fbfc3a
+      internalID: -1012541339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2283
+        y: 6497
+        width: 1138
+        height: 1054
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e22757c4628523488b1f04d9540ef0d
+      internalID: -1264848657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 4209
+        y: 6497
+        width: 1130
+        height: 1054
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b061320b4a44bfc418ac3274a9ac8611
+      internalID: 2014141772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 6131
+        y: 6497
+        width: 1125
+        height: 1054
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5d7c1f372267042a2bfea2f5bbb4a4
+      internalID: -1201353835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 8058
+        y: 6497
+        width: 1115
+        height: 1054
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8c2df6beb03fc419261fa895a6b850
+      internalID: -1755041442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 5415
+        width: 1120
+        height: 1054
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53cfaa6f5dfb834ea0922f3c548775c
+      internalID: -772739079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 2292
+        y: 5415
+        width: 1125
+        height: 1044
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227f0bac082ce084c8accc43ad621f7d
+      internalID: 1945042364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 4204
+        y: 5415
+        width: 1135
+        height: 1035
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594ea446cdfcd714abcd5902622954d2
+      internalID: -1723331695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 6117
+        y: 5415
+        width: 1144
+        height: 1016
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a296a32ddaed954aaeff2e288b4d626
+      internalID: 1228865621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 8029
+        y: 5415
+        width: 1153
+        height: 997
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8ffa407e312404c844c9738b3406b1
+      internalID: 1464937591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 4338
+        width: 1162
+        height: 978
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa68d1d78a7bfe94298c06610fbf1588
+      internalID: 1703452192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 4338
+        width: 1182
+        height: 968
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105b81e55df1a2a4daf072cd5d261315
+      internalID: 154137220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 4152
+        y: 4343
+        width: 1210
+        height: 949
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ecc87fd0bd67e24ea76f6ca1c9cbea6
+      internalID: 1704009021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 6065
+        y: 4343
+        width: 1238
+        height: 935
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ad4bec24a2b15479838d21d15cc738
+      internalID: -1938471026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 7982
+        y: 4343
+        width: 1262
+        height: 930
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d597f3ba881674fb250fe2d488db9c
+      internalID: 836820798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 3265
+        width: 1262
+        height: 940
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90fbd0366bd5994c9942cc9781b0b3d
+      internalID: -201630908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 2216
+        y: 3265
+        width: 1258
+        height: 954
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1436fe512f9175b43b587a0635c6f8e5
+      internalID: -1290061229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 4133
+        y: 3265
+        width: 1258
+        height: 978
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4904eac13cc31479a4f4c8d9621e27
+      internalID: 585113711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 6055
+        y: 3265
+        width: 1258
+        height: 1002
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de0d7b668660b04ea318d22544ab628
+      internalID: 326155440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 7977
+        y: 3261
+        width: 1253
+        height: 1025
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01571f2394baa945a43e951ffba927b
+      internalID: -1232704245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 2183
+        width: 1248
+        height: 1040
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ade0df3408ba648bd46506d76e77bf
+      internalID: -212612685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 2178
+        width: 1233
+        height: 1059
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b975c95ac7b6a5f43b62a50dc3b71abb
+      internalID: -378797736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 4152
+        y: 2178
+        width: 1220
+        height: 1064
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6447bea197463743b3e297b39d6fba5
+      internalID: -1926678666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 6079
+        y: 2178
+        width: 1210
+        height: 1064
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ec7bc01597fbf42b49ff9d51407398
+      internalID: 1770237436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 2174
+        width: 1205
+        height: 1068
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099d3b0f8734931498bbf8b1ffa2a6d2
+      internalID: 1384892658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1096
+        width: 1196
+        height: 1063
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57432c32ffd1fa14ca7d2eb77d35364e
+      internalID: 754784773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 1096
+        width: 1191
+        height: 1059
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1dc42ca2e724e4a8d7679d60c78c8e
+      internalID: -1348347817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 4166
+        y: 1096
+        width: 1196
+        height: 1049
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f880e8dd4ef7814995b9ace845d1e0a
+      internalID: 169446408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 6088
+        y: 1096
+        width: 1191
+        height: 1044
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18db3ecb6c0f979438f86f59592bfe2c
+      internalID: 1083711305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 1096
+        width: 1200
+        height: 1040
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd14cd888cb27fc45a3be96be436dd3e
+      internalID: -2006708301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 19
+        width: 1205
+        height: 1020
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467c44a267dda724dbf44842b17c5058
+      internalID: -2129370112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 19
+        width: 1210
+        height: 1006
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd9b05cb8fcd7f4892ef57674ccdd4c
+      internalID: 778976656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 4157
+        y: 19
+        width: 1205
+        height: 992
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5633657dda14448a165d2ed7ea96e4
+      internalID: 1555216476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: julien spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 6074
+        y: 24
+        width: 1205
+        height: 973
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8598bc008a6516442b21e235c7fe55dd
+      internalID: 1301173446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 05a8df96685ae8a43809abfc374a551a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      julien spritesheet_0: -390816793
+      julien spritesheet_1: 1527350155
+      julien spritesheet_10: -1012541339
+      julien spritesheet_11: -1264848657
+      julien spritesheet_12: 2014141772
+      julien spritesheet_13: -1201353835
+      julien spritesheet_14: -1755041442
+      julien spritesheet_15: -772739079
+      julien spritesheet_16: 1945042364
+      julien spritesheet_17: -1723331695
+      julien spritesheet_18: 1228865621
+      julien spritesheet_19: 1464937591
+      julien spritesheet_2: 1260539780
+      julien spritesheet_20: 1703452192
+      julien spritesheet_21: 154137220
+      julien spritesheet_22: 1704009021
+      julien spritesheet_23: -1938471026
+      julien spritesheet_24: 836820798
+      julien spritesheet_25: -201630908
+      julien spritesheet_26: -1290061229
+      julien spritesheet_27: 585113711
+      julien spritesheet_28: 326155440
+      julien spritesheet_29: -1232704245
+      julien spritesheet_3: -182851224
+      julien spritesheet_30: -212612685
+      julien spritesheet_31: -378797736
+      julien spritesheet_32: -1926678666
+      julien spritesheet_33: 1770237436
+      julien spritesheet_34: 1384892658
+      julien spritesheet_35: 754784773
+      julien spritesheet_36: -1348347817
+      julien spritesheet_37: 169446408
+      julien spritesheet_38: 1083711305
+      julien spritesheet_39: -2006708301
+      julien spritesheet_4: -1035959028
+      julien spritesheet_40: -2129370112
+      julien spritesheet_41: 778976656
+      julien spritesheet_42: 1555216476
+      julien spritesheet_43: 1301173446
+      julien spritesheet_5: -1154616408
+      julien spritesheet_6: 1860227795
+      julien spritesheet_7: 1625659999
+      julien spritesheet_8: 625146666
+      julien spritesheet_9: -2104706737
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
