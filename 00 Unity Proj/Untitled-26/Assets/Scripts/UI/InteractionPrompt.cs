@@ -22,6 +22,10 @@ public class InteractionPrompt : MonoBehaviour
     /// Tracks if the player is standing on a rune circle.
     /// </summary>
     private bool isInCircle;
+    /// <summary>
+    /// Tracks if the player is standing on the airship.
+    /// </summary>
+    private bool isOnAirship;
 
     // Subscribe to events
     private void OnEnable()
@@ -52,6 +56,7 @@ public class InteractionPrompt : MonoBehaviour
     /// Toggles the boolean variable that tracks if the player's raycast is hitting an interactable object.
     /// If the interaction should be enabled, the prompt is toggled on. If not, the prompt is toggled off.
     /// <param name="isHitting"></param>
+    /// </summary>
     private void ToggleRaycast(bool isHitting)
     {
         isRaycastHitting = isHitting;
@@ -69,10 +74,30 @@ public class InteractionPrompt : MonoBehaviour
     /// Toggles the boolean variable that tracks if the player is standing on a rune circle.
     /// If the interaction should be enabled, the prompt is toggled on. If not, the prompt is toggled off.
     /// <param name="inCircle"></param>
+    /// </summary>
     private void ToggleRuneCircle(bool inCircle)
     {
         isInCircle = inCircle;
         if (isRaycastHitting || isInCircle)
+        {
+            TogglePrompt(true);
+        }
+        else
+        {
+            TogglePrompt(false);
+        }
+    }
+    
+    /// <summary>
+    /// Toggles the boolean variable that tracks if the player is standing on the airship.
+    /// If the interaction should be enabled, the prompt is toggled on. If not, the prompt
+    /// is toggled off.
+    /// <param name="inCircle"></param>
+    /// </summary>
+    private void ToggleAirship(bool onAirship)
+    {
+        isOnAirship = onAirship;
+        if (isRaycastHitting || isOnAirship)
         {
             TogglePrompt(true);
         }

@@ -7,6 +7,44 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Mother Island is not yet available for the Player.
 * Oasis Island is not yet available for the Player.
+* Mana Well puzzle tile not yet available.
+
+## [v1.1.2] - 2026-04-09
+
+### Added
+* Started creating Mana Well tile (not yet available).
+* Added Cinemachine 3.1.6 to the project.
+
+### Fixed
+* Created a solid workaround for cross-platform mouse polling inconsistencies.
+* Fixed a bug where the different puzzle prefabs led to puzzle 2 on Ice Island being extremely behind puzzle 1's features.
+* Fixed a bug where Skye was not visible from the overhead view of puzzle 2 on Ice Island.
+
+### Changed
+* Updated Penguin NPC to have white paper outline that matches other characters (made by @fwooley).
+* Replaced all puzzle instantiations with new base puzzle prefabs (one prefab per island).
+* Converted all normal Unity cameras into CinemachineCameras.
+* Updated Game State Manager scripts to handle new CinemachineCameras.
+
+### Removed
+* Deleted camera rotation scripts.
+* Deleted Puzzle2.prefab (originally intended for Ice Island).
+* Removed puzzle 2 pillar from Ice_Island.unity.
+
+## [v1.1.1] - 2026-04-07
+
+### Added
+* Implemented ice tree art by @fwooley.
+* Added puzzle mode to Music Manager to play soundtracks separate from the standard scene music.
+* Added some prototype feedback text as part of puzzle feedback system (WIP).
+
+### Fixed
+* Fixed an issue where the Ice Island was overexposed with too many light sources.
+* Fixed an issue where the Player was not able to jump on regions of the ice island following puzzle 1.
+
+### Changed
+* Adjusted lighting and island materials in the Ice Island.
+* Replaced the prototype trees on the Ice Island with the finalized ice trees.
 
 ## [v1.1.0] - 2026-04-05
 

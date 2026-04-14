@@ -47,13 +47,13 @@ public class PlayerMovement : MonoBehaviour
     // Subscribe to events
     private void OnEnable()
     {
-        BoxCastGrounded.groundCheck += GroundCheck;
+        PlayerGroundcast.groundCheck += GroundCheck;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
-        BoxCastGrounded.groundCheck -= GroundCheck;
+        PlayerGroundcast.groundCheck -= GroundCheck;
     }
     
     // =============================
