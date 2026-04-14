@@ -10,9 +10,6 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
 
     public void Interaction()
     {
-
-        SceneManager.LoadScene("Mother_Island");
-
+        // SceneManager.LoadScene("Mother_Island");
     }
-
 }
