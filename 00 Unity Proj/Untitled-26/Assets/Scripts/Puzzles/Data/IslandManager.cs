@@ -13,6 +13,7 @@ public class IslandManager : MonoBehaviour
 {
     public enum IslandName
     {
+        MotherIsland,
         IceIsland,
         OasisIsland
     }
@@ -22,6 +23,8 @@ public class IslandManager : MonoBehaviour
     public IslandName islandName = IslandName.IceIsland;
     [PropertyTooltip("Attach the relevant data for this island's puzzles.")]
     public IslandPuzzleManager islandPuzzleManager;
+    [PropertyTooltip("Attach the end crystal collectable for this island.")]
+    public GameObject endCrystal;
     [PropertyTooltip("Attach the InMemoryVariableStorage component from the DialogueSystem object.")]
     public InMemoryVariableStorage variableStorage;
     
@@ -35,15 +38,25 @@ public class IslandManager : MonoBehaviour
     {
         switch (islandName)
         {
+            case IslandName.MotherIsland:
+                Debug.Log("IslandManager.cs >> Mother Island completed!");
+                // variableStorage.SetValue("motherFinished", true);
+                break;
             case IslandName.IceIsland:
-                Debug.Log("Ice Island completed!");
+                Debug.Log("IslandManager.cs >> Ice Island completed!");
                 variableStorage.SetValue("$iceFinished", true);
                 break;
             case IslandName.OasisIsland:
-                Debug.Log("Oasis Island completed!");
+                Debug.Log("IslandManager.cs >> Oasis Island completed!");
+                // variableStorage.SetValue("$oasisFinished", true);
                 break;
             
             // TODO: Add more cases for each island
         }
+    }
+
+    public void CrystalCollected()
+    {
+        
     }
 }
