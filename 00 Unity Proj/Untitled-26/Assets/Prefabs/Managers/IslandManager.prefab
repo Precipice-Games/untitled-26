@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IslandManager
   islandName: 0
   islandPuzzleManager: {fileID: 0}
+  endCrystal: {fileID: 0}
   variableStorage: {fileID: 0}
 --- !u!114 &738195584239078228
 MonoBehaviour:
@@ -61,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IslandPuzzleManager
   puzzlePrefabs: []
-  islandCompleted:
+  islandPuzzlesCompleted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2256523913752244413}

@@ -6,11 +6,9 @@ using UnityEngine;
 
 public class Airship : MonoBehaviour
 {
-    [Title("Puzzle Information")]
-    [InfoBox("Attach the data of the puzzle that this rune circle corresponds to.")]
-    public PuzzleInformation puzzleInfo;
-    public ExitPuzzleButton exitPuzzleButton;
-
+    [Title("Airship Variables", "Variables related to Skye's Airship.")]
+    public IslandManager islandManager;
+    
     /// <summary>
     /// Tracks if player is standing on the Airship.
     /// </summary>
@@ -89,14 +87,14 @@ public class Airship : MonoBehaviour
     /// Verifies that this rune circle has the puzzleInfo variable for its corresponding puzzle.
     /// </summary>
     /// <returns></returns>
-    private bool PuzzleInfoFound()
+    private bool IslandManagerFound()
     {
-        if (puzzleInfo != null)
+        if (islandManager != null)
         {
             return true;
         }
 
-        Debug.LogError("RuneCircle.cs >> No puzzle information attached to this rune circle.");
+        Debug.LogError("Airship.cs >> No island manager is attached to this airship.");
         return false;
     }
 }

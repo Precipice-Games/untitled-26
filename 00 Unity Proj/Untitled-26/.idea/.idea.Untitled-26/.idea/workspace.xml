@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5e5ce399-7c0f-4455-b410-4ddcc8af76a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Transportation/Airship.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Transportation/Airship.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers/IslandManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Managers/IslandManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Islands/Ice_Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Islands/Ice_Island.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/InteractableCrystal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/InteractableCrystal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/IslandManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/IslandManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/IslandPuzzleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/IslandPuzzleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Transportation/Airship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Transportation/Airship.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +148,7 @@
       <workItem from="1775757591331" duration="1011000" />
       <workItem from="1775925868352" duration="1335000" />
       <workItem from="1776194882906" duration="35000" />
-      <workItem from="1776194962461" duration="913000" />
+      <workItem from="1776194962461" duration="2756000" />
     </task>
     <servers />
   </component>
