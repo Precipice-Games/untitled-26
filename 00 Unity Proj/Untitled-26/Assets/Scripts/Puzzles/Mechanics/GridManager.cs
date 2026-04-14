@@ -1,13 +1,10 @@
+using System;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using UnityEditor.Rendering;
 using UnityEngine;
 
-// NOTE: The [ExecuteAlways] should ONLY ever be uncommented to accurately place
-// puzzles in the scene. This is because tiles are distributed at runtime, so it's
-// hard to know where they will actually end up. However, for accurate testing of
-// the puzzle system, this could be commented out since it affects the resource
-// system and other data.
-//
-// [ExecuteAlways]
+[ExecuteAlways]
 public class GridManager : MonoBehaviour
 {
     [Space]
@@ -19,8 +16,23 @@ public class GridManager : MonoBehaviour
     [PropertyTooltip("Size of tiles.")]
     public float tileSize = .25f;
 
+    // Snapshot of occupancy state (true = occupied, false = vacant)
+    private Dictionary<Vector2Int, bool> initialOccupancy = new();
+
     // Grid of selectable tiles
     private SelectableTile[,] grid;
+
+    // Subscribe to events
+    private void OnEnable()
+    {
+        ResetPuzzle.resetPuzzle += ResetGridData;
+    }
+
+    // Unsubscribe from events
+    private void OnDisable()
+    {
+        ResetPuzzle.resetPuzzle -= ResetGridData;
+    }
 
     void Awake()
     {
@@ -29,6 +41,35 @@ public class GridManager : MonoBehaviour
         width += 2;
         height += 2;
         grid = new SelectableTile[width, height];
+        CreateOccupancyMap(width, height);
+    }
+
+    /// <summary>
+    /// For grid initialization, we want to create a snapshot of the occupancy state of the grid.
+    /// This will allow us to reset the grid to its initial state when the puzzle is reset.
+    /// </summary>
+    private void CreateOccupancyMap(int w, int h)
+    {
+        for (int x = 0; x < w; x++)
+        {
+            for (int z = 0; z < h; z++)
+            {
+                Vector2Int coords = new Vector2Int(x, z);
+                initialOccupancy[coords] = false;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Called during initial tile placement to update the occupancy map with the
+    /// initial state of the grid.
+    /// </summary>
+    /// <param name="coords"></param>
+    /// <param name="occupancy"></param>
+    private void UpdateOccupancyMap(Vector2Int coords, bool occupancy)
+    {
+        initialOccupancy[coords] = occupancy;
+        Debug.Log($"GridManager.cs >> Updated occupancy map at {coords} to {occupancy}");
     }
 
     /// <summary>
@@ -64,7 +105,7 @@ public class GridManager : MonoBehaviour
     {
         return grid[x, z] == null;
     }
-    
+
     /// <summary>
     /// Returns the TileType of a given tile.
     /// </summary>
@@ -89,6 +130,20 @@ public class GridManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Place a tile in the grid at the given coordinates during puzzle initialization.
+    /// This method also updates the occupancy map to reflect the initial state of the grid.
+    /// </summary>
+    /// <param name="tile"></param>
+    /// <param name="x"></param>
+    /// <param name="z"></param>
+    public void InitialTilePlacement(SelectableTile tile, int x, int z)
+    {
+        grid[x, z] = tile;
+        Vector2Int coords = new Vector2Int(x, z);
+        UpdateOccupancyMap(coords, true);
+    }
+
+    /// <summary>
     /// Clear the cell at the given coordinates. This is used when a tile
     /// moves out of its current cell and into a new one.
     /// </summary>
@@ -109,5 +164,28 @@ public class GridManager : MonoBehaviour
     public Vector3 GridToWorld(int x, int z)
     {
         return new Vector3(x * tileSize, 0, z * tileSize);
+    }
+
+    /// <summary>
+    /// Resets data of which cells are empty vs occupied using the initial occupany map.
+    /// </summary>
+    private void ResetGridData()
+    {
+        foreach (KeyValuePair<Vector2Int, bool> entry in initialOccupancy)
+        {
+            Vector2Int coords = entry.Key;
+            // bool occupied = IsCellEmpty(coords.x, coords.y);
+            bool occupied = entry.Value;
+
+            if (occupied)
+            {
+                Debug.Log($"GridManager.cs >> Cell at {coords} in {transform.root.name} is OCCUPIED.");
+            }
+            else
+            {
+                Debug.Log($"GridManager.cs >> Cell at {coords} in {transform.root.name} is VACANT.");
+                ClearCell(coords.x, coords.y);
+            }
+        }
     }
 }
