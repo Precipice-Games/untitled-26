@@ -12,7 +12,6 @@ using UnityEngine;
 // [ExecuteAlways]
 public class GridManager : MonoBehaviour
 {
-    [Space]
     [Title("Grid Settings", "Settings for the puzzle grid.")]
     [PropertyTooltip("Grid Width.")]
     public int width = 4;
@@ -20,6 +19,11 @@ public class GridManager : MonoBehaviour
     public int height = 3;
     [PropertyTooltip("Size of tiles.")]
     public float tileSize = .25f;
+    
+    [Space]
+    [Title("Debugging Options", "Settings for quick debugging options.")]
+    [PropertyTooltip("Print out occupancy map info. False by default.")]
+    public bool printOccupancyMap = false;
 
     // Snapshot of occupancy state (true = occupied, false = vacant)
     private Dictionary<Vector2Int, bool> initialOccupancy = new();
@@ -74,7 +78,7 @@ public class GridManager : MonoBehaviour
     private void UpdateOccupancyMap(Vector2Int coords, bool occupancy)
     {
         initialOccupancy[coords] = occupancy;
-        Debug.Log($"GridManager.cs >> Updated occupancy map at {coords} to {occupancy}");
+        if (printOccupancyMap) Debug.Log($"GridManager.cs >> Updated occupancy map at {coords} to {occupancy}");
     }
 
     /// <summary>
@@ -179,16 +183,15 @@ public class GridManager : MonoBehaviour
         foreach (KeyValuePair<Vector2Int, bool> entry in initialOccupancy)
         {
             Vector2Int coords = entry.Key;
-            // bool occupied = IsCellEmpty(coords.x, coords.y);
             bool occupied = entry.Value;
 
             if (occupied)
             {
-                Debug.Log($"GridManager.cs >> Cell at {coords} in {transform.root.name} is OCCUPIED.");
+                if (printOccupancyMap) Debug.Log($"GridManager.cs >> Cell at {coords} in {transform.root.name} is OCCUPIED.");
             }
             else
             {
-                Debug.Log($"GridManager.cs >> Cell at {coords} in {transform.root.name} is VACANT.");
+                if (printOccupancyMap) Debug.Log($"GridManager.cs >> Cell at {coords} in {transform.root.name} is VACANT.");
                 ClearCell(coords.x, coords.y);
             }
         }
