@@ -1771,6 +1771,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14eb0a16258e2034d9bb137e1435805f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
+--- !u!1 &98120952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7199852587322879966, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 1437640441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &101394828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20100,6 +20105,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1111402241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7199852587322879966, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 372399995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1124138756 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5303923842296544524, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
@@ -33781,6 +33791,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8014860526984270938, guid: 52fcc2c214e11dd46bc310e39123907a, type: 3}
   m_PrefabInstance: {fileID: 1685303586}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1701650085 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7199852587322879966, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 60844291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1715974192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43665,12 +43680,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 738195584239078228, guid: 34e361e532974434c8ac75f1dc46faf2, type: 3}
       propertyPath: puzzlePrefabs.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 738195584239078228, guid: 34e361e532974434c8ac75f1dc46faf2, type: 3}
       propertyPath: 'puzzlePrefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 897056844}
+    - target: {fileID: 738195584239078228, guid: 34e361e532974434c8ac75f1dc46faf2, type: 3}
+      propertyPath: 'puzzlePrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 98120952}
+    - target: {fileID: 738195584239078228, guid: 34e361e532974434c8ac75f1dc46faf2, type: 3}
+      propertyPath: 'puzzlePrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1111402241}
+    - target: {fileID: 738195584239078228, guid: 34e361e532974434c8ac75f1dc46faf2, type: 3}
+      propertyPath: 'puzzlePrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1701650085}
     - target: {fileID: 2256523913752244413, guid: 34e361e532974434c8ac75f1dc46faf2, type: 3}
       propertyPath: variableStorage
       value: 
