@@ -19,25 +19,24 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
 
     private void FixedUpdate()
     {
-
-        if (finalPuzzle != null && finalPuzzle.puzzleSolved == true && this.transform.position.y < 3.2)
-        {
-            this.transform.position = new Vector3(transform.position.x, transform.position.y + Time.deltaTime, transform.position.z);
-        }
-
-    }
-
-    public void Interaction()
-    {
-
         // Ensure the puzzle rises up from the ground
         if (finalPuzzle != null && finalPuzzle.puzzleSolved == true && this.transform.position.y < 3.2)
         {
             this.transform.position = new Vector3(transform.position.x, transform.position.y + Time.deltaTime, transform.position.z);
         }
+    }
+
+    public void Interaction()
+    {
+
+        // // Ensure the puzzle rises up from the ground
+        // if (finalPuzzle != null && finalPuzzle.puzzleSolved == true && this.transform.position.y < 3.2)
+        // {
+        //     this.transform.position = new Vector3(transform.position.x, transform.position.y + Time.deltaTime, transform.position.z);
+        // }
         
         crystalCollected.Invoke();
-
+        Destroy(gameObject);
     }
 
     // Commenting this out for now. This was the original Interaction() method I was
