@@ -17,6 +17,8 @@ public class PlayerGroundcast : MonoBehaviour
     bool isHitting;
     private LayerMask layerMask;
     public GameObject currentPlatform;
+    private bool onGround;
+    private bool onAirship;
     
     [Space]
     [Title("Raycast Settings", "Settings for the ray. Hover over variables for more information.")]
@@ -72,22 +74,28 @@ public class PlayerGroundcast : MonoBehaviour
                 Debug.DrawRay(origin, direction * groundRayLength, Color.green);
                 currentPlatform = groundRaycastHit.collider.gameObject;
                 if (printGroundedStatus) Debug.Log("PlayerGroundcast.cs >> Grounded on: " + currentPlatform.name);
+                onGround = true;
+                onAirship = false;
             }
             else
             {
                 Debug.DrawRay(origin, direction * groundRayLength, Color.purple);
                 currentPlatform = groundRaycastHit.collider.gameObject;
                 if (printGroundedStatus) Debug.Log("PlayerGroundcast.cs >> Grounded on: " + currentPlatform.name);
+                onGround = false;
+                onAirship = true;
             }
         }
         else
         {
             Debug.DrawRay(origin, direction * groundRayLength, Color.red);
             currentPlatform = null;
+            onGround = false;
+            onAirship = false;
         }
         
-        groundCheck?.Invoke(isHitting);
-        airshipCheck?.Invoke(isHitting);
+        groundCheck?.Invoke(onGround);
+        airshipCheck?.Invoke(onAirship);
     }
 
     /// <summary>
