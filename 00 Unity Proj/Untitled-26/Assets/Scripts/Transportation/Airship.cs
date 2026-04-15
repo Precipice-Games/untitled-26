@@ -24,42 +24,65 @@ public class Airship : MonoBehaviour
     private void OnEnable()
     {
         PlayerInteraction.playerInteraction += Interaction;
+        PlayerGroundcast.airshipCheck += AirshipCheck;
     }
 
     // Unsubscribe from events
     private void OnDisable()
     {
         PlayerInteraction.playerInteraction -= Interaction;
+        PlayerGroundcast.airshipCheck += AirshipCheck;
     }
 
+    // /// <summary>
+    // /// Called when the Player's raycast enters the body of the vessel.
+    // /// This sets onAirship to true and invokes the playerOnAirship event
+    // /// (true), which is picked up by InteractionPrompt.cs.
+    // /// </summary>
+    // /// <param name="other"></param>
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         playerOnAirship?.Invoke(true);
+    //         onAirship = true;
+    //         player = other.gameObject;
+    //     }
+    // }
+    //
+    // /// <summary>
+    // /// Called when the Player's collider exits the rune circle collider.
+    // /// This sets inCircle to false and invokes the playerInCircle event
+    // /// (false), which is picked up by InteractionPrompt.cs.
+    // /// </summary>
+    // /// <param name="other"></param>
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         playerOnAirship?.Invoke(false);
+    //         onAirship = false;
+    //     }
+    // }
+    
     /// <summary>
-    /// Called when the Player's raycast enters the body of the vessel.
-    /// This sets onAirship to true and invokes the playerOnAirship event
-    /// (true), which is picked up by InteractionPrompt.cs.
+    /// Checks if the Player is on the ground. Consistently works
+    /// to update the isGrounded and jumpsRemaining variables
+    /// Called at the end of every FixedUpdate().
     /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerEnter(Collider other)
+    private void AirshipCheck(bool grounded)
     {
-        if (other.CompareTag("Player"))
+        // If the Player is grounded
+        if (grounded)
         {
+            onAirship = true; // Player is on the ground
             playerOnAirship?.Invoke(true);
-            onAirship = true;
-            player = other.gameObject;
         }
-    }
-
-    /// <summary>
-    /// Called when the Player's collider exits the rune circle collider.
-    /// This sets inCircle to false and invokes the playerInCircle event
-    /// (false), which is picked up by InteractionPrompt.cs.
-    /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        else
         {
-            playerOnAirship?.Invoke(false);
+            // Player is not on the ground
             onAirship = false;
+            playerOnAirship?.Invoke(false);
         }
     }
 
