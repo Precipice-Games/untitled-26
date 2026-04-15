@@ -1,21 +1,29 @@
 using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // This script is used for Skye's airship.
 
 public class Airship : MonoBehaviour, IInteractable
 {
+    public enum Destination
+    {
+        MotherIsland,
+        IceIsland,
+        OasisIsland
+    }
+    
     [Title("Airship Variables", "Variables related to Skye's Airship.")]
-    public IslandManager islandManager;
+    [PropertyTooltip("The next island the Player should travel to after completing required tasks.")]
+    public Destination nextDestination = Destination.IceIsland; // Default is Ice Island
     
     /// <summary>
     /// Tracks if player is standing on the Airship.
     /// </summary>
     private bool onAirship;
-    private GameObject player;
 
-    // An event that is invoked when the player stands on the rune circle
+    // Static event that is invoked when the player boards the Airship
     public static event Action<bool> playerOnAirship;
     
     private bool islandCompleted;
@@ -23,14 +31,12 @@ public class Airship : MonoBehaviour, IInteractable
     // Subscribe to events
     private void OnEnable()
     {
-        // PlayerInteraction.playerInteraction += Interaction;
         PlayerGroundcast.airshipCheck += AirshipCheck;
     }
 
     // Unsubscribe from events
     private void OnDisable()
     {
-        // PlayerInteraction.playerInteraction -= Interaction;
         PlayerGroundcast.airshipCheck -= AirshipCheck;
     }
     
@@ -72,25 +78,39 @@ public class Airship : MonoBehaviour, IInteractable
         // Check that the island has been completed
         if (!islandCompleted) return;
         
-        Debug.Log("The Interaction() method was triggered.");
         Debug.Log("Airship.cs >> Player has interacted with the airship and the island is completed. Teleporting player to next location.");
+
+        // Depart to the next destination
+        Depart(nextDestination);
     }
 
     /// <summary>
-    /// Verifies that this rune circle has the puzzleInfo variable for its corresponding puzzle.
+    /// Departs the Player to the next destination based on the value of nextDestination.
+    /// The value of nextDestination is set in the Inspector of the Airship.
     /// </summary>
-    /// <returns></returns>
-    private bool IslandManagerFound()
+    private void Depart(Destination destination)
     {
-        if (islandManager != null)
+        switch (destination)
         {
-            return true;
+            case Destination.MotherIsland:
+                Debug.Log("Airship.cs >> Now departing to Mother Island...");
+                SceneManager.LoadScene("Mother_Island");
+                break;
+            case Destination.IceIsland:
+                Debug.Log("Airship.cs >> Now departing to Ice Island...");
+                SceneManager.LoadScene("Ice_Island");
+                break;
+            case Destination.OasisIsland:
+                Debug.Log("Airship.cs >> Now departing to Oasis Island...");
+                SceneManager.LoadScene("Oasis_Island");
+                break;
         }
-
-        Debug.LogError("Airship.cs >> No island manager is attached to this airship.");
-        return false;
     }
 
+    /// <summary>
+    /// This method is subscribed to the islandCompleted event in IslandManager.cs
+    /// and verifies that an island's objectives have been met.
+    /// </summary>
     public void IslandCompleted()
     {
         islandCompleted = true;

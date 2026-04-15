@@ -43455,6 +43455,10 @@ PrefabInstance:
       propertyPath: islandManager
       value: 
       objectReference: {fileID: 7795512651711934441}
+    - target: {fileID: 8243120335362119426, guid: 4553a0c6fd7599440837fbaf3d828dc4, type: 3}
+      propertyPath: nextDestination
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

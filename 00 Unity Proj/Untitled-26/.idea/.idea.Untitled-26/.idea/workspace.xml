@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5e5ce399-7c0f-4455-b410-4ddcc8af76a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Islands/Ice_Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Islands/Ice_Island.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGroundcast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGroundcast.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Transportation/Airship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Transportation/Airship.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +37,10 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fdb1449b6bf4282995fdc1be91d92042b400/49/57805c1e/Physics.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fdb1449b6bf4282995fdc1be91d92042b400/8a/4d3fd545/RaycastHit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18b3b31e3d8341f487466ebb6800bc67212400/50/28cfacd1/ExecuteAlways.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fdb1449b6bf4282995fdc1be91d92042b400/8d/e1f5295d/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game States/ViewManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/nikki/untitled-26/00 Unity Proj/Untitled-26/Assets/Scripts/Interaction/InteractableCrystal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/TimerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerGroundcast.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
