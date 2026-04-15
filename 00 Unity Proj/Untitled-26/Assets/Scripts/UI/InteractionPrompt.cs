@@ -33,7 +33,7 @@ public class InteractionPrompt : MonoBehaviour
         PlayerRaycastInteraction.raycastHitInteractable += ToggleRaycast;
         PlayerGroundcast.groundcastHitInteractable += ToggleRaycast;
         RuneCircle.playerInCircle += ToggleRuneCircle;
-        Airship.playerOnAirship += ToggleAirship;
+        PlayerGroundcast.airshipCheck += ToggleAirship;
     }
     
     // Unsubscribe from events
@@ -42,7 +42,8 @@ public class InteractionPrompt : MonoBehaviour
         PlayerRaycastInteraction.raycastHitInteractable -= ToggleRaycast;
         PlayerGroundcast.groundcastHitInteractable -= ToggleRaycast;
         RuneCircle.playerInCircle -= ToggleRuneCircle;
-        Airship.playerOnAirship -= ToggleAirship;
+        // Airship.playerOnAirship -= ToggleAirship;
+        PlayerGroundcast.airshipCheck += ToggleAirship;
     }
     
     /// <summary>
