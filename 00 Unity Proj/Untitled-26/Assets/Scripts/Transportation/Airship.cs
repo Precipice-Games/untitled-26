@@ -37,7 +37,12 @@ public class Airship : MonoBehaviour, IInteractable
     {
         PlayerGroundcast.airshipCheck -= AirshipCheck;
     }
-    
+
+    private void Awake()
+    {
+        islandCompleted = false;
+    }
+
     /// <summary>
     /// Checks if the Player is on the ground. Consistently works
     /// to update the isGrounded and jumpsRemaining variables
