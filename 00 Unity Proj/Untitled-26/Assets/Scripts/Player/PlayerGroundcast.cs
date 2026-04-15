@@ -72,15 +72,15 @@ public class PlayerGroundcast : MonoBehaviour
             // First check if it's the ground
             if (groundRaycastHit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
             {
+                Debug.DrawRay(origin, direction * groundRayLength, Color.green);
                 currentPlatform = groundRaycastHit.collider.gameObject;
                 if (printGroundedStatus) Debug.Log("PlayerGroundcast.cs >> Grounded on: " + currentPlatform.name);
-                groundCheck?.Invoke(true);
             }
             else
             {
+                Debug.DrawRay(origin, direction * groundRayLength, Color.purple);
                 currentPlatform = groundRaycastHit.collider.gameObject;
                 if (printGroundedStatus) Debug.Log("PlayerGroundcast.cs >> Grounded on: " + currentPlatform.name);
-                airshipCheck?.Invoke(true);
             }
         }
         else
@@ -88,6 +88,9 @@ public class PlayerGroundcast : MonoBehaviour
             Debug.DrawRay(origin, direction * groundRayLength, Color.red);
             currentPlatform = null;
         }
+        
+        groundCheck?.Invoke(isHitting);
+        airshipCheck?.Invoke(isHitting);
     }
 
     /// <summary>
