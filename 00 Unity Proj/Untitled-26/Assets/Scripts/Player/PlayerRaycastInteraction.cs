@@ -36,7 +36,7 @@ public class PlayerRaycastInteraction : MonoBehaviour
     
     // Static event to notify subscribers of raycast toggling
     public static event Action<bool> raycastToggled;
-    // Static event to notofy subscribers that the raycast is hitting an interactable object
+    // Static event to notify subscribers that the raycast is hitting an interactable object
     public static event Action<bool> raycastHitInteractable;
 
     /*

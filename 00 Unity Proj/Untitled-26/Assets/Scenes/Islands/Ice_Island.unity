@@ -32661,6 +32661,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.9992676
       objectReference: {fileID: 0}
+    - target: {fileID: 617803613672485369, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 121.70703
+      objectReference: {fileID: 0}
     - target: {fileID: 1100297765787535934, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.00024414062
@@ -43438,6 +43442,10 @@ PrefabInstance:
     - target: {fileID: 6553556252344773517, guid: 4553a0c6fd7599440837fbaf3d828dc4, type: 3}
       propertyPath: m_Name
       value: Airship
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553556252344773517, guid: 4553a0c6fd7599440837fbaf3d828dc4, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8243120335362119426, guid: 4553a0c6fd7599440837fbaf3d828dc4, type: 3}
       propertyPath: islandManager

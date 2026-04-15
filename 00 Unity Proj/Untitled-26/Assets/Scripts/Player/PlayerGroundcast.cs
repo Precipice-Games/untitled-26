@@ -15,10 +15,8 @@ public class PlayerGroundcast : MonoBehaviour
     public bool groundChecking = true;
     private Ray groundInteractionRay;
     private RaycastHit groundRaycastHit;
-    bool hittingGround;
-    bool hittingAirship;
-    private LayerMask groundLayerMask;
-    private LayerMask airshipLayerMask;
+    bool isHitting;
+    private LayerMask layerMask;
     public GameObject currentPlatform;
     public float activeTimer = 5.0f;
     public float maxTime = 5.0f;
@@ -48,9 +46,8 @@ public class PlayerGroundcast : MonoBehaviour
         // Even though the raw value of a ray is often half the size
         // of the object's height, sometimes there are issues detecting
         // the ground. Hence, why adding a tweakable buffer is necessary.
-          
-        groundLayerMask = LayerMask.GetMask("Ground");
-        airshipLayerMask = LayerMask.GetMask("Airship");
+        
+        layerMask = LayerMask.GetMask("Ground", "Airship");
     }
     
     /// <summary>
@@ -67,27 +64,30 @@ public class PlayerGroundcast : MonoBehaviour
         Vector3 direction = groundInteractionRay.direction;
 
         // Perform the raycast using the ray's origin and downward direction
-        hittingGround = Physics.Raycast(groundInteractionRay, out groundRaycastHit, groundRayLength, groundLayerMask);
-        
-        // Another raycast but for the airship
-        // hittingAirship = Physics.Raycast(groundInteractionRay, out groundRaycastHit, groundRayLength, airshipLayerMask);
+        isHitting = Physics.Raycast(groundInteractionRay, out groundRaycastHit, groundRayLength, layerMask);
 
         // If the ray is hitting something
-        if (hittingGround)
+        if (isHitting)
         {
-            // Turn the ray green
-            Debug.DrawRay(origin, direction * groundRayLength, Color.green);
-            currentPlatform = groundRaycastHit.collider.gameObject;
-            if (printGroundedStatus) Debug.Log("PlayerGroundcast.cs >> Grounded on: " + currentPlatform.name);
+            // First check if it's the ground
+            if (groundRaycastHit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                currentPlatform = groundRaycastHit.collider.gameObject;
+                if (printGroundedStatus) Debug.Log("PlayerGroundcast.cs >> Grounded on: " + currentPlatform.name);
+                groundCheck?.Invoke(true);
+            }
+            else
+            {
+                currentPlatform = groundRaycastHit.collider.gameObject;
+                if (printGroundedStatus) Debug.Log("PlayerGroundcast.cs >> Grounded on: " + currentPlatform.name);
+                airshipCheck?.Invoke(true);
+            }
         }
         else
         {
             Debug.DrawRay(origin, direction * groundRayLength, Color.red);
             currentPlatform = null;
         }
-
-        groundCheck?.Invoke(hittingGround);
-        airshipCheck?.Invoke(hittingAirship);
     }
 
     /// <summary>
