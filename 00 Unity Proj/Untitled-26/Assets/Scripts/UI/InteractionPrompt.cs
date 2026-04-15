@@ -31,16 +31,18 @@ public class InteractionPrompt : MonoBehaviour
     private void OnEnable()
     {
         PlayerRaycastInteraction.raycastHitInteractable += ToggleRaycast;
+        PlayerGroundcast.groundcastHitInteractable += ToggleRaycast;
         RuneCircle.playerInCircle += ToggleRuneCircle;
-        PlayerGroundcast.airshipCheck += ToggleAirship;
+        Airship.playerOnAirship += ToggleAirship;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         PlayerRaycastInteraction.raycastHitInteractable -= ToggleRaycast;
+        PlayerGroundcast.groundcastHitInteractable -= ToggleRaycast;
         RuneCircle.playerInCircle -= ToggleRuneCircle;
-        PlayerGroundcast.airshipCheck += ToggleAirship;
+        Airship.playerOnAirship -= ToggleAirship;
     }
     
     /// <summary>
@@ -93,12 +95,12 @@ public class InteractionPrompt : MonoBehaviour
     /// Toggles the boolean variable that tracks if the player is standing on the airship.
     /// If the interaction should be enabled, the prompt is toggled on. If not, the prompt
     /// is toggled off.
-    /// <param name="inCircle"></param>
+    /// <param name="onAirship"></param>
     /// </summary>
     private void ToggleAirship(bool onAirship)
     {
         isOnAirship = onAirship;
-        if (isOnAirship)
+        if (isRaycastHitting || isOnAirship)
         {
             TogglePrompt(true);
         }
