@@ -6,7 +6,7 @@ using static UnityEngine.UI.Image;
 
 // This script is responsible for handling the player's interaction-based
 // raycast in the environment. There is another raycast created for the Player
-// in BoxCastGrounded.cs, but that is for ground checks, NOT for interactions
+// in PlayerGroundcast.cs, but that is for ground checks, NOT for interactions
 // in the environment.
 
 public class PlayerRaycastInteraction : MonoBehaviour
@@ -21,9 +21,6 @@ public class PlayerRaycastInteraction : MonoBehaviour
     //    ==== Interactable Object ====
     public GameObject activeInteractable; //Stores overlapping interactable object
     public bool canInteract = true;
-
-    //    === UI ===
-    //public GameObject interactionUI;
 
     //    ==== Timer ====
     public float activeTimer = 5.0f;

@@ -12,14 +12,11 @@ using UnityEngine;
 public class PlayerGroundcast : MonoBehaviour
 {
     [Title("Grounded Checker", "General variables used to handle ground checking.")]
-    public bool groundChecking = true;
     private Ray groundInteractionRay;
     private RaycastHit groundRaycastHit;
     bool isHitting;
     private LayerMask layerMask;
     public GameObject currentPlatform;
-    public float activeTimer = 5.0f;
-    public float maxTime = 5.0f;
     
     [Space]
     [Title("Raycast Settings", "Settings for the ray. Hover over variables for more information.")]
