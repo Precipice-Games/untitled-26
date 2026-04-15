@@ -4,7 +4,13 @@ using Sirenix.OdinInspector;
 using UnityEditor.Rendering;
 using UnityEngine;
 
-[ExecuteAlways]
+// NOTE: The [ExecuteAlways] should ONLY ever be uncommented to accurately place
+// puzzles in the scene. This is because tiles are distributed at runtime, so it's
+// hard to know where they will actually end up. However, for accurate testing of
+// the puzzle system, this could be commented out since it affects the resource
+// system and other data.
+//
+// [ExecuteAlways]
 public class GridManager : MonoBehaviour
 {
     [Space]
