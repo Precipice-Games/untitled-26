@@ -100,7 +100,7 @@ public class InteractionPrompt : MonoBehaviour
     private void ToggleAirship(bool onAirship)
     {
         isOnAirship = onAirship;
-        if (isRaycastHitting || isOnAirship)
+        if (isOnAirship)
         {
             TogglePrompt(true);
         }
