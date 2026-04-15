@@ -63,7 +63,7 @@ public class InteractionPrompt : MonoBehaviour
     private void ToggleRaycast(bool isHitting)
     {
         isRaycastHitting = isHitting;
-        if(isRaycastHitting || isInCircle)
+        if(isRaycastHitting || isInCircle || isOnAirship)
         {
             TogglePrompt(true);
         }

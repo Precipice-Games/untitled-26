@@ -97,7 +97,6 @@ public class PlayerRaycastInteraction : MonoBehaviour
             activeInteractable = null;
             raycastHitInteractable?.Invoke(false);
         }
-
     }
     
     /// <summary>

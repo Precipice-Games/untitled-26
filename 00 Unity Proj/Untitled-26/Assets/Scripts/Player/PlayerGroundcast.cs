@@ -70,16 +70,22 @@ public class PlayerGroundcast : MonoBehaviour
         // If the ray is hitting something
         if (isHitting)
         {
+            int hitLayer = groundRaycastHit.collider.gameObject.layer;
+            int groundLayer = LayerMask.NameToLayer("Ground");
+            int airshipLayer = LayerMask.NameToLayer("Airship");
+            
             // First check if it's the ground
-            if (groundRaycastHit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            if (hitLayer == groundLayer)
             {
                 Debug.DrawRay(origin, direction * groundRayLength, Color.green);
                 currentPlatform = groundRaycastHit.collider.gameObject;
                 if (printGroundedStatus) Debug.Log("PlayerGroundcast.cs >> Grounded on: " + currentPlatform.name);
                 onGround = true;
                 onAirship = false;
+                activeInteractable = null;
+                groundcastHitInteractable?.Invoke(false);
             }
-            else
+            else if (hitLayer == airshipLayer)
             {
                 // If not, assume the Player is standing on the airship
                 // (only checking for "Ground" and "Airship" layers)
