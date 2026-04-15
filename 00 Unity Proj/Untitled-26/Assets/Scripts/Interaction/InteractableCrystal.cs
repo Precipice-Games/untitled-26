@@ -30,15 +30,21 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
     public void Interaction()
     {
 
+        // Ensure the puzzle rises up from the ground
         if (finalPuzzle != null && finalPuzzle.puzzleSolved == true && this.transform.position.y < 3.2)
         {
             this.transform.position = new Vector3(transform.position.x, transform.position.y + Time.deltaTime, transform.position.z);
         }
-
-    }
-
-    public void Interaction()
-    {
+        
         crystalCollected.Invoke();
+
     }
+
+    // Commenting this out for now. This was the original Interaction() method I was
+    // working with for the progression system, but I will try to integrate my work
+    // with what Dan was working on in the version above. -- Nikki
+    // public void Interaction()
+    // {
+    //     crystalCollected.Invoke();
+    // }
 }
