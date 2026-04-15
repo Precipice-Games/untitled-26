@@ -1,5 +1,7 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 using Yarn.Unity;
 
 // This script is used to track data about a given island. It is
@@ -23,10 +25,19 @@ public class IslandManager : MonoBehaviour
     public IslandName islandName = IslandName.IceIsland; // Default is Ice Island
     [PropertyTooltip("Attach the relevant data for this island's puzzles.")]
     public IslandPuzzleManager islandPuzzleManager;
-    [PropertyTooltip("Attach the end crystal collectable for this island.")]
-    public GameObject endCrystal;
+    // [PropertyTooltip("Attach the end crystal collectable for this island.")]
+    // public GameObject endCrystal;
     [PropertyTooltip("Attach the InMemoryVariableStorage component from the DialogueSystem object.")]
     public InMemoryVariableStorage variableStorage;
+    
+    [Space]
+    [Title("IslandCompleted", "This event is fired when all puzzles are complete and the crystal has been collected.")]
+    public UnityEvent islandCompleted;
+    
+    // Variables to track and update the island's completion status
+    private bool allPuzzlesCompleted;
+    private bool crystalCollected;
+    // public static event Action<PuzzleInformation> islandCompleted;
     
     /// <summary>
     /// Used to verify that all the current island's puzzles have been completed. Also
@@ -39,19 +50,24 @@ public class IslandManager : MonoBehaviour
             case IslandName.MotherIsland:
                 Debug.Log("IslandManager.cs >> Mother Island puzzles completed!");
                 // variableStorage.SetValue("motherFinished", true);
+                allPuzzlesCompleted = true;
                 break;
             case IslandName.IceIsland:
                 Debug.Log("IslandManager.cs >> Ice Island puzzles completed!");
                 variableStorage.SetValue("$iceFinished", true);
+                allPuzzlesCompleted = true;
                 break;
             case IslandName.OasisIsland:
                 Debug.Log("IslandManager.cs >> Oasis Island puzzles completed!");
                 // variableStorage.SetValue("$oasisFinished", true);
+                allPuzzlesCompleted = true;
                 break;
             
             // TODO: Add more cases for each island and check with Matthew about
             //       the specific variable names in the YarnSpinner variable storage.
         }
+        
+        CheckIslandCompleted();
     }
 
     /// <summary>
@@ -61,6 +77,22 @@ public class IslandManager : MonoBehaviour
     /// </summary>
     public void CrystalCollected()
     {
-        
+        Debug.Log("IslandManager.cs >> Crystal collected!");
+        crystalCollected = true;
+        CheckIslandCompleted();
+    }
+
+    /// <summary>
+    /// Checks if the island has been completed by verifying that all puzzles have been completed
+    /// and the end crystal has been collected. If so, it invokes the islandCompleted event, which
+    /// is picked up by the Airship script to allow the Player to traverse to other islands.
+    /// </summary>
+    private void CheckIslandCompleted()
+    {
+        if (allPuzzlesCompleted && crystalCollected)
+        {
+            Debug.Log("IslandManager.cs >> Island completed!");
+            islandCompleted.Invoke();
+        }
     }
 }
