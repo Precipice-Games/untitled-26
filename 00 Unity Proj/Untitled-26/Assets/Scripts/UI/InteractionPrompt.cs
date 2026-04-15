@@ -33,7 +33,7 @@ public class InteractionPrompt : MonoBehaviour
         PlayerRaycastInteraction.raycastHitInteractable += ToggleRaycast;
         PlayerGroundcast.groundcastHitInteractable += ToggleRaycast;
         RuneCircle.playerInCircle += ToggleRuneCircle;
-        PlayerGroundcast.airshipCheck += ToggleAirship;
+        Airship.playerOnAirship += ToggleAirship;
     }
     
     // Unsubscribe from events
@@ -42,7 +42,7 @@ public class InteractionPrompt : MonoBehaviour
         PlayerRaycastInteraction.raycastHitInteractable -= ToggleRaycast;
         PlayerGroundcast.groundcastHitInteractable -= ToggleRaycast;
         RuneCircle.playerInCircle -= ToggleRuneCircle;
-        PlayerGroundcast.airshipCheck += ToggleAirship;
+        Airship.playerOnAirship -= ToggleAirship;
     }
     
     /// <summary>
@@ -100,7 +100,7 @@ public class InteractionPrompt : MonoBehaviour
     private void ToggleAirship(bool onAirship)
     {
         isOnAirship = onAirship;
-        if (isOnAirship)
+        if (isRaycastHitting || isOnAirship)
         {
             TogglePrompt(true);
         }
