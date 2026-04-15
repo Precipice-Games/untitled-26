@@ -33,37 +33,6 @@ public class Airship : MonoBehaviour
         PlayerInteraction.playerInteraction -= Interaction;
         PlayerGroundcast.airshipCheck += AirshipCheck;
     }
-
-    // /// <summary>
-    // /// Called when the Player's raycast enters the body of the vessel.
-    // /// This sets onAirship to true and invokes the playerOnAirship event
-    // /// (true), which is picked up by InteractionPrompt.cs.
-    // /// </summary>
-    // /// <param name="other"></param>
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     if (other.CompareTag("Player"))
-    //     {
-    //         playerOnAirship?.Invoke(true);
-    //         onAirship = true;
-    //         player = other.gameObject;
-    //     }
-    // }
-    //
-    // /// <summary>
-    // /// Called when the Player's collider exits the rune circle collider.
-    // /// This sets inCircle to false and invokes the playerInCircle event
-    // /// (false), which is picked up by InteractionPrompt.cs.
-    // /// </summary>
-    // /// <param name="other"></param>
-    // private void OnTriggerExit(Collider other)
-    // {
-    //     if (other.CompareTag("Player"))
-    //     {
-    //         playerOnAirship?.Invoke(false);
-    //         onAirship = false;
-    //     }
-    // }
     
     /// <summary>
     /// Checks if the Player is on the ground. Consistently works
