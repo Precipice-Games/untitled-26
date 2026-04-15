@@ -1604,6 +1604,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7199852587322879966, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
   m_PrefabInstance: {fileID: 1153222202}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1153222204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9191018659038673785, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
+  m_PrefabInstance: {fileID: 1153222202}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153222203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef105c14e09d4de8b6ca8006eee5c13c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleInformation
 --- !u!1 &1177211201 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4145066697662582406, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
@@ -2456,6 +2467,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2326836619177372947, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
+      propertyPath: finalPuzzle
+      value: 
+      objectReference: {fileID: 1153222204}
     - target: {fileID: 2326836619177372947, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
       propertyPath: crystalCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -18,9 +18,7 @@ public class Airship : MonoBehaviour, IInteractable
     [PropertyTooltip("The next island the Player should travel to after completing required tasks.")]
     public Destination nextDestination = Destination.IceIsland; // Default is Ice Island
     
-    /// <summary>
-    /// Tracks if player is standing on the Airship.
-    /// </summary>
+    // Tracks if player is standing on the Airship
     private bool onAirship;
 
     // Static event that is invoked when the player boards the Airship
