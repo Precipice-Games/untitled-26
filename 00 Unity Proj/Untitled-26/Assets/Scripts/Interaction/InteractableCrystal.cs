@@ -29,6 +29,16 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
 
     public void Interaction()
     {
+
+        if (finalPuzzle != null && finalPuzzle.puzzleSolved == true && this.transform.position.y < 3.2)
+        {
+            this.transform.position = new Vector3(transform.position.x, transform.position.y + Time.deltaTime, transform.position.z);
+        }
+
+    }
+
+    public void Interaction()
+    {
         crystalCollected.Invoke();
     }
 }
