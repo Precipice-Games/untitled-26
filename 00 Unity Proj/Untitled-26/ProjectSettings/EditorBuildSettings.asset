@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 442dbe2f6b0d1c141bb272b0dda2ae75
   - enabled: 1
+    path: Assets/Scenes/Islands/Mother_Island.unity
+    guid: b0f9925bf311b9842aabd9e35b314319
+  - enabled: 1
     path: Assets/Scenes/Islands/Ice_Island.unity
     guid: 0583bd6015ea60645b054d2f0b29d10d
+  - enabled: 1
+    path: Assets/Scenes/Islands/Oasis_Island.unity
+    guid: bc6d0fec251804af7a76b879b584c91b
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 329cb175dd24ca844b2b0a19fd7b9f47, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

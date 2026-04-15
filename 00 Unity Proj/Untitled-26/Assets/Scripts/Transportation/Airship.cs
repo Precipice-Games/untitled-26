@@ -1,0 +1,102 @@
+using System;
+using Sirenix.OdinInspector;
+using UnityEngine;
+
+// This script is used for Skye's airship.
+
+public class Airship : MonoBehaviour
+{
+    [Title("Puzzle Information")]
+    [InfoBox("Attach the data of the puzzle that this rune circle corresponds to.")]
+    public PuzzleInformation puzzleInfo;
+    public ExitPuzzleButton exitPuzzleButton;
+
+    /// <summary>
+    /// Tracks if player is standing on the Airship.
+    /// </summary>
+    private bool onAirship;
+    private GameObject player;
+
+    // An event that is invoked when the player stands on the rune circle
+    public static event Action<bool> playerOnAirship;
+
+    // Static event to notify subscribers of game state changes
+    public static event Action<PuzzleInformation> puzzleTriggered;
+
+    // Subscribe to events
+    private void OnEnable()
+    {
+        PlayerInteraction.playerInteraction += Interaction;
+    }
+
+    // Unsubscribe from events
+    private void OnDisable()
+    {
+        PlayerInteraction.playerInteraction -= Interaction;
+    }
+
+    /// <summary>
+    /// Called when the Player's raycast enters the body of the vessel.
+    /// This sets onAirship to true and invokes the playerOnAirship event
+    /// (true), which is picked up by InteractionPrompt.cs.
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerOnAirship?.Invoke(true);
+            onAirship = true;
+            player = other.gameObject;
+        }
+    }
+
+    /// <summary>
+    /// Called when the Player's collider exits the rune circle collider.
+    /// This sets inCircle to false and invokes the playerInCircle event
+    /// (false), which is picked up by InteractionPrompt.cs.
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerOnAirship?.Invoke(false);
+            onAirship = false;
+        }
+    }
+
+    /// <summary>
+    /// Subscribed to the playerInteraction event in PlayerInteraction.cs. This is
+    /// triggered when the Player presses 'E' while standing in the rune circle. It
+    /// first checks if the puzzle has already been completed. If so, the Player is
+    /// teleported to the next rune circle. Otherwise, puzzleTriggered is fired to
+    /// set up the puzzle state.
+    /// </summary>
+    public void Interaction()
+    {
+        // // If the player is not standing on the rune circle, break out.
+        // if (!onAirship) return;
+        
+        // Add other airship checks here
+
+        // // If the puzzle has not been completed, trigger the
+        // // event to notify subscribers.
+        // puzzleTriggered.Invoke(puzzleInfo);
+    }
+
+    /// <summary>
+    /// Verifies that this rune circle has the puzzleInfo variable for its corresponding puzzle.
+    /// </summary>
+    /// <returns></returns>
+    private bool PuzzleInfoFound()
+    {
+        if (puzzleInfo != null)
+        {
+            return true;
+        }
+
+        Debug.LogError("RuneCircle.cs >> No puzzle information attached to this rune circle.");
+        return false;
+    }
+}
