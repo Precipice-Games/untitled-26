@@ -132,4 +132,18 @@ public class PlayerGroundcast : MonoBehaviour
         // Cast downward so we hit the ground under the player (use world down for stability)
         groundInteractionRay.direction = Vector3.down;
     }
+    
+    /// <summary>
+    /// If the interact key is pressed the interact function triggers
+    /// the Interaction() function of the interactable object.
+    /// </summary>
+    public void Interact()
+    {
+        if (activeInteractable != null)
+        {
+            activeInteractable.GetComponent<IInteractable>().Interaction();
+            activeInteractable = null;
+            groundcastHitInteractable?.Invoke(true);
+        }
+    }
 }
