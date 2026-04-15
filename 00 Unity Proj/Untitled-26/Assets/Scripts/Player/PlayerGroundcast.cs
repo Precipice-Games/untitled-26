@@ -16,7 +16,9 @@ public class PlayerGroundcast : MonoBehaviour
     private Ray groundInteractionRay;
     private RaycastHit groundRaycastHit;
     bool hittingGround;
-    private LayerMask layerMask;
+    bool hittingAirship;
+    private LayerMask groundLayerMask;
+    private LayerMask airshipLayerMask;
     public GameObject currentPlatform;
     public float activeTimer = 5.0f;
     public float maxTime = 5.0f;
@@ -34,8 +36,9 @@ public class PlayerGroundcast : MonoBehaviour
     [PropertyTooltip("Print out what ground the Player is standing on. False by default.")]
     public bool printGroundedStatus = false;
     
-    // Static event to notify subscribers of game state changes
+    // Static events to notify subscribers of grounded raycast hits
     public static event Action<bool> groundCheck;
+    public static event Action<bool> airshipCheck;
 
     private void Awake()
     {
@@ -46,7 +49,8 @@ public class PlayerGroundcast : MonoBehaviour
         // of the object's height, sometimes there are issues detecting
         // the ground. Hence, why adding a tweakable buffer is necessary.
           
-        layerMask = LayerMask.GetMask("Ground");
+        groundLayerMask = LayerMask.GetMask("Ground");
+        airshipLayerMask = LayerMask.GetMask("Airship");
     }
     
     /// <summary>
@@ -63,7 +67,10 @@ public class PlayerGroundcast : MonoBehaviour
         Vector3 direction = groundInteractionRay.direction;
 
         // Perform the raycast using the ray's origin and downward direction
-        hittingGround = Physics.Raycast(groundInteractionRay, out groundRaycastHit, groundRayLength, layerMask);
+        hittingGround = Physics.Raycast(groundInteractionRay, out groundRaycastHit, groundRayLength, groundLayerMask);
+        
+        // Another raycast but for the airship
+        // hittingAirship = Physics.Raycast(groundInteractionRay, out groundRaycastHit, groundRayLength, airshipLayerMask);
 
         // If the ray is hitting something
         if (hittingGround)
@@ -80,6 +87,7 @@ public class PlayerGroundcast : MonoBehaviour
         }
 
         groundCheck?.Invoke(hittingGround);
+        airshipCheck?.Invoke(hittingAirship);
     }
 
     /// <summary>
