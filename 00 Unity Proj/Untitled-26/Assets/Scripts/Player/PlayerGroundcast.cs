@@ -19,6 +19,7 @@ public class PlayerGroundcast : MonoBehaviour
     public GameObject currentPlatform;
     private bool onGround;
     private bool onAirship;
+    public GameObject activeInteractable; //Stores overlapping interactable object
     
     [Space]
     [Title("Raycast Settings", "Settings for the ray. Hover over variables for more information.")]
@@ -36,6 +37,7 @@ public class PlayerGroundcast : MonoBehaviour
     // Static events to notify subscribers of grounded raycast hits
     public static event Action<bool> groundCheck;
     public static event Action<bool> airshipCheck;
+    public static event Action<bool> groundcastHitInteractable;
 
     private void Awake()
     {
@@ -79,19 +81,35 @@ public class PlayerGroundcast : MonoBehaviour
             }
             else
             {
+                // If not, assume the Player is standing on the airship
+                // (only checking for "Ground" and "Airship" layers)
                 Debug.DrawRay(origin, direction * groundRayLength, Color.purple);
                 currentPlatform = groundRaycastHit.collider.gameObject;
                 if (printGroundedStatus) Debug.Log("PlayerGroundcast.cs >> Grounded on: " + currentPlatform.name);
                 onGround = false;
                 onAirship = true;
+                
+                // Also check if the player is standing on an interactable object
+                if (groundRaycastHit.collider.GetComponent<IInteractable>() != null)
+                {
+                    activeInteractable = groundRaycastHit.collider.gameObject;
+                    groundcastHitInteractable?.Invoke(true);
+                }
+                else
+                {
+                    activeInteractable = null;
+                    groundcastHitInteractable?.Invoke(false);
+                }
             }
         }
         else
         {
             Debug.DrawRay(origin, direction * groundRayLength, Color.red);
             currentPlatform = null;
+            activeInteractable = null;
             onGround = false;
             onAirship = false;
+            groundcastHitInteractable?.Invoke(false);
         }
         
         groundCheck?.Invoke(onGround);

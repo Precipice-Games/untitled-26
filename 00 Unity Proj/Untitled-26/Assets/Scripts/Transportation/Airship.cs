@@ -4,7 +4,7 @@ using UnityEngine;
 
 // This script is used for Skye's airship.
 
-public class Airship : MonoBehaviour
+public class Airship : MonoBehaviour, IInteractable
 {
     [Title("Airship Variables", "Variables related to Skye's Airship.")]
     public IslandManager islandManager;
@@ -23,15 +23,15 @@ public class Airship : MonoBehaviour
     // Subscribe to events
     private void OnEnable()
     {
-        PlayerInteraction.playerInteraction += Interaction;
+        // PlayerInteraction.playerInteraction += Interaction;
         PlayerGroundcast.airshipCheck += AirshipCheck;
     }
 
     // Unsubscribe from events
     private void OnDisable()
     {
-        PlayerInteraction.playerInteraction -= Interaction;
-        PlayerGroundcast.airshipCheck += AirshipCheck;
+        // PlayerInteraction.playerInteraction -= Interaction;
+        PlayerGroundcast.airshipCheck -= AirshipCheck;
     }
     
     /// <summary>
@@ -39,17 +39,17 @@ public class Airship : MonoBehaviour
     /// to update the isGrounded and jumpsRemaining variables
     /// Called at the end of every FixedUpdate().
     /// </summary>
-    private void AirshipCheck(bool grounded)
+    private void AirshipCheck(bool isOnAirship)
     {
-        // If the Player is grounded
-        if (grounded)
+        // If the Player is on the airship
+        if (isOnAirship)
         {
-            onAirship = true; // Player is on the ground
+            onAirship = true; // Player is on the airship
             playerOnAirship?.Invoke(true);
         }
         else
         {
-            // Player is not on the ground
+            // Player is not on the airship
             onAirship = false;
             playerOnAirship?.Invoke(false);
         }
@@ -64,6 +64,7 @@ public class Airship : MonoBehaviour
     /// </summary>
     public void Interaction()
     {
+        Debug.Log("The Interaction() method was triggered.");
         // If the player is not standing on the rune circle, break out.
         if (!onAirship) return;
 
