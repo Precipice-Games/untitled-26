@@ -4,13 +4,11 @@ using UnityEngine;
 
 // This script is used for Skye's airship.
 
-public class Airship : MonoBehaviour
+public class Airship : MonoBehaviour, IInteractable
 {
-    [Title("Puzzle Information")]
-    [InfoBox("Attach the data of the puzzle that this rune circle corresponds to.")]
-    public PuzzleInformation puzzleInfo;
-    public ExitPuzzleButton exitPuzzleButton;
-
+    [Title("Airship Variables", "Variables related to Skye's Airship.")]
+    public IslandManager islandManager;
+    
     /// <summary>
     /// Tracks if player is standing on the Airship.
     /// </summary>
@@ -19,50 +17,41 @@ public class Airship : MonoBehaviour
 
     // An event that is invoked when the player stands on the rune circle
     public static event Action<bool> playerOnAirship;
-
-    // Static event to notify subscribers of game state changes
-    public static event Action<PuzzleInformation> puzzleTriggered;
+    
+    private bool islandCompleted;
 
     // Subscribe to events
     private void OnEnable()
     {
-        PlayerInteraction.playerInteraction += Interaction;
+        // PlayerInteraction.playerInteraction += Interaction;
+        PlayerGroundcast.airshipCheck += AirshipCheck;
     }
 
     // Unsubscribe from events
     private void OnDisable()
     {
-        PlayerInteraction.playerInteraction -= Interaction;
+        // PlayerInteraction.playerInteraction -= Interaction;
+        PlayerGroundcast.airshipCheck -= AirshipCheck;
     }
-
+    
     /// <summary>
-    /// Called when the Player's raycast enters the body of the vessel.
-    /// This sets onAirship to true and invokes the playerOnAirship event
-    /// (true), which is picked up by InteractionPrompt.cs.
+    /// Checks if the Player is on the ground. Consistently works
+    /// to update the isGrounded and jumpsRemaining variables
+    /// Called at the end of every FixedUpdate().
     /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerEnter(Collider other)
+    private void AirshipCheck(bool isOnAirship)
     {
-        if (other.CompareTag("Player"))
+        // If the Player is on the airship
+        if (isOnAirship)
         {
+            onAirship = true; // Player is on the airship
             playerOnAirship?.Invoke(true);
-            onAirship = true;
-            player = other.gameObject;
         }
-    }
-
-    /// <summary>
-    /// Called when the Player's collider exits the rune circle collider.
-    /// This sets inCircle to false and invokes the playerInCircle event
-    /// (false), which is picked up by InteractionPrompt.cs.
-    /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        else
         {
-            playerOnAirship?.Invoke(false);
+            // Player is not on the airship
             onAirship = false;
+            playerOnAirship?.Invoke(false);
         }
     }
 
@@ -75,28 +64,36 @@ public class Airship : MonoBehaviour
     /// </summary>
     public void Interaction()
     {
-        // // If the player is not standing on the rune circle, break out.
-        // if (!onAirship) return;
-        
-        // Add other airship checks here
+        Debug.Log("The Interaction() method was triggered.");
+        // If the player is not standing on the rune circle, break out.
+        if (!onAirship) return;
 
-        // // If the puzzle has not been completed, trigger the
-        // // event to notify subscribers.
-        // puzzleTriggered.Invoke(puzzleInfo);
+        // If there's no island manager, break out.
+        if (!IslandManagerFound()) return;
+        
+        // Check that the 
+        if (!islandCompleted) return;
+        
+        Debug.Log("Airship.cs >> Player has interacted with the airship and the island is completed. Teleporting player to next location.");
     }
 
     /// <summary>
     /// Verifies that this rune circle has the puzzleInfo variable for its corresponding puzzle.
     /// </summary>
     /// <returns></returns>
-    private bool PuzzleInfoFound()
+    private bool IslandManagerFound()
     {
-        if (puzzleInfo != null)
+        if (islandManager != null)
         {
             return true;
         }
 
-        Debug.LogError("RuneCircle.cs >> No puzzle information attached to this rune circle.");
+        Debug.LogError("Airship.cs >> No island manager is attached to this airship.");
         return false;
+    }
+
+    public void IslandCompleted()
+    {
+        islandCompleted = true;
     }
 }

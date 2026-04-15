@@ -217,9 +217,6 @@ public class PlayerFixedMovement : MonoBehaviour
         destinationZ = 0;
         TryToMovePlayer(xDir, zDir);
     }
-    
-    // TODO: Clean this method up and make it more efficient. Would like to
-    //       set the Player's position using grid coordinates if possible.
 
     /// <summary>
     /// Attempts to move the Player in the specified direction on the puzzle grid.
