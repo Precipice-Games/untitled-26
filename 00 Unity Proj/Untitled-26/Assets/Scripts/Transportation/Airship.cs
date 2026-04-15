@@ -64,16 +64,15 @@ public class Airship : MonoBehaviour, IInteractable
     /// </summary>
     public void Interaction()
     {
-        Debug.Log("The Interaction() method was triggered.");
-        // If the player is not standing on the rune circle, break out.
-        if (!onAirship) return;
-
-        // If there's no island manager, break out.
-        if (!IslandManagerFound()) return;
+        Debug.Log($"Airship.cs >> onAirship = {onAirship} | islandCompleted = {islandCompleted}");
         
-        // Check that the 
+        // If the player is not standing on the airship, break out.
+        if (!onAirship) return;
+        
+        // Check that the island has been completed
         if (!islandCompleted) return;
         
+        Debug.Log("The Interaction() method was triggered.");
         Debug.Log("Airship.cs >> Player has interacted with the airship and the island is completed. Teleporting player to next location.");
     }
 
