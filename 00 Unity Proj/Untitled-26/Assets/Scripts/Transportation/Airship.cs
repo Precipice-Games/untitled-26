@@ -94,7 +94,7 @@ public class Airship : MonoBehaviour, IInteractable
 
     public void IslandCompleted()
     {
-        Debug.Log($"Airship.cs >> islandCompleted = {islandCompleted}. Airship is now ready to teleport player to next location.");
         islandCompleted = true;
+        Debug.Log($"Airship.cs >> islandCompleted = {islandCompleted}. Airship is now ready to teleport player to next location.");
     }
 }

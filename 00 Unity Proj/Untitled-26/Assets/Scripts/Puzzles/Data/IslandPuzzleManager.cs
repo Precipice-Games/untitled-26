@@ -20,12 +20,14 @@ public class IslandPuzzleManager : MonoBehaviour
     private void OnEnable()
     {
         PlayerFixedMovement.updatePuzzleStatus += UpdateCompletionStatus;
+        PuzzleCheatSign.allPuzzlesComplete += CheckAllPuzzlesCompleted;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         PlayerFixedMovement.updatePuzzleStatus -= UpdateCompletionStatus;
+        PuzzleCheatSign.allPuzzlesComplete -= CheckAllPuzzlesCompleted;
     }
     
     public void UpdateCompletionStatus(PuzzleInformation completedPuzzle)
