@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8775108636264644345}
   - component: {fileID: 3658874787918128072}
   - component: {fileID: 3021182400422307152}
+  - component: {fileID: 7965595878172695588}
   - component: {fileID: 8243120335362119426}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Airship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,6 +114,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7965595878172695588
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6553556252344773517}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &8243120335362119426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,5 +153,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e95b7be7f041b0bdbcaa73cbb80815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Airship
-  puzzleInfo: {fileID: 0}
-  exitPuzzleButton: {fileID: 0}
+  islandManager: {fileID: 0}

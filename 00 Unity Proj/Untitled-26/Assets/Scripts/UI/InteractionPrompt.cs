@@ -32,6 +32,7 @@ public class InteractionPrompt : MonoBehaviour
     {
         PlayerRaycastInteraction.raycastHitInteractable += ToggleRaycast;
         RuneCircle.playerInCircle += ToggleRuneCircle;
+        Airship.playerOnAirship += ToggleAirship;
     }
     
     // Unsubscribe from events
@@ -39,8 +40,8 @@ public class InteractionPrompt : MonoBehaviour
     {
         PlayerRaycastInteraction.raycastHitInteractable -= ToggleRaycast;
         RuneCircle.playerInCircle -= ToggleRuneCircle;
+        Airship.playerOnAirship -= ToggleAirship;
     }
-
     
     /// <summary>
     /// Toggles the interaction prompt on and off, 

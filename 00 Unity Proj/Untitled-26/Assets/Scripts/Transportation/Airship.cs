@@ -17,9 +17,8 @@ public class Airship : MonoBehaviour
 
     // An event that is invoked when the player stands on the rune circle
     public static event Action<bool> playerOnAirship;
-
-    // Static event to notify subscribers of game state changes
-    public static event Action<PuzzleInformation> puzzleTriggered;
+    
+    private bool islandCompleted;
 
     // Subscribe to events
     private void OnEnable()
@@ -73,14 +72,16 @@ public class Airship : MonoBehaviour
     /// </summary>
     public void Interaction()
     {
-        // // If the player is not standing on the rune circle, break out.
-        // if (!onAirship) return;
-        
-        // Add other airship checks here
+        // If the player is not standing on the rune circle, break out.
+        if (!onAirship) return;
 
-        // // If the puzzle has not been completed, trigger the
-        // // event to notify subscribers.
-        // puzzleTriggered.Invoke(puzzleInfo);
+        // If there's no island manager, break out.
+        if (!IslandManagerFound()) return;
+        
+        // Check that the 
+        if (!islandCompleted) return;
+        
+        Debug.Log("Airship.cs >> Player has interacted with the airship and the island is completed. Teleporting player to next location.");
     }
 
     /// <summary>
@@ -96,5 +97,10 @@ public class Airship : MonoBehaviour
 
         Debug.LogError("Airship.cs >> No island manager is attached to this airship.");
         return false;
+    }
+
+    public void IslandCompleted()
+    {
+        islandCompleted = true;
     }
 }
