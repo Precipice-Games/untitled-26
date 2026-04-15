@@ -42,7 +42,6 @@ public class InteractionPrompt : MonoBehaviour
         PlayerRaycastInteraction.raycastHitInteractable -= ToggleRaycast;
         PlayerGroundcast.groundcastHitInteractable -= ToggleRaycast;
         RuneCircle.playerInCircle -= ToggleRuneCircle;
-        // Airship.playerOnAirship -= ToggleAirship;
         PlayerGroundcast.airshipCheck += ToggleAirship;
     }
     
