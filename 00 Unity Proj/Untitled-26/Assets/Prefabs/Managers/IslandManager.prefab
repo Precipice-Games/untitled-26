@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc162eaf61f74473aa20c3e0fa3098ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IslandManager
-  islandName: 1
+  islandName: 0
   islandPuzzleManager: {fileID: 0}
   variableStorage: {fileID: 0}
   islandCompleted:
