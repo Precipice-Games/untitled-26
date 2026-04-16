@@ -164,6 +164,11 @@ public class PlayerMovement : MonoBehaviour
             jump = false;
             Debug.Log("PlayerMovement.cs >> Jump canceled.");
         }
+        else if (context.canceled)
+        {
+            jump = false;
+            Debug.Log("PlayerMovement.cs >> Jump canceled.");
+        }
         
         // Normally, we would run the following:
         // if (context.performed && isGrounded && jumpsRemaining > 0)
