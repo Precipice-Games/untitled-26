@@ -5502,7 +5502,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563326666085521974, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 563326666085521974, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 563326666085521974, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: startingGridX
@@ -5554,7 +5558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 942123610933921151, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 942123610933921151, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 942123610933921151, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: tileType
@@ -5610,15 +5618,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1640623606830934790, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: width
-      value: 12
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1640623606830934790, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: height
-      value: 13
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1788808401797866365, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788808401797866365, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1788808401797866365, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: startingGridX
@@ -5646,11 +5658,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2275969997962342486, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2275969997962342486, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridZ
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2275969997962342486, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: tileType
@@ -5710,7 +5722,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2543200966874335288, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543200966874335288, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2543200966874335288, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: startingGridX
@@ -5750,11 +5766,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3034548341052867213, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3034548341052867213, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridZ
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3034548341052867213, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: tileType
@@ -5846,7 +5862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3624906698350998147, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.799
+      value: -3.9
       objectReference: {fileID: 0}
     - target: {fileID: 3624906698350998147, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5854,7 +5870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3624906698350998147, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.752
+      value: -7.18
       objectReference: {fileID: 0}
     - target: {fileID: 3942273821399491795, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5882,7 +5898,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4064603128251208255, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064603128251208255, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4064603128251208255, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: startingGridX
@@ -5910,7 +5930,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4272864839946960334, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272864839946960334, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4272864839946960334, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: tileType
@@ -5942,11 +5966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4441267795168363193, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4441267795168363193, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridZ
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4441267795168363193, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: startingGridX
@@ -6006,15 +6030,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4759651532516943100, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4759651532516943100, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridZ
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4759651532516943100, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: startingGridX
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4759651532516943100, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: originalColor.a
@@ -6074,11 +6098,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5025002967551595757, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5025002967551595757, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridZ
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5025002967551595757, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: startingGridX
@@ -6103,6 +6127,14 @@ PrefabInstance:
     - target: {fileID: 5025002967551595757, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: originalColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689756566394007165, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridX
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689756566394007165, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5689756566394007165, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: tileType
@@ -6150,7 +6182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6321783586416998415, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321783586416998415, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6321783586416998415, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: tileType
@@ -6182,11 +6218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6625943618315678091, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6625943618315678091, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridZ
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6625943618315678091, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: startingGridX
@@ -6214,7 +6250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7012397342193439338, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012397342193439338, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7012397342193439338, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: startingGridX
@@ -6330,7 +6370,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8509538877335474834, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8509538877335474834, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8509538877335474834, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: tileType
@@ -6370,7 +6414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9059629293011494203, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059629293011494203, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: gridZ
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9059629293011494203, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: tileType
@@ -28403,8 +28451,8 @@ MonoBehaviour:
   tileType: 0
   startingGridX: 3
   startingGridZ: 5
-  gridX: 3
-  gridZ: 5
+  gridX: 4
+  gridZ: 7
   gridManager: {fileID: 1508110539}
   originalColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
