@@ -77,6 +77,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
         ExitPuzzleButton.exitPuzzle += TransitionToState;
+        UIChangerButton.optionsMenuToggled += TogglePause;
     }
     
     private void OnDisable()
@@ -84,6 +85,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneManager.activeSceneChanged -= OnActiveSceneChanged;
         ExitPuzzleButton.exitPuzzle -= TransitionToState;
+        UIChangerButton.optionsMenuToggled -= TogglePause;
     }
     
     // Runs when a scene is loaded
@@ -140,27 +142,27 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         switch (newState)
         {
             case GameState.MainMenu:
-                pausable = false;
+                TogglePause(false);
                 Time.timeScale = 0.0f;
                 break;
             case GameState.Exploration:
-                pausable = true;
+                TogglePause(true);
                 Time.timeScale = 1.0f;
                 break;
             case GameState.Puzzle:
-                pausable = true;
+                TogglePause(true);
                 Time.timeScale = 1.0f;
                 break;
             case GameState.Dialogue:
-                pausable = true;
+                TogglePause(true);
                 Time.timeScale = 1.0f;
                 break;
             case GameState.Paused:
-                pausable = true;
+                TogglePause(true);
                 Time.timeScale = 0.0f;
                 break;
             case GameState.Settings:
-                pausable = false;
+                TogglePause(false);
                 Time.timeScale = 0.0f;
                 break;
         }
@@ -179,7 +181,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// </summary>
     public void onPause()
     {
-        if (CurrentGameState == GameState.Paused)
+        if (CurrentGameState == GameState.Paused && pausable)
         {
             // Possible previous states should be Exploration, Puzzle, and Dialogue.
             TransitionToState(prevState);
@@ -235,5 +237,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void TogglePause(bool isPausable)
+    {
+        pausable = isPausable;
     }
 }

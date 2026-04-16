@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,7 @@ public class UIChangerButton : MonoBehaviour
     /// </summary>
     private GameObject currentUI;
 
+    public static event Action<bool> optionsMenuToggled;
 
     public void swapUI()
     {
@@ -23,7 +25,17 @@ public class UIChangerButton : MonoBehaviour
             currentUI.SetActive(false);
         }
 
-        targetUI.SetActive(true);
+        // If the target UI is not the initial paused menu, trigger the optionsMenuToggled event.
+        // This will ensure that you can't unpause the game by pressing 'esc' UNLESS you are on that one pause menu.
+        if (targetUI.gameObject.CompareTag("Paused"))
+        {
+            optionsMenuToggled?.Invoke(true);
+        }
+        else
+        {
+            optionsMenuToggled?.Invoke(false);
+        }
+            targetUI.SetActive(true);
         Debug.Log($"ViewManager.cs >> Enabled UI Canvas: {targetUI}");
     }
 
