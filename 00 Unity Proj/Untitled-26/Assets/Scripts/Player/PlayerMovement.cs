@@ -159,11 +159,6 @@ public class PlayerMovement : MonoBehaviour
     {
 
     }
-
-    private void RotateCharacter()
-    {
-
-    }
     
     /// <summary>
     /// Checks if the Player is on the ground. Consistently works
