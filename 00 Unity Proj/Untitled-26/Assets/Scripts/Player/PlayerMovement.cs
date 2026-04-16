@@ -22,14 +22,6 @@ public class PlayerMovement : MonoBehaviour
     // ==== Movement ====
     [Title("Movement", "Variables used for the Player's movement mechanic.")]
     [SerializeField] private float moveSpeed = 5.0f; //speed coefficient
-    [SerializeField] private float xMovement; //left to right movement data
-    [SerializeField] private float yMovement; //forward to back movement data
-    // [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
-    public float mouseSensitivity = 1f;
-    private float targetRotation = 0.0f;
-    public GameObject mainCamera;
-    private float _rotationVelocity;
-    
     [Tooltip("How fast the character turns to face movement direction")]
     [Range(0.0f, 0.3f)]
     public float RotationSmoothTime = 0.12f;
@@ -38,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     
     // Private calculation variables
     // (not set in the Inspector)
+    private float xMovement; //left to right movement data
+    private float yMovement; //forward to back movement data
     private float _speed;
     private Vector2 move;
     private bool jump;
@@ -51,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
     private float _fallTimeoutDelta;
     private float turnInput;
     private Vector2 look;
-    private const float _threshold = 0.01f;
 
     // ========== Jumping ==========
     [Space]
@@ -91,15 +84,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        // Assign the rigidbody component to rb
-        // rb = GetComponent<Rigidbody>();
+        // reset our timeouts on start
+        _jumpTimeoutDelta = JumpTimeout;
+        _fallTimeoutDelta = FallTimeout;
     }
 
     private void Update()
     {
-        MoveCharacter();
-        RotateCharacter();
-        JumpAndGravity();
+        Move();
     }
     
     /// <summary>
@@ -109,34 +101,39 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="context"></param>
     public void PlayerMove(InputAction.CallbackContext context)
     {
+        xMovement = context.ReadValue<Vector2>().x;
+        yMovement = context.ReadValue<Vector2>().y;
         move = context.ReadValue<Vector2>();
     }
     
-    private void MoveCharacter()
+    private void Move()
     {
-        // Set the target speed (for us it's just moveSpeed,
-        // but this could change if we decide to add sprinting)
-        float targetSpeed = move == Vector2.zero ? 0.0f : moveSpeed;
+        // Set the target speed
+        float targetSpeed = moveSpeed;
         
-        // Get the current horizontal speed (X, Z)
+        // Set the target speed to 0 if there is no movement input
+        if (move == Vector2.zero) targetSpeed = 0.0f;
+        
+        // Get the current horizontal speed
         float currentHorizontalSpeed = new Vector3(charController.velocity.x, 0.0f, charController.velocity.z).magnitude;
         
         // Create a float named speed offset
         float speedOffset = 0.1f;
         
         // create a float input magnitude
-        float inputMagnitude = Mathf.Clamp01(move.magnitude);
+        float inputMagnitude = move.magnitude;
         
         // Accelerate or decelerate to target speed
         if (currentHorizontalSpeed < targetSpeed - speedOffset ||
             currentHorizontalSpeed > targetSpeed + speedOffset)
         {
-            // Use Lerp() to smoothly interpolate between the current speed and the
-            // target speed, based on the input magnitude and the speed change rate.
-            _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
-            
-            // Round speed to reduce jitter
-            _speed = Mathf.Round(_speed * 1000f) / 1000f;
+            // creates curved result rather than a linear one giving a more organic speed change
+            // note T in Lerp is clamped, so we don't need to clamp our speed
+            _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude,
+                Time.deltaTime * SpeedChangeRate);
+
+            // round speed to 3 decimal places
+            _speed = Mathf.Round(moveSpeed * 1000f) / 1000f;
         }
         else
         {
@@ -144,40 +141,24 @@ public class PlayerMovement : MonoBehaviour
         }
         
         // Normalize input direction
-        // Vector3 inputDirection = new Vector3(move.x, 0.0f, move.y).normalized;
-        Vector3 inputDirection = new Vector3(move.x, 0.0f, move.y).normalized;
+        Vector3 inputDirection = new Vector3(xMovement, 0.0f, yMovement).normalized;
         
-        // // If move input detected, rotate the Player
-        // if (look != Vector2.zero)
-        // {
-        //     targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
-        //     float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
-        //     
-        //     // rotate to face input direction relative to camera position
-        //     transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
-        // }
-        
-        // Rotate only when there is movement input
-        if (look.sqrMagnitude >= _threshold)
+        // If move input detected, rotate the Player
+        if (move != Vector2.zero)
         {
             targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
             float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
+
+            // rotate to face input direction relative to camera position
             transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
         }
         
         // Update the Vector3 target direction
-        // Vector3 targetDirection = Quaternion.Euler(0.0f, targetRotation, 0.0f) * Vector3.forward;
-        Vector3 targetDirection = transform.forward * inputDirection.z + transform.right * inputDirection.x;
+        Vector3 targetDirection = Quaternion.Euler(0.0f, targetRotation, 0.0f) * Vector3.forward;
         
         // Finally, move the player with CharacterController.Move()
-        charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-        // Horizontal + vertical motion
-        // charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) + Vector3.up * (_verticalVelocity * Time.deltaTime));
-    }
-
-    private void RotateCharacter()
-    {
-        
+        charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
+                            new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
     }
     
     /// <summary>
@@ -202,19 +183,9 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="context"></param>
     public void PlayerJump(InputAction.CallbackContext context)
     {
-        // if (context.performed && isGrounded)
-        // {
-        //     Debug.Log("PlayerMovement.cs >> Jump performed.");
-        // }
-
-        if (context.performed)
+        if (context.performed && isGrounded)
         {
-            // rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpPower, rb.linearVelocity.z);
-        }
-        else if (context.canceled)
-        {
-            jump = false;
-            Debug.Log("PlayerMovement.cs >> Jump canceled.");
+            Debug.Log("PlayerMovement.cs >> Jump performed.");
         }
         
         // Normally, we would run the following:
