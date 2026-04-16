@@ -37,8 +37,6 @@ public class PlayerMovement : MonoBehaviour
     
     // Private calculation variables
     // (not set in the Inspector)
-    private float xMovement; //left to right movement data
-    private float yMovement; //forward to back movement data
     private float _speed;
     private float _rotationVelocity;
     private float _verticalVelocity;
@@ -114,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
     
 
     
-    private void Move()
+    private void MoveCharacter()
     {
         // Set the target speed depending on movement type (walking or sprinting)
         float targetSpeed = _input.sprint ? sprintSpeed : moveSpeed;
@@ -133,12 +131,11 @@ public class PlayerMovement : MonoBehaviour
         if (currentHorizontalSpeed < targetSpeed - speedOffset ||
             currentHorizontalSpeed > targetSpeed + speedOffset)
         {
-            // creates curved result rather than a linear one giving a more organic speed change
-            // note T in Lerp is clamped, so we don't need to clamp our speed
-            _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude,
-                Time.deltaTime * SpeedChangeRate);
-
-            // round speed to 3 decimal places
+            // Use Lerp() to smoothly interpolate between the current speed and the
+            // target speed, based on the input magnitude and the speed change rate.
+            _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
+            
+            // Round speed to reduce jitter
             _speed = Mathf.Round(_speed * 1000f) / 1000f;
         }
         else
