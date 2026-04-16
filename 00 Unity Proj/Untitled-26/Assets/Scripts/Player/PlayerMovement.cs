@@ -97,9 +97,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        // reset our timeouts on start
-        _jumpTimeoutDelta = JumpTimeout;
-        _fallTimeoutDelta = FallTimeout;
+        // Assign the rigidbody component to rb
+        // rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
