@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 5.0f; //speed coefficient
     [SerializeField] private float xMovement; //left to right movement data
     [SerializeField] private float yMovement; //forward to back movement data
-    [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
+    // [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
     public float mouseSensitivity = 1f;
     private float targetRotation = 0.0f;
     public GameObject mainCamera;
@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         // Assign the rigidbody component to rb
-        rb = GetComponent<Rigidbody>();
+        // rb = GetComponent<Rigidbody>();
     }
     
     /// <summary>
@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed && isGrounded && jumpsRemaining > 0)
         {
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpPower, rb.linearVelocity.z);
+            // rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpPower, rb.linearVelocity.z);
         }
     }
     

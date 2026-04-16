@@ -22,7 +22,7 @@ public class Player : MonoSingleton<Player>
     /// </summary>
     public UnityEvent Map;
     
-    public Rigidbody rb;
+    // public Rigidbody rb;
     
     public PlayerControls _playerControls { get; private set; }
     
@@ -44,7 +44,7 @@ public class Player : MonoSingleton<Player>
             _playerInput = GetComponent<PlayerInput>();
         }
         
-        rb = GetComponent<Rigidbody>();
+        // rb = GetComponent<Rigidbody>();
         _playerControls = new PlayerControls();
         
     }
@@ -54,7 +54,7 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
-        PhysicsManager.kinematicsUpdated += SwitchKinematics;
+        // PhysicsManager.kinematicsUpdated += SwitchKinematics;
         GameStateManager.transitionedToNewState += ConfigureOrientation;
 
 
@@ -69,7 +69,7 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched -= SwitchActionMap;
         InputManager.cursorChanged -= SwitchCursorFunctionality;
-        PhysicsManager.kinematicsUpdated -= SwitchKinematics;
+        // PhysicsManager.kinematicsUpdated -= SwitchKinematics;
         GameStateManager.transitionedToNewState -= ConfigureOrientation;
         
         _playerControls.UI.Disable();
@@ -125,11 +125,11 @@ public class Player : MonoSingleton<Player>
     /// Sets the player's Rigidbody to kinematic or non-kinematic based on the current game state.
     /// </summary>
     /// <param name="isKinematic"></param>
-    private void SwitchKinematics(bool isKinematic)
-    {
-        rb.isKinematic = isKinematic;
-        if (printKinematics) Debug.Log("Player.cs >> Kinematics were set to " + isKinematic);
-    }
+    // private void SwitchKinematics(bool isKinematic)
+    // {
+    //     rb.isKinematic = isKinematic;
+    //     if (printKinematics) Debug.Log("Player.cs >> Kinematics were set to " + isKinematic);
+    // }
     
     /// <summary>
     /// Used to configure the Player's orientation based on the game state.
