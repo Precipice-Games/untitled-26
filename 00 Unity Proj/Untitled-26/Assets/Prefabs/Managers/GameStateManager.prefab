@@ -7073,6 +7073,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3072295140869992295, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
+      propertyPath: m_TagString
+      value: Paused
+      objectReference: {fileID: 0}
     - target: {fileID: 3098618309496679430, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
