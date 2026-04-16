@@ -18,10 +18,10 @@ GameObject:
   - component: {fileID: 6739596773503058293}
   - component: {fileID: 5519739034169789386}
   - component: {fileID: 6922169669516928053}
-  - component: {fileID: 4698028750357769851}
   - component: {fileID: -5156860291110842563}
   - component: {fileID: 3689884208207083878}
   - component: {fileID: 6616755409195078602}
+  - component: {fileID: 2122942772023879459}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -152,7 +152,6 @@ MonoBehaviour:
   Map:
     m_PersistentCalls:
       m_Calls: []
-  rb: {fileID: 0}
   _playerInput: {fileID: 6922169669516928053}
   printKinematics: 0
   printActionMapUpdates: 0
@@ -172,7 +171,6 @@ MonoBehaviour:
   moveSpeed: 5
   xMovement: 0
   yMovement: 0
-  rb: {fileID: 0}
   mouseSensitivity: 1
   mainCamera: {fileID: 0}
   RotationSmoothTime: 0.12
@@ -652,33 +650,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!54 &4698028750357769851
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5438321986708604092}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 10
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!82 &-5156860291110842563
 AudioSource:
   m_ObjectHideFlags: 0
@@ -834,3 +805,28 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 350fc9cf29cb455469c0bfd6f05caa1f, type: 3}
   - {fileID: 2800000, guid: b5cdbb3e509855f4c99752c0b17094a3, type: 3}
   - {fileID: 2800000, guid: fc47975b19d8140498b7edcd8ede2f2d, type: 3}
+--- !u!143 &2122942772023879459
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438321986708604092}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
