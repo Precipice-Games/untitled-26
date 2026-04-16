@@ -139,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
                 Time.deltaTime * SpeedChangeRate);
 
             // round speed to 3 decimal places
-            _speed = Mathf.Round(moveSpeed * 1000f) / 1000f;
+            _speed = Mathf.Round(_speed * 1000f) / 1000f;
         }
         else
         {
@@ -155,6 +155,11 @@ public class PlayerMovement : MonoBehaviour
         {
             // move
             inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+        }
+        else if (context.canceled)
+        {
+            jump = false;
+            Debug.Log("PlayerMovement.cs >> Jump canceled.");
         }
         
         // Normally, we would run the following:
