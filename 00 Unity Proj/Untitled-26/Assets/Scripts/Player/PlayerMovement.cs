@@ -28,6 +28,14 @@ public class PlayerMovement : MonoBehaviour
     // ==== Movement ====
     [Title("Movement", "Variables used for the Player's movement mechanic.")]
     [SerializeField] private float moveSpeed = 5.0f; //speed coefficient
+    [SerializeField] private float xMovement; //left to right movement data
+    [SerializeField] private float yMovement; //forward to back movement data
+    // [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
+    public float mouseSensitivity = 1f;
+    private float targetRotation = 0.0f;
+    public GameObject mainCamera;
+    private float _rotationVelocity;
+    
     [Tooltip("How fast the character turns to face movement direction")]
     [Range(0.0f, 0.3f)]
     public float RotationSmoothTime = 0.12f;
@@ -89,15 +97,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        #if ENABLE_INPUT_SYSTEM
-        _playerInput = GetComponent<PlayerInput>();
-        #endif
-        
-        _input = GetComponent<PlayerControlsInputs>();
-        
-        // reset our timeouts on start
-        _jumpTimeoutDelta = JumpTimeout;
-        _fallTimeoutDelta = FallTimeout;
+        // Assign the rigidbody component to rb
+        // rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -149,8 +150,7 @@ public class PlayerMovement : MonoBehaviour
         // if there is a move input rotate player when the player is moving
         if (_input.move != Vector2.zero)
         {
-            // move
-            inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+            // rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpPower, rb.linearVelocity.z);
         }
     }
 
