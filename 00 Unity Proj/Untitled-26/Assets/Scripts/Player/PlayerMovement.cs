@@ -153,6 +153,11 @@ public class PlayerMovement : MonoBehaviour
             // move
             inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
         }
+        else if (context.canceled)
+        {
+            jump = false;
+            Debug.Log("PlayerMovement.cs >> Jump canceled.");
+        }
         
         // Normally, we would run the following:
         // if (context.performed && isGrounded && jumpsRemaining > 0)
