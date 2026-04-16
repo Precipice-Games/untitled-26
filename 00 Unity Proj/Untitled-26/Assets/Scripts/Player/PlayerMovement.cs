@@ -26,8 +26,6 @@ public class PlayerMovement : MonoBehaviour
     
     // Private calculation variables
     // (not set in the Inspector)
-    private float xMovement; //left to right movement data
-    private float yMovement; //forward to back movement data
     private float _speed;
     private Vector2 move;
     private bool jump;
@@ -41,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     private float _fallTimeoutDelta;
     private float turnInput;
     private Vector2 look;
+    private const float _threshold = 0.01f;
 
     // ========== Jumping ==========
     [Space]
@@ -87,53 +86,45 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Move();
+        MoveCharacter();
+        RotateCharacter();
         JumpAndGravity();
     }
     
     /// <summary>
-    /// Takes the player's keyboard input in context as a Vector2
-    /// the x value of the Vector2 (left and right movement) gets
-    /// assigned to xMovement, and the y value of the Vector2
-    /// (forward and back movement) gets assigned to yMovement.
+    /// Takes the player's keyboard input in context as a Vector2 and
+    /// assigns it to the move variable, which is used in the Move() method.
     /// </summary>
     /// <param name="context"></param>
-
     public void PlayerMove(InputAction.CallbackContext context)
     {
-        xMovement = context.ReadValue<Vector2>().x;
-        yMovement = context.ReadValue<Vector2>().y;
         move = context.ReadValue<Vector2>();
     }
     
-    private void Move()
+    private void MoveCharacter()
     {
-        // Set the target speed
-        // float targetSpeed = moveSpeed;
+        // Set the target speed (for us it's just moveSpeed,
+        // but this could change if we decide to add sprinting)
         float targetSpeed = move == Vector2.zero ? 0.0f : moveSpeed;
         
-        // Set the target speed to 0 if there is no movement input
-        // if (move == Vector2.zero) targetSpeed = 0.0f;
-        
-        // Get the current horizontal speed
+        // Get the current horizontal speed (X, Z)
         float currentHorizontalSpeed = new Vector3(charController.velocity.x, 0.0f, charController.velocity.z).magnitude;
         
         // Create a float named speed offset
         float speedOffset = 0.1f;
         
         // create a float input magnitude
-        float inputMagnitude = move.magnitude;
+        float inputMagnitude = Mathf.Clamp01(move.magnitude);
         
         // Accelerate or decelerate to target speed
         if (currentHorizontalSpeed < targetSpeed - speedOffset ||
             currentHorizontalSpeed > targetSpeed + speedOffset)
         {
-            // creates curved result rather than a linear one giving a more organic speed change
-            // note T in Lerp is clamped, so we don't need to clamp our speed
-            _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude,
-                Time.deltaTime * SpeedChangeRate);
-
-            // round speed to 3 decimal places
+            // Use Lerp() to smoothly interpolate between the current speed and the
+            // target speed, based on the input magnitude and the speed change rate.
+            _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
+            
+            // Round speed to reduce jitter
             _speed = Mathf.Round(_speed * 1000f) / 1000f;
         }
         else
@@ -142,24 +133,40 @@ public class PlayerMovement : MonoBehaviour
         }
         
         // Normalize input direction
-        Vector3 inputDirection = new Vector3(xMovement, 0.0f, yMovement).normalized;
+        // Vector3 inputDirection = new Vector3(move.x, 0.0f, move.y).normalized;
+        Vector3 inputDirection = new Vector3(move.x, 0.0f, move.y).normalized;
         
-        // If move input detected, rotate the Player
-        if (look != Vector2.zero)
+        // // If move input detected, rotate the Player
+        // if (look != Vector2.zero)
+        // {
+        //     targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
+        //     float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
+        //     
+        //     // rotate to face input direction relative to camera position
+        //     transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+        // }
+        
+        // Rotate only when there is movement input
+        if (look.sqrMagnitude >= _threshold)
         {
             targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
             float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
-            
-            // rotate to face input direction relative to camera position
             transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
         }
         
         // Update the Vector3 target direction
-        Vector3 targetDirection = Quaternion.Euler(0.0f, targetRotation, 0.0f) * Vector3.forward;
+        // Vector3 targetDirection = Quaternion.Euler(0.0f, targetRotation, 0.0f) * Vector3.forward;
+        Vector3 targetDirection = transform.forward * inputDirection.z + transform.right * inputDirection.x;
         
         // Finally, move the player with CharacterController.Move()
-        charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
-                            new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+        charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+        // Horizontal + vertical motion
+        // charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) + Vector3.up * (_verticalVelocity * Time.deltaTime));
+    }
+
+    private void RotateCharacter()
+    {
+        
     }
     
     /// <summary>
@@ -173,16 +180,6 @@ public class PlayerMovement : MonoBehaviour
     public void PlayerLook(InputAction.CallbackContext context)
     {
         look = context.ReadValue<Vector2>();
-        
-        // // Normalize look input direction
-        // Vector3 inputDirection = new Vector3(look.x, 0.0f, look.y).normalized;
-        //
-        // targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
-        // float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
-        //
-        // // rotate to face input direction relative to camera position
-        // transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
-        
     }
 
     /// <summary>
