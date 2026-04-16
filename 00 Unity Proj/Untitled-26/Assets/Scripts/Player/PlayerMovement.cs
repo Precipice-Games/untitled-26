@@ -2,79 +2,92 @@
 using UnityEditor.Build;
 #endif
 
+using System;
+using Cdm.Figma;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Player Variables
+    // [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
+    public CharacterController charController;
+    public GameObject mainCamera;
+    
     // ==== Movement ====
     [Title("Movement", "Variables used for the Player's movement mechanic.")]
     [SerializeField] private float moveSpeed = 5.0f; //speed coefficient
-    [SerializeField] private float xMovement; //left to right movement data
-    [SerializeField] private float yMovement; //forward to back movement data
-    // [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
-    public float mouseSensitivity = 1f;
-    private float targetRotation = 0.0f;
-    public GameObject mainCamera;
-    private float _rotationVelocity;
-    
     [Tooltip("How fast the character turns to face movement direction")]
     [Range(0.0f, 0.3f)]
     public float RotationSmoothTime = 0.12f;
+    [Tooltip("Acceleration and deceleration")]
+    public float SpeedChangeRate = 10.0f;
     
-    // [PropertyTooltip("Please attach the Player's camera. This is necessary for making it revolve around the Player as they turn.")]
-    // public GameObject playerCamera;
-    // private PlayerCameraRotation cameraRotation;
-    // [PropertyTooltip("Mouse sensitivity. Default is 0.5f.")]
-    // public float mouseSensitivity = 1f;
-    
+    // Private calculation variables
+    // (not set in the Inspector)
+    private float xMovement; //left to right movement data
+    private float yMovement; //forward to back movement data
+    private float _speed;
+    private Vector2 move;
+    private bool jump;
+    private float _rotationVelocity;
+    private float _verticalVelocity;
+    private float targetRotation = 0.0f;
+    public float mouseSensitivity = 1f;
+    private float _terminalVelocity = 53.0f;
+    // timeout deltatime
+    private float _jumpTimeoutDelta;
+    private float _fallTimeoutDelta;
+    private float turnInput;
+    private Vector2 look;
+
     // ========== Jumping ==========
     [Space]
     [Title("Jump", "Variables used for the Player's jumping mechanic.")]
     public float jumpPower = 4.0f; // How strong the jump force is
     public int maxJumps = 1;
     public int jumpsRemaining;
-
+    [Space(10)]
+    [Tooltip("The height the player can jump")]
+    public float JumpHeight = 1.2f;
+    [Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
+    public float Gravity = -15.0f;
     [Space]
     [Title("Ground Check", "Variables used to perform ground checks for jumping.")]
     [SerializeField] private bool isGrounded;
-
-    
-    private float turnInput;
-    private Vector2 look;
+    [Space(10)]
+    [Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
+    public float JumpTimeout = 0.50f;
+    [Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
+    public float FallTimeout = 0.15f;
     
     // Subscribe to events
     private void OnEnable()
     {
         PlayerGroundcast.groundCheck += GroundCheck;
+        // PlayerGroundcast.groundCheck += JumpAndGravity;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         PlayerGroundcast.groundCheck -= GroundCheck;
+        // PlayerGroundcast.groundCheck -= JumpAndGravity;
     }
     
     // =============================
-    
+
     private void Start()
     {
-        // Assign the rigidbody component to rb
-        // rb = GetComponent<Rigidbody>();
+        // reset our timeouts on start
+        _jumpTimeoutDelta = JumpTimeout;
+        _fallTimeoutDelta = FallTimeout;
     }
-    
-    /// <summary>
-    /// Takes the movement variables and adjusts the corresponding axes
-    /// in a Vector3 variable, then adjusts the player's position based
-    /// on moveSpeed, the localMoveDirection variable, and deltaTime.
-    /// The deltaTime is used to normalize the movement.
-    /// </summary>
 
-    private void FixedUpdate()
+    private void Update()
     {
-        Vector3 localMoveDirection = transform.right * xMovement + transform.forward * yMovement;
-        transform.position += localMoveDirection * moveSpeed * Time.deltaTime;
+        Move();
     }
     
     /// <summary>
@@ -89,6 +102,62 @@ public class PlayerMovement : MonoBehaviour
     {
         xMovement = context.ReadValue<Vector2>().x;
         yMovement = context.ReadValue<Vector2>().y;
+        move = context.ReadValue<Vector2>();
+    }
+    
+    private void Move()
+    {
+        // Set the target speed
+        float targetSpeed = moveSpeed;
+        
+        // Set the target speed to 0 if there is no movement input
+        if (move == Vector2.zero) targetSpeed = 0.0f;
+        
+        // Get the current horizontal speed
+        float currentHorizontalSpeed = new Vector3(charController.velocity.x, 0.0f, charController.velocity.z).magnitude;
+        
+        // Create a float named speed offset
+        float speedOffset = 0.1f;
+        
+        // create a float input magnitude
+        float inputMagnitude = move.magnitude;
+        
+        // Accelerate or decelerate to target speed
+        if (currentHorizontalSpeed < targetSpeed - speedOffset ||
+            currentHorizontalSpeed > targetSpeed + speedOffset)
+        {
+            // creates curved result rather than a linear one giving a more organic speed change
+            // note T in Lerp is clamped, so we don't need to clamp our speed
+            _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude,
+                Time.deltaTime * SpeedChangeRate);
+
+            // round speed to 3 decimal places
+            _speed = Mathf.Round(moveSpeed * 1000f) / 1000f;
+        }
+        else
+        {
+            _speed = targetSpeed;
+        }
+        
+        // Normalize input direction
+        Vector3 inputDirection = new Vector3(xMovement, 0.0f, yMovement).normalized;
+        
+        // If move input detected, rotate the Player
+        if (move != Vector2.zero)
+        {
+            targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
+            float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
+
+            // rotate to face input direction relative to camera position
+            transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+        }
+        
+        // Update the Vector3 target direction
+        Vector3 targetDirection = Quaternion.Euler(0.0f, targetRotation, 0.0f) * Vector3.forward;
+        
+        // Finally, move the player with CharacterController.Move()
+        charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
+                            new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
     }
     
     /// <summary>
@@ -123,10 +192,18 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="context"></param>
     public void PlayerJump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded && jumpsRemaining > 0)
+        if (context.performed && isGrounded)
         {
-            // rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpPower, rb.linearVelocity.z);
+            Debug.Log("PlayerMovement.cs >> Jump performed.");
         }
+        
+        // Normally, we would run the following:
+        // if (context.performed && isGrounded && jumpsRemaining > 0)
+        // {
+        //     rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpPower, rb.linearVelocity.z);
+        // }
+        // However, because I'm trying to use the character controller, I'm going to see
+        // if that can be handled in the JumpAndGravity() method instead.
     }
     
     /// <summary>
@@ -146,6 +223,60 @@ public class PlayerMovement : MonoBehaviour
         {
             // Player is not on the ground
             isGrounded = false;
+        }
+    }
+    
+    
+    // ========================
+    // ========================
+    // ========================
+    
+
+    private void JumpAndGravity()
+    {
+        if (isGrounded)
+        {
+            // reset the fall timeout timer
+            _fallTimeoutDelta = FallTimeout;
+            
+            // stop our velocity dropping infinitely when grounded
+            if (_verticalVelocity < 0.0f)
+            {
+                _verticalVelocity = -2f;
+            }
+
+            // Jump
+            if (jump && _jumpTimeoutDelta <= 0.0f)
+            {
+                // the square root of H * -2 * G = how much velocity needed to reach desired height
+                _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+            }
+
+            // jump timeout
+            if (_jumpTimeoutDelta >= 0.0f)
+            {
+                _jumpTimeoutDelta -= Time.deltaTime;
+            }
+        }
+        else
+        {
+            // reset the jump timeout timer
+            _jumpTimeoutDelta = JumpTimeout;
+
+            // fall timeout
+            if (_fallTimeoutDelta >= 0.0f)
+            {
+                _fallTimeoutDelta -= Time.deltaTime;
+            }
+
+            // if we are not grounded, do not jump
+            jump = false;
+        }
+
+        // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
+        if (_verticalVelocity < _terminalVelocity)
+        {
+            _verticalVelocity += Gravity * Time.deltaTime;
         }
     }
 }
