@@ -162,7 +162,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &2518381043934893438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &3318057155961036070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,7 +590,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &952428353248100859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,7 +769,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0.8352941, g: 0, b: 1, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &1506219520340587611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,7 +948,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &6505779349774599911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,6 +1157,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3942273821399491795}
+  - {fileID: 1291699661459890251}
   m_Father: {fileID: 3446106412191676171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &5019277549151866532
@@ -1357,7 +1358,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &747859353823768086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1536,7 +1537,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &864764580593589462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1716,7 +1717,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &5952923576471507331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1896,7 +1897,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &4226547229773223782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2075,7 +2076,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &4038837667630203649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2139,6 +2140,7 @@ MonoBehaviour:
   width: 5
   height: 5
   tileSize: 3
+  printOccupancyMap: 0
 --- !u!1 &5059960743704218579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2301,7 +2303,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &7615802789705735621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2480,7 +2482,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &7523160706761227275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2659,7 +2661,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &4017039502483098492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2838,7 +2840,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &6211965852161980555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2871,7 +2873,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3942273821399491795
 Transform:
   m_ObjectHideFlags: 0
@@ -3199,7 +3201,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0.13494706, g: 1, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &6909150226320128903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3482,7 +3484,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &4489662516922727035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3719,7 +3721,7 @@ MonoBehaviour:
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
+  printStartingPosition: 0
 --- !u!114 &2860040158086677344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3736,6 +3738,80 @@ MonoBehaviour:
   tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
   iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+--- !u!1001 &1614453067777984416
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3624906698350998147}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -84.59146
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -951.77563
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -148.48317
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_Name
+      value: Model (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+--- !u!4 &1291699661459890251 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+  m_PrefabInstance: {fileID: 1614453067777984416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2356174237965320745
 PrefabInstance:
   m_ObjectHideFlags: 0
