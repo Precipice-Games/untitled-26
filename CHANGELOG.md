@@ -5,9 +5,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-* Mother Island is not yet available for the Player.
-* Oasis Island is not yet available for the Player.
-* Mana Well puzzle tile not yet available.
+* Put any unreleased features here.
+
+## [v2.0.0] - 2026-04-15
+
+### Added
+* Created functional Airship that allows Players to travel between islands.
+     * Added stand-in platform to represent airship (waiting on art).
+* Developed an in-editor workaround to display puzzle layouts before runtime.
+* Created the SFXManager to handle audio separate from the MusicManager.
+* Added invalid move SFX if the Player tries to perform an illegal action during puzzle mode.
+* Started setting up the physical layout of the Mother Island with the model made by @torialle.
+* Added purple button graphics to UI.
+* Created an occupancy map dictionary in GridManager.cs to restore initialization data upon resetting a puzzle.
+* Added Julien and Mortaniel NPCs to Oasis Island.
+* Created CompletionCrystal.prefab for improved scripting interaction.
+* Added a fail-safe for [ExecuteAlways] property.
+* Added the Ethor crystal icon to the Windows build profile (created by @fwooley).
+
+### Fixed
+* Fixed the infinite mana resource bug.
+* Fixed a bug where the Player couldn't select tiles in puzzle mode in some scenes.
+* Fixed a bug where there was "ghost tiles" on the grid even after resetting a puzzle.
+
+### Changed
+* Finalized Ice Island map and puzzles.
+* Updated Windows and macOS build profiles with Mother_Island.unity and Oasis_Island.unity.
+* Renamed BoxCastGrounded.cs script to be PlayerGroundcast.cs.
+* Updated the grounded raycast to encompass boarding the airship.
+
+### Removed
+* Removed some unused audio assets.
 
 ## [v1.1.2] - 2026-04-09
 
