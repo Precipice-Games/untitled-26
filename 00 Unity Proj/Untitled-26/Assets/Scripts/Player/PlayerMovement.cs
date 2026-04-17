@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveInputDirection;
     private Vector3 lookInputDirection;
     private float speedOffset = 0.1f;
+    private float playerYaw;
     
     // Private calculation variables
     // (not set in the Inspector)
@@ -44,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     private float turnInput;
     private Vector2 look;
     private const float _threshold = 0.01f;
+    [SerializeField] private float turnSpeed = 120f;
 
     // ========== Jumping ==========
     [Space]
@@ -93,6 +95,9 @@ public class PlayerMovement : MonoBehaviour
         MoveCharacter();
         RotateCharacter();
         JumpAndGravity();
+        
+        // Finally, move the player with CharacterController.Move()
+        charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
     }
     
     /// <summary>
@@ -135,25 +140,19 @@ public class PlayerMovement : MonoBehaviour
         
         // Normalize input direction
         targetDirection = transform.forward * move.y + transform.right * move.x;
-        
-        // Finally, move the player with CharacterController.Move()
-        charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
     }
 
     private void RotateCharacter()
     {
-        // // Rotate only when there is movement input
-        // if (look.sqrMagnitude >= _threshold)
-        // {
-        //     targetRotation = Mathf.Atan2(moveInputDirection.x, moveInputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
-        //     float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
-        //     transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
-        // }
-        
-        // targetDirection = transform.forward * moveInputDirection.z + transform.right * moveInputDirection.x;
-        
-        // targetDirection = transform.forward * move.y + transform.right * move.x;
-        
+        // Rotate only when there is movement input
+        // (use Mathf.Abs to check in either direction)
+        if (Mathf.Abs(look.x) >= _threshold)
+        {
+            playerYaw = transform.eulerAngles.y + look.x * turnSpeed * Time.deltaTime;
+            float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, playerYaw, ref _rotationVelocity, RotationSmoothTime);
+            
+            transform.rotation = Quaternion.Euler(0f, rotation, 0f);
+        }
     }
     
     /// <summary>
@@ -167,6 +166,7 @@ public class PlayerMovement : MonoBehaviour
     public void PlayerLook(InputAction.CallbackContext context)
     {
         look = context.ReadValue<Vector2>();
+        Debug.Log("PlayerMovement.cs >> Look input detected.");
     }
 
     /// <summary>
