@@ -27,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
     public float RotationSmoothTime = 0.12f;
     [Tooltip("Acceleration and deceleration")]
     public float SpeedChangeRate = 10.0f;
+    private Vector3 targetDirection;
+    private Vector3 moveInputDirection;
+    private Vector3 lookInputDirection;
+    private float speedOffset = 0.1f;
     
     // Private calculation variables
     // (not set in the Inspector)
@@ -114,9 +118,6 @@ public class PlayerMovement : MonoBehaviour
         // Get the current horizontal speed (X, Z)
         float currentHorizontalSpeed = new Vector3(charController.velocity.x, 0.0f, charController.velocity.z).magnitude;
         
-        // Create a float named speed offset
-        float speedOffset = 0.1f;
-        
         // create a float input magnitude
         float inputMagnitude = Mathf.Clamp01(move.magnitude);
         
@@ -137,39 +138,25 @@ public class PlayerMovement : MonoBehaviour
         }
         
         // Normalize input direction
-        // Vector3 inputDirection = new Vector3(move.x, 0.0f, move.y).normalized;
-        Vector3 inputDirection = new Vector3(move.x, 0.0f, move.y).normalized;
-        
-        // // If move input detected, rotate the Player
-        // if (look != Vector2.zero)
-        // {
-        //     targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
-        //     float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
-        //     
-        //     // rotate to face input direction relative to camera position
-        //     transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
-        // }
-        
-        // Rotate only when there is movement input
-        if (look.sqrMagnitude >= _threshold)
-        {
-            targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
-            float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
-            transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
-        }
-        
-        // Update the Vector3 target direction
-        // Vector3 targetDirection = Quaternion.Euler(0.0f, targetRotation, 0.0f) * Vector3.forward;
-        Vector3 targetDirection = transform.forward * inputDirection.z + transform.right * inputDirection.x;
+        targetDirection = transform.forward * move.y + transform.right * move.x;
         
         // Finally, move the player with CharacterController.Move()
         charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-        // Horizontal + vertical motion
-        // charController.Move(targetDirection.normalized * (_speed * Time.deltaTime) + Vector3.up * (_verticalVelocity * Time.deltaTime));
     }
 
     private void RotateCharacter()
     {
+        // // Rotate only when there is movement input
+        // if (look.sqrMagnitude >= _threshold)
+        // {
+        //     targetRotation = Mathf.Atan2(moveInputDirection.x, moveInputDirection.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
+        //     float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref _rotationVelocity, RotationSmoothTime);
+        //     transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+        // }
+        
+        // targetDirection = transform.forward * moveInputDirection.z + transform.right * moveInputDirection.x;
+        
+        // targetDirection = transform.forward * move.y + transform.right * move.x;
         
     }
     
