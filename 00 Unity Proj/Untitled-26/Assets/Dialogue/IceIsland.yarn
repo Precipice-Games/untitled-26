@@ -81,8 +81,9 @@ Judith: Hmph. You too. I guess. #line:053da1c
 <<else>>
 Judith: Back already? I knew you were full of it. #line:0b97180 
 <<endonce>>
+<<endif>>
 //(After reactivating the crystal, if the player returns to Judith and talks to her)
-<<else>>
+<<if $iceFinished == true>>
 <<once>>
 Sky: I told you I could do it! #line:04367d8 
 
@@ -144,4 +145,45 @@ position: -256,-126
 =>Penguin: Squawk! (Why do we live just to die?) #line:007c292 
     Sky: Awww look at this cute little fella! Not a single thought behind those eyes! #line:09af056 
     Penguin: Squuuaaawwk! (Your story will turn its final page one day whether you like it or not!) #line:0d2c4e4 
+===
+
+title: Player
+---
+Sky: This place is quite beautiful, despite the cold. [Idle] #line:0d2c4e5
+
+Sky: Brr, it sure is cold, I should find a parka or something. [Without interaction, while moving] #line:0d2c4e6
+
+Sky: Ughhh, so chilly! Why didn’t I check the weather before coming here? [Without interaction, while moving] #line:0d2c4e7
+
+Sky: Gah! If this wind keeps up I may start drifting away like a plastic bag! [Idle] #line:0d2c4e8
+
+Sky: Gotta keep moving to stay warm!  [Without interaction, while moving] #line:0d2c4e9
+
+Sky: Who needs a coat anyways? Definitely not me. Somebody please bring me a coat    [Idle] #line:09af057
+
+Sky: I wish I could feel the snow crunching beneath my feet… if only I could feel my feet. [Without interaction, while moving] #line:09af058
+
+Sky: It sure is gorgeous out here, I just wish the cold would stop hogging the spotlight.  [Idle] #line:09af059
+
+Sky: Brrr… I’m gonna turn into a human popsicle if I stand around here. [Idle] #line:013e3c6
+
+Sky: Grrrr… My teeth feel like a symphony of jackhammers. [Idle] #line:013e3c7
+
+Sky: Is this what it feels like to be freezer food? [Idle] #line:013e3c8
+
+Sky: If only my warm thoughts would warm me up… [Idle] #line:013e3c9
+
+Sky: Better watch my step, I could slip and fall at any given moment! [Without interaction, while moving] #line:04ccf12
+
+Sky: I’d give anything for a blanket right now. [Idle] #line:04ccf13
+
+Sky: I don’t get how penguins can walk around in the cold like this all day. [Without interaction, while moving] #line:04ccf14
+
+Sky: Brr, did the temperature drop another ten degrees? [Idle] #line:04ccf15
+
+Sky: Is it normal to shiver this much or am I being too dramatic? [Without interaction, while moving] #line:04ccf16
+
+Sky: This is the worst case of brain freeze EVER! [Without interaction, while moving] #line:04ccf17
+
+Sky: This place feels like I’m walking inside a massive snow globe!  [Without interaction, while moving] #line:04ccf18
 ===

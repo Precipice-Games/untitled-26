@@ -35,8 +35,8 @@ public class IslandManager : MonoBehaviour
     public UnityEvent islandCompleted;
     
     // Variables to track and update the island's completion status
-    private bool allPuzzlesCompleted;
-    private bool crystalCollected;
+    [SerializeField]private bool allPuzzlesCompleted;
+    [SerializeField]private bool crystalCollected;
     // public static event Action<PuzzleInformation> islandCompleted;
     
     /// <summary>
