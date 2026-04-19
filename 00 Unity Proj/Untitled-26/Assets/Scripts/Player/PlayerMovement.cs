@@ -86,15 +86,19 @@ public class PlayerMovement : MonoBehaviour
     }
     
     // =============================
+    
+    private void Awake()
+    {
+        charController = GetComponent<CharacterController>();
+        _input = GetComponent<PlayerControlsInputs>();
+
+#if ENABLE_INPUT_SYSTEM
+        _playerInput = GetComponent<PlayerInput>();
+#endif
+    }
 
     private void Start()
     {
-        #if ENABLE_INPUT_SYSTEM
-        _playerInput = GetComponent<PlayerInput>();
-        #endif
-        
-        _input = GetComponent<PlayerControlsInputs>();
-        
         // reset our timeouts on start
         _jumpTimeoutDelta = JumpTimeout;
         _fallTimeoutDelta = FallTimeout;
