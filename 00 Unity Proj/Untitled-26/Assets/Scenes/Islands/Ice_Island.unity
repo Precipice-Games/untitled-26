@@ -44304,7 +44304,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExplorationCamera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3377063299769562933, guid: ff16e4e71610ade4bb5e6805e7db56e3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

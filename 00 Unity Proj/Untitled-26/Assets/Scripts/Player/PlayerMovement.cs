@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     public float SpeedChangeRate = 10.0f;
     private Vector3 inputDirection;
     private float speedOffset = 0.1f;
-    private float playerYaw;
+    private float playerTargetYaw;
     
     // Private calculation variables
     // (not set in the Inspector)
@@ -97,6 +97,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        playerTargetYaw = transform.rotation.eulerAngles.y;
+        
         // reset our timeouts on start
         _jumpTimeoutDelta = JumpTimeout;
         _fallTimeoutDelta = FallTimeout;
@@ -175,7 +177,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void RotateCharacter()
     {
+        // if there is an input and camera position is not fixed
+        if (_input.look.sqrMagnitude >= _threshold)
+        {
+            playerTargetYaw += _input.look.x;
+        }
 
+        // clamp our rotations so our values are limited 360 degrees
+        playerTargetYaw = ClampAngle(playerTargetYaw, float.MinValue, float.MaxValue);
+
+        // Cinemachine will follow this target
+        transform.rotation = Quaternion.Euler(0.0f, playerTargetYaw, 0.0f);
+    }
+    
+    private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
+    {
+        if (lfAngle < -360f) lfAngle += 360f;
+        if (lfAngle > 360f) lfAngle -= 360f;
+        return Mathf.Clamp(lfAngle, lfMin, lfMax);
     }
     
     /// <summary>
