@@ -37,10 +37,13 @@ public class PlayerControlsInputs : MonoBehaviour
 	
 	public void PlayerMove(InputAction.CallbackContext context)
 	{
-		if (context.performed)
-		{
-			move = context.ReadValue<Vector2>();
-		}
+		
+		move = context.ReadValue<Vector2>();
+		
+		// if (context.performed)
+		// {
+		// 	move = context.ReadValue<Vector2>();
+		// }
 		// else if (context.canceled)
 		// {
 		// 	move = Vector2.zero;
