@@ -11,11 +11,6 @@ public class PlayerControlsInputs : MonoBehaviour
 	public bool jump;
 	public bool sprint;
 
-	[Header("Movement Settings")] public bool analogMovement;
-
-	[Header("Mouse Cursor Settings")] public bool cursorLocked = true;
-	public bool cursorInputForLook = true;
-
 	/// <summary>
 	/// Takes the player's keyboard input in context as a Vector2 and
 	/// assigns it to the move variable, which is used in the Move() method.
