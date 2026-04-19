@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     // ==== Movement ====
     [Title("Movement", "Variables used for the Player's movement mechanic.")]
     [SerializeField] private float moveSpeed = 5.0f; //speed coefficient
+    [SerializeField] private float sprintSpeed = 7.0f;
     [Tooltip("How fast the character turns to face movement direction")]
     [Range(0.0f, 0.3f)]
     public float RotationSmoothTime = 0.12f;
@@ -109,9 +110,6 @@ public class PlayerMovement : MonoBehaviour
         MoveCharacter();
         RotateCharacter();
         JumpAndGravity();
-        // inputDirection.normalized
-        // Finally, move the player with CharacterController.Move()
-        
         charController.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
     }
     
@@ -121,14 +119,24 @@ public class PlayerMovement : MonoBehaviour
     {
         // Set the target speed (for us it's just moveSpeed,
         // but this could change if we decide to add sprinting)
-        float targetSpeed = _input.move == Vector2.zero ? 0.0f : moveSpeed;
+        // float targetSpeed = _input.move == Vector2.zero ? 0.0f : moveSpeed;
+        
+        // set target speed based on move speed, sprint speed and if sprint is pressed
+        float targetSpeed = _input.sprint ? sprintSpeed : moveSpeed;
+
+        // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
+
+        // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
+        // if there is no input, set the target speed to 0
+        if (_input.move == Vector2.zero) targetSpeed = 0.0f;
         
         // Get the current horizontal speed (X, Z)
         float currentHorizontalSpeed = new Vector3(charController.velocity.x, 0.0f, charController.velocity.z).magnitude;
         
         // create a float input magnitude
         // float inputMagnitude = Mathf.Clamp01(_input.move.magnitude);
-        float inputMagnitude = 1f;
+        // float inputMagnitude = 1f;
+        float inputMagnitude = _input.move.magnitude;
         
         // Accelerate or decelerate to target speed
         if (currentHorizontalSpeed < targetSpeed - speedOffset ||
