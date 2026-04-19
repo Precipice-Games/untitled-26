@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public Vector3 moveDirection = Vector3.right; // direction of movement
-    public float moveDistance = 15f;               // how far it travels
-    public float speed = 12f;                      // speed
+    public Vector3 moveDirection = Vector3.right; //direction of movement
+    public float moveDistance = 15f; // how far it travels
+    public float speed = 12f; // speed
+
+    public bool isActive = false; 
 
     private Vector3 startPos;
 
@@ -15,11 +17,17 @@ public class MovingPlatform : MonoBehaviour
 
     void Update()
     {
+        if (!isActive) return;
+
         float movement = Mathf.PingPong(Time.time * speed, moveDistance);
         transform.position = startPos + moveDirection.normalized * movement;
     }
 
-    // Attach player to platform
+    public void ActivatePlatform() //Attach player to platform
+    {
+        isActive = true;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -28,8 +36,7 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    // Detach player when leaving
-    private void OnCollisionExit(Collision collision)
+    private void OnCollisionExit(Collision collision) //Detach player when leaving
     {
         if (collision.gameObject.CompareTag("Player"))
         {
