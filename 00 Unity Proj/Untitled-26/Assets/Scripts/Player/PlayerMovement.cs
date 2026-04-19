@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     // Player Variables
     // [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
     public CharacterController charController;
-    public GameObject mainCamera;
     private PlayerControlsInputs _input;
     
     // ==== Movement ====
@@ -38,10 +37,7 @@ public class PlayerMovement : MonoBehaviour
     // Private calculation variables
     // (not set in the Inspector)
     private float _speed;
-    private float _rotationVelocity;
     private float _verticalVelocity;
-    private float targetRotation = 0.0f;
-    public float mouseSensitivity = 1f;
     private float _terminalVelocity = 53.0f;
     // timeout deltatime
     private float _jumpTimeoutDelta;
@@ -52,6 +48,10 @@ public class PlayerMovement : MonoBehaviour
     // ========== Jumping ==========
     [Space]
     [Title("Jump", "Variables used for the Player's jumping mechanic.")]
+    
+    // UNDER CONSTRUCTION
+    // Working on jump functionality. -- Nikki
+    
     public float jumpPower = 4.0f; // How strong the jump force is
     public int maxJumps = 1;
     public int jumpsRemaining;
