@@ -112,8 +112,6 @@ public class PlayerMovement : MonoBehaviour
         charController.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
     }
     
-
-    
     private void MoveCharacter()
     {
         // Set the target speed depending on movement type (walking or sprinting)
@@ -145,14 +143,12 @@ public class PlayerMovement : MonoBehaviour
             _speed = targetSpeed;
         }
         
-        // normalise input direction
+        // Normalize input direction
         inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
-
-        // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-        // if there is a move input rotate player when the player is moving
+        
+        // If Move input is detected
         if (_input.move != Vector2.zero)
         {
-            // move
             inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
         }
         else if (context.canceled)
@@ -175,21 +171,35 @@ public class PlayerMovement : MonoBehaviour
         // if that can be handled in the JumpAndGravity() method instead.
     }
 
+    /// <summary>
+    /// Rotates the Player based on the Look input. Specifically, it uses the
+    /// Player's yaw values in a way similar to rotating a camera in a scene.
+    /// These yaw values are first assigned in Start() via the Player's local
+    /// Euler angles.
+    /// </summary>
     private void RotateCharacter()
     {
-        // if there is an input and camera position is not fixed
+        // If Look input is detected
         if (_input.look.sqrMagnitude >= _threshold)
         {
             playerTargetYaw += _input.look.x;
         }
 
-        // clamp our rotations so our values are limited 360 degrees
+        // Clamp rotation to limit it to 360 degrees
         playerTargetYaw = ClampAngle(playerTargetYaw, float.MinValue, float.MaxValue);
 
-        // Cinemachine will follow this target
+        // Rotate the Player
         transform.rotation = Quaternion.Euler(0.0f, playerTargetYaw, 0.0f);
     }
     
+    /// <summary>
+    /// Clamps the angle between a minimum and maximum value. Used to
+    /// prevent the Player from rotating infinitely in one direction.
+    /// </summary>
+    /// <param name="lfAngle"></param>
+    /// <param name="lfMin"></param>
+    /// <param name="lfMax"></param>
+    /// <returns></returns>
     private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
     {
         if (lfAngle < -360f) lfAngle += 360f;
