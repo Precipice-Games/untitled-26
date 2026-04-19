@@ -1,9 +1,6 @@
 #if UNITY_EDITOR
 using UnityEditor.Build;
 #endif
-
-using System;
-using Cdm.Figma;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -117,17 +114,10 @@ public class PlayerMovement : MonoBehaviour
     
     private void MoveCharacter()
     {
-        // Set the target speed (for us it's just moveSpeed,
-        // but this could change if we decide to add sprinting)
-        // float targetSpeed = _input.move == Vector2.zero ? 0.0f : moveSpeed;
-        
-        // set target speed based on move speed, sprint speed and if sprint is pressed
+        // Set the target speed depending on movement type (walking or sprinting)
         float targetSpeed = _input.sprint ? sprintSpeed : moveSpeed;
-
-        // a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
-
-        // note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-        // if there is no input, set the target speed to 0
+        
+        // If there's no input, set the target speed to 0
         if (_input.move == Vector2.zero) targetSpeed = 0.0f;
         
         // Get the current horizontal speed (X, Z)
@@ -135,7 +125,6 @@ public class PlayerMovement : MonoBehaviour
         
         // create a float input magnitude
         // float inputMagnitude = Mathf.Clamp01(_input.move.magnitude);
-        // float inputMagnitude = 1f;
         float inputMagnitude = _input.move.magnitude;
         
         // Accelerate or decelerate to target speed
