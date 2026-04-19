@@ -36,14 +36,7 @@ public class PlayerControlsInputs : MonoBehaviour
 	/// <param name="context"></param>
 	public void PlayerLook(InputAction.CallbackContext context)
 	{
-		if (context.performed)
-		{
-			look = context.ReadValue<Vector2>();
-		}
-		// else if (context.canceled)
-		// {
-		// 	look = Vector2.zero;
-		// }
+		look = context.ReadValue<Vector2>();
 	}
 
 	/// <summary>
