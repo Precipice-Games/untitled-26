@@ -204,7 +204,16 @@ public class PlayerFixedMovement : MonoBehaviour
         if (printMoveAction) Debug.Log("PlayerFixedMovement.cs >> MoveRight called.");
         MoveDirection(1, 0);
     }
-    
+
+    public void PuzzleReset(InputAction.CallbackContext context)
+    {
+        // Ensures that the action is only performed once per key press.
+        if (!context.performed) return;
+
+        Debug.Log("PlayerFixedMovement.cs >> PuzzleReset called.");
+        ResetPuzzle.OnReset();
+    }
+
     /// <summary>
     /// This method is used to reduce redundancy in the directional movement methods.
     /// </summary>

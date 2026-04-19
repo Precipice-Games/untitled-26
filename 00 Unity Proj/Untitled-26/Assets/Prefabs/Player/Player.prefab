@@ -647,6 +647,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9c4359d1-6960-428b-8de5-d7670b623c85
     m_ActionName: 'Player/Look[/Mouse/delta,/Touchscreen/delta,/Pen/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6709136814799094051}
+        m_TargetAssemblyTypeName: PlayerFixedMovement, Assembly-CSharp
+        m_MethodName: PuzzleReset
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4d3d3456-9e44-43f8-8754-4f9ab377d117
+    m_ActionName: 'Puzzle/PuzzleReset[/Keyboard/r]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
