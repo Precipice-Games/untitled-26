@@ -1,9 +1,6 @@
 #if UNITY_EDITOR
 using UnityEditor.Build;
 #endif
-
-using System;
-using Cdm.Figma;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -28,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     // ==== Movement ====
     [Title("Movement", "Variables used for the Player's movement mechanic.")]
     [SerializeField] private float moveSpeed = 5.0f; //speed coefficient
+    [SerializeField] private float sprintSpeed = 7.0f;
     [Tooltip("How fast the character turns to face movement direction")]
     [Range(0.0f, 0.3f)]
     public float RotationSmoothTime = 0.12f;
@@ -86,15 +84,19 @@ public class PlayerMovement : MonoBehaviour
     }
     
     // =============================
+    
+    private void Awake()
+    {
+        charController = GetComponent<CharacterController>();
+        _input = GetComponent<PlayerControlsInputs>();
+
+#if ENABLE_INPUT_SYSTEM
+        _playerInput = GetComponent<PlayerInput>();
+#endif
+    }
 
     private void Start()
     {
-        #if ENABLE_INPUT_SYSTEM
-        _playerInput = GetComponent<PlayerInput>();
-        #endif
-        
-        _input = GetComponent<PlayerControlsInputs>();
-        
         // reset our timeouts on start
         _jumpTimeoutDelta = JumpTimeout;
         _fallTimeoutDelta = FallTimeout;
@@ -105,9 +107,6 @@ public class PlayerMovement : MonoBehaviour
         MoveCharacter();
         RotateCharacter();
         JumpAndGravity();
-        // inputDirection.normalized
-        // Finally, move the player with CharacterController.Move()
-        
         charController.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
     }
     
@@ -115,16 +114,18 @@ public class PlayerMovement : MonoBehaviour
     
     private void MoveCharacter()
     {
-        // Set the target speed (for us it's just moveSpeed,
-        // but this could change if we decide to add sprinting)
-        float targetSpeed = _input.move == Vector2.zero ? 0.0f : moveSpeed;
+        // Set the target speed depending on movement type (walking or sprinting)
+        float targetSpeed = _input.sprint ? sprintSpeed : moveSpeed;
+        
+        // If there's no input, set the target speed to 0
+        if (_input.move == Vector2.zero) targetSpeed = 0.0f;
         
         // Get the current horizontal speed (X, Z)
         float currentHorizontalSpeed = new Vector3(charController.velocity.x, 0.0f, charController.velocity.z).magnitude;
         
         // create a float input magnitude
         // float inputMagnitude = Mathf.Clamp01(_input.move.magnitude);
-        float inputMagnitude = 1f;
+        float inputMagnitude = _input.move.magnitude;
         
         // Accelerate or decelerate to target speed
         if (currentHorizontalSpeed < targetSpeed - speedOffset ||

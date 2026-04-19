@@ -21,30 +21,9 @@ public class PlayerControlsInputs : MonoBehaviour
 	/// assigns it to the move variable, which is used in the Move() method.
 	/// </summary>
 	/// <param name="context"></param>
-	// public void PlayerMove(InputAction.CallbackContext context)
-	// {
-	// 	if (context.performed)
-	// 	{
-	// 		move = context.ReadValue<Vector2>();
-	// 		Debug.Log("PlayerMovement.cs >> Move input detected.");
-	// 	}
-	// 	else if (context.canceled)
-	// 	{
-	// 		move = Vector2.zero;
-	// 		Debug.Log("PlayerMovement.cs >> Move input canceled.");
-	// 	}
-	// }
-	
 	public void PlayerMove(InputAction.CallbackContext context)
 	{
-		if (context.performed)
-		{
-			move = context.ReadValue<Vector2>();
-		}
-		// else if (context.canceled)
-		// {
-		// 	move = Vector2.zero;
-		// }
+		move = context.ReadValue<Vector2>();
 	}
 	
 	/// <summary>
@@ -55,23 +34,6 @@ public class PlayerControlsInputs : MonoBehaviour
 	/// FixedUpdate() method to physically rotate the Player.
 	/// </summary>
 	/// <param name="context"></param>
-	// public void PlayerLook(InputAction.CallbackContext context)
-	// {
-	// 	// look = context.ReadValue<Vector2>();
-	// 	// Debug.Log("PlayerMovement.cs >> Look input detected.");
-	// 	
-	// 	if (context.performed)
-	// 	{
-	// 		look = context.ReadValue<Vector2>();
-	// 		Debug.Log("PlayerMovement.cs >> Look input detected.");
-	// 	}
-	// 	else if (context.canceled)
-	// 	{
-	// 		look = Vector2.zero;
-	// 		Debug.Log("PlayerMovement.cs >> Look input canceled.");
-	// 	}
-	// }
-	
 	public void PlayerLook(InputAction.CallbackContext context)
 	{
 		if (context.performed)

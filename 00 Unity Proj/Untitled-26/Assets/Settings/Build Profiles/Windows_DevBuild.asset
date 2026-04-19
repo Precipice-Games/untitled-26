@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 15003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: macOS
+  m_Name: Windows_DevBuild
   m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildProfile
   m_AssetVersion: 1
-  m_BuildTarget: 2
+  m_BuildTarget: 19
   m_Subtarget: 2
-  m_PlatformId: 0d2129357eac403d8b359c2dcbf82502
+  m_PlatformId: 4e3c793746204150860bf175a9a41a05
   m_PlatformBuildProfile:
-    rid: 8172538437487034441
+    rid: 8172538347762483417
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
@@ -332,7 +332,15 @@ MonoBehaviour:
     - line: '|   AndroidAppBundleSizeToValidate: 150'
     - line: '|   AndroidReportGooglePlayAppDependencies: 1'
     - line: '|   androidSymbolsSizeThreshold: 800'
-    - line: '|   m_BuildTargetIcons: []'
+    - line: '|   m_BuildTargetIcons:'
+    - line: '|   - m_BuildTarget: '
+    - line: '|     m_Icons:'
+    - line: '|     - serializedVersion: 2'
+    - line: '|       m_Icon: {fileID: 2800000, guid: 7750eba8aa455704495de17f7ed3e1ae,
+        type: 3}'
+    - line: '|       m_Width: 128'
+    - line: '|       m_Height: 128'
+    - line: '|       m_Kind: 0'
     - line: '|   m_BuildTargetPlatformIcons:'
     - line: '|   - m_BuildTarget: iPhone'
     - line: '|     m_Icons:'
@@ -865,7 +873,22 @@ MonoBehaviour:
     - line: '|   webWasm2023: 0'
     - line: '|   webEnableSubmoduleStrippingCompatibility: 0'
     - line: '|   scriptingDefineSymbols:'
-    - line: '|     Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3'
+    - line: '|     Android: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     GameCoreScarlett: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     Kepler: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     LinuxHeadlessSimulation: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     Nintendo Switch 2: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     PS4: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     PS5: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     QNX: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     VisionOS: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     WebGL: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     XboxOne: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     tvOS: UNITY_POST_PROCESSING_STACK_V2'
     - line: '|   additionalCompilerArguments: {}'
     - line: '|   platformArchitecture: {}'
     - line: '|   scriptingBackend:'
@@ -986,10 +1009,10 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8172538437487034441
-      type: {class: OSXStandaloneBuildProfile, ns: UnityEditor.OSXStandalone, asm: UnityEditor.OSXStandalone.Extensions}
+    - rid: 8172538347762483417
+      type: {class: WindowsPlatformSettings, ns: UnityEditor.WindowsStandalone, asm: UnityEditor.WindowsStandalone.Extensions}
       data:
-        m_Development: 0
+        m_Development: 1
         m_ConnectProfiler: 0
         m_BuildWithDeepProfilingSupport: 0
         m_AllowDebugging: 0
@@ -1003,6 +1026,9 @@ MonoBehaviour:
         m_InsightsSettingsContainer:
           m_BuildProfileEngineDiagnosticsState: 2
         m_AdaptivePerformanceEnabled: 0
-        m_MacOSXcodeBuildConfig: 1
-        m_Architecture: 2
-        m_CreateXcodeProject: 0
+        m_WindowsBuildAndRunDeployTarget: 0
+        m_Architecture: 0
+        m_CreateSolution: 0
+        m_CopyPDBFiles: 0
+        m_WindowsDevicePortalAddress: 
+        m_WindowsDevicePortalUsername: 
