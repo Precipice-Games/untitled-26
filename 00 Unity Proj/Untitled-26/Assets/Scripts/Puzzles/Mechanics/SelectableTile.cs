@@ -21,8 +21,8 @@ public class SelectableTile : MonoBehaviour
     // Default tile type is Normal
     public TileType tileType = TileType.Normal;
 
-    public int startingGridX;
-    public int startingGridZ;
+    private int startingGridX;
+    private int startingGridZ;
     public int gridX;
     public int gridZ;
     public Tuple<int, int> coordinates => Tuple.Create(gridX, gridZ);
