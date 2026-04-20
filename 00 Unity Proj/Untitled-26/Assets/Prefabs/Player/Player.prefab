@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffb8cce26a91974988192e7f4eb0d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  charController: {fileID: 0}
+  charController: {fileID: 2122942772023879459}
   moveSpeed: 5
   sprintSpeed: 7
   RotationSmoothTime: 0.12

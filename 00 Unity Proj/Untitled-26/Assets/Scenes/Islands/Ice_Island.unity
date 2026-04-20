@@ -1384,10 +1384,6 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 600360451}
-    - target: {fileID: 1173698383739407512, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-      propertyPath: charController
-      value: 
-      objectReference: {fileID: 1045250818}
     - target: {fileID: 2003065819590668714, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: m_Size.x
       value: 0.35
@@ -1591,6 +1587,10 @@ PrefabInstance:
     - target: {fileID: 6922169669516928053, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: m_ActionEvents.Array.data[42].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187192523355673034, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8187192523355673034, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -19550,11 +19550,6 @@ GameObject:
 --- !u!4 &1045250817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 137271524649294906, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-  m_PrefabInstance: {fileID: 74840992}
-  m_PrefabAsset: {fileID: 0}
---- !u!143 &1045250818 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 2122942772023879459, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
   m_PrefabInstance: {fileID: 74840992}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1048863179

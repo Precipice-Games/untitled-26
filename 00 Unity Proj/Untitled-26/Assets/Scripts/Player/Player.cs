@@ -64,7 +64,6 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
-        GameStateManager.transitionedToNewState += ConfigureCharacterController;
         GameStateManager.transitionedToNewState += ConfigureOrientation;
 
 
@@ -79,7 +78,6 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched -= SwitchActionMap;
         InputManager.cursorChanged -= SwitchCursorFunctionality;
-        GameStateManager.transitionedToNewState -= ConfigureCharacterController;
         GameStateManager.transitionedToNewState -= ConfigureOrientation;
         
         _playerControls.UI.Disable();
@@ -132,26 +130,6 @@ public class Player : MonoSingleton<Player>
     }
     
     /// <summary>
-    /// Used to configure the Player's character controller based on the game state.
-    /// </summary>
-    /// <param name="newState"></param>
-    private void ConfigureCharacterController(GameStateManager.GameState newState)
-    {
-        // If we're in Puzzle Mode, we want to orient the Player so
-        // her 2D sprite is more visible to the camera.
-        if (newState != GameStateManager.GameState.Exploration)
-        {
-            charController.enabled = false;
-            Debug.Log("Player.cs >> character controller disabled.");
-        }
-        else
-        {
-            charController.enabled = true;
-            Debug.Log("Player.cs >> character controller enabled.");
-        }
-    }
-    
-    /// <summary>
     /// Used to configure the Player's orientation based on the game state.
     /// For instance, the orientation should be different in Puzzle mode to
     /// ensure we can see Skye's sprite properly.
@@ -163,11 +141,11 @@ public class Player : MonoSingleton<Player>
         // her 2D sprite is more visible to the camera.
         if (newState != GameStateManager.GameState.Puzzle)
         {
-            model.transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);
+            transform.rotation = Quaternion.LookRotation(Vector3.forward);
         }
         else
         {
-            model.transform.rotation = Quaternion.Euler(90, transform.rotation.y, 0);
+            transform.rotation = Quaternion.LookRotation(-Vector3.up);
         }
     }
 }

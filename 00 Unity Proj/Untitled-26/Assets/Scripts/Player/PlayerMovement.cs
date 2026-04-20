@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     // [SerializeField] private Rigidbody rb; //contains the rigidbody of the player
     public CharacterController charController;
     private PlayerControlsInputs _input;
+    private GameStateManager.GameState currentGameState;
     
     // ==== Movement ====
     [Title("Movement", "Variables used for the Player's movement mechanic.")]
@@ -73,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         PlayerGroundcast.groundCheck += GroundCheck;
+        GameStateManager.transitionedToNewState += UpdateGameState;
         // PlayerGroundcast.groundCheck += JumpAndGravity;
     }
     
@@ -80,10 +82,9 @@ public class PlayerMovement : MonoBehaviour
     private void OnDisable()
     {
         PlayerGroundcast.groundCheck -= GroundCheck;
+        GameStateManager.transitionedToNewState += UpdateGameState;
         // PlayerGroundcast.groundCheck -= JumpAndGravity;
     }
-    
-    // =============================
     
     private void Awake()
     {
@@ -106,14 +107,35 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        MoveCharacter();
-        RotateCharacter();
-        JumpAndGravity();
-
-        if (charController.enabled)
+        ConfigurePlayerOnGameState();
+    }
+    
+    /// <summary>
+    /// Updates the localized currentGameState variable to the new game state
+    /// passed in by the GameStateManager. This allows the PlayerMovement
+    /// script to know the current game state and adjust the Player accordingly.
+    /// </summary>
+    /// <param name="newGameState"></param>
+    private void UpdateGameState(GameStateManager.GameState newGameState)
+    {
+        currentGameState = newGameState;
+    }
+    
+    private void ConfigurePlayerOnGameState()
+    {
+        if (currentGameState == GameStateManager.GameState.Exploration)
         {
+            charController.enabled = true;
+            MoveCharacter();
+            RotateCharacter();
+            JumpAndGravity();
+            
             charController.Move(inputDirection.normalized * (_speed * Time.deltaTime) +
                                 new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+        }
+        else
+        {
+            charController.enabled = false;
         }
     }
     
