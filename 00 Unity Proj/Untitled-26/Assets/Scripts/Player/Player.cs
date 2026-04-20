@@ -27,6 +27,8 @@ public class Player : MonoSingleton<Player>
     [SerializeField] private PlayerInput _playerInput;
     
     private CharacterController charController;
+
+    private GameObject model;
     
     [Space]
     [Title("Debugging Options", "Settings for quick debugging options.")]
@@ -47,6 +49,11 @@ public class Player : MonoSingleton<Player>
         if (charController == null)
         {
             charController = GetComponent<CharacterController>();
+        }
+
+        if (model == null)
+        {
+            model = transform.GetChild(0).gameObject;
         }
         
         _playerControls = new PlayerControls();
@@ -156,11 +163,11 @@ public class Player : MonoSingleton<Player>
         // her 2D sprite is more visible to the camera.
         if (newState != GameStateManager.GameState.Puzzle)
         {
-            transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);
+            model.transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);
         }
         else
         {
-            transform.rotation = Quaternion.Euler(90, transform.rotation.y, transform.rotation.z);
+            model.transform.rotation = Quaternion.Euler(90, transform.rotation.y, 0);
         }
     }
 }
