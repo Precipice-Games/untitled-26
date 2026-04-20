@@ -109,7 +109,12 @@ public class PlayerMovement : MonoBehaviour
         MoveCharacter();
         RotateCharacter();
         JumpAndGravity();
-        charController.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+
+        if (charController.enabled)
+        {
+            charController.Move(inputDirection.normalized * (_speed * Time.deltaTime) +
+                                new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+        }
     }
     
     private void MoveCharacter()
