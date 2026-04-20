@@ -31,6 +31,10 @@ public class ResourceManager : MonoBehaviour
     public int moveBackUses = 3;
 
     private int currentMana;
+    private int currentLeftUses;
+    private int currentRightUses;
+    private int currentForwardUses;
+    private int currentBackUses;
 
     [Space]
     [Title("UI Data", "Attach the UI elements for this puzzle's resources.")]
@@ -69,6 +73,10 @@ public class ResourceManager : MonoBehaviour
     void Start()
     {
         currentMana = startingMana;
+        currentLeftUses = moveLeftUses;
+        currentRightUses = moveRightUses;
+        currentForwardUses = moveForwardUses;
+        currentBackUses = moveBackUses;
 
         if (printStartingValues)
         {
@@ -103,7 +111,7 @@ public class ResourceManager : MonoBehaviour
         switch (moveType)
         {
             case "Left":
-                if (moveLeftUses <= 0)
+                if (currentLeftUses <= 0)
                 {
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Left card uses remaining");
@@ -113,12 +121,12 @@ public class ResourceManager : MonoBehaviour
                     return false;
                 }
 
-                moveLeftUses--;
-                UpdateLeftText(moveLeftUses);
+                currentLeftUses--;
+                UpdateLeftText(currentLeftUses);
                 break;
 
             case "Right":
-                if (moveRightUses <= 0)
+                if (currentRightUses <= 0)
                 {
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Right card uses remaining");
@@ -128,12 +136,12 @@ public class ResourceManager : MonoBehaviour
                     return false;
                 }
 
-                moveRightUses--;
-                UpdateRightText(moveRightUses);
+                currentRightUses--;
+                UpdateRightText(currentRightUses);
                 break;
 
             case "Forward":
-                if (moveForwardUses <= 0)
+                if (currentForwardUses <= 0)
                 {
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Forward card uses remaining");
@@ -143,12 +151,12 @@ public class ResourceManager : MonoBehaviour
                     return false;
                 }
 
-                moveForwardUses--;
-                UpdateUpText(moveForwardUses);
+                currentForwardUses--;
+                UpdateUpText(currentForwardUses);
                 break;
 
             case "Back":
-                if (moveBackUses <= 0)
+                if (currentBackUses <= 0)
                 {
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Back card uses remaining");
@@ -158,8 +166,8 @@ public class ResourceManager : MonoBehaviour
                     return false;
                 }
 
-                moveBackUses--;
-                UpdateDownText(moveBackUses);
+                currentBackUses--;
+                UpdateDownText(currentBackUses);
                 break;
         }
 
@@ -245,10 +253,10 @@ public class ResourceManager : MonoBehaviour
     {
         currentMana = startingMana;
 
-        moveLeftUses = 3;
-        moveRightUses = 3;
-        moveForwardUses = 3;
-        moveBackUses = 3;
+        currentLeftUses = moveLeftUses;
+        currentRightUses = moveRightUses;
+        currentForwardUses = moveForwardUses;
+        currentBackUses = moveBackUses;
 
         UpdateManaText(currentMana);
         UpdateLeftText(moveLeftUses);
