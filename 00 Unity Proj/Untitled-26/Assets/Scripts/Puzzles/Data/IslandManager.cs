@@ -25,9 +25,7 @@ public class IslandManager : MonoBehaviour
     public IslandName islandName = IslandName.IceIsland; // Default is Ice Island
     [PropertyTooltip("Attach the relevant data for this island's puzzles.")]
     public IslandPuzzleManager islandPuzzleManager;
-    // [PropertyTooltip("Attach the end crystal collectable for this island.")]
-    // public GameObject endCrystal;
-    [PropertyTooltip("Attach the InMemoryVariableStorage component from the DialogueSystem object.")]
+    [PropertyTooltip("Attach the DialogueSystem object here, which contains the InMemoryVariableStorage.")]
     public InMemoryVariableStorage variableStorage;
     
     [Space]
@@ -38,7 +36,7 @@ public class IslandManager : MonoBehaviour
     [SerializeField]private bool allPuzzlesCompleted;
     [SerializeField]private bool crystalCollected;
     // public static event Action<PuzzleInformation> islandCompleted;
-    
+
     /// <summary>
     /// Used to verify that all the current island's puzzles have been completed. Also
     /// updates the variable for the specified island in the YarnSpinner variable storage.
@@ -54,6 +52,7 @@ public class IslandManager : MonoBehaviour
                 break;
             case IslandName.IceIsland:
                 Debug.Log("IslandManager.cs >> Ice Island puzzles completed!");
+                Debug.Log("IslandManager.cs >> Test message here!");
                 variableStorage.SetValue("$iceFinished", true);
                 allPuzzlesCompleted = true;
                 break;
