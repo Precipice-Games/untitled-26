@@ -7,6 +7,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Put any unreleased features here.
 
+## [v2.0.2] - 2026-04-20
+
+### Added
+* Started adding interior build to Mother Island.
+* Added localized game state handling with a non-static variable for small state-based tweaks inside PlayerMovement.cs.
+
+### Fixed
+* Fixed a bug where the card usages were not restoring to their initialized values when hitting Reset.
+* Fixed a bug where Skye was not facing upwards (90° on x-axis) during puzzle mode, making her impossible to see.
+* Fixed a bug where the PlayerInput component got disconnected from the Player.
+
+### Changed
+* Moved the toggling of the CharacterController from Player.cs into PlayerMovement.cs.
+
 ## [v2.0.1] - 2026-04-20
 
 ### Added
