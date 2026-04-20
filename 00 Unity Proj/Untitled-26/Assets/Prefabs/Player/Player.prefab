@@ -153,7 +153,6 @@ MonoBehaviour:
   Map:
     m_PersistentCalls:
       m_Calls: []
-  _playerInput: {fileID: 6922169669516928053}
   printKinematics: 0
   printActionMapUpdates: 0
   printCursorUpdates: 0
@@ -170,11 +169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   charController: {fileID: 0}
-  mainCamera: {fileID: 0}
   moveSpeed: 5
+  sprintSpeed: 7
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
-  mouseSensitivity: 1
   turnSpeed: 120
   jumpPower: 4
   maxJumps: 1
@@ -700,9 +698,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
-  analogMovement: 0
-  cursorLocked: 1
-  cursorInputForLook: 1
+  leftClick: 0
 --- !u!114 &6616755409195078602
 MonoBehaviour:
   m_ObjectHideFlags: 0
