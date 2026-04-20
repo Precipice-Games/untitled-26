@@ -165,7 +165,6 @@ public class ViewManager : MonoBehaviour
         HandleCameraChange(_targetCamera);
     }
     
-    
     /// <summary>
     /// Handles UI Canvas switching.
     /// </summary>
