@@ -7,6 +7,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Put any unreleased features here.
 
+## [v2.0.1] - 2026-04-20
+
+### Added
+* Created development build profile for Windows.
+* Added C# toggling CharacterController component when entering puzzle mode.
+* Added cacti and other foliage to Oasis Island (made by @fwooley).
+* Added title art and backdrop to menu (made by @fwooley).
+* Added the rune circle asset to the puzzle prefabs (made by @Sparta437).
+* Added art for dialogue box (made by @bobbysaville18-beep)
+
+### Fixed
+* Fixed the infinite mana resource bug.
+* Fixed a bug where the Player couldn't select tiles in puzzle mode in some scenes.
+* Fixed a bug where there was "ghost tiles" on the grid even after resetting a puzzle.
+* Fixed a bug where the Player could not click puzzle tiles on Oasis Island.
+* Fixed a bug to ensure proper exiting from all UI views.
+* Resolved controls missing from the Settings UI.
+
+### Changed
+* Updated input handling configurations for all build profiles and general project settings.
+* Finalized Player navigation and turning handling in Exploration mode.
+
 ## [v2.0.0] - 2026-04-15
 
 ### Added
