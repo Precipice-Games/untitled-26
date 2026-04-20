@@ -204,7 +204,16 @@ public class PlayerFixedMovement : MonoBehaviour
         if (printMoveAction) Debug.Log("PlayerFixedMovement.cs >> MoveRight called.");
         MoveDirection(1, 0);
     }
-    
+
+    public void PuzzleReset(InputAction.CallbackContext context)
+    {
+        // Ensures that the action is only performed once per key press.
+        if (!context.performed) return;
+
+        Debug.Log("PlayerFixedMovement.cs >> PuzzleReset called.");
+        ResetPuzzle.OnReset();
+    }
+
     /// <summary>
     /// This method is used to reduce redundancy in the directional movement methods.
     /// </summary>
@@ -217,9 +226,6 @@ public class PlayerFixedMovement : MonoBehaviour
         destinationZ = 0;
         TryToMovePlayer(xDir, zDir);
     }
-    
-    // TODO: Clean this method up and make it more efficient. Would like to
-    //       set the Player's position using grid coordinates if possible.
 
     /// <summary>
     /// Attempts to move the Player in the specified direction on the puzzle grid.
@@ -372,47 +378,48 @@ public class PlayerFixedMovement : MonoBehaviour
     public void SnapPlayerToTile(int coordX, int coordZ) 
     {
         // Grab the X and Z coordinates in Vector3 from the GridManager
-    newCoords = gridManager.GridToWorld(coordX, coordZ);
-    newPosition = new Vector3(newCoords.x, transform.localPosition.y, newCoords.z);
+        newCoords = gridManager.GridToWorld(coordX, coordZ);
+        newPosition = new Vector3(newCoords.x, transform.localPosition.y, newCoords.z);
 
-    transform.localPosition = newPosition;
+        transform.localPosition = newPosition;
 
-    playerGridX = coordX;
-    playerGridZ = coordZ;
+        playerGridX = coordX;
+        playerGridZ = coordZ;
 
-    // Only runs if tile is changed
-    if (coordX != lastTileX || coordZ != lastTileZ)
-    {
-        lastTileX = coordX;
-        lastTileZ = coordZ;
-        // Handle tile effects (ManaWell, etc.)
-        CheckTileEffects(coordX, coordZ);
-    }
+        // Only runs if tile is changed
+        if (coordX != lastTileX || coordZ != lastTileZ)
+        {
+            lastTileX = coordX;
+            lastTileZ = coordZ;
+            // Handle tile effects (ManaWell, etc.)
+            CheckTileEffects(coordX, coordZ);
+        }
 
-    IsPlayerOnEndTile();
+        IsPlayerOnEndTile();
     }
     
-    /// <summary>
-    /// Handles special tile effects such as ManaWell.
-    /// </summary>
-private void CheckTileEffects(int coordX, int coordZ)
-{
-    SelectableTile.TileType tileType = gridManager.GetTileType(coordX, coordZ);
-
-    if (tileType == SelectableTile.TileType.ManaWell)
+        /// <summary>
+        /// Handles special tile effects such as ManaWell.
+        /// </summary>
+    private void CheckTileEffects(int coordX, int coordZ)
     {
-        
-        if (manaWellTriggeredThisEntry)
-            return;
+        SelectableTile.TileType tileType = gridManager.GetTileType(coordX, coordZ);
 
-        manaWellTriggeredThisEntry = true;
+        if (tileType == SelectableTile.TileType.ManaWell)
+        {
+            
+            if (manaWellTriggeredThisEntry)
+                return;
 
-        Debug.Log("PlayerFixedMovement.cs >> Player stepped on ManaWell! +2 Mana");
+            manaWellTriggeredThisEntry = true;
 
-        if (resourceManager != null)
-            resourceManager.AddMana(2);
+            Debug.Log("PlayerFixedMovement.cs >> Player stepped on ManaWell! +2 Mana");
+
+            if (resourceManager != null)
+                resourceManager.AddMana(2);
+        }
     }
-}    
+        
     /// <summary>
     /// Used to check if the Player has reached the end tile. If so, the puzzle
     /// has been completed and the appropriate events can be triggered.

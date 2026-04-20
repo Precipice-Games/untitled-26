@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 137271524649294906}
-  - component: {fileID: 9071040957621364692}
-  - component: {fileID: 8839583978902556456}
   - component: {fileID: 2003065819590668714}
   - component: {fileID: 3103343398758482961}
   - component: {fileID: 1173698383739407512}
@@ -18,11 +16,10 @@ GameObject:
   - component: {fileID: 6739596773503058293}
   - component: {fileID: 5519739034169789386}
   - component: {fileID: 6922169669516928053}
-  - component: {fileID: 4698028750357769851}
-  - component: {fileID: -5156860291110842563}
-  - component: {fileID: -4027242432962083161}
   - component: {fileID: 3689884208207083878}
-  - component: {fileID: 6616755409195078602}
+  - component: {fileID: 6211892080048543029}
+  - component: {fileID: 2122942772023879459}
+  - component: {fileID: -5156860291110842563}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -42,66 +39,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.04, z: 0}
   m_LocalScale: {x: 1.5122, y: 1.4211, z: 0.057936}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 771318534883116045}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9071040957621364692
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5438321986708604092}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8839583978902556456
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5438321986708604092}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 5d634fb24ab058241a1c4b73c7d30724, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &2003065819590668714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -153,7 +94,6 @@ MonoBehaviour:
   Map:
     m_PersistentCalls:
       m_Calls: []
-  rb: {fileID: 0}
   _playerInput: {fileID: 6922169669516928053}
   printKinematics: 0
   printActionMapUpdates: 0
@@ -170,17 +110,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffb8cce26a91974988192e7f4eb0d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  charController: {fileID: 2122942772023879459}
   moveSpeed: 5
-  xMovement: 0
-  yMovement: 0
-  rb: {fileID: 0}
-  mouseSensitivity: 1
-  mainCamera: {fileID: 0}
+  sprintSpeed: 7
   RotationSmoothTime: 0.12
+  SpeedChangeRate: 10
+  turnSpeed: 120
   jumpPower: 4
   maxJumps: 1
   jumpsRemaining: 0
+  JumpHeight: 1.2
+  Gravity: -15
   isGrounded: 0
+  JumpTimeout: 0.5
+  FallTimeout: 0.15
 --- !u!114 &6709136814799094051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,10 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dd49a72a446f4ebaf91862e04984d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoxCastGrounded
-  groundChecking: 1
   currentPlatform: {fileID: 0}
-  activeTimer: 5
-  maxTime: 5
+  activeInteractable: {fileID: 0}
   rawRayLength: 0.71055
   rayLengthBuffer: 0.2
   printGroundedStatus: 0
@@ -296,6 +237,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5519739034169789386}
+        m_TargetAssemblyTypeName: PlayerGroundcast, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
     m_ActionName: 'Player/Interact[/Keyboard/e]'
   - m_PersistentCalls:
@@ -304,8 +257,8 @@ MonoBehaviour:
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1173698383739407512}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 6211892080048543029}
+        m_TargetAssemblyTypeName: PlayerControlsInputs, Assembly-CSharp
         m_MethodName: PlayerJump
         m_Mode: 0
         m_Arguments:
@@ -368,8 +321,8 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1173698383739407512}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 6211892080048543029}
+        m_TargetAssemblyTypeName: PlayerControlsInputs, Assembly-CSharp
         m_MethodName: PlayerMove
         m_Mode: 0
         m_Arguments:
@@ -564,8 +517,8 @@ MonoBehaviour:
     m_ActionName: 'Puzzle/Map1[/Keyboard/m]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1173698383739407512}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 6211892080048543029}
+        m_TargetAssemblyTypeName: PlayerControlsInputs, Assembly-CSharp
         m_MethodName: PlayerLook
         m_Mode: 0
         m_Arguments:
@@ -624,8 +577,8 @@ MonoBehaviour:
     m_ActionName: 'Puzzle/Map1[/Keyboard/m]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1173698383739407512}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 6211892080048543029}
+        m_TargetAssemblyTypeName: PlayerControlsInputs, Assembly-CSharp
         m_MethodName: PlayerLook
         m_Mode: 0
         m_Arguments:
@@ -638,38 +591,80 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9c4359d1-6960-428b-8de5-d7670b623c85
     m_ActionName: 'Player/Look[/Mouse/delta,/Touchscreen/delta,/Pen/delta]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6709136814799094051}
+        m_TargetAssemblyTypeName: PlayerFixedMovement, Assembly-CSharp
+        m_MethodName: PuzzleReset
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4d3d3456-9e44-43f8-8754-4f9ab377d117
+    m_ActionName: 'Puzzle/PuzzleReset[/Keyboard/r]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!54 &4698028750357769851
-Rigidbody:
+--- !u!114 &3689884208207083878
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5438321986708604092}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 10
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a3fbcb75602f442a47d0e163a622a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
+--- !u!114 &6211892080048543029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438321986708604092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bde30788d2f5744397ba51430c253ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerControlsInputs
+  move: {x: 0, y: 0}
+  look: {x: 0, y: 0}
+  jump: 0
+  sprint: 0
+--- !u!143 &2122942772023879459
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438321986708604092}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &-5156860291110842563
 AudioSource:
   m_ObjectHideFlags: 0
@@ -767,42 +762,104 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-4027242432962083161
-MonoBehaviour:
+--- !u!1 &5550441691532445547
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5438321986708604092}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771318534883116045}
+  - component: {fileID: 2343453072711659241}
+  - component: {fileID: 8187192523355673034}
+  - component: {fileID: 276652233214778129}
+  m_Layer: 2
+  m_Name: SkyModel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &771318534883116045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550441691532445547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 137271524649294906}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2343453072711659241
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550441691532445547}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8187192523355673034
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550441691532445547}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb87ae987c60e9d4f8346202d271648d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: YarnSpinner.Unity::Yarn.Unity.VoiceOverPresenter
-  endLineWhenVoiceoverComplete: 0
-  fadeOutTimeOnLineFinish: 0.05
-  waitTimeBeforeLineStart: 0
-  waitTimeAfterLineComplete: 0
-  audioSource: {fileID: 0}
---- !u!114 &3689884208207083878
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: cc8764a78abe00447b9298d11d64302a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &276652233214778129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5438321986708604092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47a3fbcb75602f442a47d0e163a622a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
---- !u!114 &6616755409195078602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5438321986708604092}
+  m_GameObject: {fileID: 5550441691532445547}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12702beb792a8074fa5494122538e80e, type: 3}

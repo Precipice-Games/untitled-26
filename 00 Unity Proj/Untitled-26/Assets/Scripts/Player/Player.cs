@@ -22,11 +22,13 @@ public class Player : MonoSingleton<Player>
     /// </summary>
     public UnityEvent Map;
     
-    public Rigidbody rb;
-    
     public PlayerControls _playerControls { get; private set; }
     
     [SerializeField] private PlayerInput _playerInput;
+    
+    private CharacterController charController;
+
+    private GameObject model;
     
     [Space]
     [Title("Debugging Options", "Settings for quick debugging options.")]
@@ -44,9 +46,17 @@ public class Player : MonoSingleton<Player>
             _playerInput = GetComponent<PlayerInput>();
         }
         
-        rb = GetComponent<Rigidbody>();
-        _playerControls = new PlayerControls();
+        if (charController == null)
+        {
+            charController = GetComponent<CharacterController>();
+        }
+
+        if (model == null)
+        {
+            model = transform.GetChild(0).gameObject;
+        }
         
+        _playerControls = new PlayerControls();
     }
 
     // Subscribe to events
@@ -54,7 +64,6 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
-        PhysicsManager.kinematicsUpdated += SwitchKinematics;
         GameStateManager.transitionedToNewState += ConfigureOrientation;
 
 
@@ -69,7 +78,6 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched -= SwitchActionMap;
         InputManager.cursorChanged -= SwitchCursorFunctionality;
-        PhysicsManager.kinematicsUpdated -= SwitchKinematics;
         GameStateManager.transitionedToNewState -= ConfigureOrientation;
         
         _playerControls.UI.Disable();
@@ -102,10 +110,10 @@ public class Player : MonoSingleton<Player>
             return;
         }
         
-        
         _playerInput.SwitchCurrentActionMap(actionMapName);
         if (printActionMapUpdates) Debug.Log($"Player.cs >> Switched action map for {actionMapName} state.");
     }
+    
     
     // TODO: The cursor commands are static, so it's not as easy to assign
     //       them as the action map, but this should do for now. Perhaps
@@ -122,16 +130,6 @@ public class Player : MonoSingleton<Player>
     }
     
     /// <summary>
-    /// Sets the player's Rigidbody to kinematic or non-kinematic based on the current game state.
-    /// </summary>
-    /// <param name="isKinematic"></param>
-    private void SwitchKinematics(bool isKinematic)
-    {
-        rb.isKinematic = isKinematic;
-        if (printKinematics) Debug.Log("Player.cs >> Kinematics were set to " + isKinematic);
-    }
-    
-    /// <summary>
     /// Used to configure the Player's orientation based on the game state.
     /// For instance, the orientation should be different in Puzzle mode to
     /// ensure we can see Skye's sprite properly.
@@ -143,11 +141,11 @@ public class Player : MonoSingleton<Player>
         // her 2D sprite is more visible to the camera.
         if (newState != GameStateManager.GameState.Puzzle)
         {
-            transform.rotation = Quaternion.Euler(0, transform.rotation.y, transform.rotation.z);
+            transform.rotation = Quaternion.LookRotation(Vector3.forward);
         }
         else
         {
-            transform.rotation = Quaternion.Euler(90, transform.rotation.y, transform.rotation.z);
+            transform.rotation = Quaternion.LookRotation(-Vector3.up);
         }
     }
 }

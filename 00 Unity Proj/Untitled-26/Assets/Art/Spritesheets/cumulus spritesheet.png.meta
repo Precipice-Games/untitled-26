@@ -1,0 +1,1239 @@
+fileFormatVersion: 2
+guid: 220beba49c479a54dac29b50d1c997e4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cumulus spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 5309
+        width: 429
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c867b466a42cd3b4c84e2a430cff4734
+      internalID: -320442262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 5309
+        width: 430
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71248e15fbe23784b920773aa51fba58
+      internalID: 1460947913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 5309
+        width: 429
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c77ca132bb650479b804f42a5352be
+      internalID: -1531691169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3483
+        y: 5309
+        width: 432
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd8742ee594d9145a3d1daf24aa7d59
+      internalID: 1451734157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 4531
+        y: 5309
+        width: 432
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e0b1882ed4b184eb78461a95f139b0
+      internalID: -1164074926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 4722
+        width: 429
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314a4a418a8fd014e8c6a31abdbe0a94
+      internalID: -700112414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 4722
+        width: 432
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a419454253ba954fa2d3355560a4be5
+      internalID: 1787781565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 2434
+        y: 4722
+        width: 432
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b267a3cedb0f9d45bd6d30976ff0a2f
+      internalID: 1503531495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 3483
+        y: 4722
+        width: 432
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4dc5d8bcf7cb04587397a4ee05483c
+      internalID: 1258879085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 4528
+        y: 4722
+        width: 435
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e5d1af37286af42b0f99bb6d0c3e12
+      internalID: 1958326555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 4131
+        width: 435
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ba7d27e1ba704448547acffff39e64
+      internalID: -1287770652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 4131
+        width: 435
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e8f5ff05c55cf4e96de8bf6c31075d
+      internalID: 1596520742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 4131
+        width: 435
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2880bf3f28b0ef46bd0d03d305e8dc3
+      internalID: -89335749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 3477
+        y: 4131
+        width: 438
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78add83264c4c964f9b9a53bc3891274
+      internalID: -45204974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 4526
+        y: 4131
+        width: 437
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdba779c8e6cc243af80155ed6ce5b6
+      internalID: 1656434571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 3541
+        width: 441
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b86a9b49a588a449095c8894b5c568
+      internalID: -1630481478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 3541
+        width: 441
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7625df0a22bdd244f9a34ea007de6b1c
+      internalID: -176998814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2426
+        y: 3541
+        width: 443
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a05f1687b1b35643976c3686506e1d5
+      internalID: -157219301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 3474
+        y: 3541
+        width: 441
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4324e86c626d34dbea85d7bc6492c0
+      internalID: -245260001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 4520
+        y: 3538
+        width: 443
+        height: 559
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c328e65853bb07b40ae73330490c38a1
+      internalID: -1521077483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 2950
+        width: 444
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aafaa4c7a86da247a28a5e3a23e2ce8
+      internalID: -1904601958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 2950
+        width: 447
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80e2a293e1f17240bb44720a0069cce
+      internalID: -2096716179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 2423
+        y: 2950
+        width: 446
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8f5d43c0271074ea4e9f5642ec9e20
+      internalID: -771201107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 3468
+        y: 2950
+        width: 450
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f10ae6843b5b94f9d9d4fc1e4bf355
+      internalID: 1286195437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 4517
+        y: 2947
+        width: 446
+        height: 559
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382dd03a4a392fb45b5724f379b423ed
+      internalID: 1338848765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 2357
+        width: 449
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25eba5b496d64d1418b84f6962ec094a
+      internalID: -1058628600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 2357
+        width: 450
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42b35b387071284b8564f89f0d7fe1c
+      internalID: -727137585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 2357
+        width: 449
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ee760431df0df40b5dfa4fc9b4da53
+      internalID: -1764573811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 2357
+        width: 453
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6832db240351c439862c7af944effe
+      internalID: 931206259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 4514
+        y: 2357
+        width: 452
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460e295f482ee0e43b9da5b708708f35
+      internalID: -980992377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 1769
+        width: 449
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e52ca5541cbd7409cd2f59041cc769
+      internalID: -799875302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1769
+        width: 453
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f9295fdec35ce49b5e18ca4a0b93ce
+      internalID: 36935214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 2417
+        y: 1769
+        width: 452
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670b262aebcafca4e85a503d71cb2c8d
+      internalID: -1351564447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 1769
+        width: 453
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cd8c95a325ee74794c31ce9c0308d4
+      internalID: 1360725021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 4514
+        y: 1769
+        width: 452
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6695dad737766ba4a9c2a90b11f77fce
+      internalID: -1985741866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 1178
+        width: 449
+        height: 559
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867eb2dd640a8ba43ac8d51dbdce5620
+      internalID: 2060862794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1178
+        width: 447
+        height: 559
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182f1ae968ba5d54fae1eacf60ec4d53
+      internalID: -616782426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 2423
+        y: 1178
+        width: 446
+        height: 559
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a0aa51810076241a849efa4d1ade17
+      internalID: -1052672091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 3474
+        y: 1178
+        width: 441
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01ff3f6137a6b2449d4201831782d5a
+      internalID: -367485782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 4523
+        y: 1178
+        width: 440
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10aa5152675aad949bf83abf9c8e3cfc
+      internalID: 1693029127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 591
+        width: 438
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547d7f5e0058f7741993701852e97c8b
+      internalID: -833378743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 591
+        width: 435
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59a3c5b35875ab40acf474712b219ab
+      internalID: 1137905174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 591
+        width: 435
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5dce2ccbd1418f4195b8d1001ff2197
+      internalID: -321556414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 3483
+        y: 591
+        width: 432
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e53c8093d68d9f4885366b8b1294ca7
+      internalID: 425660871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 4531
+        y: 591
+        width: 432
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89ee91ad290bac48b198e08b09c2c80
+      internalID: 1124993175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 429
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586deea45414a46439d8706461a2bcec
+      internalID: -25217299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cumulus spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 0
+        width: 430
+        height: 553
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24981bae4a8210648abb3d5ff876e2d9
+      internalID: -445157255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9a9b589eb64396d458adfd917d7a182b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      cumulus spritesheet_0: -320442262
+      cumulus spritesheet_1: 1460947913
+      cumulus spritesheet_10: -1287770652
+      cumulus spritesheet_11: 1596520742
+      cumulus spritesheet_12: -89335749
+      cumulus spritesheet_13: -45204974
+      cumulus spritesheet_14: 1656434571
+      cumulus spritesheet_15: -1630481478
+      cumulus spritesheet_16: -176998814
+      cumulus spritesheet_17: -157219301
+      cumulus spritesheet_18: -245260001
+      cumulus spritesheet_19: -1521077483
+      cumulus spritesheet_2: -1531691169
+      cumulus spritesheet_20: -1904601958
+      cumulus spritesheet_21: -2096716179
+      cumulus spritesheet_22: -771201107
+      cumulus spritesheet_23: 1286195437
+      cumulus spritesheet_24: 1338848765
+      cumulus spritesheet_25: -1058628600
+      cumulus spritesheet_26: -727137585
+      cumulus spritesheet_27: -1764573811
+      cumulus spritesheet_28: 931206259
+      cumulus spritesheet_29: -980992377
+      cumulus spritesheet_3: 1451734157
+      cumulus spritesheet_30: -799875302
+      cumulus spritesheet_31: 36935214
+      cumulus spritesheet_32: -1351564447
+      cumulus spritesheet_33: 1360725021
+      cumulus spritesheet_34: -1985741866
+      cumulus spritesheet_35: 2060862794
+      cumulus spritesheet_36: -616782426
+      cumulus spritesheet_37: -1052672091
+      cumulus spritesheet_38: -367485782
+      cumulus spritesheet_39: 1693029127
+      cumulus spritesheet_4: -1164074926
+      cumulus spritesheet_40: -833378743
+      cumulus spritesheet_41: 1137905174
+      cumulus spritesheet_42: -321556414
+      cumulus spritesheet_43: 425660871
+      cumulus spritesheet_44: 1124993175
+      cumulus spritesheet_45: -25217299
+      cumulus spritesheet_46: -445157255
+      cumulus spritesheet_5: -700112414
+      cumulus spritesheet_6: 1787781565
+      cumulus spritesheet_7: 1503531495
+      cumulus spritesheet_8: 1258879085
+      cumulus spritesheet_9: 1958326555
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

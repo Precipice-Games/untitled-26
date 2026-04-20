@@ -20,38 +20,44 @@ public class SelectableTile : MonoBehaviour
 
     // Default tile type is Normal
     public TileType tileType = TileType.Normal;
-    
-    public int startingGridX;
-    public int startingGridZ;
+
+    private int startingGridX;
+    private int startingGridZ;
     public int gridX;
     public int gridZ;
-    
+    public Tuple<int, int> coordinates => Tuple.Create(gridX, gridZ);
+
     // Reference to the GridManager for this specific puzzle
     public GridManager gridManager;
     private Renderer rend;
-    
+
     // Making originalColor public for now to tell
     // which are the start and end tiles.
     public Color originalColor;
     public Color highlightColor = Color.yellow;
-    
-    [Title("Debug Mode")]
-    [InfoBox("Check this variable if you want messages to be debugged from this script. If not, uncheck it.")]
-    [PropertyTooltip("Enables or disables debug logs in a given script.")]
-    public bool debugMode = true;
-    
+
+    [Space]
+    [Title("Debugging Options", "Settings for quick debugging options.")]
+    [PropertyTooltip("Print out the starting position of a tile. True by default.")]
+    public bool printStartingPosition;
+
     // Event fired when a move is blocked by an occupied cell
     public static event Action<SelectableTile> cellOccupied;
-    
+
     // Event fired when a move is out of bounds
     public static event Action<SelectableTile> moveOutOfBounds;
 
     // Subscribe to events
     private void OnEnable()
     {
+        if (Application.isPlaying && printStartingPosition)
+        {
+            Debug.Log($"SelectableTile.cs >> {name} starting at: ({gridX},{gridZ})");
+        }
+
         ResetPuzzle.resetPuzzle += ResetTiles;
     }
-    
+
     // Unsubscribe from events
     private void OnDisable()
     {
@@ -61,7 +67,7 @@ public class SelectableTile : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
-        
+
         // Ensure we have the GridManager reference since this script is
         // using [ExecuteAlways] and we need that reference before runtime.
         if (gridManager == null) gridManager = GetComponent<GridManager>();
@@ -70,9 +76,10 @@ public class SelectableTile : MonoBehaviour
         // For now, ManaWell tiles are purple so we can test them visually.
         if (tileType == TileType.ManaWell)
         {
-            rend.material.color = Color.magenta;
+            // rend.material.color = Color.magenta;
+            rend.sharedMaterial.color = Color.magenta;
         }
-        
+
         // Changed to rend.SharedMaterial to prevent memory leaks
         // in the scene since this script is using [ExecuteAlways].
         originalColor = rend.sharedMaterial.color;
@@ -81,9 +88,9 @@ public class SelectableTile : MonoBehaviour
         startingGridX = gridX;
         startingGridZ = gridZ;
 
-        if (debugMode) Debug.Log(name + " starting at: " + gridX + "," + gridZ);
+        // if (printPosition) Debug.Log($"SelectableTile.cs >> {name} starting at: ({gridX},{gridZ})");
 
-        gridManager.PlaceTile(this, gridX, gridZ);
+        gridManager.InitialTilePlacement(this, gridX, gridZ);
         transform.localPosition = gridManager.GridToWorld(gridX, gridZ);
     }
 
@@ -107,13 +114,13 @@ public class SelectableTile : MonoBehaviour
         int newZ = gridZ + zDir;
 
         Debug.Log($"SelectableTile.cs >> {name} trying move to: ({newX},{newZ})");
-        
+
         // Before anything, check to see if the attempted move is valid.
         if (CheckForOutOfBounds(newX, newZ)) return false; // Must be inside the grid
         if (!CheckForEmptyCell(newX, newZ)) return false; // Must be an empty cell
-        
+
         gridManager.ClearCell(gridX, gridZ);
-        
+
         gridX = newX;
         gridZ = newZ;
 
@@ -125,7 +132,7 @@ public class SelectableTile : MonoBehaviour
 
         return true;
     }
-    
+
     /// <summary>
     /// Checks for an empty cell.
     /// </summary>
@@ -138,14 +145,14 @@ public class SelectableTile : MonoBehaviour
         {
             return true;
         }
-        
+
         Debug.Log($"SelectableTile.cs >> BLOCKED: Cell at ({coordX},{coordZ}) is occupied.");
-        
+
         // Fire off an event to say that a cell is occupied
         cellOccupied?.Invoke(this);
         return false;
     }
-    
+
     /// <summary>
     /// Checks that a tile is out of bounds of the grid. If it's
     /// out of bounds, return true.
@@ -158,7 +165,7 @@ public class SelectableTile : MonoBehaviour
         if (!gridManager.IsInsideGrid(coordX, coordZ))
         {
             Debug.Log("SelectableTile.cs >> BLOCKED: Outside grid – no mana spent");
-            
+
             // Fire off an event to say that the move is out of bounds
             moveOutOfBounds?.Invoke(this);
             return true;

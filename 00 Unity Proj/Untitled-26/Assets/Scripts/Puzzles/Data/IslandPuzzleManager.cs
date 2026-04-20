@@ -13,19 +13,21 @@ public class IslandPuzzleManager : MonoBehaviour
     public List<GameObject> puzzlePrefabs;
     
     [Space]
-    [Title("IslandCompleted", "This event is fired when an island is complete.")]
-    public UnityEvent islandCompleted;
+    [Title("IslandPuzzlesCompleted", "This event is fired when an island's puzzles are complete.")]
+    public UnityEvent islandPuzzlesCompleted;
 
     // Subscribe to events
     private void OnEnable()
     {
         PlayerFixedMovement.updatePuzzleStatus += UpdateCompletionStatus;
+        PuzzleCheatSign.allPuzzlesComplete += CheckAllPuzzlesCompleted;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
         PlayerFixedMovement.updatePuzzleStatus -= UpdateCompletionStatus;
+        PuzzleCheatSign.allPuzzlesComplete -= CheckAllPuzzlesCompleted;
     }
     
     public void UpdateCompletionStatus(PuzzleInformation completedPuzzle)
@@ -54,7 +56,7 @@ public class IslandPuzzleManager : MonoBehaviour
             
             // Notify the IslandManager that all puzzles have been completed.
             // This event is assigned in the Unity Editor.
-            islandCompleted.Invoke();
+            islandPuzzlesCompleted.Invoke();
         }
     }
 }

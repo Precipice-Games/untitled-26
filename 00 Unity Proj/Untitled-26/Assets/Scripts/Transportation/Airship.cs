@@ -1,68 +1,66 @@
 using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // This script is used for Skye's airship.
 
-public class Airship : MonoBehaviour
+public class Airship : MonoBehaviour, IInteractable
 {
-    [Title("Puzzle Information")]
-    [InfoBox("Attach the data of the puzzle that this rune circle corresponds to.")]
-    public PuzzleInformation puzzleInfo;
-    public ExitPuzzleButton exitPuzzleButton;
-
-    /// <summary>
-    /// Tracks if player is standing on the Airship.
-    /// </summary>
+    public enum Destination
+    {
+        MotherIsland,
+        IceIsland,
+        OasisIsland
+    }
+    
+    [Title("Airship Variables", "Variables related to Skye's Airship.")]
+    [PropertyTooltip("The next island the Player should travel to after completing required tasks.")]
+    public Destination nextDestination = Destination.IceIsland; // Default is Ice Island
+    
+    // Tracks if player is standing on the Airship
     private bool onAirship;
-    private GameObject player;
 
-    // An event that is invoked when the player stands on the rune circle
+    // Static event that is invoked when the player boards the Airship
     public static event Action<bool> playerOnAirship;
-
-    // Static event to notify subscribers of game state changes
-    public static event Action<PuzzleInformation> puzzleTriggered;
+    
+    private bool islandCompleted;
 
     // Subscribe to events
     private void OnEnable()
     {
-        PlayerInteraction.playerInteraction += Interaction;
+        PlayerGroundcast.airshipCheck += AirshipCheck;
     }
 
     // Unsubscribe from events
     private void OnDisable()
     {
-        PlayerInteraction.playerInteraction -= Interaction;
+        PlayerGroundcast.airshipCheck -= AirshipCheck;
+    }
+
+    private void Awake()
+    {
+        islandCompleted = false;
     }
 
     /// <summary>
-    /// Called when the Player's raycast enters the body of the vessel.
-    /// This sets onAirship to true and invokes the playerOnAirship event
-    /// (true), which is picked up by InteractionPrompt.cs.
+    /// Checks if the Player is on the ground. Consistently works
+    /// to update the isGrounded and jumpsRemaining variables
+    /// Called at the end of every FixedUpdate().
     /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerEnter(Collider other)
+    private void AirshipCheck(bool isOnAirship)
     {
-        if (other.CompareTag("Player"))
+        // If the Player is on the airship
+        if (isOnAirship)
         {
+            onAirship = true; // Player is on the airship
             playerOnAirship?.Invoke(true);
-            onAirship = true;
-            player = other.gameObject;
         }
-    }
-
-    /// <summary>
-    /// Called when the Player's collider exits the rune circle collider.
-    /// This sets inCircle to false and invokes the playerInCircle event
-    /// (false), which is picked up by InteractionPrompt.cs.
-    /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        else
         {
-            playerOnAirship?.Invoke(false);
+            // Player is not on the airship
             onAirship = false;
+            playerOnAirship?.Invoke(false);
         }
     }
 
@@ -75,28 +73,50 @@ public class Airship : MonoBehaviour
     /// </summary>
     public void Interaction()
     {
-        // // If the player is not standing on the rune circle, break out.
-        // if (!onAirship) return;
+        Debug.Log($"Airship.cs >> onAirship = {onAirship} | islandCompleted = {islandCompleted}");
         
-        // Add other airship checks here
+        // If the player is not standing on the airship, break out.
+        if (!onAirship) return;
+        
+        // Check that the island has been completed
+        if (!islandCompleted) return;
+        
+        Debug.Log("Airship.cs >> Player has interacted with the airship and the island is completed. Teleporting player to next location.");
 
-        // // If the puzzle has not been completed, trigger the
-        // // event to notify subscribers.
-        // puzzleTriggered.Invoke(puzzleInfo);
+        // Depart to the next destination
+        Depart(nextDestination);
     }
 
     /// <summary>
-    /// Verifies that this rune circle has the puzzleInfo variable for its corresponding puzzle.
+    /// Departs the Player to the next destination based on the value of nextDestination.
+    /// The value of nextDestination is set in the Inspector of the Airship.
     /// </summary>
-    /// <returns></returns>
-    private bool PuzzleInfoFound()
+    private void Depart(Destination destination)
     {
-        if (puzzleInfo != null)
+        switch (destination)
         {
-            return true;
+            case Destination.MotherIsland:
+                Debug.Log("Airship.cs >> Now departing to Mother Island...");
+                SceneManager.LoadScene("Mother_Island");
+                break;
+            case Destination.IceIsland:
+                Debug.Log("Airship.cs >> Now departing to Ice Island...");
+                SceneManager.LoadScene("Ice_Island");
+                break;
+            case Destination.OasisIsland:
+                Debug.Log("Airship.cs >> Now departing to Oasis Island...");
+                SceneManager.LoadScene("Oasis_Island");
+                break;
         }
+    }
 
-        Debug.LogError("RuneCircle.cs >> No puzzle information attached to this rune circle.");
-        return false;
+    /// <summary>
+    /// This method is subscribed to the islandCompleted event in IslandManager.cs
+    /// and verifies that an island's objectives have been met.
+    /// </summary>
+    public void IslandCompleted()
+    {
+        islandCompleted = true;
+        Debug.Log($"Airship.cs >> islandCompleted = {islandCompleted}. Airship is now ready to teleport player to next location.");
     }
 }
