@@ -22,8 +22,6 @@ public class Player : MonoSingleton<Player>
     /// </summary>
     public UnityEvent Map;
     
-    public Rigidbody rb;
-    
     public PlayerControls _playerControls { get; private set; }
     
     [SerializeField] private PlayerInput _playerInput;
@@ -44,9 +42,7 @@ public class Player : MonoSingleton<Player>
             _playerInput = GetComponent<PlayerInput>();
         }
         
-        rb = GetComponent<Rigidbody>();
         _playerControls = new PlayerControls();
-        
     }
 
     // Subscribe to events
@@ -54,7 +50,6 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
-        PhysicsManager.kinematicsUpdated += SwitchKinematics;
         GameStateManager.transitionedToNewState += ConfigureOrientation;
 
 
@@ -69,7 +64,6 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched -= SwitchActionMap;
         InputManager.cursorChanged -= SwitchCursorFunctionality;
-        PhysicsManager.kinematicsUpdated -= SwitchKinematics;
         GameStateManager.transitionedToNewState -= ConfigureOrientation;
         
         _playerControls.UI.Disable();
@@ -102,7 +96,6 @@ public class Player : MonoSingleton<Player>
             return;
         }
         
-        
         _playerInput.SwitchCurrentActionMap(actionMapName);
         if (printActionMapUpdates) Debug.Log($"Player.cs >> Switched action map for {actionMapName} state.");
     }
@@ -119,16 +112,6 @@ public class Player : MonoSingleton<Player>
         Cursor.visible = visible;
         
         if (printCursorUpdates) Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
-    }
-    
-    /// <summary>
-    /// Sets the player's Rigidbody to kinematic or non-kinematic based on the current game state.
-    /// </summary>
-    /// <param name="isKinematic"></param>
-    private void SwitchKinematics(bool isKinematic)
-    {
-        rb.isKinematic = isKinematic;
-        if (printKinematics) Debug.Log("Player.cs >> Kinematics were set to " + isKinematic);
     }
     
     /// <summary>

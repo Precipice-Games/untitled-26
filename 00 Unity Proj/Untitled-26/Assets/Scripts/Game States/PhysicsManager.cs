@@ -15,30 +15,30 @@ public class PhysicsManager : MonoBehaviour
     // Subscribe to events
     private void OnEnable()
     {
-        GameStateManager.transitionedToNewState += ConfigureKinematics;
+        // GameStateManager.transitionedToNewState += ConfigureKinematics;
     }
     
     // Unsubscribe from events
     private void OnDisable()
     {
-        GameStateManager.transitionedToNewState -= ConfigureKinematics;
+        // GameStateManager.transitionedToNewState -= ConfigureKinematics;
     }
     
     // Switches the Player's Rigidbody Kinematics based on the game state
-    private void ConfigureKinematics(GameStateManager.GameState newState)
-    {
-        bool kinematics;
-    
-        // Cursor should only be locked and invisible during Exploration mode.
-        if (newState != GameStateManager.GameState.Puzzle)
-        {
-            kinematics = false;
-        }
-        else
-        {
-            kinematics = true;
-        }
-        
-        kinematicsUpdated?.Invoke(kinematics);
-    }
+    // private void ConfigureKinematics(GameStateManager.GameState newState)
+    // {
+    //     bool kinematics;
+    //
+    //     // Cursor should only be locked and invisible during Exploration mode.
+    //     if (newState != GameStateManager.GameState.Puzzle)
+    //     {
+    //         kinematics = false;
+    //     }
+    //     else
+    //     {
+    //         kinematics = true;
+    //     }
+    //     
+    //     kinematicsUpdated?.Invoke(kinematics);
+    // }
 }

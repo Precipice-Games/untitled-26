@@ -39,7 +39,8 @@ with safe passage. #line:03ef148
 
 Sky: Thank you, King Julien. I appreciate your…kindness. #line:0353b66 
 
-Julien: Now GO! May Karkinos bless your venture! #line:09fc12e 
+Julien: Now GO! May Karkinos bless your venture! #line:09fc12e
+<<activatePlatforms OasisIsland>>
 <<set $talkedWithJulien = true>>
 <<else>>
 King Julien: What the hell are you doing?! #line:0a47018 
@@ -66,7 +67,8 @@ Julien: It will be docked by where you first arrived. #line:01e7124
 Sky: Great. I can’t wait to get out of this heat… #line:09e921f 
 
 Julien: You’ve done a great service to my kingdom and have my thanks. I wish you luck on your #line:038e84a 
-journey, trespasser. #line:0a2a0d3 
+journey, trespasser. #line:0a2a0d3
+
 <<endif>>
 ===
 
