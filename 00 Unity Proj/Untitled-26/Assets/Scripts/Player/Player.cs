@@ -26,6 +26,8 @@ public class Player : MonoSingleton<Player>
     
     [SerializeField] private PlayerInput _playerInput;
     
+    private CharacterController charController;
+    
     [Space]
     [Title("Debugging Options", "Settings for quick debugging options.")]
     [PropertyTooltip("Print out messages regarding the Player's kinematics. False by default.")]
@@ -42,6 +44,11 @@ public class Player : MonoSingleton<Player>
             _playerInput = GetComponent<PlayerInput>();
         }
         
+        if (charController == null)
+        {
+            charController = GetComponent<CharacterController>();
+        }
+        
         _playerControls = new PlayerControls();
     }
 
@@ -50,6 +57,7 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched += SwitchActionMap;
         InputManager.cursorChanged += SwitchCursorFunctionality;
+        GameStateManager.transitionedToNewState += ConfigureCharacterController;
         GameStateManager.transitionedToNewState += ConfigureOrientation;
 
 
@@ -64,6 +72,7 @@ public class Player : MonoSingleton<Player>
     {
         InputManager.inputMapSwitched -= SwitchActionMap;
         InputManager.cursorChanged -= SwitchCursorFunctionality;
+        GameStateManager.transitionedToNewState -= ConfigureCharacterController;
         GameStateManager.transitionedToNewState -= ConfigureOrientation;
         
         _playerControls.UI.Disable();
@@ -100,6 +109,7 @@ public class Player : MonoSingleton<Player>
         if (printActionMapUpdates) Debug.Log($"Player.cs >> Switched action map for {actionMapName} state.");
     }
     
+    
     // TODO: The cursor commands are static, so it's not as easy to assign
     //       them as the action map, but this should do for now. Perhaps
     //       we can set it up later on to respond to the current action
@@ -112,6 +122,26 @@ public class Player : MonoSingleton<Player>
         Cursor.visible = visible;
         
         if (printCursorUpdates) Debug.Log($"Player.cs >> Switched cursor functionality to {lockMode} and {visible}.");
+    }
+    
+    /// <summary>
+    /// Used to configure the Player's character controller based on the game state.
+    /// </summary>
+    /// <param name="newState"></param>
+    private void ConfigureCharacterController(GameStateManager.GameState newState)
+    {
+        // If we're in Puzzle Mode, we want to orient the Player so
+        // her 2D sprite is more visible to the camera.
+        if (newState != GameStateManager.GameState.Exploration)
+        {
+            charController.enabled = false;
+            Debug.Log("Player.cs >> character controller disabled.");
+        }
+        else
+        {
+            charController.enabled = true;
+            Debug.Log("Player.cs >> character controller enabled.");
+        }
     }
     
     /// <summary>
