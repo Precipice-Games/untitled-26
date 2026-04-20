@@ -151,24 +151,6 @@ public class PlayerMovement : MonoBehaviour
         {
             inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
         }
-        else if (context.canceled)
-        {
-            jump = false;
-            Debug.Log("PlayerMovement.cs >> Jump canceled.");
-        }
-        else if (context.canceled)
-        {
-            jump = false;
-            Debug.Log("PlayerMovement.cs >> Jump canceled.");
-        }
-        
-        // Normally, we would run the following:
-        // if (context.performed && isGrounded && jumpsRemaining > 0)
-        // {
-        //     rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpPower, rb.linearVelocity.z);
-        // }
-        // However, because I'm trying to use the character controller, I'm going to see
-        // if that can be handled in the JumpAndGravity() method instead.
     }
 
     /// <summary>
