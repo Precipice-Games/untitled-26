@@ -1486,6 +1486,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PuzzleReset"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d3d3456-9e44-43f8-8754-4f9ab377d117"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -1550,7 +1559,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""MoveUp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1561,7 +1570,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""MoveDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1572,7 +1581,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""MoveLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1583,7 +1592,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""MoveRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -2038,6 +2047,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Map1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f311d131-8fba-4be8-96b8-511bcd609f47"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""PuzzleReset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -2153,6 +2173,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Puzzle_TrackedDeviceOrientation = m_Puzzle.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
         m_Puzzle_Pause1 = m_Puzzle.FindAction("Pause1", throwIfNotFound: true);
         m_Puzzle_Map1 = m_Puzzle.FindAction("Map1", throwIfNotFound: true);
+        m_Puzzle_PuzzleReset = m_Puzzle.FindAction("PuzzleReset", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -2677,6 +2698,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Puzzle_TrackedDeviceOrientation;
     private readonly InputAction m_Puzzle_Pause1;
     private readonly InputAction m_Puzzle_Map1;
+    private readonly InputAction m_Puzzle_PuzzleReset;
     /// <summary>
     /// Provides access to input actions defined in input action map "Puzzle".
     /// </summary>
@@ -2765,6 +2787,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Map1 => m_Wrapper.m_Puzzle_Map1;
         /// <summary>
+        /// Provides access to the underlying input action "Puzzle/PuzzleReset".
+        /// </summary>
+        public InputAction @PuzzleReset => m_Wrapper.m_Puzzle_PuzzleReset;
+        /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
         public InputActionMap Get() { return m_Wrapper.m_Puzzle; }
@@ -2847,6 +2873,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Map1.started += instance.OnMap1;
             @Map1.performed += instance.OnMap1;
             @Map1.canceled += instance.OnMap1;
+            @PuzzleReset.started += instance.OnPuzzleReset;
+            @PuzzleReset.performed += instance.OnPuzzleReset;
+            @PuzzleReset.canceled += instance.OnPuzzleReset;
         }
 
         /// <summary>
@@ -2915,6 +2944,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Map1.started -= instance.OnMap1;
             @Map1.performed -= instance.OnMap1;
             @Map1.canceled -= instance.OnMap1;
+            @PuzzleReset.started -= instance.OnPuzzleReset;
+            @PuzzleReset.performed -= instance.OnPuzzleReset;
+            @PuzzleReset.canceled -= instance.OnPuzzleReset;
         }
 
         /// <summary>
@@ -3330,5 +3362,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMap1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "PuzzleReset" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPuzzleReset(InputAction.CallbackContext context);
     }
 }
