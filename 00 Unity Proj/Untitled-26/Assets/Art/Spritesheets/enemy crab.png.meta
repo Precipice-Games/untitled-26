@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: afb8fdd7500649d47898e3b41329771c
+guid: 64100e0fedcb2814f9cc158e0148af34
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mort spritesheet_0
+      name: enemy crab_0
       rect:
         serializedVersion: 2
-        x: 420
-        y: 6939
-        width: 585
-        height: 493
+        x: 174
+        y: 4201
+        width: 706
+        height: 404
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a79df90411325ce46b003d03e287bd23
-      internalID: -753580909
+      spriteID: edbbb2251a9158c40b7c47789d7fa541
+      internalID: 638894422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_1
+      name: enemy crab_1
       rect:
         serializedVersion: 2
-        x: 1911
-        y: 6939
-        width: 584
-        height: 493
+        x: 1220
+        y: 4203
+        width: 709
+        height: 402
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f3e42e9d7e421943ad27786048999cd
-      internalID: -1929246777
+      spriteID: a889acc46dcc1154b83fa6d77a748857
+      internalID: -1213837276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_2
+      name: enemy crab_2
       rect:
         serializedVersion: 2
-        x: 3397
-        y: 6939
-        width: 592
-        height: 497
+        x: 2264
+        y: 4213
+        width: 717
+        height: 392
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9e56fd8610153444bb90f63c5dc3f56
-      internalID: -1769478382
+      spriteID: 0b761712d7095fb4f9e6fdf3ad0b596a
+      internalID: 2000277092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_3
+      name: enemy crab_3
       rect:
         serializedVersion: 2
-        x: 4883
-        y: 6936
-        width: 604
-        height: 504
+        x: 3306
+        y: 4226
+        width: 726
+        height: 379
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83181ff027b9dc64eb109a10db0767be
-      internalID: 50545105
+      spriteID: c924e3e434a71804080e1ab760313c5d
+      internalID: 366235393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_4
+      name: enemy crab_4
       rect:
         serializedVersion: 2
-        x: 6370
-        y: 6936
-        width: 615
-        height: 512
+        x: 4350
+        y: 4224
+        width: 724
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98b7c3b53a53722438108633875683ba
-      internalID: 1334021441
+      spriteID: 9dc5ac126b536ac40856491e229a377b
+      internalID: -823001591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_5
+      name: enemy crab_5
       rect:
         serializedVersion: 2
-        x: 397
-        y: 5816
-        width: 631
-        height: 520
+        x: 154
+        y: 3633
+        width: 711
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c835e688cc54caa4aaa0eb580458b2b5
-      internalID: 528096178
+      spriteID: d30a75079071379419408987a777b471
+      internalID: 1464495159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_6
+      name: enemy crab_6
       rect:
         serializedVersion: 2
-        x: 1880
-        y: 5812
-        width: 646
-        height: 531
+        x: 1203
+        y: 3630
+        width: 675
+        height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,20 +283,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db11ed9b4a7f1924ea88089483c21a10
-      internalID: -167997965
+      spriteID: db1848b01731f924b97deaea5b8fcda3
+      internalID: 2081682562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_7
+      name: enemy crab_7
       rect:
         serializedVersion: 2
-        x: 3366
-        y: 5808
-        width: 658
-        height: 539
+        x: 2259
+        y: 3630
+        width: 550
+        height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28e2c6048e4861044a0e60af765e58e2
-      internalID: -580278031
+      spriteID: 37702739bd5e83d489fcc7c13068e092
+      internalID: 1465017527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_8
+      name: enemy crab_8
       rect:
         serializedVersion: 2
-        x: 4853
-        y: 5808
-        width: 665
-        height: 547
+        x: 3321
+        y: 3630
+        width: 576
+        height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,20 +327,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc92eb427df55014bba870dfc8e7972f
-      internalID: 1778401451
+      spriteID: 6005287aa7ed6ca4484f82ec6b987c5c
+      internalID: 1407962390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_9
+      name: enemy crab_9
       rect:
         serializedVersion: 2
-        x: 6339
-        y: 5805
-        width: 673
-        height: 554
+        x: 4385
+        y: 3630
+        width: 528
+        height: 389
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,20 +349,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d4235f88a696b4ab378ff2509db24b
-      internalID: 616673443
+      spriteID: 2c6e7950d07af7b49a3002fb1cf8c4ba
+      internalID: 1652818459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_10
+      name: enemy crab_10
       rect:
         serializedVersion: 2
-        x: 374
-        y: 4689
-        width: 673
-        height: 554
+        x: 212
+        y: 3042
+        width: 502
+        height: 394
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +371,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 308724fc78000f747af71913e7fc4e26
-      internalID: 1162890149
+      spriteID: 4e072a49f31e7ba4cb676cd8c5781514
+      internalID: -58334805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_11
+      name: enemy crab_11
       rect:
         serializedVersion: 2
-        x: 1865
-        y: 4689
-        width: 676
-        height: 554
+        x: 1279
+        y: 3042
+        width: 484
+        height: 394
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,20 +393,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 209c55d7a6d624c4da05ef4b403a2c4a
-      internalID: -23420419
+      spriteID: e31e1c1bf9336d848a0241b4f2d5ea8f
+      internalID: -795044282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_12
+      name: enemy crab_12
       rect:
         serializedVersion: 2
-        x: 3363
-        y: 4693
-        width: 661
-        height: 542
+        x: 2346
+        y: 3042
+        width: 466
+        height: 399
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,20 +415,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e21f25384ca415f48b59c93ff138f44f
-      internalID: 89468341
+      spriteID: bf6e0718b55a3b34bafd2f5c5217195b
+      internalID: 598517526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_13
+      name: enemy crab_13
       rect:
         serializedVersion: 2
-        x: 4860
-        y: 4693
-        width: 650
-        height: 535
+        x: 3413
+        y: 3042
+        width: 456
+        height: 404
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,20 +437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7195508af001cd4ea0c1672e9777950
-      internalID: 1244514433
+      spriteID: d30921f73c123c047bcd12b7e4eb5e6b
+      internalID: -1689641681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_14
+      name: enemy crab_14
       rect:
         serializedVersion: 2
-        x: 6366
-        y: 4696
-        width: 623
-        height: 516
+        x: 4521
+        y: 3044
+        width: 404
+        height: 402
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,20 +459,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84dd4fd4867e87441b0b9616e7107ee3
-      internalID: -1101686205
+      spriteID: d50d2a1250424c645b495e21314b98f8
+      internalID: 1127705590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_15
+      name: enemy crab_15
       rect:
         serializedVersion: 2
-        x: 413
-        y: 3584
-        width: 600
-        height: 501
+        x: 299
+        y: 2456
+        width: 438
+        height: 399
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,20 +481,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4de6beb30029bc741b2133e9f47659c9
-      internalID: 280450894
+      spriteID: 612757fa32b55e444b34406ec180d1da
+      internalID: -1766477867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_16
+      name: enemy crab_16
       rect:
         serializedVersion: 2
-        x: 1911
-        y: 3584
-        width: 584
-        height: 493
+        x: 1356
+        y: 2456
+        width: 435
+        height: 396
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,20 +503,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ccc63f8a7a6a0a4ebdc68449eb3c380
-      internalID: -1969828755
+      spriteID: 90e782cf60037b84a8e99fcc1d10328e
+      internalID: -1121657624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_17
+      name: enemy crab_17
       rect:
         serializedVersion: 2
-        x: 3397
-        y: 3584
-        width: 592
-        height: 493
+        x: 2410
+        y: 2456
+        width: 438
+        height: 391
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,20 +525,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6982f94903fcec544a3dc11a849ba658
-      internalID: 2040110722
+      spriteID: 919185abaaf9efe4686e69be557ce7e0
+      internalID: 598686388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_18
+      name: enemy crab_18
       rect:
         serializedVersion: 2
-        x: 4883
-        y: 3581
-        width: 604
-        height: 496
+        x: 3462
+        y: 2458
+        width: 442
+        height: 382
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -547,20 +547,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7121286515226746941c5539c764809
-      internalID: -468044226
+      spriteID: 1caa067f56b3ca64c8448ad13b38e27d
+      internalID: -1683429625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_19
+      name: enemy crab_19
       rect:
         serializedVersion: 2
-        x: 6366
-        y: 3581
-        width: 623
-        height: 496
+        x: 4513
+        y: 2458
+        width: 451
+        height: 371
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -569,20 +569,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9acf1cb19a74fe24b83bc4be4ee13459
-      internalID: -524059841
+      spriteID: d2f7eabc87a794d4d90444ceffdf7fe4
+      internalID: -119444833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_20
+      name: enemy crab_20
       rect:
         serializedVersion: 2
-        x: 394
-        y: 2461
-        width: 638
-        height: 500
+        x: 322
+        y: 1870
+        width: 463
+        height: 366
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -591,20 +591,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 435156e5d399c834a9c0732fc5a61929
-      internalID: -1709759345
+      spriteID: 74af588bf5502b64e8f4438396b90ac4
+      internalID: 559898587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_21
+      name: enemy crab_21
       rect:
         serializedVersion: 2
-        x: 1876
-        y: 2457
-        width: 654
-        height: 504
+        x: 1371
+        y: 1870
+        width: 476
+        height: 366
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -613,20 +613,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a87eced9b1499ff4c93f7f30d66b9116
-      internalID: -1110919064
+      spriteID: 90f17a77b69afa547915c3918e199541
+      internalID: 1314180661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_22
+      name: enemy crab_22
       rect:
         serializedVersion: 2
-        x: 3363
-        y: 2453
-        width: 664
-        height: 505
+        x: 2418
+        y: 1870
+        width: 494
+        height: 368
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,20 +635,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c85d495f99e35e4fab6bbab150f2557
-      internalID: 1557734469
+      spriteID: f7121106aa4e6724294954986ff1937b
+      internalID: -1327910179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_23
+      name: enemy crab_23
       rect:
         serializedVersion: 2
-        x: 4849
-        y: 2453
-        width: 673
-        height: 505
+        x: 3467
+        y: 1870
+        width: 506
+        height: 374
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -657,20 +657,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c17737957e8a9c4287af257680f7446
-      internalID: 1154213753
+      spriteID: ec4ff935305dd43488695712f0546fd0
+      internalID: 1616881194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_24
+      name: enemy crab_24
       rect:
         serializedVersion: 2
-        x: 6339
-        y: 2449
-        width: 673
-        height: 509
+        x: 4518
+        y: 1870
+        width: 520
+        height: 379
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -679,20 +679,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64adffd354198cd4dad268c65b496d46
-      internalID: 1108366159
+      spriteID: d69c21087eb7149469206ea5a9e47980
+      internalID: 271128602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_25
+      name: enemy crab_25
       rect:
         serializedVersion: 2
-        x: 378
-        y: 1334
-        width: 669
-        height: 508
+        x: 330
+        y: 1279
+        width: 527
+        height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -701,20 +701,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf4d2570d0947d94d8f14810b4db98b5
-      internalID: -261181557
+      spriteID: ffeb70198761d1c4280f5620f51e9d16
+      internalID: 1298515958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_26
+      name: enemy crab_26
       rect:
         serializedVersion: 2
-        x: 1872
-        y: 1337
-        width: 665
-        height: 505
+        x: 1379
+        y: 1279
+        width: 537
+        height: 389
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -723,20 +723,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c6c3d8e4efc9464d8149189101dd778
-      internalID: 1669400622
+      spriteID: dab288e271a108e4b8d12b127290b5f6
+      internalID: -338774194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_27
+      name: enemy crab_27
       rect:
         serializedVersion: 2
-        x: 3370
-        y: 1341
-        width: 650
-        height: 501
+        x: 2428
+        y: 1277
+        width: 548
+        height: 391
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -745,20 +745,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a88906ecbfdf0dd49a91b8c47150c165
-      internalID: 850566155
+      spriteID: 368058a4344ec0d4ea675cf87eef7cba
+      internalID: -1975679115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_28
+      name: enemy crab_28
       rect:
         serializedVersion: 2
-        x: 4872
-        y: 1341
-        width: 627
-        height: 501
+        x: 3477
+        y: 1277
+        width: 550
+        height: 394
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -767,20 +767,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5651188604d8b74a879873475aa44ac
-      internalID: 290249428
+      spriteID: 8f7583af4fad1f340b7dba4b4af4f2ee
+      internalID: -675914504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_29
+      name: enemy crab_29
       rect:
         serializedVersion: 2
-        x: 6374
-        y: 1345
-        width: 603
-        height: 497
+        x: 4516
+        y: 1277
+        width: 563
+        height: 391
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -789,20 +789,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be1d54b7a85c34f4684f44a6c73964f7
-      internalID: -1061076345
+      spriteID: 1aca02cdfaca10b4ba0c69f06e80dd50
+      internalID: -1190235493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_30
+      name: enemy crab_30
       rect:
         serializedVersion: 2
-        x: 417
-        y: 229
-        width: 588
-        height: 497
+        x: 310
+        y: 688
+        width: 578
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -811,8 +811,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dc4c4d4eb0b83e4fb32cba4d6a48f02
-      internalID: 1224447861
+      spriteID: 5b0b7f3d20fbed44e8561bcf15a84dd9
+      internalID: -1651708524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy crab_31
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 688
+        width: 609
+        height: 374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671e537cad85ddc49b8d2a2f044fac10
+      internalID: -304182455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy crab_32
+      rect:
+        serializedVersion: 2
+        x: 2333
+        y: 688
+        width: 648
+        height: 374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49f2b94206d7704bb803b9cc5ab00b9
+      internalID: 419896463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy crab_33
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 688
+        width: 685
+        height: 374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9638af52d6f1b45bbe00bdcb977789
+      internalID: -1433368503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy crab_34
+      rect:
+        serializedVersion: 2
+        x: 4365
+        y: 680
+        width: 709
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f334a7fbf4c08d24d947504261877b9a
+      internalID: -643904629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy crab_35
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 84
+        width: 714
+        height: 392
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27df14e384fc68046a3e264ba7d94e3c
+      internalID: 1796906102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy crab_36
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 79
+        width: 707
+        height: 397
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b890aba5b11cf3743b07cf6d316dbe25
+      internalID: 1208773976
       vertices: []
       indices: 
       edges: []
@@ -821,7 +953,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1312aa76462a422448d071303e786f2d
+    spriteID: 1657af98724a40c4a86a77fa2456e239
     internalID: 0
     vertices: []
     indices: 
@@ -833,37 +965,43 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      mort spritesheet_0: -753580909
-      mort spritesheet_1: -1929246777
-      mort spritesheet_10: 1162890149
-      mort spritesheet_11: -23420419
-      mort spritesheet_12: 89468341
-      mort spritesheet_13: 1244514433
-      mort spritesheet_14: -1101686205
-      mort spritesheet_15: 280450894
-      mort spritesheet_16: -1969828755
-      mort spritesheet_17: 2040110722
-      mort spritesheet_18: -468044226
-      mort spritesheet_19: -524059841
-      mort spritesheet_2: -1769478382
-      mort spritesheet_20: -1709759345
-      mort spritesheet_21: -1110919064
-      mort spritesheet_22: 1557734469
-      mort spritesheet_23: 1154213753
-      mort spritesheet_24: 1108366159
-      mort spritesheet_25: -261181557
-      mort spritesheet_26: 1669400622
-      mort spritesheet_27: 850566155
-      mort spritesheet_28: 290249428
-      mort spritesheet_29: -1061076345
-      mort spritesheet_3: 50545105
-      mort spritesheet_30: 1224447861
-      mort spritesheet_4: 1334021441
-      mort spritesheet_5: 528096178
-      mort spritesheet_6: -167997965
-      mort spritesheet_7: -580278031
-      mort spritesheet_8: 1778401451
-      mort spritesheet_9: 616673443
+      enemy crab_0: 638894422
+      enemy crab_1: -1213837276
+      enemy crab_10: -58334805
+      enemy crab_11: -795044282
+      enemy crab_12: 598517526
+      enemy crab_13: -1689641681
+      enemy crab_14: 1127705590
+      enemy crab_15: -1766477867
+      enemy crab_16: -1121657624
+      enemy crab_17: 598686388
+      enemy crab_18: -1683429625
+      enemy crab_19: -119444833
+      enemy crab_2: 2000277092
+      enemy crab_20: 559898587
+      enemy crab_21: 1314180661
+      enemy crab_22: -1327910179
+      enemy crab_23: 1616881194
+      enemy crab_24: 271128602
+      enemy crab_25: 1298515958
+      enemy crab_26: -338774194
+      enemy crab_27: -1975679115
+      enemy crab_28: -675914504
+      enemy crab_29: -1190235493
+      enemy crab_3: 366235393
+      enemy crab_30: -1651708524
+      enemy crab_31: -304182455
+      enemy crab_32: 419896463
+      enemy crab_33: -1433368503
+      enemy crab_34: -643904629
+      enemy crab_35: 1796906102
+      enemy crab_36: 1208773976
+      enemy crab_4: -823001591
+      enemy crab_5: 1464495159
+      enemy crab_6: 2081682562
+      enemy crab_7: 1465017527
+      enemy crab_8: 1407962390
+      enemy crab_9: 1652818459
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
