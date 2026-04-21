@@ -43299,10 +43299,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2140098612}
+  - component: {fileID: 2140098616}
   - component: {fileID: 2140098615}
   - component: {fileID: 2140098613}
   - component: {fileID: 2140098614}
-  - component: {fileID: 2140098616}
   m_Layer: 0
   m_Name: Judith
   m_TagString: Untagged
@@ -43353,44 +43353,44 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 2140098615}
   _frameCounter: 0
   _idleSprites:
-  - {fileID: 21300000, guid: 5986b852e09341e45aa960e33ff15944, type: 2}
-  - {fileID: 21300000, guid: 6d3db768c11a8954bb524390353413c7, type: 2}
-  - {fileID: 21300000, guid: 55fd33bb30c08f64c8db2470769adeba, type: 2}
-  - {fileID: 21300000, guid: 9ee5a505439b56740bbe00549d6a6eb4, type: 2}
-  - {fileID: 21300000, guid: dd44f918653329243b1c2085d4716d45, type: 2}
-  - {fileID: 21300000, guid: 329562edb59fbc84ba84b3654887fd01, type: 2}
-  - {fileID: 21300000, guid: cf1890f48bc156f4695bae848638f3b2, type: 2}
-  - {fileID: 21300000, guid: 838e0259f13013247a6c23d9fef4c0fe, type: 2}
-  - {fileID: 21300000, guid: 1a7d7563e4b98394d90eb36ef103c0da, type: 2}
-  - {fileID: 21300000, guid: 28deb94ff3498c349848bf207851915f, type: 2}
-  - {fileID: 21300000, guid: 2a3822dd0f06e3948ab6665647448189, type: 2}
-  - {fileID: 21300000, guid: ca2a2a34ce21c4246a6e9dc9d5520fca, type: 2}
-  - {fileID: 21300000, guid: d1f8ffdcb6a2237499a6f39b0c7e9d22, type: 2}
-  - {fileID: 21300000, guid: ec0755c94a407a44eb4ba4b441db5f4d, type: 2}
-  - {fileID: 21300000, guid: a81d73f85ad3263419589365aa9c9abf, type: 2}
-  - {fileID: 21300000, guid: c7179387f99b78945a42818586201ea6, type: 2}
-  - {fileID: 21300000, guid: dcacd215117041b4fb5fc13bd56d7bc5, type: 2}
-  - {fileID: 21300000, guid: 71d19fad45966f248bb64fb6ed1e7400, type: 2}
-  - {fileID: 21300000, guid: 1cf7ec69ad1528b4491d6249a8d38ed3, type: 2}
-  - {fileID: 21300000, guid: 3512baaaf92494d4193158068b2b847b, type: 2}
-  - {fileID: 21300000, guid: 2b93b201e3628ec4daef215ae13f358e, type: 2}
-  - {fileID: 21300000, guid: ab017b47e033d034a8f4a0c2ac807e20, type: 2}
-  - {fileID: 21300000, guid: 2b731e1c57e0daf49ac0f6cd6b9c102b, type: 2}
-  - {fileID: 21300000, guid: 2be2b82584eba0240a9631d3b2ebbc82, type: 2}
-  - {fileID: 21300000, guid: 61cafbb73edeca14e8af3da8bec62b84, type: 2}
-  - {fileID: 21300000, guid: 56dad8de6e28d4c42a70238b06b12b28, type: 2}
-  - {fileID: 21300000, guid: c2a93881c31d09d408bfad5ebeb9f799, type: 2}
-  - {fileID: 21300000, guid: 611237560eb1a804eb28efed57fbd8de, type: 2}
-  - {fileID: 21300000, guid: 55c4034ae5ab8464f991f626d674c515, type: 2}
-  - {fileID: 21300000, guid: 4d884c167bd256b468005fce233ea42b, type: 2}
-  - {fileID: 21300000, guid: 08f808e0ec37cbe42857b66b105e4bdb, type: 2}
-  - {fileID: 21300000, guid: b1b127ed69e1ab047bdc033dcc2abe3f, type: 2}
-  - {fileID: 21300000, guid: a21c674b517c28e4eb4dcbcf8e55ac18, type: 2}
-  - {fileID: 21300000, guid: a7030061fafb28c4a97293731bad78bf, type: 2}
-  - {fileID: 21300000, guid: 91db11977be7f5642979d2b522193616, type: 2}
-  - {fileID: 21300000, guid: 707c5f709b0287440b40b6e9ecda25ca, type: 2}
-  - {fileID: 21300000, guid: 73226a25449db8f4c82d2c16f4a3d792, type: 2}
-  - {fileID: 21300000, guid: 371771bd0ee857e4bb8d131785773ea8, type: 2}
+  - {fileID: 957181384, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -1194223155, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 2059840828, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 954440123, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -1595141373, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -1154337406, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -1937540174, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -272743348, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -672451904, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 1552688618, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 1565519447, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -679397587, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 532773741, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 876217425, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -90669896, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 1196287767, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 1073221268, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 382658494, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -394244663, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -1381744584, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 2077938976, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 1399922008, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -236200116, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -1680249170, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -672124313, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -164454176, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 916936696, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -1222039859, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -2042569, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 265795136, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 1084947576, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -1737025198, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 253778210, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: 1052806735, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -1340095207, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -2060477694, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -521705129, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
+  - {fileID: -984214732, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
 --- !u!212 &2140098615
 SpriteRenderer:
   serializedVersion: 2
@@ -43440,7 +43440,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 5986b852e09341e45aa960e33ff15944, type: 2}
+  m_Sprite: {fileID: 957181384, guid: 1bbe7825471715a41a15aad73feb3fb7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

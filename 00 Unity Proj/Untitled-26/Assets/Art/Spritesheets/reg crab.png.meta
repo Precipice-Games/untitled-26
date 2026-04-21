@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: afb8fdd7500649d47898e3b41329771c
+guid: 8e30e4009c67af549a527ada34a45cac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mort spritesheet_0
+      name: reg crab_0
       rect:
         serializedVersion: 2
-        x: 420
-        y: 6939
-        width: 585
-        height: 493
+        x: 171
+        y: 3636
+        width: 655
+        height: 415
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a79df90411325ce46b003d03e287bd23
-      internalID: -753580909
+      spriteID: 8dd9e585aabe09343b62b8be0b4f5852
+      internalID: -856124683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_1
+      name: reg crab_1
       rect:
         serializedVersion: 2
-        x: 1911
-        y: 6939
-        width: 584
-        height: 493
+        x: 1218
+        y: 3639
+        width: 657
+        height: 409
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,130 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f3e42e9d7e421943ad27786048999cd
-      internalID: -1929246777
+      spriteID: 639bf66449d17e34498d773f6e2a599d
+      internalID: -1051529512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_2
+      name: reg crab_2
       rect:
         serializedVersion: 2
-        x: 3397
-        y: 6939
-        width: 592
-        height: 497
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9e56fd8610153444bb90f63c5dc3f56
-      internalID: -1769478382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 4883
-        y: 6936
-        width: 604
-        height: 504
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83181ff027b9dc64eb109a10db0767be
-      internalID: 50545105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 6370
-        y: 6936
-        width: 615
-        height: 512
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98b7c3b53a53722438108633875683ba
-      internalID: 1334021441
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 397
-        y: 5816
-        width: 631
-        height: 520
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c835e688cc54caa4aaa0eb580458b2b5
-      internalID: 528096178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 1880
-        y: 5812
-        width: 646
-        height: 531
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db11ed9b4a7f1924ea88089483c21a10
-      internalID: -167997965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 3366
-        y: 5808
+        x: 2269
+        y: 3641
         width: 658
-        height: 539
+        height: 405
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28e2c6048e4861044a0e60af765e58e2
-      internalID: -580278031
+      spriteID: a5006c04b2921b04dace4ba74d547592
+      internalID: -903752068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_8
+      name: reg crab_3
       rect:
         serializedVersion: 2
-        x: 4853
-        y: 5808
-        width: 665
-        height: 547
+        x: 3321
+        y: 3644
+        width: 655
+        height: 396
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc92eb427df55014bba870dfc8e7972f
-      internalID: 1778401451
+      spriteID: f10a694fbd53b5545bd4d93db382a0ee
+      internalID: 1975840066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_9
+      name: reg crab_4
       rect:
         serializedVersion: 2
-        x: 6339
-        y: 5805
-        width: 673
-        height: 554
+        x: 4370
+        y: 3649
+        width: 660
+        height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d4235f88a696b4ab378ff2509db24b
-      internalID: 616673443
+      spriteID: de60d2e38e08f624a911f5ae632a957b
+      internalID: -153352387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_10
+      name: reg crab_5
       rect:
         serializedVersion: 2
-        x: 374
-        y: 4689
-        width: 673
-        height: 554
+        x: 184
+        y: 3063
+        width: 658
+        height: 371
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +261,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 308724fc78000f747af71913e7fc4e26
-      internalID: 1162890149
+      spriteID: ad2ad25c881019542be5d477c724282c
+      internalID: 551553948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_11
+      name: reg crab_6
       rect:
         serializedVersion: 2
-        x: 1865
-        y: 4689
-        width: 676
-        height: 554
+        x: 1236
+        y: 3066
+        width: 662
+        height: 358
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,20 +283,108 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 209c55d7a6d624c4da05ef4b403a2c4a
-      internalID: -23420419
+      spriteID: 8cc026a8d1223fd418f09e4f1ec24e33
+      internalID: 60200209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_12
+      name: reg crab_7
       rect:
         serializedVersion: 2
-        x: 3363
-        y: 4693
+        x: 2293
+        y: 3071
+        width: 660
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5604cfe0f86259449b4e8731423e0a3
+      internalID: -694260884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_8
+      rect:
+        serializedVersion: 2
+        x: 3347
+        y: 3071
+        width: 662
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacf23263567063459807ffa8e8f5023
+      internalID: -2050102419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_9
+      rect:
+        serializedVersion: 2
+        x: 4406
+        y: 3066
+        width: 663
+        height: 337
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3287fea0d52a1c1469c531168cdf0b5e
+      internalID: -1975469508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_10
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 2467
+        width: 663
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a577d97d02fe24408397929ea29e144
+      internalID: 1134890979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_11
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 2462
         width: 661
-        height: 542
+        height: 381
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -415,20 +393,86 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e21f25384ca415f48b59c93ff138f44f
-      internalID: 89468341
+      spriteID: 140813158ff6e2f4885390797bc062d3
+      internalID: -466031022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_13
+      name: reg crab_12
       rect:
         serializedVersion: 2
-        x: 4860
-        y: 4693
+        x: 2344
+        y: 2462
+        width: 657
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9502997fb8e12b247beee8aecffbfff3
+      internalID: -72818191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_13
+      rect:
+        serializedVersion: 2
+        x: 3398
+        y: 2467
+        width: 652
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9036603d48c64347a9b5b26cb4f73f2
+      internalID: 197029748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_14
+      rect:
+        serializedVersion: 2
+        x: 4447
+        y: 2472
+        width: 652
+        height: 379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54aae95182c80224898f279bf0976be0
+      internalID: 1445282086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_15
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1881
         width: 650
-        height: 535
+        height: 378
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,306 +481,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7195508af001cd4ea0c1672e9777950
-      internalID: 1244514433
+      spriteID: e471b9c9ef685a842aa81dffeca3b04e
+      internalID: 2041040524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_14
+      name: reg crab_16
       rect:
         serializedVersion: 2
-        x: 6366
-        y: 4696
-        width: 623
-        height: 516
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84dd4fd4867e87441b0b9616e7107ee3
-      internalID: -1101686205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_15
-      rect:
-        serializedVersion: 2
-        x: 413
-        y: 3584
-        width: 600
-        height: 501
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4de6beb30029bc741b2133e9f47659c9
-      internalID: 280450894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_16
-      rect:
-        serializedVersion: 2
-        x: 1911
-        y: 3584
-        width: 584
-        height: 493
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ccc63f8a7a6a0a4ebdc68449eb3c380
-      internalID: -1969828755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_17
-      rect:
-        serializedVersion: 2
-        x: 3397
-        y: 3584
-        width: 592
-        height: 493
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6982f94903fcec544a3dc11a849ba658
-      internalID: 2040110722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_18
-      rect:
-        serializedVersion: 2
-        x: 4883
-        y: 3581
-        width: 604
-        height: 496
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7121286515226746941c5539c764809
-      internalID: -468044226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_19
-      rect:
-        serializedVersion: 2
-        x: 6366
-        y: 3581
-        width: 623
-        height: 496
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9acf1cb19a74fe24b83bc4be4ee13459
-      internalID: -524059841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_20
-      rect:
-        serializedVersion: 2
-        x: 394
-        y: 2461
-        width: 638
-        height: 500
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 435156e5d399c834a9c0732fc5a61929
-      internalID: -1709759345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_21
-      rect:
-        serializedVersion: 2
-        x: 1876
-        y: 2457
-        width: 654
-        height: 504
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a87eced9b1499ff4c93f7f30d66b9116
-      internalID: -1110919064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_22
-      rect:
-        serializedVersion: 2
-        x: 3363
-        y: 2453
-        width: 664
-        height: 505
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c85d495f99e35e4fab6bbab150f2557
-      internalID: 1557734469
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_23
-      rect:
-        serializedVersion: 2
-        x: 4849
-        y: 2453
-        width: 673
-        height: 505
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c17737957e8a9c4287af257680f7446
-      internalID: 1154213753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_24
-      rect:
-        serializedVersion: 2
-        x: 6339
-        y: 2449
-        width: 673
-        height: 509
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64adffd354198cd4dad268c65b496d46
-      internalID: 1108366159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_25
-      rect:
-        serializedVersion: 2
-        x: 378
-        y: 1334
-        width: 669
-        height: 508
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf4d2570d0947d94d8f14810b4db98b5
-      internalID: -261181557
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_26
-      rect:
-        serializedVersion: 2
-        x: 1872
-        y: 1337
-        width: 665
-        height: 505
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c6c3d8e4efc9464d8149189101dd778
-      internalID: 1669400622
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mort spritesheet_27
-      rect:
-        serializedVersion: 2
-        x: 3370
-        y: 1341
+        x: 1300
+        y: 1881
         width: 650
-        height: 501
+        height: 373
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -745,20 +503,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a88906ecbfdf0dd49a91b8c47150c165
-      internalID: 850566155
+      spriteID: 5a95820eb4b4951408bb8660e7d50bdd
+      internalID: 288189636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_28
+      name: reg crab_17
       rect:
         serializedVersion: 2
-        x: 4872
-        y: 1341
-        width: 627
-        height: 501
+        x: 2346
+        y: 1878
+        width: 648
+        height: 369
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -767,20 +525,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5651188604d8b74a879873475aa44ac
-      internalID: 290249428
+      spriteID: 98ba52c8727ebdc4ca241a52d130d846
+      internalID: 584609747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_29
+      name: reg crab_18
       rect:
         serializedVersion: 2
-        x: 6374
-        y: 1345
-        width: 603
-        height: 497
+        x: 3390
+        y: 1878
+        width: 647
+        height: 361
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -789,20 +547,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be1d54b7a85c34f4684f44a6c73964f7
-      internalID: -1061076345
+      spriteID: aa319d476f0668a40856b83e4734909f
+      internalID: -1887405184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mort spritesheet_30
+      name: reg crab_19
       rect:
         serializedVersion: 2
-        x: 417
-        y: 229
-        width: 588
-        height: 497
+        x: 4434
+        y: 1881
+        width: 647
+        height: 350
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -811,8 +569,272 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dc4c4d4eb0b83e4fb32cba4d6a48f02
-      internalID: 1224447861
+      spriteID: 09f7201333187cf47882e8fb46a855a8
+      internalID: -1957653916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_20
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1292
+        width: 645
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfcb1c62394b90b4e820b9b721a99135
+      internalID: 1435396011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_21
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 1295
+        width: 648
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b932ecb7213e94caa3f9b35059a18a
+      internalID: 1222064331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_22
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 1295
+        width: 647
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac69d4d8c5b659e4ba3accdddf2df6f7
+      internalID: -1902192588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_23
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 1292
+        width: 650
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da9ee6f5481baa41a4a2ebf8d663e9d
+      internalID: -1309759256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_24
+      rect:
+        serializedVersion: 2
+        x: 4398
+        y: 1290
+        width: 655
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fba4c1bf3a6dba42945843b10e6b00a
+      internalID: -1673882456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_25
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 693
+        width: 661
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e216d9969067f994ab29e62329439249
+      internalID: -584390457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_26
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 688
+        width: 663
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c2bd9c9fade4e48a420129e7c6c9ea
+      internalID: -1037224202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_27
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 686
+        width: 662
+        height: 407
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88e086df95335841b26a5d2ee9ea154
+      internalID: -556969705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_28
+      rect:
+        serializedVersion: 2
+        x: 3316
+        y: 686
+        width: 663
+        height: 409
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bea3a8c52baea348940a2b190945468
+      internalID: -1877101372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_29
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 683
+        width: 661
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6778e0a05e5dfaf4a86ba056292a7331
+      internalID: -259977149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_30
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 97
+        width: 655
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88914658bba62014a96f1592fb07b120
+      internalID: 1624135798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reg crab_31
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 97
+        width: 655
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c275ae0c6feef449f528d095b3826e
+      internalID: -277974646
       vertices: []
       indices: 
       edges: []
@@ -821,7 +843,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1312aa76462a422448d071303e786f2d
+    spriteID: 9d9002410d919f14680b13a1087ac5cf
     internalID: 0
     vertices: []
     indices: 
@@ -833,37 +855,38 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      mort spritesheet_0: -753580909
-      mort spritesheet_1: -1929246777
-      mort spritesheet_10: 1162890149
-      mort spritesheet_11: -23420419
-      mort spritesheet_12: 89468341
-      mort spritesheet_13: 1244514433
-      mort spritesheet_14: -1101686205
-      mort spritesheet_15: 280450894
-      mort spritesheet_16: -1969828755
-      mort spritesheet_17: 2040110722
-      mort spritesheet_18: -468044226
-      mort spritesheet_19: -524059841
-      mort spritesheet_2: -1769478382
-      mort spritesheet_20: -1709759345
-      mort spritesheet_21: -1110919064
-      mort spritesheet_22: 1557734469
-      mort spritesheet_23: 1154213753
-      mort spritesheet_24: 1108366159
-      mort spritesheet_25: -261181557
-      mort spritesheet_26: 1669400622
-      mort spritesheet_27: 850566155
-      mort spritesheet_28: 290249428
-      mort spritesheet_29: -1061076345
-      mort spritesheet_3: 50545105
-      mort spritesheet_30: 1224447861
-      mort spritesheet_4: 1334021441
-      mort spritesheet_5: 528096178
-      mort spritesheet_6: -167997965
-      mort spritesheet_7: -580278031
-      mort spritesheet_8: 1778401451
-      mort spritesheet_9: 616673443
+      reg crab_0: -856124683
+      reg crab_1: -1051529512
+      reg crab_10: 1134890979
+      reg crab_11: -466031022
+      reg crab_12: -72818191
+      reg crab_13: 197029748
+      reg crab_14: 1445282086
+      reg crab_15: 2041040524
+      reg crab_16: 288189636
+      reg crab_17: 584609747
+      reg crab_18: -1887405184
+      reg crab_19: -1957653916
+      reg crab_2: -903752068
+      reg crab_20: 1435396011
+      reg crab_21: 1222064331
+      reg crab_22: -1902192588
+      reg crab_23: -1309759256
+      reg crab_24: -1673882456
+      reg crab_25: -584390457
+      reg crab_26: -1037224202
+      reg crab_27: -556969705
+      reg crab_28: -1877101372
+      reg crab_29: -259977149
+      reg crab_3: 1975840066
+      reg crab_30: 1624135798
+      reg crab_31: -277974646
+      reg crab_4: -153352387
+      reg crab_5: 551553948
+      reg crab_6: 60200209
+      reg crab_7: -694260884
+      reg crab_8: -2050102419
+      reg crab_9: -1975469508
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
