@@ -1,4 +1,4 @@
-title: Judith
+﻿title: Judith
 position: -92,80
 ---
 <<declare $iceFinished = false>>
@@ -18,99 +18,144 @@ Sky: I’m Sky, it’s nice to meet you! What's your name? #line:027966d
 
 Sky: Well, actually, I was hoping you might be able to help me! #line:06c7301 
 
-Judith: No.  #line:04bff33 
+Judith: No. I'm busy.  #line:0d56923 
 
-Sky: But you don’t even know what I need help with. #line:0e4fb34 
+Sky: But you don’t even know what I need help with. #line:0e4fb34
 
-Judith: Don’t care. Not my problem. I have other things to worry about.  #line:0d0e734 
+Judith: Not my problem. I have other things to worry about.  #line:0d0e734 
 
 Sky: Like what? #line:052d7f2 
 
-Judith: My ice. #line:07cf835 
+Judith: Look, I'm busy right now. If you want to talk, you’ll have to meet me on the other side of this river. Otherwise, just leave me be. #line:0d9245b 
 
-Sky: Your ice? #line:0d2e025 
+Sky: Okay! But…how do I get across? #line:0c2dec9 
 
-Judith: Yes MY ICE! By the lake.  #line:01b25e2 
-
-Sky: What are you doing with your ice? #line:0514adb 
-
-Judith: Mining it, obviously. #line:04b45ee 
-
-Sky: Why? #line:0d35ab4 
-
-Judith: Do you always ask so many questions? #line:0129655 
-
-Sky: I’ve been told I’m very curious. #line:0994850 
-
-Judith: Yes, well, it’s distracting. Please leave me alone so I can continue my work. I’ve got to practice. The crystal’s not gonna free itself… #line:0218d4a 
-
-Sky: Wait a minute. Did you say crystal?! #line:0c0455d 
-
-Judith: Yes. The crystal that’s been trapped in this big block of ice since the fracture. Why do you sound so surprised? You act like you don’t live here… #line:02ae30b 
-
-Sky: I don’t actually. I’m from the Mother island! #line:0561efd 
-
-Judith: Hah. Good one. #line:049392f 
-
-Sky: No, I’m serious! My sky ship is right over there if you don’t believe me. #line:0cf98ac 
-
-Judith: … #line:0c26e84 
-Judith: That…that’s not possible. That shouldn’t be possible, travel between the islands hasn’t existed since the Fracture. #line:02a8a6c 
-
-Sky: And technically that’s still true, I’m just a bit of a…special circumstance. #line:0774467 
-
-Sky: The Mother Crystal has sent me on a quest to reunite the islands of Ethor…which is why I need your help. #line:08fb3c7 
-
-Judith: That’s– Ugh! What a load of hogwash. The islands are split apart, and they can’t be brought back together. This is how we live now. #line:00109e5 
-
-Sky: But it doesn’t have to be! Look, you don’t have to believe me. But at least let me try. I have the power to reactivate the crystal and bring this island back to the mainland! #line:0151cab 
-
-Judith: … #line:0bde927 
-
-Sky: At least let me try.  #line:0fddf07 
-
-Judith: Hmph. Whatever, it’s none of my business. Crystal is straight ahead, underneath that mountain. I don’t know how you’re gonna get there, though. #line:01c7bf2 
-
-Sky: Leave that to me! It was nice to meet you, Judith. Take care. #line:006144a 
-
-Judith: Hmph. You too. I guess. #line:053da1c 
-
+Judith: Not my problem. #line:06f83db 
 //Judith returns to mining the ice around her. You start on your journey toward the crystal.
 
 //(If the character goes back to Judith before activating the Crystal, she will say this:)
 <<else>>
 Judith: Back already? I knew you were full of it. #line:0b97180 
 <<endonce>>
+<<endif>>
 //(After reactivating the crystal, if the player returns to Judith and talks to her)
-<<else>>
+<<if $iceFinished == true>>
 <<once>>
-Sky: I told you I could do it! #line:04367d8 
+Judith: Sky! what'd you do!?! The whole island is going crazy right now! #line:0a8ba5d 
 
-Judith: I…I don’t believe it. #line:0053f69 
-Judith: … #line:08ba995 
-Judith: Thank you. #line:0c874de 
+Sky: It's the island's crystal Judith, it's finally free! #line:011c394 
 
-Sky: Of course, Judith. I hope things can get a little easier for you now. #line:08a7e1f 
+Judith: Seriously? Jeez, maybe you could've given me a bit of a warning. #line:09b67ee 
 
-Judith: You’re going to go to all the islands, right? #line:0fb6aac 
+Sky: Yeah, sorry about that. I didn't know the crystal would react like that. #line:0fb5a01 
 
-Sky: That’s the plan. #line:014af39 
+Judith: So what does that mean for the island? Are things going to go back to normal? #line:0781f29 
 
-Judith: Good. That’s good. #line:0427171 
-Judith: I don’t know the specifics, but I’m sure they also have problems related to their crystals. #line:084e841 
-Judith: Make sure you talk to them.  #line:0035258 
+Sky: Well your island is back to how it was before the fracture…but we have a long way to go before things can be normal again. #line:082277b 
 
-Sky: Can do. #line:07c9cc3 
+Judith: What does that mean for you? #line:0da9b0e 
 
-Sky: I wish you the best, Judith. #line:03fce81 
+Sky: It means that I'm off to my next island. There are still those out there that are being affected by the Fracture. #line:08dc97a 
+Sky: I don't know what I'll find when I get there but I know that the Mother Crystal will guide me. #line:0e22dab 
 
-Judith: You too. And I really do mean that. #line:03ad7d2 
+Judith: Do you really think that you can fix all the islands from the fracture? #line:0084e9f 
+
+Sky: I know I can. Come on, don't you trust me at this point? #line:04b9a10 
+
+Judith: Well…thanks to I've got my island back to normal. I’m afraid to say that I do. I trust you Sky. And I thank you. #line:03f729f 
+
+Sky: Of course, Judith. I’m glad I was able to help you. Now, I'd better get going on those islands! They aren't going to fix themselves. #line:02c7354 
+
+Judith: If you ever need anything don't hesitate to ask. It's the least we can do to repay you for all you have done for us. #line:0aec0e8 
+
+Sky: Absolutely. Maybe one day I can come back and visit? #line:0f9faa0 
+
+Judith: Let’s not get ahead of ourselves. Goodbye, Sky…and safe travels. #line:041bc2a 
 
 //Player can walk away. If they click on Judith again, it will say:
 <<else>>
 Judith: Best of luck on your journey. I’m sure you’re gonna need it. #line:063507c 
 <<endonce>>
 <<endif>>
+===
+
+title: MountainJudith
+// Occurs after you have taken some kind of action towards the completion of the puzzle but haven't completed it
+---
+<<once>>
+Judith: I see that you've started to take a crack at getting this crystal free. #line:0322ba2 
+
+Sky: Yeah, well, like you said…the crystal being down makes it hard to live here. But, you shouldn’t have to leave. This is your home. I want to help make it the place it once was.  #line:0df41b7 
+
+Judith: Ha, well I wish the people on the mainland felt as passionate about us as you do. #line:09fc558 
+
+Sky: Once the crystal is out of there you won't have to concern yourself with all that. #line:0b98597 
+
+Judith: Thanks Sky. I won't forget this. #line:09b6e63 
+
+Sky: Don't mention it. #line:0829a44 
+<<else>>
+=>Judith: Oh look who it is, the mysterious traveler has arrived. Thought you'd got yourself lost in the snow. #line:00a2771 
+    Sky: You still don't believe I'm from the Mother Island? #line:078422c 
+
+    Judith: About as much as I believe you can get the crystal working again. What makes you so special anyway? #line:0515421 
+
+    Sky: I don't really know, if I’m honest. But I've been chosen for this task and I'm going to see it through, with or without your help. #line:01fad7d 
+
+    Judith: Alright, easy now. Let's not get all riled up. #line:0aeb77a 
+    Judith: Look, the crystal has been buried underneath the ice ever since the Fracture happened. Normally I'd easily be able to break it out, but something's off about the ice now. #line:0dee4cf 
+
+    Sky: What do you mean? #line:0fee148 
+
+    Judith: No matter how hard I try, the ice won't break. It's like the crystal has sort of sealed itself inside and is in no rush to leave. Maybe it was just waiting on something. #line:0a6c06b 
+
+    Sky: Oh, so are you finally starting to believe? #line:00b18bf 
+
+    Judith: Well, considering you're really the only one who seems to have a grasp of what's going on with it. Probably best to just let you have at it. #line:036f3f9 
+
+    Sky: Wow, some endorsement that is. You really know how to give a girl some encouragement. #line:0cf74f3 
+    Sky: Anyway, I better get going. That crystal isn't going to free itself. #line:0b05b79 
+
+    Judith: I'll be here if you need me. #line:090ce9c 
+=> Sky: So what's the deal with the penguins on this island? #line:0ebc06b 
+
+    Judith: The penguins? You came all the way up here to ask me about penguins? #line:05ab11f 
+
+    Sky: Well they're weird they stare at me and squawk a bunch. It's like they're trying to tell me something. #line:0847fb8 
+
+    Judith: Well, they are penguins after all, I always just kind of ignored them or gave them a quick 'hi' in passing. #line:0dee4f9 
+
+    Sky: Do you think they're trying to talk to us? Maybe they know something about the crystal we don't. #line:0e05ddc 
+
+    Judith: I am curious what they would have to say for themselves if they could speak our language…but who knows. #line:03361ae 
+    Judith: If there is anything that we don't have a shortage of around here, it is our penguins. You’ll never run out of conversation. #line:09c3f30 
+
+    Sky: I'd bet they'd have some pretty good stories to tell about the island. #line:0f06a8f 
+
+    Judith: Maybe. Anyway, let me get back to what I'm doing. See you later, Sky. #line:050e863 
+
+    Sky: See you later, Judith. #line:03fdd5b 
+=>Sky: What's the deal with your trees on this island? #line:02afcdb 
+
+    Judith: What's wrong with the trees we have here? #line:03a1dff 
+
+    Sky: Nothing, nothing. I’ve just never seen anything like them. #line:011e084 
+
+    Judith: They’re a special kind of tree. They’ve had to adapt to the cold weather, so they don’t lose their leaves regardless of the season. That way they can continue to grow all year long. Pretty neat, huh? #line:00379f9 
+
+    Sky: Yeah, it is! I’m so excited to see the ways in which all the islands are different. Especially the weather! It’s only ever sunny and warm back home.  #line:024e4cc 
+
+    Judith: Hm, yeah. I'm curious how the other islands are handling all of this. Wonder how their crystals reacted to the Fracture. #line:0746bf9 
+
+    Sky: Each crystal is special in its own way, so I'd imagine the effects are different per island. At least, that’s what the Mother Crystal told me. #line:0f6276b 
+
+    Judith: If the crystal can affect the ice maybe it can affect the trees too… #line:0395f02 
+    Judith: Who knows? Maybe they can help you with getting the crystal free. #line:0095932 
+
+    Sky: Hm, that's possible…I'll keep it in mind. Thanks Judith. #line:0d41577 
+
+    Judith: Hmph. You’re welcome. #line:0262019 
+<<endonce>>
 ===
 
 title: Penguin
@@ -144,4 +189,45 @@ position: -256,-126
 =>Penguin: Squawk! (Why do we live just to die?) #line:007c292 
     Sky: Awww look at this cute little fella! Not a single thought behind those eyes! #line:09af056 
     Penguin: Squuuaaawwk! (Your story will turn its final page one day whether you like it or not!) #line:0d2c4e4 
+===
+
+title: Player
+---
+Sky: This place is quite beautiful, despite the cold. [Idle] #line:0d2c4e5
+
+Sky: Brr, it sure is cold, I should find a parka or something. [Without interaction, while moving] #line:0d2c4e6
+
+Sky: Ughhh, so chilly! Why didn’t I check the weather before coming here? [Without interaction, while moving] #line:0d2c4e7
+
+Sky: Gah! If this wind keeps up I may start drifting away like a plastic bag! [Idle] #line:0d2c4e8
+
+Sky: Gotta keep moving to stay warm!  [Without interaction, while moving] #line:0d2c4e9
+
+Sky: Who needs a coat anyways? Definitely not me. Somebody please bring me a coat    [Idle] #line:09af057
+
+Sky: I wish I could feel the snow crunching beneath my feet… if only I could feel my feet. [Without interaction, while moving] #line:09af058
+
+Sky: It sure is gorgeous out here, I just wish the cold would stop hogging the spotlight.  [Idle] #line:09af059
+
+Sky: Brrr… I’m gonna turn into a human popsicle if I stand around here. [Idle] #line:013e3c6
+
+Sky: Grrrr… My teeth feel like a symphony of jackhammers. [Idle] #line:013e3c7
+
+Sky: Is this what it feels like to be freezer food? [Idle] #line:013e3c8
+
+Sky: If only my warm thoughts would warm me up… [Idle] #line:013e3c9
+
+Sky: Better watch my step, I could slip and fall at any given moment! [Without interaction, while moving] #line:04ccf12
+
+Sky: I’d give anything for a blanket right now. [Idle] #line:04ccf13
+
+Sky: I don’t get how penguins can walk around in the cold like this all day. [Without interaction, while moving] #line:04ccf14
+
+Sky: Brr, did the temperature drop another ten degrees? [Idle] #line:04ccf15
+
+Sky: Is it normal to shiver this much or am I being too dramatic? [Without interaction, while moving] #line:04ccf16
+
+Sky: This is the worst case of brain freeze EVER! [Without interaction, while moving] #line:04ccf17
+
+Sky: This place feels like I’m walking inside a massive snow globe!  [Without interaction, while moving] #line:04ccf18
 ===
