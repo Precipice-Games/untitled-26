@@ -1112,6 +1112,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5813188273321872142, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13.0000305
+      objectReference: {fileID: 0}
     - target: {fileID: 6019136434661588726, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 8.640686
@@ -1186,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7804412830963627737, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13
+      value: -13.0000305
       objectReference: {fileID: 0}
     - target: {fileID: 7830017286838153912, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_text
@@ -1617,6 +1621,7 @@ MonoBehaviour:
   sfxMixerGroup: {fileID: -2769029692214463626, guid: 3bdf0d7a8ed5c49df80eae5daf33256f, type: 2}
   cardClickSFX: {fileID: 8300000, guid: 10352ce73fb3948e58aa34a187e9d16a, type: 3}
   invalidMoveSFX: {fileID: 8300000, guid: efd67c457dfcb4755a34e1d84934e7a8, type: 3}
+  puzzleResetSFX: {fileID: 8300000, guid: 97f478db273f04d679a8025c1eb49b7f, type: 3}
 --- !u!4 &1946899195
 Transform:
   m_ObjectHideFlags: 0
