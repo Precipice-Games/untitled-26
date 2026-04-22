@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1109640015527013170}
   - component: {fileID: 5542912942022859257}
   - component: {fileID: 4272864839946960334}
-  - component: {fileID: 2518381043934893438}
+  - component: {fileID: 5964060367932930290}
   m_Layer: 0
   m_Name: DriftIsland (10)
   m_TagString: Untagged
@@ -155,15 +155,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 2
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &2518381043934893438
+  printStartingPosition: 0
+--- !u!114 &5964060367932930290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,13 +170,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 115618297942063103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &136645902339605885
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +188,7 @@ GameObject:
   - component: {fileID: 6127969100832446183}
   - component: {fileID: 8931899725991205104}
   - component: {fileID: 5025002967551595757}
-  - component: {fileID: 3318057155961036070}
+  - component: {fileID: 4779427554478291675}
   m_Layer: 0
   m_Name: DriftIsland (1)
   m_TagString: Untagged
@@ -334,15 +329,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 1
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &3318057155961036070
+  printStartingPosition: 0
+--- !u!114 &4779427554478291675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,13 +344,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 136645902339605885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &703785744850392240
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +432,7 @@ GameObject:
   - component: {fileID: 2988638433950911376}
   - component: {fileID: 5645746178308066833}
   - component: {fileID: 9059629293011494203}
-  - component: {fileID: 952428353248100859}
+  - component: {fileID: 2250641066294165349}
   m_Layer: 0
   m_Name: DriftIsland (16)
   m_TagString: Untagged
@@ -583,15 +573,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 3
   gridZ: 5
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &952428353248100859
+  printStartingPosition: 0
+--- !u!114 &2250641066294165349
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -600,13 +588,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 925581002351369635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &1712450131070757306
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +606,7 @@ GameObject:
   - component: {fileID: 3586015905885924454}
   - component: {fileID: 7045734070655998070}
   - component: {fileID: 7012397342193439338}
-  - component: {fileID: 1506219520340587611}
+  - component: {fileID: 3029916050053726070}
   m_Layer: 0
   m_Name: DriftIsland (13)
   m_TagString: Untagged
@@ -762,15 +747,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 1
   gridZ: 4
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0.8352941, g: 0, b: 1, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &1506219520340587611
+  printStartingPosition: 0
+--- !u!114 &3029916050053726070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -779,13 +762,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1712450131070757306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &1872530666423440456
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +780,7 @@ GameObject:
   - component: {fileID: 4089284285884835398}
   - component: {fileID: 6530514183576964366}
   - component: {fileID: 5689756566394007165}
-  - component: {fileID: 6505779349774599911}
+  - component: {fileID: 3561800447207409846}
   m_Layer: 0
   m_Name: DriftIsland (15)
   m_TagString: Untagged
@@ -941,15 +921,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 1
   gridZ: 5
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &6505779349774599911
+  printStartingPosition: 0
+--- !u!114 &3561800447207409846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -958,13 +936,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1872530666423440456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &2050086839141752138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +1024,7 @@ GameObject:
   - component: {fileID: 512709505493236908}
   - component: {fileID: 4406865920393537666}
   - component: {fileID: 4064603128251208255}
-  - component: {fileID: 747859353823768086}
+  - component: {fileID: 2114594804159495627}
   m_Layer: 0
   m_Name: DriftIsland (5)
   m_TagString: Untagged
@@ -1190,15 +1165,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 3
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &747859353823768086
+  printStartingPosition: 0
+--- !u!114 &2114594804159495627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1207,13 +1180,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2065247099526973384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &2595629101245525352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,7 +1198,7 @@ GameObject:
   - component: {fileID: 927967082417239355}
   - component: {fileID: 453642476825720023}
   - component: {fileID: 8509538877335474834}
-  - component: {fileID: 864764580593589462}
+  - component: {fileID: 8653856859712388143}
   m_Layer: 0
   m_Name: DriftIsland (12)
   m_TagString: Untagged
@@ -1369,15 +1339,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 5
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &864764580593589462
+  printStartingPosition: 0
+--- !u!114 &8653856859712388143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1386,13 +1354,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2595629101245525352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &3427067941324799217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1372,7 @@ GameObject:
   - component: {fileID: 2372051766774954357}
   - component: {fileID: 5231381797051820232}
   - component: {fileID: 1788808401797866365}
-  - component: {fileID: 5952923576471507331}
+  - component: {fileID: 759467988183294691}
   m_Layer: 0
   m_Name: EndTile
   m_TagString: Untagged
@@ -1549,15 +1514,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 1
   gridZ: 6
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &5952923576471507331
+  printStartingPosition: 0
+--- !u!114 &759467988183294691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1566,13 +1529,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3427067941324799217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &3796191418792194300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1547,7 @@ GameObject:
   - component: {fileID: 3092001643590282312}
   - component: {fileID: 309107811372590528}
   - component: {fileID: 4759651532516943100}
-  - component: {fileID: 4226547229773223782}
+  - component: {fileID: 2926724534373985921}
   m_Layer: 0
   m_Name: StartTile
   m_TagString: Untagged
@@ -1729,15 +1689,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 3
   gridZ: 0
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &4226547229773223782
+  printStartingPosition: 0
+--- !u!114 &2926724534373985921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1746,13 +1704,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3796191418792194300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &3816189780632181019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1722,7 @@ GameObject:
   - component: {fileID: 2326720953214985686}
   - component: {fileID: 3261880673261627557}
   - component: {fileID: 2275969997962342486}
-  - component: {fileID: 4038837667630203649}
+  - component: {fileID: 3733119509640243831}
   m_Layer: 0
   m_Name: DriftIsland (4)
   m_TagString: Untagged
@@ -1908,15 +1863,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 2
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &4038837667630203649
+  printStartingPosition: 0
+--- !u!114 &3733119509640243831
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1925,13 +1878,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3816189780632181019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &4656988786971474924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,6 +2019,7 @@ MonoBehaviour:
   width: 5
   height: 5
   tileSize: 3
+  printOccupancyMap: 0
 --- !u!1 &5059960743704218579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,7 +2034,7 @@ GameObject:
   - component: {fileID: 7154144786005240391}
   - component: {fileID: 8734686047623891108}
   - component: {fileID: 6321783586416998415}
-  - component: {fileID: 7615802789705735621}
+  - component: {fileID: 2014965328908371359}
   m_Layer: 0
   m_Name: DriftIsland (14)
   m_TagString: Untagged
@@ -2224,15 +2175,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 4
   gridZ: 4
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &7615802789705735621
+  printStartingPosition: 0
+--- !u!114 &2014965328908371359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2241,13 +2190,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5059960743704218579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &5169605109640841623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,7 +2208,7 @@ GameObject:
   - component: {fileID: 3290650077265658576}
   - component: {fileID: 3685197665221182148}
   - component: {fileID: 563326666085521974}
-  - component: {fileID: 7523160706761227275}
+  - component: {fileID: 1728184335447397029}
   m_Layer: 0
   m_Name: DriftIsland (6)
   m_TagString: Untagged
@@ -2403,15 +2349,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 4
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &7523160706761227275
+  printStartingPosition: 0
+--- !u!114 &1728184335447397029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2420,13 +2364,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5169605109640841623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &6337408609227900163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,7 +2382,7 @@ GameObject:
   - component: {fileID: 378390256737939126}
   - component: {fileID: 7523907909368201943}
   - component: {fileID: 6625943618315678091}
-  - component: {fileID: 4017039502483098492}
+  - component: {fileID: 8031891592133905448}
   m_Layer: 0
   m_Name: DriftIsland (8)
   m_TagString: Untagged
@@ -2582,15 +2523,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 1
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &4017039502483098492
+  printStartingPosition: 0
+--- !u!114 &8031891592133905448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2599,13 +2538,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6337408609227900163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &6609728866790066902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,7 +2556,7 @@ GameObject:
   - component: {fileID: 4982495243378534324}
   - component: {fileID: 5886979120025315524}
   - component: {fileID: 942123610933921151}
-  - component: {fileID: 6211965852161980555}
+  - component: {fileID: 1878447541073234573}
   m_Layer: 0
   m_Name: DriftIsland (11)
   m_TagString: Untagged
@@ -2761,15 +2697,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 3
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &6211965852161980555
+  printStartingPosition: 0
+--- !u!114 &1878447541073234573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2778,13 +2712,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6609728866790066902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &6722711722673865938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,7 +2912,7 @@ GameObject:
   - component: {fileID: 4751400787195352938}
   - component: {fileID: 1780069663387497229}
   - component: {fileID: 3034548341052867213}
-  - component: {fileID: 6909150226320128903}
+  - component: {fileID: 3958092841199267539}
   m_Layer: 0
   m_Name: DriftIsland (3)
   m_TagString: Untagged
@@ -3122,15 +3053,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 4
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0.13494706, g: 1, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &6909150226320128903
+  printStartingPosition: 0
+--- !u!114 &3958092841199267539
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3139,13 +3068,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6919531168105839388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &7199852587322879966
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,7 +3190,7 @@ GameObject:
   - component: {fileID: 7692455715899195418}
   - component: {fileID: 8379635494583041761}
   - component: {fileID: 4441267795168363193}
-  - component: {fileID: 4489662516922727035}
+  - component: {fileID: 629383658954006186}
   m_Layer: 0
   m_Name: DriftIsland (2)
   m_TagString: Untagged
@@ -3405,15 +3331,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 3
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &4489662516922727035
+  printStartingPosition: 0
+--- !u!114 &629383658954006186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3422,13 +3346,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7470132292000716953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1 &7600570827429529725
 GameObject:
   m_ObjectHideFlags: 0
@@ -3501,7 +3422,7 @@ GameObject:
   - component: {fileID: 6398051392704555215}
   - component: {fileID: 2308668415581002923}
   - component: {fileID: 2543200966874335288}
-  - component: {fileID: 2860040158086677344}
+  - component: {fileID: 8456367376084322390}
   m_Layer: 0
   m_Name: DriftIsland (7)
   m_TagString: Untagged
@@ -3642,15 +3563,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 0
-  startingGridZ: 0
   gridX: 5
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
-  debugMode: 1
---- !u!114 &2860040158086677344
+  printStartingPosition: 0
+--- !u!114 &8456367376084322390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3659,13 +3578,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8066876773405094797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
+  m_Script: {fileID: 11500000, guid: eecd72189b5a4811803341659a40d09c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerTexturing
+  normalTexture: {fileID: 0}
 --- !u!1001 &2356174237965320745
 PrefabInstance:
   m_ObjectHideFlags: 0
