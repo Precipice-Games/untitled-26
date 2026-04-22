@@ -155,15 +155,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 2
-  startingGridZ: 3
   gridX: 2
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &2518381043934893438
+--- !u!114 &462030680039650362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -332,15 +330,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 1
-  startingGridZ: 1
   gridX: 1
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &3318057155961036070
+--- !u!114 &4595504975527966859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -580,15 +576,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 3
-  startingGridZ: 5
   gridX: 3
   gridZ: 5
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &952428353248100859
+--- !u!114 &2109680602633393201
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -757,15 +751,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 1
-  startingGridZ: 4
   gridX: 1
   gridZ: 4
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &1506219520340587611
+--- !u!114 &2782697071798502931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -934,15 +926,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 1
-  startingGridZ: 5
   gridX: 1
   gridZ: 5
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &6505779349774599911
+--- !u!114 &8159557790008996862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1181,16 +1171,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
-  startingGridX: 3
-  startingGridZ: 2
+  tileType: 0
   gridX: 3
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &747859353823768086
+--- !u!114 &6489086496816542894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1358,16 +1346,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 2
-  startingGridX: 5
-  startingGridZ: 3
+  tileType: 0
   gridX: 5
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
   originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &864764580593589462
+--- !u!114 &1793338628941162873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1537,15 +1523,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 1
-  startingGridZ: 6
   gridX: 1
   gridZ: 6
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &5952923576471507331
+--- !u!114 &75604923921128914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1715,15 +1699,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 3
-  startingGridZ: 0
   gridX: 3
   gridZ: 0
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &4226547229773223782
+--- !u!114 &3125751281091478400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1891,16 +1873,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
-  startingGridX: 2
-  startingGridZ: 2
+  tileType: 0
   gridX: 2
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &4038837667630203649
+--- !u!114 &6951716154662205045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2048,8 +2028,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14eb0a16258e2034d9bb137e1435805f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
-  width: 9
-  height: 9
+  width: 13
+  height: 13
   tileSize: 3
   printOccupancyMap: 0
 --- !u!1 &5059960743704218579
@@ -2207,15 +2187,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 4
-  startingGridZ: 4
   gridX: 4
   gridZ: 4
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &7615802789705735621
+--- !u!114 &6002312338352691636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2383,16 +2361,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
-  startingGridX: 4
-  startingGridZ: 2
+  tileType: 0
   gridX: 4
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &7523160706761227275
+--- !u!114 &7814334935528232029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2561,15 +2537,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 1
-  startingGridZ: 3
   gridX: 1
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &4017039502483098492
+--- !u!114 &1018420845183218425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2737,16 +2711,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
-  startingGridX: 3
-  startingGridZ: 3
+  tileType: 0
   gridX: 3
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &6211965852161980555
+--- !u!114 &8800908044913615335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3097,15 +3069,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 4
-  startingGridZ: 1
   gridX: 4
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &6909150226320128903
+--- !u!114 &2857121180329872076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3377,16 +3347,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
-  startingGridX: 3
-  startingGridZ: 1
+  tileType: 0
   gridX: 3
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &4489662516922727035
+--- !u!114 &8187284894119930763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3613,15 +3581,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  startingGridX: 5
-  startingGridZ: 2
   gridX: 5
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 1, g: 1, b: 1, a: 1}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &2860040158086677344
+--- !u!114 &8089232956589956577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3632,11 +3598,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8858de933d90404f8e00a8177174d9c0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
-  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::OasisTexturing
+  normalTexture: {fileID: 2100000, guid: 4c302734178cd934fa9f26b4b5e3f631, type: 2}
+  manaWellTexture: {fileID: 2100000, guid: 3a4430d9dc592f644b43aacbab1371c9, type: 2}
 --- !u!1001 &1452176004927795202
 PrefabInstance:
   m_ObjectHideFlags: 0
