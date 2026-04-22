@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e5ce399-7c0f-4455-b410-4ddcc8af76a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/FlowerTexturing.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/FlowerTexturing.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/IceTexturing.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/IceTexturing.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/MotherTexturing.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/MotherTexturing.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/OasisTexturing.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/OasisTexturing.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/3D Models/World Materials/Snow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/3D Models/World Materials/Snow.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/OasisBasePuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/OasisBasePuzzle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/OasisBasePuzzle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/OasisBasePuzzle.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Islands/Oasis_Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Islands/Oasis_Island.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/DynamicTileTexturing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/DynamicTileTexturing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Windows.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +50,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18b3b31e3d8341f487466ebb6800bc67212400/50/28cfacd1/ExecuteAlways.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18b3b31e3d8341f487466ebb6800bc67212400/80/3ebe4553/Mathf.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3fdb1449b6bf4282995fdc1be91d92042b400/8d/e1f5295d/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e49a54a1add24aa0bd3a83f3eca00cdf1b000/6d/f14991e1/TitleAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Islands/Mother_Island.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Islands/Oasis_Island.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game States/ViewManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,7 +58,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerGroundcast.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/DynamicTileTexturing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/FlowerTexturing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/IceTexturing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/IslandPuzzleManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/MotherTexturing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/OasisTexturing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Data/PuzzleFeedback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/GridManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Mechanics/ResetPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
