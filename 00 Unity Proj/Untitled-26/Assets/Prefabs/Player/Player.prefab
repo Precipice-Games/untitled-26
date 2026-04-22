@@ -191,8 +191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoxCastGrounded
   currentPlatform: {fileID: 0}
   activeInteractable: {fileID: 0}
-  rawRayLength: 0.71055
-  rayLengthBuffer: 0.2
+  rawRayLength: 0.2
+  rayLengthBuffer: -0.14
   printGroundedStatus: 0
 --- !u!114 &6922169669516928053
 MonoBehaviour:
