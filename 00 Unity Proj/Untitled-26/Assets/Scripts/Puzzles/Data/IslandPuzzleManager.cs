@@ -54,8 +54,9 @@ public class IslandPuzzleManager : MonoBehaviour
             
             Debug.Log("IslandPuzzleManager.cs >> All puzzles completed!");
             
-            // Notify the IslandManager that all puzzles have been completed.
-            // This event is assigned in the Unity Editor.
+            // This event is assigned in the Unity Editor. It notifies
+            // the IslandManager and the InteractableCrystal that all
+            // puzzles have been completed.
             islandPuzzlesCompleted.Invoke();
         }
     }
