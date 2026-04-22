@@ -6,14 +6,12 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
 {
     [Title("CrystalCollected", "This event is fired when the crystal has been collected.")]
     public UnityEvent crystalCollected;
-
-    [SerializeField]
-    PuzzleInformation finalPuzzle;
+    private bool finalPuzzleCompleted;
 
     private void FixedUpdate()
     {
         // When the final puzzle is completed, ensure it rises up from the ground
-        if (finalPuzzle != null && finalPuzzle.puzzleSolved == true && this.transform.position.y < 3.2)
+        if (finalPuzzleCompleted && this.transform.position.y < 3.2)
         {
             this.transform.position = new Vector3(transform.position.x, transform.position.y + Time.deltaTime, transform.position.z);
         }
@@ -27,5 +25,17 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
     {
         crystalCollected.Invoke();
         Destroy(gameObject);
+    }
+    
+    /// <summary>
+    /// This method is subscribed to the islandPuzzlesCompleted UnityEvent from
+    /// IslandPuzzleManager. Once all puzzles are completed, this method will run
+    /// and set finalPuzzleCompleted to true, which will cause the crystal to
+    /// rise up from the ground in the FixedUpdate() method.
+    /// </summary>
+    public void FinalPuzzleCompleted()
+    {
+        finalPuzzleCompleted = true;
+        Debug.Log($"InteractableCrystal.cs >> finalPuzzleCompleted = {finalPuzzleCompleted}. Now rising crystal from ground...");
     }
 }
