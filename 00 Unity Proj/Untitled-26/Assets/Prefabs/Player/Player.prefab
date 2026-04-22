@@ -60,10 +60,10 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.35, y: 0.76, z: 4.9100056}
-  m_Center: {x: -0.05000001, y: -0.029999997, z: 0.07207629}
+  m_Center: {x: -0.05, y: -0.03, z: 0.07207629}
 --- !u!114 &3103343398758482961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,8 +658,8 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1
-  m_Radius: 0.5
+  m_Height: 0.75
+  m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
