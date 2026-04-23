@@ -141,7 +141,7 @@ public class TileSelector : MonoBehaviour
         if (SelectedTileIsStartOrEnd()) return;
 
         // Ensure there are enough resources before attempting the move.
-        if (resourceManager.moveRightUses <= 0 || resourceManager.GetMana() <= 0)
+        if (resourceManager.GetRightUses() <= 0 || resourceManager.GetMana() <= 0)
             return;
 
         // Only spend mana if the move actually succeeds
@@ -163,8 +163,8 @@ public class TileSelector : MonoBehaviour
         if (SelectedTileIsStartOrEnd()) return;
 
         // Ensure there are enough resources before attempting the move.
-        if (resourceManager.moveLeftUses <= 0 || resourceManager.GetMana() <= 0)
-            return;
+        Debug.Log("TileSelector.cs >> Attempting to move left. Remaining uses: " + resourceManager.moveLeftUses + ", Remaining mana: " + resourceManager.GetMana());
+        if (resourceManager.GetLeftUses() <= 0 || resourceManager.GetMana() <= 0) return;
 
         // Only spend mana if the move actually succeeds
         if (selectedTile.TryMove(-1, 0))
@@ -185,7 +185,7 @@ public class TileSelector : MonoBehaviour
         if (SelectedTileIsStartOrEnd()) return;
 
         // Ensure there are enough resources before attempting the move.
-        if (resourceManager.moveForwardUses <= 0 || resourceManager.GetMana() <= 0)
+        if (resourceManager.GetForwardUses() <= 0 || resourceManager.GetMana() <= 0)
             return;
 
         // Only spend mana if the move actually succeeds
@@ -207,7 +207,7 @@ public class TileSelector : MonoBehaviour
         if (SelectedTileIsStartOrEnd()) return;
 
         // Ensure there are enough resources before attempting the move.
-        if (resourceManager.moveBackUses <= 0 || resourceManager.GetMana() <= 0)
+        if (resourceManager.GetBackUses() <= 0 || resourceManager.GetMana() <= 0)
             return;
 
         // Only spend mana if the move actually succeeds
