@@ -139,10 +139,10 @@ TextureImporter:
       name: enemy crab_0
       rect:
         serializedVersion: 2
-        x: 174
-        y: 4201
-        width: 706
-        height: 404
+        x: 0
+        y: 4130
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: enemy crab_1
       rect:
         serializedVersion: 2
-        x: 1220
-        y: 4203
-        width: 709
-        height: 402
+        x: 1048
+        y: 4130
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: enemy crab_2
       rect:
         serializedVersion: 2
-        x: 2264
-        y: 4213
-        width: 717
-        height: 392
+        x: 2096
+        y: 4130
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: enemy crab_3
       rect:
         serializedVersion: 2
-        x: 3306
-        y: 4226
-        width: 726
-        height: 379
+        x: 3144
+        y: 4130
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: enemy crab_4
       rect:
         serializedVersion: 2
-        x: 4350
-        y: 4224
-        width: 724
-        height: 381
+        x: 4192
+        y: 4130
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: enemy crab_5
       rect:
         serializedVersion: 2
-        x: 154
-        y: 3633
-        width: 711
-        height: 381
+        x: 0
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +271,10 @@ TextureImporter:
       name: enemy crab_6
       rect:
         serializedVersion: 2
-        x: 1203
-        y: 3630
-        width: 675
-        height: 384
+        x: 1048
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: enemy crab_7
       rect:
         serializedVersion: 2
-        x: 2259
-        y: 3630
-        width: 550
-        height: 384
+        x: 2096
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: enemy crab_8
       rect:
         serializedVersion: 2
-        x: 3321
-        y: 3630
-        width: 576
-        height: 384
+        x: 3144
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: enemy crab_9
       rect:
         serializedVersion: 2
-        x: 4385
-        y: 3630
-        width: 528
-        height: 389
+        x: 4192
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,10 +359,10 @@ TextureImporter:
       name: enemy crab_10
       rect:
         serializedVersion: 2
-        x: 212
-        y: 3042
-        width: 502
-        height: 394
+        x: 0
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: enemy crab_11
       rect:
         serializedVersion: 2
-        x: 1279
-        y: 3042
-        width: 484
-        height: 394
+        x: 1048
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: enemy crab_12
       rect:
         serializedVersion: 2
-        x: 2346
-        y: 3042
-        width: 466
-        height: 399
+        x: 2096
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: enemy crab_13
       rect:
         serializedVersion: 2
-        x: 3413
-        y: 3042
-        width: 456
-        height: 404
+        x: 3144
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: enemy crab_14
       rect:
         serializedVersion: 2
-        x: 4521
-        y: 3044
-        width: 404
-        height: 402
+        x: 4192
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: enemy crab_15
       rect:
         serializedVersion: 2
-        x: 299
-        y: 2456
-        width: 438
-        height: 399
+        x: 0
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: enemy crab_16
       rect:
         serializedVersion: 2
-        x: 1356
-        y: 2456
-        width: 435
-        height: 396
+        x: 1048
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +513,10 @@ TextureImporter:
       name: enemy crab_17
       rect:
         serializedVersion: 2
-        x: 2410
-        y: 2456
-        width: 438
-        height: 391
+        x: 2096
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +535,10 @@ TextureImporter:
       name: enemy crab_18
       rect:
         serializedVersion: 2
-        x: 3462
-        y: 2458
-        width: 442
-        height: 382
+        x: 3144
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,10 +557,10 @@ TextureImporter:
       name: enemy crab_19
       rect:
         serializedVersion: 2
-        x: 4513
-        y: 2458
-        width: 451
-        height: 371
+        x: 4192
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -579,10 +579,10 @@ TextureImporter:
       name: enemy crab_20
       rect:
         serializedVersion: 2
-        x: 322
-        y: 1870
-        width: 463
-        height: 366
+        x: 0
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: enemy crab_21
       rect:
         serializedVersion: 2
-        x: 1371
-        y: 1870
-        width: 476
-        height: 366
+        x: 1048
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +623,10 @@ TextureImporter:
       name: enemy crab_22
       rect:
         serializedVersion: 2
-        x: 2418
-        y: 1870
-        width: 494
-        height: 368
+        x: 2096
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,10 +645,10 @@ TextureImporter:
       name: enemy crab_23
       rect:
         serializedVersion: 2
-        x: 3467
-        y: 1870
-        width: 506
-        height: 374
+        x: 3144
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,10 +667,10 @@ TextureImporter:
       name: enemy crab_24
       rect:
         serializedVersion: 2
-        x: 4518
-        y: 1870
-        width: 520
-        height: 379
+        x: 4192
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -689,10 +689,10 @@ TextureImporter:
       name: enemy crab_25
       rect:
         serializedVersion: 2
-        x: 330
-        y: 1279
-        width: 527
-        height: 384
+        x: 0
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +711,10 @@ TextureImporter:
       name: enemy crab_26
       rect:
         serializedVersion: 2
-        x: 1379
-        y: 1279
-        width: 537
-        height: 389
+        x: 1048
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,10 +733,10 @@ TextureImporter:
       name: enemy crab_27
       rect:
         serializedVersion: 2
-        x: 2428
-        y: 1277
-        width: 548
-        height: 391
+        x: 2096
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -755,10 +755,10 @@ TextureImporter:
       name: enemy crab_28
       rect:
         serializedVersion: 2
-        x: 3477
-        y: 1277
-        width: 550
-        height: 394
+        x: 3144
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: enemy crab_29
       rect:
         serializedVersion: 2
-        x: 4516
-        y: 1277
-        width: 563
-        height: 391
+        x: 4192
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -799,10 +799,10 @@ TextureImporter:
       name: enemy crab_30
       rect:
         serializedVersion: 2
-        x: 310
-        y: 688
-        width: 578
-        height: 381
+        x: 0
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -821,10 +821,10 @@ TextureImporter:
       name: enemy crab_31
       rect:
         serializedVersion: 2
-        x: 1325
-        y: 688
-        width: 609
-        height: 374
+        x: 1048
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -843,10 +843,10 @@ TextureImporter:
       name: enemy crab_32
       rect:
         serializedVersion: 2
-        x: 2333
-        y: 688
-        width: 648
-        height: 374
+        x: 2096
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -865,10 +865,10 @@ TextureImporter:
       name: enemy crab_33
       rect:
         serializedVersion: 2
-        x: 3342
-        y: 688
-        width: 685
-        height: 374
+        x: 3144
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -887,10 +887,10 @@ TextureImporter:
       name: enemy crab_34
       rect:
         serializedVersion: 2
-        x: 4365
-        y: 680
-        width: 709
-        height: 384
+        x: 4192
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -909,10 +909,10 @@ TextureImporter:
       name: enemy crab_35
       rect:
         serializedVersion: 2
-        x: 166
-        y: 84
-        width: 714
-        height: 392
+        x: 0
+        y: 0
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -931,10 +931,10 @@ TextureImporter:
       name: enemy crab_36
       rect:
         serializedVersion: 2
-        x: 1220
-        y: 79
-        width: 707
-        height: 397
+        x: 1048
+        y: 0
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -963,7 +963,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":8.0},"gridSpriteSize":{"x":1048.0,"y":590.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       enemy crab_0: 638894422
       enemy crab_1: -1213837276

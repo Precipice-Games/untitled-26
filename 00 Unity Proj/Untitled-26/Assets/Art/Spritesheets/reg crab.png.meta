@@ -139,10 +139,10 @@ TextureImporter:
       name: reg crab_0
       rect:
         serializedVersion: 2
-        x: 171
-        y: 3636
-        width: 655
-        height: 415
+        x: 0
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: reg crab_1
       rect:
         serializedVersion: 2
-        x: 1218
-        y: 3639
-        width: 657
-        height: 409
+        x: 1048
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: reg crab_2
       rect:
         serializedVersion: 2
-        x: 2269
-        y: 3641
-        width: 658
-        height: 405
+        x: 2096
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: reg crab_3
       rect:
         serializedVersion: 2
-        x: 3321
-        y: 3644
-        width: 655
-        height: 396
+        x: 3144
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: reg crab_4
       rect:
         serializedVersion: 2
-        x: 4370
-        y: 3649
-        width: 660
-        height: 384
+        x: 4192
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: reg crab_5
       rect:
         serializedVersion: 2
-        x: 184
-        y: 3063
-        width: 658
-        height: 371
+        x: 0
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +271,10 @@ TextureImporter:
       name: reg crab_6
       rect:
         serializedVersion: 2
-        x: 1236
-        y: 3066
-        width: 662
-        height: 358
+        x: 1048
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: reg crab_7
       rect:
         serializedVersion: 2
-        x: 2293
-        y: 3071
-        width: 660
-        height: 343
+        x: 2096
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: reg crab_8
       rect:
         serializedVersion: 2
-        x: 3347
-        y: 3071
-        width: 662
-        height: 332
+        x: 3144
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: reg crab_9
       rect:
         serializedVersion: 2
-        x: 4406
-        y: 3066
-        width: 663
-        height: 337
+        x: 4192
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,10 +359,10 @@ TextureImporter:
       name: reg crab_10
       rect:
         serializedVersion: 2
-        x: 225
-        y: 2467
-        width: 663
-        height: 363
+        x: 0
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: reg crab_11
       rect:
         serializedVersion: 2
-        x: 1284
-        y: 2462
-        width: 661
-        height: 381
+        x: 1048
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: reg crab_12
       rect:
         serializedVersion: 2
-        x: 2344
-        y: 2462
-        width: 657
-        height: 386
+        x: 2096
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: reg crab_13
       rect:
         serializedVersion: 2
-        x: 3398
-        y: 2467
-        width: 652
-        height: 384
+        x: 3144
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: reg crab_14
       rect:
         serializedVersion: 2
-        x: 4447
-        y: 2472
-        width: 652
-        height: 379
+        x: 4192
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: reg crab_15
       rect:
         serializedVersion: 2
-        x: 256
-        y: 1881
-        width: 650
-        height: 378
+        x: 0
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: reg crab_16
       rect:
         serializedVersion: 2
-        x: 1300
-        y: 1881
-        width: 650
-        height: 373
+        x: 1048
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +513,10 @@ TextureImporter:
       name: reg crab_17
       rect:
         serializedVersion: 2
-        x: 2346
-        y: 1878
-        width: 648
-        height: 369
+        x: 2096
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +535,10 @@ TextureImporter:
       name: reg crab_18
       rect:
         serializedVersion: 2
-        x: 3390
-        y: 1878
-        width: 647
-        height: 361
+        x: 3144
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,10 +557,10 @@ TextureImporter:
       name: reg crab_19
       rect:
         serializedVersion: 2
-        x: 4434
-        y: 1881
-        width: 647
-        height: 350
+        x: 4192
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -579,10 +579,10 @@ TextureImporter:
       name: reg crab_20
       rect:
         serializedVersion: 2
-        x: 238
-        y: 1292
-        width: 645
-        height: 343
+        x: 0
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: reg crab_21
       rect:
         serializedVersion: 2
-        x: 1279
-        y: 1295
-        width: 648
-        height: 332
+        x: 1048
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +623,10 @@ TextureImporter:
       name: reg crab_22
       rect:
         serializedVersion: 2
-        x: 2321
-        y: 1295
-        width: 647
-        height: 343
+        x: 2096
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,10 +645,10 @@ TextureImporter:
       name: reg crab_23
       rect:
         serializedVersion: 2
-        x: 3359
-        y: 1292
-        width: 650
-        height: 358
+        x: 3144
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,10 +667,10 @@ TextureImporter:
       name: reg crab_24
       rect:
         serializedVersion: 2
-        x: 4398
-        y: 1290
-        width: 655
-        height: 371
+        x: 4192
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -689,10 +689,10 @@ TextureImporter:
       name: reg crab_25
       rect:
         serializedVersion: 2
-        x: 194
-        y: 693
-        width: 661
-        height: 384
+        x: 0
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +711,10 @@ TextureImporter:
       name: reg crab_26
       rect:
         serializedVersion: 2
-        x: 1233
-        y: 688
-        width: 663
-        height: 400
+        x: 1048
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,10 +733,10 @@ TextureImporter:
       name: reg crab_27
       rect:
         serializedVersion: 2
-        x: 2275
-        y: 686
-        width: 662
-        height: 407
+        x: 2096
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -755,10 +755,10 @@ TextureImporter:
       name: reg crab_28
       rect:
         serializedVersion: 2
-        x: 3316
-        y: 686
-        width: 663
-        height: 409
+        x: 3144
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: reg crab_29
       rect:
         serializedVersion: 2
-        x: 4362
-        y: 683
-        width: 661
-        height: 415
+        x: 4192
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -799,10 +799,10 @@ TextureImporter:
       name: reg crab_30
       rect:
         serializedVersion: 2
-        x: 171
-        y: 97
-        width: 655
-        height: 412
+        x: 0
+        y: 0
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -821,10 +821,10 @@ TextureImporter:
       name: reg crab_31
       rect:
         serializedVersion: 2
-        x: 1218
-        y: 97
-        width: 655
-        height: 412
+        x: 1048
+        y: 0
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -853,7 +853,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":7.0},"gridSpriteSize":{"x":1048.0,"y":590.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       reg crab_0: -856124683
       reg crab_1: -1051529512
