@@ -397,7 +397,7 @@ PrefabInstance:
     - target: {fileID: 1963081915272111325, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: puzzleUI
       value: 
-      objectReference: {fileID: 576712167}
+      objectReference: {fileID: 0}
     - target: {fileID: 1963081915272111325, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: dialogueUI
       value: 
@@ -413,7 +413,7 @@ PrefabInstance:
     - target: {fileID: 1963081915272111325, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: puzzleCamera
       value: 
-      objectReference: {fileID: 915340814}
+      objectReference: {fileID: 0}
     - target: {fileID: 1963081915272111325, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: dialogueCamera
       value: 
@@ -707,11 +707,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570354094}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &576712167 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4526878413659049423, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
-  m_PrefabInstance: {fileID: 1153222202}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &589863975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4500691877966236238, guid: 8a4743623ff36b94f9f8e976cda3a878, type: 3}
@@ -950,17 +945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e95b7be7f041b0bdbcaa73cbb80815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Airship
---- !u!114 &915340814 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1262616762910382214, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
-  m_PrefabInstance: {fileID: 1153222202}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!1001 &935159804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1058,11 +1042,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1e2f0d10f1a4248ae2cc8220bf8fd7, type: 3}
---- !u!1 &1002700352 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 703785744850392240, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
-  m_PrefabInstance: {fileID: 1153222202}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1021214702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1071,18 +1050,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 57472801171398331, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 57472801171398331, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 57472801171398331, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 563326666085521974, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
       propertyPath: gridZ
       value: 1
@@ -1315,10 +1282,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 7199852587322879966, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
-      propertyPath: m_Name
-      value: Puzzle2
-      objectReference: {fileID: 0}
     - target: {fileID: 7213066574574228598, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
       propertyPath: moveBackUses
       value: 1
@@ -1387,6 +1350,34 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199852587322879966, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_Name
+      value: Puzzle2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199852587322879966, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_Name
+      value: Puzzle2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 925581002351369635, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
@@ -1400,10 +1391,10 @@ PrefabInstance:
     - {fileID: 8066876773405094797, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
 --- !u!1 &1021214703 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7199852587322879966, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7199852587322879966, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
   m_PrefabInstance: {fileID: 1021214702}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1032446833 stripped
@@ -1552,15 +1543,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 57472801171398331, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 57472801171398331, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 57472801171398331, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
       propertyPath: m_LocalPosition.z
       value: 9
       objectReference: {fileID: 0}
@@ -1675,7 +1666,7 @@ PrefabInstance:
     - target: {fileID: 3625183002538320219, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
       propertyPath: otherRuneCircle
       value: 
-      objectReference: {fileID: 1002700352}
+      objectReference: {fileID: 0}
     - target: {fileID: 3942273821399491795, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -1708,7 +1699,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 7199852587322879966, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
+    - target: {fileID: 7199852587322879966, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
       propertyPath: m_Name
       value: Puzzle1
       objectReference: {fileID: 0}
@@ -1756,6 +1747,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7199852587322879966, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_Name
+      value: Puzzle1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6337408609227900163, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
@@ -1772,10 +1767,10 @@ PrefabInstance:
     - {fileID: 115618297942063103, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
 --- !u!1 &1153222203 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7199852587322879966, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7199852587322879966, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
   m_PrefabInstance: {fileID: 1153222202}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1177211201 stripped
@@ -4347,7 +4342,6 @@ SceneRoots:
   - {fileID: 1021214702}
   - {fileID: 101902869}
   - {fileID: 1968271413}
-  - {fileID: 2064666937}
   - {fileID: 847912596}
   - {fileID: 683246938}
   - {fileID: 1921092245}
