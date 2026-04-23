@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1109640015527013170}
   - component: {fileID: 5542912942022859257}
   - component: {fileID: 4272864839946960334}
-  - component: {fileID: 4971448956600173564}
+  - component: {fileID: 1361485055277093178}
   m_Layer: 0
   m_Name: DriftIsland (10)
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 115618297942063103}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 6, y: 0, z: 9}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -70,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,10 +158,10 @@ MonoBehaviour:
   gridX: 2
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &4971448956600173564
+--- !u!114 &1361485055277093178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &136645902339605885
 GameObject:
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 6127969100832446183}
   - component: {fileID: 8931899725991205104}
   - component: {fileID: 5025002967551595757}
-  - component: {fileID: 1183179036231844421}
+  - component: {fileID: 674050429062326758}
   m_Layer: 0
   m_Name: DriftIsland (1)
   m_TagString: Untagged
@@ -206,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 136645902339605885}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 3, y: 0, z: 3}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -245,7 +245,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -333,10 +333,10 @@ MonoBehaviour:
   gridX: 1
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &1183179036231844421
+--- !u!114 &674050429062326758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &703785744850392240
 GameObject:
@@ -381,6 +381,7 @@ Transform:
   m_LocalScale: {x: 1, y: 35.60784, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1417951208637487081}
   - {fileID: 7325537039630228397}
   m_Father: {fileID: 2722518522013452351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -418,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RuneCircle
   puzzleInfo: {fileID: 9191018659038673785}
-  exitPuzzleButton: {fileID: 0}
+  exitPuzzleButton: {fileID: 4943596135170749970}
   otherRuneCircle: {fileID: 2050086839141752138}
 --- !u!1 &925581002351369635
 GameObject:
@@ -434,7 +435,7 @@ GameObject:
   - component: {fileID: 2988638433950911376}
   - component: {fileID: 5645746178308066833}
   - component: {fileID: 9059629293011494203}
-  - component: {fileID: 8355338317237500609}
+  - component: {fileID: 5668346888246670449}
   m_Layer: 0
   m_Name: DriftIsland (16)
   m_TagString: Untagged
@@ -451,7 +452,7 @@ Transform:
   m_GameObject: {fileID: 925581002351369635}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 9, y: 0, z: 15}
   m_LocalScale: {x: 2, y: 0.028083699, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -490,7 +491,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -578,10 +579,10 @@ MonoBehaviour:
   gridX: 3
   gridZ: 5
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &8355338317237500609
+--- !u!114 &5668346888246670449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -593,7 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &1712450131070757306
 GameObject:
@@ -609,7 +610,7 @@ GameObject:
   - component: {fileID: 3586015905885924454}
   - component: {fileID: 7045734070655998070}
   - component: {fileID: 7012397342193439338}
-  - component: {fileID: 5533852435126617940}
+  - component: {fileID: 7049456268961169745}
   m_Layer: 0
   m_Name: DriftIsland (13)
   m_TagString: Untagged
@@ -626,7 +627,7 @@ Transform:
   m_GameObject: {fileID: 1712450131070757306}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 3, y: 0, z: 12}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -665,7 +666,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -753,10 +754,10 @@ MonoBehaviour:
   gridX: 1
   gridZ: 4
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0.8352941, g: 0, b: 1, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &5533852435126617940
+--- !u!114 &7049456268961169745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -768,7 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &1872530666423440456
 GameObject:
@@ -784,7 +785,7 @@ GameObject:
   - component: {fileID: 4089284285884835398}
   - component: {fileID: 6530514183576964366}
   - component: {fileID: 5689756566394007165}
-  - component: {fileID: 2670339941160995413}
+  - component: {fileID: 1527905477152698449}
   m_Layer: 0
   m_Name: DriftIsland (15)
   m_TagString: Untagged
@@ -801,7 +802,7 @@ Transform:
   m_GameObject: {fileID: 1872530666423440456}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 3, y: 0, z: 15}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -840,7 +841,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -928,10 +929,10 @@ MonoBehaviour:
   gridX: 1
   gridZ: 5
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &2670339941160995413
+--- !u!114 &1527905477152698449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -943,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &2050086839141752138
 GameObject:
@@ -976,6 +977,7 @@ Transform:
   m_LocalScale: {x: 1, y: 7.4776473, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6989340596310776149}
   - {fileID: 3942273821399491795}
   m_Father: {fileID: 3446106412191676171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1014,7 +1016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RuneCircle
   puzzleInfo: {fileID: 9191018659038673785}
   exitPuzzleButton: {fileID: 4943596135170749970}
-  otherRuneCircle: {fileID: 0}
+  otherRuneCircle: {fileID: 703785744850392240}
 --- !u!1 &2065247099526973384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +1031,7 @@ GameObject:
   - component: {fileID: 512709505493236908}
   - component: {fileID: 4406865920393537666}
   - component: {fileID: 4064603128251208255}
-  - component: {fileID: 6346788339996794205}
+  - component: {fileID: 3146548009398657931}
   m_Layer: 0
   m_Name: DriftIsland (5)
   m_TagString: Untagged
@@ -1046,7 +1048,7 @@ Transform:
   m_GameObject: {fileID: 2065247099526973384}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 9, y: 0, z: 6}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1085,7 +1087,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1169,14 +1171,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
+  tileType: 0
   gridX: 3
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &6346788339996794205
+--- !u!114 &3146548009398657931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1188,7 +1190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &2595629101245525352
 GameObject:
@@ -1204,7 +1206,7 @@ GameObject:
   - component: {fileID: 927967082417239355}
   - component: {fileID: 453642476825720023}
   - component: {fileID: 8509538877335474834}
-  - component: {fileID: 4160021849459938620}
+  - component: {fileID: 4641199904726581519}
   m_Layer: 0
   m_Name: DriftIsland (12)
   m_TagString: Untagged
@@ -1221,7 +1223,7 @@ Transform:
   m_GameObject: {fileID: 2595629101245525352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 15, y: 0, z: 9}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1260,7 +1262,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1348,10 +1350,10 @@ MonoBehaviour:
   gridX: 5
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &4160021849459938620
+--- !u!114 &4641199904726581519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1363,7 +1365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &3427067941324799217
 GameObject:
@@ -1379,7 +1381,7 @@ GameObject:
   - component: {fileID: 2372051766774954357}
   - component: {fileID: 5231381797051820232}
   - component: {fileID: 1788808401797866365}
-  - component: {fileID: 7961297152695793005}
+  - component: {fileID: 1303838987071360981}
   m_Layer: 0
   m_Name: EndTile
   m_TagString: Untagged
@@ -1396,7 +1398,7 @@ Transform:
   m_GameObject: {fileID: 3427067941324799217}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 3, y: 0, z: 18}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1524,10 +1526,10 @@ MonoBehaviour:
   gridX: 1
   gridZ: 6
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &7961297152695793005
+--- !u!114 &1303838987071360981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1539,7 +1541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &3796191418792194300
 GameObject:
@@ -1555,7 +1557,7 @@ GameObject:
   - component: {fileID: 3092001643590282312}
   - component: {fileID: 309107811372590528}
   - component: {fileID: 4759651532516943100}
-  - component: {fileID: 4925975038187073565}
+  - component: {fileID: 7421929144077174582}
   m_Layer: 0
   m_Name: StartTile
   m_TagString: Untagged
@@ -1572,7 +1574,7 @@ Transform:
   m_GameObject: {fileID: 3796191418792194300}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 9, y: 0, z: 0}
   m_LocalScale: {x: 1.37486, y: 0.09193132, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1612,7 +1614,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1700,10 +1702,10 @@ MonoBehaviour:
   gridX: 3
   gridZ: 0
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &4925975038187073565
+--- !u!114 &7421929144077174582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1715,7 +1717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &3816189780632181019
 GameObject:
@@ -1731,7 +1733,7 @@ GameObject:
   - component: {fileID: 2326720953214985686}
   - component: {fileID: 3261880673261627557}
   - component: {fileID: 2275969997962342486}
-  - component: {fileID: 5798184283050731354}
+  - component: {fileID: 1692342746788151541}
   m_Layer: 0
   m_Name: DriftIsland (4)
   m_TagString: Untagged
@@ -1748,7 +1750,7 @@ Transform:
   m_GameObject: {fileID: 3816189780632181019}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 6, y: 0, z: 6}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1787,7 +1789,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1871,14 +1873,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
+  tileType: 0
   gridX: 2
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &5798184283050731354
+--- !u!114 &1692342746788151541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1890,7 +1892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &4656988786971474924
 GameObject:
@@ -2026,8 +2028,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14eb0a16258e2034d9bb137e1435805f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
-  width: 5
-  height: 5
+  width: 13
+  height: 13
   tileSize: 3
   printOccupancyMap: 0
 --- !u!1 &5059960743704218579
@@ -2044,7 +2046,7 @@ GameObject:
   - component: {fileID: 7154144786005240391}
   - component: {fileID: 8734686047623891108}
   - component: {fileID: 6321783586416998415}
-  - component: {fileID: 4040190770305848210}
+  - component: {fileID: 373656486766559563}
   m_Layer: 0
   m_Name: DriftIsland (14)
   m_TagString: Untagged
@@ -2061,7 +2063,7 @@ Transform:
   m_GameObject: {fileID: 5059960743704218579}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 12, y: 0, z: 12}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2100,7 +2102,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2188,10 +2190,10 @@ MonoBehaviour:
   gridX: 4
   gridZ: 4
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &4040190770305848210
+--- !u!114 &373656486766559563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2203,7 +2205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &5169605109640841623
 GameObject:
@@ -2219,7 +2221,7 @@ GameObject:
   - component: {fileID: 3290650077265658576}
   - component: {fileID: 3685197665221182148}
   - component: {fileID: 563326666085521974}
-  - component: {fileID: 4344836906287530433}
+  - component: {fileID: 2640555398377000108}
   m_Layer: 0
   m_Name: DriftIsland (6)
   m_TagString: Untagged
@@ -2236,7 +2238,7 @@ Transform:
   m_GameObject: {fileID: 5169605109640841623}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 12, y: 0, z: 6}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2275,7 +2277,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2359,14 +2361,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
+  tileType: 0
   gridX: 4
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &4344836906287530433
+--- !u!114 &2640555398377000108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2378,7 +2380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &6337408609227900163
 GameObject:
@@ -2394,7 +2396,7 @@ GameObject:
   - component: {fileID: 378390256737939126}
   - component: {fileID: 7523907909368201943}
   - component: {fileID: 6625943618315678091}
-  - component: {fileID: 8451596700652455306}
+  - component: {fileID: 8781985787554735920}
   m_Layer: 0
   m_Name: DriftIsland (8)
   m_TagString: Untagged
@@ -2411,7 +2413,7 @@ Transform:
   m_GameObject: {fileID: 6337408609227900163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 3, y: 0, z: 9}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2450,7 +2452,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2538,10 +2540,10 @@ MonoBehaviour:
   gridX: 1
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &8451596700652455306
+--- !u!114 &8781985787554735920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2553,7 +2555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &6609728866790066902
 GameObject:
@@ -2569,7 +2571,7 @@ GameObject:
   - component: {fileID: 4982495243378534324}
   - component: {fileID: 5886979120025315524}
   - component: {fileID: 942123610933921151}
-  - component: {fileID: 8826079287928120294}
+  - component: {fileID: 7914251024003687447}
   m_Layer: 0
   m_Name: DriftIsland (11)
   m_TagString: Untagged
@@ -2586,7 +2588,7 @@ Transform:
   m_GameObject: {fileID: 6609728866790066902}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 9, y: 0, z: 9}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2625,7 +2627,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2709,14 +2711,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
+  tileType: 0
   gridX: 3
   gridZ: 3
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &8826079287928120294
+--- !u!114 &7914251024003687447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2728,7 +2730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &6722711722673865938
 GameObject:
@@ -2755,13 +2757,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6722711722673865938}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3624906698350998147}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5218340796993907333
 SpriteRenderer:
   serializedVersion: 2
@@ -2770,7 +2772,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6722711722673865938}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2861,7 +2863,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6854064784994446300}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2926,7 +2928,7 @@ GameObject:
   - component: {fileID: 4751400787195352938}
   - component: {fileID: 1780069663387497229}
   - component: {fileID: 3034548341052867213}
-  - component: {fileID: 2250749910032443222}
+  - component: {fileID: 8632020953357628628}
   m_Layer: 0
   m_Name: DriftIsland (3)
   m_TagString: Untagged
@@ -2943,7 +2945,7 @@ Transform:
   m_GameObject: {fileID: 6919531168105839388}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 12, y: 0, z: 3}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2982,7 +2984,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3070,10 +3072,10 @@ MonoBehaviour:
   gridX: 4
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0.13494706, g: 1, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &2250749910032443222
+--- !u!114 &8632020953357628628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3085,7 +3087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &7199852587322879966
 GameObject:
@@ -3205,7 +3207,7 @@ GameObject:
   - component: {fileID: 7692455715899195418}
   - component: {fileID: 8379635494583041761}
   - component: {fileID: 4441267795168363193}
-  - component: {fileID: 3464439618733351805}
+  - component: {fileID: 6447627335958466952}
   m_Layer: 0
   m_Name: DriftIsland (2)
   m_TagString: Untagged
@@ -3222,7 +3224,7 @@ Transform:
   m_GameObject: {fileID: 7470132292000716953}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 9, y: 0, z: 3}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3261,7 +3263,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3345,14 +3347,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9908a1708c744e844bf7e2a979c0f3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
-  tileType: 1
+  tileType: 0
   gridX: 3
   gridZ: 1
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &3464439618733351805
+--- !u!114 &6447627335958466952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3364,7 +3366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
 --- !u!1 &7600570827429529725
 GameObject:
@@ -3410,7 +3412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25cdba096906e54bb7d84f6b69f698b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startingMana: 10
+  startingMana: 3
   moveLeftUses: 2
   moveRightUses: 2
   moveForwardUses: 2
@@ -3438,7 +3440,7 @@ GameObject:
   - component: {fileID: 6398051392704555215}
   - component: {fileID: 2308668415581002923}
   - component: {fileID: 2543200966874335288}
-  - component: {fileID: 917234545409076298}
+  - component: {fileID: 9192580670938830888}
   m_Layer: 0
   m_Name: DriftIsland (7)
   m_TagString: Untagged
@@ -3455,7 +3457,7 @@ Transform:
   m_GameObject: {fileID: 8066876773405094797}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.936, y: -0.405, z: -3.353}
+  m_LocalPosition: {x: 15, y: 0, z: 6}
   m_LocalScale: {x: 1.37486, y: 0.019305578, z: 1.37486}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3494,7 +3496,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6eabfc17ac8de1e419ca0fbd1cc71d8e, type: 2}
+  - {fileID: 2100000, guid: d57ef13cf0af88a44b94bccaa8189b2b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3582,10 +3584,10 @@ MonoBehaviour:
   gridX: 5
   gridZ: 2
   gridManager: {fileID: 1640623606830934790}
-  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  originalColor: {r: 1, g: 0, b: 1, a: 1}
   highlightColor: {r: 1, g: 0.9810541, b: 0.015686274, a: 1}
   printStartingPosition: 0
---- !u!114 &917234545409076298
+--- !u!114 &9192580670938830888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3597,8 +3599,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17037a96aa2e4e3a9b159f0a9f55f8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MotherTexturing
-  normalTexture: {fileID: 0}
+  normalTexture: {fileID: 2100000, guid: 1a91fe6d0b2b6ef41b024d8f27ee4456, type: 2}
   manaWellTexture: {fileID: 0}
+--- !u!1001 &1452176004927795202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7321162161942524934}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 42.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_Name
+      value: Model (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+--- !u!4 &1417951208637487081 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+  m_PrefabInstance: {fileID: 1452176004927795202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2356174237965320745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3607,9 +3683,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3397337548393501967}
     m_Modifications:
+    - target: {fileID: 2396372427838243438, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
+      propertyPath: feedbackPrefab
+      value: 
+      objectReference: {fileID: 1580311064563317073}
     - target: {fileID: 3845136706088205176, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
       propertyPath: m_Name
       value: FeedbackController
+      objectReference: {fileID: 0}
+    - target: {fileID: 4016069986699250757, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 247
       objectReference: {fileID: 0}
     - target: {fileID: 7432239896893596639, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3656,6 +3740,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
+--- !u!1 &1580311064563317073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3845136706088205176, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
+  m_PrefabInstance: {fileID: 2356174237965320745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5158399700957503990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432239896893596639, guid: 2732b24e89f7bed4cab9b395262bf9b8, type: 3}
@@ -3910,3 +3999,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1001 &7455033261558824638
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3624906698350998147}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 42.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_Name
+      value: Model
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+--- !u!4 &6989340596310776149 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+  m_PrefabInstance: {fileID: 7455033261558824638}
+  m_PrefabAsset: {fileID: 0}
