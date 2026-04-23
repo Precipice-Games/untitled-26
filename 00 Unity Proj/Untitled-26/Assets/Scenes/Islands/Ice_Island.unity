@@ -30184,59 +30184,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1846180522}
   m_SourcePrefab: {fileID: 100100000, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
---- !u!1 &1439376078
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1439376080}
-  - component: {fileID: 1439376079}
-  m_Layer: 0
-  m_Name: AudioSettingsController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1439376079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439376078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29472d9007adf4092a6c2b2dd4984700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIVolumeSliders
-  mixer: {fileID: 24100000, guid: 3bdf0d7a8ed5c49df80eae5daf33256f, type: 2}
-  masterSlider: {fileID: 1253478291}
-  sfxSlider: {fileID: 1124138756}
-  bgmSlider: {fileID: 2034444527}
-  dialogueSlider: {fileID: 988227022}
-  masterLabel: {fileID: 1802752233}
-  sfxLabel: {fileID: 2082549851}
-  bgmLabel: {fileID: 1256587947}
-  dialogueLabel: {fileID: 75638814}
---- !u!4 &1439376080
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439376078}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1442416483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44299,6 +44246,95 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1428663e4ac29e4a97035edaf1d0b51, type: 3}
+--- !u!1001 &4508045225757819367
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3491529782505554081, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: bgmLabel
+      value: 
+      objectReference: {fileID: 1256587947}
+    - target: {fileID: 3491529782505554081, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: sfxLabel
+      value: 
+      objectReference: {fileID: 2082549851}
+    - target: {fileID: 3491529782505554081, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: bgmSlider
+      value: 
+      objectReference: {fileID: 2034444527}
+    - target: {fileID: 3491529782505554081, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: sfxSlider
+      value: 
+      objectReference: {fileID: 1124138756}
+    - target: {fileID: 3491529782505554081, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: masterLabel
+      value: 
+      objectReference: {fileID: 1802752233}
+    - target: {fileID: 3491529782505554081, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: masterSlider
+      value: 
+      objectReference: {fileID: 1253478291}
+    - target: {fileID: 3491529782505554081, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: dialogueLabel
+      value: 
+      objectReference: {fileID: 75638814}
+    - target: {fileID: 3491529782505554081, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: dialogueSlider
+      value: 
+      objectReference: {fileID: 988227022}
+    - target: {fileID: 5553037226553847284, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_Name
+      value: AudioSettingsController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166678486386513636, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166678486386513636, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166678486386513636, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166678486386513636, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166678486386513636, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166678486386513636, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166678486386513636, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166678486386513636, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166678486386513636, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8166678486386513636, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 06c1bec38da134aab85cb41d899c1c32, type: 3}
 --- !u!1001 &4948310389671487639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46644,7 +46680,7 @@ SceneRoots:
   - {fileID: 1496718818077508094}
   - {fileID: 1604888278}
   - {fileID: 7795512651711934439}
-  - {fileID: 1439376080}
+  - {fileID: 4508045225757819367}
   - {fileID: 594807609}
   - {fileID: 1098756137}
   - {fileID: 4948310389671487639}
