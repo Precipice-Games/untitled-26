@@ -9448,7 +9448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60642b4dc867a2441a709bf5d508be9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerButton
-  nextDestination: 1
+  nextDestination: 0
 --- !u!1 &7150865741348096406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -479779240224528538, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
