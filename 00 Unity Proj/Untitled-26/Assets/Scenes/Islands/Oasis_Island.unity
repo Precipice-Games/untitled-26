@@ -168,10 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &7385143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1400,10 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &294103729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1577,10 +1571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &301931863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1754,10 +1745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &321280259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2140,10 +2128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &351492541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3179,10 +3164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &414497670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3468,10 +3450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &467247700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3645,10 +3624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &490550235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3861,10 +3837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &519648748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4261,10 +4234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &546573707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4438,10 +4408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &548980650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4681,10 +4648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &561447049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4944,10 +4908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &643401015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5183,10 +5144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &665944386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5578,10 +5536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &724785929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5873,10 +5828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &755429860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6344,10 +6296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &801034415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6795,10 +6744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &858235888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6972,10 +6918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &885695857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7126,11 +7069,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 497008879434423276, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: printStateTransition
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 617803613672485369, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.9992676
+      objectReference: {fileID: 0}
+    - target: {fileID: 882428903482640597, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 895975378}
+    - target: {fileID: 882428903482640597, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onPause
       objectReference: {fileID: 0}
     - target: {fileID: 1100297765787535934, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -7268,6 +7219,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.50024414
       objectReference: {fileID: 0}
+    - target: {fileID: 4543659021414802584, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: nextDestination
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4696753130525601545, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -7362,11 +7317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8825419243212114563, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -1.7400025
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8825419243212114563, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -1.6499999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8940854874939092907, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_IsActive
@@ -7654,10 +7609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &913991741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8179,10 +8131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &940533864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8356,10 +8305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &942181312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8533,10 +8479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &964581652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9411,10 +9354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1052917521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9970,10 +9910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1121957268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10565,10 +10502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1165642762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11088,10 +11022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1202517741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11265,10 +11196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1224213748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11504,10 +11432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1243782133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11999,10 +11924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1314997512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12304,10 +12226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1336845146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12594,10 +12513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1352715746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12831,10 +12747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1408722161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13118,10 +13031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1467078046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13381,10 +13291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1510109655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13644,10 +13551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1554043146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13821,10 +13725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1563821604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13998,10 +13899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1578513726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14756,10 +14654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1681258459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14933,10 +14828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1748785703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15206,10 +15098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1774392133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15383,10 +15272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1781430410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15560,10 +15446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1782920636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16093,10 +15976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1906930915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16270,10 +16150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1915696252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16563,10 +16440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1946470565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18150,10 +18024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &2011882966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18413,10 +18284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &2019864537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18848,10 +18716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &2101005173
 MonoBehaviour:
   m_ObjectHideFlags: 0

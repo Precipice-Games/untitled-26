@@ -9431,7 +9431,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerButton
   nextDestination: 1
-  scene: <Insert scene name>
 --- !u!1 &7068722117972722226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -544191721942471486, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
@@ -9449,8 +9448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60642b4dc867a2441a709bf5d508be9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerButton
-  nextDestination: 1
-  scene: <Insert scene name>
+  nextDestination: 0
 --- !u!1 &7150865741348096406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -479779240224528538, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
@@ -9469,7 +9467,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerButton
   nextDestination: 1
-  scene: <Insert scene name>
 --- !u!224 &7598088730690286271 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8294034719170780239, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
@@ -9503,7 +9500,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChangerButton
   nextDestination: 1
-  scene: <Insert scene name>
 --- !u!1 &8742719022096561527 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2071689421119120505, guid: 1cd89ea0c609ae947bf781193be976c9, type: 3}
