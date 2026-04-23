@@ -2061,6 +2061,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1392155289}
+    - target: {fileID: 7507354175440329553, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 1432792441}
     - target: {fileID: 9171193105649543790, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6
@@ -2491,6 +2495,10 @@ PrefabInstance:
       propertyPath: startNode
       value: IntroDialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 7083096844073325273, guid: 8a4743623ff36b94f9f8e976cda3a878, type: 3}
+      propertyPath: yarnProject
+      value: 
+      objectReference: {fileID: 7545569452688597077, guid: eddf16804d74a754ba548eaa69dd95ce, type: 3}
     - target: {fileID: 7083096844073325273, guid: 8a4743623ff36b94f9f8e976cda3a878, type: 3}
       propertyPath: 'dialoguePresenters.Array.data[3]'
       value: 
