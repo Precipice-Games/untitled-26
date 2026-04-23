@@ -28430,10 +28430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1351079586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28680,6 +28677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   player: {fileID: 1045250814}
+  playerCam: {fileID: 0}
 --- !u!212 &1351094003
 SpriteRenderer:
   serializedVersion: 2
@@ -34263,10 +34261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1739471987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35120,10 +35115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &1837369717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43007,10 +42999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &2129601380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43542,6 +43531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   player: {fileID: 1045250814}
+  playerCam: {fileID: 0}
 --- !u!114 &2140098614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43724,10 +43714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  tileRenderer: {fileID: 0}
-  tile: {fileID: 0}
   normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
-  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!114 &2141377682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45399,8 +45386,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExplorationCamera
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3377063299769562933, guid: ff16e4e71610ade4bb5e6805e7db56e3, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
