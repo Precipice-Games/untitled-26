@@ -52,7 +52,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     /// <summary>
     /// The most recent previous state the game was in before the current state.
     /// </summary>
-    private GameState prevState;
+    public static GameState prevState;
 
     /// <summary>
     /// Tracks if the player is able to pause from the current state.
@@ -126,7 +126,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         if (printStateTransition) Debug.Log($"onPuzzleTrigger() >> Current state is {CurrentGameState}. Attempting to transition to {newState}...");
         prevState = CurrentGameState;
         CurrentGameState = newState;
-        if (printStateTransition) Debug.Log("GameStateManager.cs >> State transitioned to: " + CurrentGameState); // Confirm the state change
+        if (printStateTransition) Debug.Log("GameStateManager.cs >> State transitioned to: " + CurrentGameState + " >> Previous State: " + prevState); // Confirm the state change
         HandlePauseValues(CurrentGameState);
     }
 
