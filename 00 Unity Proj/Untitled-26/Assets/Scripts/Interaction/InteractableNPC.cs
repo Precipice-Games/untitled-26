@@ -1,4 +1,5 @@
 using System;
+using Unity.Cinemachine;
 using UnityEngine;
 using Yarn;
 using Yarn.Unity;
@@ -16,6 +17,8 @@ public class InteractableNPC : MonoBehaviour, IInteractable
 
     [SerializeField]
     GameObject player;
+    [SerializeField]
+    CinemachineCamera playerCam;
 
     // TODO: Does this need to be inside of a FixedUpdate()? Perhaps we can
     //       optimize this? FixedUpdate() is really for physics calculations,
@@ -23,8 +26,8 @@ public class InteractableNPC : MonoBehaviour, IInteractable
     //       to a more optimized method, like Callbacks, UnitEvents, etc.?
     private void FixedUpdate()
     {
-        Vector3 targetPosition = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-        transform.LookAt(targetPosition);
+        //Vector3 targetPosition = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+        transform.LookAt(playerCam.transform.position);
         transform.Rotate(0, 180, 0);
         
         
