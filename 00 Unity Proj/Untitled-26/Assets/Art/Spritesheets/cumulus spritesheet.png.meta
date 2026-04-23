@@ -139,10 +139,10 @@ TextureImporter:
       name: cumulus spritesheet_0
       rect:
         serializedVersion: 2
-        x: 340
-        y: 5309
-        width: 429
-        height: 554
+        x: 0
+        y: 5310
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: cumulus spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1388
-        y: 5309
-        width: 430
-        height: 554
+        x: 1048
+        y: 5310
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: cumulus spritesheet_2
       rect:
         serializedVersion: 2
-        x: 2437
-        y: 5309
-        width: 429
-        height: 554
+        x: 2096
+        y: 5310
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: cumulus spritesheet_3
       rect:
         serializedVersion: 2
-        x: 3483
-        y: 5309
-        width: 432
-        height: 554
+        x: 3144
+        y: 5310
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: cumulus spritesheet_4
       rect:
         serializedVersion: 2
-        x: 4531
-        y: 5309
-        width: 432
-        height: 554
+        x: 4192
+        y: 5310
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: cumulus spritesheet_5
       rect:
         serializedVersion: 2
-        x: 340
-        y: 4722
-        width: 429
-        height: 553
+        x: 0
+        y: 4720
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +271,10 @@ TextureImporter:
       name: cumulus spritesheet_6
       rect:
         serializedVersion: 2
-        x: 1386
-        y: 4722
-        width: 432
-        height: 553
+        x: 1048
+        y: 4720
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: cumulus spritesheet_7
       rect:
         serializedVersion: 2
-        x: 2434
-        y: 4722
-        width: 432
-        height: 553
+        x: 2096
+        y: 4720
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: cumulus spritesheet_8
       rect:
         serializedVersion: 2
-        x: 3483
-        y: 4722
-        width: 432
-        height: 553
+        x: 3144
+        y: 4720
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: cumulus spritesheet_9
       rect:
         serializedVersion: 2
-        x: 4528
-        y: 4722
-        width: 435
-        height: 553
+        x: 4192
+        y: 4720
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,10 +359,10 @@ TextureImporter:
       name: cumulus spritesheet_10
       rect:
         serializedVersion: 2
-        x: 337
-        y: 4131
-        width: 435
-        height: 553
+        x: 0
+        y: 4130
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: cumulus spritesheet_11
       rect:
         serializedVersion: 2
-        x: 1383
-        y: 4131
-        width: 435
-        height: 553
+        x: 1048
+        y: 4130
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: cumulus spritesheet_12
       rect:
         serializedVersion: 2
-        x: 2431
-        y: 4131
-        width: 435
-        height: 553
+        x: 2096
+        y: 4130
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: cumulus spritesheet_13
       rect:
         serializedVersion: 2
-        x: 3477
-        y: 4131
-        width: 438
-        height: 553
+        x: 3144
+        y: 4130
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: cumulus spritesheet_14
       rect:
         serializedVersion: 2
-        x: 4526
-        y: 4131
-        width: 437
-        height: 553
+        x: 4192
+        y: 4130
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: cumulus spritesheet_15
       rect:
         serializedVersion: 2
-        x: 331
-        y: 3541
-        width: 441
-        height: 553
+        x: 0
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: cumulus spritesheet_16
       rect:
         serializedVersion: 2
-        x: 1380
-        y: 3541
-        width: 441
-        height: 553
+        x: 1048
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +513,10 @@ TextureImporter:
       name: cumulus spritesheet_17
       rect:
         serializedVersion: 2
-        x: 2426
-        y: 3541
-        width: 443
-        height: 556
+        x: 2096
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +535,10 @@ TextureImporter:
       name: cumulus spritesheet_18
       rect:
         serializedVersion: 2
-        x: 3474
-        y: 3541
-        width: 441
-        height: 556
+        x: 3144
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,10 +557,10 @@ TextureImporter:
       name: cumulus spritesheet_19
       rect:
         serializedVersion: 2
-        x: 4520
-        y: 3538
-        width: 443
-        height: 559
+        x: 4192
+        y: 3540
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -579,10 +579,10 @@ TextureImporter:
       name: cumulus spritesheet_20
       rect:
         serializedVersion: 2
-        x: 328
+        x: 0
         y: 2950
-        width: 444
-        height: 556
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: cumulus spritesheet_21
       rect:
         serializedVersion: 2
-        x: 1374
+        x: 1048
         y: 2950
-        width: 447
-        height: 556
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +623,10 @@ TextureImporter:
       name: cumulus spritesheet_22
       rect:
         serializedVersion: 2
-        x: 2423
+        x: 2096
         y: 2950
-        width: 446
-        height: 556
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,10 +645,10 @@ TextureImporter:
       name: cumulus spritesheet_23
       rect:
         serializedVersion: 2
-        x: 3468
+        x: 3144
         y: 2950
-        width: 450
-        height: 556
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,10 +667,10 @@ TextureImporter:
       name: cumulus spritesheet_24
       rect:
         serializedVersion: 2
-        x: 4517
-        y: 2947
-        width: 446
-        height: 559
+        x: 4192
+        y: 2950
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -689,10 +689,10 @@ TextureImporter:
       name: cumulus spritesheet_25
       rect:
         serializedVersion: 2
-        x: 323
-        y: 2357
-        width: 449
-        height: 558
+        x: 0
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +711,10 @@ TextureImporter:
       name: cumulus spritesheet_26
       rect:
         serializedVersion: 2
-        x: 1371
-        y: 2357
-        width: 450
-        height: 558
+        x: 1048
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,10 +733,10 @@ TextureImporter:
       name: cumulus spritesheet_27
       rect:
         serializedVersion: 2
-        x: 2420
-        y: 2357
-        width: 449
-        height: 558
+        x: 2096
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -755,10 +755,10 @@ TextureImporter:
       name: cumulus spritesheet_28
       rect:
         serializedVersion: 2
-        x: 3465
-        y: 2357
-        width: 453
-        height: 558
+        x: 3144
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: cumulus spritesheet_29
       rect:
         serializedVersion: 2
-        x: 4514
-        y: 2357
-        width: 452
-        height: 558
+        x: 4192
+        y: 2360
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -799,10 +799,10 @@ TextureImporter:
       name: cumulus spritesheet_30
       rect:
         serializedVersion: 2
-        x: 323
-        y: 1769
-        width: 449
-        height: 556
+        x: 0
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -821,10 +821,10 @@ TextureImporter:
       name: cumulus spritesheet_31
       rect:
         serializedVersion: 2
-        x: 1368
-        y: 1769
-        width: 453
-        height: 556
+        x: 1048
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -843,10 +843,10 @@ TextureImporter:
       name: cumulus spritesheet_32
       rect:
         serializedVersion: 2
-        x: 2417
-        y: 1769
-        width: 452
-        height: 556
+        x: 2096
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -865,10 +865,10 @@ TextureImporter:
       name: cumulus spritesheet_33
       rect:
         serializedVersion: 2
-        x: 3465
-        y: 1769
-        width: 453
-        height: 556
+        x: 3144
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -887,10 +887,10 @@ TextureImporter:
       name: cumulus spritesheet_34
       rect:
         serializedVersion: 2
-        x: 4514
-        y: 1769
-        width: 452
-        height: 556
+        x: 4192
+        y: 1770
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -909,10 +909,10 @@ TextureImporter:
       name: cumulus spritesheet_35
       rect:
         serializedVersion: 2
-        x: 323
-        y: 1178
-        width: 449
-        height: 559
+        x: 0
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -931,10 +931,10 @@ TextureImporter:
       name: cumulus spritesheet_36
       rect:
         serializedVersion: 2
-        x: 1374
-        y: 1178
-        width: 447
-        height: 559
+        x: 1048
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -953,10 +953,10 @@ TextureImporter:
       name: cumulus spritesheet_37
       rect:
         serializedVersion: 2
-        x: 2423
-        y: 1178
-        width: 446
-        height: 559
+        x: 2096
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -975,10 +975,10 @@ TextureImporter:
       name: cumulus spritesheet_38
       rect:
         serializedVersion: 2
-        x: 3474
-        y: 1178
-        width: 441
-        height: 556
+        x: 3144
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -997,10 +997,10 @@ TextureImporter:
       name: cumulus spritesheet_39
       rect:
         serializedVersion: 2
-        x: 4523
-        y: 1178
-        width: 440
-        height: 556
+        x: 4192
+        y: 1180
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1019,10 +1019,10 @@ TextureImporter:
       name: cumulus spritesheet_40
       rect:
         serializedVersion: 2
-        x: 334
-        y: 591
-        width: 438
-        height: 553
+        x: 0
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1041,10 +1041,10 @@ TextureImporter:
       name: cumulus spritesheet_41
       rect:
         serializedVersion: 2
-        x: 1383
-        y: 591
-        width: 435
-        height: 553
+        x: 1048
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1063,10 +1063,10 @@ TextureImporter:
       name: cumulus spritesheet_42
       rect:
         serializedVersion: 2
-        x: 2431
-        y: 591
-        width: 435
-        height: 553
+        x: 2096
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1085,10 +1085,10 @@ TextureImporter:
       name: cumulus spritesheet_43
       rect:
         serializedVersion: 2
-        x: 3483
-        y: 591
-        width: 432
-        height: 553
+        x: 3144
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1107,10 +1107,10 @@ TextureImporter:
       name: cumulus spritesheet_44
       rect:
         serializedVersion: 2
-        x: 4531
-        y: 591
-        width: 432
-        height: 553
+        x: 4192
+        y: 590
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1129,10 +1129,10 @@ TextureImporter:
       name: cumulus spritesheet_45
       rect:
         serializedVersion: 2
-        x: 340
+        x: 0
         y: 0
-        width: 429
-        height: 553
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1151,10 +1151,10 @@ TextureImporter:
       name: cumulus spritesheet_46
       rect:
         serializedVersion: 2
-        x: 1388
+        x: 1048
         y: 0
-        width: 430
-        height: 553
+        width: 1048
+        height: 590
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1183,7 +1183,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":10.0},"gridSpriteSize":{"x":1048.0,"y":590.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       cumulus spritesheet_0: -320442262
       cumulus spritesheet_1: 1460947913
