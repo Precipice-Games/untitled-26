@@ -4522,7 +4522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 588839293333666835, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.14
+      value: 8.77
       objectReference: {fileID: 0}
     - target: {fileID: 588839293333666835, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4854,7 +4854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3624906698350998147, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.54
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3624906698350998147, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5050,7 +5050,7 @@ PrefabInstance:
       objectReference: {fileID: 1045250814}
     - target: {fileID: 5018615782271576797, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: 4.28
       objectReference: {fileID: 0}
     - target: {fileID: 5018615782271576797, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5058,7 +5058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5018615782271576797, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6
+      value: -18.5
       objectReference: {fileID: 0}
     - target: {fileID: 5019277549151866532, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_Size.x
@@ -5330,7 +5330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7321162161942524934, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -72.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7321162161942524934, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14306,6 +14306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   player: {fileID: 1045250814}
+  playerCam: {fileID: 0}
 --- !u!212 &776112750
 SpriteRenderer:
   serializedVersion: 2
