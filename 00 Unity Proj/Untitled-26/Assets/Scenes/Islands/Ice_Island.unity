@@ -7075,6 +7075,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1045250814}
+    - target: {fileID: 7507354175440329553, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 8600581230760321560}
     - target: {fileID: 9171193105649543790, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.134
@@ -28677,7 +28681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   player: {fileID: 1045250814}
-  playerCam: {fileID: 0}
+  playerCam: {fileID: 8600581230760321560}
 --- !u!212 &1351094003
 SpriteRenderer:
   serializedVersion: 2
@@ -43535,7 +43539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableNPC
   player: {fileID: 1045250814}
-  playerCam: {fileID: 0}
+  playerCam: {fileID: 8600581230760321560}
 --- !u!114 &2140098614
 MonoBehaviour:
   m_ObjectHideFlags: 0
