@@ -59,6 +59,7 @@ public class SceneChangerButton :  MonoBehaviour
     public void LoadScene()
     {
         var nextScene = DetermineScene(nextDestination);
-        SceneManager.LoadScene(nextScene);
+        GameManager.Instance.TransitionToNextScene(SceneManager.GetActiveScene().name, nextScene);
+        // SceneManager.LoadScene(nextScene);
     }
 }
