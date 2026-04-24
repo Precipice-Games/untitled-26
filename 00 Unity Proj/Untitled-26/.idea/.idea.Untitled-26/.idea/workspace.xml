@@ -7,6 +7,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/nikki/untitled-26/00 Unity Proj/Untitled-26" value="3CmTSeXO6mPKNa2Dv8DwNJYJ24n" />
+    </persistenceIdMap>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -45,8 +50,32 @@
     </configuration>
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ffe66d8-9c68-4763-886b-583778bee7b1" name="Changes" comment="" />
+      <created>1776989749753</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776989749753</updated>
+      <workItem from="1776989758192" duration="338000" />
+    </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
 </project>
