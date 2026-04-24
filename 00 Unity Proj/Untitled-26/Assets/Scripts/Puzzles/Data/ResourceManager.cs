@@ -205,6 +205,26 @@ public class ResourceManager : MonoBehaviour
         return currentMana;
     }
 
+    public int GetLeftUses()
+    {
+        return currentLeftUses;
+    }
+
+    public int GetRightUses()
+    {
+        return currentRightUses;
+    }
+
+    public int GetForwardUses()
+    {
+        return currentForwardUses;
+    }
+
+    public int GetBackUses()
+    {
+        return currentBackUses;
+    }
+
     /// <summary>
     /// Updates the Mana text on the UI.
     /// </summary>

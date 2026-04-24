@@ -139,10 +139,10 @@ TextureImporter:
       name: julien spritesheet_0
       rect:
         serializedVersion: 2
-        x: 318
-        y: 8666
-        width: 1201
-        height: 950
+        x: 0
+        y: 8640
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: julien spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2235
-        y: 8666
-        width: 1201
-        height: 950
+        x: 1920
+        y: 8640
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: julien spritesheet_2
       rect:
         serializedVersion: 2
-        x: 4157
-        y: 8666
-        width: 1201
-        height: 959
+        x: 3840
+        y: 8640
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: julien spritesheet_3
       rect:
         serializedVersion: 2
-        x: 6079
-        y: 8666
-        width: 1200
-        height: 969
+        x: 5760
+        y: 8640
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: julien spritesheet_4
       rect:
         serializedVersion: 2
-        x: 7996
-        y: 8666
-        width: 1205
-        height: 983
+        x: 7680
+        y: 8640
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: julien spritesheet_5
       rect:
         serializedVersion: 2
-        x: 323
-        y: 7584
-        width: 1196
-        height: 997
+        x: 0
+        y: 7560
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +271,10 @@ TextureImporter:
       name: julien spritesheet_6
       rect:
         serializedVersion: 2
-        x: 2245
-        y: 7584
-        width: 1195
-        height: 1011
+        x: 1920
+        y: 7560
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: julien spritesheet_7
       rect:
         serializedVersion: 2
-        x: 4171
-        y: 7584
-        width: 1187
-        height: 1025
+        x: 3840
+        y: 7560
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: julien spritesheet_8
       rect:
         serializedVersion: 2
-        x: 6098
-        y: 7580
-        width: 1177
-        height: 1039
+        x: 5760
+        y: 7560
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: julien spritesheet_9
       rect:
         serializedVersion: 2
-        x: 8025
-        y: 7580
-        width: 1162
-        height: 1048
+        x: 7680
+        y: 7560
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,10 +359,10 @@ TextureImporter:
       name: julien spritesheet_10
       rect:
         serializedVersion: 2
-        x: 356
-        y: 6497
-        width: 1148
-        height: 1054
+        x: 0
+        y: 6480
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: julien spritesheet_11
       rect:
         serializedVersion: 2
-        x: 2283
-        y: 6497
-        width: 1138
-        height: 1054
+        x: 1920
+        y: 6480
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: julien spritesheet_12
       rect:
         serializedVersion: 2
-        x: 4209
-        y: 6497
-        width: 1130
-        height: 1054
+        x: 3840
+        y: 6480
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: julien spritesheet_13
       rect:
         serializedVersion: 2
-        x: 6131
-        y: 6497
-        width: 1125
-        height: 1054
+        x: 5760
+        y: 6480
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: julien spritesheet_14
       rect:
         serializedVersion: 2
-        x: 8058
-        y: 6497
-        width: 1115
-        height: 1054
+        x: 7680
+        y: 6480
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: julien spritesheet_15
       rect:
         serializedVersion: 2
-        x: 375
-        y: 5415
-        width: 1120
-        height: 1054
+        x: 0
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: julien spritesheet_16
       rect:
         serializedVersion: 2
-        x: 2292
-        y: 5415
-        width: 1125
-        height: 1044
+        x: 1920
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +513,10 @@ TextureImporter:
       name: julien spritesheet_17
       rect:
         serializedVersion: 2
-        x: 4204
-        y: 5415
-        width: 1135
-        height: 1035
+        x: 3840
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +535,10 @@ TextureImporter:
       name: julien spritesheet_18
       rect:
         serializedVersion: 2
-        x: 6117
-        y: 5415
-        width: 1144
-        height: 1016
+        x: 5760
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,10 +557,10 @@ TextureImporter:
       name: julien spritesheet_19
       rect:
         serializedVersion: 2
-        x: 8029
-        y: 5415
-        width: 1153
-        height: 997
+        x: 7680
+        y: 5400
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -579,10 +579,10 @@ TextureImporter:
       name: julien spritesheet_20
       rect:
         serializedVersion: 2
-        x: 342
-        y: 4338
-        width: 1162
-        height: 978
+        x: 0
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: julien spritesheet_21
       rect:
         serializedVersion: 2
-        x: 2249
-        y: 4338
-        width: 1182
-        height: 968
+        x: 1920
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +623,10 @@ TextureImporter:
       name: julien spritesheet_22
       rect:
         serializedVersion: 2
-        x: 4152
-        y: 4343
-        width: 1210
-        height: 949
+        x: 3840
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,10 +645,10 @@ TextureImporter:
       name: julien spritesheet_23
       rect:
         serializedVersion: 2
-        x: 6065
-        y: 4343
-        width: 1238
-        height: 935
+        x: 5760
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,10 +667,10 @@ TextureImporter:
       name: julien spritesheet_24
       rect:
         serializedVersion: 2
-        x: 7982
-        y: 4343
-        width: 1262
-        height: 930
+        x: 7680
+        y: 4320
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -689,10 +689,10 @@ TextureImporter:
       name: julien spritesheet_25
       rect:
         serializedVersion: 2
-        x: 299
-        y: 3265
-        width: 1262
-        height: 940
+        x: 0
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +711,10 @@ TextureImporter:
       name: julien spritesheet_26
       rect:
         serializedVersion: 2
-        x: 2216
-        y: 3265
-        width: 1258
-        height: 954
+        x: 1920
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,10 +733,10 @@ TextureImporter:
       name: julien spritesheet_27
       rect:
         serializedVersion: 2
-        x: 4133
-        y: 3265
-        width: 1258
-        height: 978
+        x: 3840
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -755,10 +755,10 @@ TextureImporter:
       name: julien spritesheet_28
       rect:
         serializedVersion: 2
-        x: 6055
-        y: 3265
-        width: 1258
-        height: 1002
+        x: 5760
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: julien spritesheet_29
       rect:
         serializedVersion: 2
-        x: 7977
-        y: 3261
-        width: 1253
-        height: 1025
+        x: 7680
+        y: 3240
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -799,10 +799,10 @@ TextureImporter:
       name: julien spritesheet_30
       rect:
         serializedVersion: 2
-        x: 299
-        y: 2183
-        width: 1248
-        height: 1040
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -821,10 +821,10 @@ TextureImporter:
       name: julien spritesheet_31
       rect:
         serializedVersion: 2
-        x: 2226
-        y: 2178
-        width: 1233
-        height: 1059
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -843,10 +843,10 @@ TextureImporter:
       name: julien spritesheet_32
       rect:
         serializedVersion: 2
-        x: 4152
-        y: 2178
-        width: 1220
-        height: 1064
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -865,10 +865,10 @@ TextureImporter:
       name: julien spritesheet_33
       rect:
         serializedVersion: 2
-        x: 6079
-        y: 2178
-        width: 1210
-        height: 1064
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -887,10 +887,10 @@ TextureImporter:
       name: julien spritesheet_34
       rect:
         serializedVersion: 2
-        x: 8001
-        y: 2174
-        width: 1205
-        height: 1068
+        x: 7680
+        y: 2160
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -909,10 +909,10 @@ TextureImporter:
       name: julien spritesheet_35
       rect:
         serializedVersion: 2
-        x: 327
-        y: 1096
-        width: 1196
-        height: 1063
+        x: 0
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -931,10 +931,10 @@ TextureImporter:
       name: julien spritesheet_36
       rect:
         serializedVersion: 2
-        x: 2249
-        y: 1096
-        width: 1191
-        height: 1059
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -953,10 +953,10 @@ TextureImporter:
       name: julien spritesheet_37
       rect:
         serializedVersion: 2
-        x: 4166
-        y: 1096
-        width: 1196
-        height: 1049
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -975,10 +975,10 @@ TextureImporter:
       name: julien spritesheet_38
       rect:
         serializedVersion: 2
-        x: 6088
-        y: 1096
-        width: 1191
-        height: 1044
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -997,10 +997,10 @@ TextureImporter:
       name: julien spritesheet_39
       rect:
         serializedVersion: 2
-        x: 8001
-        y: 1096
-        width: 1200
-        height: 1040
+        x: 7680
+        y: 1080
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1019,10 +1019,10 @@ TextureImporter:
       name: julien spritesheet_40
       rect:
         serializedVersion: 2
-        x: 318
-        y: 19
-        width: 1205
-        height: 1020
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1041,10 +1041,10 @@ TextureImporter:
       name: julien spritesheet_41
       rect:
         serializedVersion: 2
-        x: 2235
-        y: 19
-        width: 1210
-        height: 1006
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1063,10 +1063,10 @@ TextureImporter:
       name: julien spritesheet_42
       rect:
         serializedVersion: 2
-        x: 4157
-        y: 19
-        width: 1205
-        height: 992
+        x: 3840
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1085,10 +1085,10 @@ TextureImporter:
       name: julien spritesheet_43
       rect:
         serializedVersion: 2
-        x: 6074
-        y: 24
-        width: 1205
-        height: 973
+        x: 5760
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1117,7 +1117,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":9.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       julien spritesheet_0: -390816793
       julien spritesheet_1: 1527350155

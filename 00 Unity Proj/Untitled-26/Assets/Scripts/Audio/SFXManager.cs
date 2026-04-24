@@ -24,6 +24,7 @@ public class SFXManager : MonoBehaviour
     [Header("SFX")]
     [SerializeField] private AudioClip cardClickSFX;
     [SerializeField] private AudioClip invalidMoveSFX;
+    [SerializeField] private AudioClip puzzleResetSFX;
 
     private bool suppressNextCardClick = false;
 
@@ -44,7 +45,16 @@ public class SFXManager : MonoBehaviour
             sfxSource.outputAudioMixerGroup = sfxMixerGroup;
         }
     }
+    
+    private void OnEnable()
+    {
+        ResetPuzzle.resetPuzzle += OnPuzzleReset;
+    }
 
+    private void OnDisable()
+    {
+        ResetPuzzle.resetPuzzle -= OnPuzzleReset;
+    }
     public void PlayCardClick()
     {
         if (suppressNextCardClick)
@@ -60,6 +70,11 @@ public class SFXManager : MonoBehaviour
     {
         suppressNextCardClick = true;
         PlayClip(invalidMoveSFX);
+    }
+
+    private void OnPuzzleReset()
+    {
+        PlayClip(puzzleResetSFX);
     }
 
     public void PlayClip(AudioClip clip)

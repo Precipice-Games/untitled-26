@@ -139,10 +139,10 @@ TextureImporter:
       name: mort spritesheet_0
       rect:
         serializedVersion: 2
-        x: 420
-        y: 6939
-        width: 585
-        height: 493
+        x: 0
+        y: 6708
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: mort spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1911
-        y: 6939
-        width: 584
-        height: 493
+        x: 1491
+        y: 6708
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: mort spritesheet_2
       rect:
         serializedVersion: 2
-        x: 3397
-        y: 6939
-        width: 592
-        height: 497
+        x: 2982
+        y: 6708
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: mort spritesheet_3
       rect:
         serializedVersion: 2
-        x: 4883
-        y: 6936
-        width: 604
-        height: 504
+        x: 4473
+        y: 6708
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: mort spritesheet_4
       rect:
         serializedVersion: 2
-        x: 6370
-        y: 6936
-        width: 615
-        height: 512
+        x: 5964
+        y: 6708
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: mort spritesheet_5
       rect:
         serializedVersion: 2
-        x: 397
-        y: 5816
-        width: 631
-        height: 520
+        x: 0
+        y: 5590
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +271,10 @@ TextureImporter:
       name: mort spritesheet_6
       rect:
         serializedVersion: 2
-        x: 1880
-        y: 5812
-        width: 646
-        height: 531
+        x: 1491
+        y: 5590
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +293,10 @@ TextureImporter:
       name: mort spritesheet_7
       rect:
         serializedVersion: 2
-        x: 3366
-        y: 5808
-        width: 658
-        height: 539
+        x: 2982
+        y: 5590
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: mort spritesheet_8
       rect:
         serializedVersion: 2
-        x: 4853
-        y: 5808
-        width: 665
-        height: 547
+        x: 4473
+        y: 5590
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +337,10 @@ TextureImporter:
       name: mort spritesheet_9
       rect:
         serializedVersion: 2
-        x: 6339
-        y: 5805
-        width: 673
-        height: 554
+        x: 5964
+        y: 5590
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,10 +359,10 @@ TextureImporter:
       name: mort spritesheet_10
       rect:
         serializedVersion: 2
-        x: 374
-        y: 4689
-        width: 673
-        height: 554
+        x: 0
+        y: 4472
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: mort spritesheet_11
       rect:
         serializedVersion: 2
-        x: 1865
-        y: 4689
-        width: 676
-        height: 554
+        x: 1491
+        y: 4472
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +403,10 @@ TextureImporter:
       name: mort spritesheet_12
       rect:
         serializedVersion: 2
-        x: 3363
-        y: 4693
-        width: 661
-        height: 542
+        x: 2982
+        y: 4472
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: mort spritesheet_13
       rect:
         serializedVersion: 2
-        x: 4860
-        y: 4693
-        width: 650
-        height: 535
+        x: 4473
+        y: 4472
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +447,10 @@ TextureImporter:
       name: mort spritesheet_14
       rect:
         serializedVersion: 2
-        x: 6366
-        y: 4696
-        width: 623
-        height: 516
+        x: 5964
+        y: 4472
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +469,10 @@ TextureImporter:
       name: mort spritesheet_15
       rect:
         serializedVersion: 2
-        x: 413
-        y: 3584
-        width: 600
-        height: 501
+        x: 0
+        y: 3354
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +491,10 @@ TextureImporter:
       name: mort spritesheet_16
       rect:
         serializedVersion: 2
-        x: 1911
-        y: 3584
-        width: 584
-        height: 493
+        x: 1491
+        y: 3354
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,10 +513,10 @@ TextureImporter:
       name: mort spritesheet_17
       rect:
         serializedVersion: 2
-        x: 3397
-        y: 3584
-        width: 592
-        height: 493
+        x: 2982
+        y: 3354
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,10 +535,10 @@ TextureImporter:
       name: mort spritesheet_18
       rect:
         serializedVersion: 2
-        x: 4883
-        y: 3581
-        width: 604
-        height: 496
+        x: 4473
+        y: 3354
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,10 +557,10 @@ TextureImporter:
       name: mort spritesheet_19
       rect:
         serializedVersion: 2
-        x: 6366
-        y: 3581
-        width: 623
-        height: 496
+        x: 5964
+        y: 3354
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -579,10 +579,10 @@ TextureImporter:
       name: mort spritesheet_20
       rect:
         serializedVersion: 2
-        x: 394
-        y: 2461
-        width: 638
-        height: 500
+        x: 0
+        y: 2236
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -601,10 +601,10 @@ TextureImporter:
       name: mort spritesheet_21
       rect:
         serializedVersion: 2
-        x: 1876
-        y: 2457
-        width: 654
-        height: 504
+        x: 1491
+        y: 2236
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -623,10 +623,10 @@ TextureImporter:
       name: mort spritesheet_22
       rect:
         serializedVersion: 2
-        x: 3363
-        y: 2453
-        width: 664
-        height: 505
+        x: 2982
+        y: 2236
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,10 +645,10 @@ TextureImporter:
       name: mort spritesheet_23
       rect:
         serializedVersion: 2
-        x: 4849
-        y: 2453
-        width: 673
-        height: 505
+        x: 4473
+        y: 2236
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,10 +667,10 @@ TextureImporter:
       name: mort spritesheet_24
       rect:
         serializedVersion: 2
-        x: 6339
-        y: 2449
-        width: 673
-        height: 509
+        x: 5964
+        y: 2236
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -689,10 +689,10 @@ TextureImporter:
       name: mort spritesheet_25
       rect:
         serializedVersion: 2
-        x: 378
-        y: 1334
-        width: 669
-        height: 508
+        x: 0
+        y: 1118
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +711,10 @@ TextureImporter:
       name: mort spritesheet_26
       rect:
         serializedVersion: 2
-        x: 1872
-        y: 1337
-        width: 665
-        height: 505
+        x: 1491
+        y: 1118
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,10 +733,10 @@ TextureImporter:
       name: mort spritesheet_27
       rect:
         serializedVersion: 2
-        x: 3370
-        y: 1341
-        width: 650
-        height: 501
+        x: 2982
+        y: 1118
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -755,10 +755,10 @@ TextureImporter:
       name: mort spritesheet_28
       rect:
         serializedVersion: 2
-        x: 4872
-        y: 1341
-        width: 627
-        height: 501
+        x: 4473
+        y: 1118
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,10 +777,10 @@ TextureImporter:
       name: mort spritesheet_29
       rect:
         serializedVersion: 2
-        x: 6374
-        y: 1345
-        width: 603
-        height: 497
+        x: 5964
+        y: 1118
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -799,10 +799,10 @@ TextureImporter:
       name: mort spritesheet_30
       rect:
         serializedVersion: 2
-        x: 417
-        y: 229
-        width: 588
-        height: 497
+        x: 0
+        y: 0
+        width: 1491
+        height: 1118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -831,7 +831,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":7.0},"gridSpriteSize":{"x":1491.0,"y":1118.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       mort spritesheet_0: -753580909
       mort spritesheet_1: -1929246777
