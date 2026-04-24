@@ -44,5 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64366dc24ef501d40945fcb89965e1a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  UnparentOnAwake: 1
   loadingScreen: {fileID: 0}
