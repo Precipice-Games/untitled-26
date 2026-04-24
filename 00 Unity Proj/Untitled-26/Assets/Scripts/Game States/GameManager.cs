@@ -18,8 +18,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        
-        // SceneManager.LoadSceneAsync("MainMenu", LoadSceneMode.Additive);
     }
     
     /// <summary>
@@ -31,15 +29,7 @@ public class GameManager : MonoBehaviour
     /// <param name="nextScene"></param>
     public void TransitionToNextScene(string currentScene, string nextScene)
     {
-        // Activate the loading screen transition
-        loadingScreen.SetActive(true);
-        
-        // // Asynchronously unload and load the current
-        // // scene and next scene, respectively.
-        // scenesLoading.Add(SceneManager.UnloadSceneAsync(currentScene));
-        // scenesLoading.Add(SceneManager.LoadSceneAsync(nextScene));
-        //
-        // StartCoroutine(GetSceneLoadProgress());
+        StartCoroutine(TransitionRoutine(currentScene, nextScene));
     }
 
     /// <summary>
@@ -47,35 +37,38 @@ public class GameManager : MonoBehaviour
     /// Once all scenes are loaded, the loading screen is deactivated.
     /// </summary>
     /// <returns></returns>
-    public IEnumerator GetSceneLoadProgress()
+    private IEnumerator TransitionRoutine(string currentScene, string nextScene)
     {
-        // Scene is still loading
+        // Activate the loading screen transition
+        loadingScreen.SetActive(true);
+        
+        // yield return new WaitForSeconds(3f);
+        
+        // Toggle the loading screen for a few seconds
+        yield return StartCoroutine(DelayTimer());
+        
+        scenesLoading.Add(SceneManager.UnloadSceneAsync(currentScene));
+        scenesLoading.Add(SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Additive));
+
+        yield return StartCoroutine(ToggleLoadingScreen(currentScene, nextScene));
+    }
+    
+    private IEnumerator DelayTimer()
+    {
+        yield return new WaitForSeconds(3f);
+    }
+
+    private IEnumerator ToggleLoadingScreen(string currentScene, string nextScene)
+    {
         for (int i = 0; i < scenesLoading.Count; i++)
         {
-            // Scene is still loading
             while (!scenesLoading[i].isDone)
             {
-                float progress = Mathf.Clamp01(scenesLoading[i].progress / 0.9f);
-                Debug.Log("Loading progress: " + progress * 100 + "%");
+                // totalSceneProgress = 0;
                 yield return null;
             }
-            
-            loadingScreen.SetActive(false);
         }
         
-        
-        
-        // for (int i = 0; i < scenesLoading.Count; i++)
-        // {
-        //     // Scene is still loading
-        //     while (!scenesLoading[i].isDone)
-        //     {
-        //         float progress = Mathf.Clamp01(scenesLoading[i].progress / 0.9f);
-        //         Debug.Log("Loading progress: " + progress * 100 + "%");
-        //         yield return null;
-        //     }
-        //     
-        //     loadingScreen.SetActive(false);
-        // }
+        loadingScreen.SetActive(false);
     }
 }
