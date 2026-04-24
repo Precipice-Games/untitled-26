@@ -21179,15 +21179,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7213066574574228598, guid: 4392a357293f4ce42b6966a489db6a4e, type: 3}
       propertyPath: moveBackUses
-      value: 1
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7213066574574228598, guid: 4392a357293f4ce42b6966a489db6a4e, type: 3}
+      propertyPath: moveLeftUses
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7213066574574228598, guid: 4392a357293f4ce42b6966a489db6a4e, type: 3}
       propertyPath: startingMana
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7213066574574228598, guid: 4392a357293f4ce42b6966a489db6a4e, type: 3}
       propertyPath: moveRightUses
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7213066574574228598, guid: 4392a357293f4ce42b6966a489db6a4e, type: 3}
+      propertyPath: moveForwardUses
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7295780280858452554, guid: 4392a357293f4ce42b6966a489db6a4e, type: 3}
       propertyPath: m_LocalPosition.x
