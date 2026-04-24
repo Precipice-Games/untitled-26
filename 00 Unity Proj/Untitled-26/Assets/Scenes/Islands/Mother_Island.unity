@@ -1170,6 +1170,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1e2f0d10f1a4248ae2cc8220bf8fd7, type: 3}
+--- !u!1001 &982381396
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1309930466712146503, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_Name
+      value: SimpleControlsVis
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.19094
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.72573
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.16031
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
 --- !u!1001 &1021214702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1178,6 +1235,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199852587322879966, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_Name
+      value: Puzzle2
+      objectReference: {fileID: 0}
     - target: {fileID: 563326666085521974, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
       propertyPath: gridZ
       value: 1
@@ -1478,22 +1551,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 26.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199852587322879966, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
-      propertyPath: m_Name
-      value: Puzzle2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 925581002351369635, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
@@ -1659,6 +1716,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199852587322879966, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
+      propertyPath: m_Name
+      value: Puzzle1
+      objectReference: {fileID: 0}
     - target: {fileID: 1640623606830934790, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
       propertyPath: width
       value: 3
@@ -1846,22 +1919,6 @@ PrefabInstance:
     - target: {fileID: 7325537039630228397, guid: 2d8d11cd6ddb8ed48bade39d4ec7c877, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3397337548393501967, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199852587322879966, guid: 0487eeb8116a2bc44b04ac1dd8955b3d, type: 3}
-      propertyPath: m_Name
-      value: Puzzle1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -4040,3 +4097,4 @@ SceneRoots:
   - {fileID: 1921092245}
   - {fileID: 762688092}
   - {fileID: 2064143264}
+  - {fileID: 982381396}

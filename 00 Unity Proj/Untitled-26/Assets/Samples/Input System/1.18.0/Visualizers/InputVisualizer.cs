@@ -42,18 +42,31 @@ namespace UnityEngine.InputSystem.Samples
             {
                 if (m_LabelContent == null)
                     m_LabelContent = new GUIContent(m_Label);
-                if (s_LabelStyle == null)
+                
+                // if (s_LabelStyle == null)
+                // {
+                //     s_LabelStyle = new GUIStyle();
+                //     s_LabelStyle.normal.textColor = Color.yellow;
+                //     s_LabelStyle.fontSize = 20;
+                // }
+                
+                // Using my own custom GUIStyle because I have terrible eyesight. -- Nikki
+                if (s_NikkiCustomStyle == null)
                 {
-                    s_LabelStyle = new GUIStyle();
-                    s_LabelStyle.normal.textColor = Color.yellow;
-                    s_LabelStyle.fontSize = 20;
+                    s_NikkiCustomStyle = new GUIStyle();
+                    s_NikkiCustomStyle.fontStyle = FontStyle.Bold;
+                    
+                    s_NikkiCustomStyle.normal.textColor = Color.red;
+                    s_NikkiCustomStyle.fontSize = 30;
                 }
 
                 ////FIXME: why does CalcSize not calculate the rect width correctly?
-                var labelSize = s_LabelStyle.CalcSize(m_LabelContent);
+                var labelSize = s_NikkiCustomStyle.CalcSize(m_LabelContent);
                 var labelRect = new Rect(rect.x + 4, rect.y, labelSize.x + 4, rect.height);
 
-                s_LabelStyle.Draw(labelRect, m_LabelContent, false, false, false, false);
+                // s_LabelStyle.Draw(labelRect, m_LabelContent, false, false, false, false);
+                
+                s_NikkiCustomStyle.Draw(labelRect, m_LabelContent, false, false, false, false);
             }
         }
 
@@ -79,6 +92,11 @@ namespace UnityEngine.InputSystem.Samples
         [NonSerialized] internal VisualizationHelpers.Visualizer m_Visualizer;
         [NonSerialized] internal InputVisualizer m_Parent;
 
+        // This is the original GUIStyle used for labels.
         private static GUIStyle s_LabelStyle;
+        
+        // Creating a custom GUIStyle -- Nikki
+        private static GUIStyle s_NikkiCustomStyle;
+
     }
 }
