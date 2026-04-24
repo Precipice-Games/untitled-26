@@ -20,6 +20,14 @@ public class InteractableNPC : MonoBehaviour, IInteractable
     [SerializeField]
     CinemachineCamera playerCam;
 
+    private void Awake()
+    {
+        if (playerCam == null)
+        {
+            playerCam = GetComponent<CinemachineCamera>();
+        }
+    }
+
     // TODO: Does this need to be inside of a FixedUpdate()? Perhaps we can
     //       optimize this? FixedUpdate() is really for physics calculations,
     //       and this is just for starting a dialogue. Maybe we can move this
