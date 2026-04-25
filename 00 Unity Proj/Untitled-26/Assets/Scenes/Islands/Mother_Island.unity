@@ -457,6 +457,10 @@ PrefabInstance:
       propertyPath: dialogueCamera
       value: 
       objectReference: {fileID: 1432792441}
+    - target: {fileID: 1963081915272111325, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: loadingComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 459277673}
     - target: {fileID: 2054103550624129834, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -722,6 +726,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 013260d1be826df43ada0899ec5eb270, type: 3}
+--- !u!114 &459277673 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5371604339549397331, guid: 013260d1be826df43ada0899ec5eb270, type: 3}
+  m_PrefabInstance: {fileID: 459277672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64366dc24ef501d40945fcb89965e1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1001 &501641405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1058,6 +1073,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7156459450556725804, guid: 1745e2c1cf097a14a9e958a9b50a30f6, type: 3}
+      propertyPath: nextDestination
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7609790446862505989, guid: 1745e2c1cf097a14a9e958a9b50a30f6, type: 3}
       propertyPath: m_LocalScale.x
       value: 140
