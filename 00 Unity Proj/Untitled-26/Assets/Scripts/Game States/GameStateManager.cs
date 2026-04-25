@@ -79,7 +79,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
         ExitPuzzleButton.exitPuzzle += TransitionToState;
         UIChangerButton.optionsMenuToggled += TogglePause;
-        SceneChangerButton.queueLoadingScreen += onLoadingScreenTriggered;
+        SceneChanger.queueLoadingScreen += onLoadingScreenTriggered;
     }
     
     private void OnDisable()
@@ -88,7 +88,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SceneManager.activeSceneChanged -= OnActiveSceneChanged;
         ExitPuzzleButton.exitPuzzle -= TransitionToState;
         UIChangerButton.optionsMenuToggled -= TogglePause;
-        SceneChangerButton.queueLoadingScreen -= onLoadingScreenTriggered;
+        SceneChanger.queueLoadingScreen -= onLoadingScreenTriggered;
     }
     
     // Runs when a scene is loaded
