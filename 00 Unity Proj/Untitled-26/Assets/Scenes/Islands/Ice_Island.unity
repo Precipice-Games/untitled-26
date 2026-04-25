@@ -1067,6 +1067,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3625183002538320219, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: otherRuneCircle
+      value: 
+      objectReference: {fileID: 1499987316}
     - target: {fileID: 3942273821399491795, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.4020001
@@ -1167,6 +1171,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6284629459955097238, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: otherRuneCircle
+      value: 
+      objectReference: {fileID: 1487136554}
     - target: {fileID: 6321783586416998415, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
       value: 9
@@ -1914,6 +1922,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14eb0a16258e2034d9bb137e1435805f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridManager
+--- !u!4 &92754971 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3624906698350998147, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 1437640441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &98120952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7199852587322879966, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
@@ -6438,6 +6451,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.887
       objectReference: {fileID: 0}
+    - target: {fileID: 3625183002538320219, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: otherRuneCircle
+      value: 
+      objectReference: {fileID: 1636659752}
     - target: {fileID: 3942273821399491795, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6746,6 +6763,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6284629459955097238, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: otherRuneCircle
+      value: 
+      objectReference: {fileID: 466525149}
     - target: {fileID: 6321783586416998415, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
       value: 3
@@ -8237,6 +8258,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 29e0129ee383aac4192c73f2e7d21121, type: 3}
   m_PrefabInstance: {fileID: 2134319423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &466525149 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3624906698350998147, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 372399995}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &477348069
 PrefabInstance:
@@ -26776,6 +26802,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8014860526984270938, guid: 52fcc2c214e11dd46bc310e39123907a, type: 3}
   m_PrefabInstance: {fileID: 1192481624}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1194561863 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3624906698350998147, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 8739545680216347640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1226919605
 GameObject:
   m_ObjectHideFlags: 0
@@ -32453,6 +32484,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3625183002538320219, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: otherRuneCircle
+      value: 
+      objectReference: {fileID: 1887625300}
     - target: {fileID: 3816189780632181019, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_Name
       value: p2DriftIsland (4)
@@ -32569,6 +32604,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 6284629459955097238, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: otherRuneCircle
+      value: 
+      objectReference: {fileID: 92754971}
     - target: {fileID: 6337408609227900163, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_Name
       value: p2DriftIsland (8)
@@ -33466,6 +33505,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8014860526984270938, guid: 52fcc2c214e11dd46bc310e39123907a, type: 3}
   m_PrefabInstance: {fileID: 1486615751}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1487136554 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3624906698350998147, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 60844291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1497618263
 GameObject:
   m_ObjectHideFlags: 0
@@ -33578,6 +33622,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497618263}
   m_Mesh: {fileID: -6209912238109660980, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
+--- !u!4 &1499987316 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7321162161942524934, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 60844291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1504941345
 GameObject:
   m_ObjectHideFlags: 0
@@ -40533,6 +40582,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.348537, y: 0.73014826, z: 0.27924353}
   m_Center: {x: 0.37491643, y: -0.13492572, z: -0.010609677}
+--- !u!4 &1636659752 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7321162161942524934, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 372399995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1645863908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48246,6 +48300,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8014860526984270938, guid: 52fcc2c214e11dd46bc310e39123907a, type: 3}
   m_PrefabInstance: {fileID: 1884569501}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1887625300 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7321162161942524934, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+  m_PrefabInstance: {fileID: 1437640441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1890701365
 GameObject:
   m_ObjectHideFlags: 0
@@ -52133,9 +52192,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8014860526984270938, guid: 52fcc2c214e11dd46bc310e39123907a, type: 3}
   m_PrefabInstance: {fileID: 2143429899}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &329516993286387239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 703785744850392240, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+--- !u!4 &329516993286387242 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7321162161942524934, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
   m_PrefabInstance: {fileID: 8739545680216347640}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1496718818077508094
@@ -54127,7 +54186,7 @@ PrefabInstance:
     - target: {fileID: 3625183002538320219, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: otherRuneCircle
       value: 
-      objectReference: {fileID: 329516993286387239}
+      objectReference: {fileID: 329516993286387242}
     - target: {fileID: 3796191418792194300, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_Name
       value: p1DriftIsland
@@ -54420,6 +54479,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6284629459955097238, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: otherRuneCircle
+      value: 
+      objectReference: {fileID: 1194561863}
     - target: {fileID: 6321783586416998415, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: debugMode
       value: 0
