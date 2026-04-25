@@ -3,11 +3,10 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// This script is used for buttons that change the scene when pressed.
-// It contains an enum for a safer way to determine the next scene, as
-// opposed to just using a string.
+// This script is used for triggering scene changes. It can be used
+// for button presses, airship boarding, and more.
 
-public class SceneChangerButton :  MonoBehaviour
+public class SceneChanger :  MonoBehaviour
 {
     [Title("SceneChanger Variables", "Variables related to scene switching.")]
     [PropertyTooltip("The scene to load upon pressing this button.")]
