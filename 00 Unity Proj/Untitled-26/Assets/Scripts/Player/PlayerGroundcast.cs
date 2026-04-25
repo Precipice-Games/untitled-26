@@ -20,6 +20,7 @@ public class PlayerGroundcast : MonoBehaviour
     private bool onGround;
     private bool onAirship;
     public GameObject activeInteractable; //Stores overlapping interactable object
+    private CharacterController charController;
     
     [Space]
     [Title("Raycast Settings", "Settings for the ray. Hover over variables for more information.")]
@@ -41,6 +42,8 @@ public class PlayerGroundcast : MonoBehaviour
 
     private void Awake()
     {
+        charController = GetComponent<CharacterController>();
+        
         // Finalize the ray length by adding the raw length and the buffer together.
         groundRayLength = rawRayLength + rayLengthBuffer;
         
@@ -61,6 +64,10 @@ public class PlayerGroundcast : MonoBehaviour
     {
         // Set the origin and direction of the ray
         SetOriginAndDirection();
+        
+        groundInteractionRay.origin = transform.position;
+        groundInteractionRay.direction = -transform.up;
+        
         Vector3 origin = groundInteractionRay.origin;
         Vector3 direction = groundInteractionRay.direction;
 

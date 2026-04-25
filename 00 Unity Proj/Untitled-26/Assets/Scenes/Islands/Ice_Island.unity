@@ -1693,26 +1693,6 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: cc8764a78abe00447b9298d11d64302a, type: 2}
-    - target: {fileID: 8839583978902556456, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8839583978902556456, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 5d634fb24ab058241a1c4b73c7d30724, type: 2}
-    - target: {fileID: 9071040957621364692, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
-    - target: {fileID: 2677026544754493357, guid: a6c784ad445d3794997d2c33105ef3df, type: 3}
-      propertyPath: jumpPower
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8886036790925492155, guid: a6c784ad445d3794997d2c33105ef3df, type: 3}
-      propertyPath: m_ProvidesContacts
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
@@ -35031,6 +35011,10 @@ PrefabInstance:
     - target: {fileID: 1309930466712146503, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
       propertyPath: m_Name
       value: SimpleControlsVis
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146503, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
       propertyPath: m_LocalPosition.x
