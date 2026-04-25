@@ -907,6 +907,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 8.640686
       objectReference: {fileID: 0}
+    - target: {fileID: 2022534229041519978, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022534229041519978, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: _styles.Array.data[1].verticalAlignment.enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2054103550624129834, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1147,8 +1155,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5482410611315081832, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: _styles.Array.data[0].componentEnabled._value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5594280990798421712, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751620666508136985, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_Transition
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5751620666508136985, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
@@ -1658,6 +1674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 6781140662490967103, guid: 883f2f309a01da144b5bf7a5f9cdc71a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7298955605622718558, guid: 883f2f309a01da144b5bf7a5f9cdc71a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1714,6 +1734,10 @@ PrefabInstance:
     - target: {fileID: 6540214099284373024, guid: 75f929da6991db4438cb51a68aa3a685, type: 3}
       propertyPath: m_Name
       value: MenuCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540214099284373024, guid: 75f929da6991db4438cb51a68aa3a685, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7369719981292622885, guid: 75f929da6991db4438cb51a68aa3a685, type: 3}
       propertyPath: m_LocalPosition.x
