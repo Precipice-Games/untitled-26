@@ -24,6 +24,7 @@ public class ViewManager : MonoBehaviour
     public GameObject dialogueUI;
     public GameObject pausedUI;
     public GameObject settingsUI;
+    public GameObject loadingUI;
     private GameObject _targetUI;
 
     [Space]
@@ -86,6 +87,7 @@ public class ViewManager : MonoBehaviour
         if (puzzleUI != null) uiCanvases.Add(puzzleUI);
         if (pausedUI != null) uiCanvases.Add(pausedUI);
         if (dialogueUI != null) uiCanvases.Add(dialogueUI);
+        if (loadingUI != null) uiCanvases.Add(loadingUI);
         
         if (printSceneDefaults) Debug.Log($"ViewManager.cs >> Initialized with {uiCanvases.Count} UI Canvases.");
     }
@@ -157,6 +159,10 @@ public class ViewManager : MonoBehaviour
                 break;
             case GameStateManager.GameState.Settings:
                 _targetUI = settingsUI;
+                _targetCamera = menuCamera;
+                break;
+            case GameStateManager.GameState.Loading:
+                _targetUI = loadingUI;
                 _targetCamera = menuCamera;
                 break;
         }

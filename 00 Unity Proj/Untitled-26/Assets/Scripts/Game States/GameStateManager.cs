@@ -41,7 +41,8 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         Puzzle,
         Dialogue,
         Paused,
-        Settings
+        Settings,
+        Loading
     }
 
     /// <summary>
@@ -164,6 +165,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
             case GameState.Settings:
                 TogglePause(false);
                 Time.timeScale = 0.0f;
+                break;
+            case GameState.Loading:
+                TogglePause(false);
+                Time.timeScale = 1.0f;
                 break;
         }
         
