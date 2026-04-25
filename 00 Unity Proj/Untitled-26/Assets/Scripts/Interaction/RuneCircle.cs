@@ -20,6 +20,7 @@ public class RuneCircle : MonoBehaviour
     private bool inCircle;
     private GameObject player;
 
+    public static RuneCircle activeRuneCircle;
 
     // An event that is invoked when the player stands on the rune circle
     public static event Action<bool> playerInCircle;
@@ -52,6 +53,8 @@ public class RuneCircle : MonoBehaviour
             playerInCircle?.Invoke(true);
             inCircle = true;
             player = other.gameObject;
+
+            activeRuneCircle = this;
         }
     }
 
@@ -67,6 +70,11 @@ public class RuneCircle : MonoBehaviour
         {
             playerInCircle?.Invoke(false);
             inCircle = false;
+
+            if (activeRuneCircle == this)
+            {
+                activeRuneCircle = null;
+            }
         }
     }
 
