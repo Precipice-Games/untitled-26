@@ -41,7 +41,8 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         Puzzle,
         Dialogue,
         Paused,
-        Settings
+        Settings,
+        Loading
     }
 
     /// <summary>
@@ -78,6 +79,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
         ExitPuzzleButton.exitPuzzle += TransitionToState;
         UIChangerButton.optionsMenuToggled += TogglePause;
+        SceneChangerButton.queueLoadingScreen += onLoadingScreenTriggered;
     }
     
     private void OnDisable()
@@ -86,6 +88,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SceneManager.activeSceneChanged -= OnActiveSceneChanged;
         ExitPuzzleButton.exitPuzzle -= TransitionToState;
         UIChangerButton.optionsMenuToggled -= TogglePause;
+        SceneChangerButton.queueLoadingScreen -= onLoadingScreenTriggered;
     }
     
     // Runs when a scene is loaded
@@ -165,6 +168,10 @@ public class GameStateManager : MonoSingleton<GameStateManager>
                 TogglePause(false);
                 Time.timeScale = 0.0f;
                 break;
+            case GameState.Loading:
+                TogglePause(false);
+                Time.timeScale = 1.0f;
+                break;
         }
         
         if (printTimescalePausable) Debug.Log($"GameStateManager.cs >> {newState} loaded, time scale set to {Time.timeScale.ToString()} and pausable set to {pausable}.");
@@ -229,6 +236,14 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     public void onPuzzleCompleted()
     {
         TransitionToState(GameState.Exploration);
+    }
+    
+    /// <summary>
+    /// This switches the Player into Puzzle Mode upon the triggering of puzzleSwitchDetected, a UnityEvent defined in ViewManager.cs.
+    /// </summary>
+    public void onLoadingScreenTriggered()
+    {
+        TransitionToState(GameState.Loading);
     }
 
     /// <summary>
