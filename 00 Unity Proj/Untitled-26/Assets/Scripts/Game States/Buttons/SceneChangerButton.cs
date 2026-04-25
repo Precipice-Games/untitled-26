@@ -1,3 +1,4 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,49 +9,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangerButton :  MonoBehaviour
 {
-    public enum SceneDestination
-    {
-        MainMenu,
-        MotherIsland,
-        IceIsland,
-        OasisIsland
-        
-        // Add flower island later
-    }
-    
     [Title("SceneChanger Variables", "Variables related to scene switching.")]
     [PropertyTooltip("The scene to load upon pressing this button.")]
-    public SceneDestination nextDestination = SceneDestination.MotherIsland; // Default is Mother Island
+    public GameManager.SceneDestination nextDestination = GameManager.SceneDestination.MotherIsland; // Default is Mother Island
     
-    // Placeholder string that will store name of next scene
-    private string scene = "scene";
-
-    /// <summary>
-    /// Called by LoadScene(). Returns a string that is the name of the
-    /// next scene to load, based on the value of nextDestination.
-    /// </summary>
-    /// <param name="destination"></param>
-    /// <returns></returns>
-    private string DetermineScene(SceneDestination destination)
-    {
-        switch (destination)
-        {
-            case SceneDestination.MainMenu:
-                scene = "MainMenu";
-                break;
-            case SceneDestination.MotherIsland:
-                scene = "Mother_Island";
-                break;
-            case SceneDestination.IceIsland:
-                scene = "Ice_Island";
-                break;
-            case SceneDestination.OasisIsland:
-                scene = "Oasis_Island";
-                break;
-        }
-        
-        return scene;
-    }
+    // Static event to notify subscribers of game state changes
+    public static event Action queueLoadingScreen;
     
     /// <summary>
     /// Calls DetermineScene() to get the name of the next scene to load.
@@ -58,8 +22,8 @@ public class SceneChangerButton :  MonoBehaviour
     /// </summary>
     public void LoadScene()
     {
-        var nextScene = DetermineScene(nextDestination);
-        GameManager.Instance.TransitionToNextScene(SceneManager.GetActiveScene().name, nextScene);
-        // SceneManager.LoadScene(nextScene);
+        // Inform the game manager of the next scene to load, so that it can set the scene variable accordingly.
+        GameManager.Instance.IncomingScene(nextDestination);
+        queueLoadingScreen?.Invoke();
     }
 }

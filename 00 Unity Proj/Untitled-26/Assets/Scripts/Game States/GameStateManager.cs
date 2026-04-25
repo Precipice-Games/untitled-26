@@ -79,6 +79,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
         ExitPuzzleButton.exitPuzzle += TransitionToState;
         UIChangerButton.optionsMenuToggled += TogglePause;
+        SceneChangerButton.queueLoadingScreen += onLoadingScreenTriggered;
     }
     
     private void OnDisable()
@@ -87,6 +88,7 @@ public class GameStateManager : MonoSingleton<GameStateManager>
         SceneManager.activeSceneChanged -= OnActiveSceneChanged;
         ExitPuzzleButton.exitPuzzle -= TransitionToState;
         UIChangerButton.optionsMenuToggled -= TogglePause;
+        SceneChangerButton.queueLoadingScreen -= onLoadingScreenTriggered;
     }
     
     // Runs when a scene is loaded
@@ -234,6 +236,14 @@ public class GameStateManager : MonoSingleton<GameStateManager>
     public void onPuzzleCompleted()
     {
         TransitionToState(GameState.Exploration);
+    }
+    
+    /// <summary>
+    /// This switches the Player into Puzzle Mode upon the triggering of puzzleSwitchDetected, a UnityEvent defined in ViewManager.cs.
+    /// </summary>
+    public void onLoadingScreenTriggered()
+    {
+        TransitionToState(GameState.Loading);
     }
 
     /// <summary>

@@ -6,69 +6,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityCommunity.UnitySingleton;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 // This is the GameManager. It is a singleton that will persist across scenes.
 
-public class GameManager : MonoBehaviour
+public class GameManager : PersistentMonoSingleton<GameManager>
 {
-    public static GameManager Instance { get; private set; }
-    public GameObject loadingScreen;
-    List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
-    
-    private void Awake()
+    public enum SceneDestination
     {
-        Instance = this;
+        MainMenu,
+        MotherIsland,
+        IceIsland,
+        OasisIsland
+        
+        // Add flower island later
     }
     
-    /// <summary>
-    /// This method takes in the names of the current and next scenes. It unloads the
-    /// current one and asynchronously loads the next one. It activates the loading
-    /// screen transition while this is occuring. 
-    /// </summary>
-    /// <param name="currentScene"></param>
-    /// <param name="nextScene"></param>
-    public void TransitionToNextScene(string currentScene, string nextScene)
-    {
-        StartCoroutine(TransitionRoutine(currentScene, nextScene));
-    }
+    private string scene = "scene name";
 
+    public void IncomingScene(SceneDestination destination)
+    {
+        scene = DetermineScene(destination);
+    }
+    
     /// <summary>
-    /// Ensures the loading screen is present until the next scene is fully loaded.
-    /// Once all scenes are loaded, the loading screen is deactivated.
+    /// Called by LoadScene(). Returns a string that is the name of the
+    /// next scene to load, based on the value of nextDestination.
     /// </summary>
+    /// <param name="destination"></param>
     /// <returns></returns>
-    private IEnumerator TransitionRoutine(string currentScene, string nextScene)
+    private string DetermineScene(SceneDestination destination)
     {
-        // Activate the loading screen transition
-        loadingScreen.SetActive(true);
-        
-        // yield return new WaitForSeconds(3f);
-        
-        // Toggle the loading screen for a few seconds
-        yield return StartCoroutine(DelayTimer());
-        
-        scenesLoading.Add(SceneManager.UnloadSceneAsync(currentScene));
-        scenesLoading.Add(SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Additive));
-
-        yield return StartCoroutine(ToggleLoadingScreen(currentScene, nextScene));
-    }
-    
-    private IEnumerator DelayTimer()
-    {
-        yield return new WaitForSeconds(3f);
-    }
-
-    private IEnumerator ToggleLoadingScreen(string currentScene, string nextScene)
-    {
-        for (int i = 0; i < scenesLoading.Count; i++)
+        switch (destination)
         {
-            while (!scenesLoading[i].isDone)
-            {
-                // totalSceneProgress = 0;
-                yield return null;
-            }
+            case SceneDestination.MainMenu:
+                scene = "MainMenu";
+                break;
+            case SceneDestination.MotherIsland:
+                scene = "Mother_Island";
+                break;
+            case SceneDestination.IceIsland:
+                scene = "Ice_Island";
+                break;
+            case SceneDestination.OasisIsland:
+                scene = "Oasis_Island";
+                break;
         }
         
-        loadingScreen.SetActive(false);
+        return scene;
+    }
+    
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(scene);
     }
 }
