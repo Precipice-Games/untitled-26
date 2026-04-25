@@ -1,12 +1,5 @@
-using System;
-using Sirenix.OdinInspector;
-using UnityEngine;
-using UnityEngine.Events;
-using System.Collections;
-using System.Collections.Generic;
 using UnityCommunity.UnitySingleton;
 using UnityEngine.SceneManagement;
-using UnityEngine.Video;
 
 // This is the GameManager. It is a singleton that will persist across scenes.
 
@@ -22,16 +15,23 @@ public class GameManager : PersistentMonoSingleton<GameManager>
         // Add flower island later
     }
     
+    // Placeholder string
     private string scene = "scene name";
 
+    /// <summary>
+    /// Called by SceneChanger.cs to prep the next scene to load. Once the
+    /// loading screen sequence is complete, the LoadScene() method will
+    /// automatically use this variable.
+    /// </summary>
+    /// <param name="destination"></param>
     public void IncomingScene(SceneDestination destination)
     {
         scene = DetermineScene(destination);
     }
     
     /// <summary>
-    /// Called by LoadScene(). Returns a string that is the name of the
-    /// next scene to load, based on the value of nextDestination.
+    /// Called by IncomingScene(). Returns a string that is the name of
+    /// the next scene to load, based on the value of nextDestination.
     /// </summary>
     /// <param name="destination"></param>
     /// <returns></returns>
@@ -56,6 +56,11 @@ public class GameManager : PersistentMonoSingleton<GameManager>
         return scene;
     }
     
+    /// <summary>
+    /// This method is what's actually called to load the next scene. It is
+    /// triggered by a UnityEvent from the ViewManager once the loading screen
+    /// sequence is complete.
+    /// </summary>
     public void LoadScene()
     {
         SceneManager.LoadScene(scene);
