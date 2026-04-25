@@ -122,6 +122,7 @@ public class RuneCircle : MonoBehaviour
     /// </summary>
     private void TeleportPlayer()
     {
+        Debug.Log("RuneCircle.cs >> Teleporting player to other rune circle.");
         if (player)
         {
             Vector3 otherCirclePosition = otherRuneCircle.position;
