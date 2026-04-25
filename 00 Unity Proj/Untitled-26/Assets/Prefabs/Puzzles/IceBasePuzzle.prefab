@@ -420,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RuneCircle
   puzzleInfo: {fileID: 9191018659038673785}
   exitPuzzleButton: {fileID: 4943596135170749970}
-  otherRuneCircle: {fileID: 2050086839141752138}
+  otherRuneCircle: {fileID: 3624906698350998147}
 --- !u!1 &925581002351369635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RuneCircle
   puzzleInfo: {fileID: 9191018659038673785}
   exitPuzzleButton: {fileID: 4943596135170749970}
-  otherRuneCircle: {fileID: 703785744850392240}
+  otherRuneCircle: {fileID: 7321162161942524934}
 --- !u!1 &2065247099526973384
 GameObject:
   m_ObjectHideFlags: 0
