@@ -1,9 +1,9 @@
 using UnityCommunity.UnitySingleton;
 using UnityEngine.SceneManagement;
 
-// This is the GameManager. It is a singleton that will persist across scenes.
+// This is the GameManager. It is a singleton that is primarily used for handling scene changes.
 
-public class GameManager : PersistentMonoSingleton<GameManager>
+public class GameManager : MonoSingleton<GameManager>
 {
     public enum SceneDestination
     {
@@ -16,7 +16,7 @@ public class GameManager : PersistentMonoSingleton<GameManager>
     }
     
     // Placeholder string
-    private string scene = "scene name";
+    private string scene;
 
     /// <summary>
     /// Called by SceneChanger.cs to prep the next scene to load. Once the
@@ -40,20 +40,16 @@ public class GameManager : PersistentMonoSingleton<GameManager>
         switch (destination)
         {
             case SceneDestination.MainMenu:
-                scene = "MainMenu";
-                break;
+                return "MainMenu";
             case SceneDestination.MotherIsland:
-                scene = "Mother_Island";
-                break;
+                return "Mother_Island";
             case SceneDestination.IceIsland:
-                scene = "Ice_Island";
-                break;
+                return "Ice_Island";
             case SceneDestination.OasisIsland:
-                scene = "Oasis_Island";
-                break;
+                return "Oasis_Island";
+            default:
+                return "MainMenu";
         }
-        
-        return scene;
     }
     
     /// <summary>
