@@ -277,6 +277,7 @@ public class ViewManager : MonoBehaviour
     private void OnLoadingVideoFinished(VideoPlayer vp)
     {
         loadingVideoPlayer.Stop();
+        loadingVideoPlayer.time = 0;
         loadingComplete?.Invoke();
     }
 }
