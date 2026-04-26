@@ -48438,6 +48438,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8014860526984270938, guid: 52fcc2c214e11dd46bc310e39123907a, type: 3}
   m_PrefabInstance: {fileID: 1872272285}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1877256207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7083096844073325273, guid: 8a4743623ff36b94f9f8e976cda3a878, type: 3}
+  m_PrefabInstance: {fileID: 1422275508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1878116211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52821,6 +52832,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1045250814}
+    - target: {fileID: 2326836619177372947, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
+      propertyPath: runner
+      value: 
+      objectReference: {fileID: 1877256207}
     - target: {fileID: 2326836619177372947, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
       propertyPath: finalPuzzle
       value: 

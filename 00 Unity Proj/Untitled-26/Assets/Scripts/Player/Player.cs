@@ -148,4 +148,14 @@ public class Player : MonoSingleton<Player>
             transform.rotation = Quaternion.LookRotation(-Vector3.up);
         }
     }
+    
+    /// <summary>
+    /// Toggles the Player's character controller on and off. This method is public
+    /// to allow other scripts access to this functionality.
+    /// </summary>
+    /// <param name="enabled"></param>
+    public void ToggleCharacterController(bool enabled)
+    {
+        charController.enabled = enabled;
+    }
 }

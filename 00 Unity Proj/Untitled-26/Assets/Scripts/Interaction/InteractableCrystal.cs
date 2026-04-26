@@ -1,25 +1,21 @@
-using System.Dynamic;
-using System.Numerics;
-using System.Runtime.Serialization;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
-using Yarn;
 using Yarn.Unity;
 
 public class InteractableCrystal : MonoBehaviour, IInteractable
 {
+    [Title("Interactable Crystal Variables", "Variables related to the interactable crystal.")]
+    [PropertyTooltip("Please attach the YarnSpinner DialogueRunner component here.")]
+    public DialogueRunner runner;
+    [PropertyTooltip("Please attach the Player game object here.")]
+    public GameObject player;
+    [PropertyTooltip("Where the Player should be teleported to after collecting the crystal.")]
+    public UnityEngine.Vector3 destination;
+    
     [Title("CrystalCollected", "This event is fired when the crystal has been collected.")]
     public UnityEvent crystalCollected;
     private bool finalPuzzleCompleted;
-
-    DialogueRunner runner;
-
-    [SerializeField]
-    GameObject player;
-
-    [SerializeField]
-    UnityEngine.Vector3 destination;
 
     private void FixedUpdate()
     {
@@ -30,8 +26,6 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
         }
     }
 
-   
-
     /// <summary>
     /// Runs when interacting with a collectable crystal. This triggers
     /// crystalCollected and destroys the game object.
@@ -40,8 +34,9 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
     {
         crystalCollected.Invoke();
         Destroy(gameObject);
+        Debug.Log("Player position BEFORE collecting crystal: " + player.transform.position);
         player.transform.position = new UnityEngine.Vector3(destination.x, destination.y, destination.z);
-        runner = FindFirstObjectByType<Yarn.Unity.DialogueRunner>();
+        Debug.Log("Player position AFTER collecting crystal: " + player.transform.position);
         runner.StartDialogue(gameObject.name);
     }
     
