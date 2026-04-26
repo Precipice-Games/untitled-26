@@ -137,9 +137,7 @@ public class RuneCircle : MonoBehaviour
             // Have sky teleport to slightly above rune circle to prevent player from getting stuck in the ground or bouncing.
             Vector3 newPlayerPos = new Vector3(otherCirclePosition.x, otherCirclePosition.y + 1.0f, otherCirclePosition.z);
 
-            player.GetComponent<CharacterController>().enabled = false; // Disable character controller to prevent unwanted physics interactions during teleport.
-            player.transform.position = newPlayerPos;
-            player.GetComponent<CharacterController>().enabled = true; // Re-enable character controller after teleport.
+            Player.Instance.TeleportPlayer(newPlayerPos);
         }
         else
         {
