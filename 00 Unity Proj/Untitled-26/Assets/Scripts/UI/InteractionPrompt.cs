@@ -44,15 +44,33 @@ public class InteractionPrompt : MonoBehaviour
         RuneCircle.playerInCircle -= ToggleRuneCircle;
         Airship.playerOnAirship -= ToggleAirship;
     }
-    
+
+
+    private void Update()
+    {
+        TogglePrompt();
+    }
+
     /// <summary>
     /// Toggles the interaction prompt on and off, 
     /// depending on the state of the raycast or if the player is on a rune circle.
     /// </summary>
-    /// <param name="isEnabled"></param>
-    private void TogglePrompt(bool isEnabled)
+    private void TogglePrompt()
     {
-        interactPromptText.SetActive(isEnabled);
+        if(GameStateManager.CurrentGameState != GameStateManager.GameState.Exploration)
+        {
+            interactPromptText.SetActive(false);
+            return;
+        }
+        
+        if(isRaycastHitting || isInCircle || isOnAirship)
+        {
+            interactPromptText.SetActive(true);
+        }
+        else
+        {
+            interactPromptText.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -63,14 +81,7 @@ public class InteractionPrompt : MonoBehaviour
     private void ToggleRaycast(bool isHitting)
     {
         isRaycastHitting = isHitting;
-        if(isRaycastHitting || isInCircle || isOnAirship)
-        {
-            TogglePrompt(true);
-        }
-        else
-        {
-            TogglePrompt(false);
-        }
+        TogglePrompt();
     }
 
     /// <summary>
@@ -81,14 +92,7 @@ public class InteractionPrompt : MonoBehaviour
     private void ToggleRuneCircle(bool inCircle)
     {
         isInCircle = inCircle;
-        if (isRaycastHitting || isInCircle)
-        {
-            TogglePrompt(true);
-        }
-        else
-        {
-            TogglePrompt(false);
-        }
+        TogglePrompt();
     }
     
     /// <summary>
@@ -100,13 +104,6 @@ public class InteractionPrompt : MonoBehaviour
     private void ToggleAirship(bool onAirship)
     {
         isOnAirship = onAirship;
-        if (isRaycastHitting || isOnAirship)
-        {
-            TogglePrompt(true);
-        }
-        else
-        {
-            TogglePrompt(false);
-        }
+        TogglePrompt();
     }
 }

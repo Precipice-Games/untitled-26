@@ -1297,6 +1297,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 410468428}
+    - target: {fileID: 7507354175440329553, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 1189490651}
     - target: {fileID: 9171193105649543790, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -5041,6 +5045,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 410468428}
+    - target: {fileID: 7507354175440329553, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 1189490651}
     - target: {fileID: 9171193105649543790, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -12725,6 +12733,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 410468428}
+    - target: {fileID: 7507354175440329553, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 1189490651}
     - target: {fileID: 9171193105649543790, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -14296,6 +14308,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 410468428}
+    - target: {fileID: 7507354175440329553, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 1189490651}
     - target: {fileID: 9171193105649543790, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9
@@ -16412,6 +16428,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd77f075d3ae50f43890f44b657a1a52, type: 3}
+--- !u!114 &1298792205 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3432335786353409372, guid: cd77f075d3ae50f43890f44b657a1a52, type: 3}
+  m_PrefabInstance: {fileID: 1298792204}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79bd227f3829b9045953bd09f2ea77da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Deathbox
 --- !u!1001 &1304818189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16668,6 +16695,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 410468428}
+    - target: {fileID: 7507354175440329553, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 1189490651}
     - target: {fileID: 9171193105649543790, guid: 66fec0045d93e224cb830cdf06dfe2bd, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -17684,12 +17715,40 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 497008879434423276, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
     - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1298792205}
+    - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: onPuzzleCompleted
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnPuzzleCompletion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Deathbox, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: puzzleCompleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6739596773503058293, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: interactionUI
