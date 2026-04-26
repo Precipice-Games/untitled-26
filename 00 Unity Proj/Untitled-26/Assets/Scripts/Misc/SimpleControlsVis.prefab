@@ -124,6 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309930466712146553}
   - component: {fileID: 1309930466712146552}
+  - component: {fileID: 3478242273297894708}
   m_Layer: 0
   m_Name: SimpleControlsVis
   m_TagString: Untagged
@@ -175,6 +176,18 @@ MonoBehaviour:
   m_ActionReference: {fileID: -4265220639702670642, guid: 398bff137a68b47458beb240fdd12a92, type: 3}
   m_ActionName: 
   m_ShowControlName: 1
+--- !u!114 &3478242273297894708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309930466712146503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ec69727bee89540bb23322384fe69b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DevBuildGameObject
 --- !u!1 &1309930467610566049
 GameObject:
   m_ObjectHideFlags: 0
