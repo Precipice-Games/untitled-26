@@ -845,6 +845,10 @@ PrefabInstance:
       propertyPath: gridZ
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1262616762910382214, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: Lens.FieldOfView
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1417951208637487081, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.01
@@ -18860,7 +18864,7 @@ Transform:
   m_GameObject: {fileID: 856997828}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.5, y: 0.65, z: 43.3}
+  m_LocalPosition: {x: 21.47, y: 0.78, z: 46.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32403,7 +32407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3397337548393501967, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3397337548393501967, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.y
