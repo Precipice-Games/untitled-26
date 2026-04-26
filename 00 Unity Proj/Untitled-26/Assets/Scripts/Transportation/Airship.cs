@@ -1,30 +1,28 @@
 using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-// This script is used for Skye's airship.
+// This script is used for Skye's airship. The SceneChanger.cs script, which
+// defines the next island, is already attached to the airship prefab. Likewise,
+// we simply need to connect its LoadScene() method to the travelToNextIsland
+// event in the Inspector.
 
 public class Airship : MonoBehaviour, IInteractable
 {
-    public enum Destination
-    {
-        MotherIsland,
-        IceIsland,
-        OasisIsland
-    }
-    
-    [Title("Airship Variables", "Variables related to Skye's Airship.")]
-    [PropertyTooltip("The next island the Player should travel to after completing required tasks.")]
-    public Destination nextDestination = Destination.IceIsland; // Default is Ice Island
-    
     // Tracks if player is standing on the Airship
     private bool onAirship;
 
     // Static event that is invoked when the player boards the Airship
     public static event Action<bool> playerOnAirship;
     
+    // Tracks if the island's objectives have been completed
     private bool islandCompleted;
+    
+    // Invokes the event to trigger the loading screen
+    // and transition to the next island
+    public UnityEvent travelToNextIsland;
 
     // Subscribe to events
     private void OnEnable()
@@ -84,30 +82,16 @@ public class Airship : MonoBehaviour, IInteractable
         Debug.Log("Airship.cs >> Player has interacted with the airship and the island is completed. Teleporting player to next location.");
 
         // Depart to the next destination
-        Depart(nextDestination);
+        Depart();
     }
 
     /// <summary>
-    /// Departs the Player to the next destination based on the value of nextDestination.
-    /// The value of nextDestination is set in the Inspector of the Airship.
+    /// Departs the Player to the next destination via the Unity Inspector. Please ensure the
+    /// island is set correctly on the SceneChanger.cs component of the airship prefab.
     /// </summary>
-    private void Depart(Destination destination)
+    private void Depart()
     {
-        switch (destination)
-        {
-            case Destination.MotherIsland:
-                Debug.Log("Airship.cs >> Now departing to Mother Island...");
-                SceneManager.LoadScene("Mother_Island");
-                break;
-            case Destination.IceIsland:
-                Debug.Log("Airship.cs >> Now departing to Ice Island...");
-                SceneManager.LoadScene("Ice_Island");
-                break;
-            case Destination.OasisIsland:
-                Debug.Log("Airship.cs >> Now departing to Oasis Island...");
-                SceneManager.LoadScene("Oasis_Island");
-                break;
-        }
+        travelToNextIsland?.Invoke();
     }
 
     /// <summary>

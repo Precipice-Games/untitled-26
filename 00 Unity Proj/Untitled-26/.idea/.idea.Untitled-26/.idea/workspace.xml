@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ffe66d8-9c68-4763-886b-583778bee7b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled-26/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Islands/Ice_Island.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Islands/Ice_Island.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGroundcast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGroundcast.cs" afterDir="false" />
-    </list>
+    <list default="true" id="fbef25c7-7cea-4452-bcf0-670b2112a0f8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +9,7 @@
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
-      <entry key="_C:/Users/nikki/untitled-26/00 Unity Proj/Untitled-26" value="3CmTSeXO6mPKNa2Dv8DwNJYJ24n" />
+      <entry key="_C:/Users/nikki/untitled-26/00 Unity Proj/Untitled-26" value="3CrZRyoXHNbGtskqX1YO9HUncDV" />
     </persistenceIdMap>
   </component>
   <component name="DpaMonitoringSettings">
@@ -45,21 +41,21 @@
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="3CmTSeXO6mPKNa2Dv8DwNJYJ24n" />
+  <component name="ProjectId" id="3CrZRyoXHNbGtskqX1YO9HUncDV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Standalone Player.Start Unity.executor": "Run",
-    "git-widget-placeholder": "issue/467-pre-alpha-character-controller-physics",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Standalone Player.Start Unity.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;issue/413-animated-airship-transition-screen&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Desktop/v2.0.4\Isles of Ethor.exe" />
@@ -111,12 +107,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5ffe66d8-9c68-4763-886b-583778bee7b1" name="Changes" comment="" />
-      <created>1776989749753</created>
+      <changelist id="fbef25c7-7cea-4452-bcf0-670b2112a0f8" name="Changes" comment="" />
+      <created>1777145648004</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1776989749753</updated>
-      <workItem from="1776989758192" duration="6453000" />
+      <updated>1777145648004</updated>
+      <workItem from="1777145649271" duration="2672000" />
     </task>
     <servers />
   </component>
@@ -130,23 +126,6 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
-  <component name="Vcs.Log.History.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
       <option value=".github/instructions" />

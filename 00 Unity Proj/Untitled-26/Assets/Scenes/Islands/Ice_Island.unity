@@ -8566,6 +8566,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8014860526984270938, guid: 52fcc2c214e11dd46bc310e39123907a, type: 3}
   m_PrefabInstance: {fileID: 505506971}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &517715128 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5371604339549397331, guid: 013260d1be826df43ada0899ec5eb270, type: 3}
+  m_PrefabInstance: {fileID: 917452374079103061}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64366dc24ef501d40945fcb89965e1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1001 &521346508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35424,6 +35435,10 @@ PrefabInstance:
       propertyPath: dialogueCamera
       value: 
       objectReference: {fileID: 8600581230760321560}
+    - target: {fileID: 1963081915272111325, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: loadingComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 517715128}
     - target: {fileID: 1998142131498758732, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 8.640686
@@ -53399,6 +53414,10 @@ PrefabInstance:
     - target: {fileID: 7083368702670404627, guid: 1745e2c1cf097a14a9e958a9b50a30f6, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156459450556725804, guid: 1745e2c1cf097a14a9e958a9b50a30f6, type: 3}
+      propertyPath: nextDestination
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7159335786355941958, guid: 1745e2c1cf097a14a9e958a9b50a30f6, type: 3}
       propertyPath: m_Layer
