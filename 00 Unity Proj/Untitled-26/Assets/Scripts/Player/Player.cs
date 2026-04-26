@@ -167,7 +167,7 @@ public class Player : MonoSingleton<Player>
     public void TeleportPlayer(Vector3 newPosition)
     {
         charController.enabled = false;
-        transform.position = newPosition;
+        charController.transform.position = newPosition;
         charController.enabled = true;
     }
 }

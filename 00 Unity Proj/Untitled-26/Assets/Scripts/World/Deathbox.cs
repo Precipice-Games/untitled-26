@@ -2,14 +2,28 @@ using UnityEngine;
 
 public class Deathbox : MonoBehaviour
 {
+    public Transform[] respawnLocations;
+    public IslandManager islandManager;
 
-    private void OnCollisionEnter(Collision collision)
+    [SerializeField] private int puzzlesComplete = 0;
+
+    public void OnPuzzleCompletion()
+    {
+        puzzlesComplete++;
+    }
+
+    public void OnCrystalCollect()
+    {
+        puzzlesComplete = 0;
+    }
+
+    private void OnTriggerEnter(Collider other)
     {
         
-        if (collision.gameObject.name == "Player")
+        if (other.CompareTag("Player"))
         {
 
-            collision.gameObject.transform.position = new Vector3(2.79f,1.199f,-9.31f);
+            Player.Instance.TeleportPlayer(respawnLocations[puzzlesComplete].position);
 
         }
 
