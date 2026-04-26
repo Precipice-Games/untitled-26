@@ -158,4 +158,16 @@ public class Player : MonoSingleton<Player>
     {
         charController.enabled = enabled;
     }
+    
+    /// <summary>
+    /// Diables character controller, teleports the player to the new position, and
+    /// then re-enables the character controller.
+    /// </summary>
+    /// <param name="newPosition"></param>
+    public void TeleportPlayer(Vector3 newPosition)
+    {
+        charController.enabled = false;
+        transform.position = newPosition;
+        charController.enabled = true;
+    }
 }

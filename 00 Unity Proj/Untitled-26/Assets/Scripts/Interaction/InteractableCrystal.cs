@@ -35,7 +35,7 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
         crystalCollected.Invoke();
         Destroy(gameObject);
         Debug.Log("Player position BEFORE collecting crystal: " + player.transform.position);
-        player.transform.position = new UnityEngine.Vector3(destination.x, destination.y, destination.z);
+        Player.Instance.TeleportPlayer(destination);
         Debug.Log("Player position AFTER collecting crystal: " + player.transform.position);
         runner.StartDialogue(gameObject.name);
     }
