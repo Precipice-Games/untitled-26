@@ -323,6 +323,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!1 &488615431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8742719022096561527, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+  m_PrefabInstance: {fileID: 1105398379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &488615442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488615431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7ea53b5c9004e31bec423e76b802ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuSFX
 --- !u!1001 &512842614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -385,7 +402,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 200245964896202659, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
   m_PrefabInstance: {fileID: 1105398379}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1392812823}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64a657f4b6f1e3b4984f2f3bd6a10657, type: 3}
@@ -604,6 +621,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &800528116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8443242026214135353, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+  m_PrefabInstance: {fileID: 1105398379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &800528127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800528116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7ea53b5c9004e31bec423e76b802ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuSFX
 --- !u!1 &816375121
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +790,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &818093857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4866700959106552647, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+  m_PrefabInstance: {fileID: 1105398379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &878995557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3167723918570048412, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
@@ -1028,18 +1067,18 @@ PrefabInstance:
     - target: {fileID: 2312555868213762184, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1946899194}
+      objectReference: {fileID: 488615442}
     - target: {fileID: 2312555868213762184, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2312555868213762184, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayMenu
+      value: PlayMenuClick
       objectReference: {fileID: 0}
     - target: {fileID: 2312555868213762184, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SFXManager, Assembly-CSharp
+      value: MenuSFX, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2312555868213762184, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1060,7 +1099,7 @@ PrefabInstance:
     - target: {fileID: 2648262874021780219, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1946899194}
+      objectReference: {fileID: 1796200965}
     - target: {fileID: 2648262874021780219, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -1071,7 +1110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2648262874021780219, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayMenu
+      value: PlayMenuClick
       objectReference: {fileID: 0}
     - target: {fileID: 2648262874021780219, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1079,7 +1118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2648262874021780219, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SFXManager, Assembly-CSharp
+      value: MenuSFX, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2648262874021780219, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1248,7 +1287,7 @@ PrefabInstance:
     - target: {fileID: 4664826133584648976, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1946899194}
+      objectReference: {fileID: 1981289643}
     - target: {fileID: 4664826133584648976, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -1259,11 +1298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4664826133584648976, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayMenu
+      value: PlayMenuClick
       objectReference: {fileID: 0}
     - target: {fileID: 4664826133584648976, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SFXManager, Assembly-CSharp
+      value: MenuSFX, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4664826133584648976, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1332,7 +1371,7 @@ PrefabInstance:
     - target: {fileID: 5751620666508136985, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1946899194}
+      objectReference: {fileID: 1392812833}
     - target: {fileID: 5751620666508136985, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -1343,7 +1382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5751620666508136985, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayMenu
+      value: PlayMenuClick
       objectReference: {fileID: 0}
     - target: {fileID: 5751620666508136985, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1351,7 +1390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5751620666508136985, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SFXManager, Assembly-CSharp
+      value: MenuSFX, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5751620666508136985, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1384,18 +1423,18 @@ PrefabInstance:
     - target: {fileID: 6232997644536601875, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1946899194}
+      objectReference: {fileID: 800528127}
     - target: {fileID: 6232997644536601875, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6232997644536601875, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayMenu
+      value: PlayMenuClick
       objectReference: {fileID: 0}
     - target: {fileID: 6232997644536601875, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SFXManager, Assembly-CSharp
+      value: MenuSFX, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6232997644536601875, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1504,18 +1543,18 @@ PrefabInstance:
     - target: {fileID: 8238990323390452194, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1946899194}
+      objectReference: {fileID: 1930985533}
     - target: {fileID: 8238990323390452194, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8238990323390452194, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayMenu
+      value: PlayMenuClick
       objectReference: {fileID: 0}
     - target: {fileID: 8238990323390452194, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SFXManager, Assembly-CSharp
+      value: MenuSFX, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8238990323390452194, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1568,7 +1607,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8742719022096561527, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 488615442}
+    - targetCorrespondingSourceObject: {fileID: 655934451006499205, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1930985533}
+    - targetCorrespondingSourceObject: {fileID: 4866700959106552647, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1796200965}
+    - targetCorrespondingSourceObject: {fileID: 8443242026214135353, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 800528127}
+    - targetCorrespondingSourceObject: {fileID: 5167348675354726547, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1392812833}
+    - targetCorrespondingSourceObject: {fileID: 3037709581175314593, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1981289643}
   m_SourcePrefab: {fileID: 100100000, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
 --- !u!114 &1105398380 stripped
 MonoBehaviour:
@@ -1586,6 +1643,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5594280990798421712, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
   m_PrefabInstance: {fileID: 1105398379}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1392812823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5167348675354726547, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+  m_PrefabInstance: {fileID: 1105398379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1392812833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392812823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7ea53b5c9004e31bec423e76b802ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuSFX
 --- !u!114 &1412483617 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8838589605978978953, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
@@ -1750,23 +1824,58 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7281942416530627734, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
   m_PrefabInstance: {fileID: 1105398379}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 818093857}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 419e7490795fdd2478f56d3157e8f502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OptionsExitButton
---- !u!114 &1946899194 stripped
+--- !u!114 &1796200965
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1635173186092592187, guid: 5858535fd836441539595eabd4f0bdab, type: 3}
-  m_PrefabInstance: {fileID: 1249080811776681267}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 818093857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3a128f9c5784f2e8bc3dfcc02a5ade, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f7ea53b5c9004e31bec423e76b802ed, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SFXManager
+  m_EditorClassIdentifier: Assembly-CSharp::MenuSFX
+--- !u!1 &1930985522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 655934451006499205, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+  m_PrefabInstance: {fileID: 1105398379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1930985533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930985522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7ea53b5c9004e31bec423e76b802ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuSFX
+--- !u!1 &1981289633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3037709581175314593, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+  m_PrefabInstance: {fileID: 1105398379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1981289643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981289633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7ea53b5c9004e31bec423e76b802ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuSFX
 --- !u!1001 &2043760337
 PrefabInstance:
   m_ObjectHideFlags: 0
