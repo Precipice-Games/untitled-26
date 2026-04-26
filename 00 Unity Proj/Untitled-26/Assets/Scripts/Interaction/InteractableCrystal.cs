@@ -1,6 +1,11 @@
+using System.Dynamic;
+using System.Numerics;
+using System.Runtime.Serialization;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
+using Yarn;
+using Yarn.Unity;
 
 public class InteractableCrystal : MonoBehaviour, IInteractable
 {
@@ -8,14 +13,24 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
     public UnityEvent crystalCollected;
     private bool finalPuzzleCompleted;
 
+    DialogueRunner runner;
+
+    [SerializeField]
+    GameObject player;
+
+    [SerializeField]
+    UnityEngine.Vector3 destination;
+
     private void FixedUpdate()
     {
         // When the final puzzle is completed, ensure it rises up from the ground
         if (finalPuzzleCompleted && this.transform.position.y < 3.2)
         {
-            this.transform.position = new Vector3(transform.position.x, transform.position.y + Time.deltaTime, transform.position.z);
+            this.transform.position = new UnityEngine.Vector3(transform.position.x, transform.position.y + Time.deltaTime, transform.position.z);
         }
     }
+
+   
 
     /// <summary>
     /// Runs when interacting with a collectable crystal. This triggers
@@ -25,6 +40,9 @@ public class InteractableCrystal : MonoBehaviour, IInteractable
     {
         crystalCollected.Invoke();
         Destroy(gameObject);
+        player.transform.position = new UnityEngine.Vector3(destination.x, destination.y, destination.z);
+        runner = FindFirstObjectByType<Yarn.Unity.DialogueRunner>();
+        runner.StartDialogue(gameObject.name);
     }
     
     /// <summary>

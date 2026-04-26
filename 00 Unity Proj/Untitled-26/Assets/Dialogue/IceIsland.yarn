@@ -38,6 +38,10 @@ Judith: Not my problem. #line:06f83db
 Judith: Back already? I knew you were full of it. #line:0b97180 
 <<endonce>>
 <<endif>>
+===
+
+title: SnowCompletionCrystal
+---
 //(After reactivating the crystal, if the player returns to Judith and talks to her)
 <<if $iceFinished == true>>
 <<once>>
