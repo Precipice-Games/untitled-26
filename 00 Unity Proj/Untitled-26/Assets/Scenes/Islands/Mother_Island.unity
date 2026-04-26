@@ -1291,6 +1291,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleControlsVis
       objectReference: {fileID: 0}
+    - target: {fileID: 1309930466712146503, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1309930466712146553, guid: d47a6d369eb262d4c9ace8bac037f99d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.19094
