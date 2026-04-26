@@ -377,8 +377,8 @@ Transform:
   m_GameObject: {fileID: 703785744850392240}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0619988, y: 2.9059558, z: 8.981264}
-  m_LocalScale: {x: 1, y: 35.60784, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 35.60784, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1417951208637487081}
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RuneCircle
   puzzleInfo: {fileID: 9191018659038673785}
   exitPuzzleButton: {fileID: 4943596135170749970}
-  otherRuneCircle: {fileID: 2050086839141752138}
+  otherRuneCircle: {fileID: 3624906698350998147}
 --- !u!1 &925581002351369635
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,8 +973,8 @@ Transform:
   m_GameObject: {fileID: 2050086839141752138}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.03800732, y: 0.90935683, z: -2.5487351}
-  m_LocalScale: {x: 1, y: 7.4776473, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 7.4776473, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6989340596310776149}
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RuneCircle
   puzzleInfo: {fileID: 9191018659038673785}
   exitPuzzleButton: {fileID: 4943596135170749970}
-  otherRuneCircle: {fileID: 703785744850392240}
+  otherRuneCircle: {fileID: 7321162161942524934}
 --- !u!1 &2065247099526973384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,7 +1596,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3796191418792194300}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3661,6 +3661,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f41ce681c722d854fa2b4bf63e4d936b, type: 2}
     - target: {fileID: 919132149155446097, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
       propertyPath: m_Name
       value: Model (1)
@@ -4059,6 +4067,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f41ce681c722d854fa2b4bf63e4d936b, type: 2}
     - target: {fileID: 919132149155446097, guid: dedef1882a78850498d9dc638d6cb5cb, type: 3}
       propertyPath: m_Name
       value: Model
