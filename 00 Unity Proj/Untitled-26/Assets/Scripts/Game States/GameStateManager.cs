@@ -14,10 +14,9 @@ using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoSingleton<GameStateManager>
 {
-    
-    [Title("Game State")]
+
+    [Title("Game State", "Choose the default game state that this scene will load in.")]
     [EnumToggleButtons, HideLabel]
-    [InfoBox("Choose the default game state that this scene will load in.")]
     public GameState gameState;
     // Note: This variable is not static because each instance of the component
     // needs to maintain its own copy of the current game state for reference.

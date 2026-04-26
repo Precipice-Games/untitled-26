@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (currentGameState == GameStateManager.GameState.Exploration)
         {
-            charController.enabled = true;
+            Player.Instance.ToggleCharacterController(true);
             MoveCharacter();
             RotateCharacter();
             JumpAndGravity();
@@ -135,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            charController.enabled = false;
+            Player.Instance.ToggleCharacterController(false);
         }
     }
     
@@ -288,16 +288,5 @@ public class PlayerMovement : MonoBehaviour
         {
             _verticalVelocity += Gravity * Time.deltaTime;
         }
-    }
-
-    /// <summary>
-    /// Diables character controller, teleports the player to the new position, and then re-enables the character controller.
-    /// </summary>
-    /// <param name="newPosition"></param>
-    public void TeleportPlayer(Vector3 newPosition)
-    {
-        charController.enabled = false;
-        transform.position = newPosition;
-        charController.enabled = true;
     }
 }
