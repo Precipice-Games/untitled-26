@@ -6,6 +6,7 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 /// <summary>
 /// Inherits from GameStateManager. 
@@ -24,6 +25,8 @@ public class ViewManager : MonoBehaviour
     public GameObject dialogueUI;
     public GameObject pausedUI;
     public GameObject settingsUI;
+    public GameObject loadingUI;
+    private VideoPlayer loadingVideoPlayer;
     private GameObject _targetUI;
 
     [Space]
@@ -38,6 +41,10 @@ public class ViewManager : MonoBehaviour
     [Space]
     [Title("Puzzle Triggering Event", "Event fired when the Player interacts with an InteractablePillar.")]
     public UnityEvent puzzleSwitchDetected;
+    
+    [Space]
+    [Title("Loading Event", "Event fired when the loading screen animation has played.")]
+    public UnityEvent loadingComplete;
 
     // Static event to notify subscribers of game state changes
     public static event Action<bool> togglePostProcessor;
@@ -86,6 +93,11 @@ public class ViewManager : MonoBehaviour
         if (puzzleUI != null) uiCanvases.Add(puzzleUI);
         if (pausedUI != null) uiCanvases.Add(pausedUI);
         if (dialogueUI != null) uiCanvases.Add(dialogueUI);
+        if (loadingUI != null)
+        {
+            uiCanvases.Add(loadingUI);
+            loadingVideoPlayer = loadingUI.GetComponentInChildren<VideoPlayer>();
+        }
         
         if (printSceneDefaults) Debug.Log($"ViewManager.cs >> Initialized with {uiCanvases.Count} UI Canvases.");
     }
@@ -96,6 +108,7 @@ public class ViewManager : MonoBehaviour
         GameStateManager.transitionedToNewState += HandleViewChange;
         GameStateManager.transitionedToNewState += HandlePostProcessor;
         RuneCircle.puzzleTriggered += UpdatePuzzleInformation;
+        loadingVideoPlayer.loopPointReached += OnLoadingVideoFinished;
     }
     
     // Unsubscribe from events
@@ -104,6 +117,7 @@ public class ViewManager : MonoBehaviour
         GameStateManager.transitionedToNewState -= HandleViewChange;
         GameStateManager.transitionedToNewState -= HandlePostProcessor;
         RuneCircle.puzzleTriggered -= UpdatePuzzleInformation;
+        loadingVideoPlayer.loopPointReached -= OnLoadingVideoFinished;
     }
 
     /// <summary>
@@ -159,6 +173,10 @@ public class ViewManager : MonoBehaviour
                 _targetUI = settingsUI;
                 _targetCamera = menuCamera;
                 break;
+            case GameStateManager.GameState.Loading:
+                _targetUI = loadingUI;
+                _targetCamera = menuCamera;
+                break;
         }
         
         HandleCanvasChange(_targetUI);
@@ -181,12 +199,26 @@ public class ViewManager : MonoBehaviour
                 {
                     canvas.SetActive(true);
                     if (printCanvasUpdate) Debug.Log($"ViewManager.cs >> Enabled UI Canvas: {canvas.name}");
+                    CheckIfLoadingScreen(canvas);
                 }
                 else
                 {
                     canvas.SetActive(false);
                 }
             }
+        }
+    }
+
+    /// <summary>
+    /// If we just switched to the loading screen, ensure that the video is playing.
+    /// </summary>
+    /// <param name="canvas"></param>
+    private void CheckIfLoadingScreen(GameObject canvas)
+    {
+        if (canvas == loadingUI)
+        {
+            Debug.Log("The loading screen is active. Playing loading video...");
+            loadingVideoPlayer.Play();
         }
     }
     
@@ -234,5 +266,18 @@ public class ViewManager : MonoBehaviour
         {
             togglePostProcessor?.Invoke(false);
         }
+    }
+    
+    /// <summary>
+    /// When the loading screen animation is done, stop the video and invoke
+    /// loadingComplete, which is picked up by GameStateManager.cs to transition
+    /// to the next scene.
+    /// </summary>
+    /// <param name="vp"></param>
+    private void OnLoadingVideoFinished(VideoPlayer vp)
+    {
+        loadingVideoPlayer.Stop();
+        loadingVideoPlayer.time = 0;
+        loadingComplete?.Invoke();
     }
 }

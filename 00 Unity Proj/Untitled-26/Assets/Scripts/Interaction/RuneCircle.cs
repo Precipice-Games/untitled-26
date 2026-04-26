@@ -12,7 +12,7 @@ public class RuneCircle : MonoBehaviour
     /// The transform of the other rune circle that the player will be teleported to when they interact with this rune circle after completing the puzzle. 
     /// This is used in the TeleportPlayer() method.
     /// </summary>
-    public GameObject otherRuneCircle;
+    public Transform otherRuneCircle;
 
     /// <summary>
     /// Tracks if player is standing on an active rune circle.
@@ -20,6 +20,7 @@ public class RuneCircle : MonoBehaviour
     private bool inCircle;
     private GameObject player;
 
+    public static RuneCircle activeRuneCircle;
 
     // An event that is invoked when the player stands on the rune circle
     public static event Action<bool> playerInCircle;
@@ -52,6 +53,8 @@ public class RuneCircle : MonoBehaviour
             playerInCircle?.Invoke(true);
             inCircle = true;
             player = other.gameObject;
+
+            activeRuneCircle = this;
         }
     }
 
@@ -67,6 +70,11 @@ public class RuneCircle : MonoBehaviour
         {
             playerInCircle?.Invoke(false);
             inCircle = false;
+
+            if (activeRuneCircle == this)
+            {
+                activeRuneCircle = null;
+            }
         }
     }
 
@@ -122,11 +130,16 @@ public class RuneCircle : MonoBehaviour
     /// </summary>
     private void TeleportPlayer()
     {
+        Debug.Log("RuneCircle.cs >> Teleporting player to other rune circle.");
         if (player)
         {
-            Vector3 otherCirclePosition = otherRuneCircle.transform.position;
+            Vector3 otherCirclePosition = otherRuneCircle.position;
             // Have sky teleport to slightly above rune circle to prevent player from getting stuck in the ground or bouncing.
-            player.transform.position = new Vector3(otherCirclePosition.x, otherCirclePosition.y + 1.0f, otherCirclePosition.z);
+            Vector3 newPlayerPos = new Vector3(otherCirclePosition.x, otherCirclePosition.y + 1.0f, otherCirclePosition.z);
+
+            player.GetComponent<CharacterController>().enabled = false; // Disable character controller to prevent unwanted physics interactions during teleport.
+            player.transform.position = newPlayerPos;
+            player.GetComponent<CharacterController>().enabled = true; // Re-enable character controller after teleport.
         }
         else
         {

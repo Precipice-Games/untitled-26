@@ -3,6 +3,7 @@ using UnityEngine;
 public class OasisTexturing : DynamicTileTexturing
 {
     public Material manaWellTexture;
+    public Material iceTexture;
     
     protected override void AssignTileTexture(SelectableTile.TileType tileType)
     {
@@ -12,6 +13,11 @@ public class OasisTexturing : DynamicTileTexturing
         if (tileType == SelectableTile.TileType.ManaWell)
         {
             tileRenderer.material = manaWellTexture;
+        }
+        
+        if (tileType == SelectableTile.TileType.Ice)
+        {
+            tileRenderer.material = iceTexture;
         }
     }
 }

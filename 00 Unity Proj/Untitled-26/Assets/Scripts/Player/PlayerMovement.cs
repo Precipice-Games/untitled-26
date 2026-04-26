@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (currentGameState == GameStateManager.GameState.Exploration)
         {
-            charController.enabled = true;
+            Player.Instance.ToggleCharacterController(true);
             MoveCharacter();
             RotateCharacter();
             JumpAndGravity();
@@ -135,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            charController.enabled = false;
+            Player.Instance.ToggleCharacterController(false);
         }
     }
     

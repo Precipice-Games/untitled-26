@@ -148,4 +148,26 @@ public class Player : MonoSingleton<Player>
             transform.rotation = Quaternion.LookRotation(-Vector3.up);
         }
     }
+    
+    /// <summary>
+    /// Toggles the Player's character controller on and off. This method is public
+    /// to allow other scripts access to this functionality.
+    /// </summary>
+    /// <param name="enabled"></param>
+    public void ToggleCharacterController(bool enabled)
+    {
+        charController.enabled = enabled;
+    }
+    
+    /// <summary>
+    /// Diables character controller, teleports the player to the new position, and
+    /// then re-enables the character controller.
+    /// </summary>
+    /// <param name="newPosition"></param>
+    public void TeleportPlayer(Vector3 newPosition)
+    {
+        charController.enabled = false;
+        transform.position = newPosition;
+        charController.enabled = true;
+    }
 }
