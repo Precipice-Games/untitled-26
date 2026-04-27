@@ -325,6 +325,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -3957782524123411102, guid: 84a2efad5a4897447a287122cef1c0ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2003780125}
+    - targetCorrespondingSourceObject: {fileID: 5090062054982439474, guid: 84a2efad5a4897447a287122cef1c0ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1448871293}
     - targetCorrespondingSourceObject: {fileID: -7367559088687387456, guid: 84a2efad5a4897447a287122cef1c0ce, type: 3}
       insertIndex: -1
       addedObject: {fileID: 128291831}
@@ -930,6 +933,7 @@ PrefabInstance:
     - target: {fileID: 8238990323390452194, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 0}
       objectReference: {fileID: 238665720}
     - target: {fileID: 8238990323390452194, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -1322,6 +1326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleCheatSign
       objectReference: {fileID: 0}
+    - target: {fileID: 5785528264533770188, guid: 690b6fb0a7864c84192e54b90ed456ca, type: 3}
+      propertyPath: collectableCrystal
+      value: 
+      objectReference: {fileID: 1921092246}
     - target: {fileID: 5785528264533770188, guid: 690b6fb0a7864c84192e54b90ed456ca, type: 3}
       propertyPath: islandPuzzleManager
       value: 
@@ -3328,7 +3336,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2326836619177372947, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
   m_PrefabInstance: {fileID: 1921092245}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1921092246}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8618e9cc617733409d8d1c3d5b6565d, type: 3}
@@ -3800,12 +3808,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &1594011200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1217030297075129771, guid: 84a2efad5a4897447a287122cef1c0ce, type: 3}
+  m_PrefabInstance: {fileID: 101902869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1594011204
+MeshCollider:
 --- !u!1 &1771799368
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594011200}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6239469015914299103, guid: 84a2efad5a4897447a287122cef1c0ce, type: 3}
+--- !u!4 &1758873590 stripped
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1771799369}
@@ -4195,6 +4227,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
+--- !u!1 &1921092246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4445865944655362573, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
+  m_PrefabInstance: {fileID: 1921092245}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1930578499
 GameObject:
   m_ObjectHideFlags: 0
