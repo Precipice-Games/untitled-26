@@ -1,53 +1,16 @@
 using UnityEngine;
 
-public class InteractableDoor : MonoBehaviour, IInteractable
+public class InteractableDoor : MonoBehaviour
 {
 
-    //   ==== Interaction Variables ====
-    bool interactedWith = false;
+    public Vector3 teleportLocation;
 
-    //   ==== Object Variables ====
-    float wallSize;
-
-
-    /*
-     * 
-     * Assigns the vertical size of the object to wall size
-     * 
-     */
-
-    private void Start()
+    private void OnTriggerEnter(Collider other)
     {
-
-        wallSize = GetComponent<Collider>().bounds.size.y;
-
-    }
-
-    /*
-     * 
-     * if the object has been interacted with and the wall hasn't
-     * moved down enough to hide the wall. The position of the wall
-     * lowers by 10 units times deltaTime (to normalize movement across
-     * framerates)
-     * 
-     */
-
-    private void FixedUpdate()
-    {
-        
-        if (interactedWith && transform.position.y > -wallSize)
+        if(other.CompareTag("Player"))
         {
-
-            transform.position = new Vector3(transform.position.x,transform.position.y - (10 * Time.deltaTime),transform.position.z);
-
+            Player.Instance.TeleportPlayer(teleportLocation);
         }
-
     }
 
-    public void Interaction()
-    {
-
-        interactedWith = true;
-
-    }
 }
