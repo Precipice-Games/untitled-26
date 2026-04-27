@@ -7,6 +7,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Put any unreleased features here.
 
+## [v2.1.1] - 2026-04-27
+
+### Added
+* Added black overlay for cutscene at the start of Mother Island.
+* Added teleportation to the Oasis Island (after collecting crystal).
+* Added walking and jumping animations to Skye.
+* Added running trail at the end of Skye's walking animation.
+* Added death box to Mother Island and Oasis Island.
+
+### Fixed
+* Fixed a bug where Skye was sometimes underneath the puzzle tiles.
+
+### Changed
+* Finalized Mother Island puzzles.
+* Updated puzzle cheat sign to encompass crystal collection.
+* Finalized UI SFX for alpha release.
+* Improved "normal" tile texturing for greater visibility.
+* Updated the positioning of the Ice Island collectable crystal.
+
 ## [v2.1.0] - 2026-04-26
 
 ### Added
