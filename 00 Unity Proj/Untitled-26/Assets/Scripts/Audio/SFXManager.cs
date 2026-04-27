@@ -27,6 +27,7 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private AudioClip puzzleResetSFX;
     [SerializeField] private AudioClip runeCircleSFX;
     [SerializeField] private AudioClip menuSFX;
+    [SerializeField] private AudioClip exitButtonSFX;
 
     private bool suppressNextCardClick = false;
 
@@ -84,6 +85,10 @@ public class SFXManager : MonoBehaviour
         PlayClip(menuSFX);
     }
     
+    public void PlayExitButton()
+    {
+        PlayClip(exitButtonSFX);
+    }
     private void OnPuzzleReset()
     {
         PlayClip(puzzleResetSFX);

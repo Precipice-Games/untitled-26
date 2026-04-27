@@ -9,4 +9,12 @@ public class MenuSFX : MonoBehaviour
             SFXManager.Instance.PlayMenu();
         }
     }
+
+    public void PlayExitButton()
+    {
+        if (SFXManager.Instance != null)
+        {
+            SFXManager.Instance.PlayExitButton();
+        }
+    }
 }
