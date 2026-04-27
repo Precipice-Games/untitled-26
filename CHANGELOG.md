@@ -7,6 +7,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Put any unreleased features here.
 
+## [v2.0.3] - 2026-04-26
+
+### Added
+* Implemented airship model on all islands.
+     * Created an airship walkway in Unity to help the Player board the ship.
+* Created three new unpacked prefabs out of Oasis Island .fbx models (made by @Samisushi).
+* Added animated sprites to Oasis Island NPCs.
+
+### Fixed
+* Fixed a bug where Judith was floating in the air at the top of the mountain on Ice Island.
+* Fixed a bug where the Player could not jump due to the changes introduced by the new CharacterController system.
+* Fixed a bug where the Player could not "board" the airship due to ground checking bugs.
+
+### Changed
+* Completed airship connection between Mother, Ice, and Oasis Islands.
+* Finalized Ice Island dialogue for Judith.
+* Updated metadata of all build profiles to contain correct icon, title, and company.
+* Updated some of Puzzle 2 on Oasis Island (WIP).
+* Updated Oasis Island positioning with respect to the world origin.
+* Adjusted dialogue box to be slightly transparent (by 10%).
+* Corrected build order to load Mother Island as the first island.
+* Refactored SceneChangerButton.cs with serialized Enum for clearer and safer manipulation in the Inspector.
+* Disabled the BoxCollider component on the Player.prefab.
+
 ## [v2.0.2] - 2026-04-20
 
 ### Added
