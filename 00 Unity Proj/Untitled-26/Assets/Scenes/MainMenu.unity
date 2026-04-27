@@ -2017,6 +2017,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1635173186092592187, guid: 5858535fd836441539595eabd4f0bdab, type: 3}
+      propertyPath: exitButtonSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 21e631d0474fd4925a924a9a056da767, type: 3}
     - target: {fileID: 3041187211409281293, guid: 5858535fd836441539595eabd4f0bdab, type: 3}
       propertyPath: m_Name
       value: SFXManager
