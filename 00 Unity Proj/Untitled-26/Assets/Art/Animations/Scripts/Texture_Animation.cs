@@ -40,9 +40,9 @@ public class Texture_Animation : MonoBehaviour
     void FixedUpdate()
     {
 
-        Debug.Log(transform.parent.GetComponent<CharacterController>().velocity);
+        // Debug.Log(transform.parent.GetComponent<CharacterController>().velocity);
 
-        Debug.Log(transform.parent.GetComponent<CharacterController>().velocity);
+        // Debug.Log(transform.parent.GetComponent<CharacterController>().velocity);
 
         if (transform.parent.GetComponent<CharacterController>().velocity.x != 0 || transform.parent.GetComponent<CharacterController>().velocity.z != 0)
         {
@@ -126,6 +126,5 @@ public class Texture_Animation : MonoBehaviour
                 _frameCounter = 0;
             }
         }
-
     }
 }

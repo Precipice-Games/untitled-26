@@ -10,6 +10,7 @@ using UnityEngine;
 public class PuzzleCheatSign : MonoBehaviour, IInteractable
 {
     private List<GameObject> puzzles;
+    public GameObject collectableCrystal;
     public IslandPuzzleManager islandPuzzleManager;
     
     public static event Action allPuzzlesComplete;
@@ -23,10 +24,11 @@ public class PuzzleCheatSign : MonoBehaviour, IInteractable
     public void Interaction()
     {
         MarkAllPuzzlesComplete();
+        MarkCrystalCollected();
     }
     
     /// <summary>
-    /// Used to check if all puzzles on the island have been completed.
+    /// Used to automatically mark all the puzzles as completed.
     /// </summary>
     private void MarkAllPuzzlesComplete()
     {
@@ -39,5 +41,15 @@ public class PuzzleCheatSign : MonoBehaviour, IInteractable
         }
         
         allPuzzlesComplete?.Invoke();
+    }
+    
+    /// <summary>
+    /// Used to automatically collect the crystal.
+    /// </summary>
+    private void MarkCrystalCollected()
+    {
+        Debug.Log("PuzzleCheatSign.cs >> Message received. Marking the crystal as collected.");
+        
+        collectableCrystal.GetComponent<IInteractable>().Interaction();
     }
 }
