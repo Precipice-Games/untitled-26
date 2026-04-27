@@ -4,6 +4,7 @@ position: 138,-50
 //1 - Initiate dream sequence
 
 //*black screen, text fades in, mother crystal starts to fade in very slowly during the exposition*
+<<once>>
 <<Swap Intro1>>
 
 Mother Crystal:“Child of the sky…” #line:05c319b 
@@ -41,7 +42,8 @@ Sky: “I don’t know what that was, but it all felt so… real.” #line:00d6c
 
 Sky: “Dad’s already out fixing an airship, as usual. Maybe he knows what that was.” #line:0f045dd 
 <<StopCutscene>>
-<b>Talk to Dad at the dock</b> #line:0f57e37 
+<b>Talk to Dad at the dock</b> #line:0f57e37
+<<endonce>> 
 ===
 
 title: Cumulus
