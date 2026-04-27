@@ -37,6 +37,7 @@ public class RunningEffect : MonoBehaviour
             {
 
                 playerRunningParticles.enabled = false;
+                _particleSystems.Clear();
 
             }
 
