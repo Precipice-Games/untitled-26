@@ -1003,6 +1003,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8432566110260535080, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 60.91748
+      objectReference: {fileID: 0}
     - target: {fileID: 9210433506073123366, guid: 1a8a3316ab81bd84499b9ca3304d85a2, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -2630,8 +2634,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 54.8799, y: 1.7007, z: 110.5917}
-  m_Center: {x: -39.18118, y: -153.65, z: 18.3087}
+  m_Size: {x: 54.879906, y: 1.7007141, z: 166.97644}
+  m_Center: {x: -39.18118, y: -153.65, z: 190.08414}
 --- !u!1 &1093906636
 GameObject:
   m_ObjectHideFlags: 0
@@ -5678,7 +5682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5556794971271523548, guid: 6eabaf5c0997b8f4bab5793606edd47f, type: 3}
       propertyPath: teleportLocation.z
-      value: 136
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 5941962247164917335, guid: 6eabaf5c0997b8f4bab5793606edd47f, type: 3}
       propertyPath: m_Name
