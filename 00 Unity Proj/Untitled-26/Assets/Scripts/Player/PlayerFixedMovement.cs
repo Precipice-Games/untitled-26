@@ -63,6 +63,7 @@ public class PlayerFixedMovement : MonoBehaviour
     // The new coordinates as a Vector3
     Vector3 newCoords;
     Vector3 newPosition;
+    Vector3 newYAxis;
 
     // Player's Rigidbody
     private Rigidbody rb;
@@ -147,6 +148,7 @@ public class PlayerFixedMovement : MonoBehaviour
         destinationZ = 0;
 
         // After gathering data, move Player to the startTile
+        SetPlayersYPosition(startTile);
         MovePlayerToStartTile(startTileX, startTileZ);
     }
 
@@ -368,6 +370,18 @@ public class PlayerFixedMovement : MonoBehaviour
         Debug.Log($"PlayerFixedMovement.cs >> newDeltaX/Z Coordinates: ({newDeltaX},{newDeltaZ})");
 
         TryToMovePlayer(newDeltaX, newDeltaZ);
+    }
+    
+    /// <summary>
+    /// Adjust the Player's Y position to be slightly above the tile's Y position.
+    /// This is used to prevent the Player from being below the tile.
+    /// </summary>
+    /// <param name="start"></param>
+    public void SetPlayersYPosition(GameObject start)
+    {
+        float newY = start.transform.position.y + 0.05f; // Adjust the Y offset as needed
+        newYAxis = new Vector3(transform.position.x, newY, transform.position.z);
+        transform.position = newYAxis;
     }
     
     /// <summary>
