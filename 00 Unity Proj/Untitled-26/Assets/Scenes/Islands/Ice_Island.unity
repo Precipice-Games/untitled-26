@@ -1557,6 +1557,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6254262242247927432, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ba3eb3c5b3d422c4a8455c2c2053758e, type: 2}
     - target: {fileID: 6709136814799094051, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: printAttemptedTileType
       value: 1
@@ -1749,6 +1753,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[42].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8045932170634026460, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8187192523355673034, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1757,11 +1765,22 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: cc8764a78abe00447b9298d11d64302a, type: 2}
+    - target: {fileID: 8907957234283475963, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 746386416, guid: 4aa6755bc7ec6324691ea3b5d5372a8f, type: 3}
+    - target: {fileID: 8907957234283475963, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8155853496490942509, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1468164701}
   m_SourcePrefab: {fileID: 100100000, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
 --- !u!114 &74840993 stripped
 MonoBehaviour:
@@ -18218,6 +18237,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7731902916217042395, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.56
+      objectReference: {fileID: 0}
+    - target: {fileID: -7731902916217042395, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -21.56
+      objectReference: {fileID: 0}
+    - target: {fileID: -7731902916217042395, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.02
+      objectReference: {fileID: 0}
     - target: {fileID: -3291061267519868054, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -20443,15 +20474,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.427121
+      value: 10.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.019706
+      value: 9.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.8954
+      value: 17.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33423,6 +33454,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456490987}
   m_Mesh: {fileID: -6209912238109660980, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
+--- !u!1 &1468164697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8155853496490942509, guid: 54c3cae06d7e2984c907b8af2732c354, type: 3}
+  m_PrefabInstance: {fileID: 74840992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1468164701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468164697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a86d7c7a2181931499082ac2ff726fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RunningEffect
+  playerAnimations: {fileID: 0}
+  _particleSystems: {fileID: 0}
 --- !u!1001 &1479567133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33680,7 +33730,7 @@ Transform:
   m_GameObject: {fileID: 1497618263}
   serializedVersion: 2
   m_LocalRotation: {x: -0.07557646, y: 0.93381304, z: -0.06391998, w: 0.34379587}
-  m_LocalPosition: {x: 6.05, y: -9.51, z: 106.34}
+  m_LocalPosition: {x: 2.87, y: -8.85, z: 111.94}
   m_LocalScale: {x: 6.115856, y: 1.5063831, z: 6.115856}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42799,15 +42849,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.371304
+      value: -16.91
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.284084
+      value: 12.22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 38.34722
+      value: 38.74
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -53446,15 +53496,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5209971646417024022, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.72
+      value: 55.61
       objectReference: {fileID: 0}
     - target: {fileID: 5209971646417024022, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: 5209971646417024022, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.99
+      value: 124.13
       objectReference: {fileID: 0}
     - target: {fileID: 5209971646417024022, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -53494,12 +53544,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2326836619177372947, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
   m_PrefabInstance: {fileID: 3940666611359535348}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3940666611359535350}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8618e9cc617733409d8d1c3d5b6565d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableCrystal
+--- !u!1 &3940666611359535350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4445865944655362573, guid: fee1dd395f6065b4183aec3d2788d1cf, type: 3}
+  m_PrefabInstance: {fileID: 3940666611359535348}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4029354900766978087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56032,6 +56087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleCheatSign
       objectReference: {fileID: 0}
+    - target: {fileID: 5785528264533770188, guid: 690b6fb0a7864c84192e54b90ed456ca, type: 3}
+      propertyPath: collectableCrystal
+      value: 
+      objectReference: {fileID: 3940666611359535350}
     - target: {fileID: 5785528264533770188, guid: 690b6fb0a7864c84192e54b90ed456ca, type: 3}
       propertyPath: islandPuzzleManager
       value: 
