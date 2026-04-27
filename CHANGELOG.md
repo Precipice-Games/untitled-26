@@ -7,6 +7,44 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 * Put any unreleased features here.
 
+## [v2.1.0] - 2026-04-26
+
+### Added
+* Implemented airship loading screen between all scene transitions (animation by @fwooley).
+* Added all finalized puzzles to Oasis Island.
+* Created dynamic respawning system for death boxes.
+     * Implemented death boxes on Ice Island.
+* Created FlowerBasePuzzle.prefab (not yet implemented).
+* Added two public helper methods in Player.cs for toggling the CharacterController and teleporting the Player to a Vector3 location.
+* Created GameManager.cs, which is currently in use for overarching scene changes.
+* Imported enhanced skyboxes for Mother, Ice, and Oasis (made by @fwooley).
+* Created "normal" tile type textures for Mother and Oasis.
+
+### Fixed
+* Restored jumping and ground checking functionality to the Player.
+* Fixed a card usage bug where the backend logic was checking starting values rather than current values.
+* Fixed a bug regarding event chaining for rune circle teleportation.
+* Resolved a series of NullReferenceException errors with the audio sliders.
+* Fixed button positioning in the UI.
+* Fixed a bug where clicking the "Main Menu" button on the Mother Island would just restart the Mother Island scene.
+* Fixed a bug where the "Resume" button on Oasis Island would transition you to the wrong state.
+
+### Changed
+* SceneChangerButton.cs is now SceneChanger.cs for greater availability to other classes.
+     * Also, the class now contains the new queueLoadingScreen event, which is what drives the airship transition.
+* Updated ViewManager.cs to notify GameManager.cs of when to switch scenes (animation completed).
+* Player now teleports to start of Ice Island upon crystal collection (need this for other islands).
+* Improved toggling of interaction prompt based on game states.
+* Increased underlay of interaction prompt text for enhanced visual accessibility.
+* Updated UI typography with new "Iosevka" font face.
+* Dynamic tile texturing system has been expanded into sub-classes that suit each island's prefab.
+* Updated puzzle UI with new assets.
+* Moved puzzle UI to the righthand side of the screen instead of the bottom.
+* Updated Mother Island model with finalized texture (made by @torialle).
+* Updated rune circle appearance for greater contrast and visibility in the scene.
+* Organized scene hierarchy of Ice, Oasis, and Mother islands.
+* Updated Player.prefab groundcasting data.
+
 ## [v2.0.3] - 2026-04-26
 
 ### Added
