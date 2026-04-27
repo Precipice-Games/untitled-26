@@ -42,6 +42,8 @@ public class Texture_Animation : MonoBehaviour
 
         Debug.Log(transform.parent.GetComponent<CharacterController>().velocity);
 
+        Debug.Log(transform.parent.GetComponent<CharacterController>().velocity);
+
         if (transform.parent.GetComponent<CharacterController>().velocity.x != 0 || transform.parent.GetComponent<CharacterController>().velocity.z != 0)
         {
 
@@ -53,7 +55,7 @@ public class Texture_Animation : MonoBehaviour
             _isRunning = false;
         }
 
-        if (Math.Abs(transform.parent.GetComponent<CharacterController>().velocity.y) >= 0.2)
+        if (Math.Abs(transform.parent.GetComponent<CharacterController>().velocity.y) >= 1.75)
         {
             _isJumping = true;
         }
