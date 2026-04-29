@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 /// <summary>
 /// This script stores data regarding the resources provided during each puzzle.
@@ -12,8 +13,8 @@ using TMPro;
 /// </summary>
 public class ResourceManager : MonoBehaviour
 {
-    public static event Action noMoreCardUses;
-
+    public static event Action<PuzzleInformation, string> noCardUsagesLeft;
+    
     [Title("Resource Data", "Set the appropriate Mana and Move Card count for this puzzle.")]
     [PropertyTooltip("The starting Mana count. Set to 5 by default, but should be updated per puzzle.")]
     public int startingMana = 5;
@@ -112,7 +113,9 @@ public class ResourceManager : MonoBehaviour
         {
             Debug.Log("ResourceManager.cs >> No mana to move.");
             // PuzzleFeedback.Instance?.ShowMessage("No more mana!");
-            puzzleFeedback.ShowMessage("No more mana!");
+            string message = "No more mana!";
+            // puzzleFeedback.ShowMessage("No more mana!");
+            noCardUsagesLeft?.Invoke(GetComponentInParent<PuzzleInformation>(), message);
             return false;
         }
 
@@ -124,9 +127,9 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Left card uses remaining");
 
-                    // PuzzleFeedback.Instance?.ShowMessage("No more Left card usages!");
-                    puzzleFeedback.ShowMessage("No more Left card usages!");
-                    noMoreCardUses?.Invoke();
+                    string message = "No more Left card usages!";
+                    // puzzleFeedback.ShowMessage("No more Left card usages!");
+                    noCardUsagesLeft?.Invoke(GetComponentInParent<PuzzleInformation>(), message);
                     return false;
                 }
 
@@ -140,9 +143,9 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Right card uses remaining");
 
-                    // PuzzleFeedback.Instance?.ShowMessage("No more Right card usages!");
-                    puzzleFeedback.ShowMessage("No more Right card usages!");
-                    noMoreCardUses?.Invoke();
+                    string message = "No more Right card usages!";
+                    // puzzleFeedback.ShowMessage("No more Right card usages!");
+                    noCardUsagesLeft?.Invoke(GetComponentInParent<PuzzleInformation>(), message);
                     return false;
                 }
 
@@ -156,9 +159,9 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Forward card uses remaining");
 
-                    // PuzzleFeedback.Instance?.ShowMessage("No more Forward card usages!");
-                    puzzleFeedback.ShowMessage("No more Forward card usages!");
-                    noMoreCardUses?.Invoke();
+                    string message = "No more Forward card usages!";
+                    // puzzleFeedback.ShowMessage("No more Forward card usages!");
+                    noCardUsagesLeft?.Invoke(GetComponentInParent<PuzzleInformation>(), message);
                     return false;
                 }
 
@@ -172,9 +175,9 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Back card uses remaining");
 
-                    // PuzzleFeedback.Instance?.ShowMessage("No more Back card usages!");
-                    puzzleFeedback.ShowMessage("No more Back card usages!");
-                    noMoreCardUses?.Invoke();
+                    string message = "No more Back card usages!";
+                    // puzzleFeedback.ShowMessage("No more Back card usages!");
+                    noCardUsagesLeft?.Invoke(GetComponentInParent<PuzzleInformation>(), message);
                     return false;
                 }
 

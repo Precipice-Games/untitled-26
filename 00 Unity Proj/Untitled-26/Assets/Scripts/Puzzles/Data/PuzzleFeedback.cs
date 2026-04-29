@@ -22,6 +22,8 @@ public class PuzzleFeedback : MonoBehaviour
 
     private bool isFlashing = false;
     
+    private PuzzleInformation puzzleInfo;
+    
     // Intervals used to determine when to flash the tile's color during the timer
     // Flash intervals
     private float errorLastIntervalTime = 0f;
@@ -39,6 +41,9 @@ public class PuzzleFeedback : MonoBehaviour
         // Get reference to the text component
         messageText = feedbackText.GetComponent<TMP_Text>();
         
+        // Identify what puzzle this script belongs to
+        puzzleInfo = GetComponentInParent<PuzzleInformation>();
+        
         // Hide popup text at start
         feedbackText.SetActive(false);
     }
@@ -48,7 +53,7 @@ public class PuzzleFeedback : MonoBehaviour
     {
         SelectableTile.cellOccupied += CellIsOccupied;
         SelectableTile.moveOutOfBounds += MoveIsOutOfBounds;
-        ResourceManager.noMoreCardUses += NoMoreCardUses;
+        ResourceManager.noCardUsagesLeft += NoMoreCardUses;
     }
     
     // Unsubscribe from events
@@ -56,7 +61,6 @@ public class PuzzleFeedback : MonoBehaviour
     {
         SelectableTile.cellOccupied -= CellIsOccupied;
         SelectableTile.moveOutOfBounds -= MoveIsOutOfBounds;
-        ResourceManager.noMoreCardUses -= NoMoreCardUses;
     }
 
     private void CellIsOccupied(SelectableTile selectableTile)
@@ -72,8 +76,9 @@ public class PuzzleFeedback : MonoBehaviour
     /// <summary>
     /// NEW: Triggered when player has no more card usages left
     /// </summary>
-    private void NoMoreCardUses()
+    private void NoMoreCardUses(PuzzleInformation puzzleInfo, string message)
     {
+        if ()
         StartFeedback(null, "No more card usages!");
     }
 
