@@ -125,11 +125,11 @@ public class PuzzleFeedback : MonoBehaviour
     /// <param name="message"></param>
     private void StartFeedback(SelectableTile selectableTile, string message)
     {
+        // If there is a tile, grab it. If not, set it to null.
         tile = selectableTile;
-
         tileRenderer = tile != null ? tile.GetComponent<Renderer>() : null;
 
-        // Store original color to reset to later
+        // Store tile's original color to reset to later
         if (tileRenderer != null) originalColor = tileRenderer.material.color;
 
         // Reset interval timing every time an error happens
@@ -162,7 +162,7 @@ public class PuzzleFeedback : MonoBehaviour
     {
         if (printTimerInfo) Debug.Log("PuzzleFeedback.cs >> Timer finished!");
 
-        // Reset tile color
+        // If there is a tile, reset its color
         if (tileRenderer != null) tileRenderer.material.color = originalColor;
         
         // Disable popup text

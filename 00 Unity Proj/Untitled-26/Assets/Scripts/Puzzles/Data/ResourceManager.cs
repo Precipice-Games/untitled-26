@@ -1,7 +1,5 @@
-using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
 
@@ -13,6 +11,7 @@ using UnityEngine.Events;
 /// </summary>
 public class ResourceManager : MonoBehaviour
 {
+    [Title("No Card Usages", "This event is fired when the Player tries to use a movement card without any usages.")]
     public UnityEvent<string> noCardUsagesLeft;
     
     [Title("Resource Data", "Set the appropriate Mana and Move Card count for this puzzle.")]
