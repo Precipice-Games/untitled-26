@@ -37,7 +37,9 @@ public class ResourceManager : MonoBehaviour
     private int currentBackUses;
 
     [Space]
-    [Title("UI Data", "Attach the UI elements for this puzzle's resources.")]
+    [Title("UI Data", "Attach the UI elements for this puzzle.")]
+    [PropertyTooltip("Game object that holds the PuzzleFeedback script.")]
+    public PuzzleFeedback puzzleFeedback;
     public TMP_Text manaLabel;
     public TMP_Text leftLabel;
     public TMP_Text rightLabel;
@@ -72,6 +74,11 @@ public class ResourceManager : MonoBehaviour
 
     void Start()
     {
+        if (puzzleFeedback == null)
+        {
+            Debug.LogError("ResourceManager.cs >> PuzzleFeedback reference is missing!");
+        }
+        
         currentMana = startingMana;
         currentLeftUses = moveLeftUses;
         currentRightUses = moveRightUses;
@@ -104,7 +111,8 @@ public class ResourceManager : MonoBehaviour
         if (currentMana <= 0)
         {
             Debug.Log("ResourceManager.cs >> No mana to move.");
-            PuzzleFeedback.Instance?.ShowMessage("No more mana!");
+            // PuzzleFeedback.Instance?.ShowMessage("No more mana!");
+            puzzleFeedback.ShowMessage("No more mana!");
             return false;
         }
 
@@ -116,7 +124,8 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Left card uses remaining");
 
-                    PuzzleFeedback.Instance?.ShowMessage("No more Left card usages!");
+                    // PuzzleFeedback.Instance?.ShowMessage("No more Left card usages!");
+                    puzzleFeedback.ShowMessage("No more Left card usages!");
                     noMoreCardUses?.Invoke();
                     return false;
                 }
@@ -131,7 +140,8 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Right card uses remaining");
 
-                    PuzzleFeedback.Instance?.ShowMessage("No more Right card usages!");
+                    // PuzzleFeedback.Instance?.ShowMessage("No more Right card usages!");
+                    puzzleFeedback.ShowMessage("No more Right card usages!");
                     noMoreCardUses?.Invoke();
                     return false;
                 }
@@ -146,7 +156,8 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Forward card uses remaining");
 
-                    PuzzleFeedback.Instance?.ShowMessage("No more Forward card usages!");
+                    // PuzzleFeedback.Instance?.ShowMessage("No more Forward card usages!");
+                    puzzleFeedback.ShowMessage("No more Forward card usages!");
                     noMoreCardUses?.Invoke();
                     return false;
                 }
@@ -161,7 +172,8 @@ public class ResourceManager : MonoBehaviour
                     if (printCardDrainage)
                         Debug.Log("ResourceManager.cs >> No Back card uses remaining");
 
-                    PuzzleFeedback.Instance?.ShowMessage("No more Back card usages!");
+                    // PuzzleFeedback.Instance?.ShowMessage("No more Back card usages!");
+                    puzzleFeedback.ShowMessage("No more Back card usages!");
                     noMoreCardUses?.Invoke();
                     return false;
                 }
