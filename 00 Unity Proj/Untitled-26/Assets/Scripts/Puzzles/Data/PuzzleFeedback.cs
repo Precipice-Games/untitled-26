@@ -1,4 +1,3 @@
-using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using TMPro;
@@ -10,22 +9,23 @@ using SimpleTimer;
 /// </summary>
 public class PuzzleFeedback : MonoBehaviour
 {
-    [Title("UI Elements")]
+    [Title("Puzzle Feedback Variables", "Variables used in the Puzzle Feedback system.")]
+    [PropertyTooltip("Please assign the feedbackText child object here.")]
     public GameObject feedbackText;
-    public float elapsedTime;
+    
+    // Puzzle variables
     private TMP_Text messageText;
-    private TimerManager.Timer flickerTimer;
+    private PuzzleInformation thisPuzzle;
+    
+    // SelectableTile variables
     private SelectableTile tile;
     private Renderer tileRenderer;
     private Color originalColor;
     private Color flashColor = Color.red;
-
+    
+    // Timer variables
+    private TimerManager.Timer flickerTimer;
     private bool isFlashing = false;
-    
-    private PuzzleInformation thisPuzzle;
-    
-    // Intervals used to determine when to flash the tile's color during the timer
-    // Flash intervals
     private float errorLastIntervalTime = 0f;
     private float errorInterval = 0.25f;
     
@@ -62,6 +62,11 @@ public class PuzzleFeedback : MonoBehaviour
         SelectableTile.moveOutOfBounds -= MoveIsOutOfBounds;
     }
 
+    /// <summary>
+    /// Triggered when a move is attempted on an already occupied cell.
+    /// </summary>
+    /// <param name="puzzleInfo"></param>
+    /// <param name="selectableTile"></param>
     private void CellIsOccupied(PuzzleInformation puzzleInfo, SelectableTile selectableTile)
     {
         if (puzzleInfo == thisPuzzle)
@@ -70,6 +75,11 @@ public class PuzzleFeedback : MonoBehaviour
         }
     }
     
+    /// <summary>
+    /// Triggered when a given move is out of bounds of the grid.
+    /// </summary>
+    /// <param name="puzzleInfo"></param>
+    /// <param name="selectableTile"></param>
     private void MoveIsOutOfBounds(PuzzleInformation puzzleInfo, SelectableTile selectableTile)
     {
         if (puzzleInfo == thisPuzzle)
@@ -77,10 +87,12 @@ public class PuzzleFeedback : MonoBehaviour
             StartFeedback(selectableTile, "You cannot move outside the grid!");
         }
     }
-
+    
     /// <summary>
-    /// NEW: Triggered when player has no more card usages left
+    /// Triggered when there are no more usages left of a given move card.
     /// </summary>
+    /// <param name="puzzleInfo"></param>
+    /// <param name="message"></param>
     public void NoMoreCardUses(PuzzleInformation puzzleInfo, string message)
     {
         if (puzzleInfo == thisPuzzle)
@@ -97,6 +109,9 @@ public class PuzzleFeedback : MonoBehaviour
         StartFeedback(null, message);
     }
 
+    /// <summary>
+    /// If the SFXManager is available, play the invalid move SFX.
+    /// </summary>
     private void PlayInvalidMoveSFX()
     {
         if (SFXManager.Instance != null)
@@ -104,6 +119,13 @@ public class PuzzleFeedback : MonoBehaviour
             SFXManager.Instance.PlayInvalidMove();
         }
     }
+    
+    /// <summary>
+    /// Used to start the visual feedback process, including flashing the
+    /// SelectableTile and updating the onscreen feedback text.
+    /// </summary>
+    /// <param name="selectableTile"></param>
+    /// <param name="message"></param>
     private void StartFeedback(SelectableTile selectableTile, string message)
     {
         tile = selectableTile;
@@ -135,6 +157,10 @@ public class PuzzleFeedback : MonoBehaviour
         flickerTimer = TimerManager.CreateTimer(2.0f, OnTimerFinished, OnTimerTick);
     }
 
+    /// <summary>
+    /// Called when the flickerTimer is done. It is mainly used to restore
+    /// the SelectableTile to its normal color and disable the onscreen text.
+    /// </summary>
     private void OnTimerFinished()
     {
         if (printTimerInfo) Debug.Log("PuzzleFeedback.cs >> Timer finished!");
@@ -149,11 +175,16 @@ public class PuzzleFeedback : MonoBehaviour
         TimerManager.DeleteTimer(flickerTimer);
     }
 
+    /// <summary>
+    /// Called with each tick of the timer. This is assigned when a new
+    /// flickerTimer is created and is mainly used to properly alternate
+    /// between the normal tile color and the flash color at set intervals.
+    /// </summary>
     private void OnTimerTick()
     {
         if (tileRenderer == null) return;
         
-        elapsedTime = flickerTimer.GetElapsedTime();
+        float elapsedTime = flickerTimer.GetElapsedTime();
         bool intervalHit = elapsedTime - errorLastIntervalTime >= errorInterval;
 
         if (intervalHit)
@@ -167,14 +198,5 @@ public class PuzzleFeedback : MonoBehaviour
 
             tileRenderer.material.color = isFlashing ? flashColor : originalColor;
         }
-    }
-    
-    /// <summary>
-    /// Helper method that clears the onscreen text. It does not disable
-    /// the object, it just sets the text to an empty string.
-    /// </summary>
-    private void ClearMessage()
-    {
-        messageText.text = "";
     }
 }
