@@ -11,9 +11,9 @@ using SimpleTimer;
 public class PuzzleFeedback : MonoBehaviour
 {
     [Title("UI Elements")]
-    public GameObject feedbackObject;
-    public TMP_Text onScreenText;
-    
+    public GameObject feedbackText;
+    public float elapsedTime;
+    private TMP_Text messageText;
     private TimerManager.Timer flickerTimer;
     private SelectableTile tile;
     private Renderer tileRenderer;
@@ -36,10 +36,11 @@ public class PuzzleFeedback : MonoBehaviour
     
     void Start()
     {
+        // Get reference to the text component
+        messageText = feedbackText.GetComponent<TMP_Text>();
+        
         // Hide popup text at start
-        if (feedbackObject != null){
-            ClearMessage();
-        }
+        feedbackText.SetActive(false);
     }
     
     // Subscribe to events
@@ -97,8 +98,8 @@ public class PuzzleFeedback : MonoBehaviour
 
         tileRenderer = tile != null ? tile.GetComponent<Renderer>() : null;
 
-        if (tileRenderer != null)
-            originalColor = tileRenderer.material.color;
+        // if (tileRenderer != null)
+        //     originalColor = tileRenderer.material.color;
 
         // Reset interval timing every time an error happens
         errorLastIntervalTime = 0f;
@@ -108,14 +109,14 @@ public class PuzzleFeedback : MonoBehaviour
         PlayInvalidMoveSFX();
         
         // Stop previous timer if it exists
-        if (flickerTimer != null)
-            TimerManager.DeleteTimer(flickerTimer);
+        // TimerManager.DeleteTimer(flickerTimer);
 
         // Show popup text
-        if (onScreenText != null)
+        if (feedbackText != null)
         {
-            onScreenText.text = message;
-            if (printFeedbackUpdates) Debug.Log($"PuzzleFeedback.cs >> The onScreenText message was set to {onScreenText.text}");
+            messageText.text = message;
+            feedbackText.SetActive(true);
+            if (printFeedbackUpdates) Debug.Log($"PuzzleFeedback.cs >> The onScreenText message was set to {messageText.text}");
         }
 
         // Create a 2-second timer with tick for flashing
@@ -127,34 +128,27 @@ public class PuzzleFeedback : MonoBehaviour
         if (printTimerInfo) Debug.Log("PuzzleFeedback.cs >> Timer finished!");
 
         // Reset tile color
-        if (tileRenderer != null){
-            tileRenderer.material.color = originalColor;
-        }
-
-        // Hide popup text
-        if (onScreenText != null)
-        {
-            ClearMessage();
-        }
+        tileRenderer.material.color = originalColor;
+        
+        // Disable popup text
+        feedbackText.SetActive(false);
 
         // Ensure the timer is deleted
-        if (flickerTimer != null)
-        {
-            TimerManager.DeleteTimer(flickerTimer);
-            flickerTimer = null;
-        }
+        TimerManager.DeleteTimer(flickerTimer);
     }
 
     private void OnTimerTick()
     {
         if (tileRenderer == null) return;
-
-        float elapsedTime = flickerTimer.GetElapsedTime();
+        
+        elapsedTime = flickerTimer.GetElapsedTime();
         bool intervalHit = elapsedTime - errorLastIntervalTime >= errorInterval;
 
         if (intervalHit)
         {
             errorLastIntervalTime = elapsedTime;
+            
+            Debug.Log("PuzzleFeedback.cs >> Timer tick: " + elapsedTime + " seconds elapsed. Flashing tile color.");
 
             // Toggle color
             isFlashing = !isFlashing;
@@ -169,6 +163,6 @@ public class PuzzleFeedback : MonoBehaviour
     /// </summary>
     private void ClearMessage()
     {
-        onScreenText.text = "";
+        messageText.text = "";
     }
 }

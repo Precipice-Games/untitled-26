@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8154583104483929888}
   - component: {fileID: 9027474980577086638}
+  - component: {fileID: 6702629997523374772}
   m_Layer: 5
   m_Name: PuzzleFeedback
   m_TagString: Untagged
@@ -35,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -74}
-  m_SizeDelta: {x: -1820, y: 100}
+  m_SizeDelta: {x: -1364.1528, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9027474980577086638
 MonoBehaviour:
@@ -49,8 +50,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34376192bcee4931bc81975a7c88e19f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleFeedback
-  feedbackObject: {fileID: 296516117294404677}
-  onScreenText: {fileID: 8380808312108928225}
+  feedbackText: {fileID: 1584334155580117515}
+  elapsedTime: 0
+  printFeedbackUpdates: 0
+  printTimerInfo: 0
+--- !u!114 &6702629997523374772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296516117294404677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50395921d9e125049876452a9d3bcdb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleTimer.TimerManager
 --- !u!1 &1584334155580117515
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,8 +100,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 278.0984, y: 100}
+  m_AnchoredPosition: {x: -0.00073624, y: 0}
+  m_SizeDelta: {x: 555.85, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1992649204415351249
 CanvasRenderer:
