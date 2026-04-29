@@ -22,7 +22,7 @@ public class PuzzleFeedback : MonoBehaviour
 
     private bool isFlashing = false;
     
-    private PuzzleInformation puzzleInfo;
+    private PuzzleInformation thisPuzzle;
     
     // Intervals used to determine when to flash the tile's color during the timer
     // Flash intervals
@@ -42,7 +42,7 @@ public class PuzzleFeedback : MonoBehaviour
         messageText = feedbackText.GetComponent<TMP_Text>();
         
         // Identify what puzzle this script belongs to
-        puzzleInfo = GetComponentInParent<PuzzleInformation>();
+        thisPuzzle = GetComponentInParent<PuzzleInformation>();
         
         // Hide popup text at start
         feedbackText.SetActive(false);
@@ -53,7 +53,6 @@ public class PuzzleFeedback : MonoBehaviour
     {
         SelectableTile.cellOccupied += CellIsOccupied;
         SelectableTile.moveOutOfBounds += MoveIsOutOfBounds;
-        ResourceManager.noCardUsagesLeft += NoMoreCardUses;
     }
     
     // Unsubscribe from events
@@ -63,23 +62,31 @@ public class PuzzleFeedback : MonoBehaviour
         SelectableTile.moveOutOfBounds -= MoveIsOutOfBounds;
     }
 
-    private void CellIsOccupied(SelectableTile selectableTile)
+    private void CellIsOccupied(PuzzleInformation puzzleInfo, SelectableTile selectableTile)
     {
-        StartFeedback(selectableTile, "That space is occupied!");
+        if (puzzleInfo == thisPuzzle)
+        {
+            StartFeedback(selectableTile, "That space is occupied!");
+        }
     }
     
-    private void MoveIsOutOfBounds(SelectableTile selectableTile)
+    private void MoveIsOutOfBounds(PuzzleInformation puzzleInfo, SelectableTile selectableTile)
     {
-        StartFeedback(selectableTile, "You cannot move outside the grid!");
+        if (puzzleInfo == thisPuzzle)
+        {
+            StartFeedback(selectableTile, "You cannot move outside the grid!");
+        }
     }
 
     /// <summary>
     /// NEW: Triggered when player has no more card usages left
     /// </summary>
-    private void NoMoreCardUses(PuzzleInformation puzzleInfo, string message)
+    public void NoMoreCardUses(PuzzleInformation puzzleInfo, string message)
     {
-        if ()
-        StartFeedback(null, "No more card usages!");
+        if (puzzleInfo == thisPuzzle)
+        {
+            StartFeedback(null, "No more card usages!");
+        }
     }
 
     /// <summary>

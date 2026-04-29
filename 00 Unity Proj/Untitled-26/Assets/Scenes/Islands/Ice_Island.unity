@@ -43386,7 +43386,7 @@ GameObject:
   - component: {fileID: 1837369719}
   - component: {fileID: 1837369718}
   - component: {fileID: 1837369717}
-  - component: {fileID: 1837369716}
+  - component: {fileID: 1837369722}
   m_Layer: 0
   m_Name: DriftIsland (17)
   m_TagString: Untagged
@@ -43409,19 +43409,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8739545680216347641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1837369716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837369714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e53348d34ea4e4199e12cc1fbf7269, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DynamicTileTexturing
-  normalTexture: {fileID: 2100000, guid: 9cb797cb0cd8711468d8d26ab44ffa86, type: 2}
 --- !u!114 &1837369717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43546,6 +43533,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837369714}
   m_Mesh: {fileID: -6209912238109660980, guid: 37d21edc3a321fe4fad3e34a472efe1d, type: 3}
+--- !u!114 &1837369722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837369714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b14d420945b46a7912d6e122fbdd172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IceTexturing
+  normalTexture: {fileID: 2100000, guid: e1e9fbe58415931448eb637058308e9e, type: 2}
+  iceTexture: {fileID: 2100000, guid: 0b06b7f862134ee4fb3d76e6fc3e66a5, type: 2}
 --- !u!1 &1844928698
 GameObject:
   m_ObjectHideFlags: 0
