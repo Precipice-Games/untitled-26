@@ -98,8 +98,8 @@ public class PuzzleFeedback : MonoBehaviour
 
         tileRenderer = tile != null ? tile.GetComponent<Renderer>() : null;
 
-        // if (tileRenderer != null)
-        //     originalColor = tileRenderer.material.color;
+        // Store original color to reset to later
+        if (tileRenderer != null) originalColor = tileRenderer.material.color;
 
         // Reset interval timing every time an error happens
         errorLastIntervalTime = 0f;
@@ -109,7 +109,7 @@ public class PuzzleFeedback : MonoBehaviour
         PlayInvalidMoveSFX();
         
         // Stop previous timer if it exists
-        // TimerManager.DeleteTimer(flickerTimer);
+        if (flickerTimer != null) TimerManager.DeleteTimer(flickerTimer);
 
         // Show popup text
         if (feedbackText != null)
