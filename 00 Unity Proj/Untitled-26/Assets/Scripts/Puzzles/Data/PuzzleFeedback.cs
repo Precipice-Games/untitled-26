@@ -27,6 +27,13 @@ public class PuzzleFeedback : MonoBehaviour
     private float errorLastIntervalTime = 0f;
     private float errorInterval = 0.25f;
     
+    [Space]
+    [Title("Debugging Options", "Settings for quick debugging options.")]
+    [PropertyTooltip("Print feedback text updates. False by default.")]
+    public bool printFeedbackUpdates = false;
+    [PropertyTooltip("Print out info regarding the flicker timer. False by default.")]
+    public bool printTimerInfo = false;
+    
     void Start()
     {
         // Hide popup text at start
@@ -108,7 +115,7 @@ public class PuzzleFeedback : MonoBehaviour
         if (onScreenText != null)
         {
             onScreenText.text = message;
-            Debug.Log($"PuzzleFeedback.cs >> The onScreenText message was set to {onScreenText.text}");
+            if (printFeedbackUpdates) Debug.Log($"PuzzleFeedback.cs >> The onScreenText message was set to {onScreenText.text}");
         }
 
         // Create a 2-second timer with tick for flashing
@@ -117,7 +124,7 @@ public class PuzzleFeedback : MonoBehaviour
 
     private void OnTimerFinished()
     {
-        Debug.Log("PuzzleFeedback.cs >> Timer finished!");
+        if (printTimerInfo) Debug.Log("PuzzleFeedback.cs >> Timer finished!");
 
         // Reset tile color
         if (tileRenderer != null){

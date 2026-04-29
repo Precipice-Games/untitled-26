@@ -94,7 +94,8 @@ namespace SimpleTimer // Project name
 			/// </summary>
 			public void Start()
 			{
-		    	Debug.Log("Starting SimpleTimer!"); // TODO (The Shroom): Implement the actual timers.
+				// Uncomment this if you want to see when timers are being started.
+		    	// Debug.Log("Starting SimpleTimer!"); // TODO (The Shroom): Implement the actual timers.
 			}
 
 			/// <summary>
@@ -276,7 +277,8 @@ namespace SimpleTimer // Project name
         /// </summary>
 	    public static Timer CreateTimer(float waitTime, Timer.OnTimerFinished onTimerFinished = null, Timer.OnTimerTicked onTimerTicked = null, bool startNow = true)
 	    {
-	        Debug.Log("Creating SimpleTimer");
+		    // Uncomment this if you want to see when timers are being created.
+	        // Debug.Log("Creating SimpleTimer");
 			timers.Add(new Timer(waitTime, onTimerFinished, onTimerTicked, startNow));
 			return timers[timers.Count - 1]; // Return a reference to the created timer.
 	    }
