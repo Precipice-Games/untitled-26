@@ -13,7 +13,7 @@ using UnityEngine.Events;
 /// </summary>
 public class ResourceManager : MonoBehaviour
 {
-    public UnityEvent<PuzzleInformation, string> noCardUsagesLeft;
+    public UnityEvent<string> noCardUsagesLeft;
     
     [Title("Resource Data", "Set the appropriate Mana and Move Card count for this puzzle.")]
     [PropertyTooltip("The starting Mana count. Set to 5 by default, but should be updated per puzzle.")]
@@ -113,69 +113,29 @@ public class ResourceManager : MonoBehaviour
         {
             Debug.Log("ResourceManager.cs >> No mana to move.");
             string message = "No more mana!";
-            noCardUsagesLeft?.Invoke(GetComponentInParent<PuzzleInformation>(), message);
+            // noCardUsagesLeft?.Invoke();
+            // TODO: put Mana message here somehow with event.
             return false;
         }
 
         switch (moveType)
         {
             case "Left":
-                if (currentLeftUses <= 0)
-                {
-                    if (printCardDrainage)
-                        Debug.Log("ResourceManager.cs >> No Left card uses remaining");
-
-                    string message = "No more Left card usages!";
-                    noCardUsagesLeft?.Invoke(GetComponentInParent<PuzzleInformation>(), message);
-                    return false;
-                }
-
                 currentLeftUses--;
                 UpdateLeftText(currentLeftUses);
                 break;
 
             case "Right":
-                if (currentRightUses <= 0)
-                {
-                    if (printCardDrainage)
-                        Debug.Log("ResourceManager.cs >> No Right card uses remaining");
-
-                    string message = "No more Right card usages!";
-                    noCardUsagesLeft?.Invoke(GetComponentInParent<PuzzleInformation>(), message);
-                    return false;
-                }
-
                 currentRightUses--;
                 UpdateRightText(currentRightUses);
                 break;
 
             case "Forward":
-                if (currentForwardUses <= 0)
-                {
-                    if (printCardDrainage)
-                        Debug.Log("ResourceManager.cs >> No Forward card uses remaining");
-
-                    string message = "No more Forward card usages!";
-                    // puzzleFeedback.ShowMessage("No more Forward card usages!");
-                    noCardUsagesLeft?.Invoke(GetComponentInParent<PuzzleInformation>(), message);
-                    return false;
-                }
-
                 currentForwardUses--;
                 UpdateUpText(currentForwardUses);
                 break;
 
             case "Back":
-                if (currentBackUses <= 0)
-                {
-                    if (printCardDrainage)
-                        Debug.Log("ResourceManager.cs >> No Back card uses remaining");
-
-                    string message = "No more Back card usages!";
-                    noCardUsagesLeft?.Invoke(GetComponentInParent<PuzzleInformation>(), message);
-                    return false;
-                }
-
                 currentBackUses--;
                 UpdateDownText(currentBackUses);
                 break;
@@ -192,6 +152,28 @@ public class ResourceManager : MonoBehaviour
         UpdateManaText(currentMana);
 
         return true;
+    }
+
+    /// <summary>
+    /// Called by TileSelector.cs when the Player tries to
+    /// use a movement card but has no Mana left.
+    /// </summary>
+    public void OutOfMana()
+    {
+        Debug.Log("There's no Mana left.");
+    }
+
+    /// <summary>
+    /// Called by TileSelector.cs when the Player tries to use a movement card
+    /// that has no uses left. Builds a new string based on the direction type
+    /// and fires it in the noCardUsagesLeft event, which is utilized by
+    /// PuzzleFeedback.cs.
+    /// </summary>
+    /// <param name="direction"></param>
+    public void NoMoreCardUses(string direction)
+    {
+        string message = $"No more {direction} cards left.";
+        noCardUsagesLeft?.Invoke(message);
     }
 
     /// <summary>

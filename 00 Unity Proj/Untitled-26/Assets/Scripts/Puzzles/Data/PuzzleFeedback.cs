@@ -93,12 +93,9 @@ public class PuzzleFeedback : MonoBehaviour
     /// </summary>
     /// <param name="puzzleInfo"></param>
     /// <param name="message"></param>
-    public void NoMoreCardUses(PuzzleInformation puzzleInfo, string message)
+    public void NoMoreCardUses(string message)
     {
-        if (puzzleInfo == thisPuzzle)
-        {
-            StartFeedback(null, "No more card usages!");
-        }
+        StartFeedback(null, message);
     }
 
     /// <summary>
@@ -166,7 +163,7 @@ public class PuzzleFeedback : MonoBehaviour
         if (printTimerInfo) Debug.Log("PuzzleFeedback.cs >> Timer finished!");
 
         // Reset tile color
-        tileRenderer.material.color = originalColor;
+        if (tileRenderer != null) tileRenderer.material.color = originalColor;
         
         // Disable popup text
         feedbackText.SetActive(false);
