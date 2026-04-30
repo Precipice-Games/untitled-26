@@ -94,7 +94,7 @@ public class RuneCircle : MonoBehaviour
         if (!PuzzleInfoFound()) return;
 
         // Play rune circle sound effect
-        SFXManager.Instance.PlayRuneCircle();
+        if (SFXManager.Instance != null) SFXManager.Instance.PlayRuneCircle();
         
         // If the puzzle has already been completed, teleport to the other rune circle.
         if (puzzleInfo.puzzleSolved == true)
