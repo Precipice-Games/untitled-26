@@ -847,7 +847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1262616762910382214, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: Lens.FieldOfView
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1417951208637487081, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1080,6 +1080,10 @@ PrefabInstance:
     - target: {fileID: 4441267795168363193, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: gridX
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441267795168363193, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
+      propertyPath: tileType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4472860653813335475, guid: 0950a819356fd504a80677e1d46beb5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4467,7 +4471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  gridX: 1
+  gridX: 9
   gridZ: 8
   gridManager: {fileID: 51436021}
   originalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -9580,7 +9584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  gridX: 1
+  gridX: 4
   gridZ: 8
   gridManager: {fileID: 51436021}
   originalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -49735,7 +49739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 1
-  gridX: 1
+  gridX: 6
   gridZ: 8
   gridManager: {fileID: 51436021}
   originalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -51105,7 +51109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectableCube
   tileType: 0
-  gridX: 1
+  gridX: 2
   gridZ: 8
   gridManager: {fileID: 51436021}
   originalColor: {r: 1, g: 1, b: 1, a: 1}
