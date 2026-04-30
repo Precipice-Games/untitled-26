@@ -48,61 +48,14 @@ public class PuzzleFeedback : MonoBehaviour
         feedbackText.SetActive(false);
     }
     
-    // Subscribe to events
-    private void OnEnable()
-    {
-        SelectableTile.cellOccupied += CellIsOccupied;
-        SelectableTile.moveOutOfBounds += MoveIsOutOfBounds;
-    }
-    
-    // Unsubscribe from events
-    private void OnDisable()
-    {
-        SelectableTile.cellOccupied -= CellIsOccupied;
-        SelectableTile.moveOutOfBounds -= MoveIsOutOfBounds;
-    }
-
     /// <summary>
-    /// Triggered when a move is attempted on an already occupied cell.
+    /// General method to show feedback on screen and flash the tile. If it's a resource-related
+    /// event, the tile parameter will be null and only the text feedback will be shown. If it's
+    /// an invalid move, the tile parameter will be used to make the tile flash red.
     /// </summary>
-    /// <param name="puzzleInfo"></param>
-    /// <param name="selectableTile"></param>
-    private void CellIsOccupied(PuzzleInformation puzzleInfo, SelectableTile selectableTile)
+    public void DisplayFeedback(string message, SelectableTile tile)
     {
-        if (puzzleInfo == thisPuzzle)
-        {
-            StartFeedback(selectableTile, "That space is occupied!");
-        }
-    }
-    
-    /// <summary>
-    /// Triggered when a given move is out of bounds of the grid.
-    /// </summary>
-    /// <param name="puzzleInfo"></param>
-    /// <param name="selectableTile"></param>
-    private void MoveIsOutOfBounds(PuzzleInformation puzzleInfo, SelectableTile selectableTile)
-    {
-        if (puzzleInfo == thisPuzzle)
-        {
-            StartFeedback(selectableTile, "You cannot move outside the grid!");
-        }
-    }
-    
-    /// <summary>
-    /// Triggered when there is either no Mana left or no usages remaining of given move card.
-    /// </summary>
-    /// <param name="message"></param>
-    public void LackingResources(string message)
-    {
-        StartFeedback(null, message);
-    }
-
-    /// <summary>
-    /// General method to show feedback on screen and flash the tile.
-    /// </summary>
-    public void ShowMessage(string message)
-    {
-        StartFeedback(null, message);
+        StartFeedback(tile, message);
     }
 
     /// <summary>

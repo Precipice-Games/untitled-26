@@ -11,9 +11,12 @@ using UnityEngine.Events;
 /// </summary>
 public class ResourceManager : MonoBehaviour
 {
+    // NOTE: The only reason lackOfResources takes in a SelectableTile is so that we only need
+    // one method in PuzzleFeedback.cs to handle all different message types. Likewise, any
+    // usages of this event in this class should just pass in a null value as a placeholder.
     
     [Title("Lacking Resources", "This event is fired when the Player has no Mana left or is lacking uses of a specific movement card.")]
-    public UnityEvent<string> lackOfResources;
+    public UnityEvent<string, SelectableTile> lackOfResources;
     
     [Title("Resource Data", "Set the appropriate Mana and Move Card count for this puzzle.")]
     [PropertyTooltip("The starting Mana count. Set to 5 by default, but should be updated per puzzle.")]
@@ -161,7 +164,7 @@ public class ResourceManager : MonoBehaviour
     public void OutOfMana()
     {
         string message = $"You have no Mana left!";
-        lackOfResources?.Invoke(message);
+        lackOfResources?.Invoke(message, null);
     }
 
     /// <summary>
@@ -174,7 +177,7 @@ public class ResourceManager : MonoBehaviour
     public void NoMoreCardUses(string direction)
     {
         string message = $"No more {direction} cards left.";
-        lackOfResources?.Invoke(message);
+        lackOfResources?.Invoke(message, null);
     }
 
     /// <summary>
