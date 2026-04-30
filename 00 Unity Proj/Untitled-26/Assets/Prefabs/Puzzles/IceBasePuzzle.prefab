@@ -3411,12 +3411,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25cdba096906e54bb7d84f6b69f698b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  noCardUsagesLeft:
+  lackOfResources:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2186891206686781560}
         m_TargetAssemblyTypeName: PuzzleFeedback, Assembly-CSharp
-        m_MethodName: NoMoreCardUses
+        m_MethodName: LackingResources
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

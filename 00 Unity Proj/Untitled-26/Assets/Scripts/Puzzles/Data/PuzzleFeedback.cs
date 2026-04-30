@@ -89,11 +89,10 @@ public class PuzzleFeedback : MonoBehaviour
     }
     
     /// <summary>
-    /// Triggered when there are no more usages left of a given move card.
+    /// Triggered when there is either no Mana left or no usages remaining of given move card.
     /// </summary>
-    /// <param name="puzzleInfo"></param>
     /// <param name="message"></param>
-    public void NoMoreCardUses(string message)
+    public void LackingResources(string message)
     {
         StartFeedback(null, message);
     }

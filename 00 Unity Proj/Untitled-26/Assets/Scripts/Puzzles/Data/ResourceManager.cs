@@ -11,8 +11,9 @@ using UnityEngine.Events;
 /// </summary>
 public class ResourceManager : MonoBehaviour
 {
-    [Title("No Card Usages", "This event is fired when the Player tries to use a movement card without any usages.")]
-    public UnityEvent<string> noCardUsagesLeft;
+    
+    [Title("Lacking Resources", "This event is fired when the Player has no Mana left or is lacking uses of a specific movement card.")]
+    public UnityEvent<string> lackOfResources;
     
     [Title("Resource Data", "Set the appropriate Mana and Move Card count for this puzzle.")]
     [PropertyTooltip("The starting Mana count. Set to 5 by default, but should be updated per puzzle.")]
@@ -108,14 +109,14 @@ public class ResourceManager : MonoBehaviour
     /// </summary>
     public bool UseMove(string moveType)
     {
-        if (currentMana <= 0)
-        {
-            Debug.Log("ResourceManager.cs >> No mana to move.");
-            string message = "No more mana!";
-            // noCardUsagesLeft?.Invoke();
-            // TODO: put Mana message here somehow with event.
-            return false;
-        }
+        // if (currentMana <= 0)
+        // {
+        //     Debug.Log("ResourceManager.cs >> No mana to move.");
+        //     string message = "No more mana!";
+        //     // noCardUsagesLeft?.Invoke();
+        //     // TODO: put Mana message here somehow with event.
+        //     return false;
+        // }
 
         switch (moveType)
         {
@@ -159,7 +160,8 @@ public class ResourceManager : MonoBehaviour
     /// </summary>
     public void OutOfMana()
     {
-        Debug.Log("There's no Mana left.");
+        string message = $"You have no Mana left!";
+        lackOfResources?.Invoke(message);
     }
 
     /// <summary>
@@ -172,7 +174,7 @@ public class ResourceManager : MonoBehaviour
     public void NoMoreCardUses(string direction)
     {
         string message = $"No more {direction} cards left.";
-        noCardUsagesLeft?.Invoke(message);
+        lackOfResources?.Invoke(message);
     }
 
     /// <summary>
