@@ -15,7 +15,6 @@ public class PuzzleFeedback : MonoBehaviour
     
     // Puzzle variables
     private TMP_Text messageText;
-    private PuzzleInformation thisPuzzle;
     
     // SelectableTile variables
     private SelectableTile tile;
@@ -40,9 +39,6 @@ public class PuzzleFeedback : MonoBehaviour
     {
         // Get reference to the text component
         messageText = feedbackText.GetComponent<TMP_Text>();
-        
-        // Identify what puzzle this script belongs to
-        thisPuzzle = GetComponentInParent<PuzzleInformation>();
         
         // Hide popup text at start
         feedbackText.SetActive(false);
